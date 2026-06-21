@@ -59,7 +59,7 @@ Không có "tư thế duy nhất đúng" — tay vợt ưu tú sử dụng phổ
 
 ## Extreme Open Stance — Kiểu Alcaraz
 
-[Alcaraz](../tay-vot/alcaraz/alcaraz-forehand.md) thường xuyên sử dụng extreme open stance kể cả với bóng không quá rộng — cho phép phục hồi cực nhanh và tấn công theo nhiều hướng. Đây đòi hỏi xoay hông mạnh và [Wrist Lag](wrist-lag.md) thụ động đủ sâu để bù lag thời gian.
+[Alcaraz](../ky-thuat/roger-federer-forehand-guide-18.md) thường xuyên sử dụng extreme open stance kể cả với bóng không quá rộng — cho phép phục hồi cực nhanh và tấn công theo nhiều hướng. Đây đòi hỏi xoay hông mạnh và [Wrist Lag](wrist-lag.md) thụ động đủ sâu để bù lag thời gian.
 
 ---
 
@@ -77,7 +77,6 @@ Không có "tư thế duy nhất đúng" — tay vợt ưu tú sử dụng phổ
 - [Kinetic Chain](kinetic-chain.md)
 - [Ground Reaction Force](ground-reaction-force.md)
 - [High Ball Management](high-ball-management.md)
-- [Alcaraz Forehand](../tay-vot/alcaraz/alcaraz-forehand.md)
-- [Nadal Forehand](../tay-vot/nadal/nadal-forehand.md)
+- [Alcaraz Forehand](../ky-thuat/roger-federer-forehand-guide-18.md)
 - [Contact Point Spacing](../co-sinh-hoc/contact-point-spacing.md)
 - [Unit Turn](unit-turn.md)

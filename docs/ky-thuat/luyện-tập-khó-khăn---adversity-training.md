@@ -82,7 +82,6 @@ Adversity Training chỉ hiệu quả khi:
 - [Sức Mạnh Tinh Thần](../co-sinh-hoc/sức-mạnh-tinh-thần.md)
 - [Luyện Tập Dưới Áp Lực - Pressure Training](luyện-tập-dưới-áp-lực---pressure-training.md)
 - [Resilience - Khả Năng Phục Hồi](resilience---khả-năng-phục-hồi.md)
-- [Determination - Quyết Tâm](../tay-vot/determination---quyết-tâm.md)
 - _Myelin và Motor Engrams_
 - _CNS - Hệ Thần Kinh Trung Ương_
 - _Luyện Tập Có Chủ Đích - Deliberate Practice_

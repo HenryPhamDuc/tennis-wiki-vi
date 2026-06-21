@@ -119,7 +119,6 @@ Câu trả lời trung thực sẽ chỉ ra cấp độ và điểm cần phát 
 - [Sức Mạnh Tinh Thần](../co-sinh-hoc/sức-mạnh-tinh-thần.md)
 - [Resilience - Khả Năng Phục Hồi](../ky-thuat/resilience---khả-năng-phục-hồi.md)
 - [Confidence - Tự Tin](../co-sinh-hoc/confidence---tự-tin.md)
-- [Determination - Quyết Tâm](../tay-vot/determination---quyết-tâm.md)
 - [Focus - Tập Trung](focus---tập-trung.md)
 - _Petit Bras - Hội Chứng Cánh Tay Ngắn_
 - _Kình - Jin_

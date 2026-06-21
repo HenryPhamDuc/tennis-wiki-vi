@@ -12,7 +12,6 @@ updated: 2026-06-20
 
 # Thứ Tự Học Kỹ Thuật
 
-**Thứ tự học kỹ thuật** (teaching progression) là nguyên tắc dạy [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) trước [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md) — không phải vì vòng lớn tốt hơn, mà vì nó xây nền tảng mà vòng nhỏ cần để hoạt động đúng.
 
 ---
 
@@ -20,7 +19,7 @@ updated: 2026-06-20
 
 Câu hỏi thường gặp: *"Tại sao hầu hết huấn luyện viên dạy big loop trước nếu compact flip nhanh hơn?"*
 
-Câu trả lời: vòng lớn không phải là "một cú swing" — nó là **bài học về cách tải cơ thể**. [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md) chỉ hoạt động an toàn và hiệu quả khi [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md) đã trở thành phản xạ tự động.
+Câu trả lời: vòng lớn không phải là "một cú swing" — nó là **bài học về cách tải cơ thể**. [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md) chỉ hoạt động an toàn và hiệu quả khi [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) đã trở thành phản xạ tự động.
 
 ### Ba Thứ Vòng Lớn Dạy Đồng Thời
 1. **Chuẩn bị đúng** — đứng nghiêng người, chuẩn bị trước khi bóng đến
@@ -66,13 +65,12 @@ Vòng nhỏ không phải mục tiêu — nó là **tùy chọn chiến thuật*
 
 ## Xu Hướng Giảng Dạy Hiện Đại
 
-Huấn luyện hiện đại không hoàn toàn bác bỏ backswing ngắn. Xu hướng là dạy **vai xoay trong hình dạng compact** — vẫn là vai xoay, không phải lật cổ tay. Xem [Phong Cách Hiện Đại - Compact Power](../tay-vot/phong-cách-hiện-đại---compact-power.md).
+Huấn luyện hiện đại không hoàn toàn bác bỏ backswing ngắn. Xu hướng là dạy **vai xoay trong hình dạng compact** — vẫn là vai xoay, không phải lật cổ tay. Xem [Phong Cách Hiện Đại - Compact Power](../ky-thuat/compact-power-analysis.md).
 
 ---
 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md)
 - [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md)
-- [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md)
-- [Phong Cách Hiện Đại - Compact Power](../tay-vot/phong-cách-hiện-đại---compact-power.md)
+- [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md)
+- [Phong Cách Hiện Đại - Compact Power](../ky-thuat/compact-power-analysis.md)

@@ -50,7 +50,7 @@ Chất lượng của SSC phụ thuộc trực tiếp vào **tốc độ chuyể
 | Gân Achilles | Bắp chân, gân Achilles | Split-step, đẩy đất |
 | Cơ ngực + vai trước | Pectoralis major, anterior deltoid | Serve racquet drop → forward swing |
 | Cơ lưng rộng + lõi | Latissimus dorsi, obliques | OHBH backswing → forward |
-| [Mingmen](../tay-vot/mingmen.md) fascia | Thoracolumbar fascia | Toàn bộ xoắn lõi → mở xoắn |
+| [Mingmen](../ky-thuat/dantian.md) fascia | Thoracolumbar fascia | Toàn bộ xoắn lõi → mở xoắn |
 
 ---
 
@@ -79,6 +79,6 @@ Chất lượng của SSC phụ thuộc trực tiếp vào **tốc độ chuyể
 - [Sóng Âm](sóng-âm.md)
 - [Sóng Đứng](../co-sinh-hoc/sóng-đứng.md)
 - [Sóng Dương](sóng-dương.md)
-- [Mingmen](../tay-vot/mingmen.md)
+- [Mingmen](../ky-thuat/dantian.md)
 - [Mô Hình Ba Tầng Nén](../wiki/mô-hình-ba-tầng-nén.md)
 - [Hiệu Ứng Roi](hiệu-ứng-roi.md)

@@ -71,4 +71,4 @@ Về mặt cơ học, đây là sóng lùi kéo dãn các chuỗi động lực 
 - [Chu Trình Kéo-Rút Ngắn (SSC)](chu-trình-kéo-rút-ngắn-(ssc).md)
 - [Chuỗi Động Lực Học](../co-sinh-hoc/chuỗi-động-lực-học.md)
 - [Dantian](dantian.md)
-- [Mingmen](../tay-vot/mingmen.md)
+- [Mingmen](../ky-thuat/dantian.md)

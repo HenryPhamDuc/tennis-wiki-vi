@@ -98,4 +98,4 @@ A wave travels cleanly through a stiff structure and dissipates in a soft one.
 - [Wrist Lag and Release](../co-sinh-hoc/wrist-lag-and-release.md)
 - [Recovery Mechanics](recovery-mechanics.md)
 - [Dantian-Mingmen-COG Framework](dantian-mingmen-cog-framework.md)
-- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)
+- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)

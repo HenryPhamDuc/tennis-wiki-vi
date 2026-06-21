@@ -19,7 +19,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 
 ### 🧠 **Advanced (3.5→4.5)** — Deep-dive nâng cao: embodied cognition, hai động cơ, proprioception, tensegrity.
 
-- [embodied-cognition](../tay-vot/embodied-cognition.md)
 - [fascia-spirals](../ky-thuat/fascia-spirals.md)
 - [head-position-vestibular](../the-luc/head-position-vestibular.md)
 - [neuro-motor-manual-of-tennis-mastery-complete](../ky-thuat/neuro-motor-manual-of-tennis-mastery-complete.md)
@@ -31,7 +30,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [tennis-neurological-specialist-1](../wiki/tennis-neurological-specialist-1.md)
 - [tennis-neurological-specialist-deep-research](../wiki/tennis-neurological-specialist-deep-research.md)
 - [tensegrity-body](tensegrity-body.md)
-- [two-engines](../tay-vot/two-engines.md)
 - [x-factor-anatomy](x-factor-anatomy.md)
 
 ### 📚 **Cẩm Nang & Giáo Trình** — giáo trình 5 năm, cẩm nang tổng hợp, volumes 1-3, framework TFL.
@@ -64,7 +62,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [chuong-18](../ky-thuat/chuong-18.md)
 - [chuong-19](../ky-thuat/chuong-19.md)
 - [chuong-20](../ky-thuat/chuong-20.md)
-- [chuong-21](../tay-vot/chuong-21.md)
 - [chuong-22](../ky-thuat/chuong-22.md)
 - [chuong-23](../ky-thuat/chuong-23.md)
 - [chuong-24](../ky-thuat/chuong-24.md)
@@ -164,7 +161,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [nual-based-on-the-concepts-in-sports-psychology-philosophy](nual-based-on-the-concepts-in-sports-psychology-philosophy.md)
 - [pressure-inoculation](../wiki/pressure-inoculation.md)
 - [self-coaching-discipline](../wiki/self-coaching-discipline.md)
-- [tennis-grip-pressure-and-neurological-threshold](../tay-vot/tennis-grip-pressure-and-neurological-threshold.md)
 - [three-models](../ky-thuat/three-models.md)
 - [tru-o-ng-lu-c](../ky-thuat/tru-o-ng-lu-c.md)
 
@@ -215,7 +211,7 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [ky-thuat-giao-bong](../ky-thuat/ky-thuat-giao-bong.md)
 - [momentum-tennis](momentum-tennis.md)
 - [non-dominant-arm-role](../ky-thuat/non-dominant-arm-role.md)
-- [one-hand-backhand-biomechanics](../tay-vot/federer/one-hand-backhand-biomechanics.md)
+- [one-hand-backhand-biomechanics](../ky-thuat/roger-federer-backhand-guide.md)
 - [split-step-biomechanics](../ky-thuat/split-step-biomechanics.md)
 - [standing-wave-theory-in-tennis](standing-wave-theory-in-tennis.md)
 - [tao-song-tennis](tao-song-tennis.md)
@@ -234,7 +230,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [suc-manh-tinh-than](../tam-ly/suc-manh-tinh-than.md)
 - [tennis-as-embodied-cognition](../wiki/tennis-as-embodied-cognition.md)
 - [tennis-embodied-cognitive-sport](../tam-ly/tennis-embodied-cognitive-sport.md)
-- [tennis-the-kình-engine](../tay-vot/tennis-the-kình-engine.md)
 - [tensegrity-tennis-vi](../ky-thuat/tensegrity-tennis-vi.md)
 - [training-kình-grf-taichi-24-forms-and-delibrate-practice](training-kình-grf-taichi-24-forms-and-delibrate-practice.md)
 
@@ -267,7 +262,7 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [song-doc-grf](../ky-thuat/song-doc-grf.md)
 - [song-ngang-roi-quat](../ky-thuat/song-ngang-roi-quat.md)
 - [song-thai-cuc-tennis](../ky-thuat/song-thai-cuc-tennis.md)
-- [song-trong-tennis-hien-dai](../tay-vot/song-trong-tennis-hien-dai.md)
+- [song-trong-tennis-hien-dai](../ky-thuat/tạo-sóng-trong-tennis.md)
 - [song-truong-phi-tuyen](song-truong-phi-tuyen.md)
 - [spatial-wave-tennis-book](../ky-thuat/spatial-wave-tennis-book.md)
 - [standing-wave-in-tennis](standing-wave-in-tennis.md)

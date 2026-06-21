@@ -24,7 +24,7 @@ updated: 2026-06-20
 Các yếu tố kỹ thuật chính:
 - Trọng tâm dồn ra chân sau
 - [Dantian](dantian.md) xoay và thu vào
-- [Mingmen](../tay-vot/mingmen.md) mở rộng nhẹ về phía sau
+- [Mingmen](../ky-thuat/dantian.md) mở rộng nhẹ về phía sau
 - Tay không đánh duỗi ngang người để duy trì căng cơ ngực
 - Lõi xoắn tối đa — không chỉ vai xoay, mà toàn bộ thân trên quay so với xương chậu
 

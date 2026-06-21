@@ -18,7 +18,6 @@ updated: 2026-06-20
 
 ## Tại Sao Không Dùng Vòng Lớn
 
-Khi bóng giao đến với tốc độ cao, khoảng thời gian từ lúc bóng rời vợt giao đến lúc phải tiếp xúc là rất ngắn. [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) yêu cầu:
 
 - Đủ thời gian xoay vai
 - Đủ không gian phía sau để vợt rơi trong vòng tròn lớn

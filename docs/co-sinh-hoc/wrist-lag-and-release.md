@@ -110,5 +110,5 @@ Grip pressure and wrist freedom are directly linked:
 
 - [Power Wave Theory](../ky-thuat/power-wave-theory.md)
 - [Kinetic Chain](../ky-thuat/kinetic-chain.md)
-- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)
+- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)
 - [Volley Technique - Loose Grip](../ky-thuat/volley-technique---loose-grip.md)

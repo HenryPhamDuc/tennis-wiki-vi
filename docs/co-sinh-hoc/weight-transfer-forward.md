@@ -92,4 +92,4 @@ Players who back up and arm-hit have COG stuck on the rear foot. They must compl
 - [Footwork Stances](../ky-thuat/footwork-stances.md)
 - [Recovery Mechanics](../ky-thuat/recovery-mechanics.md)
 - [Dantian-Mingmen-COG Framework](../ky-thuat/dantian-mingmen-cog-framework.md)
-- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)
+- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)

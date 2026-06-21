@@ -14,7 +14,6 @@ updated: 2026-06-20
 
 **Lỗi double-motion** xảy ra khi người chơi thêm chuyển động lật cổ tay ([Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)) vào giữa vòng lớn vai — tạo ra hai chuyển động riêng biệt trong một backswing, dẫn đến mất kiểm soát hoàn toàn.
 
-Đây là lỗi nghiêm trọng nhất khi thực hiện [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md).
 
 ---
 
@@ -48,13 +47,11 @@ Kết quả: [Góc Mặt Vợt](góc-mặt-vợt.md) thay đổi hai lần trong
 
 Bài tập kiểm tra đơn giản: **đánh chậm với mắt nhắm**, chỉ dùng vai, và chú ý cổ tay có "muốn lật" không. Nếu có → đây là double-motion cần sửa.
 
-Luyện ý thức "giữ cổ tay khóa" (locked wrist) trong toàn bộ backswing của [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md).
 
 ---
 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md)
 - [Góc Mặt Vợt](góc-mặt-vợt.md)
 - [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)
 - [Lỗi Lật Sớm](lỗi-lật-sớm.md)

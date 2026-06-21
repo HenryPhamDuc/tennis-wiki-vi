@@ -11,7 +11,7 @@ updated: 2026-06-20
 
 # 🎾 Hệ thống phân tích Tennis & Nội công
 
-Đây là vault ghi chép cá nhân tổng hợp tất cả phân tích kỹ thuật tennis hiện đại kết hợp với framework nội công Đông Á ([Dantian](dantian.md), [Mingmen](../tay-vot/mingmen.md), _Center of Gravity_).
+Đây là vault ghi chép cá nhân tổng hợp tất cả phân tích kỹ thuật tennis hiện đại kết hợp với framework nội công Đông Á ([Dantian](dantian.md), [Mingmen](../ky-thuat/dantian.md), _Center of Gravity_).
 
 ## 🗂️ Cấu trúc chính
 
@@ -80,7 +80,7 @@ updated: 2026-06-20
 > **3 lớp align = whole-body power**
 > 
 > 1. [Dantian](dantian.md) dẫn (năng lượng)
-> 2. [Mingmen](../tay-vot/mingmen.md) mở (cấu trúc sinh học)
+> 2. [Mingmen](../ky-thuat/dantian.md) mở (cấu trúc sinh học)
 > 3. _COG_ được chiếu đúng hướng (cơ học)
 
 > **Nguyên tắc vàng**

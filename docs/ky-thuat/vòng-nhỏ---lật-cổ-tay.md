@@ -30,7 +30,6 @@ Hình vẽ trong tài liệu gốc mô tả chính xác: **cùng một bàn tay,
 
 ### So Sánh Với Vòng Lớn
 
-| Yếu tố | Vòng nhỏ | [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) |
 |---|---|---|
 | Nguồn chuyển động | Cẳng tay / pronation | Vai xoay vào trong |
 | Thời gian cần | Rất ngắn | Trung bình đến dài |
@@ -58,23 +57,21 @@ Lật ngón cái ngay khi bắt đầu takeback thay vì giữ đến khoảnh k
 > Nguyên tắc: "Lật vào khoảnh khắc cuối cùng, không phải lúc takeback."
 
 ### Thiếu Tải Cơ Thể
-Dùng vòng nhỏ mà không có [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md) đi kèm → toàn bộ lực dồn lên cẳng tay và cổ tay → nguy cơ chấn thương khuỷu tay, đặc biệt với người chơi trên 50 tuổi.
+Dùng vòng nhỏ mà không có [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) đi kèm → toàn bộ lực dồn lên cẳng tay và cổ tay → nguy cơ chấn thương khuỷu tay, đặc biệt với người chơi trên 50 tuổi.
 
 ---
 
 ## Vị Trí Trong Quá Trình Học
 
-Theo thứ tự được khuyến nghị, vòng nhỏ được học **sau** khi [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) đã trở thành phản xạ tự động. Lý do:
 
 - Vòng nhỏ là phiên bản "rút ngắn" của vòng lớn — cần có nguyên bản trước
-- Nếu học vòng nhỏ trước, người chơi bỏ qua giai đoạn học [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md) và xây game trên tay không
+- Nếu học vòng nhỏ trước, người chơi bỏ qua giai đoạn học [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) và xây game trên tay không
 - "Không thể rút ngắn thứ mình chưa học"
 
 ---
 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](chuẩn-bị-cánh-tay.md)
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md)
 - [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md)
 - [Lỗi Lật Sớm](../wiki/lỗi-lật-sớm.md)
 - [Trả Giao Bóng](trả-giao-bóng.md)

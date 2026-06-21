@@ -126,5 +126,5 @@ The 45-Degree System is the practical "output layer" — the observable cues. Un
 - [Footwork Stances](footwork-stances.md)
 - [Wrist Lag and Release](../co-sinh-hoc/wrist-lag-and-release.md)
 - [Volley Technique - Loose Grip](volley-technique---loose-grip.md)
-- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)
+- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)
 - [Dantian-Mingmen-COG Framework](dantian-mingmen-cog-framework.md)

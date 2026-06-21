@@ -9,7 +9,6 @@ updated: 2026-06-20
 
 Chào mừng bạn đến với Hệ thống tri thức Tennis thế hệ mới số hóa theo chuẩn Obsidian Vault. Dưới đây là danh sách toàn bộ các chương và phần nội dung đã được chiết xuất tự động:
 
-* [CHƯƠNG 1](../tay-vot/chương-1.md)
 * [CHƯƠNG 10](../the-luc/chương-10.md)
 * [CHƯƠNG 11](../wiki/chương-11.md)
 * [CHƯƠNG 12](../ky-thuat/chương-12.md)

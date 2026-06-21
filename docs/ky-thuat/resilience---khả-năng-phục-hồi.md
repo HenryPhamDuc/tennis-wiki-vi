@@ -77,7 +77,6 @@ Thay đổi nhãn nhận thức về sai lầm:
 
 ## Liên Quan
 - [Sức Mạnh Tinh Thần](../co-sinh-hoc/sức-mạnh-tinh-thần.md)
-- [Determination - Quyết Tâm](../tay-vot/determination---quyết-tâm.md)
 - [Focus - Tập Trung](../wiki/focus---tập-trung.md)
 - [Luyện Tập Dưới Áp Lực - Pressure Training](luyện-tập-dưới-áp-lực---pressure-training.md)
 - [Luyện Tập Khó Khăn - Adversity Training](luyện-tập-khó-khăn---adversity-training.md)

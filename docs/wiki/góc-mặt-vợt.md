@@ -44,14 +44,12 @@ Cổ tay giữ nguyên vị trí "đóng" xuyên suốt. Mặt vợt **không th
 
 ## Tại Sao Ổn Định Góc Quan Trọng
 
-Trong [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md), ghi chú của tác giả là "giữ vị trí cổ tay ổn định" — đây chính xác là nguyên tắc giữ góc mặt vợt không đổi trong suốt backswing. Bất kỳ chuyển động cổ tay nào thêm vào ([Lỗi Double-Motion](lỗi-double-motion.md)) đều phá vỡ tính ổn định này.
 
 ---
 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)
 - [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md)
 - [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md)
 - [Lỗi Double-Motion](lỗi-double-motion.md)
 - [Lỗi Lật Sớm](lỗi-lật-sớm.md)

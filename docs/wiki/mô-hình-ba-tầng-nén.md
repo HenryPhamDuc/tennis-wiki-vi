@@ -53,7 +53,7 @@ Kết quả là "whole-body whip" — đòn roi toàn thân. Không phải một
 |---|---|---|
 | Mặt đất | Bàn chân / gân | [Sóng Âm](../ky-thuat/sóng-âm.md), [Chuỗi Động Lực Học](../co-sinh-hoc/chuỗi-động-lực-học.md) |
 | Lõi | [Dantian](../ky-thuat/dantian.md) | [Chu Trình Kéo-Rút Ngắn (SSC)](../ky-thuat/chu-trình-kéo-rút-ngắn-(ssc).md) |
-| Xoắn mạc | [Mingmen](../tay-vot/mingmen.md) + oblique slings | [Sóng Đứng](../co-sinh-hoc/sóng-đứng.md), lag của vợt |
+| Xoắn mạc | [Mingmen](../ky-thuat/dantian.md) + oblique slings | [Sóng Đứng](../co-sinh-hoc/sóng-đứng.md), lag của vợt |
 
 ---
 
@@ -79,7 +79,7 @@ Kết quả là "whole-body whip" — đòn roi toàn thân. Không phải một
 
 - [Tạo Sóng Trong Tennis](../ky-thuat/tạo-sóng-trong-tennis.md)
 - [Dantian](../ky-thuat/dantian.md)
-- [Mingmen](../tay-vot/mingmen.md)
+- [Mingmen](../ky-thuat/dantian.md)
 - [Chuỗi Động Lực Học](../co-sinh-hoc/chuỗi-động-lực-học.md)
 - [Hiệu Ứng Roi](../ky-thuat/hiệu-ứng-roi.md)
 - [Chu Trình Kéo-Rút Ngắn (SSC)](../ky-thuat/chu-trình-kéo-rút-ngắn-(ssc).md)

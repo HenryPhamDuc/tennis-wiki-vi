@@ -34,7 +34,7 @@ updated: 2026-06-20
 
 1. **Lo lắng về timing**: người chơi muốn "chắc chắn" mặt vợt ở đúng góc → lật sớm để yên tâm
 2. **Nhầm lẫn cơ chế**: hiểu lật cổ tay là "chuẩn bị backswing" thay vì "hành động cuối cùng trước tiếp xúc"
-3. **Quá trình học sai thứ tự**: học vòng nhỏ trước khi [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md) ổn định → cơ thể tìm cách "chốt" mặt vợt để bù đắp
+3. **Quá trình học sai thứ tự**: học vòng nhỏ trước khi [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) ổn định → cơ thể tìm cách "chốt" mặt vợt để bù đắp
 
 ---
 

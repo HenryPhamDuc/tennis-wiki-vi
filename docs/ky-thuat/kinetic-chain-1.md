@@ -25,7 +25,6 @@ Nguyên lý cốt lõi: các nhóm cơ lớn (chân, hông, thân) tạo ra năn
 Người chơi đẩy mạnh xuống đất, tạo ra [Ground Reaction Force](ground-reaction-force.md) ngược chiều. Lực này là nguồn gốc của toàn bộ sức mạnh cú đánh. Thiếu leg drive mạnh → chuỗi suy yếu ngay từ đầu.
 
 ### Pha 2 — Segmental Rotation (Xoay hông và thân)
-Hông xoay trước, kéo thân mình và vai vào swing. Đây là đoạn tạo ra phần lớn năng lượng tổng thể. [Nadal](../tay-vot/nadal/nadal-forehand.md) là ví dụ điển hình của kinetic chain thống trị bởi xoay thân người.
 
 ### Pha 3 — Racket Drop (Trễ đầu vợt)
 [Wrist Lag](wrist-lag.md) thụ động hình thành khi thân người xoay về phía trước nhưng cổ tay thư giãn tụt lại. Giai đoạn này tích lũy [năng lượng đàn hồi](../wiki/stretch-shortening-cycle.md) tại cẳng tay và cổ tay.
@@ -66,6 +65,5 @@ Cue: *"Hông trước, vợt theo sau"* — nhắc nhở người tập để ch
 - [Unit Turn](unit-turn.md)
 - [Arm-Dominant Swing](../co-sinh-hoc/arm-dominant-swing.md)
 - [Fatigue and Performance Degradation](fatigue-and-performance-degradation.md)
-- [Federer Forehand](../tay-vot/federer/federer-forehand.md)
-- [Nadal Forehand](../tay-vot/nadal/nadal-forehand.md)
-- [Alcaraz Forehand](../tay-vot/alcaraz/alcaraz-forehand.md)
+- [Federer Forehand](../ky-thuat/roger-federer-forehand-guide-18.md)
+- [Alcaraz Forehand](../ky-thuat/roger-federer-forehand-guide-18.md)

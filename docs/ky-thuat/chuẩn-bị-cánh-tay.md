@@ -25,7 +25,6 @@ Có hai kỹ thuật đối lập nhau, được phân biệt bởi **thời gia
 | Kỹ thuật | Cơ chế chính | Ưu điểm | Phù hợp khi |
 |---|---|---|---|
 | [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) | Xoay cẳng tay (pronation) | Nhanh, tiết kiệm thời gian | Trả giao bóng, volley |
-| [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) | Vai xoay vào trong, cổ tay giữ yên | Tốc độ đầu vợt cao, ổn định mặt vợt | Groundstroke, đánh từ baseline |
 
 Sai lầm phổ biến nhất của người chơi phong trào là **trộn lẫn hai kỹ thuật**: cố dùng vòng vai lớn khi bị dồn thời gian, hoặc chỉ lật cổ tay trên cú đánh baseline cần sức mạnh.
 
@@ -49,7 +48,6 @@ Người học vòng lớn trước có thể rút ngắn lại cho tình huốn
 
 ## Thứ Tự Học Được Khuyến Nghị
 
-1. Học [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) trước — để hiểu cách tải cơ thể, xoắn vai, giữ mặt vợt ổn định
 2. Khi cảm giác tải cơ thể đã tự động → học [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) như công cụ "rút ngắn khẩn cấp"
 3. Lật cổ tay không nên là kỹ thuật mặc định — chỉ dùng khi thời gian thực sự eo hẹp
 
@@ -59,11 +57,10 @@ Người học vòng lớn trước có thể rút ngắn lại cho tình huốn
 
 ### Kỹ thuật cốt lõi
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) — vòng compact, xoay cẳng tay, dùng khi bị dồn
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) — vòng đầy đủ với vai, nền tảng của sức mạnh
 
 ### Cơ chế sinh cơ học
 - [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md) — cơ chế lật ngón cái từ trên xuống dưới
-- [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md) — xoắn cột sống và chân trước khi đánh
+- [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) — xoắn cột sống và chân trước khi đánh
 - [Góc Mặt Vợt](../wiki/góc-mặt-vợt.md) — mở/đóng và tầm quan trọng của việc kiểm soát
 
 ### Lỗi kỹ thuật
@@ -78,6 +75,5 @@ Người học vòng lớn trước có thể rút ngắn lại cho tình huốn
 
 ## Liên Quan
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md)
-- [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md)
-- [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md)
+- [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md)
 - [Lỗi Double-Motion](../wiki/lỗi-double-motion.md)

@@ -34,7 +34,7 @@ Dantian điều phối thứ tự kích hoạt: hấp thụ/chuyển hướng, n
 
 ## Phân Biệt Dantian và Mingmen
 
-| | [Dantian](dantian.md) | [Mingmen](../tay-vot/mingmen.md) |
+| | [Dantian](dantian.md) | [Mingmen](../ky-thuat/dantian.md) |
 |---|---|---|
 | Vị trí | Bụng dưới (phía trước) | Cột sống L2–L3 (phía sau) |
 | Chức năng | Trung tâm nén | Cổng đàn hồi mở rộng |
@@ -72,8 +72,7 @@ Dantian điều phối thứ tự kích hoạt: hấp thụ/chuyển hướng, n
 ## Các Khái Niệm Liên Quan
 
 - [Tạo Sóng Trong Tennis](tạo-sóng-trong-tennis.md)
-- [Mingmen](../tay-vot/mingmen.md)
+- [Mingmen](../ky-thuat/dantian.md)
 - [Trọng Tâm Cơ Thể](trọng-tâm-cơ-thể.md)
 - [Mô Hình Ba Tầng Nén](../wiki/mô-hình-ba-tầng-nén.md)
-- [Hồi Phục Sau Cú Đánh](../tay-vot/hồi-phục-sau-cú-đánh.md)
 - [Chuỗi Động Lực Học](../co-sinh-hoc/chuỗi-động-lực-học.md)

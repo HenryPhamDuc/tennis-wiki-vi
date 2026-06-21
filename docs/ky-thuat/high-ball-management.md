@@ -13,7 +13,6 @@ updated: 2026-06-20
 
 # High Ball Management
 
-**High Ball Management** (xử lý bóng cao) là khả năng điều chỉnh kỹ thuật forehand để tiếp xúc bóng hiệu quả khi bóng nảy cao hơn vai — một thách thức phổ biến đặc biệt khi đối mặt với topspin nặng như kiểu [Nadal](../tay-vot/nadal/nadal-forehand.md).
 
 Xử lý bóng cao đúng kỹ thuật đòi hỏi điều chỉnh [điểm tiếp xúc](../co-sinh-hoc/contact-point-spacing.md) và [chuỗi động năng](kinetic-chain.md) mà vẫn duy trì hiệu quả [OK Grip principles](ok-grip-drill.md).
 
@@ -44,7 +43,7 @@ Khi phải tiếp xúc bóng ở độ cao vai, chuyển sang [open stance](stan
 Cánh tay giơ cao hơn bình thường để mặt vợt gặp bóng đúng góc. Quan trọng: duy trì [cú cầm thư giãn](ok-grip-drill.md) — không siết chặt.
 
 ### Điều chỉnh 4 — Tấn công tích cực
-[Alcaraz](../tay-vot/alcaraz/alcaraz-forehand.md) và các tay vợt hiện đại thường **tấn công bóng cao** thay vì phòng thủ — bước vào sân, tiếp xúc sớm, tạo góc tấn công khi đối thủ không ngờ.
+[Alcaraz](../ky-thuat/roger-federer-forehand-guide-18.md) và các tay vợt hiện đại thường **tấn công bóng cao** thay vì phòng thủ — bước vào sân, tiếp xúc sớm, tạo góc tấn công khi đối thủ không ngờ.
 
 ---
 
@@ -63,5 +62,4 @@ Cánh tay giơ cao hơn bình thường để mặt vợt gặp bóng đúng gó
 - [Kinetic Chain](kinetic-chain.md)
 - [Wrist Lag](wrist-lag.md)
 - [Grip Tension](../co-sinh-hoc/grip-tension.md)
-- [Alcaraz Forehand](../tay-vot/alcaraz/alcaraz-forehand.md)
-- [Nadal Forehand](../tay-vot/nadal/nadal-forehand.md)
+- [Alcaraz Forehand](../ky-thuat/roger-federer-forehand-guide-18.md)

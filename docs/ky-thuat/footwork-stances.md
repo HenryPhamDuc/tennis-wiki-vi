@@ -25,7 +25,7 @@ The notebook identifies three stances for forehand and one for backhand, with a 
 - *Bridge by Straight Front Leg*: front (left) leg stays extended but soft — like a bridge pier, not a locked joint. Transmits force without compressing the knee
 - *Tension not overload*: use quad and glute engagement to hold position; do NOT compress the knee joint with body weight
 
-**Hip/torso action**: In modern tennis (Alcaraz, Kecmanović), even open stance includes torso rotation (see [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)). The rotation happens upward, not flat — "back leg → front leg & upward."
+**Hip/torso action**: In modern tennis (Alcaraz, Kecmanović), even open stance includes torso rotation (see [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)). The rotation happens upward, not flat — "back leg → front leg & upward."
 
 **Knee protection (52+ coaching note)**: Hips should be 5–10 cm lower than an upright standing position. Think "sit 5cm" without rounding the back. This protects the joint by putting load on the quad and glute, not the sụn (cartilage).
 
@@ -116,4 +116,4 @@ This is the "golden zone": time-efficient enough for fast rallies, loaded enough
 - [Power Wave Theory](power-wave-theory.md)
 - [Recovery Mechanics](recovery-mechanics.md)
 - [Dantian-Mingmen-COG Framework](dantian-mingmen-cog-framework.md)
-- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../tay-vot/alcaraz/forehand-technique-comparison---rublev-vs-alcaraz-vs-sinner.md)
+- [Forehand Technique Comparison - Rublev vs Alcaraz vs Sinner](../he-thong/forehand-technique-comparison-rublev-vs-alcaraz-vs-sinner.md)

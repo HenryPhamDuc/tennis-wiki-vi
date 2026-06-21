@@ -34,7 +34,6 @@ Vì vậy, volley gần như luôn yêu cầu [Vòng Nhỏ - Lật Cổ Tay](vò
 [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) phù hợp tự nhiên với volley: lật nhanh [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md), tiếp xúc ngắn, bóng đi chính xác.
 
 ### Volley và Vòng Lớn
-Cố thực hiện [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) trên volley là lỗi phổ biến của người chơi phong trào — kết quả là bị "kẹt" (jammed), không kịp swing, mất kiểm soát hướng.
 
 ---
 
@@ -54,4 +53,4 @@ Cố thực hiện [Vòng Lớn - Vai](../tay-vot/vòng-lớn---vai.md) trên vo
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md)
 - [Trả Giao Bóng](trả-giao-bóng.md)
 - [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md)
-- [Tải Cơ Thể](../tay-vot/tải-cơ-thể.md)
+- [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md)
