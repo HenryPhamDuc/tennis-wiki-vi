@@ -6,7 +6,6 @@
 
 ## Danh sách bài viết
 
-- [**The Tennis _Neuro_logical Specialist: A Comprehensive Analysis of Clinical Sports _Neurology_ and _Neuro_-Per_form_ance Optimization**](tennis-neurological-specialist-deep-research-1.md)
 - [**The Tennis Neurological Specialist: A Comprehensive Analysis of Clinical Sports Neurology and Neuro-Performance Optimization**](tennis-neurological-specialist-deep-research.md)
 - [18\. Hệ Trục 52: Vận Hành Không Tải & Tái Tạo Năng Lượng](hệ-trục-52-vận-hành-không-tải-tái-tạo-năng-lượng.md)
 - [3. Giới thiệu](untitled-52.md)

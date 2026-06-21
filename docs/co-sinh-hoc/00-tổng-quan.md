@@ -30,7 +30,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [tennis-neurological-specialist](../wiki/tennis-neurological-specialist.md)
 - [tennis-neurological-specialist-1](../wiki/tennis-neurological-specialist-1.md)
 - [tennis-neurological-specialist-deep-research](../wiki/tennis-neurological-specialist-deep-research.md)
-- [tennis-neurological-specialist-deep-research-1](../wiki/tennis-neurological-specialist-deep-research-1.md)
 - [tensegrity-body](tensegrity-body.md)
 - [two-engines](../tay-vot/two-engines.md)
 - [x-factor-anatomy](x-factor-anatomy.md)
