@@ -1,0 +1,394 @@
+{
+  "written": [
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Bài tập\\Chuẩn Bị Thể Lực Trước Trận.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\chuẩn-bị-thể-lực-trước-trận.md",
+      "cat": "ky-thuat",
+      "slug": "chuẩn-bị-thể-lực-trước-trận"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Bài tập\\Mini Tennis Cải Tiến.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\mini-tennis-cải-tiến.md",
+      "cat": "ky-thuat",
+      "slug": "mini-tennis-cải-tiến"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Bài tập\\Quy Trình Trước Trận Đấu.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\quy-trình-trước-trận-đấu.md",
+      "cat": "ky-thuat",
+      "slug": "quy-trình-trước-trận-đấu"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Bài tập\\Thiết Lập Thói Quen Thi Đấu.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\thiết-lập-thói-quen-thi-đấu.md",
+      "cat": "ky-thuat",
+      "slug": "thiết-lập-thói-quen-thi-đấu"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Bóng Thả Và Rally.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\bóng-thả-và-rally.md",
+      "cat": "chien-thuat",
+      "slug": "bóng-thả-và-rally"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Chiến Thuật Giao Và Lên Lưới.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\chiến-thuật-giao-và-lên-lưới.md",
+      "cat": "chien-thuat",
+      "slug": "chiến-thuật-giao-và-lên-lưới"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Dingles.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\dingles.md",
+      "cat": "chien-thuat",
+      "slug": "dingles"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Giảm Lỗi Không Ép Buộc.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\giảm-lỗi-không-ép-buộc.md",
+      "cat": "chien-thuat",
+      "slug": "giảm-lỗi-không-ép-buộc"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Lob Phòng Thủ.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\lob-phòng-thủ.md",
+      "cat": "chien-thuat",
+      "slug": "lob-phòng-thủ"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Lợi Thế Giao Bóng Ngược Tay.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\lợi-thế-giao-bóng-ngược-tay.md",
+      "cat": "chien-thuat",
+      "slug": "lợi-thế-giao-bóng-ngược-tay"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Pha Tấn Công.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\pha-tấn-công.md",
+      "cat": "chien-thuat",
+      "slug": "pha-tấn-công"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Phòng Thủ Backhand — Bài Tập Tay Trái.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\phòng-thủ-backhand-—-bài-tập-tay-trái.md",
+      "cat": "chien-thuat",
+      "slug": "phòng-thủ-backhand-—-bài-tập-tay-trái"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Tiếp Cận Và Volley.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\tiếp-cận-và-volley.md",
+      "cat": "chien-thuat",
+      "slug": "tiếp-cận-và-volley"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Trò Chơi Chiều Sâu.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\trò-chơi-chiều-sâu.md",
+      "cat": "chien-thuat",
+      "slug": "trò-chơi-chiều-sâu"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Tăng Sức Mạnh Cú Đánh.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\tăng-sức-mạnh-cú-đánh.md",
+      "cat": "chien-thuat",
+      "slug": "tăng-sức-mạnh-cú-đánh"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Vươn Lên Trong Rally.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\vươn-lên-trong-rally.md",
+      "cat": "chien-thuat",
+      "slug": "vươn-lên-trong-rally"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Vị Trí Sân và Chiến Thuật.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\vị-trí-sân-và-chiến-thuật.md",
+      "cat": "chien-thuat",
+      "slug": "vị-trí-sân-và-chiến-thuật"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Đánh Bại Người Chơi Phòng Thủ.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\đánh-bại-người-chơi-phòng-thủ.md",
+      "cat": "chien-thuat",
+      "slug": "đánh-bại-người-chơi-phòng-thủ"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Đánh Bại Đội Đánh Đôi Phòng Thủ.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\đánh-bại-đội-đánh-đôi-phòng-thủ.md",
+      "cat": "chien-thuat",
+      "slug": "đánh-bại-đội-đánh-đôi-phòng-thủ"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Đánh Cao — Overhead Và Điểm Tiếp Xúc.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\đánh-cao-—-overhead-và-điểm-tiếp-xúc.md",
+      "cat": "chien-thuat",
+      "slug": "đánh-cao-—-overhead-và-điểm-tiếp-xúc"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Chiến thuật\\Đội Hình Hai Lên Lưới.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\chien-thuat\\đội-hình-hai-lên-lưới.md",
+      "cat": "chien-thuat",
+      "slug": "đội-hình-hai-lên-lưới"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Cách Cầm Vợt Continental.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\cách-cầm-vợt-continental.md",
+      "cat": "ky-thuat",
+      "slug": "cách-cầm-vợt-continental"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Cú Đánh Rút Gọn.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\cú-đánh-rút-gọn.md",
+      "cat": "ky-thuat",
+      "slug": "cú-đánh-rút-gọn"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Căng Cobra.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\căng-cobra.md",
+      "cat": "ky-thuat",
+      "slug": "căng-cobra"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Căng Cơ Gấp Hông.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\căng-cơ-gấp-hông.md",
+      "cat": "ky-thuat",
+      "slug": "căng-cơ-gấp-hông"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Cầm Bóng Khi Giao.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\cầm-bóng-khi-giao.md",
+      "cat": "ky-thuat",
+      "slug": "cầm-bóng-khi-giao"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Gõ Bóng.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\gõ-bóng.md",
+      "cat": "ky-thuat",
+      "slug": "gõ-bóng"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kỹ Thuật\\Động Tác Follow-Through.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\động-tác-follow-through.md",
+      "cat": "ky-thuat",
+      "slug": "động-tác-follow-through"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\THần Kinh Học\\Duy Trì Cường Độ Tâm Lý.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tam-ly\\duy-trì-cường-độ-tâm-lý.md",
+      "cat": "tam-ly",
+      "slug": "duy-trì-cường-độ-tâm-lý"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\THần Kinh Học\\Dự Đoán Trong Tennis.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tam-ly\\dự-đoán-trong-tennis.md",
+      "cat": "tam-ly",
+      "slug": "dự-đoán-trong-tennis"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\THần Kinh Học\\Nhận Thức Tình Huống.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tam-ly\\nhận-thức-tình-huống.md",
+      "cat": "tam-ly",
+      "slug": "nhận-thức-tình-huống"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\THần Kinh Học\\Phân Ly Chuyển Động.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tam-ly\\phân-ly-chuyển-động.md",
+      "cat": "tam-ly",
+      "slug": "phân-ly-chuyển-động"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\THần Kinh Học\\Timing Đúng.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tam-ly\\timing-đúng.md",
+      "cat": "tam-ly",
+      "slug": "timing-đúng"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Bài Tập Bóng Y Tế Groundstroke.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\bài-tập-bóng-y-tế-groundstroke.md",
+      "cat": "the-luc",
+      "slug": "bài-tập-bóng-y-tế-groundstroke"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Bài Tập Hình Số 8.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\bài-tập-hình-số-8.md",
+      "cat": "the-luc",
+      "slug": "bài-tập-hình-số-8"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Chống Đẩy.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\chống-đẩy.md",
+      "cat": "the-luc",
+      "slug": "chống-đẩy"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Di Chuyển Chân.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\di-chuyển-chân.md",
+      "cat": "the-luc",
+      "slug": "di-chuyển-chân"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Drill Alley Ngang.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\drill-alley-ngang.md",
+      "cat": "the-luc",
+      "slug": "drill-alley-ngang"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Gập Bụng Chéo.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\gập-bụng-chéo.md",
+      "cat": "the-luc",
+      "slug": "gập-bụng-chéo"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Lịch Ăn Uống Vận Động Viên Tennis.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\lịch-ăn-uống-vận-động-viên-tennis.md",
+      "cat": "the-luc",
+      "slug": "lịch-ăn-uống-vận-động-viên-tennis"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Thể lực\\Vị Trí Chân.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\the-luc\\vị-trí-chân.md",
+      "cat": "the-luc",
+      "slug": "vị-trí-chân"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Cẩm Nang Tennis Toàn Diện.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\cẩm-nang-tennis-toàn-diện.md",
+      "cat": "tham-khao",
+      "slug": "cẩm-nang-tennis-toàn-diện"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Freak of Nurture - Eli Saslow.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\freak-of-nurture-eli-saslow.md",
+      "cat": "tham-khao",
+      "slug": "freak-of-nurture-eli-saslow"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Giáo Trình Tennis Elite.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\giáo-trình-tennis-elite.md",
+      "cat": "tham-khao",
+      "slug": "giáo-trình-tennis-elite"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Giáo Trình Tennis — Tâm Lý, Triết Học, Khoa Học Thể Thao.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\giáo-trình-tennis-—-tâm-lý,-triết-học,-khoa-học-thể-thao.md",
+      "cat": "tham-khao",
+      "slug": "giáo-trình-tennis-—-tâm-lý,-triết-học,-khoa-học-thể-thao"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Kiến Trúc Giáo Trình Tennis Elite.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\kiến-trúc-giáo-trình-tennis-elite.md",
+      "cat": "tham-khao",
+      "slug": "kiến-trúc-giáo-trình-tennis-elite"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Kình, GRF, Taichi-24 và Luyện Tập Có Chủ Đích.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\kình,-grf,-taichi-24-và-luyện-tập-có-chủ-đích.md",
+      "cat": "tham-khao",
+      "slug": "kình,-grf,-taichi-24-và-luyện-tập-có-chủ-đích"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Nghệ Thuật Tennis Hiện Đại.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\nghệ-thuật-tennis-hiện-đại.md",
+      "cat": "tham-khao",
+      "slug": "nghệ-thuật-tennis-hiện-đại"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Tài liệu gốc\\Tennis Thần Kinh Cơ Sinh Tiên Tiến.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\tham-khao\\tennis-thần-kinh-cơ-sinh-tiên-tiến.md",
+      "cat": "tham-khao",
+      "slug": "tennis-thần-kinh-cơ-sinh-tiên-tiến"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Bài Tập Chẩn Đoán Carving và Underspin.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\bài-tập-chẩn-đoán-carving-và-underspin.md",
+      "cat": "ky-thuat",
+      "slug": "bài-tập-chẩn-đoán-carving-và-underspin"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Bước Crossover Và Shuffle Tại Lưới.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\bước-crossover-và-shuffle-tại-lưới.md",
+      "cat": "ky-thuat",
+      "slug": "bước-crossover-và-shuffle-tại-lưới"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Bước Lùi Và Xử Lý Bóng Cao — Smash & Lob.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\bước-lùi-và-xử-lý-bóng-cao-—-smash-&-lob.md",
+      "cat": "ky-thuat",
+      "slug": "bước-lùi-và-xử-lý-bóng-cao-—-smash-&-lob"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Bốn Nguyên Tắc Vàng Chống Rò Rỉ Kỹ Thuật Carving.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\bốn-nguyên-tắc-vàng-chống-rò-rỉ-kỹ-thuật-carving.md",
+      "cat": "ky-thuat",
+      "slug": "bốn-nguyên-tắc-vàng-chống-rò-rỉ-kỹ-thuật-carving"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Carving & Underspin — Kỹ Thuật Volley Đẳng Cấp Thế Giới.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\carving-&-underspin-—-kỹ-thuật-volley-đẳng-cấp-thế-giới.md",
+      "cat": "ky-thuat",
+      "slug": "carving-&-underspin-—-kỹ-thuật-volley-đẳng-cấp-thế-giới"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Chuỗi Động Học Proximal-to-Distal Trong Volley.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\chuỗi-động-học-proximal-to-distal-trong-volley.md",
+      "cat": "ky-thuat",
+      "slug": "chuỗi-động-học-proximal-to-distal-trong-volley"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Các Điểm Rò Rỉ Năng Lượng Trong Volley.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\các-điểm-rò-rỉ-năng-lượng-trong-volley.md",
+      "cat": "ky-thuat",
+      "slug": "các-điểm-rò-rỉ-năng-lượng-trong-volley"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Hệ Thống DET — Truyền Năng Lượng Động.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\hệ-thống-det-—-truyền-năng-lượng-động.md",
+      "cat": "ky-thuat",
+      "slug": "hệ-thống-det-—-truyền-năng-lượng-động"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Kỹ Thuật Carving — Cơ Chế Tiếp Xúc và Vectơ Lực.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\kỹ-thuật-carving-—-cơ-chế-tiếp-xúc-và-vectơ-lực.md",
+      "cat": "ky-thuat",
+      "slug": "kỹ-thuật-carving-—-cơ-chế-tiếp-xúc-và-vectơ-lực"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Ma Trận Điều Chỉnh Góc Mặt Vợt Theo Độ Cao Bóng.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\ma-trận-điều-chỉnh-góc-mặt-vợt-theo-độ-cao-bóng.md",
+      "cat": "ky-thuat",
+      "slug": "ma-trận-điều-chỉnh-góc-mặt-vợt-theo-độ-cao-bóng"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Phân Tích Volley Roger Federer — Carving Tinh Tế.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\phân-tích-volley-roger-federer-—-carving-tinh-tế.md",
+      "cat": "ky-thuat",
+      "slug": "phân-tích-volley-roger-federer-—-carving-tinh-tế"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Timing Pulse-to-Plant.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\timing-pulse-to-plant.md",
+      "cat": "ky-thuat",
+      "slug": "timing-pulse-to-plant"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Underspin và Hiệu Ứng Magnus — Vật Lý Học Xoáy Ngược.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\underspin-và-hiệu-ứng-magnus-—-vật-lý-học-xoáy-ngược.md",
+      "cat": "ky-thuat",
+      "slug": "underspin-và-hiệu-ứng-magnus-—-vật-lý-học-xoáy-ngược"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Volley — Tổng Quan Hệ Thống 202.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\volley-—-tổng-quan-hệ-thống-202.md",
+      "cat": "ky-thuat",
+      "slug": "volley-—-tổng-quan-hệ-thống-202"
+    },
+    {
+      "src": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Volley\\Điểm Tiếp Xúc Volley — Ma Trận Tọa Độ 3D.md",
+      "out": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\ky-thuat\\điểm-tiếp-xúc-volley-—-ma-trận-tọa-độ-3d.md",
+      "cat": "ky-thuat",
+      "slug": "điểm-tiếp-xúc-volley-—-ma-trận-tọa-độ-3d"
+    }
+  ],
+  "skipped": [
+    {
+      "file": "C:\\Users\\Henry\\Documents\\MY VAULT\\Documents\\Obsidian Vault\\tennis-vault\\VN_Tennis_Vault_v3_Final\\VN_Tennis_Vault\\Kho Tri Thức Tennis.md",
+      "reason": "hub file (skip)"
+    }
+  ]
+}
