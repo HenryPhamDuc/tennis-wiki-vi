@@ -7,6 +7,8 @@
 > 🌐 **[Read in English](https://henryPhamDuc.github.io/tennis-wiki-en/)** — English version of this wiki
 >
 > 📘 **[Tennis Manual (Master Reference v2)](https://henryPhamDuc.github.io/tennis/)** — Complete bilingual EN-VI coaching manual (22 deep dives + anatomy lab)
+>
+> 🤖 **[Tennis Doctor — AI Chat](https://tennis-doctor.henry-phamduc.workers.dev/)** — Hỏi đáp tennis bằng AI, trả lời ngay từ nội dung của wiki + 97 sách tennis (EN/VI, multilingual)
 
 ## Bắt đầu nhanh
 
