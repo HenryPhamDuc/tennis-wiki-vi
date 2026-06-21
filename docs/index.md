@@ -5,6 +5,8 @@
 > Tổng hợp từ hệ thống nghiên cứu của [Henry Phạm](https://github.com/henryPhamDuc)
 
 > 🌐 **[Read in English](https://henryPhamDuc.github.io/tennis-wiki-en/)** — English version of this wiki
+>
+> 📘 **[Tennis Manual (Master Reference v2)](https://henryPhamDuc.github.io/tennis/)** — Complete bilingual EN-VI coaching manual (22 deep dives + anatomy lab)
 
 ## Bắt đầu nhanh
 
@@ -89,9 +91,9 @@ Nội dung bao gồm:
 - **Tích hợp triết lý Đông Á**: Thái Cực Quyền, Dantian, Mingmen, Chan Si Gong (Silk Reeling)
 
 ## Phiên bản ngôn ngữ
-
 - 🇻🇳 **Tiếng Việt** (bạn đang đọc) — https://henryPhamDuc.github.io/tennis-wiki/
 - 🇬🇧 **English** — https://henryPhamDuc.github.io/tennis-wiki-en/
+- 📘 **Tennis Manual (Master Reference v2)** — https://henryPhamDuc.github.io/tennis/ (Complete bilingual EN-VI coaching manual)
 
 ## Đóng góp
 
