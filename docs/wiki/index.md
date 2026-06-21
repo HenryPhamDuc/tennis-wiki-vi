@@ -2,7 +2,7 @@
 
 *Các bài viết gốc từ Obsidian vault*
 
-**Tổng số bài viết:** 80
+**Tổng số bài viết:** 79
 
 ## Danh sách bài viết
 

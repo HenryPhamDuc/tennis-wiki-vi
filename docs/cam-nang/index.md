@@ -2,7 +2,7 @@
 
 *Các cẩm nang đầy đủ, hệ thống, từ cơ bản đến chuyên sâu*
 
-**Tổng số bài viết:** 14
+**Tổng số bài viết:** 15
 
 ## Danh sách bài viết
 
@@ -16,6 +16,7 @@
 - [Chapter 7: Periodization & Long-term Planning](advanced-manual-ch07-periodization.md)
 - [Chapter 8: Elite Player Analysis & Case Studies](advanced-manual-ch08-elite-player-analysis.md)
 - [Elite Tennis Training Manual-Vietnamese](elite-tennis-training-manual-vietnamese.md)
+- [GOAT Tennis — Giáo Trình Tiếng Việt](goat-tennis-giao-trinh-tieng-viet.md)
 - [Modern Tennis Volley Handbook 2026](modern_tennis_volley_handbook_2026.md)
 - [Nghệ Thuật Hiện Đại Tennis](the_art_of_modern_tennis.md)
 - [Tennis Training — Kình, GRF, Taichi-24 Forms and Deliberate Practice](tennis-training_-kình,-grf,-taichi-24-forms-and-delibrate-practice.md)
