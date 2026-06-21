@@ -4,6 +4,8 @@
 >
 > Tổng hợp từ hệ thống nghiên cứu của [Henry Phạm](https://github.com/henryPhamDuc)
 
+> 🌐 **[Read in English](https://henryPhamDuc.github.io/tennis-wiki-en/)** — English version of this wiki
+
 ## Bắt đầu nhanh
 
 <div class="grid cards" markdown>
@@ -85,6 +87,11 @@ Nội dung bao gồm:
 - **Phân tích chuyên sâu** các tay vợt hàng đầu thế giới
 - **Framework độc đáo**: TFL 3.0 (Rhythm-Position-Movement), Dynamic Energy Transfer, Wave Theory, Tennis Control System
 - **Tích hợp triết lý Đông Á**: Thái Cực Quyền, Dantian, Mingmen, Chan Si Gong (Silk Reeling)
+
+## Phiên bản ngôn ngữ
+
+- 🇻🇳 **Tiếng Việt** (bạn đang đọc) — https://henryPhamDuc.github.io/tennis-wiki/
+- 🇬🇧 **English** — https://henryPhamDuc.github.io/tennis-wiki-en/
 
 ## Đóng góp
 
