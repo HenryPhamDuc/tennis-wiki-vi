@@ -79,7 +79,6 @@
 - [Tao Song Tennis](tao-song-tennis.md)
 - [Tao Song Trong Tennis](tao-song-trong-tennis.md)
 - [Temporary Chat](chat-gemini-google-com-app-0b26a0697c5e1681.md)
-- [Tennis _Training_ _Manual_ Architecture](tennis-training-manual-architecture.md)
 - [🎾 Tennis And Biomechanics](tennis_and_biomechanics.md)
 - [🎾 Tennis Biomechanics The Principle Of Opp](tennis_biomechanics_the_principle_of_opp.md)
 - [Tennis Handbook Ollama](tennis-handbook-ollama.md)

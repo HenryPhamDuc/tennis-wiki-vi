@@ -21,20 +21,15 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 
 - [fascia-spirals](../ky-thuat/fascia-spirals.md)
 - [head-position-vestibular](../the-luc/head-position-vestibular.md)
-- [neuro-motor-manual-of-tennis-mastery-complete](../ky-thuat/neuro-motor-manual-of-tennis-mastery-complete.md)
-- [neuro-motor-manual-of-tennis-mastery-complete-corrected](../ky-thuat/neuro-motor-manual-of-tennis-mastery-complete-corrected.md)
-- [neuro-motor-manual-of-tennis-mastery-final](../ky-thuat/neuro-motor-manual-of-tennis-mastery-final.md)
 - [proprioception-hidden-gps](../ky-thuat/proprioception-hidden-gps.md)
 - [reflex-arcs](../ky-thuat/reflex-arcs.md)
 - [tennis-neurological-specialist](../wiki/tennis-neurological-specialist.md)
-- [tennis-neurological-specialist-1](../wiki/tennis-neurological-specialist-1.md)
 - [tennis-neurological-specialist-deep-research](../wiki/tennis-neurological-specialist-deep-research.md)
 - [tensegrity-body](tensegrity-body.md)
 - [x-factor-anatomy](x-factor-anatomy.md)
 
 ### 📚 **Cẩm Nang & Giáo Trình** — giáo trình 5 năm, cẩm nang tổng hợp, volumes 1-3, framework TFL.
 
-- [4377bb3b-3d48-4d81-a1b6-103191b2b3ca](../ky-thuat/4377bb3b-3d48-4d81-a1b6-103191b2b3ca.md)
 - [advanced-tennis-kinetic-chain-manual](../ky-thuat/advanced-tennis-kinetic-chain-manual.md)
 - [analysis-of-tennis-techniques-from-elite-players](analysis-of-tennis-techniques-from-elite-players.md)
 - [art-of-modern-tennis](art-of-modern-tennis.md)
@@ -89,7 +84,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [cẩm-nang-tennis-cross-training-với-các-môn-khác](../ky-thuat/cẩm-nang-tennis-cross-training-với-các-môn-khác.md)
 - [dynamic-energy-transfer](../ky-thuat/dynamic-energy-transfer.md)
 - [elite-tennis-training-manual-architecture](elite-tennis-training-manual-architecture.md)
-- [ence-manual-for-elite-players-and-coaches-tennis-manual-full](../ky-thuat/ence-manual-for-elite-players-and-coaches-tennis-manual-full.md)
 - [forehand-technique-a-biomechanical-breakthrough-in-tennis](../ky-thuat/forehand-technique-a-biomechanical-breakthrough-in-tennis.md)
 - [giao-trinh-5-nam](giao-trinh-5-nam.md)
 - [giao-trinh-trung-nien](../wiki/giao-trinh-trung-nien.md)
@@ -99,23 +93,15 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [is-techniques-through-the-lens-of-industrial-control-systems](../ky-thuat/is-techniques-through-the-lens-of-industrial-control-systems.md)
 - [khung-cơ-thể-tennis](../ky-thuat/khung-cơ-thể-tennis.md)
 - [kỹ-thuật-tay-trái-trong-tennis](../ky-thuat/kỹ-thuật-tay-trái-trong-tennis.md)
-- [neuro-motor-manual-of-tennis-mastery-1](../ky-thuat/neuro-motor-manual-of-tennis-mastery-1.md)
 - [nghiên-cứu-chuyên-sâu-về-cơ-sinh-học](nghiên-cứu-chuyên-sâu-về-cơ-sinh-học.md)
 - [setting-realistic-yearly-goals](setting-realistic-yearly-goals.md)
-- [tennis-biomechanics-ground-reaction-forces](../ky-thuat/tennis-biomechanics-ground-reaction-forces.md)
-- [tennis-biomechanics-manual-conversion](../ky-thuat/tennis-biomechanics-manual-conversion.md)
 - [tennis-control-system-manual-final](../wiki/tennis-control-system-manual-final.md)
 - [tennis-handbook-ollama](tennis-handbook-ollama.md)
-- [tennis-manual-chapter12](../ky-thuat/tennis-manual-chapter12.md)
-- [tennis-manual-full](../ky-thuat/tennis-manual-full.md)
 - [tennis-tension-neural-biomechanical-analysis](tennis-tension-neural-biomechanical-analysis.md)
-- [tennis-training-manual-architecture](tennis-training-manual-architecture.md)
 - [tennis-visualization-and-prediction](tennis-visualization-and-prediction.md)
 - [tfl-tennis-3-0-details](../ky-thuat/tfl-tennis-3-0-details.md)
-- [tfl-tennis-3-0-scaffold](../ky-thuat/tfl-tennis-3-0-scaffold.md)
 - [the-complete-tennis-manual-a-guide-to-elite-performance](../ky-thuat/the-complete-tennis-manual-a-guide-to-elite-performance.md)
 - [the-hidden-engine-of-tennis](../ky-thuat/the-hidden-engine-of-tennis.md)
-- [the-integration-of-sensory-systems-and-neural-feedback-loops](../ky-thuat/the-integration-of-sensory-systems-and-neural-feedback-loops.md)
 - [the-neuro-motor-manual-of-tennis-mastery-full](../ky-thuat/the-neuro-motor-manual-of-tennis-mastery-full.md)
 - [untitled-100](../ky-thuat/untitled-100.md)
 - [untitled-52](../wiki/untitled-52.md)
@@ -141,8 +127,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [return-of-serve](../ky-thuat/return-of-serve.md)
 - [serve-gravity-rotation](../ky-thuat/serve-gravity-rotation.md)
 - [tennis-atp-forehand-techniques-esssential-detailed-report](../ky-thuat/tennis-atp-forehand-techniques-esssential-detailed-report.md)
-- [tennis-backhand-techniques-esssential-detailed-report](../ky-thuat/tennis-backhand-techniques-esssential-detailed-report.md)
-- [tennis-return-of-serve-positioning-geometry](../ky-thuat/tennis-return-of-serve-positioning-geometry.md)
 - [unit-turn](../ky-thuat/unit-turn.md)
 - [volley-redirection](../ky-thuat/volley-redirection.md)
 
@@ -201,7 +185,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 ### 📄 **Manus Papers** — bài nghiên cứu sinh cơ học học thuật, tổng hợp từ Manus AI.
 
 - [contact-point-architecture](../wiki/contact-point-architecture.md)
-- [extended-wiki-chapters-1-12](../ky-thuat/extended-wiki-chapters-1-12.md)
 - [feedforward-feedback-control](feedforward-feedback-control.md)
 - [forehand-sinh-co-hoc](../ky-thuat/forehand-sinh-co-hoc.md)
 - [hai-dong-co-thuan-tay](hai-dong-co-thuan-tay.md)
@@ -244,7 +227,6 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 ### 🎾 **Volley Cẩm Nang** — tài liệu chuyên sâu về volley, carving, underspin, nguyên lý Thái Cực.
 
 - [carving-underspin](../ky-thuat/carving-underspin.md)
-- [modern-tennis-volley-handbook-2026-docx](../ky-thuat/modern-tennis-volley-handbook-2026-docx.md)
 - [tai-chi-volley](../ky-thuat/tai-chi-volley.md)
 - [tennis-volley-deep-research](../ky-thuat/tennis-volley-deep-research.md)
 - [tennis-volley-techniques-essential-deep-research-report](../ky-thuat/tennis-volley-techniques-essential-deep-research-report.md)

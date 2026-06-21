@@ -71,7 +71,6 @@
 - [SÓNG, VỢT VÀ TÂM TĨNH](kinh-tinh-than-wave.md)
 - [SÓNG, VỢT VÀ TÂM TĨNH](song-vot-va-tam-tinh.md)
 - [Tennis As Embodied Cognition](tennis-as-embodied-cognition.md)
-- [THE TENNIS _Neuro_LOGICAL SPECIALIST](tennis-neurological-specialist-1.md)
 - [THE TENNIS NEUROLOGICAL SPECIALIST](tennis-neurological-specialist.md)
 - [Thumb Flip](thumb-flip.md)
 - [Thói Quen Tâm Lý Tích Cực](thói-quen-tâm-lý-tích-cực.md)
