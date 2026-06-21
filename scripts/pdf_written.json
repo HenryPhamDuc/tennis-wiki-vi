@@ -1,0 +1,1762 @@
+{
+  "written": [
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The single hander.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-single-hander.md",
+      "subdir": "tham-khao",
+      "slug": "the-single-hander",
+      "body_len": 10860
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\roetert_tennis-anatomy.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\roetert_tennis-anatomy.md",
+      "subdir": "ky-thuat",
+      "slug": "roetert_tennis-anatomy",
+      "body_len": 76357
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis 101.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-101.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-101",
+      "body_len": 23001
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Fluid Movement in Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\fluid-movement-in-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "fluid-movement-in-tennis",
+      "body_len": 9575
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\HESR-249-Course-Pack.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\hesr-249-course-pack.md",
+      "subdir": "tham-khao",
+      "slug": "hesr-249-course-pack",
+      "body_len": 23503
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Get-Fit-for-Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\get-fit-for-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "get-fit-for-tennis",
+      "body_len": 14674
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Read Distance Learning Online.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\read-distance-learning-online.md",
+      "subdir": "tham-khao",
+      "slug": "read-distance-learning-online",
+      "body_len": 7351
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\MODERN TENNIS BIOMECHANICS, ERGONOMICS, PLAYING TECHNIQUES.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\modern-tennis-biomechanics-ergonomics-playing-techniques.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "modern-tennis-biomechanics-ergonomics-playing-techniques",
+      "body_len": 28742
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Section.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-section.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-section",
+      "body_len": 196154
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ultimate-Tennis-Practice-for-2-Player (19).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ultimate-tennis-practice-for-2-player-19.md",
+      "subdir": "ky-thuat",
+      "slug": "ultimate-tennis-practice-for-2-player-19",
+      "body_len": 8130
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis_biomechanics_the_principle_of_opp.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\tennis_biomechanics_the_principle_of_opp.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "tennis_biomechanics_the_principle_of_opp",
+      "body_len": 8943
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Federer Vision Technique.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\federer-vision-technique.md",
+      "subdir": "tham-khao",
+      "slug": "federer-vision-technique",
+      "body_len": 30187
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\MOVEMENT AN ESSENTIAL TO SHOT MAKING.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\movement-an-essential-to-shot-making.md",
+      "subdir": "tham-khao",
+      "slug": "movement-an-essential-to-shot-making",
+      "body_len": 10539
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\TENNIS-practice-Plan-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-practice-plan-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-practice-plan-pdf",
+      "body_len": 50456
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Cardio-Tennis-Drills.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\cardio-tennis-drills.md",
+      "subdir": "ky-thuat",
+      "slug": "cardio-tennis-drills",
+      "body_len": 17242
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Strokes and Tactics.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-strokes-and-tactics.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-strokes-and-tactics",
+      "body_len": 58122
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The_principle_of_balance.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the_principle_of_balance.md",
+      "subdir": "tham-khao",
+      "slug": "the_principle_of_balance",
+      "body_len": 9632
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\10-Serve Return &.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\10-serve-return.md",
+      "subdir": "ky-thuat",
+      "slug": "10-serve-return",
+      "body_len": 19780
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis 2015 Preview Issue.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-2015-preview-issue.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-2015-preview-issue",
+      "body_len": 84329
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Anatomy-of-Modern-Tennis-Shot.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\anatomy-of-modern-tennis-shot.md",
+      "subdir": "ky-thuat",
+      "slug": "anatomy-of-modern-tennis-shot",
+      "body_len": 38433
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Double Pendulum in Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-double-pendulum-in-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "the-double-pendulum-in-tennis",
+      "body_len": 41868
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Magazines-40-Best-Tips.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-magazines-40-best-tips.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-magazines-40-best-tips",
+      "body_len": 36304
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The-Lateral-Reaction-Step-in-Tennis-Footwork.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-lateral-reaction-step-in-tennis-footwork.md",
+      "subdir": "ky-thuat",
+      "slug": "the-lateral-reaction-step-in-tennis-footwork",
+      "body_len": 20546
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\How to beat a better tennis player.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\how-to-beat-a-better-tennis-player.md",
+      "subdir": "ky-thuat",
+      "slug": "how-to-beat-a-better-tennis-player",
+      "body_len": 95962
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Royal Navy-Tennis Course.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\royal-navy-tennis-course.md",
+      "subdir": "ky-thuat",
+      "slug": "royal-navy-tennis-course",
+      "body_len": 128157
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Forehand Technique.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-forehand-technique.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-forehand-technique",
+      "body_len": 32568
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Models-of-Tennis-Fitness.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\models-of-tennis-fitness.md",
+      "subdir": "ky-thuat",
+      "slug": "models-of-tennis-fitness",
+      "body_len": 19546
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageApril2018WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantageapril2018web.md",
+      "subdir": "tham-khao",
+      "slug": "addvantageapril2018web",
+      "body_len": 79194
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\11-The Volley Sweet Thing.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\11-the-volley-sweet-thing.md",
+      "subdir": "ky-thuat",
+      "slug": "11-the-volley-sweet-thing",
+      "body_len": 42301
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Winning-Tennis-Tactics.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\winning-tennis-tactics.md",
+      "subdir": "ky-thuat",
+      "slug": "winning-tennis-tactics",
+      "body_len": 36179
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Roger-Federer-Backhand-Guide.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\roger-federer-backhand-guide.md",
+      "subdir": "ky-thuat",
+      "slug": "roger-federer-backhand-guide",
+      "body_len": 5018
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Kovacs Gullikson female synchronized serves USTA HP Coaching Newsletter 2010.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\kovacs-gullikson-female-synchronized-serves-usta-hp-coaching-newsletter-2010.md",
+      "subdir": "ky-thuat",
+      "slug": "kovacs-gullikson-female-synchronized-serves-usta-hp-coaching-newsletter-2010",
+      "body_len": 16618
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The fundamentals and Psycholoy of Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-fundamentals-and-psycholoy-of-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "the-fundamentals-and-psycholoy-of-tennis",
+      "body_len": 64675
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\the tennis stance.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-tennis-stance.md",
+      "subdir": "ky-thuat",
+      "slug": "the-tennis-stance",
+      "body_len": 20583
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\10 Tennis Drills.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\10-tennis-drills.md",
+      "subdir": "ky-thuat",
+      "slug": "10-tennis-drills",
+      "body_len": 31571
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\nihms-812568.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\nihms-812568.md",
+      "subdir": "tham-khao",
+      "slug": "nihms-812568",
+      "body_len": 96197
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\3ii-TWO-HANDED IS SUPERIOR TO ONE-HANDED BACKHAND.PDF",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\3ii-two-handed-is-superior-to-one-handed-backhand-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "3ii-two-handed-is-superior-to-one-handed-backhand-pdf",
+      "body_len": 12933
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\TEC 130 - THE SERVE from FTPTennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tec-130-the-serve-from-ftptennis.md",
+      "subdir": "ky-thuat",
+      "slug": "tec-130-the-serve-from-ftptennis",
+      "body_len": 26229
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ultimate-Tennis-Practice-for-2-Player.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ultimate-tennis-practice-for-2-player.md",
+      "subdir": "ky-thuat",
+      "slug": "ultimate-tennis-practice-for-2-player",
+      "body_len": 17250
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\1-The Forehand Groundstroke.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\1-the-forehand-groundstroke.md",
+      "subdir": "ky-thuat",
+      "slug": "1-the-forehand-groundstroke",
+      "body_len": 52805
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\S7.1_Renstrom_Overview shoulder injuries in sports.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\s7-1_renstrom_overview-shoulder-injuries-in-sports.md",
+      "subdir": "tham-khao",
+      "slug": "s7-1_renstrom_overview-shoulder-injuries-in-sports",
+      "body_len": 27799
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\2-The Forehand Groundstroke-2.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\2-the-forehand-groundstroke-2.md",
+      "subdir": "ky-thuat",
+      "slug": "2-the-forehand-groundstroke-2",
+      "body_len": 21211
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\doc_437_511.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\doc_437_511.md",
+      "subdir": "tham-khao",
+      "slug": "doc_437_511",
+      "body_len": 17888
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\INFLUENCE_OF_RESTRICTED_KNEE_MOTION_DURI.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\influence_of_restricted_knee_motion_duri.md",
+      "subdir": "tham-khao",
+      "slug": "influence_of_restricted_knee_motion_duri",
+      "body_len": 58744
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Roger_Federer_Serve_Guide.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\roger_federer_serve_guide.md",
+      "subdir": "ky-thuat",
+      "slug": "roger_federer_serve_guide",
+      "body_len": 4051
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Training Enhancing On-court Performance ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-training-enhancing-on-court-performance-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-training-enhancing-on-court-performance-pdfdrive",
+      "body_len": 31052
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\September-October-Tennis-Industry-Magazine.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\september-october-tennis-industry-magazine.md",
+      "subdir": "ky-thuat",
+      "slug": "september-october-tennis-industry-magazine",
+      "body_len": 104705
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanics_of_advanced_tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanics_of_advanced_tennis.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanics_of_advanced_tennis",
+      "body_len": 41648
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanicsoftennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanicsoftennis.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanicsoftennis",
+      "body_len": 41430
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Tutorial.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-tutorial.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-tutorial",
+      "body_len": 37382
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Physics of the tennis kick serve.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\physics-of-the-tennis-kick-serve.md",
+      "subdir": "ky-thuat",
+      "slug": "physics-of-the-tennis-kick-serve",
+      "body_len": 56874
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis_and_Biomechanics.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\tennis_and_biomechanics.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "tennis_and_biomechanics",
+      "body_len": 8059
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Strategy Booklet.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-strategy-booklet.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-strategy-booklet",
+      "body_len": 56608
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Performance_factors_related_to_the_diffe.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\performance_factors_related_to_the_diffe.md",
+      "subdir": "tham-khao",
+      "slug": "performance_factors_related_to_the_diffe",
+      "body_len": 67284
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\12-mythofthemyths.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\12-mythofthemyths.md",
+      "subdir": "tham-khao",
+      "slug": "12-mythofthemyths",
+      "body_len": 27338
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\MythFollowThroughPTR.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\mythfollowthroughptr.md",
+      "subdir": "tham-khao",
+      "slug": "mythfollowthroughptr",
+      "body_len": 15486
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\ACQUIRING BALANCE SKILLS ESSENTIAL FOR TENNIS.PDF",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\acquiring-balance-skills-essential-for-tennis-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "acquiring-balance-skills-essential-for-tennis-pdf",
+      "body_len": 18025
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\warm_up_book.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\warm_up_book.md",
+      "subdir": "tham-khao",
+      "slug": "warm_up_book",
+      "body_len": 7963
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADD_NOV_DEC_2020_Web.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\add_nov_dec_2020_web.md",
+      "subdir": "tham-khao",
+      "slug": "add_nov_dec_2020_web",
+      "body_len": 89386
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Free-Forehand.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\free-forehand.md",
+      "subdir": "ky-thuat",
+      "slug": "free-forehand",
+      "body_len": 23160
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Roger-Federer-Forehand-Guide-18.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\roger-federer-forehand-guide-18.md",
+      "subdir": "ky-thuat",
+      "slug": "roger-federer-forehand-guide-18",
+      "body_len": 4193
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\Body Rotation.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\body-rotation.md",
+      "subdir": "tham-khao",
+      "slug": "body-rotation",
+      "body_len": 29106
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USPTA_high_performance_Vol._9_No_2.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\uspta_high_performance_vol-_9_no_2.md",
+      "subdir": "tham-khao",
+      "slug": "uspta_high_performance_vol-_9_no_2",
+      "body_len": 45833
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\1555-0273-article-p1159.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\1555-0273-article-p1159.md",
+      "subdir": "tham-khao",
+      "slug": "1555-0273-article-p1159",
+      "body_len": 89109
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Variability of impact kinematics.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\variability-of-impact-kinematics.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "variability-of-impact-kinematics",
+      "body_len": 30199
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-doubles.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-doubles.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-doubles",
+      "body_len": 6069
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\5-The Serve (2).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\5-the-serve-2.md",
+      "subdir": "ky-thuat",
+      "slug": "5-the-serve-2",
+      "body_len": 7886
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\tennis_hien_dai_revised.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis_hien_dai_revised.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis_hien_dai_revised",
+      "body_len": 37231
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\April-21-Racquet-Sports-Industry-magazine.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\april-21-racquet-sports-industry-magazine.md",
+      "subdir": "ky-thuat",
+      "slug": "april-21-racquet-sports-industry-magazine",
+      "body_len": 149716
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Industry.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-industry.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-industry",
+      "body_len": 201198
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2010May.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2010may.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2010may",
+      "body_len": 102074
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USPTA_high_performance_Vol._2_No_4.2005_footwork_in_modern_tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\uspta_high_performance_vol-_2_no_4-2005_footwork_in_modern_tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "uspta_high_performance_vol-_2_no_4-2005_footwork_in_modern_tennis",
+      "body_len": 33773
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016July.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016july.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016july",
+      "body_len": 92463
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2017November_December.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2017november_december.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2017november_december",
+      "body_len": 83404
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016february.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016february",
+      "body_len": 69689
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2018July.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2018july.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2018july",
+      "body_len": 74433
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2019March.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2019march.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2019march",
+      "body_len": 72545
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageMarch2018web.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagemarch2018web.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagemarch2018web",
+      "body_len": 93161
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Sept-Oct2018.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\sept-oct2018.md",
+      "subdir": "tham-khao",
+      "slug": "sept-oct2018",
+      "body_len": 63930
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Fundamentals to tennis techniques and racquets.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\fundamentals-to-tennis-techniques-and-racquets.md",
+      "subdir": "ky-thuat",
+      "slug": "fundamentals-to-tennis-techniques-and-racquets",
+      "body_len": 10420
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USTA_high_performance_vol._6_no_3.2004.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\usta_high_performance_vol-_6_no_3-2004.md",
+      "subdir": "ky-thuat",
+      "slug": "usta_high_performance_vol-_6_no_3-2004",
+      "body_len": 41125
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Movement-for-Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\movement-for-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "movement-for-tennis",
+      "body_len": 42952
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Question.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\question.md",
+      "subdir": "tham-khao",
+      "slug": "question",
+      "body_len": 14007
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Unforced errors and error reduction in tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\unforced-errors-and-error-reduction-in-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "unforced-errors-and-error-reduction-in-tennis",
+      "body_len": 32349
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Text Books for Coaching JuniorTennis Players - AngeloRossetti.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\text-books-for-coaching-juniortennis-players-angelorossetti.md",
+      "subdir": "ky-thuat",
+      "slug": "text-books-for-coaching-juniortennis-players-angelorossetti",
+      "body_len": 29158
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\14-How The Feet Work.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\14-how-the-feet-work.md",
+      "subdir": "tham-khao",
+      "slug": "14-how-the-feet-work",
+      "body_len": 25526
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\19-Stroke Commonalities I.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\19-stroke-commonalities-i.md",
+      "subdir": "tham-khao",
+      "slug": "19-stroke-commonalities-i",
+      "body_len": 18545
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\9-The Serve (6).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\9-the-serve-6.md",
+      "subdir": "ky-thuat",
+      "slug": "9-the-serve-6",
+      "body_len": 4748
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\TEC 110 - THE FOREHAND  from PTPTennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tec-110-the-forehand-from-ptptennis.md",
+      "subdir": "ky-thuat",
+      "slug": "tec-110-the-forehand-from-ptptennis",
+      "body_len": 24155
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Rod Laver _ an autobiography ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\rod-laver-_-an-autobiography-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "rod-laver-_-an-autobiography-pdfdrive",
+      "body_len": 33608
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ground strokes - Tennis drills.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ground-strokes-tennis-drills.md",
+      "subdir": "ky-thuat",
+      "slug": "ground-strokes-tennis-drills",
+      "body_len": 59062
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\cssr 85 eng-v1.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\cssr-85-eng-v1.md",
+      "subdir": "tham-khao",
+      "slug": "cssr-85-eng-v1",
+      "body_len": 175469
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage1977January_February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage1977january_february.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage1977january_february",
+      "body_len": 101162
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016March.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016march.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016march",
+      "body_len": 74815
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageMay2019WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagemay2019web.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagemay2019web",
+      "body_len": 72987
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\FINAL_May2020_ADDvantage_nobleeds.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\final_may2020_addvantage_nobleeds.md",
+      "subdir": "tham-khao",
+      "slug": "final_may2020_addvantage_nobleeds",
+      "body_len": 79509
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Hornestam2021-TheEffectsofKneeFlexiononTennisServePerformanceofIntermediateLevelTennisPlayers.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\hornestam2021-theeffectsofkneeflexionontennisserveperformanceofintermediatelevel.md",
+      "subdir": "ky-thuat",
+      "slug": "hornestam2021-theeffectsofkneeflexionontennisserveperformanceofintermediatelevel",
+      "body_len": 58478
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Universal Tennis Swing.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-universal-tennis-swing.md",
+      "subdir": "ky-thuat",
+      "slug": "the-universal-tennis-swing",
+      "body_len": 17371
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Guide.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-guide.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-guide",
+      "body_len": 16936
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis activity guide for kids.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-activity-guide-for-kids.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-activity-guide-for-kids",
+      "body_len": 44028
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\LEARN TENNIS AS AN OPEN SKILL SPORT- Wayne Elderton.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\learn-tennis-as-an-open-skill-sport-wayne-elderton.md",
+      "subdir": "ky-thuat",
+      "slug": "learn-tennis-as-an-open-skill-sport-wayne-elderton",
+      "body_len": 12216
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\18-Control Your Power.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\18-control-your-power.md",
+      "subdir": "tham-khao",
+      "slug": "18-control-your-power",
+      "body_len": 16227
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-recovery-project-final.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-recovery-project-final.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-recovery-project-final",
+      "body_len": 40157
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Step 9 - Back Hand Stroke (1).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\step-9-back-hand-stroke-1.md",
+      "subdir": "tham-khao",
+      "slug": "step-9-back-hand-stroke-1",
+      "body_len": 42072
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Skills-Drills-Human-Kinetics-2012.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-skills-drills-human-kinetics-2012.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-skills-drills-human-kinetics-2012",
+      "body_len": 55850
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Complex Sports Biodynamics With Practical Applications in Tennis ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\complex-sports-biodynamics-with-practical-applications-in-tennis-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "complex-sports-biodynamics-with-practical-applications-in-tennis-pdfdrive",
+      "body_len": 57439
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Complete Conditioning for tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\complete-conditioning-for-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "complete-conditioning-for-tennis",
+      "body_len": 41669
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\How to win at table tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\how-to-win-at-table-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "how-to-win-at-table-tennis",
+      "body_len": 68218
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Strategy Encyclopedia Mindgame.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-strategy-encyclopedia-mindgame.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-strategy-encyclopedia-mindgame",
+      "body_len": 55633
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Strength-Power-Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\strength-power-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "strength-power-tennis",
+      "body_len": 14643
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2013June.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2013june.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2013june",
+      "body_len": 114050
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Racquet Control - Part 2.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\racquet-control-part-2.md",
+      "subdir": "ky-thuat",
+      "slug": "racquet-control-part-2",
+      "body_len": 40474
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016August.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016august.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016august",
+      "body_len": 84750
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016January.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016january.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016january",
+      "body_len": 75835
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2017April.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2017april.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2017april",
+      "body_len": 72538
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\12112019_Addvantage_February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\12112019_addvantage_february.md",
+      "subdir": "tham-khao",
+      "slug": "12112019_addvantage_february",
+      "body_len": 81930
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\033020_Addvantage_April.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\033020_addvantage_april.md",
+      "subdir": "tham-khao",
+      "slug": "033020_addvantage_april",
+      "body_len": 73199
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage0717.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage0717.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage0717",
+      "body_len": 66984
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2018February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2018february.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2018february",
+      "body_len": 76824
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2019April.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2019april.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2019april",
+      "body_len": 75194
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageJanuary2018.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagejanuary2018.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagejanuary2018",
+      "body_len": 70330
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageSep-OctNoCrops.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagesep-octnocrops.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagesep-octnocrops",
+      "body_len": 63425
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\MSFHJAB1989.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\msfhjab1989.md",
+      "subdir": "tham-khao",
+      "slug": "msfhjab1989",
+      "body_len": 2436
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\behm1987squashstroke.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\behm1987squashstroke.md",
+      "subdir": "tham-khao",
+      "slug": "behm1987squashstroke",
+      "body_len": 53108
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USPTA_high_performance_Vol._8_No_4.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\uspta_high_performance_vol-_8_no_4.md",
+      "subdir": "tham-khao",
+      "slug": "uspta_high_performance_vol-_8_no_4",
+      "body_len": 46895
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\2009Vol10No45.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\2009vol10no45.md",
+      "subdir": "tham-khao",
+      "slug": "2009vol10no45",
+      "body_len": 44609
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\How-to-Improve-Tennis-Footwork1.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\how-to-improve-tennis-footwork1.md",
+      "subdir": "ky-thuat",
+      "slug": "how-to-improve-tennis-footwork1",
+      "body_len": 7021
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Bc-Provincial-Training-Program-2017-18.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-bc-provincial-training-program-2017-18.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-bc-provincial-training-program-2017-18",
+      "body_len": 17147
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\8-The Serve (5).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\8-the-serve-5.md",
+      "subdir": "ky-thuat",
+      "slug": "8-the-serve-5",
+      "body_len": 60079
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\ANALYSIS OF TIME AND GAME CHARACTERISTICS IN TOP PROFILE TENNIS.PDF",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\analysis-of-time-and-game-characteristics-in-top-profile-tennis-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "analysis-of-time-and-game-characteristics-in-top-profile-tennis-pdf",
+      "body_len": 42280
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\7-The Serve (4).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\7-the-serve-4.md",
+      "subdir": "ky-thuat",
+      "slug": "7-the-serve-4",
+      "body_len": 23079
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\TENNIS_SCIENCES.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis_sciences.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis_sciences",
+      "body_len": 97510
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Coaching Tennis Technical and Tactical Skills.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\coaching-tennis-technical-and-tactical-skills.md",
+      "subdir": "ky-thuat",
+      "slug": "coaching-tennis-technical-and-tactical-skills",
+      "body_len": 54794
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary-tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\revolutionary-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "revolutionary-tennis",
+      "body_len": 65700
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Coaching-Tennis-Successfully.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\coaching-tennis-successfully.md",
+      "subdir": "ky-thuat",
+      "slug": "coaching-tennis-successfully",
+      "body_len": 59270
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Rafa ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\rafa-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "rafa-pdfdrive",
+      "body_len": 51063
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Workbook.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-workbook.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-workbook",
+      "body_len": 75923
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\1142019_Addvantage_JanuaryNoCrops.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\1142019_addvantage_januarynocrops.md",
+      "subdir": "tham-khao",
+      "slug": "1142019_addvantage_januarynocrops",
+      "body_len": 70466
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\01132019_Addvantage_March3.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\01132019_addvantage_march3.md",
+      "subdir": "tham-khao",
+      "slug": "01132019_addvantage_march3",
+      "body_len": 71943
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage_June_2020_FINAL.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage_june_2020_final.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage_june_2020_final",
+      "body_len": 75116
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDVantage_SeptOct_1WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage_septoct_1web.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage_septoct_1web",
+      "body_len": 70208
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageAugustCornellNOCROPS.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantageaugustcornellnocrops.md",
+      "subdir": "tham-khao",
+      "slug": "addvantageaugustcornellnocrops",
+      "body_len": 68849
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageMay2018NoCrop.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagemay2018nocrop.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagemay2018nocrop",
+      "body_len": 81718
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Racquet Control - Part 1.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\racquet-control-part-1.md",
+      "subdir": "ky-thuat",
+      "slug": "racquet-control-part-1",
+      "body_len": 27644
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage-Summer-2015.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage-summer-2015.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage-summer-2015",
+      "body_len": 44502
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Platform and pinpoint serve stance variations.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\platform-and-pinpoint-serve-stance-variations.md",
+      "subdir": "ky-thuat",
+      "slug": "platform-and-pinpoint-serve-stance-variations",
+      "body_len": 6514
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USTA-high-performance-vol-6-no-4-2004-federer-3-forehands.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\usta-high-performance-vol-6-no-4-2004-federer-3-forehands.md",
+      "subdir": "ky-thuat",
+      "slug": "usta-high-performance-vol-6-no-4-2004-federer-3-forehands",
+      "body_len": 53699
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Dynamics of Ball - Racquet Impact in Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\dynamics-of-ball-racquet-impact-in-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "dynamics-of-ball-racquet-impact-in-tennis",
+      "body_len": 42357
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Elbow-Rehab.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-elbow-rehab.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-elbow-rehab",
+      "body_len": 23159
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Perfect Serve - Flat Serve for beginners.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\perfect-serve-flat-serve-for-beginners.md",
+      "subdir": "ky-thuat",
+      "slug": "perfect-serve-flat-serve-for-beginners",
+      "body_len": 14109
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Raquet-Physics-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-raquet-physics-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-raquet-physics-pdf",
+      "body_len": 17458
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\A COMPREHENSIVE CHARTING SYSTEM.PDF",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\a-comprehensive-charting-system-pdf.md",
+      "subdir": "tham-khao",
+      "slug": "a-comprehensive-charting-system-pdf",
+      "body_len": 12637
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Stretching Bible The Ultimate Guide to Improving Fitness and Flexibility ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\the-stretching-bible-the-ultimate-guide-to-improving-fitness-and-flexibility-pdf.md",
+      "subdir": "the-luc",
+      "slug": "the-stretching-bible-the-ultimate-guide-to-improving-fitness-and-flexibility-pdf",
+      "body_len": 26252
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Novak Djokovic and the Rise of Sebia_ The Sporting Statesman ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\novak-djokovic-and-the-rise-of-sebia_-the-sporting-statesman-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "novak-djokovic-and-the-rise-of-sebia_-the-sporting-statesman-pdfdrive",
+      "body_len": 46838
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Pete Sampras a Champions Mind ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\pete-sampras-a-champions-mind-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "pete-sampras-a-champions-mind-pdfdrive",
+      "body_len": 40778
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\LearnToPlay_ENG.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\learntoplay_eng.md",
+      "subdir": "tham-khao",
+      "slug": "learntoplay_eng",
+      "body_len": 42692
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Industrial magazine.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-industrial-magazine.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-industrial-magazine",
+      "body_len": 102958
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2009February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2009february.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2009february",
+      "body_len": 89129
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Nov-Dec 2019_WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\nov-dec-2019_web.md",
+      "subdir": "tham-khao",
+      "slug": "nov-dec-2019_web",
+      "body_len": 93255
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2017January.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2017january.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2017january",
+      "body_len": 68847
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Racquet vs Ball Impulse - Momentum.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\racquet-vs-ball-impulse-momentum.md",
+      "subdir": "ky-thuat",
+      "slug": "racquet-vs-ball-impulse-momentum",
+      "body_len": 15403
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageJan19_WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantagejan19_web.md",
+      "subdir": "tham-khao",
+      "slug": "addvantagejan19_web",
+      "body_len": 81506
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Wikipedia.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-wikipedia.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-wikipedia",
+      "body_len": 91572
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\FTP_ABC_s_smart_train_C3_connected_core_Feb_5th_newsletter.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\ftp_abc_s_smart_train_c3_connected_core_feb_5th_newsletter.md",
+      "subdir": "the-luc",
+      "slug": "ftp_abc_s_smart_train_c3_connected_core_feb_5th_newsletter",
+      "body_len": 5838
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\17-Your Body’s Power.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\17-your-body-s-power.md",
+      "subdir": "tham-khao",
+      "slug": "17-your-body-s-power",
+      "body_len": 22303
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Nick Kyrgio Debunk Topspin Serve.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\nick-kyrgio-debunk-topspin-serve.md",
+      "subdir": "ky-thuat",
+      "slug": "nick-kyrgio-debunk-topspin-serve",
+      "body_len": 12516
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Footwork-Techniques-Used-in-Table-Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\footwork-techniques-used-in-table-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "footwork-techniques-used-in-table-tennis",
+      "body_len": 23594
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis_injuries_occurrence_aetiology_and.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis_injuries_occurrence_aetiology_and.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis_injuries_occurrence_aetiology_and",
+      "body_len": 95973
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\15-Your Body’s Power Zone.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\15-your-body-s-power-zone.md",
+      "subdir": "tham-khao",
+      "slug": "15-your-body-s-power-zone",
+      "body_len": 12013
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Dimensions of a Tennis Court-Guide.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\dimensions-of-a-tennis-court-guide.md",
+      "subdir": "ky-thuat",
+      "slug": "dimensions-of-a-tennis-court-guide",
+      "body_len": 5655
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\tennis_hien_dai_3538.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis_hien_dai_3538.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis_hien_dai_3538",
+      "body_len": 44338
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\wp_vat-2009-08.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\wp_vat-2009-08.md",
+      "subdir": "tham-khao",
+      "slug": "wp_vat-2009-08",
+      "body_len": 48549
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The champion's mind how great athletes think, train, and thrive ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\the-champion-s-mind-how-great-athletes-think-train-and-thrive-pdfdrive.md",
+      "subdir": "the-luc",
+      "slug": "the-champion-s-mind-how-great-athletes-think-train-and-thrive-pdfdrive",
+      "body_len": 36517
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Salisbury-Soccer-Strength-and-Conditioning.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\salisbury-soccer-strength-and-conditioning.md",
+      "subdir": "the-luc",
+      "slug": "salisbury-soccer-strength-and-conditioning",
+      "body_len": 28693
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\kandel_ch17_ch18_anatomical_and_functional_brain_organization.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\kandel_ch17_ch18_anatomical_and_functional_brain_organization.md",
+      "subdir": "tham-khao",
+      "slug": "kandel_ch17_ch18_anatomical_and_functional_brain_organization",
+      "body_len": 98828
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016April.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016april.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016april",
+      "body_len": 73491
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016May.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016may.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016may",
+      "body_len": 61208
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\Addvantage2019February.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2019february.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2019february",
+      "body_len": 80699
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\How to maintain body for tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\how-to-maintain-body-for-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "how-to-maintain-body-for-tennis",
+      "body_len": 7046
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\3D variability in ball toss and impact location for tennis serves.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\3d-variability-in-ball-toss-and-impact-location-for-tennis-serves.md",
+      "subdir": "ky-thuat",
+      "slug": "3d-variability-in-ball-toss-and-impact-location-for-tennis-serves",
+      "body_len": 40517
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\FleisigHPTennisserve.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\fleisighptennisserve.md",
+      "subdir": "ky-thuat",
+      "slug": "fleisighptennisserve",
+      "body_len": 2947
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\My-Coach-May-issue-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\my-coach-may-issue-pdf.md",
+      "subdir": "tham-khao",
+      "slug": "my-coach-may-issue-pdf",
+      "body_len": 77538
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Serious tennis ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\serious-tennis-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "serious-tennis-pdfdrive",
+      "body_len": 25750
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Strategy-Tacticsand-Technique.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-strategy-tacticsand-technique.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-strategy-tacticsand-technique",
+      "body_len": 4759
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Basal Ganglia.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\basal-ganglia.md",
+      "subdir": "tham-khao",
+      "slug": "basal-ganglia",
+      "body_len": 31340
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\IMPACT OF FITNESS CHARACTERISTICS ON TENNIS PLAYERS.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\impact-of-fitness-characteristics-on-tennis-players.md",
+      "subdir": "ky-thuat",
+      "slug": "impact-of-fitness-characteristics-on-tennis-players",
+      "body_len": 78382
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Calibration_in_tennis_The_role_of_feedback_and_exp.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\calibration_in_tennis_the_role_of_feedback_and_exp.md",
+      "subdir": "ky-thuat",
+      "slug": "calibration_in_tennis_the_role_of_feedback_and_exp",
+      "body_len": 34514
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Revolutionary Tennis\\13-The Geometric Reality.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\13-the-geometric-reality.md",
+      "subdir": "tham-khao",
+      "slug": "13-the-geometric-reality",
+      "body_len": 5574
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Skills & Drills ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-skills-drills-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-skills-drills-pdfdrive",
+      "body_len": 18978
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Championship Tennis-FrankGiampaolo.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\championship-tennis-frankgiampaolo.md",
+      "subdir": "ky-thuat",
+      "slug": "championship-tennis-frankgiampaolo",
+      "body_len": 79702
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Physical-Conditioning-for-Rugby.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\physical-conditioning-for-rugby.md",
+      "subdir": "the-luc",
+      "slug": "physical-conditioning-for-rugby",
+      "body_len": 57040
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Competitive-Tennis-for-Young-Players.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\competitive-tennis-for-young-players.md",
+      "subdir": "ky-thuat",
+      "slug": "competitive-tennis-for-young-players",
+      "body_len": 39883
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ITF-Level-2-Introduction-Biomechanics.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\itf-level-2-introduction-biomechanics.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "itf-level-2-introduction-biomechanics",
+      "body_len": 10432
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2010July.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2010july.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2010july",
+      "body_len": 104722
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Professional table tennis coach handbook.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\professional-table-tennis-coach-handbook.md",
+      "subdir": "ky-thuat",
+      "slug": "professional-table-tennis-coach-handbook",
+      "body_len": 76586
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantageAugust2018.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantageaugust2018.md",
+      "subdir": "tham-khao",
+      "slug": "addvantageaugust2018",
+      "body_len": 91768
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADDvantage2016June.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\addvantage2016june.md",
+      "subdir": "tham-khao",
+      "slug": "addvantage2016june",
+      "body_len": 73829
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADD_SEPT_OCT_2020 Single_WEB.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\add_sept_oct_2020-single_web.md",
+      "subdir": "tham-khao",
+      "slug": "add_sept_oct_2020-single_web",
+      "body_len": 66061
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\KnudsonElliott2004.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\knudsonelliott2004.md",
+      "subdir": "tham-khao",
+      "slug": "knudsonelliott2004",
+      "body_len": 2689
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Rotator Cuff Injuries in Tennis Players.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\rotator-cuff-injuries-in-tennis-players.md",
+      "subdir": "ky-thuat",
+      "slug": "rotator-cuff-injuries-in-tennis-players",
+      "body_len": 84490
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\10 speed and agility drills.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\10-speed-and-agility-drills.md",
+      "subdir": "the-luc",
+      "slug": "10-speed-and-agility-drills",
+      "body_len": 32735
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ITF Level 2 Coaching Cirriculum.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\itf-level-2-coaching-cirriculum.md",
+      "subdir": "tham-khao",
+      "slug": "itf-level-2-coaching-cirriculum",
+      "body_len": 7606
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis For Dummies ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-for-dummies-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-for-dummies-pdfdrive",
+      "body_len": 62784
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Open An Autobiography ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\open-an-autobiography-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "open-an-autobiography-pdfdrive",
+      "body_len": 47429
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ultimate-Tennis-Practice-for-2-Player (20).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ultimate-tennis-practice-for-2-player-20.md",
+      "subdir": "ky-thuat",
+      "slug": "ultimate-tennis-practice-for-2-player-20",
+      "body_len": 18829
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennisology-Inside-the-Science-of-Serves-Nerves-and-On-Court-Dominance-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennisology-inside-the-science-of-serves-nerves-and-on-court-dominance-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "tennisology-inside-the-science-of-serves-nerves-and-on-court-dominance-pdf",
+      "body_len": 57152
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Roger Federer Story. Quest for Perfection ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-roger-federer-story-quest-for-perfection-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "the-roger-federer-story-quest-for-perfection-pdfdrive",
+      "body_len": 55884
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanical Evaluation of Movement in Sport and Exercise The British Association of Sport and Exercise Sciences Guide (BASES Sport and Exercise Science) ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanical-evaluation-of-movement-in-sport-and-exercise-the-british-associati.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanical-evaluation-of-movement-in-sport-and-exercise-the-british-associati",
+      "body_len": 58971
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Mindful Athlete Secrets to Pure Performance ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-mindful-athlete-secrets-to-pure-performance-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "the-mindful-athlete-secrets-to-pure-performance-pdfdrive",
+      "body_len": 16789
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Sweet-Spot.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\sweet-spot.md",
+      "subdir": "tham-khao",
+      "slug": "sweet-spot",
+      "body_len": 83353
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\EXO-Kinetics - A Guide to Explosive Performance and Training .pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\exo-kinetics-a-guide-to-explosive-performance-and-training.md",
+      "subdir": "the-luc",
+      "slug": "exo-kinetics-a-guide-to-explosive-performance-and-training",
+      "body_len": 30251
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Camp-Brochure.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-camp-brochure.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-camp-brochure",
+      "body_len": 53450
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\doc_437_1409.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\doc_437_1409.md",
+      "subdir": "tham-khao",
+      "slug": "doc_437_1409",
+      "body_len": 116921
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Inner Game of Tennis_ The Classic Guide to the Mental Side of Peak Performance ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\the-inner-game-of-tennis_-the-classic-guide-to-the-mental-side-of-peak-performan.md",
+      "subdir": "ky-thuat",
+      "slug": "the-inner-game-of-tennis_-the-classic-guide-to-the-mental-side-of-peak-performan",
+      "body_len": 34719
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ADDVantage - USTA NewsLetter\\ADD_January_2022.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\add_january_2022.md",
+      "subdir": "tham-khao",
+      "slug": "add_january_2022",
+      "body_len": 67115
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Elbow-SAMPLE-Pages.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-elbow-sample-pages.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-elbow-sample-pages",
+      "body_len": 14919
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\USPTA High Performance Coaching Newsletter\\USPTA_high_performance_Vol._3_No_2.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\uspta_high_performance_vol-_3_no_2.md",
+      "subdir": "tham-khao",
+      "slug": "uspta_high_performance_vol-_3_no_2",
+      "body_len": 45943
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Arm and leg movement.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\arm-and-leg-movement.md",
+      "subdir": "tham-khao",
+      "slug": "arm-and-leg-movement",
+      "body_len": 10973
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The-Talent-Code-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-talent-code-pdf.md",
+      "subdir": "tham-khao",
+      "slug": "the-talent-code-pdf",
+      "body_len": 33445
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ultimate-Tennis-Practice-for-2-Player (21).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ultimate-tennis-practice-for-2-player-21.md",
+      "subdir": "ky-thuat",
+      "slug": "ultimate-tennis-practice-for-2-player-21",
+      "body_len": 10187
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Ultimate-Tennis-Practice-for-2-Player (18).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\ultimate-tennis-practice-for-2-player-18.md",
+      "subdir": "ky-thuat",
+      "slug": "ultimate-tennis-practice-for-2-player-18",
+      "body_len": 4350
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Duane_Knudson_Fundamentals_of_Biomechani.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\duane_knudson_fundamentals_of_biomechani.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "duane_knudson_fundamentals_of_biomechani",
+      "body_len": 61071
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanics Principles, Trends and Applications (Biomechanics Theory and Applications) ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanics-principles-trends-and-applications-biomechanics-theory-and-applicat.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanics-principles-trends-and-applications-biomechanics-theory-and-applicat",
+      "body_len": 76072
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Introdution to Sport Biomechanics- biomecanica-deportiva.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\introdution-to-sport-biomechanics-biomecanica-deportiva.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "introdution-to-sport-biomechanics-biomecanica-deportiva",
+      "body_len": 59664
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis-Steps-to-Success-4th-Edition.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-steps-to-success-4th-edition.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-steps-to-success-4th-edition",
+      "body_len": 30469
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Tennis Anatomy ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\tennis-anatomy-pdfdrive.md",
+      "subdir": "ky-thuat",
+      "slug": "tennis-anatomy-pdfdrive",
+      "body_len": 27467
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Born to Walk Myofascial Efficiency and the Body in Movement ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\born-to-walk-myofascial-efficiency-and-the-body-in-movement-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "born-to-walk-myofascial-efficiency-and-the-body-in-movement-pdfdrive",
+      "body_len": 38362
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Medicine and Science in Tennis.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\medicine-and-science-in-tennis.md",
+      "subdir": "ky-thuat",
+      "slug": "medicine-and-science-in-tennis",
+      "body_len": 160212
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\ITF - Coaching and Science Review.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\itf-coaching-and-science-review.md",
+      "subdir": "tham-khao",
+      "slug": "itf-coaching-and-science-review",
+      "body_len": 165588
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\nly095.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\nly095.md",
+      "subdir": "tham-khao",
+      "slug": "nly095",
+      "body_len": 103733
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Basic Rules of Tennis and misc information.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\basic-rules-of-tennis-and-misc-information.md",
+      "subdir": "ky-thuat",
+      "slug": "basic-rules-of-tennis-and-misc-information",
+      "body_len": 45576
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\THE-TALENT-CODE-Excerpt-Chapter-5-1.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-talent-code-excerpt-chapter-5-1.md",
+      "subdir": "tham-khao",
+      "slug": "the-talent-code-excerpt-chapter-5-1",
+      "body_len": 44434
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Fascial Release for Structural Balance, Revised Edition ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\fascial-release-for-structural-balance-revised-edition-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "fascial-release-for-structural-balance-revised-edition-pdfdrive",
+      "body_len": 36559
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanical Basis of Human Movement ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanical-basis-of-human-movement-pdfdrive.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanical-basis-of-human-movement-pdfdrive",
+      "body_len": 81233
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Advances in Functional Training Training Techniques for Coaches, Personal Trainers and Athletes ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\advances-in-functional-training-training-techniques-for-coaches-personal-trainer.md",
+      "subdir": "the-luc",
+      "slug": "advances-in-functional-training-training-techniques-for-coaches-personal-trainer",
+      "body_len": 29113
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Physical Therapy of the Shoulder (Clinics in Physical Therapy), 5th Edition ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\physical-therapy-of-the-shoulder-clinics-in-physical-therapy-5th-edition-pdfdriv.md",
+      "subdir": "tham-khao",
+      "slug": "physical-therapy-of-the-shoulder-clinics-in-physical-therapy-5th-edition-pdfdriv",
+      "body_len": 92727
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Bio-mechanics of Sport and Exercise ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\bio-mechanics-of-sport-and-exercise-pdfdrive.md",
+      "subdir": "tham-khao",
+      "slug": "bio-mechanics-of-sport-and-exercise-pdfdrive",
+      "body_len": 91724
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Biomechanics Principles And Application ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\biomechanics-principles-and-application-pdfdrive.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "biomechanics-principles-and-application-pdfdrive",
+      "body_len": 68735
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Sport Speed and Agility Training ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\sport-speed-and-agility-training-pdfdrive.md",
+      "subdir": "the-luc",
+      "slug": "sport-speed-and-agility-training-pdfdrive",
+      "body_len": 28404
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Sport Psychology for Coaches ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tam-ly\\sport-psychology-for-coaches-pdfdrive.md",
+      "subdir": "tam-ly",
+      "slug": "sport-psychology-for-coaches-pdfdrive",
+      "body_len": 61906
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Complete Book of Poses for Artists A Comprehensive Photographic and Illustrated Reference Book for Learning to Draw More Than 500 Poses ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-complete-book-of-poses-for-artists-a-comprehensive-photographic-and-illustra.md",
+      "subdir": "tham-khao",
+      "slug": "the-complete-book-of-poses-for-artists-a-comprehensive-photographic-and-illustra",
+      "body_len": 39659
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Strength-Conditioning-Manual.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\strength-conditioning-manual.md",
+      "subdir": "the-luc",
+      "slug": "strength-conditioning-manual",
+      "body_len": 36560
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Maintaining Body Balance, Flexibility & Stability A Practical Guide to the Prevention & Treatment of Musculoskeletal Pain & Dysfunction, 1e ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\co-sinh-hoc\\maintaining-body-balance-flexibility-stability-a-practical-guide-to-the-preventi.md",
+      "subdir": "co-sinh-hoc",
+      "slug": "maintaining-body-balance-flexibility-stability-a-practical-guide-to-the-preventi",
+      "body_len": 76423
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Functional-Training-For-Tennis-Daniel-McCain-pdf.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\functional-training-for-tennis-daniel-mccain-pdf.md",
+      "subdir": "ky-thuat",
+      "slug": "functional-training-for-tennis-daniel-mccain-pdf",
+      "body_len": 22810
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\talk__sugny_qusco.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\talk__sugny_qusco.md",
+      "subdir": "tham-khao",
+      "slug": "talk__sugny_qusco",
+      "body_len": 14695
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Anatomy and Perspective The Fundamentals of Figure Drawing ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tam-ly\\anatomy-and-perspective-the-fundamentals-of-figure-drawing-pdfdrive.md",
+      "subdir": "tam-ly",
+      "slug": "anatomy-and-perspective-the-fundamentals-of-figure-drawing-pdfdrive",
+      "body_len": 26210
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Serve to Win The 14-Day Gluten-Free Plan for Physical and Mental Excellence ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\ky-thuat\\serve-to-win-the-14-day-gluten-free-plan-for-physical-and-mental-excellence-pdfd.md",
+      "subdir": "ky-thuat",
+      "slug": "serve-to-win-the-14-day-gluten-free-plan-for-physical-and-mental-excellence-pdfd",
+      "body_len": 42890
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Draw in Perspective Step by Step, Learn Easily How to Draw in Perspective ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\draw-in-perspective-step-by-step-learn-easily-how-to-draw-in-perspective-pdfdriv.md",
+      "subdir": "tham-khao",
+      "slug": "draw-in-perspective-step-by-step-learn-easily-how-to-draw-in-perspective-pdfdriv",
+      "body_len": 13546
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The Art of Mental Training_ A Guide to Performance Excellence ( PDFDrive ).pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\the-art-of-mental-training_-a-guide-to-performance-excellence-pdfdrive.md",
+      "subdir": "the-luc",
+      "slug": "the-art-of-mental-training_-a-guide-to-performance-excellence-pdfdrive",
+      "body_len": 32008
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\Strength-and-conditioning-for-soccer-players.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\the-luc\\strength-and-conditioning-for-soccer-players.md",
+      "subdir": "the-luc",
+      "slug": "strength-and-conditioning-for-soccer-players",
+      "body_len": 92029
+    },
+    {
+      "pdf": "H:\\Play Tennis\\Books pdf\\The-Talent-Code_-chapter-9.pdf",
+      "output": "C:\\Users\\Henry\\Documents\\tennis-wiki\\docs\\pdf-sach-tennis\\tham-khao\\the-talent-code_-chapter-9.md",
+      "subdir": "tham-khao",
+      "slug": "the-talent-code_-chapter-9",
+      "body_len": 35694
+    }
+  ],
+  "errors": []
+}

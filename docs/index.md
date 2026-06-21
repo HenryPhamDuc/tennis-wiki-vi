@@ -80,7 +80,7 @@ Tennis WIKI là wiki tổng hợp từ hệ thống nghiên cứu cá nhân củ
 
 Nội dung bao gồm:
 
-- **~350 bài viết** chuyên sâu, được biên soạn từ ghi chép cá nhân, cẩm nang và tài liệu nghiên cứu
+- **~834 bài viết** chuyên sâu, được biên soạn từ ghi chép cá nhân, cẩm nang và tài liệu nghiên cứu
 - **Kỹ thuật, cơ sinh học, chiến thuật, tâm lý, thể lực** — đầy đủ các khía cạnh
 - **Phân tích chuyên sâu** các tay vợt hàng đầu thế giới
 - **Framework độc đáo**: TFL 3.0 (Rhythm-Position-Movement), Dynamic Energy Transfer, Wave Theory, Tennis Control System
