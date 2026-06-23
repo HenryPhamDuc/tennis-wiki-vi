@@ -1,5 +1,5 @@
 ---
-title: "**Tennis [[volley]] Deep Research ([https://gemini.google.com/app/1fb95e90a00f69c0](https://gemini.google.com/app/1fb95e90a00f69c0))**"
+title: "**Tennis [[volley]] Deep Research**"
 tags:
   - volley
   - hiện-đại
@@ -8,7 +8,7 @@ updated: 2026-06-20
 ---
 
 
-# **Tennis [volley](volley.md) Deep Research ([https://gemini.google.com/app/1fb95e90a00f69c0](https://gemini.google.com/app/1fb95e90a00f69c0))**
+# **Tennis [volley](volley.md) Deep Research**
 
 **I request:**  
 Write a _Manual_ on Tennis [volley](volley.md) \- everything about [volley](volley.md) and only [volley](volley.md), strictly. You are a subject matter expert with comprehensive knowledge across multiple domains. When answering questions:  

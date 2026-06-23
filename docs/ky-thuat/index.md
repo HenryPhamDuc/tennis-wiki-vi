@@ -13,7 +13,7 @@
 - [**CHƯƠNG 12: KỸ THUẬT FOREHAND THEO TINH THẦN VÕ THUẬT**](cẩm-nang-tennis-cross-training-với-các-môn-khác.md)
 - [**CHƯƠNG 2**](volume-3-patterns.md)
 - [**FRAMEWORK RPM**](tfl-tennis-3-0-details.md)
-- [**Tennis [volley](volley.md) Deep Research ([https://gemini.google.com/app/1fb95e90a00f69c0](https://gemini.google.com/app/1fb95e90a00f69c0))**](tennis-volley-deep-research.md)
+- [**Tennis [volley](volley.md) Deep Research**](tennis-volley-deep-research.md)
 - [**TENNIS BIOMECHANICS RESEARCH MANUAL**](volume-1-biomechanics.md)
 - [**The Complete Tennis Manual: A Guide to Elite Performance**](the-complete-tennis-manual-a-guide-to-elite-performance.md)
 - [**The Hidden Engine of Tennis**](the-hidden-engine-of-tennis.md)
