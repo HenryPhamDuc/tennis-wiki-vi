@@ -9,6 +9,10 @@
 > 📘 **[Tennis Manual (Master Reference v2)](https://henryPhamDuc.github.io/tennis/)** — Complete bilingual EN-VI coaching manual (22 deep dives + anatomy lab)
 >
 > 🤖 **[Tennis Doctor — AI Chat](https://tennis-doctor.henry-phamduc.workers.dev/)** — Hỏi đáp tennis bằng AI, trả lời ngay từ nội dung của wiki + 97 sách tennis (EN/VI, multilingual)
+>
+> 🔬 **[Tennis Future Lab](https://henryphamduc.github.io/tennis-future-lab/)** — Khung sinh học + AI phân tích video. Upload video tennis của bạn → AI phân tích so với Federer.
+>
+> 🤖 **[AI Video Analyzer (HF Space)](https://huggingface.co/spaces/HenryPhamDuc/tennis-analyzer)** — Dùng thử app Gradio: video có chú thích + cheat sheet PDF + điểm 0-100 so với Roger Federer.
 
 ## Bắt đầu nhanh
 
