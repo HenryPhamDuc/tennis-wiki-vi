@@ -83,7 +83,7 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [chuong-46](../ky-thuat/chuong-46.md)
 - [cẩm-nang-tennis-cross-training-với-các-môn-khác](../ky-thuat/cẩm-nang-tennis-cross-training-với-các-môn-khác.md)
 - [dynamic-energy-transfer](../ky-thuat/dynamic-energy-transfer.md)
-- [elite-tennis-training-manual-architecture](elite-tennis-training-manual-architecture.md)
+- [Elite Tennis Training Manual Architecture](elite-tennis-training-manual-architecture.md)
 - [forehand-technique-a-biomechanical-breakthrough-in-tennis](../ky-thuat/forehand-technique-a-biomechanical-breakthrough-in-tennis.md)
 - [giao-trinh-5-nam](giao-trinh-5-nam.md)
 - [giao-trinh-trung-nien](../co-sinh-hoc/giao-trinh-trung-nien.md)

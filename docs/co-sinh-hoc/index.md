@@ -11,7 +11,7 @@
 - [**FOREWORD: THE INVISIBLE ADVANTAGE**](training-kình-grf-taichi-24-forms-and-delibrate-practice.md)
 - [**THE KINETIC MONK: MASTER ARCHITECTURE**](nual-based-on-the-concepts-in-sports-psychology-philosophy.md)
 - [**The Neuro-Biomechanical Architecture of Elite Tennis: A Multi-Systemic Analysis of Performance Mastery**](analysis-of-tennis-techniques-from-elite-players.md)
-- [---](elite-tennis-training-manual-architecture.md)
+- [**Elite Tennis Training Manual Architecture**](elite-tennis-training-manual-architecture.md)
 - [12-Week Development Plan](12-week-development-plan.md)
 - [Agentic Mind](agentic-mind.md)
 - [Analyze Body Posture](analyze-body-posture.md)
