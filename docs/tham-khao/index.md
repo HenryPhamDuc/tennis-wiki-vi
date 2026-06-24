@@ -2,7 +2,7 @@
 
 *Lý thuyết sóng, biomechanics, methodology nâng cao, sách PDF*
 
-**Tổng số bài viết:** 114
+**Tổng số bài viết:** 112
 
 ## Danh sách bài viết
 
@@ -119,4 +119,3 @@
 - [🎾 Uspta High Performance Vol. 9 No 2](uspta_high_performance_vol-_9_no_2.md)
 - [🎾 Warm Up Book](warm_up_book.md)
 - [🎾 Wp Vat - 2009 - 08](wp_vat-2009-08.md)
-- [How To Install Hermes Agent With Ollama In Linux Mint](how-to-install-hermes-agent-with-ollama-in-linux-mint.md)

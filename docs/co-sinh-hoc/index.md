@@ -2,7 +2,7 @@
 
 *Kinetic chain, tensegrity, wave theory, proprioception*
 
-**Tổng số bài viết:** 117
+**Tổng số bài viết:** 116
 
 ## Danh sách bài viết
 
@@ -51,7 +51,6 @@
 - [Joints as Springs — The Elastic-Band Model of Tennis Anatomy](joints-as-springs.md)
 - [Kình & Grip Pressure Matrix](kình-&-grip-pressure-matrix.md)
 - [KẾT LUẬN TOÀN BỘ TÁC PHẨM](kết-luận-toàn-bộ-tác-phẩm.md)
-- [Left Arm Support in the Volley](setting-realistic-yearly-goals.md)
 - [Lu Response Drill](lu-response-drill.md)
 - [🎾 Maintaining Body Thăng Bằng, Linh Hoạt & Stability A Practical Cẩm Nang To The Prevention & Treatment Of Musculoskeletal Pain & Dysfunction, 1e](maintaining-body-balance-flexibility-stability-a-practical-guide-to-the-preventi.md)
 - [Martial-Agentic Framework](martial-agentic-framework.md)
