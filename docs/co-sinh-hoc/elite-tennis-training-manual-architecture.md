@@ -10,13 +10,7 @@ updated: 2026-06-20
 
 **10\. Elite Tennis Training Manual Architecture**
 
-To construct a 300-page, high-density technical manual synthesizing over 50 expert sources, we must architect the knowledge into a rigorous, physics-first framework. Due to the extreme density and length of a complete 40-chapter manuscript, this document provides the **Complete 40-Chapter Master Architecture** followed by the **fully expanded foundational chapters**.
-
-We will use this blueprint as our persistent memory. You may request the full expansion of any subsequent block of chapters.
-
-# ---
-
-**THE COMPLETE MODERN TENNIS SYSTEM: 2026 ELITE EDITION**
+# THE COMPLETE MODERN TENNIS SYSTEM: 2026 ELITE EDITION
 
 **The Biomechanical, Neurological, and Tactical Blueprint for Elite Performance**
 
@@ -2581,7 +2575,5 @@ Djokovic is the world's leading practitioner of Blitz-Chess Geometry.
 2. **Target-Shift Sprints**: The player hits a cross-court forehand (70% target). A coach shouts "LINE\!" only if the feed is short. The player must then shift to the 20% target. This trains the **Neurological Switching** (Chapter 27).  
 3. **The "Middle-Deep" Return Challenge**: The returner must hit 10 returns in a row into a 3x3 foot box in the deep center of the court. Any ball outside this box results in a "lost point," regardless of where it lands.
 
-**Technical Director’s Final Diagnostic**: Tennis is a game of **Errors and Geometry**. If you control the middle and hit the first 4 shots with 90% accuracy, the opponent's system will eventually collapse. Don't play for the highlight reel; play for the math. **The Agentic Mind wins by making the court feel smaller for the opponent and larger for themselves.**
-
----
+**Technical Director's Final Diagnostic**: Tennis is a game of **Errors and Geometry**. If you control the middle and hit the first 4 shots with 90% accuracy, the opponent's system will eventually collapse. Don't play for the highlight reel; play for the math. **The Agentic Mind wins by making the court feel smaller for the opponent and larger for themselves.**
 
