@@ -14,6 +14,17 @@
 >
 > 🤖 **[AI Video Analyzer (HF Space)](https://huggingface.co/spaces/HenryPhamDuc/tennis-analyzer)** — Dùng thử app Gradio: video có chú thích + cheat sheet PDF + điểm 0-100 so với Roger Federer.
 
+## 🕸️ Knowledge Graph
+
+Khám phá wiki dưới dạng mạng tương tác — mỗi nút là một bài viết, mỗi đường là wikilink. Di chuột để xem chi tiết, nhấp để mở, kéo để sắp xếp, cuộn để phóng to.
+
+<div class="graph-view graph-landing" data-mode="full" data-graph-url="assets/graph-data.json" id="graph-view-landing">
+  <div class="graph-loading">Loading graph...</div>
+  <div class="graph-tooltip"></div>
+</div>
+
+*Hiển thị 300 bài viết có nhiều liên kết nhất. Nhấp vào cluster trong chú giải để lọc. Nhấp vào nút để mở bài viết. Kéo nút để sắp xếp. Cuộn để phóng to.*
+
 ## Bắt đầu nhanh
 
 <div class="grid cards" markdown>
