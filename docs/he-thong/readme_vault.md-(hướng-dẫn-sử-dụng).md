@@ -58,7 +58,7 @@ vault_path: "Hệ  thong\Hệ thống Triết lý Tennis 2026\README_VAULT.md (H
 | `#super-agent`        | AI integration             |
 | `#micro-biomechanics` | IR, micro-drills           |
 | `#future-2026`        | Future vision              |
-| `#ai-prompts`         | System prompts             |
+| `#ai-prompts`         | Module setup notes         |
 | `#drills`             | Bài tập                    |
 | `#kpis`               | Hằng số, chỉ số            |
 | `#checklist`          | Self-assessment            |

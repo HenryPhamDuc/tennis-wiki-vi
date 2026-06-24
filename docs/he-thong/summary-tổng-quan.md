@@ -16,7 +16,7 @@ vault_path: "Hệ  thong\Hệ thống Triết lý Tennis 2026\Summary - Tổng q
 
 * 40+ note Obsidian được tổ chức thành 10 thư mục chính
 * 12 chương chuyên sâu (06.01 - 06.12) với 20 trang tương đương
-* 10 AI System Prompts sẵn sàng copy-paste
+* 10 module notes (07.1 - 07.3)
 * 30+ drills tổ chức theo module
 * 20+ master equations trong [08.1_Master_Equations](08.1_master_equations.md)
 * 15+ KPIs trong [08.2_Constants_KPIs](08.2_constants_kpis.md)
@@ -50,7 +50,7 @@ vault_path: "Hệ  thong\Hệ thống Triết lý Tennis 2026\Summary - Tổng q
 🤖 AI Integration
 -----------------
 
-* System Prompts riêng cho từng module (xem [07.1_AI_Config_Prompts](07.1_ai_config_prompts.md))
+* Module setup notes (xem [07.1_AI_Config_Prompts](07.1_ai_config_prompts.md))
 * Real-time tactical qua Predictive Pose
 * Digital Twin + Monte Carlo Simulation
 * 3-stage Hybrid Athlete Roadmap: Số hóa → Cộng sinh → Làm chủ

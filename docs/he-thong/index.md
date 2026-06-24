@@ -79,7 +79,7 @@
 - [🗓 12-Week Master Plan — Lộ trình huấn luyện](10.2_12_week_master_plan.md)
 - [🗓️ LỘ TRÌNH 4 THÁNG — TỪ 3.0 LÊN 3.5](lo_trinh_4_thang.md)
 - [🛠 DET Drills — Truyền năng lượng](09.1_det_drills.md)
-- [🤖 AI Configuration Prompts — System Prompts cho từng Module](07.1_ai_config_prompts.md)
+- [🤖 AI Configuration Prompts — Module Setup](07.1_ai_config_prompts.md)
 - [🧠 NKF (Neuro-Kinetic Fusion) — Hợp nhất thần kinh-động lực](02.2_nkf_neuro_kinetic_fusion.md)
 - [🧠 NKF Drills — Đồng bộ thần kinh](09.2_nkf_drills.md)
 - [🧬 Bio-Agentic Recovery — Hồi phục sinh học](05.2_bio_agentic_recovery.md)
