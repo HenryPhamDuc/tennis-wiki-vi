@@ -37,7 +37,7 @@ Vault tiếng Việt tổng hợp từ **232 bài viết canonical** trong hai f
 - [chapter-3-neuro-motor-manual](../ky-thuat/chapter-3-neuro-motor-manual.md)
 - [chapter-5-neuro-motor-manual](../ky-thuat/chapter-5-neuro-motor-manual.md)
 - [chapter-6-neuro-motor-manual](../ky-thuat/chapter-6-neuro-motor-manual.md)
-- [chat-gemini-google-com-app-0b26a0697c5e1681](chat-gemini-google-com-app-0b26a0697c5e1681.md)
+- [hidden-engine-of-tennis-chapters-3-12](hidden-engine-of-tennis-chapters-3-12.md)
 - [chuong-02](../ky-thuat/chuong-02.md)
 - [chuong-03](../ky-thuat/chuong-03.md)
 - [chuong-04](../ky-thuat/chuong-04.md)
