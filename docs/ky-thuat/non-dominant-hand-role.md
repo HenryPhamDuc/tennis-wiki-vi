@@ -28,7 +28,7 @@ Trong giai đoạn [xoay chuẩn bị](unit-turn.md), tay không thuận đặt 
 Khi hông bắt đầu xoay về phía trước, tay không thuận tiếp tục giữ đầu vợt ở vị trí cao — như người kéo dây cung. Sự đối kháng này (thân người tiến về phía trước, đầu vợt được giữ lại) tạo ra tiềm năng năng lượng tối đa cho [Racket Drop](racket-drop.md).
 
 ### 3. Nhả — Kích hoạt Inertial Drop
-Tại thời điểm hông đã xoay đủ, tay không thuận nhả ra. Đây là khoảnh khắc đầu vợt được "phóng thích" — rơi xuống và tụt lại thụ động do quán tính, tạo ra [wrist lag](wrist-lag.md) và kích hoạt [SSC](../wiki/stretch-shortening-cycle.md).
+Tại thời điểm hông đã xoay đủ, tay không thuận nhả ra. Đây là khoảnh khắc đầu vợt được "phóng thích" — rơi xuống và tụt lại thụ động do quán tính, tạo ra [wrist lag](wrist-lag.md) và kích hoạt [SSC](../co-sinh-hoc/stretch-shortening-cycle.md).
 
 ---
 
@@ -62,4 +62,4 @@ Xem [Non-Dominant Hand Timing Error](../co-sinh-hoc/non-dominant-hand-timing-err
 - [Unit Turn](unit-turn.md)
 - [Non-Dominant Hand Timing Error](../co-sinh-hoc/non-dominant-hand-timing-error.md)
 - [Kinetic Chain](kinetic-chain.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)

@@ -84,7 +84,7 @@ Trong match, player có thể monitor own Loop integrity bằng cách notice:
 - [Core Leaks — Four Failure Patterns](../co-sinh-hoc/core-leaks-—-four-failure-patterns.md)
 - [String Arm Drill](../ky-thuat/string-arm-drill.md)
 - [Psychological Dominance — Refusal to Diverge](../ky-thuat/psychological-dominance-—-refusal-to-diverge.md)
-- [Flow Break Triggers](flow-break-triggers.md)
+- [Flow Break Triggers](../tam-ly/flow-break-triggers.md)
 - _Choking Mechanics_
 - [Satori State](../co-sinh-hoc/satori-state.md)
 - [CNS Fatigue Signs](../ky-thuat/cns-fatigue-signs.md)

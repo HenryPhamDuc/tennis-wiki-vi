@@ -14,7 +14,7 @@ updated: 2026-06-20
 
 Sai lầm trộn hệ thống là lỗi phổ biến nhất của người chơi phong trào trong việc sử dụng [Big Loop và Compact Loop](big-loop-và-compact-loop.md): áp dụng sai hệ thống cho sai tình huống — dùng Big Loop khi thiếu thời gian, hoặc dùng Compact Loop khi có đủ thời gian.
 
-Đây không phải lỗi kỹ thuật thuần túy mà là lỗi **ra quyết định** — thiếu [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md).
+Đây không phải lỗi kỹ thuật thuần túy mà là lỗi **ra quyết định** — thiếu [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md).
 
 ---
 
@@ -48,8 +48,8 @@ Nguyên nhân: Không nhận ra sự thay đổi tốc độ, hoặc cố giữ 
 
 ## Cách khắc phục
 
-1. Học [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md) — đọc tình huống trước khi bóng đến
-2. Hoàn thành [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md) để tự động hóa lựa chọn
+1. Học [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md) — đọc tình huống trước khi bóng đến
+2. Hoàn thành [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md) để tự động hóa lựa chọn
 3. Luyện tập chuyển đổi trong các bài tập rally thay đổi tốc độ
 
 ---
@@ -59,7 +59,7 @@ Nguyên nhân: Không nhận ra sự thay đổi tốc độ, hoặc cố giữ 
 - [Big Loop và Compact Loop](big-loop-và-compact-loop.md)
 - [Big Loop](big-loop.md)
 - [Compact Loop](compact-loop.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
-- [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md)
-- [Feedforward Control](../wiki/feedforward-control.md)
-- [Reactive Control](../wiki/reactive-control.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
+- [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)

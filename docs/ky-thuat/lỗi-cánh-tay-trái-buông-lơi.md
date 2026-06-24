@@ -24,7 +24,7 @@ Khi cánh tay không thuận buông sớm:
 
 1. **Mất trục cartwheel**: [Cánh Tay Tung Bóng Như Bộ Điều Chỉnh Xoay](cánh-tay-tung-bóng-như-bộ-điều-chỉnh-xoay.md) không còn duy trì được góc nghiêng vai
 2. **Mất phản lực**: [Hệ Thống Song Phương Thống Nhất](hệ-thống-song-phương-thống-nhất.md) mất đi một nửa hệ thống — vai thuận không có điểm neo để xoay hiệu quả
-3. **Sụt lực ISR**: [Xoay Khớp Vai Bên Trong (ISR)](../wiki/xoay-khớp-vai-bên-trong-(isr).md) thực hiện ở góc sai → tốc độ và hướng bóng không tối ưu
+3. **Sụt lực ISR**: [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md) thực hiện ở góc sai → tốc độ và hướng bóng không tối ưu
 
 ---
 
@@ -52,5 +52,5 @@ Khi cánh tay không thuận buông sớm:
 - [Cánh Tay Không Thuận](cánh-tay-không-thuận.md)
 - [Cánh Tay Tung Bóng Như Bộ Điều Chỉnh Xoay](cánh-tay-tung-bóng-như-bộ-điều-chỉnh-xoay.md)
 - [Hệ Thống Song Phương Thống Nhất](hệ-thống-song-phương-thống-nhất.md)
-- [Xoay Khớp Vai Bên Trong (ISR)](../wiki/xoay-khớp-vai-bên-trong-(isr).md)
+- [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md)
 - [Cánh Tay Radar](../the-luc/cánh-tay-radar.md)

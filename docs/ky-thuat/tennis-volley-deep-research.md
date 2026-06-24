@@ -129,7 +129,7 @@ The single most important _Concept_ to master is that the [volley](volley.md) is
 
 * **The Ultra-Short _stroke_:** _Biomechanical_ly, the [volley](volley.md) is defined as an "Ultra-Short _stroke_." Modern tracking data from 2020–2026 reveals that elite [volley](volley.md)ers have moved away from the traditional "punch" and toward a "block and stick" _movement_.  
 * **The Elastic _load_:** Even though the _stroke_ is short, it is not _passive_. _power_ at _the Net_ is derived from **_Linear momentum_** (weight transfer) and the **Stretch-Shortening Cycle (SSC)** triggered during the [split step](split-step.md).  
-* **Minimalist _Mechanics_:** To maintain _timing_ against high-_velocity_ passing shots, the _racket head_ must remain "quiet." _Bio[[mechanical_ ]]analysis shows that any _backswing_ where the _racket head_ passes the line of the _shoulder_s results in a "[Petit Bras](../wiki/petit-bras.md)" (short_ arm_) effect, leading to late _contact_ and _energy_ leaks.
+* **Minimalist _Mechanics_:** To maintain _timing_ against high-_velocity_ passing shots, the _racket head_ must remain "quiet." _Bio[[mechanical_ ]]analysis shows that any _backswing_ where the _racket head_ passes the line of the _shoulder_s results in a "[Petit Bras](../ky-thuat/petit-bras.md)" (short_ arm_) effect, leading to late _contact_ and _energy_ leaks.
 
 ### **1.2 The L-Shape Lock: _structural integrity_**
 
@@ -207,7 +207,7 @@ The L-Shape Lock is not maintained by the hitting _hand_ alone. In the modern "B
 If a [volley](volley.md) feels "flimsy" or "vibrates" upon impact, the L-Shape has likely been compromised.
 
 1. **The "Saggy" Racket:** _racket head_ is lower than the _wrist_ (loss of ulnar deviation).  
-2. **The "[Petit Bras](../wiki/petit-bras.md)":** _elbow_ is tucked against the ribs (loss of the _power_ Triangle).  
+2. **The "[Petit Bras](../ky-thuat/petit-bras.md)":** _elbow_ is tucked against the ribs (loss of the _power_ Triangle).  
 3. **The "Flick":** _wrist_ actively flexes forward at _contact_ (loss of_ isometric tension_).
 
 By adhering to the L-Shape protocol, the [volley](volley.md)er moves from a state of "guessing" the _contact_ to a state of "commanding" the impact.
@@ -338,15 +338,15 @@ The primary justification for the [Continental Grip](continental-grip.md) at _th
 
 Proper execution of the [Continental Grip](continental-grip.md) is often misunderstood. It is not just about where the palm sits, but how the knuckles and heel pad align to support the racket's weight during high-_velocity_ impact.
 
-* **The Bevel 2 Protocol:** For a right-_hand_ed player, the base knuckle of the [index](index.md) finger and the heel of the palm must rest on **Bevel 2** (the small slanted panel to the right of the top flat panel).  
+* **The Bevel 2 Protocol:** For a right-_hand_ed player, the base knuckle of the [index](../the-luc/index.md) finger and the heel of the palm must rest on **Bevel 2** (the small slanted panel to the right of the top flat panel).  
 * **The "Hammer" Sensation:** The racket should feel like a hammer or a hatchet. When held out in front, the edge of the racket frame should point directly at the _target_. This alignment ensures that when the _wrist_ enters **ulnar deviation** (cocking the _racket head_ up), the bones of the _forearm_ provide a direct, rein_force_d support line behind the hitting surface.  
-* **The Trigger Finger:** Unlike ground_Strokes_ where the fingers are often bunched for _power_, the [volley](volley.md)er should slightly spread the [index](index.md) finger. This "trigger finger" provides a refined sense of "touch" and allows for subtle micro-adjustments to the _racket face_ angle during the "Pulse" phase of _contact_.
+* **The Trigger Finger:** Unlike ground_Strokes_ where the fingers are often bunched for _power_, the [volley](volley.md)er should slightly spread the [index](../the-luc/index.md) finger. This "trigger finger" provides a refined sense of "touch" and allows for subtle micro-adjustments to the _racket face_ angle during the "Pulse" phase of _contact_.
 
 ### **2.3 Structural Synergy: The "V" to the Eye**
 
 The [Continental Grip](continental-grip.md) creates a specific geometric relationship between the_ arm_ and the _racket head_ that is essential for _Visual_ tracking.
 
-* **The "V" Alignment:** When the _hand_ is in the Continental position, the "V" _form_ed by the thumb and [index](index.md) finger points toward the player's left _shoulder_ (for a right-_hand_er). This naturally positions the _racket head_ in the player's peripheral _Vision_ even before the unit turn begins.  
+* **The "V" Alignment:** When the _hand_ is in the Continental position, the "V" _form_ed by the thumb and [index](../the-luc/index.md) finger points toward the player's left _shoulder_ (for a right-_hand_er). This naturally positions the _racket head_ in the player's peripheral _Vision_ even before the unit turn begins.  
 * **_string_ Angle _neutral_ity:** In this grip, the _racket face_ is naturally "open" (tilted slightly upward). This is the default setting for creating **under_spin_**. Without under_spin_, a [volley](volley.md) hit with _pace_ would travel in a flat, straight line, either hitting _the Net_ or sailing long. The [Continental Grip](continental-grip.md) provides the built-in "lift" and "skid" necessary to keep the ball in play while utilizing the opponent's _pace_.
 
 ### **2.4 Common Grip Leaks: The "Western Trap"**
@@ -376,7 +376,7 @@ Proper execution of the [Continental Grip](continental-grip.md) is frequently mi
 
 To achieve a "True Continental" grip, _precision_ in _hand_ placement is paramount. The hexagonal _hand_le of a _modern tennis_ racket provides the necessary coordinates:
 
-* **The [index](index.md) Knuckle:** For a right-_hand_ed player, the base knuckle of the [index](index.md) finger must be centered on **Bevel 2** (the slanted panel to the right of the top flat bevel).  
+* **The [index](../the-luc/index.md) Knuckle:** For a right-_hand_ed player, the base knuckle of the [index](../the-luc/index.md) finger must be centered on **Bevel 2** (the slanted panel to the right of the top flat bevel).  
 * **The Heel Pad:** Crucially, the heel of the palm must also rest on Bevel 2\. Many players make the _mistake_ of placing the knuckle correctly but allowing the heel pad to slide toward Bevel 3 (Eastern). This "diagonal" leak weakens the _wrist_'s ability to remain firm during high-_velocity_ impact.  
 * **The "Hammer" Test:** When held correctly, the racket should feel like a hammer. If you were to tap a nail into a wall with the edge of the racket frame, your _wrist_ would be in its most naturally strong and _neutral_ position.
 
@@ -384,14 +384,14 @@ To achieve a "True Continental" grip, _precision_ in _hand_ placement is paramou
 
 Unlike ground_Strokes_, where the fingers are often bunched to provide a "fist" of _power_, the [volley](volley.md) requires a spread grip.
 
-* **The GAP ([index](index.md) Finger Separation):** There should be a visible gap between the [index](index.md) finger and the middle finger. This "trigger finger" acts as a sensor. It allows the player to feel the _Tilt_of the _racket face_ with millimeter accuracy.  
+* **The GAP ([index](../the-luc/index.md) Finger Separation):** There should be a visible gap between the [index](../the-luc/index.md) finger and the middle finger. This "trigger finger" acts as a sensor. It allows the player to feel the _Tilt_of the _racket face_ with millimeter accuracy.  
 * **_pressure_ Points:** During the "_Ready_ Phase," grip _pressure_ should be a **2 out of 10**. This prevents the _forearm_ _muscles_ (brachioradialis) from pre-tensing, which would slow down reaction time. The _pressure_ only spikes to an **8 out of 10** during the fractional millisecond of _contact_ (The "Pulse").
 
 #### **2.2.3 Structural Synergy: Ulnar Deviation and the "V" Path**
 
 The [Continental Grip](continental-grip.md) dictates the _Biomechanical_path the racket takes from the [split step](split-step.md) to the _strike_.
 
-* **The "V" to the _shoulder_:** When the _hand_ is set in Continental, the "V" _form_ed by the thumb and [index](index.md) finger points toward the _non-dominant_ _shoulder_. This naturally keeps the _racket head_ "up" and slightly in front of the face, aligning it with the player’s primary field of _Vision_.  
+* **The "V" to the _shoulder_:** When the _hand_ is set in Continental, the "V" _form_ed by the thumb and [index](../the-luc/index.md) finger points toward the _non-dominant_ _shoulder_. This naturally keeps the _racket head_ "up" and slightly in front of the face, aligning it with the player’s primary field of _Vision_.  
 * **_Anatomical_ Ulnar Deviation:** This grip makes it physically easier to maintain **ulnar deviation** (cocking the _wrist_ up). As documented in Chapter 1, this cocked position is what creates the "L-Shape Lock." In an Eastern grip, this position is _Anatomical_ly strained; in Continental, it is the path of least resistance.
 
 #### **2.2.4 Impact _Stabilization_: Preventing the "Flutter"**
@@ -424,7 +424,7 @@ In the high-stakes environment of 2026 _net play_, the [Continental Grip](contin
 
 #### **2.3.1 The "V" to the _shoulder_ Alignment**
 
-When a player adopts a true [Continental Grip](continental-grip.md) (Bevel 2), the _Anatomical_ "V" _form_ed by the intersection of the thumb and [index](index.md) finger naturally points toward the _non-dominant_ _shoulder_.
+When a player adopts a true [Continental Grip](continental-grip.md) (Bevel 2), the _Anatomical_ "V" _form_ed by the intersection of the thumb and [index](../the-luc/index.md) finger naturally points toward the _non-dominant_ _shoulder_.
 
 * **Peripheral _Vision_ Integration:** This alignment keeps the _racket head_ permanently within the player's peripheral _Vision_. In a split-second exchange, if the _racket head_ "disappears" from the _Visual_ field, the _brain_ loses the _spatial_ coordinates needed for the "L-Shape Lock." The [Continental Grip](continental-grip.md) ensures the "V" acts as a sightline, keeping the hitting surface "_load_ed" in front of the face.  
 * **The Zero-Adjustment Unit Turn:** Because the racket is al_ready_ oriented on a 45-degree angle relative to the _forearm_, a minimal _rotation_ of the _shoulder_s (unit turn) is all that is required to reach the _contact_ point. This eliminates the "slapping" _motion_ common with Eastern grips, where the player must actively flip the _wrist_ to find the ball.
@@ -499,7 +499,7 @@ To check if your grip is providing maximum structural synergy:
 *The 2026 _Manual_ treats the [Continental Grip](continental-grip.md) as "Home Base." A "Grip Leak" is often a symptom of **_cognitive_ Fatigue**. As a match progresses and the player tires, the _brain_ reverts to its most _practice_d engram—the _Baseline_ grip.*
 
 * ***The "Check-In" Ritual:** _professional_ [volley](volley.md)ers utilize a tactile "check-in" during every [split step](split-step.md). As the feet hit the ground, the _non-dominant_ _hand_ (on the throat) ensures the grip is set on Bevel 2\. This creates a _Neuro_logical loop that refreshes the Continental engram for every new exchange.*  
-* ***The "Trigger Finger" Diagnostic:** If the fingers are bunched into a fist, the grip has likely slipped. A spread [index](index.md) finger (the "Trigger Finger") is a physical impossibility in an extreme _Western grip_, making it a reliable diagnostic tool for maintaining grip integrity.*
+* ***The "Trigger Finger" Diagnostic:** If the fingers are bunched into a fist, the grip has likely slipped. A spread [index](../the-luc/index.md) finger (the "Trigger Finger") is a physical impossibility in an extreme _Western grip_, making it a reliable diagnostic tool for maintaining grip integrity.*
 
 #### ***2.4.5 Diagnostic: Identifying the "Windshield Wiper" Error***
 
@@ -527,7 +527,7 @@ To check if your grip is providing maximum structural synergy:
 
 *Mastery of the [Continental Grip](continental-grip.md) begins with _Visual_ confirmation. Standing in front of a full-length mirror allows you to compare your internal sensation with the external geometric reality.*
 
-* ***The "V" Sightline:** Assume your net _ready_ position. Look at the "V" _form_ed by your thumb and [index](index.md) finger. In a true [Continental Grip](continental-grip.md) (Bevel 2), this "V" must point toward your _non-dominant_ _shoulder_. If the "V" points toward your chin or hitting _shoulder_, you have leaked into an Eastern grip, which will cause the racket to "slap" and lose "stick."*  
+* ***The "V" Sightline:** Assume your net _ready_ position. Look at the "V" _form_ed by your thumb and [index](../the-luc/index.md) finger. In a true [Continental Grip](continental-grip.md) (Bevel 2), this "V" must point toward your _non-dominant_ _shoulder_. If the "V" points toward your chin or hitting _shoulder_, you have leaked into an Eastern grip, which will cause the racket to "slap" and lose "stick."*  
 * ***Frame Edge Orientation:** Ob_serve_ the racket frame in the mirror. The leading edge of the racket should be pointing toward your fore_head_, and the _string_ bed should be slightly tilted toward the ceiling (open face). This is the "_neutral_ _load_." If the _string_s are facing the mirror directly while you are in a _neutral_ _ready_ position, your grip is _forehand_-biased.*  
 * ***The "_hand_shake" Depth:** Ensure your _hand_ is not "_choking_" the racket. There should be a visible gap between the heel of your palm and the bottom of the _butt _cap. This allows the racket to function as a lever rather than a fixed _extension_ of the_ arm_.*
 
@@ -560,8 +560,8 @@ To check if your grip is providing maximum structural synergy:
 
 *Before every _practice_ session, run through the **Continental Audit**:*
 
-* *\[ \] [index](index.md) knuckle and heel pad both on Bevel 2?*  
-* *\[ \] Visible gap between [index](index.md) and middle finger (Trigger Finger)?*  
+* *\[ \] [index](../the-luc/index.md) knuckle and heel pad both on Bevel 2?*  
+* *\[ \] Visible gap between [index](../the-luc/index.md) and middle finger (Trigger Finger)?*  
 * *\[ \] "V" pointing to _non-dominant_ _shoulder_?*  
 * *\[ \] Can I lead with the edge of the frame without _wrist_ pain?*  
 * *\[ \] Is my resting grip _pressure_ a 2/10?*
@@ -601,7 +601,7 @@ To check if your grip is providing maximum structural synergy:
 
 #### ***2.6.4 The "Trigger Finger" Gap (Revisited)***
 
-*As established in Section 2.2, maintaining a gap between the [index](index.md) and middle finger is essential for this tactile feedback. This spread grip increases the surface area of the _hand_ in _contact_ with the bevels, effectively turning the [index](index.md) finger into a "_precision_ sensor." When the "Pulse" is applied through a spread grip, the _force_ is distributed more evenly across the _hand_le, making the racket feel like a natural _extension_ of the_ arm_'s skeletal _Structure_.*
+*As established in Section 2.2, maintaining a gap between the [index](../the-luc/index.md) and middle finger is essential for this tactile feedback. This spread grip increases the surface area of the _hand_ in _contact_ with the bevels, effectively turning the [index](../the-luc/index.md) finger into a "_precision_ sensor." When the "Pulse" is applied through a spread grip, the _force_ is distributed more evenly across the _hand_le, making the racket feel like a natural _extension_ of the_ arm_'s skeletal _Structure_.*
 
 #### ***2.6.5 Diagnostic: The "Ball Catch" _drill_***
 
@@ -1845,7 +1845,7 @@ A _Drop_ [volley](volley.md) must have extreme under_spin_ to "grab" the court a
 The **Impact Pulse** for a _Drop_ [volley](volley.md) is the most difficult to master in the 2026 _Manual_.
 
 * **The 3/10 Squeeze:** Unlike the 8/10 "crush" pulse, the _Drop_ [volley](volley.md) uses a **3/10 "Touch Pulse."** The _hand_ must be firm enough to maintain the racket's angle but soft enough to let the _string_s act like a pillow.  
-* **Finger-Tip [Proprioception](../the-luc/proprioception.md):** The "Trigger Finger" gap (Section 2.2) becomes the primary sensor. You should feel the ball's weight through your [index](index.md) finger and thumb, "steering" the ball over _the Net_ with the delicacy of a surgeon.
+* **Finger-Tip [Proprioception](../the-luc/proprioception.md):** The "Trigger Finger" gap (Section 2.2) becomes the primary sensor. You should feel the ball's weight through your [index](../the-luc/index.md) finger and thumb, "steering" the ball over _the Net_ with the delicacy of a surgeon.
 
 #### **5.14.4 Tactical Deception: The "Heavy" _preparation_**
 
@@ -4240,14 +4240,14 @@ Depending on the direction of the break, the resulting error falls into two cate
 1. **The Balloon (Posterior Break):** The _wrist_ folds backward. (Result: The ball flies high and slow, landing near the service line).  
 2. **_the Net_-Dump (Anterior Break):** The player tries to "_wrist_" the ball down. (Result: The _racket head_ moves faster than the _hand_, closing the face and driving the ball into the base of _the Net_).
 
-#### **8.2.3 Corrective Protocol: The "[index](index.md)-Finger Brace"**
+#### **8.2.3 Corrective Protocol: The "[index](../the-luc/index.md)-Finger Brace"**
 
 To solve the _wrist_-Break, the player must recalibrate their **Trigger Gap** awareness (Section 5.1.2):
 
 1. **The Wall-Press:** Stand facing a wall and place your racket _string_s flat against it in a [volley](volley.md) position.  
 2. **Sustained _pressure_:** Lean your _body weigh_t into the _hand_le.  
 3. **_observation_:** If your _wrist_ wobbles or changes angle under the _pressure_ of your own _body weigh_t, the **L-Shape** is not locked.  
-* **The Fix:** _aggressive_ly spread the [index](index.md) finger wider on the _hand_le. This finger acts as a "buttress" or diagonal brace that physically prevents the _hand_le from tilting backward during the collision.
+* **The Fix:** _aggressive_ly spread the [index](../the-luc/index.md) finger wider on the _hand_le. This finger acts as a "buttress" or diagonal brace that physically prevents the _hand_le from tilting backward during the collision.
 
 #### **8.2.4 Diagnostic: Identifying "_wrist_-Break" Scenarios**
 
@@ -4577,9 +4577,9 @@ In the 2026 per_form_ance tier, the traditional lexicon of "punching" or "steppi
 
 The 2026 standard for the [volley](volley.md) grip is defined by the **Continental Interface**.
 
-* **Definition:** The placement of the [index](index.md) Knuckle and the Heel of the Palm specifically on the second bevel of the octagonal _hand_le.  
+* **Definition:** The placement of the [index](../the-luc/index.md) Knuckle and the Heel of the Palm specifically on the second bevel of the octagonal _hand_le.  
 * **Function:** This is the only interface that allows the _racket face_ to remain at a constant 15-degree open angle across both the _forehand_ and _backhand_ without _Manual_ manipulation of the _wrist_.  
-* **The [index](index.md) Spread:** Also known as the **Trigger Finger**, this refers to the 1-inch gap between the [index](index.md) and middle fingers, acting as a structural buttress against racket twisting.
+* **The [index](../the-luc/index.md) Spread:** Also known as the **Trigger Finger**, this refers to the 1-inch gap between the [index](../the-luc/index.md) and middle fingers, acting as a structural buttress against racket twisting.
 
 #### **10.1.2 Radial Deviation (The _wrist_-Lock)**
 
@@ -5015,7 +5015,7 @@ The transition from the _practice_ court to a competitive match environment ofte
 
 Before the first ball is struck, verify the hardware:
 
-* **Grip [index](index.md)ing:** Confirm the **[Continental Grip](continental-grip.md)** (Section 2.1). Use the "Sword Draw" technique under the_ arm_pit to ensure the heel pad is properly aligned on Bevel 2\.  
+* **Grip [index](../the-luc/index.md)ing:** Confirm the **[Continental Grip](continental-grip.md)** (Section 2.1). Use the "Sword Draw" technique under the_ arm_pit to ensure the heel pad is properly aligned on Bevel 2\.  
 * **Structural Reset:** Establish the **_power_ Triangle** (Section 1.2). _knee_s bent in **Triple _Flexion_**, _torso_ slightly forward, _elbow_s away from the ribcage.  
 * **The Golden Triangle _Ready_:** _racket head_ elevated to eye level. Ensure the _non-dominant_ _hand_ is resting on the throat to maintain symmetry and facilitate the **Unit Turn**.
 

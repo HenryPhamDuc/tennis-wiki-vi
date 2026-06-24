@@ -77,7 +77,7 @@ Chương trình này thiết kế cho người chơi ở tuổi 52, ưu tiên an
 
 ## Kết Quả Mong Đợi
 
-Sau 4 tuần, não bắt đầu chọn tự động: bóng gần → [Choke-Up](../ky-thuat/choke-up.md) + [Compact Swing](../ky-thuat/compact-swing.md), bóng xa → cầm dài + big swing, mà không phải nghĩ. Đó chính là [Vật Nhập Thể](vật-nhập-thể.md) và [Automaticity](../ky-thuat/automaticity.md) được hình thành thông qua [Myelin Hóa](../wiki/myelin-hóa.md).
+Sau 4 tuần, não bắt đầu chọn tự động: bóng gần → [Choke-Up](../ky-thuat/choke-up.md) + [Compact Swing](../ky-thuat/compact-swing.md), bóng xa → cầm dài + big swing, mà không phải nghĩ. Đó chính là [Vật Nhập Thể](vật-nhập-thể.md) và [Automaticity](../ky-thuat/automaticity.md) được hình thành thông qua [Myelin Hóa](../tam-ly/myelin-hóa.md).
 
 ---
 

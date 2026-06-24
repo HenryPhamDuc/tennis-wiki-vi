@@ -103,7 +103,7 @@ Cách tách buổi tập
 
 📌 Liên kết:
 
-* ⬆️ [Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md)
+* ⬆️ [Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md)
 * ⬅️ [Lớp ngoài - Không gian & Cấu trúc](../ky-thuat/lớp-ngoài---không-gian-&-cấu-trúc.md)
 * ➡️ [Proprioception vs Sức mạnh](proprioception-vs-sức-mạnh.md)
 * 🏋️ [Chương trình 4 tuần proprioception](chương-trình-4-tuần-proprioception.md)

@@ -13,7 +13,7 @@ updated: 2026-06-20
 
 # Racket Drop
 
-**Racket Drop** (rơi đầu vợt) là chuyển động trong đó đầu vợt rơi xuống dưới bàn tay và tụt ra sau trong giai đoạn chuyển tiếp từ backswing sang forward swing. Đây là biểu hiện vật lý của [wrist lag](wrist-lag.md) — và là khoảnh khắc tích lũy [năng lượng đàn hồi](../wiki/stretch-shortening-cycle.md) cao nhất trong forehand.
+**Racket Drop** (rơi đầu vợt) là chuyển động trong đó đầu vợt rơi xuống dưới bàn tay và tụt ra sau trong giai đoạn chuyển tiếp từ backswing sang forward swing. Đây là biểu hiện vật lý của [wrist lag](wrist-lag.md) — và là khoảnh khắc tích lũy [năng lượng đàn hồi](../co-sinh-hoc/stretch-shortening-cycle.md) cao nhất trong forehand.
 
 Racket Drop **đúng kỹ thuật luôn là thụ động** — được tạo ra bởi quán tính, trọng lực và lực ly tâm, không phải bởi động tác cổ tay hay cánh tay chủ động.
 
@@ -61,6 +61,6 @@ Trong giai đoạn 1 của [khung huấn luyện OK Grip](training-framework-ok-
 - [OK Grip Drill](ok-grip-drill.md)
 - [Non-Dominant Hand Role](non-dominant-hand-role.md)
 - [Non-Dominant Hand Timing Error](../co-sinh-hoc/non-dominant-hand-timing-error.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Grip Tension](../co-sinh-hoc/grip-tension.md)
 - [Kinetic Chain](kinetic-chain.md)

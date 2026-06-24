@@ -12,7 +12,7 @@ updated: 2026-06-20
 
 # Giảm Tốc Lệch Tâm và Kết Thúc Lasso
 
-Giảm tốc lệch tâm là quá trình các cơ chủ động kiểm soát sự chậm lại của phân đoạn vừa đạt vận tốc đỉnh, bắt buộc phải xảy ra để truyền động lượng cho phân đoạn tiếp theo trong [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md).
+Giảm tốc lệch tâm là quá trình các cơ chủ động kiểm soát sự chậm lại của phân đoạn vừa đạt vận tốc đỉnh, bắt buộc phải xảy ra để truyền động lượng cho phân đoạn tiếp theo trong [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md).
 
 Follow-through (kết thúc lasso) không phải là hành động thụ động sau khi đánh bóng — đó là bằng chứng của một chuỗi được thực hiện đúng.
 
@@ -35,7 +35,7 @@ Nếu phân đoạn gần không dừng lại mà tiếp tục chuyển động 
 Kết thúc lasso (vợt kết thúc quấn qua vai không thuận như một cái lasso) là hình thức follow-through tự nhiên khi:
 
 1. Cánh tay thả lỏng hoàn toàn
-2. [Xoay Khớp Vai Bên Trong (ISR)](xoay-khớp-vai-bên-trong-(isr).md) hoàn thành đầy đủ
+2. [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md) hoàn thành đầy đủ
 3. Động lượng của vợt tự dẫn đường theo quán tính
 
 Nếu follow-through bị cắt ngắn hoặc kết thúc trước vai, đó là dấu hiệu cánh tay căng hoặc chuỗi bị gián đoạn sớm.
@@ -58,8 +58,8 @@ Giảm tốc lệch tâm đúng cách cũng bảo vệ vai và khuỷu: khi cơ 
 
 ## Các Khái Niệm Liên Quan
 
-- [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md)
+- [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md)
 - [Cánh Tay Như Một Bộ Dẫn Truyền](cánh-tay-như-một-bộ-dẫn-truyền.md)
-- [Xoay Khớp Vai Bên Trong (ISR)](xoay-khớp-vai-bên-trong-(isr).md)
+- [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md)
 - [Thời Điểm Bóp Cán Vợt](thời-điểm-bóp-cán-vợt.md)
 - [Hình Học Cánh Tay và Nguy Cơ Chấn Thương](../ky-thuat/hình-học-cánh-tay-và-nguy-cơ-chấn-thương.md)

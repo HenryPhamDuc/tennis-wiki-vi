@@ -54,10 +54,10 @@ Tay vợt đẳng cấp thế giới sở hữu **thư viện Motor Program phon
 
 ## Related Concepts
 
-- [Feedforward Control](../wiki/feedforward-control.md)
-- [Reactive Control](../wiki/reactive-control.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
 - [Big Loop](big-loop.md)
 - [Compact Loop](compact-loop.md)
 - [Tiến Trình Học Loop](../co-sinh-hoc/tiến-trình-học-loop.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Lỗi Trộn Lẫn Hệ Thống](lỗi-trộn-lẫn-hệ-thống.md)

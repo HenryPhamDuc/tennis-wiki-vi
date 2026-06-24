@@ -31,7 +31,7 @@ Trong bối cảnh [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.m
 ## Hai Cách Kiểm Soát Góc Mặt Vợt
 
 ### Trong Vòng Nhỏ
-[Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md) thay đổi góc mặt vợt chủ động — lật từ mở sang đóng trong tích tắc. Mặt vợt **thay đổi góc** trong quá trình chuẩn bị.
+[Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md) thay đổi góc mặt vợt chủ động — lật từ mở sang đóng trong tích tắc. Mặt vợt **thay đổi góc** trong quá trình chuẩn bị.
 
 → Rủi ro: nếu timing sai (lật sớm hoặc lật muộn), góc mặt vợt sẽ sai tại điểm tiếp xúc.
 
@@ -49,7 +49,7 @@ Cổ tay giữ nguyên vị trí "đóng" xuyên suốt. Mặt vợt **không th
 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)
-- [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)
+- [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md)
 - [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md)
 - [Lỗi Double-Motion](lỗi-double-motion.md)
 - [Lỗi Lật Sớm](lỗi-lật-sớm.md)

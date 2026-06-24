@@ -32,7 +32,7 @@ Giống như một vận động viên ném lao — toàn bộ hệ thần kinh 
 
 ## So sánh với Reactive Control
 
-| Tiêu chí | Feedforward Control | [Reactive Control](reactive-control.md) |
+| Tiêu chí | Feedforward Control | [Reactive Control](../ky-thuat/reactive-control.md) |
 |---|---|---|
 | Thời gian xử lý | Nhiều | Rất ít |
 | Mức độ lập kế hoạch | Đầy đủ | Tối thiểu |
@@ -49,7 +49,7 @@ Việc luyện tập [Big Loop](../ky-thuat/big-loop.md) ở tốc độ chậm 
 
 - [Big Loop và Compact Loop](../ky-thuat/big-loop-và-compact-loop.md)
 - [Big Loop](../ky-thuat/big-loop.md)
-- [Reactive Control](reactive-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
 - [Chuỗi Động Học](../ky-thuat/chuỗi-động-học.md)
-- [Nhận Biết Thời Gian](nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Tiến Trình Huấn Luyện Loop](tiến-trình-huấn-luyện-loop.md)

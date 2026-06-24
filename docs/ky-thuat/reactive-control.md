@@ -36,7 +36,7 @@ Reactive Control **có thể được cải thiện** qua luyện tập. Ngườ
 - Các motor program cho [Compact Loop](../ky-thuat/compact-loop.md) đã được tự động hóa sâu
 - Khả năng chuyển đổi sang Reactive Control mà không cần ý thức
 
-## Vai trò của [Nhận Biết Thời Gian](nhận-biết-thời-gian.md)
+## Vai trò của [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 
 Để Reactive Control hoạt động hiệu quả, người chơi phải nhận ra **sớm** rằng mình đang ở tình huống cần Reactive Control — trước khi bóng qua lưới, không phải sau khi bóng đã đến gần.
 
@@ -46,6 +46,6 @@ Reactive Control **có thể được cải thiện** qua luyện tập. Ngườ
 
 - [Big Loop và Compact Loop](../ky-thuat/big-loop-và-compact-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
-- [Feedforward Control](feedforward-control.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
 - [Pronation và Supination](../ky-thuat/pronation-và-supination.md)
-- [Nhận Biết Thời Gian](nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)

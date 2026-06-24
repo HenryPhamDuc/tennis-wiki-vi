@@ -45,7 +45,7 @@ Simon Konov (Top Tennis Training) mô tả kỹ thuật này bằng hình ảnh 
 
 ## Chế độ thần kinh
 
-Compact Loop vận hành theo [Reactive Control](../wiki/reactive-control.md) — não bộ không có đủ thời gian để dự đoán đầy đủ, thay vào đó hệ thần kinh phản ứng gần như tức thời như một cơ chế phản xạ.
+Compact Loop vận hành theo [Reactive Control](../ky-thuat/reactive-control.md) — não bộ không có đủ thời gian để dự đoán đầy đủ, thay vào đó hệ thần kinh phản ứng gần như tức thời như một cơ chế phản xạ.
 
 ## Sai lầm phổ biến
 
@@ -58,7 +58,7 @@ Xem [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md) — dùng 
 - [Big Loop và Compact Loop](big-loop-và-compact-loop.md)
 - [Big Loop](big-loop.md)
 - [Pronation và Supination](pronation-và-supination.md)
-- [Reactive Control](../wiki/reactive-control.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md)
-- [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md)
+- [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md)

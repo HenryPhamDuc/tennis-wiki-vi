@@ -24,7 +24,7 @@ Big Loop (vòng lặp lớn) là hình thức chuẩn bị vợt tối ưu khi n
 Nguyên lý cốt lõi của Big Loop **không** phải là tạo lực bằng cánh tay, mà là tạo điều kiện cho cơ thể nạp năng lượng thông qua vòng cung lớn. Điều này cho phép:
 
 - Xoay vai và xoay thân đầy đủ
-- Kích hoạt [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) và tích trữ elastic energy
+- Kích hoạt [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) và tích trữ elastic energy
 - Giải phóng năng lượng theo chuỗi: **Chân → Hông → Thân → Vai → Cánh tay → Cổ tay → Đầu vợt**
 
 Cơ thể hoạt động như một chiếc lò xo — Big Loop là động tác **lên dây cót**, còn swing về phía trước là động tác **thả lò xo**.
@@ -42,7 +42,7 @@ Federer, Alcaraz, Sinner, Djokovic và Nadal đều sử dụng Big Loop. Tuy nh
 
 ## Chế độ thần kinh
 
-Big Loop vận hành theo [Feedforward Control](../wiki/feedforward-control.md) — não bộ có đủ thời gian để dự đoán, tính toán và lập kế hoạch toàn bộ động tác trước khi thực hiện.
+Big Loop vận hành theo [Feedforward Control](../co-sinh-hoc/feedforward-control.md) — não bộ có đủ thời gian để dự đoán, tính toán và lập kế hoạch toàn bộ động tác trước khi thực hiện.
 
 ## Khi nào dùng Big Loop
 
@@ -61,7 +61,7 @@ Xem [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md) — dùng 
 - [Big Loop và Compact Loop](big-loop-và-compact-loop.md)
 - [Compact Loop](compact-loop.md)
 - [Chuỗi Động Học](chuỗi-động-học.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
-- [Feedforward Control](../wiki/feedforward-control.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md)

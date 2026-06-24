@@ -25,7 +25,7 @@ updated: 2026-06-20
 
 - Chân rộng hơn vai một chút
 - Thực hiện 1–2 vòng lắc lư sơ bộ để tạo nhịp
-- Trọng tâm ([CoG Sau Đường Gối](cog-sau-đường-gối.md)) dịch về chân trái
+- Trọng tâm ([CoG Sau Đường Gối](../co-sinh-hoc/cog-sau-đường-gối.md)) dịch về chân trái
 - Mục tiêu: thiết lập nhịp điệu, không phải lực
 
 ---
@@ -36,8 +36,8 @@ updated: 2026-06-20
 - Trọng lượng dịch động về chân trái
 - Đầu gối và ngón chân trái xoay về hướng ném
 - Chân phải quét rộng để tạo momentum góc tối đa
-- Cánh tay ném **lùi xa phía sau** cơ thể → kích hoạt [Stretch-Shortening Cycle](stretch-shortening-cycle.md)
-- [Nghiêng Bên](nghiêng-bên.md) bắt đầu xuất hiện ở đây — thân ngả sang phải, không cúi về phía trước
+- Cánh tay ném **lùi xa phía sau** cơ thể → kích hoạt [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
+- [Nghiêng Bên](../co-sinh-hoc/nghiêng-bên.md) bắt đầu xuất hiện ở đây — thân ngả sang phải, không cúi về phía trước
 
 ---
 
@@ -47,7 +47,7 @@ updated: 2026-06-20
 - Đẩy mạnh khỏi chân trái → ngắn rời đất
 - Chân phải nhắm trung tâm vòng tròn, tiếp đất bằng mũi chân
 - Đầu gối gập để hấp thu và chuyển hướng lực
-- [CoG Sau Đường Gối](cog-sau-đường-gối.md) vẫn được duy trì trong pha này
+- [CoG Sau Đường Gối](../co-sinh-hoc/cog-sau-đường-gối.md) vẫn được duy trì trong pha này
 
 ---
 
@@ -57,9 +57,9 @@ updated: 2026-06-20
 - Chân phải neo ở trung tâm vòng
 - Chân trái đặt nhanh gần cạnh trước → tạo "block"
 - **Hông đã xoay về phía trước, nhưng thân trên và cánh tay ném vẫn xoắn ra sau**
-- Đây là điểm [Tách Hông-Vai](tách-hông-vai.md) tối đa → moment xoắn lớn nhất
+- Đây là điểm [Tách Hông-Vai](../co-sinh-hoc/tách-hông-vai.md) tối đa → moment xoắn lớn nhất
 
-Xem thêm: [Tư Thế Power Position](tư-thế-power-position.md)
+Xem thêm: [Tư Thế Power Position](../co-sinh-hoc/tư-thế-power-position.md)
 
 ---
 
@@ -67,7 +67,7 @@ Xem thêm: [Tư Thế Power Position](tư-thế-power-position.md)
 **Giải phóng năng lượng.**
 
 - Hông phải bật mạnh về phía trước và lên trên
-- [Dynamic Block](dynamic-block.md): chân trái cứng và thẳng hoàn toàn → phanh đà tuyến tính
+- [Dynamic Block](../co-sinh-hoc/dynamic-block.md): chân trái cứng và thẳng hoàn toàn → phanh đà tuyến tính
 - Toàn bộ động năng dồn lên ngực, vai, cánh tay
 - Thả đĩa ở khoảng ngang vai, góc cơ học 34°–40°
 
@@ -80,19 +80,19 @@ Xem thêm: [Tư Thế Power Position](tư-thế-power-position.md)
 | Wind-Up | Thiếu nhịp điệu | Mất flow vào Entry |
 | Entry | [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) | Mất CoG, mất bán kính |
 | Drive | Tiếp đất gót chân | Không hấp thu được lực |
-| Power Position | Hông và vai xoay cùng lúc | Không có [Tách Hông-Vai](tách-hông-vai.md) |
+| Power Position | Hông và vai xoay cùng lúc | Không có [Tách Hông-Vai](../co-sinh-hoc/tách-hông-vai.md) |
 | Release | Block không đủ cứng | Năng lượng rò rỉ xuống dưới |
 
 ---
 
 ## Related Concepts
 
-- [Cơ Học Ném Xoay](cơ-học-ném-xoay.md)
-- [Tư Thế Power Position](tư-thế-power-position.md)
-- [Tách Hông-Vai](tách-hông-vai.md)
-- [Dynamic Block](dynamic-block.md)
-- [Nghiêng Bên](nghiêng-bên.md)
-- [CoG Sau Đường Gối](cog-sau-đường-gối.md)
-- [Stretch-Shortening Cycle](stretch-shortening-cycle.md)
-- [Đòn Bẩy Dài](đòn-bẩy-dài.md)
+- [Cơ Học Ném Xoay](../co-sinh-hoc/cơ-học-ném-xoay.md)
+- [Tư Thế Power Position](../co-sinh-hoc/tư-thế-power-position.md)
+- [Tách Hông-Vai](../co-sinh-hoc/tách-hông-vai.md)
+- [Dynamic Block](../co-sinh-hoc/dynamic-block.md)
+- [Nghiêng Bên](../co-sinh-hoc/nghiêng-bên.md)
+- [CoG Sau Đường Gối](../co-sinh-hoc/cog-sau-đường-gối.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
+- [Đòn Bẩy Dài](../co-sinh-hoc/đòn-bẩy-dài.md)
 - [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md)

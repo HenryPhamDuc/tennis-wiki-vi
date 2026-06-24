@@ -83,5 +83,5 @@ Three-layer reinforcement:
 - [3-Shot Pattern Design](3-shot-pattern-design.md)
 - [INTENTION → ACTION → MANIFESTATION](intention-→-action-→-manifestation.md)
 - [Satori State](../co-sinh-hoc/satori-state.md)
-- [Flow Break Triggers](../wiki/flow-break-triggers.md)
+- [Flow Break Triggers](../tam-ly/flow-break-triggers.md)
 - [Multi-Sensory Imagery Loading](multi-sensory-imagery-loading.md)

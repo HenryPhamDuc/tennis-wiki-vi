@@ -106,6 +106,6 @@ The intuition is biomechanically valid; the language is metaphorical. When teach
 - [Footwork Stances](footwork-stances.md)
 - [Wrist Lag and Release](../co-sinh-hoc/wrist-lag-and-release.md)
 - [Recovery Mechanics](recovery-mechanics.md)
-- [Head Position and Balance](../wiki/head-position-and-balance.md)
+- [Head Position and Balance](../co-sinh-hoc/head-position-and-balance.md)
 - [Volley Technique - Loose Grip](volley-technique---loose-grip.md)
 - [Dantian-Mingmen-COG Framework](dantian-mingmen-cog-framework.md)

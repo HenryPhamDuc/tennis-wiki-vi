@@ -10,7 +10,7 @@ updated: 2026-06-20
     ngày_tạo: 2026-01-15
     ngày_cập_nhật: 2026-01-15
     trạng_thái: hoàn_thành
-    thuộc_về: "[Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md)"
+    thuộc_về: "[Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md)"
     thẻ: [#khái_niệm, #lớp_1, #không_gian, #cấu_trúc, #footwork]
     ---
     
@@ -80,6 +80,6 @@ updated: 2026-06-20
     ---
     
     📌 **Liên kết:**
-    - ⬆️ [Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md)
+    - ⬆️ [Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md)
     - 🔄 _Lớp trong - Vật nhập thể_ — đối trọng bên trong
     - 🏋️ _Chương trình 4 tuần proprioception#Tuần 2 – Thay đổi đòn bẩy_ — bài tập cụ thể

@@ -29,7 +29,7 @@ Flow Break Triggers là ba **cơ chế cụ thể phá vỡ Flow State (Satori)*
 ### 2. Score Awareness
 **Định nghĩa**: Calculating what current score means for the match, thay vì playing current point.
 
-**Neural mechanism**: Tương tự Outcome Focus nhưng triggered by scoreboard số cụ thể. "30-40 = break point = critical" → amygdala activation → protective muscle bracing → [Asymmetric Degradation Under Pressure](asymmetric-degradation-under-pressure.md).
+**Neural mechanism**: Tương tự Outcome Focus nhưng triggered by scoreboard số cụ thể. "30-40 = break point = critical" → amygdala activation → protective muscle bracing → [Asymmetric Degradation Under Pressure](../chien-thuat/asymmetric-degradation-under-pressure.md).
 
 **Paradox**: Knowing the score is necessary; **calculating its meaning** is what breaks Flow. Score awareness = neutral information. Score meaning calculation = Flow break.
 
@@ -71,7 +71,7 @@ Flow Break Triggers là ba **cơ chế cụ thể phá vỡ Flow State (Satori)*
 ## Khái Niệm Liên Quan
 
 - [Conscious Thought as the Enemy](../ky-thuat/conscious-thought-as-the-enemy.md)
-- [Asymmetric Degradation Under Pressure](asymmetric-degradation-under-pressure.md)
+- [Asymmetric Degradation Under Pressure](../chien-thuat/asymmetric-degradation-under-pressure.md)
 - [Present-Moment Anchor](../ky-thuat/present-moment-anchor.md)
 - [Satori State](../co-sinh-hoc/satori-state.md)
 - [15-Second Reset](../tam-ly/15-second-reset.md)

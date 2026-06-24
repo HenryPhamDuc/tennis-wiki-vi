@@ -51,6 +51,6 @@ Khi cánh tay thuận accelerate về phía trước tiếp xúc bóng, cánh ta
 
 - [Cánh Tay Không Thuận](cánh-tay-không-thuận.md)
 - [Hệ Thống Song Phương Thống Nhất](hệ-thống-song-phương-thống-nhất.md)
-- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../wiki/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
+- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
 - [Lỗi Cánh Tay Trái Buông Lơi](lỗi-cánh-tay-trái-buông-lơi.md)
-- [Chuỗi Động Lực Gần-Xa](../wiki/chuỗi-động-lực-gần-xa.md)
+- [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md)

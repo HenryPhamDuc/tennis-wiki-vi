@@ -73,7 +73,7 @@ Tóm tắt cấu trúc YAML tiếng Việt đã dùng
 | `bí_danh`                    | Alias cho Obsidian    | `[Hai lớp, Lớp kỹ thuật]`                 |
 | `loại`                       | Phân loại note        | `khái_niệm`, `bài_tập`, `moc`             |
 | `trạng_thái`                 | Trạng thái hoàn thành | `hạt_giống`, `hoàn_thành`                 |
-| `thuộc_về`                   | Note cha              | `"[Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md)"`              |
+| `thuộc_về`                   | Note cha              | `"[Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md)"`              |
 | `ngày_tạo` / `ngày_cập_nhật` | Ngày tháng ISO        | `2026-01-15`                              |
 | `thẻ`                        | Tags Obsidian         | `[#proprioception, #tuổi_52]`             |
 | `nguồn`                      | Nguồn trích dẫn       | Nghiên cứu, ghi chép                      |

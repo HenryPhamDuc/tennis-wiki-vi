@@ -21,7 +21,7 @@ Trong [Cơ Học Ném Xoay](cơ-học-ném-xoay.md), SSC được kích hoạt c
 ## Cơ Chế Trong Ném Xoay
 
 ### Giai Đoạn Kéo Căng
-Trong [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md) ở Entry Phase:
+Trong [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md) ở Entry Phase:
 - Cánh tay ném **lùi xa** phía sau cơ thể
 - Thân trên xoắn ngược chiều với hông ([Tách Hông-Vai](tách-hông-vai.md))
 - Các cơ lõi lớn (obliques, latissimus dorsi, erector spinae) bị kéo căng tối đa
@@ -59,5 +59,5 @@ Tổng hợp hai nguồn → lực ra lớn hơn đáng kể so với chỉ co c
 - [Tách Hông-Vai](tách-hông-vai.md)
 - [Nghiêng Bên](nghiêng-bên.md)
 - [Tư Thế Power Position](tư-thế-power-position.md)
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md)

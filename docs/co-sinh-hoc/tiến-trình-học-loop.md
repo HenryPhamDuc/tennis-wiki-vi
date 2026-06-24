@@ -20,7 +20,7 @@ Tiến Trình Học Loop là lộ trình huấn luyện ba giai đoạn để ph
 
 ## Giai Đoạn 1: Học Big Loop Trước
 
-**Mục tiêu:** Xây dựng nền tảng [Kinetic Chain](../ky-thuat/kinetic-chain.md) và [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+**Mục tiêu:** Xây dựng nền tảng [Kinetic Chain](../ky-thuat/kinetic-chain.md) và [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 
 Tập trung vào:
 - Học **coil** (xoắn thân)
@@ -59,7 +59,7 @@ Người chơi phải học trả lời câu hỏi:
 
 **trước khi bóng qua lưới.**
 
-Đây là giai đoạn xây dựng [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md) — kỹ năng đọc tình huống để chọn đúng hệ thống trước khi chuẩn bị.
+Đây là giai đoạn xây dựng [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md) — kỹ năng đọc tình huống để chọn đúng hệ thống trước khi chuẩn bị.
 
 Bài tập điển hình:
 - Đối tác thay đổi tốc độ bóng đột ngột — người chơi phải tự điều chỉnh
@@ -73,7 +73,7 @@ Bài tập điển hình:
 Sau khi hoàn thành ba giai đoạn, [Motor Program](../ky-thuat/motor-program.md) được xây dựng đủ mạnh để:
 - Não tự lựa chọn [Big Loop](../ky-thuat/big-loop.md) hay [Compact Loop](../ky-thuat/compact-loop.md) mà không cần suy nghĩ có ý thức
 - Chuyển đổi diễn ra trong vài phần nghìn giây
-- [Feedforward Control](../wiki/feedforward-control.md) và [Reactive Control](../wiki/reactive-control.md) được điều phối liền mạch
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md) và [Reactive Control](../ky-thuat/reactive-control.md) được điều phối liền mạch
 
 ---
 
@@ -81,7 +81,7 @@ Sau khi hoàn thành ba giai đoạn, [Motor Program](../ky-thuat/motor-program.
 
 - [Big Loop](../ky-thuat/big-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Motor Program](../ky-thuat/motor-program.md)
 - [Kinetic Chain](../ky-thuat/kinetic-chain.md)
 - [Shoulder Loop](shoulder-loop.md)

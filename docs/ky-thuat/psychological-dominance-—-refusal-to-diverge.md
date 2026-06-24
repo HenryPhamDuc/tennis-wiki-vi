@@ -16,7 +16,7 @@ Psychological Dominance trong tennis không phải về aggression, intimidation
 
 ### "Staying Internal While Opponent Goes External"
 
-Trong tight match, cả hai player đang bị Asymmetric Degradation ([Asymmetric Degradation Under Pressure](../wiki/asymmetric-degradation-under-pressure.md)). Ai maintain System Coherence lâu hơn sẽ win. Nhưng có thêm một layer:
+Trong tight match, cả hai player đang bị Asymmetric Degradation ([Asymmetric Degradation Under Pressure](../chien-thuat/asymmetric-degradation-under-pressure.md)). Ai maintain System Coherence lâu hơn sẽ win. Nhưng có thêm một layer:
 
 Khi player A maintains stability:
 - Opponent (player B) observes A's organization.
@@ -71,8 +71,8 @@ Maintaining head stability ("head remains anchored") là physical expression c�
 
 ## Khái Niệm Liên Quan
 
-- [Asymmetric Degradation Under Pressure](../wiki/asymmetric-degradation-under-pressure.md)
-- [Flow Break Triggers](../wiki/flow-break-triggers.md)
+- [Asymmetric Degradation Under Pressure](../chien-thuat/asymmetric-degradation-under-pressure.md)
+- [Flow Break Triggers](../tam-ly/flow-break-triggers.md)
 - [Quiet Eye](quiet-eye.md)
 - [Satori State](../co-sinh-hoc/satori-state.md)
 - [15-Second Reset](../tam-ly/15-second-reset.md)

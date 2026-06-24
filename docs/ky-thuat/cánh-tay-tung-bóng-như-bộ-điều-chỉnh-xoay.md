@@ -32,7 +32,7 @@ Khi vai xoay trong giao bóng, trục của chuyển động đó không cố đ
 
 ## Liên Kết Với ISR
 
-Góc trục cartwheel quyết định hướng mà [Xoay Khớp Vai Bên Trong (ISR)](../wiki/xoay-khớp-vai-bên-trong-(isr).md) tác động lên vợt. Cùng một ISR, khác trục cartwheel → khác loại giao bóng. Đây là lý do các tay vợt đỉnh cao có thể che giấu loại giao bóng đến rất muộn.
+Góc trục cartwheel quyết định hướng mà [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md) tác động lên vợt. Cùng một ISR, khác trục cartwheel → khác loại giao bóng. Đây là lý do các tay vợt đỉnh cao có thể che giấu loại giao bóng đến rất muộn.
 
 ---
 
@@ -56,6 +56,6 @@ Góc trục cartwheel quyết định hướng mà [Xoay Khớp Vai Bên Trong (
 
 - [Cánh Tay Không Thuận](cánh-tay-không-thuận.md)
 - [Hệ Thống Song Phương Thống Nhất](hệ-thống-song-phương-thống-nhất.md)
-- [Xoay Khớp Vai Bên Trong (ISR)](../wiki/xoay-khớp-vai-bên-trong-(isr).md)
+- [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md)
 - [Lỗi Cánh Tay Trái Buông Lơi](lỗi-cánh-tay-trái-buông-lơi.md)
 - [Cánh Tay Radar](../the-luc/cánh-tay-radar.md)

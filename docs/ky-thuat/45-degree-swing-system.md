@@ -22,7 +22,7 @@ This phrase summarizes the entire framework: the feeling of hitting vanishes whe
 
 ### 1. READY POSITION
 
-Establish the athletic base: knees bent, weight on balls of feet, head neutral (see [Head Position and Balance](../wiki/head-position-and-balance.md)), racket in front of body at roughly waist height.
+Establish the athletic base: knees bent, weight on balls of feet, head neutral (see [Head Position and Balance](../co-sinh-hoc/head-position-and-balance.md)), racket in front of body at roughly waist height.
 
 The spine/hip/knee posture from the notebook:
 - Hips lower than standing

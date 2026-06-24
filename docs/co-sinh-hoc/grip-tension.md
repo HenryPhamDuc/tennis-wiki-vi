@@ -57,6 +57,6 @@ Thang độ cầm vợt tham khảo: mức 3/10 (rất nhẹ) — vợt không r
 - [Racket Drop](../ky-thuat/racket-drop.md)
 - [Kinetic Chain](../ky-thuat/kinetic-chain.md)
 - [Arm-Dominant Swing](arm-dominant-swing.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Fatigue and Performance Degradation](../ky-thuat/fatigue-and-performance-degradation.md)
 - [Motor Pattern Execution](../ky-thuat/motor-pattern-execution.md)

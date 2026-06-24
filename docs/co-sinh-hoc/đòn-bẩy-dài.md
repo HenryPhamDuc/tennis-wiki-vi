@@ -43,7 +43,7 @@ Rút tay vào trong làm giảm bán kính → giảm tốc độ đầu đĩa m
 
 [Nghiêng Bên](nghiêng-bên.md) hỗ trợ Đòn Bẩy Dài: khi thân nghiêng ngang (không cúi về phía trước), cánh tay ném tự nhiên duỗi ra phía sau và dưới thay vì bị kéo vào trong.
 
-[Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) phá vỡ Đòn Bẩy Dài: khi thân cúi về phía trước, không gian cho cánh tay duỗi ra bị hạn chế và cánh tay có xu hướng rút vào.
+[Lỗi Cúi Về Phía Trước](../ky-thuat/lỗi-cúi-về-phía-trước.md) phá vỡ Đòn Bẩy Dài: khi thân cúi về phía trước, không gian cho cánh tay duỗi ra bị hạn chế và cánh tay có xu hướng rút vào.
 
 ---
 
@@ -58,6 +58,6 @@ Rút tay vào trong làm giảm bán kính → giảm tốc độ đầu đĩa m
 - [Cơ Học Ném Xoay](cơ-học-ném-xoay.md)
 - [Tách Hông-Vai](tách-hông-vai.md)
 - [Nghiêng Bên](nghiêng-bên.md)
-- [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md)
+- [Lỗi Cúi Về Phía Trước](../ky-thuat/lỗi-cúi-về-phía-trước.md)
 - [Tư Thế Power Position](tư-thế-power-position.md)
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)

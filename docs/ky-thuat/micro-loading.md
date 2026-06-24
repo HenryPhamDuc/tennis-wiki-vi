@@ -68,15 +68,15 @@ Even with micro-loading protocol, **HRV determines whether the session happens**
 - HRV significantly reduced → CNS-only day (movement, light technical) — micro-load postponed.
 - HRV normal → Micro-load proceeds as planned.
 
-The schedule is the default. The HRV is the governor. (Xem [HRV-Guided Training](../wiki/hrv-guided-training.md).)
+The schedule is the default. The HRV is the governor. (Xem [HRV-Guided Training](../tam-ly/hrv-guided-training.md).)
 
 ---
 
 ## Khái Niệm Liên Quan
 
 - [Explosive Durability](explosive-durability.md)
-- [Undulating Periodisation](../wiki/undulating-periodisation.md)
-- [HRV-Guided Training](../wiki/hrv-guided-training.md)
+- [Undulating Periodisation](../the-luc/undulating-periodisation.md)
+- [HRV-Guided Training](../tam-ly/hrv-guided-training.md)
 - [CNS Fatigue Signs](cns-fatigue-signs.md)
 - [Type IIb Fast-Twitch Optimisation](type-iib-fast-twitch-optimisation.md)
 - [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md)

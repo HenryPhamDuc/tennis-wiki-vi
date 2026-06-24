@@ -80,5 +80,5 @@ Chất lượng của SSC phụ thuộc trực tiếp vào **tốc độ chuyể
 - [Sóng Đứng](../co-sinh-hoc/sóng-đứng.md)
 - [Sóng Dương](sóng-dương.md)
 - [Mingmen](../ky-thuat/dantian.md)
-- [Mô Hình Ba Tầng Nén](../wiki/mô-hình-ba-tầng-nén.md)
+- [Mô Hình Ba Tầng Nén](../co-sinh-hoc/mô-hình-ba-tầng-nén.md)
 - [Hiệu Ứng Roi](hiệu-ứng-roi.md)

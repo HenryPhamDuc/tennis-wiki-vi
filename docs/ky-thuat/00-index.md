@@ -18,7 +18,7 @@ updated: 2026-06-20
 ### 1. Forehand cơ bản
 
 - [01.1_Footwork_3_Stance](01.1-footwork-3-stance.md) — Open / Square / Closed stance
-- [01.2_Coil_Styles_X_Factor](../wiki/01.2-coil-styles-x-factor.md) — X-Factor vs Linear lunge
+- [01.2_Coil_Styles_X_Factor](../co-sinh-hoc/01.2-coil-styles-x-factor.md) — X-Factor vs Linear lunge
 - [01.3_Racquet_Face_Pre_Compensation](01.3-racquet-face-pre-compensation.md) — Palm up/down
 - [01.4_Loose_Wrist_Ulnar_Deviation](01.4-loose-wrist-ulnar-deviation.md) — Lỏng cổ tay
 

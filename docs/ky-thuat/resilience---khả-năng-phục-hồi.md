@@ -77,7 +77,7 @@ Thay đổi nhãn nhận thức về sai lầm:
 
 ## Liên Quan
 - [Sức Mạnh Tinh Thần](../co-sinh-hoc/sức-mạnh-tinh-thần.md)
-- [Focus - Tập Trung](../wiki/focus---tập-trung.md)
+- [Focus - Tập Trung](../tam-ly/focus---tập-trung.md)
 - [Luyện Tập Dưới Áp Lực - Pressure Training](luyện-tập-dưới-áp-lực---pressure-training.md)
 - [Luyện Tập Khó Khăn - Adversity Training](luyện-tập-khó-khăn---adversity-training.md)
 - _Petit Bras - Hội Chứng Cánh Tay Ngắn_

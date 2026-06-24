@@ -27,7 +27,7 @@ Bóng cao đẩy điểm tiếp xúc lên trên vùng lý tưởng. Nếu không
 Angle của cánh tay và vợt thay đổi khi tiếp xúc cao — đòi hỏi điều chỉnh cách hông và vai truyền năng lượng.
 
 ### Vấn đề 3 — Grip Tension tăng
-Nhiều người chơi phản xạ siết vợt chặt hơn khi gặp bóng cao — làm suy giảm [Wrist Lag](wrist-lag.md) và [SSC](../wiki/stretch-shortening-cycle.md).
+Nhiều người chơi phản xạ siết vợt chặt hơn khi gặp bóng cao — làm suy giảm [Wrist Lag](wrist-lag.md) và [SSC](../co-sinh-hoc/stretch-shortening-cycle.md).
 
 ---
 

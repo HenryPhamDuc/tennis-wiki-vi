@@ -63,6 +63,6 @@ Without a structured reset, performance erodes progressively across a match — 
 - _Between-Point Ritual_
 - _Basal Ganglia_
 - _Mushin_
-- [Petit Bras](../wiki/petit-bras.md)
+- [Petit Bras](../ky-thuat/petit-bras.md)
 - _Mental Toughness_
 - _Sympathetic Nervous System_

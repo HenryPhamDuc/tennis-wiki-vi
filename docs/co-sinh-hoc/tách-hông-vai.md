@@ -64,5 +64,5 @@ Khi hông và vai xoay **cùng lúc**, không có Tách Hông-Vai. Hậu quả:
 - [Tư Thế Power Position](tư-thế-power-position.md)
 - [Stretch-Shortening Cycle](stretch-shortening-cycle.md)
 - [Dynamic Block](dynamic-block.md)
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
-- [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
+- [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md)

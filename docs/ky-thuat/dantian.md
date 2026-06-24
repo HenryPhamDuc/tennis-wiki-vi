@@ -74,5 +74,5 @@ Dantian điều phối thứ tự kích hoạt: hấp thụ/chuyển hướng, n
 - [Tạo Sóng Trong Tennis](tạo-sóng-trong-tennis.md)
 - [Mingmen](../ky-thuat/dantian.md)
 - [Trọng Tâm Cơ Thể](trọng-tâm-cơ-thể.md)
-- [Mô Hình Ba Tầng Nén](../wiki/mô-hình-ba-tầng-nén.md)
+- [Mô Hình Ba Tầng Nén](../co-sinh-hoc/mô-hình-ba-tầng-nén.md)
 - [Chuỗi Động Lực Học](../co-sinh-hoc/chuỗi-động-lực-học.md)

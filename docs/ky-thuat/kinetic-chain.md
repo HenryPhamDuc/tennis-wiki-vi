@@ -41,9 +41,9 @@ Tất cả các điều kiện này đòi hỏi **thời gian**. Đây là lý d
 
 ---
 
-## Mối Quan Hệ Với [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+## Mối Quan Hệ Với [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 
-Kinetic Chain và [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) hoạt động cùng nhau:
+Kinetic Chain và [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) hoạt động cùng nhau:
 - Stretch-Shortening Cycle tích trữ năng lượng đàn hồi trong cơ
 - Kinetic Chain xác định **thứ tự** và **hướng** giải phóng năng lượng đó
 
@@ -63,7 +63,7 @@ Trong [Compact Loop](compact-loop.md), phần trên của chuỗi (vai, cánh ta
 
 - [Big Loop](big-loop.md)
 - [Compact Loop](compact-loop.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Shoulder Loop](../co-sinh-hoc/shoulder-loop.md)
 - [Forearm Pronation và Supination](forearm-pronation-và-supination.md)
 - [Big Loop và Compact Loop](big-loop-và-compact-loop.md)

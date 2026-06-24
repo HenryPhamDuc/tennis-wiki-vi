@@ -59,7 +59,7 @@ For the chain to carry a wave, the body needs stiffness in the right places:
 
 - **Non-dominant arm tucked to chest**: increases upper-body stiffness, turning the torso from a loose chain into a rigid diamond-shaped load-bearing arch (vòng cung chịu lực)
 - **Stable lower body platform**: like a cannon on a boat — the platform must be planted before the wave arrives (see [Footwork Stances](footwork-stances.md))
-- **Head fixed**: stabilizes CNS and vestibulo-ocular reflex (VOR); see [Head Position and Balance](../wiki/head-position-and-balance.md)
+- **Head fixed**: stabilizes CNS and vestibulo-ocular reflex (VOR); see [Head Position and Balance](../co-sinh-hoc/head-position-and-balance.md)
 
 A wave travels cleanly through a stiff structure and dissipates in a soft one.
 

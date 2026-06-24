@@ -39,7 +39,7 @@ Quá trình quyết định chuyển từ vỏ não trước trán (lập kế h
 Khi vợt đã là một phần cơ thể, người chơi không còn "phản ứng" với bóng mà "dự đoán". Hệ thần kinh dự báo quỹ đạo bóng 100–150ms trước khi bóng tới, và tay đã bắt đầu di chuyển trước.
 
 ### 4. Trở Thành Bản Năng Thứ Hai
-Quá trình này không đến từ việc đánh nhiều một cách ngẫu nhiên, mà từ việc lặp lại đúng cấu trúc không gian (lớp 1) hàng ngàn lần. Mỗi lần lặp, [Myelin Hóa](../wiki/myelin-hóa.md) quanh dây thần kinh dày lên, tín hiệu truyền nhanh hơn.
+Quá trình này không đến từ việc đánh nhiều một cách ngẫu nhiên, mà từ việc lặp lại đúng cấu trúc không gian (lớp 1) hàng ngàn lần. Mỗi lần lặp, [Myelin Hóa](../tam-ly/myelin-hóa.md) quanh dây thần kinh dày lên, tín hiệu truyền nhanh hơn.
 
 ---
 
@@ -65,7 +65,7 @@ Vật nhập thể là mục tiêu cuối của [Chương Trình 4 Tuần Propri
 - [Không Gian Là Cấu Trúc](../ky-thuat/không-gian-là-cấu-trúc.md)
 - [Proprioception](proprioception.md)
 - [Ba Vòng Phản Xạ Thần Kinh](../ky-thuat/ba-vòng-phản-xạ-thần-kinh.md)
-- [Myelin Hóa](../wiki/myelin-hóa.md)
+- [Myelin Hóa](../tam-ly/myelin-hóa.md)
 - [Chương Trình 4 Tuần Proprioception](chương-trình-4-tuần-proprioception.md)
 - [Compact Swing](../ky-thuat/compact-swing.md)
 - [Choke-Up](../ky-thuat/choke-up.md)

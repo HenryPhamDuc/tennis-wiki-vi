@@ -16,7 +16,7 @@ updated: 2026-06-20
 
 **Slice và Bóng Thấp** là bộ đôi vũ khí chiến thuật tạo ra những tình huống mà người trẻ và nhanh khó xử lý nhất: buộc họ phải đánh lên từ dưới thấp, mất tư thế tấn công, và không thể tạo tốc độ hiệu quả.
 
-Đây là công cụ trực tiếp nhất để vô hiệu hóa ưu thế thể lực trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md).
+Đây là công cụ trực tiếp nhất để vô hiệu hóa ưu thế thể lực trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md).
 
 ---
 
@@ -101,7 +101,7 @@ Slice serve kéo đối thủ ra ngoài đường chạy, đặc biệt hiệu q
 
 ## Các Khái Niệm Liên Quan
 
-- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
+- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
 - [Kiểm Soát Nhịp Độ](kiểm-soát-nhịp-độ.md)
 - [Tấn Công Từng Phần](tấn-công-từng-phần.md)
 - [Lên Lưới Đúng Thời Điểm](lên-lưới-đúng-thời-điểm.md)

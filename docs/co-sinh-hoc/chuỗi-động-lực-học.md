@@ -86,7 +86,7 @@ VĐV không "tạo ra" lực — họ **định hướng lại lực từ mặt 
 - [Tạo Sóng Trong Tennis](../ky-thuat/tạo-sóng-trong-tennis.md)
 - [Hiệu Ứng Roi](../ky-thuat/hiệu-ứng-roi.md)
 - [Chu Trình Kéo-Rút Ngắn (SSC)](../ky-thuat/chu-trình-kéo-rút-ngắn-(ssc).md)
-- [Mô Hình Ba Tầng Nén](../wiki/mô-hình-ba-tầng-nén.md)
+- [Mô Hình Ba Tầng Nén](../co-sinh-hoc/mô-hình-ba-tầng-nén.md)
 - [Sóng Âm](../ky-thuat/sóng-âm.md)
 - [Sóng Dương](../ky-thuat/sóng-dương.md)
 - [Sóng Đứng](sóng-đứng.md)

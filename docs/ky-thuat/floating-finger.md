@@ -44,4 +44,4 @@ Floating Finger đặc biệt hữu ích khi luyện [Compact Loop](compact-loop
 - [Pronation và Supination](pronation-và-supination.md)
 - [Compact Loop](compact-loop.md)
 - [Big Loop](big-loop.md)
-- [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md)
+- [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md)

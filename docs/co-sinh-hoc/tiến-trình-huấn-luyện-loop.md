@@ -48,7 +48,7 @@ Việc rút ngắn **dần dần** giúp người chơi thích nghi với việc
 
 **Mục tiêu:** Tự động hóa việc lựa chọn đúng hệ thống
 
-Người chơi phải học cách trả lời câu hỏi của [Nhận Biết Thời Gian](nhận-biết-thời-gian.md) trước khi bóng qua lưới. Các bài tập:
+Người chơi phải học cách trả lời câu hỏi của [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md) trước khi bóng qua lưới. Các bài tập:
 - Trả giao bóng ở nhiều tốc độ khác nhau
 - Rally với đối tác thay đổi nhịp độ đột ngột
 - Bài tập nhận dạng tình huống: giáo viên báo hiệu "nhanh/chậm" và người học phải phản ứng đúng hệ thống
@@ -57,7 +57,7 @@ Người chơi phải học cách trả lời câu hỏi của [Nhận Biết Th
 
 Sau khi hoàn thành 3 giai đoạn:
 - [Feedforward Control](feedforward-control.md) kích hoạt tự động khi có thời gian
-- [Reactive Control](reactive-control.md) kích hoạt tự động khi thiếu thời gian
+- [Reactive Control](../ky-thuat/reactive-control.md) kích hoạt tự động khi thiếu thời gian
 - Không còn [Sai Lầm Trộn Hệ Thống](../ky-thuat/sai-lầm-trộn-hệ-thống.md)
 
 ---
@@ -67,7 +67,7 @@ Sau khi hoàn thành 3 giai đoạn:
 - [Big Loop và Compact Loop](../ky-thuat/big-loop-và-compact-loop.md)
 - [Big Loop](../ky-thuat/big-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
-- [Nhận Biết Thời Gian](nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Chuỗi Động Học](../ky-thuat/chuỗi-động-học.md)
 - [Pronation và Supination](../ky-thuat/pronation-và-supination.md)
 - [Floating Finger](../ky-thuat/floating-finger.md)

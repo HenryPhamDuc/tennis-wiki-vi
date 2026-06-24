@@ -12,7 +12,7 @@ updated: 2026-06-20
 
 # Tư Thế Power Position
 
-Tư Thế Power Position là điểm căng xoắn tối đa trong chuỗi ném đĩa — cấu trúc căn chỉnh quan trọng nhất trong [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md) — trong đó hông đã xoay về phía trước nhưng thân trên và cánh tay ném vẫn xoắn ngược chiều ra sau.
+Tư Thế Power Position là điểm căng xoắn tối đa trong chuỗi ném đĩa — cấu trúc căn chỉnh quan trọng nhất trong [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md) — trong đó hông đã xoay về phía trước nhưng thân trên và cánh tay ném vẫn xoắn ngược chiều ra sau.
 
 Đây là nguồn gốc của toàn bộ lực trong cú ném.
 
@@ -54,16 +54,16 @@ Nếu Power Position không được duy trì đúng → toàn bộ năng lượ
 
 ## Liên Hệ Với Golf
 
-Trong [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md), Power Position tương đương với đỉnh backswing: vai đã xoay tối đa trong khi hông bắt đầu dẫn trước vào downswing. Khái niệm "X-factor" trong golf chính là góc [Tách Hông-Vai](tách-hông-vai.md) tại Power Position.
+Trong [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md), Power Position tương đương với đỉnh backswing: vai đã xoay tối đa trong khi hông bắt đầu dẫn trước vào downswing. Khái niệm "X-factor" trong golf chính là góc [Tách Hông-Vai](tách-hông-vai.md) tại Power Position.
 
 ---
 
 ## Related Concepts
 
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
 - [Tách Hông-Vai](tách-hông-vai.md)
 - [Dynamic Block](dynamic-block.md)
 - [Stretch-Shortening Cycle](stretch-shortening-cycle.md)
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md)
 - [CoG Sau Đường Gối](cog-sau-đường-gối.md)
-- [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
+- [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md)

@@ -23,7 +23,7 @@ Shoulder Loop là phần chuyển động của vai trong [Big Loop](../ky-thuat
 Trong [Big Loop](../ky-thuat/big-loop.md), Shoulder Loop cho phép:
 - Vai xoay ra ngoài đầy đủ (external rotation)
 - Scapular loading — tích năng lượng tại xương bả vai
-- Kích hoạt [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) cho các cơ vai và lưng trên
+- Kích hoạt [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) cho các cơ vai và lưng trên
 
 Không có Shoulder Loop → không có [Kinetic Chain](../ky-thuat/kinetic-chain.md) đầy đủ → sức mạnh bị giảm đáng kể.
 
@@ -54,5 +54,5 @@ Ba bước này cộng lại tạo ra độ trễ không thể tránh khỏi.
 - [Big Loop](../ky-thuat/big-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
 - [Kinetic Chain](../ky-thuat/kinetic-chain.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Forearm Pronation và Supination](../ky-thuat/forearm-pronation-và-supination.md)

@@ -100,7 +100,7 @@ This prevents the most common tournament-week error: maintaining normal training
 
 - [Explosive Durability](../ky-thuat/explosive-durability.md)
 - [CNS Fatigue Signs](../ky-thuat/cns-fatigue-signs.md)
-- [Undulating Periodisation](undulating-periodisation.md)
+- [Undulating Periodisation](../the-luc/undulating-periodisation.md)
 - [Micro-Loading](../ky-thuat/micro-loading.md)
 - [Central Governor Model](central-governor-model.md)
 - [Coaching Conditioning](../ky-thuat/coaching-conditioning.md)

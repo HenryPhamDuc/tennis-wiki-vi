@@ -42,25 +42,25 @@ Ba checkpoint cơ học cốt lõi:
 - [Tư Thế Power Position](tư-thế-power-position.md) — điểm căng xoắn tối đa trong chuỗi ném
 
 ### Chuỗi Động Học
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md) — trình tự kỹ thuật đầy đủ từ wind-up đến release
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md) — trình tự kỹ thuật đầy đủ từ wind-up đến release
 - [Tách Hông-Vai](tách-hông-vai.md) — cơ chế tạo moment xoắn chính
 - [Stretch-Shortening Cycle](stretch-shortening-cycle.md) — tích trữ và giải phóng năng lượng đàn hồi
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md) — cánh tay thả lỏng, duy trì bán kính
 - [Dynamic Block](dynamic-block.md) — phanh đà bằng chân trái
 
 ### Lỗi và Chẩn Đoán
-- [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) — sai lầm phổ biến nhất, hậu quả cụ thể
-- [Early Extension](early-extension.md) — hậu quả của cúi sai trong golf
+- [Lỗi Cúi Về Phía Trước](../ky-thuat/lỗi-cúi-về-phía-trước.md) — sai lầm phổ biến nhất, hậu quả cụ thể
+- [Early Extension](../ky-thuat/early-extension.md) — hậu quả của cúi sai trong golf
 
 ### Ứng Dụng Đa Môn
-- [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md) — mapping từ ném đĩa sang kỹ thuật golf
+- [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md) — mapping từ ném đĩa sang kỹ thuật golf
 - [Discobolus và Cơ Học Hiện Đại](discobolus-và-cơ-học-hiện-đại.md) — tượng cổ đại vs. cơ sinh học hiện đại
 
 ---
 
 ## Related Concepts
 
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
 - [Tách Hông-Vai](tách-hông-vai.md)
 - [Dynamic Block](dynamic-block.md)
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md)

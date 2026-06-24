@@ -6,7 +6,7 @@ updated: 2026-06-20
 
 # Weekly Integration Schedule
 
-Weekly Integration Schedule là template 7 ngày tích hợp **physical conditioning, technical development, tactical pattern drilling, mental work, và recovery** như simultaneous pursuits — không phải sequential. Đây là biểu hiện thực tế của [Undulating Periodisation](../wiki/undulating-periodisation.md) trong một tuần training tiêu chuẩn (không phải tournament week).
+Weekly Integration Schedule là template 7 ngày tích hợp **physical conditioning, technical development, tactical pattern drilling, mental work, và recovery** như simultaneous pursuits — không phải sequential. Đây là biểu hiện thực tế của [Undulating Periodisation](../the-luc/undulating-periodisation.md) trong một tuần training tiêu chuẩn (không phải tournament week).
 
 ---
 
@@ -30,7 +30,7 @@ Weekly Integration Schedule là template 7 ngày tích hợp **physical conditio
 Thứ Tư combine Power & Mechanics cùng lúc — không phải "strength day" riêng và "technical day" riêng. Kết quả: technical engrams được drilled under physical load → match-realistic conditions.
 
 ### 2. Active Recovery Là Structured, Không Phải Random
-Thứ Ba không phải "rest" — light yoga và mobility là **fascial elasticity maintenance**. Chess work trong recovery day = [Neural Pressure Training](../wiki/neural-pressure-training.md) trong cognitive domain mà không taxing physical system.
+Thứ Ba không phải "rest" — light yoga và mobility là **fascial elasticity maintenance**. Chess work trong recovery day = [Neural Pressure Training](../tam-ly/neural-pressure-training.md) trong cognitive domain mà không taxing physical system.
 
 ### 3. Conditioning Ngày Thứ Năm Là Sport-Specific
 Sprint Intervals (1:3 ratio) — không phải long-distance running. [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md) matched chính xác đến match demands.
@@ -39,7 +39,7 @@ Sprint Intervals (1:3 ratio) — không phải long-distance running. [Sprint In
 Match play sau conditioning ngày (Thứ Năm) và serve/net ngày (Thứ Sáu) → player đến match play với physical và technical work fresh in motor system. Friday serve work → Saturday serve execution → direct transfer.
 
 ### 5. Sunday Full Rest — Non-Negotiable
-Full rest ngày cuối tuần là [Central Governor Model](../wiki/central-governor-model.md) recovery — CNS consolidates engrams learned through the week during rest. Removing this day compresses adaptation time.
+Full rest ngày cuối tuần là [Central Governor Model](../tam-ly/central-governor-model.md) recovery — CNS consolidates engrams learned through the week during rest. Removing this day compresses adaptation time.
 
 ---
 
@@ -53,7 +53,7 @@ Tournament week collapses template về:
 | Sau match (same day) | Recovery protocol: contrast shower, light movement, nutrition |
 | Giữa consecutive day matches | If HRV normal → light activation. If HRV low → rest only |
 
-Không có standard training sessions trong tournament week. (Xem [Micro-Loading](micro-loading.md) và [HRV-Guided Training](../wiki/hrv-guided-training.md).)
+Không có standard training sessions trong tournament week. (Xem [Micro-Loading](micro-loading.md) và [HRV-Guided Training](../tam-ly/hrv-guided-training.md).)
 
 ---
 
@@ -70,9 +70,9 @@ Naming convention reinforces conceptual understanding: serve power comes from le
 ## Khái Niệm Liên Quan
 
 - [Explosive Durability](explosive-durability.md)
-- [Undulating Periodisation](../wiki/undulating-periodisation.md)
+- [Undulating Periodisation](../the-luc/undulating-periodisation.md)
 - [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md)
 - [Micro-Loading](micro-loading.md)
-- [HRV-Guided Training](../wiki/hrv-guided-training.md)
+- [HRV-Guided Training](../tam-ly/hrv-guided-training.md)
 - [Multi-Sensory Imagery Loading](multi-sensory-imagery-loading.md)
 - [Gravity Step](gravity-step.md)

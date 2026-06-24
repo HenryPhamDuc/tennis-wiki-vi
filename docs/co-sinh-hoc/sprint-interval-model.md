@@ -89,7 +89,7 @@ Linear sprint intervals (running straight) miss the deceleration component entir
 ## Khái Niệm Liên Quan
 
 - [Explosive Durability](../ky-thuat/explosive-durability.md)
-- [Undulating Periodisation](../wiki/undulating-periodisation.md)
+- [Undulating Periodisation](../the-luc/undulating-periodisation.md)
 - [ATP-PC Energy System](../ky-thuat/atp-pc-energy-system.md)
 - [Eccentric Deceleration Training](../ky-thuat/eccentric-deceleration-training.md)
 - [Leg Stiffness](../ky-thuat/leg-stiffness.md)

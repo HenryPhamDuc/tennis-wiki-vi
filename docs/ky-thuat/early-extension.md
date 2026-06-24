@@ -20,7 +20,7 @@ Early Extension là lỗi kỹ thuật trong golf: người chơi "đứng dậy
 
 ## Cơ Chế Gây Ra
 
-Khi [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) xảy ra trong backswing, cơ thể mất góc cột sống và [CoG Sau Đường Gối](cog-sau-đường-gối.md). Để gậy vẫn có thể tiếp xúc bóng, hệ thần kinh bù trừ trong downswing bằng cách:
+Khi [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) xảy ra trong backswing, cơ thể mất góc cột sống và [CoG Sau Đường Gối](../co-sinh-hoc/cog-sau-đường-gối.md). Để gậy vẫn có thể tiếp xúc bóng, hệ thần kinh bù trừ trong downswing bằng cách:
 
 1. Đẩy hông về phía trước (về phía bóng)
 2. Dựng thân trên lên
@@ -52,7 +52,7 @@ Kết quả: gậy tiếp xúc bóng ở góc và vị trí không nhất quán.
 
 ## Cách Khắc Phục
 
-Sửa [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) trong backswing — thực hành [Nghiêng Bên](nghiêng-bên.md) đúng — là cách duy nhất khắc phục triệt để Early Extension. Các drill tập trung riêng vào downswing thường chỉ che triệu chứng.
+Sửa [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md) trong backswing — thực hành [Nghiêng Bên](../co-sinh-hoc/nghiêng-bên.md) đúng — là cách duy nhất khắc phục triệt để Early Extension. Các drill tập trung riêng vào downswing thường chỉ che triệu chứng.
 
 Xem thêm: [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
 
@@ -61,7 +61,7 @@ Xem thêm: [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
 ## Related Concepts
 
 - [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md)
-- [Nghiêng Bên](nghiêng-bên.md)
-- [CoG Sau Đường Gối](cog-sau-đường-gối.md)
+- [Nghiêng Bên](../co-sinh-hoc/nghiêng-bên.md)
+- [CoG Sau Đường Gối](../co-sinh-hoc/cog-sau-đường-gối.md)
 - [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
-- [Cơ Học Ném Xoay](cơ-học-ném-xoay.md)
+- [Cơ Học Ném Xoay](../co-sinh-hoc/cơ-học-ném-xoay.md)

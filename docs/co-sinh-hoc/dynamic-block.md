@@ -53,7 +53,7 @@ Dynamic Block chỉ hoạt động hiệu quả khi:
 
 ## Ứng Dụng Trong Golf
 
-Trong [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md), Dynamic Block tương đương với việc chân trái thẳng cứng ở đỉnh downswing và impact. Đây là lý do tay golf chuyên nghiệp có "left side wall" — một bên trái cứng — tại thời điểm đánh bóng.
+Trong [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md), Dynamic Block tương đương với việc chân trái thẳng cứng ở đỉnh downswing và impact. Đây là lý do tay golf chuyên nghiệp có "left side wall" — một bên trái cứng — tại thời điểm đánh bóng.
 
 ---
 
@@ -68,9 +68,9 @@ Trong [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md), Dynamic Block tươ
 ## Related Concepts
 
 - [Cơ Học Ném Xoay](cơ-học-ném-xoay.md)
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
 - [Tách Hông-Vai](tách-hông-vai.md)
 - [CoG Sau Đường Gối](cog-sau-đường-gối.md)
 - [Tư Thế Power Position](tư-thế-power-position.md)
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md)
-- [Ứng Dụng Trong Golf](ứng-dụng-trong-golf.md)
+- [Ứng Dụng Trong Golf](../ky-thuat/ứng-dụng-trong-golf.md)

@@ -12,7 +12,7 @@ updated: 2026-06-20
 ## 🚀 Bắt đầu từ đâu?
 
 - 📍 [Bản đồ nội dung](../the-luc/bản-đồ-nội-dung.md) — xem toàn bộ vault
-- 🎯 [Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md) — bài đọc nền tảng
+- 🎯 [Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md) — bài đọc nền tảng
 - 📅 [Chương trình 4 tuần proprioception](../the-luc/chương-trình-4-tuần-proprioception.md) — lộ trình thực hành
 
 ## 📂 Thư mục chính

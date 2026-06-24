@@ -14,7 +14,7 @@ updated: 2026-06-20
 
 Lỗi Trộn Lẫn Hệ Thống là sai lầm phổ biến nhất của người chơi phong trào — sử dụng [Big Loop](big-loop.md) khi cần [Compact Loop](compact-loop.md), hoặc ngược lại, do không nhận biết được lượng thời gian thực tế trong tình huống.
 
-Đây là triệu chứng của [Motor Program](motor-program.md) chưa đủ phong phú hoặc [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md) chưa phát triển.
+Đây là triệu chứng của [Motor Program](motor-program.md) chưa đủ phong phú hoặc [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md) chưa phát triển.
 
 ---
 
@@ -42,7 +42,7 @@ Lỗi Trộn Lẫn Hệ Thống là sai lầm phổ biến nhất của người
 
 **Nguyên nhân thường gặp:**
 - Muốn đánh mạnh nên cố nạp năng lượng
-- Không đọc được tốc độ bóng sớm ([Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md) kém)
+- Không đọc được tốc độ bóng sớm ([Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md) kém)
 - Chỉ có một Motor Program cho tất cả tình huống
 
 **Hậu quả:**
@@ -73,7 +73,7 @@ Theo [Tiến Trình Học Loop](../co-sinh-hoc/tiến-trình-học-loop.md):
 
 - [Big Loop](big-loop.md)
 - [Compact Loop](compact-loop.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Motor Program](motor-program.md)
 - [Tiến Trình Học Loop](../co-sinh-hoc/tiến-trình-học-loop.md)
 - [Big Loop và Compact Loop](big-loop-và-compact-loop.md)

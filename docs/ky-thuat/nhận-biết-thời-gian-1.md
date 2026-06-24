@@ -53,7 +53,7 @@ Mục tiêu: câu hỏi *"tôi có bao nhiêu thời gian?"* được trả lờ
 
 ## Ở Tay Vợt Chuyên Nghiệp
 
-Tay vợt ATP đọc tình huống sớm hơn người chơi phong trào trung bình 200–400ms. Khoảng thời gian này đủ để chuyển từ [Reactive Control](reactive-control.md) sang [Feedforward Control](feedforward-control.md) — tức là chuyển từ Compact Loop sang Big Loop ngay cả trong những rally nhanh.
+Tay vợt ATP đọc tình huống sớm hơn người chơi phong trào trung bình 200–400ms. Khoảng thời gian này đủ để chuyển từ [Reactive Control](reactive-control.md) sang [Feedforward Control](../co-sinh-hoc/feedforward-control.md) — tức là chuyển từ Compact Loop sang Big Loop ngay cả trong những rally nhanh.
 
 ---
 
@@ -63,7 +63,7 @@ Tay vợt ATP đọc tình huống sớm hơn người chơi phong trào trung b
 - [Big Loop](../ky-thuat/big-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
 - [Motor Program](../ky-thuat/motor-program.md)
-- [Feedforward Control](feedforward-control.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
 - [Reactive Control](reactive-control.md)
 - [Tiến Trình Học Loop](../co-sinh-hoc/tiến-trình-học-loop.md)
 - [Lỗi Trộn Lẫn Hệ Thống](../ky-thuat/lỗi-trộn-lẫn-hệ-thống.md)

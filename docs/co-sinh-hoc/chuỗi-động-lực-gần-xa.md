@@ -31,7 +31,7 @@ Mỗi phân đoạn trong chuỗi có nhiệm vụ riêng:
 | Cánh tay | Dẫn truyền | ~20% tốc độ vợt cuối |
 | Vợt | Biểu hiện lực | Kết quả của toàn chuỗi |
 
-Nguyên lý quan trọng: mỗi phân đoạn **giảm tốc** ngay sau khi đạt vận tốc đỉnh để truyền động lượng cho phân đoạn tiếp theo. Đây là lý do tại sao [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) là kỹ năng kỹ thuật, không phải hậu quả thụ động.
+Nguyên lý quan trọng: mỗi phân đoạn **giảm tốc** ngay sau khi đạt vận tốc đỉnh để truyền động lượng cho phân đoạn tiếp theo. Đây là lý do tại sao [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) là kỹ năng kỹ thuật, không phải hậu quả thụ động.
 
 ---
 
@@ -50,7 +50,7 @@ Hệ quả: xem [Gradient Bù Trừ Chuỗi Động Lực](gradient-bù-trừ-ch
 
 ## Lỗi "Cánh Tay Sớm"
 
-Lỗi phổ biến nhất trong chuỗi gần-xa là khởi động cánh tay trước khi hông và vai hoàn thành xoay. Kết quả là cánh tay phải tự tạo lực thay vì nhận lực — đây là nguồn gốc cơ học của [Petit Bras](petit-bras.md) và nguy cơ [Hình Học Cánh Tay và Nguy Cơ Chấn Thương](../ky-thuat/hình-học-cánh-tay-và-nguy-cơ-chấn-thương.md).
+Lỗi phổ biến nhất trong chuỗi gần-xa là khởi động cánh tay trước khi hông và vai hoàn thành xoay. Kết quả là cánh tay phải tự tạo lực thay vì nhận lực — đây là nguồn gốc cơ học của [Petit Bras](../ky-thuat/petit-bras.md) và nguy cơ [Hình Học Cánh Tay và Nguy Cơ Chấn Thương](../ky-thuat/hình-học-cánh-tay-và-nguy-cơ-chấn-thương.md).
 
 ---
 
@@ -64,8 +64,8 @@ Lỗi phổ biến nhất trong chuỗi gần-xa là khởi động cánh tay tr
 
 ## Các Khái Niệm Liên Quan
 
-- [Cánh Tay Như Một Bộ Dẫn Truyền](cánh-tay-như-một-bộ-dẫn-truyền.md)
+- [Cánh Tay Như Một Bộ Dẫn Truyền](../ky-thuat/cánh-tay-như-một-bộ-dẫn-truyền.md)
 - [Gradient Bù Trừ Chuỗi Động Lực](gradient-bù-trừ-chuỗi-động-lực.md)
-- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
+- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
 - [Xoay Khớp Vai Bên Trong (ISR)](xoay-khớp-vai-bên-trong-(isr).md)
 - [Hệ Thống Song Phương Thống Nhất](../ky-thuat/hệ-thống-song-phương-thống-nhất.md)

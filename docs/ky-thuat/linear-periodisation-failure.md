@@ -42,7 +42,7 @@ Era 2000 model: long-distance running là conditioning foundation, explosive pow
 |---|---|---|
 | **Foundation** | Aerobic base (long-distance) | Explosive durability (phosphocreatine) |
 | **Strength role** | Secondary | Concurrent với explosive power |
-| **Periodisation** | Linear (one peak) | [Undulating Periodisation](../wiki/undulating-periodisation.md) (continuous readiness) |
+| **Periodisation** | Linear (one peak) | [Undulating Periodisation](../the-luc/undulating-periodisation.md) (continuous readiness) |
 | **In-season training** | Standard sessions + match play | [Micro-Loading](micro-loading.md) (15–20 min, 60–70%) |
 | **CNS management** | Not measured | HRV-guided daily load adjustment |
 | **Recovery** | Passive rest | Active — Neuromuscular Reset, sensory deprivation |
@@ -58,15 +58,15 @@ Player được conditioned bởi linear model sẽ:
 - Show "mysterious" performance drops mid-season — không phải injury, không phải technical regression, mà là **cumulative CNS debt** không được managed.
 - Recover "fully" trong off-season nhưng repeat same pattern mỗi năm.
 
-**Solution**: [Undulating Periodisation](../wiki/undulating-periodisation.md) — concurrent training across multiple physical qualities simultaneously, với load adjusted week-by-week theo tournament schedule.
+**Solution**: [Undulating Periodisation](../the-luc/undulating-periodisation.md) — concurrent training across multiple physical qualities simultaneously, với load adjusted week-by-week theo tournament schedule.
 
 ---
 
 ## Khái Niệm Liên Quan
 
 - [Explosive Durability](explosive-durability.md)
-- [Undulating Periodisation](../wiki/undulating-periodisation.md)
+- [Undulating Periodisation](../the-luc/undulating-periodisation.md)
 - [Micro-Loading](micro-loading.md)
 - [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md)
 - [CNS Fatigue Signs](cns-fatigue-signs.md)
-- [HRV-Guided Training](../wiki/hrv-guided-training.md)
+- [HRV-Guided Training](../tam-ly/hrv-guided-training.md)

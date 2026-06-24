@@ -31,7 +31,7 @@ Tốc độ ISR tại đỉnh giao bóng đỉnh cao có thể đạt 2000–250
 ISR chỉ phát huy tối đa khi:
 1. [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md) đã tích lũy đủ năng lượng
 2. Cánh tay đang ở tư thế "ngã ra sau" (lay-back) đúng góc — tạo căng giãn tối đa trước khi ISR xảy ra
-3. [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) diễn ra tự nhiên sau tiếp xúc
+3. [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) diễn ra tự nhiên sau tiếp xúc
 
 ---
 
@@ -52,7 +52,7 @@ Khi ISR bị thực hiện với cánh tay căng hoặc trong chuỗi bị gián
 ## Các Khái Niệm Liên Quan
 
 - [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md)
-- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
+- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
 - [Cánh Tay Tung Bóng Như Bộ Điều Chỉnh Xoay](../ky-thuat/cánh-tay-tung-bóng-như-bộ-điều-chỉnh-xoay.md)
 - [Lỗi Cánh Tay Trái Buông Lơi](../ky-thuat/lỗi-cánh-tay-trái-buông-lơi.md)
 - [Hình Học Cánh Tay và Nguy Cơ Chấn Thương](../ky-thuat/hình-học-cánh-tay-và-nguy-cơ-chấn-thương.md)

@@ -61,13 +61,13 @@ Kết quả: thời gian chuẩn bị giảm mạnh.
 - Racquet Head Speed
 - [Kinetic Chain](kinetic-chain.md) loading đầy đủ
 
-Đây là lý do volley không thể mạnh như groundstroke — không phải vì người chơi không cố đánh mạnh, mà vì cơ thể không có thời gian tích trữ năng lượng qua [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md).
+Đây là lý do volley không thể mạnh như groundstroke — không phải vì người chơi không cố đánh mạnh, mà vì cơ thể không có thời gian tích trữ năng lượng qua [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md).
 
 ---
 
 ## Cơ Chế Thần Kinh
 
-Compact Loop sử dụng [Reactive Control](../wiki/reactive-control.md) — não không còn thời gian dự đoán đầy đủ. Thay vào đó, phản ứng gần như tức thời, các mạch thần kinh dưới vỏ não tham gia nhiều hơn. Mục tiêu không phải tối ưu mà là **đủ nhanh**.
+Compact Loop sử dụng [Reactive Control](../ky-thuat/reactive-control.md) — não không còn thời gian dự đoán đầy đủ. Thay vào đó, phản ứng gần như tức thời, các mạch thần kinh dưới vỏ não tham gia nhiều hơn. Mục tiêu không phải tối ưu mà là **đủ nhanh**.
 
 ---
 
@@ -86,7 +86,7 @@ Dùng Compact Loop cho **groundstroke có thời gian** là [Lỗi Trộn Lẫn 
 - [Big Loop](big-loop.md)
 - [Shoulder Loop](../co-sinh-hoc/shoulder-loop.md)
 - [Forearm Pronation và Supination](forearm-pronation-và-supination.md)
-- [Thumb Flip](../wiki/thumb-flip.md)
-- [Reactive Control](../wiki/reactive-control.md)
+- [Thumb Flip](../ky-thuat/thumb-flip.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
 - [Kinetic Chain](kinetic-chain.md)
 - [Lỗi Trộn Lẫn Hệ Thống](lỗi-trộn-lẫn-hệ-thống.md)

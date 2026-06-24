@@ -63,6 +63,6 @@ Nếu CoG dịch về phía ngón chân:
 - [Nghiêng Bên](nghiêng-bên.md)
 - [Dynamic Block](dynamic-block.md)
 - [Đòn Bẩy Dài](đòn-bẩy-dài.md)
-- [Lỗi Cúi Về Phía Trước](lỗi-cúi-về-phía-trước.md)
-- [5 Giai Đoạn Ném Đĩa](5-giai-đoạn-ném-đĩa.md)
+- [Lỗi Cúi Về Phía Trước](../ky-thuat/lỗi-cúi-về-phía-trước.md)
+- [5 Giai Đoạn Ném Đĩa](../ky-thuat/5-giai-đoạn-ném-đĩa.md)
 - [Tư Thế Power Position](tư-thế-power-position.md)

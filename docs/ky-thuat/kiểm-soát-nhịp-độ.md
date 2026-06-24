@@ -15,7 +15,7 @@ updated: 2026-06-20
 
 **Kiểm Soát Nhịp Độ** là nghệ thuật thay đổi tốc độ, độ cao, và spin của bóng một cách có chủ đích để phá vỡ nhịp quen thuộc của đối thủ, đặc biệt hiệu quả với người trẻ quen đánh nhanh.
 
-Đây là trụ cột đầu tiên trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) — kiểm soát nhịp độ không cần tốc độ, chỉ cần đầu óc.
+Đây là trụ cột đầu tiên trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) — kiểm soát nhịp độ không cần tốc độ, chỉ cần đầu óc.
 
 ---
 
@@ -83,7 +83,7 @@ Xem thêm: [Quản Lý Tâm Lý Trận Đấu](quản-lý-tâm-lý-trận-đấu
 
 ## Các Khái Niệm Liên Quan
 
-- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
+- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
 - [Slice và Bóng Thấp](slice-và-bóng-thấp.md)
 - [Tấn Công Từng Phần](tấn-công-từng-phần.md)
 - [Lên Lưới Đúng Thời Điểm](lên-lưới-đúng-thời-điểm.md)

@@ -72,11 +72,11 @@ Core Leaks là bốn **pattern thất bại của core trong quá trình truyề
 | [Chan Si Gong — Silk Reeling](../ky-thuat/chan-si-gong-—-silk-reeling.md) | Spiral power từ core ra extremities |
 | [Cloud Hands — Core-Driven Volley](../ky-thuat/cloud-hands-—-core-driven-volley.md) | Dantian drives hands; "arm bolted to chest" |
 | [String Arm Drill](../ky-thuat/string-arm-drill.md) | 2/10 grip; arm như sợi dây nặng; "deep thud" |
-| [Asymmetric Degradation Under Pressure](../wiki/asymmetric-degradation-under-pressure.md) | Legs stop → arm overtensions; System Coherence |
+| [Asymmetric Degradation Under Pressure](../chien-thuat/asymmetric-degradation-under-pressure.md) | Legs stop → arm overtensions; System Coherence |
 | [Psychological Dominance — Refusal to Diverge](../ky-thuat/psychological-dominance-—-refusal-to-diverge.md) | Stability as weapon; Kình là psychological attack |
 | [Lu Response Drill](lu-response-drill.md) | Yield and redirect under heavy feed |
 | [Pre-Match Pattern Commitment](../ky-thuat/pre-match-pattern-commitment.md) | Viết xuống ba patterns trước warm-up |
-| [Flow Break Triggers](../wiki/flow-break-triggers.md) | Ba cơ chế phá Flow; specific re-entry |
+| [Flow Break Triggers](../tam-ly/flow-break-triggers.md) | Ba cơ chế phá Flow; specific re-entry |
 | [Present-Moment Anchor](../ky-thuat/present-moment-anchor.md) | Sensory training protocol; 5 phút daily |
 
 ---

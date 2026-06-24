@@ -12,7 +12,7 @@ updated: 2026-06-20
 
 # Petit Bras
 
-*Petit bras* (tiếng Pháp: "cánh tay nhỏ") là lỗi kỹ thuật khi cánh tay co rút và tự tạo lực thay vì dẫn truyền lực từ [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md).
+*Petit bras* (tiếng Pháp: "cánh tay nhỏ") là lỗi kỹ thuật khi cánh tay co rút và tự tạo lực thay vì dẫn truyền lực từ [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md).
 
 Đây là dạng nguy hiểm nhất của cánh tay-như-máy-phát-lực, thường xuất hiện dưới áp lực tâm lý và là nguyên nhân hàng đầu gây chấn thương mãn tính ở tennis.
 
@@ -59,7 +59,7 @@ Dưới điểm số quan trọng, não ưu tiên "kiểm soát" hơn "hiệu qu
 ## Các Khái Niệm Liên Quan
 
 - [Cánh Tay Như Một Bộ Dẫn Truyền](cánh-tay-như-một-bộ-dẫn-truyền.md)
-- [Gradient Bù Trừ Chuỗi Động Lực](gradient-bù-trừ-chuỗi-động-lực.md)
-- [Chuỗi Động Lực Gần-Xa](chuỗi-động-lực-gần-xa.md)
+- [Gradient Bù Trừ Chuỗi Động Lực](../co-sinh-hoc/gradient-bù-trừ-chuỗi-động-lực.md)
+- [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md)
 - [Thời Điểm Bóp Cán Vợt](thời-điểm-bóp-cán-vợt.md)
 - [Hình Học Cánh Tay và Nguy Cơ Chấn Thương](../ky-thuat/hình-học-cánh-tay-và-nguy-cơ-chấn-thương.md)

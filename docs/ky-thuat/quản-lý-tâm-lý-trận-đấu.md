@@ -16,7 +16,7 @@ updated: 2026-06-20
 
 **Quản Lý Tâm Lý Trận Đấu** là khả năng kiểm soát cảm xúc, duy trì sự tập trung, và đưa ra quyết định chiến thuật sắc bén ngay cả khi đang bị áp lực — một lợi thế mà người chơi kinh nghiệm có thể dùng để bù đắp cho sự thiếu hụt về thể lực so với đối thủ trẻ hơn.
 
-Đây là trụ cột thứ năm trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) và thường là yếu tố quyết định trong các trận đấu kéo dài.
+Đây là trụ cột thứ năm trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) và thường là yếu tố quyết định trong các trận đấu kéo dài.
 
 ---
 
@@ -115,7 +115,7 @@ Người chơi chậm hơn **phải** quản lý thể lực tốt hơn người
 
 ## Các Khái Niệm Liên Quan
 
-- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
+- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
 - [Kiểm Soát Nhịp Độ](kiểm-soát-nhịp-độ.md)
 - [Tấn Công Từng Phần](tấn-công-từng-phần.md)
 - [Lên Lưới Đúng Thời Điểm](lên-lưới-đúng-thời-điểm.md)

@@ -14,7 +14,7 @@ updated: 2026-06-20
 
 Hình học cánh tay và nguy cơ chấn thương mô tả mối liên hệ trực tiếp giữa cách cánh tay được sử dụng trong chuỗi cú đánh và khả năng tổn thương các cấu trúc mô mềm — khuỷu tay, chóp xoay và sụn viền.
 
-Chấn thương tennis không phải tai nạn ngẫu nhiên — chúng là hệ quả tất yếu và có thể dự đoán của các lựa chọn sinh cơ học, đặc biệt là khi [Gradient Bù Trừ Chuỗi Động Lực](../wiki/gradient-bù-trừ-chuỗi-động-lực.md) bị kích hoạt mãn tính.
+Chấn thương tennis không phải tai nạn ngẫu nhiên — chúng là hệ quả tất yếu và có thể dự đoán của các lựa chọn sinh cơ học, đặc biệt là khi [Gradient Bù Trừ Chuỗi Động Lực](../co-sinh-hoc/gradient-bù-trừ-chuỗi-động-lực.md) bị kích hoạt mãn tính.
 
 ---
 
@@ -24,7 +24,7 @@ Chấn thương tennis không phải tai nạn ngẫu nhiên — chúng là hệ
 |---|---|---|
 | Tennis elbow (viêm mỏm trên lồi cầu ngoài) | Cánh tay tự tạo lực → quá tải gân cơ duỗi | Forehand, giao bóng |
 | Chóp xoay rách | ISR với chuỗi bị đứt → tải trọng cực cao lên cơ chóp | Giao bóng, đánh bổng |
-| Sụn viền rách | [Petit Bras](../wiki/petit-bras.md) + co cứng → lực không thoát vào gân mà vào sụn | Giao bóng, forehand áp lực |
+| Sụn viền rách | [Petit Bras](../ky-thuat/petit-bras.md) + co cứng → lực không thoát vào gân mà vào sụn | Giao bóng, forehand áp lực |
 | Viêm gân cơ nhị đầu | Follow-through bị cắt ngắn → giảm tốc lệch tâm không đủ | Mọi cú đánh |
 
 ---
@@ -37,16 +37,16 @@ Nguy cơ chấn thương không phải nhị phân (có/không) — nó theo gra
 - **30–40% cánh tay**: vùng cảnh báo, mỏi mãn tính, viêm nhẹ
 - **50%+ cánh tay**: vùng chấn thương, tổn thương mô là sớm hay muộn
 
-Xem [Gradient Bù Trừ Chuỗi Động Lực](../wiki/gradient-bù-trừ-chuỗi-động-lực.md) để hiểu các yếu tố đẩy vận động viên vào từng vùng.
+Xem [Gradient Bù Trừ Chuỗi Động Lực](../co-sinh-hoc/gradient-bù-trừ-chuỗi-động-lực.md) để hiểu các yếu tố đẩy vận động viên vào từng vùng.
 
 ---
 
 ## Phòng Ngừa
 
 **Cấp độ kỹ thuật:**
-- Hoàn thiện [Chuỗi Động Lực Gần-Xa](../wiki/chuỗi-động-lực-gần-xa.md) để giảm gánh nặng cho cánh tay
-- Kiểm soát [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../wiki/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) để bảo vệ vai
-- Tránh [Petit Bras](../wiki/petit-bras.md) bằng quản lý tâm lý thi đấu
+- Hoàn thiện [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md) để giảm gánh nặng cho cánh tay
+- Kiểm soát [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md) để bảo vệ vai
+- Tránh [Petit Bras](../ky-thuat/petit-bras.md) bằng quản lý tâm lý thi đấu
 
 **Cấp độ thể lực:**
 - Tăng cường cơ chóp xoay và cơ ổn định vai
@@ -56,9 +56,9 @@ Xem [Gradient Bù Trừ Chuỗi Động Lực](../wiki/gradient-bù-trừ-chuỗ
 
 ## Các Khái Niệm Liên Quan
 
-- [Cánh Tay Như Một Bộ Dẫn Truyền](../wiki/cánh-tay-như-một-bộ-dẫn-truyền.md)
-- [Gradient Bù Trừ Chuỗi Động Lực](../wiki/gradient-bù-trừ-chuỗi-động-lực.md)
-- [Petit Bras](../wiki/petit-bras.md)
-- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../wiki/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
-- [Xoay Khớp Vai Bên Trong (ISR)](../wiki/xoay-khớp-vai-bên-trong-(isr).md)
-- [Chuỗi Động Lực Gần-Xa](../wiki/chuỗi-động-lực-gần-xa.md)
+- [Cánh Tay Như Một Bộ Dẫn Truyền](../ky-thuat/cánh-tay-như-một-bộ-dẫn-truyền.md)
+- [Gradient Bù Trừ Chuỗi Động Lực](../co-sinh-hoc/gradient-bù-trừ-chuỗi-động-lực.md)
+- [Petit Bras](../ky-thuat/petit-bras.md)
+- [Giảm Tốc Lệch Tâm và Kết Thúc Lasso](../ky-thuat/giảm-tốc-lệch-tâm-và-kết-thúc-lasso.md)
+- [Xoay Khớp Vai Bên Trong (ISR)](../co-sinh-hoc/xoay-khớp-vai-bên-trong-(isr).md)
+- [Chuỗi Động Lực Gần-Xa](../co-sinh-hoc/chuỗi-động-lực-gần-xa.md)

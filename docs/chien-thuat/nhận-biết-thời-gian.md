@@ -28,8 +28,8 @@ Câu trả lời quyết định toàn bộ hệ thống sẽ được sử dụ
 
 | Câu trả lời | Hệ thống | Chế độ thần kinh |
 |---|---|---|
-| Có thời gian | [Big Loop](../ky-thuat/big-loop.md) | [Feedforward Control](feedforward-control.md) |
-| Không có thời gian | [Compact Loop](../ky-thuat/compact-loop.md) | [Reactive Control](reactive-control.md) |
+| Có thời gian | [Big Loop](../ky-thuat/big-loop.md) | [Feedforward Control](../co-sinh-hoc/feedforward-control.md) |
+| Không có thời gian | [Compact Loop](../ky-thuat/compact-loop.md) | [Reactive Control](../ky-thuat/reactive-control.md) |
 
 ## Các yếu tố để đánh giá thời gian
 
@@ -48,7 +48,7 @@ Người chơi ATP nhận ra tình huống sớm hơn nhiều — ngay từ chuy
 
 ## Luyện tập
 
-Đây là **Giai đoạn 3** trong [Tiến Trình Huấn Luyện Loop](tiến-trình-huấn-luyện-loop.md). Cần luyện tập với các bài tập mô phỏng áp lực thời gian thực tế: trả giao bóng tốc độ cao, rally nhanh ở vị trí gần đường baseline.
+Đây là **Giai đoạn 3** trong [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md). Cần luyện tập với các bài tập mô phỏng áp lực thời gian thực tế: trả giao bóng tốc độ cao, rally nhanh ở vị trí gần đường baseline.
 
 ---
 
@@ -57,6 +57,6 @@ Người chơi ATP nhận ra tình huống sớm hơn nhiều — ngay từ chuy
 - [Big Loop và Compact Loop](../ky-thuat/big-loop-và-compact-loop.md)
 - [Big Loop](../ky-thuat/big-loop.md)
 - [Compact Loop](../ky-thuat/compact-loop.md)
-- [Feedforward Control](feedforward-control.md)
-- [Reactive Control](reactive-control.md)
-- [Tiến Trình Huấn Luyện Loop](tiến-trình-huấn-luyện-loop.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
+- [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md)

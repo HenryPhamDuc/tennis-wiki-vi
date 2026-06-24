@@ -13,7 +13,7 @@ updated: 2026-06-20
 
 # Lỗi Lật Sớm
 
-**Lỗi lật sớm** xảy ra khi người chơi thực hiện [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md) ngay trong giai đoạn takeback thay vì giữ đến khoảnh khắc cuối — khiến [Góc Mặt Vợt](góc-mặt-vợt.md) đóng sớm trước khi tiếp xúc bóng.
+**Lỗi lật sớm** xảy ra khi người chơi thực hiện [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md) ngay trong giai đoạn takeback thay vì giữ đến khoảnh khắc cuối — khiến [Góc Mặt Vợt](góc-mặt-vợt.md) đóng sớm trước khi tiếp xúc bóng.
 
 Đây là lỗi đặc trưng của [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md).
 
@@ -48,7 +48,7 @@ Hình ảnh tham chiếu: ngón cái ở trên trong suốt takeback, chỉ lậ
 
 ## Liên Quan
 - [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md)
-- [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)
+- [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md)
 - [Góc Mặt Vợt](góc-mặt-vợt.md)
 - [Lỗi Double-Motion](lỗi-double-motion.md)
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)

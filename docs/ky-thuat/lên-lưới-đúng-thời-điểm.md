@@ -16,7 +16,7 @@ updated: 2026-06-20
 
 **Lên Lưới Đúng Thời Điểm** là chiến thuật kết thúc điểm sớm bằng cách tiến lên vị trí gần lưới sau khi đã tạo ra thế lợi — giảm rally dài, khai thác đối thủ yếu lưới, và tận dụng góc cạnh mà baseline không có được.
 
-Đây là trụ cột thứ tư trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) và là cách trực tiếp nhất để không cho đối thủ dùng tốc độ của họ.
+Đây là trụ cột thứ tư trong [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md) và là cách trực tiếp nhất để không cho đối thủ dùng tốc độ của họ.
 
 ---
 
@@ -104,7 +104,7 @@ Serve và lên lưới ngay — đặc biệt hiệu quả ở ô advantage (ser
 
 ## Các Khái Niệm Liên Quan
 
-- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../wiki/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
+- [Chiến Thuật Thắng Người Trẻ Hơn và Nhanh Hơn](../chien-thuat/chiến-thuật-thắng-người-trẻ-hơn-và-nhanh-hơn.md)
 - [Slice và Bóng Thấp](slice-và-bóng-thấp.md)
 - [Tấn Công Từng Phần](tấn-công-từng-phần.md)
 - [Kiểm Soát Nhịp Độ](kiểm-soát-nhịp-độ.md)

@@ -26,7 +26,7 @@ Present-Moment Anchor là **kỹ thuật cụ thể nhất và transferable nh�
 
 ## Tại Sao Sensory Anchors Hoạt Động
 
-[Flow Break Triggers](../wiki/flow-break-triggers.md) đều có chung một cơ chế: redirect attention từ present sensory reality sang future abstract evaluation. Present-Moment Anchor reverses this:
+[Flow Break Triggers](../tam-ly/flow-break-triggers.md) đều có chung một cơ chế: redirect attention từ present sensory reality sang future abstract evaluation. Present-Moment Anchor reverses this:
 
 - **Future evaluation** (abstract, imagined) → activates PFC/Self 1.
 - **Present sensory input** (concrete, physical, now) → activates sensory cortices, bypasses PFC evaluation loop.
@@ -82,7 +82,7 @@ Common options: Grip texture, string tension when plucked between points, foot p
 
 ## Khái Niệm Liên Quan
 
-- [Flow Break Triggers](../wiki/flow-break-triggers.md)
+- [Flow Break Triggers](../tam-ly/flow-break-triggers.md)
 - [Conscious Thought as the Enemy](conscious-thought-as-the-enemy.md)
 - [15-Second Reset](../tam-ly/15-second-reset.md)
 - [Satori State](../co-sinh-hoc/satori-state.md)

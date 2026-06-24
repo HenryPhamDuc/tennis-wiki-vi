@@ -43,7 +43,7 @@ Khi thời gian bị giới hạn:
 
 Reactive Control bỏ qua bước lập kế hoạch, do đó:
 - [Kinetic Chain](../ky-thuat/kinetic-chain.md) không được tổ chức đầy đủ
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) không được kích hoạt tối đa
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) không được kích hoạt tối đa
 - Sức mạnh và tốc độ đầu vợt bị giới hạn
 
 Đây không phải lỗi — đây là thực tế sinh học.
@@ -54,15 +54,15 @@ Reactive Control bỏ qua bước lập kế hoạch, do đó:
 
 Tay vợt ATP dùng Reactive Control tốt hơn người chơi phong trào vì:
 - [Motor Program](../ky-thuat/motor-program.md) được luyện tập nhiều năm → subcortical circuits được tối ưu hóa
-- Khả năng đọc tình huống sớm ([Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)) → giảm nhu cầu phản ứng hoàn toàn tức thời
-- Chuyển đổi giữa Reactive Control và [Feedforward Control](../wiki/feedforward-control.md) diễn ra liền mạch
+- Khả năng đọc tình huống sớm ([Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)) → giảm nhu cầu phản ứng hoàn toàn tức thời
+- Chuyển đổi giữa Reactive Control và [Feedforward Control](../co-sinh-hoc/feedforward-control.md) diễn ra liền mạch
 
 ---
 
 ## Related Concepts
 
 - [Compact Loop](../ky-thuat/compact-loop.md)
-- [Feedforward Control](../wiki/feedforward-control.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
 - [Motor Program](../ky-thuat/motor-program.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
 - [Big Loop và Compact Loop](../ky-thuat/big-loop-và-compact-loop.md)

@@ -52,4 +52,4 @@ Xem [Floating Finger](floating-finger.md) — phương pháp thực hành do One
 - [Compact Loop](compact-loop.md)
 - [Floating Finger](floating-finger.md)
 - [Chuỗi Động Học](chuỗi-động-học.md)
-- [Reactive Control](../wiki/reactive-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)

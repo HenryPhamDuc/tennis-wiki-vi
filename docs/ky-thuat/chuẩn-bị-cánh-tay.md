@@ -38,7 +38,7 @@ Tay không nên dẫn đầu. Năng lượng đến từ việc **xoắn cột s
 
 ### Cổ Tay Ổn Định Là Điều Kiện Bắt Buộc
 
-Dù dùng kỹ thuật nào, việc thêm chuyển động cổ tay vào giữa vòng vung sẽ tạo ra **double-motion** và mất kiểm soát hoàn toàn. Xem [Lỗi Double-Motion](../wiki/lỗi-double-motion.md).
+Dù dùng kỹ thuật nào, việc thêm chuyển động cổ tay vào giữa vòng vung sẽ tạo ra **double-motion** và mất kiểm soát hoàn toàn. Xem [Lỗi Double-Motion](../ky-thuat/lỗi-double-motion.md).
 
 ### Rút Ngắn Dễ Hơn Mở Rộng
 
@@ -59,13 +59,13 @@ Người học vòng lớn trước có thể rút ngắn lại cho tình huốn
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) — vòng compact, xoay cẳng tay, dùng khi bị dồn
 
 ### Cơ chế sinh cơ học
-- [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md) — cơ chế lật ngón cái từ trên xuống dưới
+- [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md) — cơ chế lật ngón cái từ trên xuống dưới
 - [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md) — xoắn cột sống và chân trước khi đánh
-- [Góc Mặt Vợt](../wiki/góc-mặt-vợt.md) — mở/đóng và tầm quan trọng của việc kiểm soát
+- [Góc Mặt Vợt](../ky-thuat/góc-mặt-vợt.md) — mở/đóng và tầm quan trọng của việc kiểm soát
 
 ### Lỗi kỹ thuật
-- [Lỗi Double-Motion](../wiki/lỗi-double-motion.md) — thêm lật cổ tay vào giữa vòng vai
-- [Lỗi Lật Sớm](../wiki/lỗi-lật-sớm.md) — lật ngón cái quá sớm trong vòng compact
+- [Lỗi Double-Motion](../ky-thuat/lỗi-double-motion.md) — thêm lật cổ tay vào giữa vòng vai
+- [Lỗi Lật Sớm](../ky-thuat/lỗi-lật-sớm.md) — lật ngón cái quá sớm trong vòng compact
 
 ### Ứng dụng theo tình huống
 - [Trả Giao Bóng](trả-giao-bóng.md) — ứng dụng vòng compact trên first serve nhanh
@@ -76,4 +76,4 @@ Người học vòng lớn trước có thể rút ngắn lại cho tình huốn
 ## Liên Quan
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md)
 - [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md)
-- [Lỗi Double-Motion](../wiki/lỗi-double-motion.md)
+- [Lỗi Double-Motion](../ky-thuat/lỗi-double-motion.md)

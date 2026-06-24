@@ -53,15 +53,15 @@ HRV-guided training intensity. Không thêm volume khi CNS depleted — đây l�
 | Article | Chủ đề |
 |---|---|
 | [Linear Periodisation Failure](linear-periodisation-failure.md) | Tại sao model cũ không work với ATP calendar |
-| [Undulating Periodisation](../wiki/undulating-periodisation.md) | Concurrent training, tournament-week structure |
+| [Undulating Periodisation](../the-luc/undulating-periodisation.md) | Concurrent training, tournament-week structure |
 | [Micro-Loading](micro-loading.md) | In-season strength maintenance protocol |
 | [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md) | 1:3 specificity; tại sao distance running fails |
 | [Eccentric Deceleration Training](eccentric-deceleration-training.md) | Braking system; labral tear prevention |
 | [Isometric & Tendon Loading](isometric-&-tendon-loading.md) | Collagen reorganisation; time under tension |
-| [Neural Pressure Training](../wiki/neural-pressure-training.md) | Cognitive load as conditioning stimulus |
-| [Central Governor Model](../wiki/central-governor-model.md) | CNS regulates fatigue ceiling |
+| [Neural Pressure Training](../tam-ly/neural-pressure-training.md) | Cognitive load as conditioning stimulus |
+| [Central Governor Model](../tam-ly/central-governor-model.md) | CNS regulates fatigue ceiling |
 | [Type IIb Fast-Twitch Optimisation](type-iib-fast-twitch-optimisation.md) | Velocity-based training; racket speed drills |
-| [HRV-Guided Training](../wiki/hrv-guided-training.md) | Morning protocol; objective CNS indicator |
+| [HRV-Guided Training](../tam-ly/hrv-guided-training.md) | Morning protocol; objective CNS indicator |
 | [MTP Flexor Strength](mtp-flexor-strength.md) | Foot strength for explosive jump |
 | [Fascial Elasticity vs Hypertrophy](fascial-elasticity-vs-hypertrophy.md) | Weight room fallacy; rigid athlete problem |
 | [Weekly Integration Schedule](weekly-integration-schedule.md) | 7-day periodisation template |

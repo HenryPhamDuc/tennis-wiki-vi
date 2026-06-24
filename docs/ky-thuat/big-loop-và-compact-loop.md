@@ -24,15 +24,15 @@ Hai hệ thống chuẩn bị vợt cốt lõi của tennis hiện đại — **
 | Tiêu chí | [Big Loop](big-loop.md) | [Compact Loop](compact-loop.md) |
 |---|---|---|
 | Thời gian cần | Nhiều (groundstroke, topspin từ baseline) | Ít (trả giao bóng, volley, rally nhanh) |
-| Nguồn năng lượng | [Chuỗi Động Học](chuỗi-động-học.md) toàn thân + [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) | [Pronation và Supination](pronation-và-supination.md) của cẳng tay |
-| Chế độ thần kinh | [Feedforward Control](../wiki/feedforward-control.md) | [Reactive Control](../wiki/reactive-control.md) |
+| Nguồn năng lượng | [Chuỗi Động Học](chuỗi-động-học.md) toàn thân + [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) | [Pronation và Supination](pronation-và-supination.md) của cẳng tay |
+| Chế độ thần kinh | [Feedforward Control](../co-sinh-hoc/feedforward-control.md) | [Reactive Control](../ky-thuat/reactive-control.md) |
 | Rủi ro chính | Mất timing nếu cố tạo vòng lớn bằng tay | Mất sức mạnh và độ xoáy |
 
 ## Nguyên tắc lựa chọn
 
 > *"Nếu có thời gian: Big Loop. Nếu không có thời gian: Compact Loop."*
 
-Người chơi ATP có thể chuyển đổi linh hoạt giữa hai chế độ này trong vài phần nghìn giây, dựa trên tốc độ bóng, độ xoáy, khoảng cách và thời gian còn lại. Đây là kỹ năng cốt lõi của [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md).
+Người chơi ATP có thể chuyển đổi linh hoạt giữa hai chế độ này trong vài phần nghìn giây, dựa trên tốc độ bóng, độ xoáy, khoảng cách và thời gian còn lại. Đây là kỹ năng cốt lõi của [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md).
 
 ## Tầng trình độ
 
@@ -46,7 +46,7 @@ Xem [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md) — lỗi 
 
 ## Tiến trình học
 
-Xem [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md) để biết lộ trình học từ Big Loop → Medium Loop → Compact Loop.
+Xem [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md) để biết lộ trình học từ Big Loop → Medium Loop → Compact Loop.
 
 ---
 
@@ -55,11 +55,11 @@ Xem [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loo
 - [Big Loop](big-loop.md)
 - [Compact Loop](compact-loop.md)
 - [Chuỗi Động Học](chuỗi-động-học.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Pronation và Supination](pronation-và-supination.md)
-- [Feedforward Control](../wiki/feedforward-control.md)
-- [Reactive Control](../wiki/reactive-control.md)
+- [Feedforward Control](../co-sinh-hoc/feedforward-control.md)
+- [Reactive Control](../ky-thuat/reactive-control.md)
 - [Floating Finger](floating-finger.md)
-- [Nhận Biết Thời Gian](../wiki/nhận-biết-thời-gian.md)
-- [Tiến Trình Huấn Luyện Loop](../wiki/tiến-trình-huấn-luyện-loop.md)
+- [Nhận Biết Thời Gian](../chien-thuat/nhận-biết-thời-gian.md)
+- [Tiến Trình Huấn Luyện Loop](../co-sinh-hoc/tiến-trình-huấn-luyện-loop.md)
 - [Sai Lầm Trộn Hệ Thống](sai-lầm-trộn-hệ-thống.md)

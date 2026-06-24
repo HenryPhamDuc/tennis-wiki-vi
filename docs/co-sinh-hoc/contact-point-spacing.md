@@ -15,7 +15,7 @@ updated: 2026-06-20
 
 **Contact Point Spacing** (khoảng cách điểm tiếp xúc) là khoảng cách từ cơ thể đến điểm tiếp xúc giữa mặt vợt và bóng, cũng như độ cao của điểm tiếp xúc đó so với mặt đất và thắt lưng. Điểm tiếp xúc lý tưởng là điều kiện cần để [chuỗi động năng](../ky-thuat/kinetic-chain.md) giải phóng năng lượng hiệu quả.
 
-Ngay cả khi tất cả các yếu tố khác hoàn hảo — [Wrist Lag](../ky-thuat/wrist-lag.md), [Racket Drop](../ky-thuat/racket-drop.md), [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md) — điểm tiếp xúc sai sẽ phá vỡ toàn bộ cú đánh.
+Ngay cả khi tất cả các yếu tố khác hoàn hảo — [Wrist Lag](../ky-thuat/wrist-lag.md), [Racket Drop](../ky-thuat/racket-drop.md), [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md) — điểm tiếp xúc sai sẽ phá vỡ toàn bộ cú đánh.
 
 ---
 

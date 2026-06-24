@@ -51,8 +51,8 @@ Người chơi trên 52 tuổi có nguy cơ cao hơn vì:
 | Lỗi | Hệ quả chấn thương |
 |---|---|
 | [Vòng Nhỏ - Lật Cổ Tay](../ky-thuat/vòng-nhỏ---lật-cổ-tay.md) không có body coil | Viêm khuỷu tay (tennis elbow), đau cổ tay |
-| [Lỗi Lật Sớm](lỗi-lật-sớm.md) lặp đi lặp lại | Căng cơ cẳng tay |
-| [Lỗi Double-Motion](lỗi-double-motion.md) | Chấn thương do lực phản hồi không nhất quán |
+| [Lỗi Lật Sớm](../ky-thuat/lỗi-lật-sớm.md) lặp đi lặp lại | Căng cơ cẳng tay |
+| [Lỗi Double-Motion](../ky-thuat/lỗi-double-motion.md) | Chấn thương do lực phản hồi không nhất quán |
 
 ---
 

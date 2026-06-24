@@ -31,7 +31,7 @@ Vì vậy, volley gần như luôn yêu cầu [Vòng Nhỏ - Lật Cổ Tay](vò
 ## Quan Hệ Với Hai Kỹ Thuật Chuẩn Bị
 
 ### Volley và Vòng Nhỏ
-[Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) phù hợp tự nhiên với volley: lật nhanh [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md), tiếp xúc ngắn, bóng đi chính xác.
+[Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md) phù hợp tự nhiên với volley: lật nhanh [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md), tiếp xúc ngắn, bóng đi chính xác.
 
 ### Volley và Vòng Lớn
 
@@ -52,5 +52,5 @@ Vì vậy, volley gần như luôn yêu cầu [Vòng Nhỏ - Lật Cổ Tay](vò
 - [Chuẩn Bị Cánh Tay](chuẩn-bị-cánh-tay.md)
 - [Vòng Nhỏ - Lật Cổ Tay](vòng-nhỏ---lật-cổ-tay.md)
 - [Trả Giao Bóng](trả-giao-bóng.md)
-- [Pronation - Xoay Cẳng Tay](../wiki/pronation---xoay-cẳng-tay.md)
+- [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md)
 - [Tải Cơ Thể](../ky-thuat/trọng-tâm-cơ-thể.md)

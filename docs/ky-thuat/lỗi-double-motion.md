@@ -12,7 +12,7 @@ updated: 2026-06-20
 
 # Lỗi Double-Motion
 
-**Lỗi double-motion** xảy ra khi người chơi thêm chuyển động lật cổ tay ([Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)) vào giữa vòng lớn vai — tạo ra hai chuyển động riêng biệt trong một backswing, dẫn đến mất kiểm soát hoàn toàn.
+**Lỗi double-motion** xảy ra khi người chơi thêm chuyển động lật cổ tay ([Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md)) vào giữa vòng lớn vai — tạo ra hai chuyển động riêng biệt trong một backswing, dẫn đến mất kiểm soát hoàn toàn.
 
 
 ---
@@ -53,5 +53,5 @@ Bài tập kiểm tra đơn giản: **đánh chậm với mắt nhắm**, chỉ 
 ## Liên Quan
 - [Chuẩn Bị Cánh Tay](../ky-thuat/chuẩn-bị-cánh-tay.md)
 - [Góc Mặt Vợt](góc-mặt-vợt.md)
-- [Pronation - Xoay Cẳng Tay](pronation---xoay-cẳng-tay.md)
+- [Pronation - Xoay Cẳng Tay](../co-sinh-hoc/pronation---xoay-cẳng-tay.md)
 - [Lỗi Lật Sớm](lỗi-lật-sớm.md)

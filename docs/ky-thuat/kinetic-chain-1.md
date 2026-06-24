@@ -27,7 +27,7 @@ Người chơi đẩy mạnh xuống đất, tạo ra [Ground Reaction Force](gr
 ### Pha 2 — Segmental Rotation (Xoay hông và thân)
 
 ### Pha 3 — Racket Drop (Trễ đầu vợt)
-[Wrist Lag](wrist-lag.md) thụ động hình thành khi thân người xoay về phía trước nhưng cổ tay thư giãn tụt lại. Giai đoạn này tích lũy [năng lượng đàn hồi](../wiki/stretch-shortening-cycle.md) tại cẳng tay và cổ tay.
+[Wrist Lag](wrist-lag.md) thụ động hình thành khi thân người xoay về phía trước nhưng cổ tay thư giãn tụt lại. Giai đoạn này tích lũy [năng lượng đàn hồi](../co-sinh-hoc/stretch-shortening-cycle.md) tại cẳng tay và cổ tay.
 
 ### Pha 4 — Propulsion (Đẩy tới và tiếp xúc)
 Năng lượng đàn hồi được giải phóng kết hợp với xoay thân tiếp tục, tạo ra hiệu ứng roi. Đầu vợt "bắt kịp" bàn tay và được "ném" xuyên qua bóng tại [điểm tiếp xúc](../co-sinh-hoc/contact-point-spacing.md) lý tưởng.
@@ -61,7 +61,7 @@ Cue: *"Hông trước, vợt theo sau"* — nhắc nhở người tập để ch
 - [OK Grip Drill](ok-grip-drill.md)
 - [Ground Reaction Force](ground-reaction-force.md)
 - [Wrist Lag](wrist-lag.md)
-- [Stretch-Shortening Cycle](../wiki/stretch-shortening-cycle.md)
+- [Stretch-Shortening Cycle](../co-sinh-hoc/stretch-shortening-cycle.md)
 - [Unit Turn](unit-turn.md)
 - [Arm-Dominant Swing](../co-sinh-hoc/arm-dominant-swing.md)
 - [Fatigue and Performance Degradation](fatigue-and-performance-degradation.md)

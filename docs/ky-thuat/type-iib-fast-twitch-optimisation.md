@@ -66,7 +66,7 @@ Post-activation potentiation (PAP): The heavy set temporarily increases Type IIb
 
 - [Explosive Durability](explosive-durability.md)
 - [Fascial Elasticity vs Hypertrophy](fascial-elasticity-vs-hypertrophy.md)
-- [Neural Pressure Training](../wiki/neural-pressure-training.md)
-- [Central Governor Model](../wiki/central-governor-model.md)
+- [Neural Pressure Training](../tam-ly/neural-pressure-training.md)
+- [Central Governor Model](../tam-ly/central-governor-model.md)
 - [Micro-Loading](micro-loading.md)
 - [Stretch-Shortening Cycle (SSC)](stretch-shortening-cycle-(ssc).md)

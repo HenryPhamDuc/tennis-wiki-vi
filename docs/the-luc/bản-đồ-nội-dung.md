@@ -25,7 +25,7 @@ graph TD
     C --> C4[Thói quen / 2nd nature]
 ```
 
-* [Hai lớp kỹ thuật vợt](../wiki/hai-lớp-kỹ-thuật-vợt.md) ⭐ _bắt đầu ở đây_
+* [Hai lớp kỹ thuật vợt](../ky-thuat/hai-lớp-kỹ-thuật-vợt.md) ⭐ _bắt đầu ở đây_
 * [Lớp ngoài - Không gian & Cấu trúc](../ky-thuat/lớp-ngoài---không-gian-&-cấu-trúc.md)
 * _Lớp trong - Vật nhập thể_
 * [Proprioception vs Sức mạnh](proprioception-vs-sức-mạnh.md)

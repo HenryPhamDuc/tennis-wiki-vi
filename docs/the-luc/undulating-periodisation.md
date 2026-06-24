@@ -48,7 +48,7 @@ The programme adapted from the Ivancevic et al. 12-week tennis performance frame
 - **Key principle**: Technical work done under physical fatigue = match-realistic training. Pure technical work in fresh state = practice-only engrams.
 
 ### Track 3 — Tactical & Cognitive
-- [Neural Pressure Training](neural-pressure-training.md) — chess work, decision drills under fatigue — concurrent with physical.
+- [Neural Pressure Training](../tam-ly/neural-pressure-training.md) — chess work, decision drills under fatigue — concurrent with physical.
 - Pattern drilling integrated into conditioning circuits (hit forehand pattern → sprint recovery → repeat).
 
 ---
@@ -73,5 +73,5 @@ Biggest linear periodisation error: treating tournament week like a normal train
 - [Micro-Loading](../ky-thuat/micro-loading.md)
 - [Sprint Interval Model](../co-sinh-hoc/sprint-interval-model.md)
 - [CNS Fatigue Signs](../ky-thuat/cns-fatigue-signs.md)
-- [HRV-Guided Training](hrv-guided-training.md)
-- [Neural Pressure Training](neural-pressure-training.md)
+- [HRV-Guided Training](../tam-ly/hrv-guided-training.md)
+- [Neural Pressure Training](../tam-ly/neural-pressure-training.md)

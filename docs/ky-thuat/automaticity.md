@@ -16,7 +16,7 @@ Automaticity là sự chuyển đổi quá trình ra quyết định kỹ thuậ
 
 [Không Gian Là Cấu Trúc](không-gian-là-cấu-trúc.md) (lớp 1) đòi hỏi suy nghĩ có ý thức: "bóng xa, lùi chân, cầm dài, big swing". Automaticity xóa bỏ bước suy nghĩ này. Não chuyển từ vỏ não trước trán (lập kế hoạch) sang tiểu não và hạch nền (thói quen). Cú đánh trở thành phản xạ.
 
-Quá trình này được xây dựng thông qua [Myelin Hóa](../wiki/myelin-hóa.md) — lặp lại đúng cấu trúc không gian hàng ngàn lần để đường truyền thần kinh trở nên nhanh và "mặc định".
+Quá trình này được xây dựng thông qua [Myelin Hóa](../tam-ly/myelin-hóa.md) — lặp lại đúng cấu trúc không gian hàng ngàn lần để đường truyền thần kinh trở nên nhanh và "mặc định".
 
 ---
 
@@ -37,6 +37,6 @@ Sau khi hoàn thành [Chương Trình 4 Tuần Proprioception](../the-luc/chươ
 ## Related Concepts
 
 - [Vật Nhập Thể](../the-luc/vật-nhập-thể.md)
-- [Myelin Hóa](../wiki/myelin-hóa.md)
+- [Myelin Hóa](../tam-ly/myelin-hóa.md)
 - [Ba Vòng Phản Xạ Thần Kinh](ba-vòng-phản-xạ-thần-kinh.md)
 - [Chương Trình 4 Tuần Proprioception](../the-luc/chương-trình-4-tuần-proprioception.md)
