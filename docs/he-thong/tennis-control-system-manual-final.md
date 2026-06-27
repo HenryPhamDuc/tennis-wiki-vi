@@ -1671,7 +1671,7 @@ Phụ lục này cung cấp một danh sách các thuật ngữ quan trọng và
 
 Phụ lục này liệt kê các tài liệu tham khảo và nguồn thông tin đã được sử dụng hoặc gợi ý để xây dựng nội dung của cuốn cẩm nang này. Đây là những nguồn đáng tin cậy để người đọc có thể tìm hiểu sâu hơn về các khái niệm được trình bày.
 
-[1] **ChatGPT-TennisVisualizationandPrediction.md**: Tài liệu phân tích gốc được cung cấp, là nền tảng chính cho nội dung của cẩm nang này.
+[1] **Tennis Visualization and Prediction**: Tài liệu phân tích gốc được cung cấp, là nền tảng chính cho nội dung của cẩm nang này.
 
 [2] **The Inner Game of Tennis** by W. Timothy Gallwey: Một tác phẩm kinh điển về tâm lý học thể thao, nhấn mạnh vai trò của tâm trí trong hiệu suất tennis.
 

@@ -12,7 +12,7 @@ updated: 2026-06-20
 # Spatial Dynamics in Tennis
 ## Hệ thống Spatial-Wave Tennis
 
-### Henry Pham & ChatGPT
+### Henry Pham
 
 ---
 
