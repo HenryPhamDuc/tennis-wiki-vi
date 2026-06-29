@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/universal_footwork_process_standard_prep-left.jpg" target="_blank">
-  <img alt="Quy Trình Footwork Phổ Quát: Từ Tư Thế Chuẩn Bị Đến Mọi Cú Đánh - left half" src="../../../assets/thu-vien/crops/universal_footwork_process_standard_prep-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/universal_footwork_process_standard_prep-right.jpg" target="_blank">
-  <img alt="Quy Trình Footwork Phổ Quát: Từ Tư Thế Chuẩn Bị Đến Mọi Cú Đánh - right half" src="../../../assets/thu-vien/crops/universal_footwork_process_standard_prep-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

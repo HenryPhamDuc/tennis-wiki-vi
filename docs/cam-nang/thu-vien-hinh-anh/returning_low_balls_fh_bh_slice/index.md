@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/returning_low_balls_fh_bh_slice-left.jpg" target="_blank">
-  <img alt="Trả Bóng Thấp: Forehand Slice (Supination) & Backhand Slice (Pronation) - left half" src="../../../assets/thu-vien/crops/returning_low_balls_fh_bh_slice-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/returning_low_balls_fh_bh_slice-right.jpg" target="_blank">
-  <img alt="Trả Bóng Thấp: Forehand Slice (Supination) & Backhand Slice (Pronation) - right half" src="../../../assets/thu-vien/crops/returning_low_balls_fh_bh_slice-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

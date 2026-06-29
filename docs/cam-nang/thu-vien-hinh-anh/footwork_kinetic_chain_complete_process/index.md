@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/footwork_kinetic_chain_complete_process-left.jpg" target="_blank">
-  <img alt="Bước Chân & Chuỗi Động Lực — Toàn Bộ Quá Trình - left half" src="../../../assets/thu-vien/crops/footwork_kinetic_chain_complete_process-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/footwork_kinetic_chain_complete_process-right.jpg" target="_blank">
-  <img alt="Bước Chân & Chuỗi Động Lực — Toàn Bộ Quá Trình - right half" src="../../../assets/thu-vien/crops/footwork_kinetic_chain_complete_process-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

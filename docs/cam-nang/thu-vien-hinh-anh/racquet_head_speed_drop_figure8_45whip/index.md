@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/racquet_head_speed_drop_figure8_45whip-left.jpg" target="_blank">
-  <img alt="Quy Trình Tạo Tốc Độ Đầu Vợt — Drop • Figure-8 • 45° Whip - left half" src="../../../assets/thu-vien/crops/racquet_head_speed_drop_figure8_45whip-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/racquet_head_speed_drop_figure8_45whip-right.jpg" target="_blank">
-  <img alt="Quy Trình Tạo Tốc Độ Đầu Vợt — Drop • Figure-8 • 45° Whip - right half" src="../../../assets/thu-vien/crops/racquet_head_speed_drop_figure8_45whip-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

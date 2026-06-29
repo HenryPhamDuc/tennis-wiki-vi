@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/grip_forearm_turn_racquet_face_4_strokes-left.jpg" target="_blank">
-  <img alt="Cầm Vợt – Xoay Cẳng Tay – Mặt Vợt: 4 Cú Đánh Chính - left half" src="../../../assets/thu-vien/crops/grip_forearm_turn_racquet_face_4_strokes-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/grip_forearm_turn_racquet_face_4_strokes-right.jpg" target="_blank">
-  <img alt="Cầm Vợt – Xoay Cẳng Tay – Mặt Vợt: 4 Cú Đánh Chính - right half" src="../../../assets/thu-vien/crops/grip_forearm_turn_racquet_face_4_strokes-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

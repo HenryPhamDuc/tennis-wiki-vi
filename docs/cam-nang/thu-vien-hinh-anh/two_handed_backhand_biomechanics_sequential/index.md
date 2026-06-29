@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/two_handed_backhand_biomechanics_sequential-left.jpg" target="_blank">
-  <img alt="Cơ Sinh Học Backhand Hai Tay — Trình Tự Hoàn Chỉnh - left half" src="../../../assets/thu-vien/crops/two_handed_backhand_biomechanics_sequential-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/two_handed_backhand_biomechanics_sequential-right.jpg" target="_blank">
-  <img alt="Cơ Sinh Học Backhand Hai Tay — Trình Tự Hoàn Chỉnh - right half" src="../../../assets/thu-vien/crops/two_handed_backhand_biomechanics_sequential-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

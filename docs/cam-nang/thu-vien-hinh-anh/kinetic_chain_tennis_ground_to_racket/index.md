@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/kinetic_chain_tennis_ground_to_racket-left.jpg" target="_blank">
-  <img alt="The Kinetic Chain In Tennis: Ground → Legs → Hips → Trunk → Arm → Racket - left half" src="../../../assets/thu-vien/crops/kinetic_chain_tennis_ground_to_racket-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/kinetic_chain_tennis_ground_to_racket-right.jpg" target="_blank">
-  <img alt="The Kinetic Chain In Tennis: Ground → Legs → Hips → Trunk → Arm → Racket - right half" src="../../../assets/thu-vien/crops/kinetic_chain_tennis_ground_to_racket-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

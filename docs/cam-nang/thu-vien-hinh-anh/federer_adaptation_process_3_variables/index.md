@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/federer_adaptation_process_3_variables-left.jpg" target="_blank">
-  <img alt="Hệ Thống Thích Ứng Federer: Quy Trình Tennis Thích Ứng - left half" src="../../../assets/thu-vien/crops/federer_adaptation_process_3_variables-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/federer_adaptation_process_3_variables-right.jpg" target="_blank">
-  <img alt="Hệ Thống Thích Ứng Federer: Quy Trình Tennis Thích Ứng - right half" src="../../../assets/thu-vien/crops/federer_adaptation_process_3_variables-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

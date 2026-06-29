@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/playbook_doubles_3_complete_process-left.jpg" target="_blank">
-  <img alt="Playbook Đánh Đôi 3.0 – Toàn Bộ Quy Trình (Từ Giao Bóng Đến Kết Thúc) - left half" src="../../../assets/thu-vien/crops/playbook_doubles_3_complete_process-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/playbook_doubles_3_complete_process-right.jpg" target="_blank">
-  <img alt="Playbook Đánh Đôi 3.0 – Toàn Bộ Quy Trình (Từ Giao Bóng Đến Kết Thúc) - right half" src="../../../assets/thu-vien/crops/playbook_doubles_3_complete_process-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

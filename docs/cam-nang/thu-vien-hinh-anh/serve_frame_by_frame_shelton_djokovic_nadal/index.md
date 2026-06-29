@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/serve_frame_by_frame_shelton_djokovic_nadal-left.jpg" target="_blank">
-  <img alt="Tennis Serve – Phân Tích Từng Khung Hình: Shelton vs Djokovic vs Nadal - left half" src="../../../assets/thu-vien/crops/serve_frame_by_frame_shelton_djokovic_nadal-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/serve_frame_by_frame_shelton_djokovic_nadal-right.jpg" target="_blank">
-  <img alt="Tennis Serve – Phân Tích Từng Khung Hình: Shelton vs Djokovic vs Nadal - right half" src="../../../assets/thu-vien/crops/serve_frame_by_frame_shelton_djokovic_nadal-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

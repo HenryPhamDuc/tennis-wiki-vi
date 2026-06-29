@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/federer_opponent_adaptation_3_variables-left.jpg" target="_blank">
-  <img alt="Quy Trình Federer Thích Ứng Đối Thủ: 3 Biến Số (Thời Gian · Chiều Cao · Vị Trí Sân) - left half" src="../../../assets/thu-vien/crops/federer_opponent_adaptation_3_variables-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/federer_opponent_adaptation_3_variables-right.jpg" target="_blank">
-  <img alt="Quy Trình Federer Thích Ứng Đối Thủ: 3 Biến Số (Thời Gian · Chiều Cao · Vị Trí Sân) - right half" src="../../../assets/thu-vien/crops/federer_opponent_adaptation_3_variables-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/knee_biomechanics_serve_process_overview-left.jpg" target="_blank">
-  <img alt="Cơ Sinh Học Đầu Gối Trong Tennis Serve – Process Overview - left half" src="../../../assets/thu-vien/crops/knee_biomechanics_serve_process_overview-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/knee_biomechanics_serve_process_overview-right.jpg" target="_blank">
-  <img alt="Cơ Sinh Học Đầu Gối Trong Tennis Serve – Process Overview - right half" src="../../../assets/thu-vien/crops/knee_biomechanics_serve_process_overview-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

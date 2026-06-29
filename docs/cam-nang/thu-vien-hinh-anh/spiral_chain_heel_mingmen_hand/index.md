@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/spiral_chain_heel_mingmen_hand-left.jpg" target="_blank">
-  <img alt="Đường Truyền Lực: Gót → Mingmen → Tay (Spiral Chain) - left half" src="../../../assets/thu-vien/crops/spiral_chain_heel_mingmen_hand-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/spiral_chain_heel_mingmen_hand-right.jpg" target="_blank">
-  <img alt="Đường Truyền Lực: Gót → Mingmen → Tay (Spiral Chain) - right half" src="../../../assets/thu-vien/crops/spiral_chain_heel_mingmen_hand-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

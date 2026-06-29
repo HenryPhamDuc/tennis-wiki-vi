@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/neuromechanical_process_tennis_stroke-left.jpg" target="_blank">
-  <img alt="Quá Trình Cơ Sinh Học Thần Kinh Của Cú Đánh Tennis - left half" src="../../../assets/thu-vien/crops/neuromechanical_process_tennis_stroke-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/neuromechanical_process_tennis_stroke-right.jpg" target="_blank">
-  <img alt="Quá Trình Cơ Sinh Học Thần Kinh Của Cú Đánh Tennis - right half" src="../../../assets/thu-vien/crops/neuromechanical_process_tennis_stroke-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

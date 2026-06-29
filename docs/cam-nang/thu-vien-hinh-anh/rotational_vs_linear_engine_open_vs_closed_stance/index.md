@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/rotational_vs_linear_engine_open_vs_closed_stance-left.jpg" target="_blank">
-  <img alt="Động Cơ Xoay vs Động Cơ Tuyến — Open vs Closed Stance - left half" src="../../../assets/thu-vien/crops/rotational_vs_linear_engine_open_vs_closed_stance-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/rotational_vs_linear_engine_open_vs_closed_stance-right.jpg" target="_blank">
-  <img alt="Động Cơ Xoay vs Động Cơ Tuyến — Open vs Closed Stance - right half" src="../../../assets/thu-vien/crops/rotational_vs_linear_engine_open_vs_closed_stance-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

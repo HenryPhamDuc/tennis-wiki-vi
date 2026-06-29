@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/complete_process_forehand_grip_contact-left.jpg" target="_blank">
-  <img alt="Quy Trình Hoàn Chỉnh: Cầm Vợt → Điểm Tiếp Xúc → Quỹ Đạo → Chất Lượng Cú Đánh - left half" src="../../../assets/thu-vien/crops/complete_process_forehand_grip_contact-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/complete_process_forehand_grip_contact-right.jpg" target="_blank">
-  <img alt="Quy Trình Hoàn Chỉnh: Cầm Vợt → Điểm Tiếp Xúc → Quỹ Đạo → Chất Lượng Cú Đánh - right half" src="../../../assets/thu-vien/crops/complete_process_forehand_grip_contact-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

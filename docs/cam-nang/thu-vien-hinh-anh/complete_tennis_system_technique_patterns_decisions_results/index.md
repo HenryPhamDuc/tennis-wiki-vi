@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/complete_tennis_system_technique_patterns_decisions_results-left.jpg" target="_blank">
-  <img alt="Hệ Thống Tennis Hoàn Chỉnh: Kỹ Thuật → Mẫu → Quyết Định → Kết Quả - left half" src="../../../assets/thu-vien/crops/complete_tennis_system_technique_patterns_decisions_results-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/complete_tennis_system_technique_patterns_decisions_results-right.jpg" target="_blank">
-  <img alt="Hệ Thống Tennis Hoàn Chỉnh: Kỹ Thuật → Mẫu → Quyết Định → Kết Quả - right half" src="../../../assets/thu-vien/crops/complete_tennis_system_technique_patterns_decisions_results-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

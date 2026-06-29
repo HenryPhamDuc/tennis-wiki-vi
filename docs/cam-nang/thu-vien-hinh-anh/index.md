@@ -2,16 +2,16 @@
 
 > **Visual Coaching Library — 38 sơ đồ sinh học & chiến thuật tennis**
 >
-> Tổng hợp **38 sơ đồ infographic** chất lượng cao từ chuỗi nghiên cứu sinh học và chiến thuật tennis (16 từ ChatGPT + 22 từ Gemini). Mỗi sơ đồ có **trang riêng** với ảnh full + zoom chi tiết (trái/phải) + mô tả song ngữ EN-VI.
+> Tổng hợp **38 sơ đồ infographic** chất lượng cao từ chuỗi nghiên cứu sinh học và chiến thuật tennis (16 từ ChatGPT + 22 từ Gemini). Mỗi sơ đồ có **trang riêng** với ảnh full + mô tả song ngữ EN-VI.
 ---
 
 ## 📊 Tổng quan
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |
 |---|---|
-| Thư viện **38 sơ đồ tennis** được sắp xếp theo **7 chủ đề** (16 ChatGPT + 22 Gemini). Mỗi sơ đồ → trang detail riêng với ảnh full + 2 crops (trái/phải) + mô tả song ngữ. | Visual library of **38 tennis diagrams** organized into **7 categories** (16 ChatGPT + 22 Gemini). Each diagram → dedicated detail page with full image + 2 crops (left/right) + bilingual description. |
+| Thư viện **38 sơ đồ tennis** được sắp xếp theo **7 chủ đề** (16 ChatGPT + 22 Gemini). Mỗi sơ đồ → trang detail riêng với ảnh full + mô tả song ngữ. | Visual library of **38 tennis diagrams** organized into **7 categories** (16 ChatGPT + 22 Gemini). Each diagram → dedicated detail page with full image + bilingual description. |
 
-**Tổng sơ đồ:** 38 (16 ChatGPT + 22 Gemini) • **Tổng trang detail:** 38 • **Tổng ảnh embed:** 114 (1 full + 2 crops per diagram) • **Nguồn:** ChatGPT Image Generator (2026-06-28) + Google Gemini Image Generator (2026-06-29)
+**Tổng sơ đồ:** 38 (16 ChatGPT + 22 Gemini) • **Tổng trang detail:** 38 • **Tổng ảnh embed:** 38 (1 full per diagram) • **Nguồn:** ChatGPT Image Generator (2026-06-28) + Google Gemini Image Generator (2026-06-29)
 
 ---
 
@@ -32,7 +32,7 @@
 
 **6 sơ đồ trong chủ đề — **Forehand** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -45,6 +45,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Complete Process: Grip → Contact → Swing → Spin → Trajectory</em>
 
 </a>
+<a href="../../assets/thu-vien/complete_process_forehand_biomechanics.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="racquet_head_speed_drop_figure8_45whip/" class="gallery-card">
 
@@ -55,6 +56,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Racquet Head Speed Process — Drop • Figure-8 • 45° Whip</em>
 
 </a>
+<a href="../../assets/thu-vien/racquet_head_speed_drop_figure8_45whip.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="rotational_vs_linear_engine_open_vs_closed_stance/" class="gallery-card">
 
@@ -65,6 +67,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Rotational Engine vs Linear Engine — Open vs Closed Stance</em>
 
 </a>
+<a href="../../assets/thu-vien/rotational_vs_linear_engine_open_vs_closed_stance.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="complete_process_forehand_grip_contact/" class="gallery-card">
 
@@ -75,6 +78,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Complete Process: Grip → Contact → Trajectory → Shot Quality</em>
 
 </a>
+<a href="../../assets/thu-vien/complete_process_forehand_grip_contact.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="full_process_coil_load_uncoil_release/" class="gallery-card">
 
@@ -85,6 +89,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Full Process: Coil / Load → Uncoil / Release (Hip-Led Wave Mechanics)</em>
 
 </a>
+<a href="../../assets/thu-vien/full_process_coil_load_uncoil_release.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 
 <a href="rotational_vs_linear_engine_open_vs_closed/" class="gallery-card">
@@ -96,6 +101,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Rotational Engine vs Linear Engine: Open Stance vs Closed Stance</em>
 
 </a>
+<a href="../../assets/thu-vien/rotational_vs_linear_engine_open_vs_closed.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 
@@ -108,7 +114,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **3 sơ đồ trong chủ đề — **Backhand** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -121,6 +127,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Master Two-Handed Backhand — The Complete Biomechanical System</em>
 
 </a>
+<a href="../../assets/thu-vien/master_two_handed_backhand_complete_system.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="one_handed_backhand_essential_process/" class="gallery-card">
 
@@ -131,6 +138,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>One-Handed Backhand — The Essential Process</em>
 
 </a>
+<a href="../../assets/thu-vien/one_handed_backhand_essential_process.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="two_handed_backhand_biomechanics_sequential/" class="gallery-card">
 
@@ -141,6 +149,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Two-Handed Backhand Biomechanics — Sequential Breakdown</em>
 
 </a>
+<a href="../../assets/thu-vien/two_handed_backhand_biomechanics_sequential.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 
 </div>
@@ -154,7 +163,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **6 sơ đồ trong chủ đề — **Serve** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -167,6 +176,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Tennis Serve Manual — 4 Core Phases</em>
 
 </a>
+<a href="../../assets/thu-vien/cam_nang_giao_bong_4_phases.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="tennis_serve_frame_by_frame_shelton_djokovic_nadal/" class="gallery-card">
 
@@ -177,6 +187,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Tennis Serve Frame-by-Frame Biomechanics — Shelton vs Djokovic vs Nadal</em>
 
 </a>
+<a href="../../assets/thu-vien/tennis_serve_frame_by_frame_shelton_djokovic_nadal.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="kinetic_chain_spiral_serve_ground_up/" class="gallery-card">
 
@@ -187,6 +198,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Kinetic Chain & Spiral Process in Tennis Serve (Build → Load → Unwind → Release)</em>
 
 </a>
+<a href="../../assets/thu-vien/kinetic_chain_spiral_serve_ground_up.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="knee_biomechanics_serve_process_overview/" class="gallery-card">
 
@@ -197,6 +209,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Knee Biomechanics in Tennis Serve – Process Overview</em>
 
 </a>
+<a href="../../assets/thu-vien/knee_biomechanics_serve_process_overview.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="knee_complete_process_serve/" class="gallery-card">
 
@@ -207,6 +220,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Knee Biomechanics in the Tennis Serve – The Complete Process</em>
 
 </a>
+<a href="../../assets/thu-vien/knee_complete_process_serve.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="serve_frame_by_frame_shelton_djokovic_nadal/" class="gallery-card">
 
@@ -217,6 +231,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Tennis Serve – Frame-by-Frame Biomechanical Analysis (Shelton / Djokovic / Nadal)</em>
 
 </a>
+<a href="../../assets/thu-vien/serve_frame_by_frame_shelton_djokovic_nadal.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 
@@ -229,7 +244,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **7 sơ đồ trong chủ đề — **Footwork** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -242,6 +257,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Footwork & Kinetic Chain — The Complete Process</em>
 
 </a>
+<a href="../../assets/thu-vien/footwork_kinetic_chain_complete_process.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="split_step_complete_process/" class="gallery-card">
 
@@ -252,6 +268,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Split Step — The Complete Process</em>
 
 </a>
+<a href="../../assets/thu-vien/split_step_complete_process.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="force_transmission_heel_to_hand/" class="gallery-card">
 
@@ -262,6 +279,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Force Transmission Process: From Heel to Hand</em>
 
 </a>
+<a href="../../assets/thu-vien/force_transmission_heel_to_hand.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="kinetic_chain_tennis_ground_to_racket/" class="gallery-card">
 
@@ -272,6 +290,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>The Kinetic Chain in Tennis (Ground → Legs → Hips → Trunk → Arm → Racket)</em>
 
 </a>
+<a href="../../assets/thu-vien/kinetic_chain_tennis_ground_to_racket.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="knee_time_gate_kinetic_chain/" class="gallery-card">
 
@@ -282,6 +301,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Knee – The Time Gate of the Kinetic Chain (from GRF to Whip)</em>
 
 </a>
+<a href="../../assets/thu-vien/knee_time_gate_kinetic_chain.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="spiral_chain_heel_mingmen_hand/" class="gallery-card">
 
@@ -292,6 +312,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Force Transmission Path: Heel → Mingmen → Hand (Spiral Chain)</em>
 
 </a>
+<a href="../../assets/thu-vien/spiral_chain_heel_mingmen_hand.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="universal_footwork_process_standard_prep/" class="gallery-card">
 
@@ -302,6 +323,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Universal Footwork Process: From Standard Prep Stance to Any Shot</em>
 
 </a>
+<a href="../../assets/thu-vien/universal_footwork_process_standard_prep.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 
@@ -314,7 +336,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **2 sơ đồ trong chủ đề — **Fundamentals** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -327,6 +349,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Grip – Forearm Turn – Racquet Face for 4 Main Strokes</em>
 
 </a>
+<a href="../../assets/thu-vien/grip_forearm_turn_racquet_face_4_strokes.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 
 <a href="neuromechanical_process_tennis_stroke/" class="gallery-card">
@@ -338,6 +361,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Neuromechanical Process of a Tennis Stroke (From Perception to Performance)</em>
 
 </a>
+<a href="../../assets/thu-vien/neuromechanical_process_tennis_stroke.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 
@@ -350,7 +374,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **2 sơ đồ trong chủ đề — **Slice** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -363,6 +387,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Returning Low Balls: FH Slice (Supination) + BH Slice (Pronation)</em>
 
 </a>
+<a href="../../assets/thu-vien/returning_low_balls_slice_supination_pronation.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="returning_low_balls_fh_bh_slice/" class="gallery-card">
 
@@ -373,6 +398,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Returning Low Balls: Forehand Slice (with Supination) and Backhand Slice (with Pronation)</em>
 
 </a>
+<a href="../../assets/thu-vien/returning_low_balls_fh_bh_slice.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 
@@ -385,7 +411,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 **12 sơ đồ trong chủ đề — **Strategy & Mental** diagrams**
 
-Click thumbnail để mở trang detail (với ảnh full + zoom crops).
+Click thumbnail để mở trang detail. Có thêm link Xem file gốc bên dưới mỗi ảnh.
 
 <div class="gallery-grid" markdown>
 
@@ -398,6 +424,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>The Complete Tennis System: Technique → Patterns → Decisions → Results</em>
 
 </a>
+<a href="../../assets/thu-vien/complete_tennis_system_technique_patterns_decisions_results.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="exposed_angles_geometry_court_control/" class="gallery-card">
 
@@ -408,6 +435,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Exposed Angles — The Geometry of Court Control</em>
 
 </a>
+<a href="../../assets/thu-vien/exposed_angles_geometry_court_control.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="federer_adaptation_adaptive_process/" class="gallery-card">
 
@@ -418,6 +446,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Federer Adaptation System — The Adaptive Tennis Process</em>
 
 </a>
+<a href="../../assets/thu-vien/federer_adaptation_adaptive_process.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="pressure_cascade_atp_system/" class="gallery-card">
 
@@ -428,6 +457,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>The Pressure Cascade System — How ATP Players Create Errors</em>
 
 </a>
+<a href="../../assets/thu-vien/pressure_cascade_atp_system.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="analyze_apply_elite_player_sinner_3_0/" class="gallery-card">
 
@@ -438,6 +468,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Process for Analyzing & Applying Elite Player Style – Level 3.0 (Sinner Case Study)</em>
 
 </a>
+<a href="../../assets/thu-vien/analyze_apply_elite_player_sinner_3_0.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="complete_tennis_system_technique_patterns_decisions/" class="gallery-card">
 
@@ -448,6 +479,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Complete Tennis System: Technique → Patterns → Decisions → Results</em>
 
 </a>
+<a href="../../assets/thu-vien/complete_tennis_system_technique_patterns_decisions.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="endurance_tennis_system_5_pillars/" class="gallery-card">
 
@@ -458,6 +490,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Endurance Tennis System: 5 Pillars (Legs · Arm · Breath · Rhythm · Fatigue)</em>
 
 </a>
+<a href="../../assets/thu-vien/endurance_tennis_system_5_pillars.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="federer_adaptation_process_3_variables/" class="gallery-card">
 
@@ -468,6 +501,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Federer Adaptation System: The Adaptive Tennis Process</em>
 
 </a>
+<a href="../../assets/thu-vien/federer_adaptation_process_3_variables.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="federer_adaptive_system_full_loop/" class="gallery-card">
 
@@ -478,6 +512,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Federer Adaptive System – Adaptive Tennis Process (Observe → Decide → Execute → Recover → Repeat)</em>
 
 </a>
+<a href="../../assets/thu-vien/federer_adaptive_system_full_loop.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="federer_opponent_adaptation_3_variables/" class="gallery-card">
 
@@ -488,6 +523,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Federer Opponent Adaptation Process: 3 Variables (Time · Height · Court Position)</em>
 
 </a>
+<a href="../../assets/thu-vien/federer_opponent_adaptation_3_variables.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 <a href="federer_os_complete_process_diagram/" class="gallery-card">
 
@@ -498,6 +534,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Federer OS – Complete Process Diagram: From Point to Evolution to Zero Mode</em>
 
 </a>
+<a href="../../assets/thu-vien/federer_os_complete_process_diagram.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 
 <a href="playbook_doubles_3_complete_process/" class="gallery-card">
@@ -509,6 +546,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
   <em>Doubles 3.0 Playbook – The Complete Process (From Serve to Finish)</em>
 
 </a>
+<a href="../../assets/thu-vien/playbook_doubles_3_complete_process.png" target="_blank" class="gallery-source">📂 Xem file gốc / View source PNG</a>
 
 </div>
 

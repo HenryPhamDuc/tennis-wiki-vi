@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/pressure_cascade_atp_system-left.jpg" target="_blank">
-  <img alt="Hệ Thống Áp Lực Liên Hoàn — Cách ATP Tạo Lỗi & Thắng Điểm - left half" src="../../../assets/thu-vien/crops/pressure_cascade_atp_system-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/pressure_cascade_atp_system-right.jpg" target="_blank">
-  <img alt="Hệ Thống Áp Lực Liên Hoàn — Cách ATP Tạo Lỗi & Thắng Điểm - right half" src="../../../assets/thu-vien/crops/pressure_cascade_atp_system-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

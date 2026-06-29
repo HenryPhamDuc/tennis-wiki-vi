@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/knee_time_gate_kinetic_chain-left.jpg" target="_blank">
-  <img alt="Gối – Cổng Thời Gian Của Kinetic Chain (Từ Ground Reaction Đến Whip) - left half" src="../../../assets/thu-vien/crops/knee_time_gate_kinetic_chain-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/knee_time_gate_kinetic_chain-right.jpg" target="_blank">
-  <img alt="Gối – Cổng Thời Gian Của Kinetic Chain (Từ Ground Reaction Đến Whip) - right half" src="../../../assets/thu-vien/crops/knee_time_gate_kinetic_chain-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |

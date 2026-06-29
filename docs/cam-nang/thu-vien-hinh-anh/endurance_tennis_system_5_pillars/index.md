@@ -16,22 +16,6 @@
 
 ---
 
-## 🔍 Zoom chi tiết / Detail Zoom
-
-### Trái / Left half
-
-<a href="../../../assets/thu-vien/crops/endurance_tennis_system_5_pillars-left.jpg" target="_blank">
-  <img alt="Hệ Thống Tennis Sức Bền: 5 Trụ Cột (Chân · Tay · Thở · Nhịp · Mệt) - left half" src="../../../assets/thu-vien/crops/endurance_tennis_system_5_pillars-left.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
-### Phải / Right half
-
-<a href="../../../assets/thu-vien/crops/endurance_tennis_system_5_pillars-right.jpg" target="_blank">
-  <img alt="Hệ Thống Tennis Sức Bền: 5 Trụ Cột (Chân · Tay · Thở · Nhịp · Mệt) - right half" src="../../../assets/thu-vien/crops/endurance_tennis_system_5_pillars-right.jpg" style="max-width:100%;height:auto;border-radius:4px" loading="lazy" />
-</a>
-
----
-
 ## 📝 Mô tả chi tiết / Detailed Description
 
 | 🇻🇳 Tiếng Việt | 🇺🇸 English |
