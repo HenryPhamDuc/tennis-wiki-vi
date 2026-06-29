@@ -114,3 +114,55 @@ img.missing-image {
     grid-template-columns: 1fr;
   }
 }
+
+/* Gemini gallery 2-col card layout — added 2026-06-29 */
+.gemini-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.5fr);
+  gap: 20px;
+  align-items: start;
+  padding: 16px;
+  margin: 16px 0 32px 0;
+  border: 1px solid rgba(10, 25, 41, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.gemini-card:hover {
+  box-shadow: 0 4px 18px rgba(10, 25, 41, 0.12);
+  border-color: rgba(20, 40, 90, 0.4);
+}
+
+.gemini-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 0;
+}
+
+.gemini-card-text {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.gemini-card-text strong {
+  display: block;
+  font-size: 1.05em;
+  margin-bottom: 4px;
+}
+
+.gemini-card-text em {
+  display: block;
+  font-size: 0.88em;
+  opacity: 0.75;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 720px) {
+  .gemini-card {
+    grid-template-columns: 1fr;
+  }
+}
