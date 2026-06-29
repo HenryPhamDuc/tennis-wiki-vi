@@ -272,4 +272,4 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 - 📚 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)** — 35+ tài liệu tennis song ngữ đầy đủ
 - 📘 **[Tennis Manual (Master Reference v2)](https://henryphamduc.github.io/tennis/)** — 22 deep dives + cơ sinh học
 - 🤖 **[Tennis Doctor — AI Chat](https://tennis-doctor.henry-phamduc.workers.dev/)** — Hỏi đáp tennis bằng AI
-- 🎯 **[Cẩm nang Tennis (Wiki hub)](../index.md)** — Quay về trang Cẩm nang
+- 🎯 **[Cẩm nang Tennis (Wiki hub)](https://henryphamduc.github.io/tennis/)** — Quay về trang Cẩm nang
