@@ -8,7 +8,7 @@
 
 ## Mục lục
 
-- **📕 Sách & Cẩm nang đầy đủ** (3 bài + 📥 [tải EPUB](#-tải-xuống-ebook-đầy-đủ-epub))
+- **📕 Sách & Cẩm nang đầy đủ** (3 bài + 📥 [tải EPUB](#tai-xuong-ebook-ay-u-epub))
 - **📘 Advanced Manual (Chapter-by-chapter)** (8 bài)
 - **📄 Trích đoạn Chương cụ thể** (4 bài)
 
