@@ -2,7 +2,7 @@
 
 > *Returning Low Balls: Forehand Slice (with Supination) and Backhand Slice (with Pronation)*
 
-**Chủ đề:** Slice · **Nguồn:** Google Gemini Image Generator · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
+**Chủ đề:** Slice · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
 
 ---
 
@@ -32,4 +32,4 @@
 
 ---
 
-<sub>Sơ đồ được tạo từ Google Gemini Image Generator · Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>
+<sub>Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>

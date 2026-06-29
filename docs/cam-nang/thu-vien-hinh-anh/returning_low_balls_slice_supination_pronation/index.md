@@ -2,7 +2,7 @@
 
 > *Returning Low Balls: FH Slice (Supination) + BH Slice (Pronation)*
 
-**Chủ đề:** Slice · **Nguồn:** ChatGPT Image Generator · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
+**Chủ đề:** Slice · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
 
 ---
 
@@ -32,4 +32,4 @@
 
 ---
 
-<sub>Sơ đồ được tạo từ ChatGPT Image Generator · Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>
+<sub>Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>

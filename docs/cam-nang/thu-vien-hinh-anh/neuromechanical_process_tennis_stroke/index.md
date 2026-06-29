@@ -2,7 +2,7 @@
 
 > *Neuromechanical Process of a Tennis Stroke (From Perception to Performance)*
 
-**Chủ đề:** Fundamentals · **Nguồn:** Google Gemini Image Generator · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
+**Chủ đề:** Fundamentals · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
 
 ---
 
@@ -32,4 +32,4 @@
 
 ---
 
-<sub>Sơ đồ được tạo từ Google Gemini Image Generator · Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>
+<sub>Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>

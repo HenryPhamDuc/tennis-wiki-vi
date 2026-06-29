@@ -2,7 +2,7 @@
 
 > *Universal Footwork Process: From Standard Prep Stance to Any Shot*
 
-**Chủ đề:** Footwork · **Nguồn:** Google Gemini Image Generator · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
+**Chủ đề:** Footwork · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
 
 ---
 
@@ -32,4 +32,4 @@
 
 ---
 
-<sub>Sơ đồ được tạo từ Google Gemini Image Generator · Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>
+<sub>Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>

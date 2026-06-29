@@ -2,7 +2,7 @@
 
 > *Tennis Serve Frame-by-Frame Biomechanics — Shelton vs Djokovic vs Nadal*
 
-**Chủ đề:** Serve · **Nguồn:** ChatGPT Image Generator · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
+**Chủ đề:** Serve · **Bộ sưu tập:** Thư Viện Hình Ảnh Tennis
 
 ---
 
@@ -32,4 +32,4 @@
 
 ---
 
-<sub>Sơ đồ được tạo từ ChatGPT Image Generator · Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>
+<sub>Watermarked & shipped by Henry Phạm Đức · 2026-06-29</sub>

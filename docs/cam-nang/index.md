@@ -18,7 +18,7 @@
 
 [**👉 Mở Thư Viện Hình Ảnh ngay →**](thu-vien-hinh-anh/index.md){ .md-button }
 
-38 sơ đồ infographic chất lượng cao (ChatGPT Image Generator + Google Gemini Image Generator, 2026-06-28 → 2026-06-29) — sinh học & chiến thuật tennis: **Forehand, Backhand, Serve, Footwork, Slice, Nền tảng, Chiến thuật**. Mỗi sơ đồ có Vietnamese + English title, mô tả chi tiết, và được phân loại theo cú đánh. Nhấp để xem ảnh đầy đủ.
+38 sơ đồ infographic chất lượng cao — sinh học & chiến thuật tennis: **Forehand, Backhand, Serve, Footwork, Slice, Nền tảng, Chiến thuật**. Mỗi sơ đồ có Vietnamese + English title, mô tả chi tiết, và được phân loại theo cú đánh. Nhấp để xem ảnh đầy đủ.
 
 *Tổng hợp ảnh với mô tả song ngữ — phong cách infographic giáo dục với ảnh player minh họa + sơ đồ vector + chú thích kỹ thuật EN-VI. Phù hợp cho cả HLV 3.5 → 5.0+ và người chơi muốn xem nhanh trước khi đọc sách dài.*
 
