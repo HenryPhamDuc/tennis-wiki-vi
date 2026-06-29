@@ -84,7 +84,7 @@
 - **[Tennis Coaching (Người Nghiệp Dư)](tfl/tennis_coaching_nguoi_nghiep_du.html)** — Cẩm nang toàn diện cho HLV tennis nghiệp dư. *(130.7 KB)*
 - **[Tennis Game Management](tfl/tennis_game_management.html)** — Hệ thống chiến lược toàn diện cho cấp độ 5.0 — quản lý game. *(147.8 KB)*
 
-## 📘 Advanced Manual (Chapter-by-chapter)
+---
 
 📅 Cập nhật: 2026-06-29 · Tổng số bài: **5** (loại 8 TOC stub và 0 trùng lặp từ 13 file gốc)
 
