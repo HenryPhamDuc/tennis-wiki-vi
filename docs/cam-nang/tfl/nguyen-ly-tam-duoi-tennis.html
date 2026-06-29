@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyên Lý Tam Duỗi Trong Tennis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --paper: #f5f0e8;
+    --accent: #b5451b;
+    --gold: #c8992a;
+    --steel: #2c3e50;
+    --light-rule: #d4c9b0;
+    --mid: #6b5e4e;
+    --white: #fdfaf4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  /* COVER */
+  .cover {
+    background: var(--steel);
+    color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 80px
+    );
+  }
+  .cover-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+  .cover h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 1.5rem auto 3rem;
+    font-style: italic;
+  }
+  .cover-rule {
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+    margin: 2rem auto;
+  }
+  .cover-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+  }
+
+  /* LAYOUT */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2.5rem;
+  }
+
+  /* SECTION DIVIDERS */
+  .chapter-header {
+    border-top: 4px solid var(--ink);
+    padding-top: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+  .chapter-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  h1.section {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--steel);
+    margin: 3rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-rule);
+  }
+  h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 2rem 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  h4 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--mid);
+    margin: 1.5rem 0 0.5rem;
+    font-style: italic;
+  }
+
+  p { margin-bottom: 1.2rem; }
+
+  /* PRINCIPLE BOX */
+  .principle-box {
+    background: var(--steel);
+    color: var(--white);
+    padding: 2.5rem 3rem;
+    margin: 3rem 0;
+    border-left: 6px solid var(--gold);
+    position: relative;
+  }
+  .principle-box .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .principle-box p {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+  }
+  .principle-box strong { color: var(--gold); font-style: normal; font-weight: 600; }
+
+  /* KEY TERM */
+  .key-term {
+    background: rgba(181,69,27,0.08);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+
+  /* LISTS */
+  ul, ol {
+    padding-left: 1.75rem;
+    margin-bottom: 1.2rem;
+  }
+  li { margin-bottom: 0.5rem; }
+  ul li::marker { color: var(--accent); }
+  ol li::marker { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+
+  /* COMPARISON TABLE */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+  }
+  .compare-table th {
+    background: var(--steel);
+    color: var(--white);
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .compare-table td {
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--light-rule);
+    vertical-align: top;
+  }
+  .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.5); }
+  .compare-table .neg { color: #8b1c1c; }
+  .compare-table .pos { color: #1a5c2a; }
+
+  /* WARNING / NOTE boxes */
+  .note {
+    background: #fff9ed;
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--gold);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .note strong { color: var(--gold); }
+  .warning {
+    background: #fff0ee;
+    border: 1px solid var(--accent);
+    border-left: 4px solid var(--accent);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+  .warning strong { color: var(--accent); }
+
+  /* STEP BOX */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+  }
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--accent);
+    min-width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* SVG ILLUSTRATION WRAPPER */
+  .illustration {
+    margin: 3rem 0;
+    background: var(--white);
+    border: 1px solid var(--light-rule);
+    padding: 2rem;
+  }
+  .illustration-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-align: center;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light-rule);
+  }
+  svg { display: block; margin: 0 auto; }
+
+  /* JOINT BADGE */
+  .joint-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .joint-card {
+    background: var(--white);
+    border: 1px solid var(--light-rule);
+    border-top: 3px solid var(--accent);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .joint-card .joint-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--steel);
+    margin-bottom: 0.25rem;
+  }
+  .joint-card .joint-vi {
+    font-size: 0.85rem;
+    color: var(--mid);
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+  .joint-card p { font-size: 0.9rem; margin: 0; color: var(--ink); }
+
+  /* COLUMN LAYOUT */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  /* FOOTER */
+  .page-footer {
+    border-top: 2px solid var(--ink);
+    margin-top: 6rem;
+    padding-top: 2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 680px) {
+    .joint-grid, .two-col { grid-template-columns: 1fr; }
+    .page { padding: 2rem 1.25rem; }
+    .principle-box { padding: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ COVER ═══════════════════════════════ -->
+<div class="cover">
+  <div class="cover-label">Cẩm nang Kỹ thuật Huấn luyện Tennis · Phiên bản 1.0</div>
+  <div class="cover-rule"></div>
+  <h1>Nguyên Lý <span>Tam Duỗi</span><br>Trong Tennis</h1>
+  <p class="cover-sub">Cơ chế Đàn hồi Ba Khớp của Cánh Tay Đánh Bóng — Nền tảng Sinh cơ học cho Sức mạnh, Thời điểm và Độ chính xác</p>
+  <div class="cover-rule"></div>
+  <div class="cover-meta">Sinh cơ học · Chuỗi Động học · Kỹ thuật Hiệu suất Cao</div>
+</div>
+
+<!-- ═══════════════════════════════ PAGE BODY ═══════════════════════════════ -->
+<div class="page">
+
+<!-- TOC -->
+<div class="chapter-header" style="margin-top:3rem;">
+  <div class="chapter-num">Mục lục</div>
+  <h1 class="section">Nội dung Cẩm nang</h1>
+</div>
+<ol>
+  <li>Tổng quan và Phạm vi Ứng dụng</li>
+  <li>Nền tảng Sinh cơ học — Chu kỳ Kéo-Rút Đàn hồi (SSC)</li>
+  <li>Nguyên lý Tam Duỗi Cổ điển — Phần Dưới Cơ thể</li>
+  <li>Nguyên lý Tam Duỗi Cánh Tay — Lý thuyết Đầy đủ</li>
+  <li>Cơ chế Hệ thống Đàn hồi Ba Khớp Tại Điểm Tiếp Xúc</li>
+  <li>So sánh: Cánh Tay Đàn hồi vs. Cánh Tay Cứng</li>
+  <li>Điểm Tiếp xúc Bóng — Yêu cầu Kết cấu</li>
+  <li>Chuỗi Động học — Tích hợp Toàn thân</li>
+  <li>Ứng dụng trong Forehand</li>
+  <li>Ứng dụng trong Serve (Giao Bóng)</li>
+  <li>Quy trình Huấn luyện — Các bước Vận hành</li>
+  <li>Lỗi Phổ biến và Phương án Khắc phục</li>
+  <li>Tóm tắt Nguyên lý Thống nhất</li>
+</ol>
+
+<!-- ═══════ CHAPTER 1 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 01</div>
+  <h1 class="section">Tổng quan và Phạm vi Ứng dụng</h1>
+</div>
+
+<p>Cẩm nang này trình bày một lý thuyết sinh cơ học toàn diện về cơ chế tạo lực trong tennis: <strong>Nguyên lý Tam Duỗi của Cánh Tay Đánh Bóng</strong>. Lý thuyết này xác định rằng cổ tay, khuỷu tay và vai — khi được căn chỉnh đồng trục với hướng bóng và duy trì trạng thái căng cơ chủ động — tạo thành một hệ thống lò xo ba điểm có khả năng hấp thụ, lưu trữ và hoàn trả năng lượng đàn hồi trong khoảnh khắc tiếp xúc bóng.</p>
+
+<p>Đây không phải lý thuyết phong cách. Đây là mô tả cơ học của một nguyên lý mà cơ thể con người đã sử dụng nhất quán trong mọi chuyển động bùng nổ — từ nhảy cao, chạy nước rút, cử tạ Olympic cho đến cú đánh forehand và giao bóng trong tennis.</p>
+
+<h2>1.1 Đối tượng Áp dụng</h2>
+<ul>
+  <li>Vận động viên tennis từ trung cấp đến ưu tú (từ 3.5 NTRP trở lên)</li>
+  <li>Huấn luyện viên tennis chứng nhận tìm kiếm nền tảng sinh cơ học vững chắc</li>
+  <li>Nhà phân tích hiệu suất và chuyên gia y học thể thao</li>
+  <li>Các chuyên gia phục hồi chức năng làm việc với chấn thương vai và khuỷu tay liên quan đến tennis</li>
+</ul>
+
+<h2>1.2 Phạm vi của Cẩm nang</h2>
+<p>Tài liệu này bao gồm: nền tảng sinh cơ học lý thuyết, mô tả cơ chế khớp chi tiết, so sánh có cấu trúc với các mô hình kỹ thuật thay thế, quy trình huấn luyện vận hành từng bước, và các cue huấn luyện cụ thể có thể áp dụng ngay trên sân.</p>
+
+<div class="principle-box">
+  <div class="label">Nguyên lý Cốt lõi</div>
+  <p>Cánh tay đánh bóng trong tennis thực thi <strong>tam duỗi phần trên</strong> — cổ tay, khuỷu tay và vai — vận hành qua cùng cơ chế chu kỳ kéo-rút đàn hồi điều khiển tam duỗi phần dưới trong mọi chuyển động bùng nổ. Điểm cuối — duỗi hoàn toàn — không phải là khoảnh khắc tạo lực; đó là dấu vết còn lại <strong>sau khi lực đã đi qua.</strong></p>
+</div>
+
+<!-- ILLUSTRATION 1 -->
+<div class="illustration">
+  <svg width="820" height="200" viewBox="0 0 820 200">
+    <!-- Timeline of force event -->
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#b5451b"/>
+      </marker>
+    </defs>
+    <!-- Timeline bar -->
+    <rect x="40" y="95" width="740" height="6" rx="3" fill="#d4c9b0"/>
+    <!-- Phases -->
+    <rect x="40" y="80" width="160" height="36" rx="3" fill="#2c3e50" opacity="0.15"/>
+    <rect x="240" y="72" width="180" height="52" rx="3" fill="#b5451b" opacity="0.18"/>
+    <rect x="470" y="80" width="160" height="36" rx="3" fill="#1a5c2a" opacity="0.15"/>
+    <rect x="680" y="85" width="100" height="26" rx="3" fill="#c8992a" opacity="0.2"/>
+    <!-- Labels -->
+    <text x="120" y="70" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="1">NẠP LỰC</text>
+    <text x="330" y="62" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#b5451b" letter-spacing="1" font-weight="600">TIẾP XÚC BÓNG</text>
+    <text x="550" y="70" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#1a5c2a" letter-spacing="1">HOÀN TRẢ LỰC</text>
+    <text x="730" y="78" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#c8992a" letter-spacing="1">FOLLOW</text>
+    <!-- Sub-labels -->
+    <text x="120" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#6b5e4e" font-style="italic">Khớp nạp lò xo</text>
+    <text x="330" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#b5451b" font-style="italic">Hệ thống đàn hồi hoạt động</text>
+    <text x="550" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#1a5c2a" font-style="italic">Năng lượng đàn hồi giải phóng</text>
+    <text x="730" y="148" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#6b5e4e" font-style="italic">Duỗi hoàn toàn</text>
+    <!-- dots -->
+    <circle cx="40" cy="98" r="5" fill="#2c3e50"/>
+    <circle cx="200" cy="98" r="5" fill="#b5451b"/>
+    <circle cx="420" cy="98" r="5" fill="#b5451b"/>
+    <circle cx="630" cy="98" r="5" fill="#1a5c2a"/>
+    <circle cx="780" cy="98" r="5" fill="#c8992a"/>
+    <!-- Vertical lines -->
+    <line x1="200" y1="60" x2="200" y2="136" stroke="#b5451b" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="420" y1="60" x2="420" y2="136" stroke="#b5451b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </svg>
+  <div class="illustration-caption">Hình 1.1 — Dòng thời gian sự kiện tiếp xúc bóng: Duỗi hoàn toàn xảy ra trong giai đoạn follow-through, KHÔNG phải tại điểm tiếp xúc</div>
+</div>
+
+<!-- ═══════ CHAPTER 2 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 02</div>
+  <h1 class="section">Nền tảng Sinh cơ học</h1>
+</div>
+
+<h2>2.1 Chu kỳ Kéo-Rút Đàn hồi (SSC)</h2>
+<p>Chu kỳ Kéo-Rút Đàn hồi (<em>Stretch-Shortening Cycle</em> — SSC) là cơ chế sinh cơ học nền tảng nhất trong chuyển động bùng nổ của con người. Nó mô tả sự tương tác ba pha giữa các đơn vị cơ-gân trong quá trình tạo lực:</p>
+
+<ol class="steps">
+  <li><strong>Pha Kéo giãn (Eccentric):</strong> Cơ được kéo dài dưới tải trọng. Các đơn vị gân đàn hồi (titin, collagen gân) lưu trữ năng lượng đàn hồi như một lò xo bị nén.</li>
+  <li><strong>Pha Ghép nối (Amortization):</strong> Giai đoạn chuyển tiếp ngắn giữa kéo giãn và co rút. Tốc độ của pha này quyết định hiệu quả truyền năng lượng — pha ghép nối quá dài làm tiêu tán năng lượng dưới dạng nhiệt.</li>
+  <li><strong>Pha Co rút (Concentric):</strong> Năng lượng đàn hồi được giải phóng kết hợp với co cơ chủ động, tạo ra lực đầu ra vượt trội so với co cơ đơn thuần.</li>
+</ol>
+
+<div class="key-term">
+  <strong>Định nghĩa then chốt:</strong> SSC không phải là "nới lỏng rồi bật" — đó là một trạng thái căng liên tục có kiểm soát trong đó năng lượng được lưu trữ và giải phóng theo trình tự chính xác. Mất kiểm soát ở bất kỳ pha nào sẽ phá vỡ chuỗi.
+</div>
+
+<h2>2.2 Khái niệm Độ cứng Đàn hồi</h2>
+<p>Trong sinh cơ học, <strong>độ cứng đàn hồi</strong> (<em>elastic stiffness</em>) mô tả khả năng của một hệ thống cơ-khớp vừa hấp thụ lực vừa hoàn trả lực một cách hiệu quả. Hệ thống tối ưu không phải là cứng nhắc (rigid) cũng không phải mềm nhũn (flaccid) — mà là <strong>cứng có kiểm soát</strong> (<em>controlled stiffness</em>):</p>
+
+<ul>
+  <li><strong>Quá cứng (rigid):</strong> Không có biên dạng đàn hồi. Lực truyền thẳng — không có đệm, không có hoàn trả. Khớp và gân chịu tải trực tiếp.</li>
+  <li><strong>Quá mềm (flaccid):</strong> Năng lượng bị tiêu tán hoàn toàn. Không có hoàn trả. Không có truyền lực hiệu quả.</li>
+  <li><strong>Cứng tối ưu (optimal stiffness):</strong> Đủ biên dạng để lưu trữ năng lượng đàn hồi; đủ cứng để hoàn trả nhanh và chính xác.</li>
+</ul>
+
+<!-- ILLUSTRATION 2 -->
+<div class="illustration">
+  <svg width="780" height="220" viewBox="0 0 780 220">
+    <!-- Three stiffness states -->
+    <!-- RIGID -->
+    <rect x="30" y="30" width="200" height="160" rx="4" fill="#fff9ed" stroke="#d4c9b0" stroke-width="1"/>
+    <text x="130" y="20" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#8b1c1c" letter-spacing="1">QUÁ CỨNG</text>
+    <!-- Rigid spring (compressed straight line) -->
+    <line x1="80" y1="80" x2="80" y2="160" stroke="#8b1c1c" stroke-width="3"/>
+    <line x1="80" y1="80" x2="180" y2="80" stroke="#8b1c1c" stroke-width="2.5"/>
+    <line x1="180" y1="80" x2="180" y2="160" stroke="#8b1c1c" stroke-width="3"/>
+    <text x="130" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#8b1c1c" font-style="italic">Lực truyền thẳng</text>
+    <text x="130" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#8b1c1c" font-style="italic">Không có hoàn trả</text>
+
+    <!-- OPTIMAL -->
+    <rect x="280" y="30" width="220" height="160" rx="4" fill="#f0fff4" stroke="#1a5c2a" stroke-width="2"/>
+    <text x="390" y="20" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#1a5c2a" letter-spacing="1">ĐỘ CỨNG TỐI ƯU</text>
+    <!-- Coil spring -->
+    <path d="M350,80 Q330,90 350,100 Q370,110 350,120 Q330,130 350,140 Q370,150 350,160" 
+          fill="none" stroke="#1a5c2a" stroke-width="3"/>
+    <path d="M430,80 Q450,90 430,100 Q410,110 430,120 Q450,130 430,140 Q410,150 430,160" 
+          fill="none" stroke="#1a5c2a" stroke-width="3"/>
+    <line x1="350" y1="80" x2="430" y2="80" stroke="#1a5c2a" stroke-width="2.5"/>
+    <line x1="350" y1="160" x2="430" y2="160" stroke="#1a5c2a" stroke-width="2.5"/>
+    <text x="390" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a5c2a" font-style="italic">Lưu trữ + hoàn trả</text>
+    <text x="390" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a5c2a" font-style="italic">năng lượng đàn hồi</text>
+
+    <!-- FLACCID -->
+    <rect x="550" y="30" width="200" height="160" rx="4" fill="#fff9ed" stroke="#d4c9b0" stroke-width="1"/>
+    <text x="650" y="20" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#8b1c1c" letter-spacing="1">QUÁ MỀM</text>
+    <!-- Wavy/limp line -->
+    <path d="M600,80 Q610,100 620,80 Q630,60 640,80 Q650,100 660,80 Q670,60 680,80 Q690,100 700,80" 
+          fill="none" stroke="#c8992a" stroke-width="3"/>
+    <line x1="600" y1="80" x2="600" y2="160" stroke="#c8992a" stroke-width="2.5"/>
+    <line x1="700" y1="80" x2="700" y2="160" stroke="#c8992a" stroke-width="2.5"/>
+    <text x="650" y="185" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#8b1c1c" font-style="italic">Năng lượng tiêu tán</text>
+    <text x="650" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#8b1c1c" font-style="italic">Không truyền lực</text>
+
+    <!-- Arrow between optimal and others -->
+    <text x="255" y="115" text-anchor="middle" font-size="22" fill="#b5451b">✗</text>
+    <text x="525" y="115" text-anchor="middle" font-size="22" fill="#b5451b">✗</text>
+    <text x="390" y="55" text-anchor="middle" font-size="16" fill="#1a5c2a">✓</text>
+  </svg>
+  <div class="illustration-caption">Hình 2.1 — Ba trạng thái độ cứng đàn hồi. Hệ thống tối ưu nằm giữa cứng nhắc và mềm nhũn</div>
+</div>
+
+<!-- ═══════ CHAPTER 3 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 03</div>
+  <h1 class="section">Nguyên lý Tam Duỗi Cổ điển — Phần Dưới Cơ thể</h1>
+</div>
+
+<p>Tam Duỗi (<em>Triple Extension</em>) là khái niệm đã được thiết lập vững chắc trong khoa học sức mạnh và điều kiện thể lực. Nó mô tả sự duỗi đồng thời hoặc tuần tự của ba khớp dưới: <strong>mắt cá chân, đầu gối và hông</strong> — tạo ra lực đầu ra tối đa vào mặt đất.</p>
+
+<h2>3.1 Ba Khớp Phần Dưới</h2>
+<div class="joint-grid">
+  <div class="joint-card">
+    <div class="joint-name">Mắt Cá Chân</div>
+    <div class="joint-vi">Ankle Joint</div>
+    <p>Gập lòng bàn chân (plantarflexion) — cơ bắp chân (gastrocnemius, soleus) lưu trữ và giải phóng năng lượng đàn hồi. Điểm tiếp xúc cuối cùng với mặt đất.</p>
+  </div>
+  <div class="joint-card">
+    <div class="joint-name">Đầu Gối</div>
+    <div class="joint-vi">Knee Joint</div>
+    <p>Duỗi đầu gối qua cơ tứ đầu — bộ đệm chính trong pha nạp lực. Độ gập tối ưu 20-40° cung cấp biên dạng đàn hồi tối đa.</p>
+  </div>
+  <div class="joint-card">
+    <div class="joint-name">Hông</div>
+    <div class="joint-vi">Hip Joint</div>
+    <p>Duỗi hông qua cơ mông (gluteus maximus) và gân kheo — nguồn lực lớn nhất trong chuỗi. Khởi tạo xung lực từ gốc của chuỗi động học.</p>
+  </div>
+</div>
+
+<h2>3.2 Cơ chế Hoạt động</h2>
+<p>Trong động tác nhảy đứng thẳng: vận động viên không khóa cứng đầu gối trước khi rời mặt đất — sự duỗi <em>là</em> chính pha giải phóng. Vị trí duỗi hoàn toàn xuất hiện ở đỉnh cao của cú nhảy, <em>sau khi</em> lực đã được thể hiện. Điều tương tự xảy ra trong giao bóng, sprint và cử tạ Olympic.</p>
+
+<!-- ILLUSTRATION 3 -->
+<div class="illustration">
+  <svg width="760" height="280" viewBox="0 0 760 280">
+    <!-- Lower body triple extension diagram -->
+    <!-- Phase 1: Loaded -->
+    <g transform="translate(80,20)">
+      <text x="60" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="1">NẠP LỰC</text>
+      <!-- Body stick figure - bent -->
+      <!-- Torso -->
+      <line x1="60" y1="40" x2="60" y2="100" stroke="#2c3e50" stroke-width="3"/>
+      <!-- Head -->
+      <circle cx="60" cy="30" r="12" fill="none" stroke="#2c3e50" stroke-width="2.5"/>
+      <!-- Hip -->
+      <circle cx="60" cy="100" r="5" fill="#b5451b"/>
+      <!-- Left thigh - bent -->
+      <line x1="60" y1="100" x2="40" y2="160" stroke="#2c3e50" stroke-width="3"/>
+      <!-- Left knee -->
+      <circle cx="40" cy="160" r="5" fill="#b5451b"/>
+      <!-- Left shin -->
+      <line x1="40" y1="160" x2="55" y2="220" stroke="#2c3e50" stroke-width="3"/>
+      <!-- Left ankle -->
+      <circle cx="55" cy="220" r="5" fill="#b5451b"/>
+      <!-- Left foot -->
+      <line x1="55" y1="220" x2="30" y2="240" stroke="#2c3e50" stroke-width="3"/>
+      <!-- Right thigh -->
+      <line x1="60" y1="100" x2="80" y2="160" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="80" y1="160" x2="65" y2="220" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="65" y1="220" x2="90" y2="240" stroke="#2c3e50" stroke-width="2"/>
+      <!-- Ground -->
+      <line x1="0" y1="245" x2="120" y2="245" stroke="#6b5e4e" stroke-width="2"/>
+      <!-- Angle indicators -->
+      <path d="M48,150 A12,12 0 0,1 52,168" fill="none" stroke="#b5451b" stroke-width="1.5"/>
+      <text x="25" y="168" font-size="10" fill="#b5451b" font-style="italic">~100°</text>
+      <path d="M52,95 A10,10 0 0,1 65,108" fill="none" stroke="#b5451b" stroke-width="1.5"/>
+    </g>
+
+    <!-- Arrow -->
+    <text x="200" y="145" font-size="28" fill="#b5451b">→</text>
+
+    <!-- Phase 2: Mid-extension (Contact equiv) -->
+    <g transform="translate(240,20)">
+      <text x="60" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#b5451b" letter-spacing="1" font-weight="600">GIẢI PHÓNG LỰC</text>
+      <line x1="60" y1="40" x2="60" y2="110" stroke="#b5451b" stroke-width="3"/>
+      <circle cx="60" cy="30" r="12" fill="none" stroke="#b5451b" stroke-width="2.5"/>
+      <circle cx="60" cy="110" r="5" fill="#b5451b"/>
+      <line x1="60" y1="110" x2="45" y2="175" stroke="#b5451b" stroke-width="3"/>
+      <circle cx="45" cy="175" r="5" fill="#b5451b"/>
+      <line x1="45" y1="175" x2="52" y2="235" stroke="#b5451b" stroke-width="3"/>
+      <circle cx="52" cy="235" r="5" fill="#b5451b"/>
+      <line x1="52" y1="235" x2="35" y2="245" stroke="#b5451b" stroke-width="3"/>
+      <line x1="60" y1="110" x2="75" y2="175" stroke="#b5451b" stroke-width="2"/>
+      <line x1="75" y1="175" x2="68" y2="235" stroke="#b5451b" stroke-width="2"/>
+      <line x1="68" y1="235" x2="85" y2="245" stroke="#b5451b" stroke-width="2"/>
+      <line x1="0" y1="245" x2="120" y2="245" stroke="#6b5e4e" stroke-width="2"/>
+      <!-- Upward force arrow -->
+      <line x1="60" y1="40" x2="60" y2="5" stroke="#1a5c2a" stroke-width="2.5" marker-end="url(#arr2)"/>
+    </g>
+
+    <!-- Arrow -->
+    <text x="400" y="145" font-size="28" fill="#b5451b">→</text>
+
+    <!-- Phase 3: Full extension -->
+    <g transform="translate(440,20)">
+      <text x="60" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#1a5c2a" letter-spacing="1">DUỖI HOÀN TOÀN</text>
+      <line x1="60" y1="40" x2="60" y2="110" stroke="#1a5c2a" stroke-width="3"/>
+      <circle cx="60" cy="30" r="12" fill="none" stroke="#1a5c2a" stroke-width="2.5"/>
+      <circle cx="60" cy="110" r="5" fill="#1a5c2a"/>
+      <!-- Straight legs -->
+      <line x1="60" y1="110" x2="52" y2="190" stroke="#1a5c2a" stroke-width="3"/>
+      <circle cx="52" cy="190" r="5" fill="#1a5c2a"/>
+      <line x1="52" y1="190" x2="52" y2="245" stroke="#1a5c2a" stroke-width="3"/>
+      <circle cx="52" cy="245" r="5" fill="#1a5c2a"/>
+      <line x1="60" y1="110" x2="68" y2="190" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="68" y1="190" x2="68" y2="245" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="0" y1="245" x2="120" y2="245" stroke="#6b5e4e" stroke-width="2"/>
+      <!-- Height arrow -->
+      <line x1="100" y1="30" x2="100" y2="245" stroke="#c8992a" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="108" y="140" font-size="11" fill="#c8992a" font-style="italic">cao độ</text>
+    </g>
+
+    <!-- Labels -->
+    <text x="145" y="268" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#6b5e4e" font-style="italic">Khớp nạp lò xo</text>
+    <text x="305" y="268" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#b5451b" font-style="italic">Lực đã đi qua</text>
+    <text x="505" y="268" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#1a5c2a" font-style="italic">Sau khi lực biểu hiện</text>
+
+    <defs>
+      <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#1a5c2a"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="illustration-caption">Hình 3.1 — Ba pha của Tam Duỗi Phần Dưới. Đầu gối và hông đạt duỗi hoàn toàn SAU khi lực rời mặt đất, không phải tại thời điểm tạo lực</div>
+</div>
+
+<!-- ═══════ CHAPTER 4 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 04</div>
+  <h1 class="section">Nguyên lý Tam Duỗi Cánh Tay — Lý thuyết Đầy đủ</h1>
+</div>
+
+<p>Đây là sự mở rộng nhất quán của cùng một nguyên lý sinh cơ học lên chi trên. Cánh tay đánh bóng trong tennis thực thi một phiên bản tam duỗi chính xác — <strong>cổ tay, khuỷu tay và vai</strong> — thay thế tương ứng cho mắt cá chân, đầu gối và hông.</p>
+
+<h2>4.1 Bảng Đối chiếu Hai Hệ Thống</h2>
+<table class="compare-table">
+  <tr>
+    <th>Vai trò Cơ học</th>
+    <th>Chi Dưới</th>
+    <th>Chi Trên (Cánh Tay Đánh)</th>
+  </tr>
+  <tr>
+    <td>Khớp Gốc (Proximal)</td>
+    <td>Hông — Tạo xung lực lớn nhất qua cơ mông</td>
+    <td>Vai — Nhận xung lực từ chuỗi động học; xoay trong tạo tốc độ</td>
+  </tr>
+  <tr>
+    <td>Khớp Giữa (Middle)</td>
+    <td>Đầu Gối — Bộ đệm chính; lưu trữ năng lượng đàn hồi lớn nhất</td>
+    <td>Khuỷu Tay — Nút hấp thụ lực chính; cơ hai đầu/ba đầu căng đàn hồi</td>
+  </tr>
+  <tr>
+    <td>Khớp Đầu (Distal)</td>
+    <td>Mắt Cá Chân — Giao diện với mặt đất; điểm cuối chuỗi</td>
+    <td>Cổ Tay — Điểm tiếp xúc cuối; co cơ duỗi/gập căng sơ khai</td>
+  </tr>
+  <tr>
+    <td>Điểm Giao diện Lực</td>
+    <td>Bàn chân → Mặt đất</td>
+    <td>Vợt/Cổ Tay → Bóng</td>
+  </tr>
+  <tr>
+    <td>Nguồn Lực Đầu vào</td>
+    <td>Trọng lực + Phản lực mặt đất</td>
+    <td>Chuỗi động học (chân → hông → thân → vai)</td>
+  </tr>
+  <tr>
+    <td>Vị trí Duỗi Hoàn toàn</td>
+    <td>Đỉnh cao nhảy / giai đoạn tháo chân</td>
+    <td>Follow-through — SAU khi bóng đã rời khỏi vợt</td>
+  </tr>
+</table>
+
+<h2>4.2 Chi tiết Ba Khớp Phần Trên</h2>
+
+<h3>4.2.1 Cổ Tay — Khớp Đầu Cuối</h3>
+<p>Cổ tay được giữ ở tư thế trung lập đến duỗi nhẹ (<em>neutral-to-slight extension</em>) với sự co cơ đồng thời của cơ gập và duỗi cổ tay. Trạng thái này:</p>
+<ul>
+  <li>Tạo ra lực căng sơ khai kích hoạt SSC tại khớp cổ tay</li>
+  <li>Ngăn chặn sự sụp đổ bị động dưới tải trọng tiếp xúc bóng</li>
+  <li>Cho phép động tác quét cổ tay và úp sấp cẳng tay (<em>pronation</em>) diễn ra <em>qua</em> pha hoàn trả, không phải trước nó</li>
+  <li>Duy trì căn chỉnh véc-tơ giữa vợt và bóng</li>
+</ul>
+
+<h3>4.2.2 Khuỷu Tay — Nút Hấp thụ Chính</h3>
+<p>Khuỷu tay duy trì ở góc duỗi một phần — <strong>không khóa cứng hoàn toàn</strong>. Đây là yếu tố quan trọng nhất trong toàn bộ cơ chế vì:</p>
+<ul>
+  <li>Cơ hai đầu (biceps brachii) và cơ cánh tay (brachialis) phía trước, kết hợp với cơ ba đầu (triceps) phía sau, tạo ra co cơ đối kháng (<em>co-contraction</em>) duy trì trạng thái căng đàn hồi</li>
+  <li>Khuỷu tay trong trạng thái này hoạt động như giảm chấn chính: hấp thụ lực va chạm từ bóng qua biến dạng đàn hồi của các đơn vị cơ-gân</li>
+  <li>Năng lượng hấp thụ được lưu trữ và hoàn trả vào bóng trong giai đoạn rebound</li>
+  <li>Kéo dài thời gian tiếp xúc bóng-dây (<em>dwell time</em>), tăng cửa sổ tạo xung lực</li>
+</ul>
+
+<h3>4.2.3 Vai — Khớp Nhận và Truyền Lực</h3>
+<p>Vai được định vị phía trước ngực (<em>anterior to the chest</em>), với cơ delta trước (<em>anterior deltoid</em>) và phức hợp cơ vòng bít (<em>rotator cuff</em>) duy trì ổn định động thay vì khóa tĩnh. Điều này:</p>
+<ul>
+  <li>Đặt khớp vai vào tầm hoạt động tối ưu cho truyền lực</li>
+  <li>Cho phép xoay trong (<em>internal rotation</em>) đóng góp vận tốc đầu cuối</li>
+  <li>Duy trì căn chỉnh véc-tơ của cột lò xo ba khớp</li>
+  <li>Phân phối tải trọng tiếp xúc qua bề mặt khớp thích hợp, giảm nguy cơ chấn thương</li>
+</ul>
+
+<!-- ILLUSTRATION 4 -->
+<div class="illustration">
+  <svg width="780" height="320" viewBox="0 0 780 320">
+    <!-- ARM triple extension diagram -->
+    <!-- Arm from shoulder to wrist, side view -->
+    <!-- Labels on left -->
+    <text x="15" y="80" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="0.5">VAI</text>
+    <text x="15" y="165" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="0.5">KHUỶU</text>
+    <text x="15" y="250" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="0.5">CỔ TAY</text>
+
+    <!-- WRONG ARM (stiff/locked) -->
+    <g transform="translate(80,20)">
+      <text x="90" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8b1c1c">CÁNH TAY CỨNG</text>
+      <text x="90" y="28" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8b1c1c">(SAI)</text>
+      <!-- Straight arm -->
+      <circle cx="90" cy="60" r="14" fill="none" stroke="#8b1c1c" stroke-width="2.5"/>
+      <text x="90" y="64" text-anchor="middle" font-size="9" fill="#8b1c1c">VAI</text>
+      <line x1="90" y1="74" x2="90" y2="150" stroke="#8b1c1c" stroke-width="4"/>
+      <circle cx="90" cy="150" r="12" fill="none" stroke="#8b1c1c" stroke-width="2.5"/>
+      <text x="90" y="154" text-anchor="middle" font-size="8" fill="#8b1c1c">KHUỶU</text>
+      <line x1="90" y1="162" x2="90" y2="235" stroke="#8b1c1c" stroke-width="4"/>
+      <circle cx="90" cy="235" r="12" fill="none" stroke="#8b1c1c" stroke-width="2.5"/>
+      <text x="90" y="239" text-anchor="middle" font-size="8" fill="#8b1c1c">CỔ TAY</text>
+      <line x1="90" y1="247" x2="90" y2="270" stroke="#8b1c1c" stroke-width="3"/>
+      <!-- Ball -->
+      <circle cx="90" cy="285" r="15" fill="#e8e0d0" stroke="#8b1c1c" stroke-width="2"/>
+      <!-- Force arrows - only one direction -->
+      <line x1="120" y1="285" x2="150" y2="285" stroke="#8b1c1c" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="160" y="289" font-size="10" fill="#8b1c1c">Lực một chiều</text>
+      <!-- X mark -->
+      <text x="75" y="120" font-size="24" fill="#8b1c1c">✗</text>
+    </g>
+
+    <!-- Center gap with labels -->
+    <line x1="250" y1="40" x2="250" y2="305" stroke="#d4c9b0" stroke-width="1" stroke-dasharray="6,4"/>
+
+    <!-- CORRECT ARM (elastic) -->
+    <g transform="translate(300,20)">
+      <text x="140" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a">CÁNH TAY ĐÀN HỒI</text>
+      <text x="140" y="28" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a">(ĐÚNG)</text>
+      <!-- Slightly bent arm -->
+      <circle cx="120" cy="60" r="14" fill="none" stroke="#1a5c2a" stroke-width="2.5"/>
+      <text x="120" y="64" text-anchor="middle" font-size="9" fill="#1a5c2a">VAI</text>
+      <!-- Upper arm angled -->
+      <line x1="120" y1="74" x2="130" y2="148" stroke="#1a5c2a" stroke-width="4"/>
+      <!-- Elbow -->
+      <circle cx="130" cy="148" r="14" fill="rgba(26,92,42,0.1)" stroke="#1a5c2a" stroke-width="2.5"/>
+      <text x="130" y="152" text-anchor="middle" font-size="8" fill="#1a5c2a">KHUỶU</text>
+      <!-- Lower arm angled other way -->
+      <line x1="130" y1="162" x2="150" y2="232" stroke="#1a5c2a" stroke-width="4"/>
+      <!-- Wrist -->
+      <circle cx="150" cy="232" r="12" fill="rgba(26,92,42,0.1)" stroke="#1a5c2a" stroke-width="2.5"/>
+      <text x="150" y="236" text-anchor="middle" font-size="8" fill="#1a5c2a">CỔ TAY</text>
+      <line x1="150" y1="244" x2="160" y2="268" stroke="#1a5c2a" stroke-width="3"/>
+      <!-- Ball -->
+      <circle cx="168" cy="283" r="15" fill="#e8e0d0" stroke="#1a5c2a" stroke-width="2"/>
+
+      <!-- Spring indicators at each joint -->
+      <!-- Elbow spring -->
+      <path d="M145,130 Q160,140 145,150 Q130,160 145,170" fill="none" stroke="#b5451b" stroke-width="2"/>
+      <text x="168" y="152" font-size="10" fill="#b5451b" font-style="italic">lò xo</text>
+
+      <!-- Wrist spring -->
+      <path d="M162,215 Q175,222 162,230 Q149,238 162,246" fill="none" stroke="#b5451b" stroke-width="2"/>
+
+      <!-- Shoulder spring indicator -->
+      <path d="M132,42 Q148,52 132,62" fill="none" stroke="#b5451b" stroke-width="2"/>
+
+      <!-- Bidirectional force arrows at ball -->
+      <line x1="158" y1="275" x2="140" y2="260" stroke="#c8992a" stroke-width="2" stroke-dasharray="3,2"/>
+      <line x1="178" y1="275" x2="196" y2="260" stroke="#1a5c2a" stroke-width="2.5"/>
+      <text x="200" y="258" font-size="10" fill="#1a5c2a">Hoàn trả</text>
+      <text x="110" y="255" font-size="10" fill="#c8992a">Hấp thụ</text>
+
+      <!-- Correct checkmark -->
+      <text x="100" y="120" font-size="24" fill="#1a5c2a">✓</text>
+
+      <!-- Angle annotations -->
+      <text x="155" y="105" font-size="10" fill="#b5451b">~155°</text>
+      <text x="168" y="205" font-size="10" fill="#b5451b">~160°</text>
+    </g>
+  </svg>
+  <div class="illustration-caption">Hình 4.1 — So sánh cánh tay cứng (sai) và cánh tay đàn hồi tam duỗi (đúng). Các lò xo biểu thị căng cơ-gân chủ động tại mỗi khớp</div>
+</div>
+
+<!-- ═══════ CHAPTER 5 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 05</div>
+  <h1 class="section">Cơ chế Hệ thống Đàn hồi Ba Khớp Tại Điểm Tiếp Xúc</h1>
+</div>
+
+<p>Khoảnh khắc bóng tiếp xúc dây vợt kéo dài khoảng 4–6 mili-giây. Trong khoảng thời gian cực ngắn này, toàn bộ cơ chế tam duỗi đàn hồi vận hành qua bốn giai đoạn liên tục:</p>
+
+<h2>5.1 Bốn Giai đoạn của Sự kiện Tiếp xúc Đàn hồi</h2>
+
+<ol class="steps">
+  <li>
+    <div>
+      <strong>Căn chỉnh Véc-tơ (Pre-contact):</strong> Ba khớp được định vị trên cùng một trục hướng về bóng, mỗi khớp đang duy trì căng cơ chủ động. Cột lò xo được thiết lập nhưng chưa chịu tải. Đây là pha "chuẩn bị lò xo."
+    </div>
+  </li>
+  <li>
+    <div>
+      <strong>Tải Đàn hồi (Loading — 0 đến ~2ms):</strong> Lực bóng tác động vào hệ thống. Ba khớp hơi xẹp vào — nhỏ, có kiểm soát, đàn hồi — phân phối tải trọng va chạm qua ba nút song song. Năng lượng đàn hồi được lưu trữ đồng thời trong các đơn vị cơ-gân của cả ba khớp.
+    </div>
+  </li>
+  <li>
+    <div>
+      <strong>Hoàn trả Đàn hồi (Rebound — ~2 đến ~5ms):</strong> Năng lượng lưu trữ được giải phóng tuần tự theo hướng gần-xa (<em>proximal-to-distal</em>): vai → khuỷu → cổ tay. Mỗi khớp bổ sung năng lượng vào sóng lực đang truyền về phía bóng. Pha này cộng hưởng với năng lượng swing sẵn có từ chuỗi động học.
+    </div>
+  </li>
+  <li>
+    <div>
+      <strong>Giải phóng và Follow-through (Post-contact):</strong> Bóng rời vợt. Ba khớp tiếp tục duỗi hoàn toàn trong follow-through — đây không phải nguồn lực, mà là kết quả tất yếu của pha hoàn trả đang tiếp diễn. Cánh tay đạt duỗi hoàn toàn sau khi bóng đã đi.
+    </div>
+  </li>
+</ol>
+
+<!-- ILLUSTRATION 5 -->
+<div class="illustration">
+  <svg width="780" height="200" viewBox="0 0 780 200">
+    <defs>
+      <marker id="arw" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+        <polygon points="0 0, 7 2.5, 0 5" fill="#b5451b"/>
+      </marker>
+      <marker id="arwg" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+        <polygon points="0 0, 7 2.5, 0 5" fill="#1a5c2a"/>
+      </marker>
+    </defs>
+
+    <!-- Timeline with 4 phases -->
+    <rect x="20" y="60" width="160" height="80" rx="3" fill="#f0f4ff" stroke="#2c3e50" stroke-width="1.5"/>
+    <rect x="210" y="50" width="160" height="100" rx="3" fill="#fff0ee" stroke="#b5451b" stroke-width="2"/>
+    <rect x="400" y="50" width="160" height="100" rx="3" fill="#f0fff4" stroke="#1a5c2a" stroke-width="2"/>
+    <rect x="590" y="60" width="160" height="80" rx="3" fill="#fffbf0" stroke="#c8992a" stroke-width="1.5"/>
+
+    <!-- Phase labels -->
+    <text x="100" y="80" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#2c3e50" letter-spacing="0.5">GIAI ĐOẠN 1</text>
+    <text x="100" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#2c3e50" font-weight="600">Căn chỉnh</text>
+    <text x="100" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e" font-style="italic">Véc-tơ</text>
+    <text x="100" y="125" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">Pre-contact</text>
+
+    <text x="290" y="70" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#b5451b" letter-spacing="0.5">GIAI ĐOẠN 2</text>
+    <text x="290" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b5451b" font-weight="600">Tải Đàn hồi</text>
+    <text x="290" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e" font-style="italic">Loading</text>
+    <text x="290" y="113" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#b5451b">0 → ~2ms</text>
+    <text x="290" y="133" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e">Lưu trữ năng lượng</text>
+
+    <text x="480" y="70" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a" letter-spacing="0.5">GIAI ĐOẠN 3</text>
+    <text x="480" y="83" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#1a5c2a" font-weight="600">Hoàn trả</text>
+    <text x="480" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e" font-style="italic">Rebound</text>
+    <text x="480" y="113" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a">~2 → ~5ms</text>
+    <text x="480" y="133" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e">Giải phóng tuần tự</text>
+
+    <text x="670" y="80" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8992a" letter-spacing="0.5">GIAI ĐOẠN 4</text>
+    <text x="670" y="93" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#c8992a" font-weight="600">Follow-through</text>
+    <text x="670" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e" font-style="italic">Post-contact</text>
+    <text x="670" y="125" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6b5e4e">Duỗi hoàn toàn</text>
+
+    <!-- Connecting arrows -->
+    <line x1="185" y1="100" x2="205" y2="100" stroke="#b5451b" stroke-width="2" marker-end="url(#arw)"/>
+    <line x1="375" y1="100" x2="395" y2="100" stroke="#b5451b" stroke-width="2" marker-end="url(#arw)"/>
+    <line x1="565" y1="100" x2="585" y2="100" stroke="#1a5c2a" stroke-width="2" marker-end="url(#arwg)"/>
+
+    <!-- Ball contact zone indicator -->
+    <rect x="200" y="170" width="340" height="22" rx="2" fill="rgba(181,69,27,0.1)" stroke="#b5451b" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="370" y="185" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#b5451b" letter-spacing="1">VÙNG TIẾP XÚC BÓNG (~4-6ms)</text>
+  </svg>
+  <div class="illustration-caption">Hình 5.1 — Bốn giai đoạn của sự kiện tiếp xúc đàn hồi. Toàn bộ cơ chế tam duỗi vận hành trong khoảng 4–6 mili-giây</div>
+</div>
+
+<!-- ═══════ CHAPTER 6 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 06</div>
+  <h1 class="section">So sánh: Cánh Tay Đàn hồi vs. Cánh Tay Cứng</h1>
+</div>
+
+<table class="compare-table">
+  <tr>
+    <th>Tiêu chí</th>
+    <th>Cánh Tay Đàn hồi (Tam Duỗi)</th>
+    <th>Cánh Tay Cứng (Khóa Duỗi)</th>
+  </tr>
+  <tr>
+    <td><strong>Cơ chế tại tiếp xúc</strong></td>
+    <td class="pos">Hệ thống lò xo ba khớp — hấp thụ và hoàn trả</td>
+    <td class="neg">Đòn bẩy cứng một đoạn — truyền lực trực tiếp</td>
+  </tr>
+  <tr>
+    <td><strong>Lưu trữ năng lượng đàn hồi</strong></td>
+    <td class="pos">Cao — lưu trữ đồng thời tại 3 đơn vị cơ-gân</td>
+    <td class="neg">Không — lực phân tán qua cấu trúc cứng</td>
+  </tr>
+  <tr>
+    <td><strong>Cửa sổ thời điểm</strong></td>
+    <td class="pos">Rộng — cơ chế đệm tạo biên dạng lỗi</td>
+    <td class="neg">Hẹp — tiếp xúc sớm/muộn tạo lỗi lớn</td>
+  </tr>
+  <tr>
+    <td><strong>Truyền lực từ chuỗi động học</strong></td>
+    <td class="pos">Hoàn chỉnh — đầu cuối đàn hồi khép chuỗi</td>
+    <td class="neg">Gián đoạn — đầu cuối cứng phá vỡ chuỗi tại vai</td>
+  </tr>
+  <tr>
+    <td><strong>Tải trọng lên khớp vai</strong></td>
+    <td class="pos">Phân phối qua 3 khớp — thấp hơn đáng kể</td>
+    <td class="neg">Tập trung toàn bộ tại vai — nguy cơ chấn thương cao</td>
+  </tr>
+  <tr>
+    <td><strong>Đóng góp vào tốc độ bóng</strong></td>
+    <td class="pos">Tốc độ swing + hoàn trả đàn hồi</td>
+    <td class="neg">Chỉ tốc độ swing</td>
+  </tr>
+  <tr>
+    <td><strong>Xử lý tiếp xúc lệch tâm</strong></td>
+    <td class="pos">Có khả năng bù đắp — cơ chế đệm hoạt động</td>
+    <td class="neg">Khuếch đại lỗi — không có cơ chế bù đắp</td>
+  </tr>
+  <tr>
+    <td><strong>Vị trí duỗi hoàn toàn</strong></td>
+    <td class="pos">Follow-through — sau khi bóng đã rời vợt</td>
+    <td class="neg">Tại điểm tiếp xúc — sai về sinh cơ học</td>
+  </tr>
+</table>
+
+<!-- ═══════ CHAPTER 7 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 07</div>
+  <h1 class="section">Điểm Tiếp xúc Bóng — Yêu cầu Kết cấu</h1>
+</div>
+
+<p>Cơ chế tam duỗi đàn hồi <strong>chỉ vận hành chính xác khi cánh tay ở phía trước ngực</strong>. Đây không phải là lựa chọn phong cách hay thẩm mỹ — đây là điều kiện cấu trúc bắt buộc. Có hai lý do sinh cơ học:</p>
+
+<h2>7.1 Tầm Hoạt động Khớp và Khả năng Tạo Lực</h2>
+<p>Mỗi khớp có một tầm hoạt động (<em>range of motion</em>) trong đó nó có thể tạo ra và truyền lực tối đa — đây được gọi là <strong>tầm trung tối ưu</strong> (<em>mid-range optimal zone</em>). Khi cánh tay ở trước ngực:</p>
+<ul>
+  <li>Vai nằm trong tầm hoạt động trước (0–90° flexion) — khả năng tạo lực tối ưu của cơ delta trước và vòng bít</li>
+  <li>Khuỷu tay ở góc tầm trung (140–160°) — lý tưởng cho căng đàn hồi cơ hai đầu/ba đầu</li>
+  <li>Cổ tay ở trung lập đến duỗi nhẹ — tầm trung của cơ gập/duỗi cổ tay</li>
+</ul>
+<p>Khi cánh tay ở sau thân hoặc quá ngang người, ít nhất một trong ba khớp rơi ra khỏi tầm trung tối ưu, phá vỡ cột lò xo.</p>
+
+<h2>7.2 Căn chỉnh Trục Véc-tơ</h2>
+<p>Hướng "trước ngực" căn chỉnh trục của cột lò xo ba khớp với hướng di chuyển của bóng. Khi cột đàn hồi căn chỉnh trên trục, năng lượng hoàn trả đi thẳng vào bóng. Khi trục lệch, năng lượng hoàn trả phân tán thành <strong>nhiễu xoay</strong> (<em>rotational noise</em>) thay vì lực tiến về phía trước.</p>
+
+<!-- ILLUSTRATION 6 -->
+<div class="illustration">
+  <svg width="780" height="200" viewBox="0 0 780 200">
+    <!-- Correct contact point -->
+    <g transform="translate(40,20)">
+      <text x="120" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a">ĐIỂM TIẾP XÚC ĐÚNG</text>
+      <!-- Body outline -->
+      <ellipse cx="80" cy="100" rx="40" ry="55" fill="none" stroke="#d4c9b0" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <circle cx="80" cy="35" r="14" fill="none" stroke="#2c3e50" stroke-width="2"/>
+      <!-- Arm in front -->
+      <line x1="80" y1="65" x2="120" y2="90" stroke="#1a5c2a" stroke-width="3"/>
+      <line x1="120" y1="90" x2="160" y2="115" stroke="#1a5c2a" stroke-width="3"/>
+      <circle cx="160" cy="115" r="14" fill="#e8e0d0" stroke="#1a5c2a" stroke-width="2"/>
+      <!-- Force arrow aligned -->
+      <line x1="174" y1="115" x2="215" y2="115" stroke="#1a5c2a" stroke-width="2.5" marker-end="url(#arwg2)"/>
+      <text x="220" y="119" font-family="Georgia,serif" font-size="11" fill="#1a5c2a" font-style="italic">Lực căn chỉnh</text>
+      <!-- Joint dots -->
+      <circle cx="80" cy="65" r="5" fill="#b5451b"/>
+      <circle cx="120" cy="90" r="5" fill="#b5451b"/>
+      <!-- checkmark -->
+      <text x="95" y="170" text-anchor="middle" font-size="20" fill="#1a5c2a">✓ Trước ngực</text>
+    </g>
+
+    <line x1="390" y1="20" x2="390" y2="185" stroke="#d4c9b0" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+    <!-- Wrong contact point - behind -->
+    <g transform="translate(430,20)">
+      <text x="120" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#8b1c1c">ĐIỂM TIẾP XÚC SAI</text>
+      <!-- Body outline -->
+      <ellipse cx="150" cy="100" rx="40" ry="55" fill="none" stroke="#d4c9b0" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <circle cx="150" cy="35" r="14" fill="none" stroke="#2c3e50" stroke-width="2"/>
+      <!-- Arm too far back -->
+      <line x1="150" y1="65" x2="100" y2="90" stroke="#8b1c1c" stroke-width="3"/>
+      <line x1="100" y1="90" x2="60" y2="120" stroke="#8b1c1c" stroke-width="3"/>
+      <circle cx="60" cy="120" r="14" fill="#e8e0d0" stroke="#8b1c1c" stroke-width="2"/>
+      <!-- Force arrow misaligned -->
+      <line x1="46" y1="115" x2="20" y2="100" stroke="#8b1c1c" stroke-width="2" stroke-dasharray="4,3"/>
+      <line x1="46" y1="125" x2="20" y2="140" stroke="#8b1c1c" stroke-width="2" stroke-dasharray="4,3"/>
+      <text x="10" y="122" text-anchor="end" font-family="Georgia,serif" font-size="10" fill="#8b1c1c" font-style="italic">Phân tán</text>
+      <!-- Joint dots -->
+      <circle cx="150" cy="65" r="5" fill="#8b1c1c"/>
+      <circle cx="100" cy="90" r="5" fill="#8b1c1c"/>
+      <!-- X mark -->
+      <text x="155" y="170" text-anchor="middle" font-size="20" fill="#8b1c1c">✗ Sau/bên thân</text>
+    </g>
+
+    <defs>
+      <marker id="arwg2" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+        <polygon points="0 0, 7 2.5, 0 5" fill="#1a5c2a"/>
+      </marker>
+    </defs>
+  </svg>
+  <div class="illustration-caption">Hình 7.1 — Điểm tiếp xúc quyết định căn chỉnh véc-tơ. Chỉ khi cánh tay ở trước ngực, cột lò xo tam duỗi mới căn chỉnh với hướng bóng</div>
+</div>
+
+<!-- ═══════ CHAPTER 8 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 08</div>
+  <h1 class="section">Chuỗi Động học — Tích hợp Toàn thân</h1>
+</div>
+
+<p>Cánh tay tam duỗi đàn hồi là <strong>nút biểu hiện đầu cuối</strong> của chuỗi động học — không phải nguồn lực độc lập. Lực được tạo ra tại chân và hông, truyền qua thân, và đến cánh tay. Tam duỗi đàn hồi là điểm kết thúc mà chuỗi này hội tụ.</p>
+
+<h2>8.1 Trình tự Chuỗi Động học</h2>
+
+<ol class="steps">
+  <li><strong>Chân và Mặt đất:</strong> Phản lực mặt đất khởi tạo chuỗi. Tam duỗi phần dưới (mắt cá–đầu gối–hông) tạo ra lực nền tảng. Đây là nguồn lực gốc.</li>
+  <li><strong>Hông và Xoay:</strong> Xoay hông phát động lực ngang qua vùng lõi. Xoay đoạn gần (proximal segment rotation) tăng tốc cho đoạn xa tiếp theo.</li>
+  <li><strong>Thân Mình:</strong> Xoay thân bổ sung moment xoay. Sự kết hợp hông-thân tạo ra phần lớn tốc độ đầu vợt.</li>
+  <li><strong>Vai:</strong> Nhận xung lực từ thân; xoay trong vai (internal rotation) đóng góp giai đoạn tốc độ cuối.</li>
+  <li><strong>Tam Duỗi Đàn hồi (Cánh Tay):</strong> Nhận toàn bộ lực tích lũy từ chuỗi; lưu trữ, cộng hưởng và hoàn trả qua cơ chế ba khớp vào bóng.</li>
+</ol>
+
+<div class="warning">
+  <strong>⚠ Cảnh báo quan trọng:</strong> Lực trong tennis được tạo ra chủ yếu từ đoạn gần đến xa (proximal to distal): chân → hông → thân → vai → cánh tay. Cánh tay là <em>kênh truyền lực và bộ cộng hưởng đàn hồi</em>, không phải nguồn lực chính. Huấn luyện viên tập trung quá mức vào cơ học cánh tay mà bỏ qua chuỗi phía dưới sẽ bỏ lỡ 70–80% nguồn tốc độ.
+</div>
+
+<!-- ILLUSTRATION 7 -->
+<div class="illustration">
+  <svg width="780" height="180" viewBox="0 0 780 180">
+    <!-- Kinetic chain flow diagram -->
+    <defs>
+      <marker id="chain" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#2c3e50"/>
+      </marker>
+    </defs>
+    <!-- Nodes -->
+    <!-- Ground -->
+    <rect x="10" y="70" width="90" height="45" rx="3" fill="#2c3e50"/>
+    <text x="55" y="88" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff" letter-spacing="0.5">MẶT ĐẤT</text>
+    <text x="55" y="103" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.7)" font-style="italic">phản lực</text>
+
+    <line x1="105" y1="92" x2="130" y2="92" stroke="#2c3e50" stroke-width="2.5" marker-end="url(#chain)"/>
+
+    <!-- Legs -->
+    <rect x="135" y="65" width="90" height="55" rx="3" fill="#2c3e50" opacity="0.85"/>
+    <text x="180" y="85" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff">CHÂN</text>
+    <text x="180" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.7)" font-style="italic">tam duỗi dưới</text>
+    <text x="180" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#c8992a">★★★</text>
+
+    <line x1="230" y1="92" x2="255" y2="92" stroke="#2c3e50" stroke-width="2.5" marker-end="url(#chain)"/>
+
+    <!-- Hip -->
+    <rect x="260" y="65" width="90" height="55" rx="3" fill="#2c3e50" opacity="0.7"/>
+    <text x="305" y="85" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff">HÔNG</text>
+    <text x="305" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.7)" font-style="italic">xoay ngang</text>
+    <text x="305" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#c8992a">★★★</text>
+
+    <line x1="355" y1="92" x2="380" y2="92" stroke="#2c3e50" stroke-width="2.5" marker-end="url(#chain)"/>
+
+    <!-- Trunk -->
+    <rect x="385" y="65" width="90" height="55" rx="3" fill="#2c3e50" opacity="0.55"/>
+    <text x="430" y="85" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff">THÂN</text>
+    <text x="430" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.7)" font-style="italic">xoay đoạn</text>
+    <text x="430" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#c8992a">★★</text>
+
+    <line x1="480" y1="92" x2="505" y2="92" stroke="#2c3e50" stroke-width="2.5" marker-end="url(#chain)"/>
+
+    <!-- Shoulder -->
+    <rect x="510" y="60" width="90" height="65" rx="3" fill="#b5451b" opacity="0.8"/>
+    <text x="555" y="80" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff">VAI</text>
+    <text x="555" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">xoay trong</text>
+    <text x="555" y="113" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#fff">★★</text>
+
+    <line x1="605" y1="92" x2="630" y2="92" stroke="#b5451b" stroke-width="2.5" marker-end="url(#chain)"/>
+
+    <!-- Elastic arm -->
+    <rect x="635" y="45" width="130" height="95" rx="3" fill="#b5451b"/>
+    <text x="700" y="65" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff" letter-spacing="0.5">TAM DUỖI</text>
+    <text x="700" y="79" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#fff" letter-spacing="0.5">CÁNH TAY</text>
+    <text x="700" y="100" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">lưu trữ + hoàn trả</text>
+    <text x="700" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#c8992a">★ NÚT CUỐI</text>
+
+    <!-- Speed accumulation line -->
+    <path d="M55,155 Q305,145 700,130" fill="none" stroke="#c8992a" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="390" y="175" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8992a" letter-spacing="1">TÍCH LŨY TỐC ĐỘ ĐẦU VỢT →</text>
+  </svg>
+  <div class="illustration-caption">Hình 8.1 — Chuỗi động học từ mặt đất đến bóng. Tam duỗi cánh tay là nút biểu hiện cuối cùng, không phải nguồn lực</div>
+</div>
+
+<!-- ═══════ CHAPTER 9 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 09</div>
+  <h1 class="section">Ứng dụng trong Forehand</h1>
+</div>
+
+<h2>9.1 Pha Chuẩn bị (Backswing)</h2>
+<p>Trong pha backswing, ba khớp phải được đưa vào trạng thái <em>sẵn sàng đàn hồi</em> — không phải trạng thái cứng hay thư giãn hoàn toàn:</p>
+<ul>
+  <li><strong>Cổ tay:</strong> Gập nhẹ ra phía sau (<em>laid back</em>), duy trì căng cơ gập cổ tay — đây là pha "nạp lò xo" của cổ tay</li>
+  <li><strong>Khuỷu tay:</strong> Gập vừa phải (90–110°), cơ hai đầu và ba đầu ở trạng thái co đồng thời nhẹ</li>
+  <li><strong>Vai:</strong> Xoay ngoài (external rotation) với vai sau kéo ra sau — tạo ra tiền tải đàn hồi cho cơ vòng bít</li>
+</ul>
+
+<h2>9.2 Pha Swing Tiến (Forward Swing)</h2>
+<p>Chuỗi động học kích hoạt từ dưới lên. Khi cánh tay swing tiến về phía bóng, ba khớp duy trì cột lò xo:</p>
+<ul>
+  <li>Cánh tay tiếp cận điểm tiếp xúc với cột lò xo nguyên vẹn — không duỗi sớm trước tiếp xúc</li>
+  <li>Tốc độ swing di chuyển năng lượng động học đến điểm tiếp xúc</li>
+  <li>Cổ tay <em>chưa</em> snap — nó vẫn trong trạng thái sơ khai được nạp sẵn</li>
+</ul>
+
+<h2>9.3 Khoảnh khắc Tiếp xúc</h2>
+<p>Đây là trung tâm của toàn bộ lý thuyết. Tại điểm tiếp xúc trong forehand:</p>
+<ul>
+  <li>Ba khớp được <strong>căn chỉnh trước ngực</strong>, hướng về bóng, mỗi khớp ở góc tầm trung tối ưu</li>
+  <li>Mỗi khớp duy trì <strong>co cơ đối kháng chủ động</strong> — không khóa, không mềm</li>
+  <li>Lực bóng được hấp thụ qua cả ba khớp song song</li>
+  <li>Năng lượng đàn hồi tích lũy trong khoảng 2ms đầu tiên của tiếp xúc</li>
+  <li>Năng lượng được giải phóng tuần tự vai → khuỷu → cổ tay trong khoảng 2–5ms tiếp theo</li>
+</ul>
+<p>Cổ tay snap và pronation cẳng tay diễn ra <em>qua</em> pha hoàn trả này — chúng là biểu hiện của sự giải phóng năng lượng lưu trữ, không phải chuyển động riêng biệt thêm vào từ bên ngoài.</p>
+
+<h2>9.4 Follow-through</h2>
+<p>Sau khi bóng rời vợt, ba khớp tiếp tục duỗi hoàn toàn. Đây là giai đoạn mà nhiều huấn luyện viên nhầm lẫn với điểm tiếp xúc khi quan sát slow-motion. Cánh tay duỗi thẳng <em>vì</em> pha hoàn trả đã hoàn chỉnh, không phải để tạo ra lực.</p>
+
+<!-- ILLUSTRATION 8 -->
+<div class="illustration">
+  <svg width="780" height="200" viewBox="0 0 780 200">
+    <!-- Forehand sequence - 5 positions -->
+    <defs>
+      <marker id="seq" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+        <polygon points="0 0, 6 2.5, 0 5" fill="#6b5e4e"/>
+      </marker>
+    </defs>
+
+    <!-- Position labels -->
+    <text x="65" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">BACKSWING</text>
+    <text x="210" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">TIẾP CẬN</text>
+    <text x="375" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#b5451b" font-weight="600">TIẾP XÚC ★</text>
+    <text x="550" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#1a5c2a">REBOUND</text>
+    <text x="710" y="15" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="#c8992a">FOLLOW</text>
+
+    <!-- Silhouettes - simplified -->
+    <!-- BACKSWING -->
+    <g transform="translate(30,25)">
+      <circle cx="35" cy="18" r="10" fill="none" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="35" y1="28" x2="35" y2="80" stroke="#2c3e50" stroke-width="2.5"/>
+      <line x1="35" y1="45" x2="0" y2="70" stroke="#2c3e50" stroke-width="3"/>
+      <line x1="0" y1="70" x2="-15" y2="95" stroke="#2c3e50" stroke-width="3"/>
+      <line x1="35" y1="80" x2="20" y2="120" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="20" y1="120" x2="30" y2="155" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="35" y1="80" x2="50" y2="120" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="50" y1="120" x2="40" y2="155" stroke="#2c3e50" stroke-width="2"/>
+      <circle cx="0" cy="70" r="4" fill="#b5451b"/>
+      <circle cx="-15" cy="95" r="4" fill="#b5451b"/>
+      <!-- Racket back -->
+      <rect x="-28" y="88" width="18" height="28" rx="3" fill="none" stroke="#2c3e50" stroke-width="1.5" transform="rotate(-30,-19,102)"/>
+    </g>
+
+    <line x1="130" y1="100" x2="155" y2="100" stroke="#6b5e4e" stroke-width="1.5" marker-end="url(#seq)"/>
+
+    <!-- APPROACH -->
+    <g transform="translate(168,25)">
+      <circle cx="35" cy="18" r="10" fill="none" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="35" y1="28" x2="35" y2="80" stroke="#2c3e50" stroke-width="2.5"/>
+      <line x1="35" y1="45" x2="65" y2="65" stroke="#2c3e50" stroke-width="3"/>
+      <line x1="65" y1="65" x2="90" y2="85" stroke="#2c3e50" stroke-width="3"/>
+      <line x1="35" y1="80" x2="20" y2="120" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="20" y1="120" x2="30" y2="155" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="35" y1="80" x2="50" y2="120" stroke="#2c3e50" stroke-width="2"/>
+      <line x1="50" y1="120" x2="40" y2="155" stroke="#2c3e50" stroke-width="2"/>
+      <circle cx="65" cy="65" r="4" fill="#b5451b"/>
+      <circle cx="90" cy="85" r="4" fill="#b5451b"/>
+    </g>
+
+    <line x1="295" y1="100" x2="320" y2="100" stroke="#6b5e4e" stroke-width="1.5" marker-end="url(#seq)"/>
+
+    <!-- CONTACT - highlighted -->
+    <rect x="325" y="20" width="110" height="165" rx="3" fill="rgba(181,69,27,0.06)" stroke="#b5451b" stroke-width="1.5"/>
+    <g transform="translate(335,25)">
+      <circle cx="40" cy="18" r="10" fill="none" stroke="#b5451b" stroke-width="2.5"/>
+      <line x1="40" y1="28" x2="40" y2="80" stroke="#b5451b" stroke-width="2.5"/>
+      <line x1="40" y1="42" x2="70" y2="55" stroke="#b5451b" stroke-width="3.5"/>
+      <line x1="70" y1="55" x2="88" y2="75" stroke="#b5451b" stroke-width="3.5"/>
+      <line x1="40" y1="80" x2="25" y2="120" stroke="#b5451b" stroke-width="2"/>
+      <line x1="25" y1="120" x2="35" y2="155" stroke="#b5451b" stroke-width="2"/>
+      <line x1="40" y1="80" x2="55" y2="120" stroke="#b5451b" stroke-width="2"/>
+      <line x1="55" y1="120" x2="45" y2="155" stroke="#b5451b" stroke-width="2"/>
+      <circle cx="70" cy="55" r="6" fill="rgba(181,69,27,0.2)" stroke="#b5451b" stroke-width="2"/>
+      <circle cx="88" cy="75" r="6" fill="rgba(181,69,27,0.2)" stroke="#b5451b" stroke-width="2"/>
+      <!-- Ball -->
+      <circle cx="100" cy="80" r="12" fill="#e8e0d0" stroke="#b5451b" stroke-width="2"/>
+      <!-- Spring symbols -->
+      <text x="75" y="38" font-size="12" fill="#b5451b">⟲</text>
+    </g>
+
+    <line x1="445" y1="100" x2="470" y2="100" stroke="#6b5e4e" stroke-width="1.5" marker-end="url(#seq)"/>
+
+    <!-- REBOUND -->
+    <g transform="translate(478,25)">
+      <circle cx="35" cy="18" r="10" fill="none" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="35" y1="28" x2="35" y2="80" stroke="#1a5c2a" stroke-width="2.5"/>
+      <line x1="35" y1="42" x2="65" y2="52" stroke="#1a5c2a" stroke-width="3"/>
+      <line x1="65" y1="52" x2="92" y2="65" stroke="#1a5c2a" stroke-width="3"/>
+      <line x1="35" y1="80" x2="22" y2="120" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="22" y1="120" x2="32" y2="155" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="35" y1="80" x2="48" y2="120" stroke="#1a5c2a" stroke-width="2"/>
+      <line x1="48" y1="120" x2="38" y2="155" stroke="#1a5c2a" stroke-width="2"/>
+      <!-- Ball departing -->
+      <circle cx="108" cy="62" r="10" fill="#e8e0d0" stroke="#1a5c2a" stroke-width="1.5" opacity="0.6"/>
+      <line x1="105" y1="58" x2="125" y2="48" stroke="#1a5c2a" stroke-width="1.5" stroke-dasharray="3,2"/>
+    </g>
+
+    <line x1="620" y1="100" x2="645" y2="100" stroke="#6b5e4e" stroke-width="1.5" marker-end="url(#seq)"/>
+
+    <!-- FOLLOW-THROUGH -->
+    <g transform="translate(648,25)">
+      <circle cx="35" cy="18" r="10" fill="none" stroke="#c8992a" stroke-width="2"/>
+      <line x1="35" y1="28" x2="35" y2="80" stroke="#c8992a" stroke-width="2.5"/>
+      <line x1="35" y1="42" x2="60" y2="42" stroke="#c8992a" stroke-width="3"/>
+      <line x1="60" y1="42" x2="100" y2="48" stroke="#c8992a" stroke-width="3"/>
+      <line x1="35" y1="80" x2="22" y2="125" stroke="#c8992a" stroke-width="2"/>
+      <line x1="22" y1="125" x2="30" y2="155" stroke="#c8992a" stroke-width="2"/>
+      <line x1="35" y1="80" x2="48" y2="125" stroke="#c8992a" stroke-width="2"/>
+      <line x1="48" y1="125" x2="38" y2="155" stroke="#c8992a" stroke-width="2"/>
+      <!-- Fully extended arm note -->
+      <text x="70" y="68" font-family="Georgia,serif" font-size="9" fill="#c8992a" font-style="italic">Duỗi hoàn toàn</text>
+      <text x="70" y="80" font-family="Georgia,serif" font-size="9" fill="#c8992a" font-style="italic">sau tiếp xúc</text>
+    </g>
+  </svg>
+  <div class="illustration-caption">Hình 9.1 — Chuỗi năm vị trí trong forehand. Cánh tay đạt duỗi hoàn toàn tại pha follow-through, không phải tại điểm tiếp xúc</div>
+</div>
+
+<!-- ═══════ CHAPTER 10 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 10</div>
+  <h1 class="section">Ứng dụng trong Serve (Giao Bóng)</h1>
+</div>
+
+<p>Trong giao bóng, cơ chế tam duỗi đàn hồi vận hành với một sự khác biệt quan trọng về cấu trúc: chuyển động chính là <strong>xoay trong vai, duỗi khuỷu tay và úp sấp cẳng tay</strong> (<em>internal rotation, elbow extension, forearm pronation</em>) — không phải swing ngang như forehand. Tuy nhiên, nguyên lý lò xo ba khớp là hoàn toàn giống nhau.</p>
+
+<h2>10.1 Pha Trophy Position (Nạp Lực)</h2>
+<p>Tại vị trí trophy:</p>
+<ul>
+  <li><strong>Vai:</strong> Xoay ngoài tối đa — cơ vòng bít được kéo giãn sang pha eccentric, tích lũy năng lượng đàn hồi</li>
+  <li><strong>Khuỷu tay:</strong> Gập khoảng 90° — được nạp sẵn cho pha duỗi tạo lực</li>
+  <li><strong>Cổ tay:</strong> Ngả ra sau (<em>laid back</em>) — cơ gập cổ tay trong trạng thái kéo giãn eccentric, sẵn sàng snap</li>
+</ul>
+
+<h2>10.2 Khoảnh khắc Tiếp xúc trong Serve</h2>
+<p>Tại tiếp xúc giao bóng, trình tự giải phóng năng lượng xảy ra cực kỳ nhanh:</p>
+<ol class="steps">
+  <li><strong>Duỗi khuỷu tay:</strong> Khuỷu tay "snap" ra từ 90° về ~160° — cơ ba đầu tạo lực chính, đưa vợt lên vùng tiếp xúc với vận tốc cao</li>
+  <li><strong>Xoay trong vai:</strong> Vai xoay trong đồng thời với duỗi khuỷu — thêm vận tốc góc vào tốc độ đầu vợt</li>
+  <li><strong>Úp sấp cổ tay và cẳng tay:</strong> Cổ tay snap và cẳng tay úp sấp — pha cuối tạo thêm tốc độ đầu vợt và kiểm soát hướng bóng</li>
+</ol>
+
+<div class="note">
+  <strong>💡 Lưu ý quan trọng:</strong> Trong serve, khuỷu tay <em>đang</em> duỗi ra tại thời điểm tiếp xúc (moving toward extension) — không phải đứng yên ở tầm trung như trong forehand. Tuy nhiên, cơ chế đàn hồi vẫn vận hành: năng lượng được lưu trữ trong pha trophy và giải phóng qua pha duỗi. Đây là SSC hoạt động dưới dạng chuyển động hướng tâm (concentric release) thay vì dạng hấp thụ tĩnh (isometric absorption) như trong forehand.
+</div>
+
+<!-- ILLUSTRATION 9 -->
+<div class="illustration">
+  <svg width="780" height="220" viewBox="0 0 780 220">
+    <!-- Serve sequence -->
+    <text x="390" y="15" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="14" fill="#2c3e50" font-weight="700">Chuỗi Tam Duỗi trong Giao Bóng</text>
+
+    <!-- Joint angle chart -->
+    <!-- Y axis: angle degrees -->
+    <line x1="60" y1="30" x2="60" y2="180" stroke="#2c3e50" stroke-width="1.5"/>
+    <line x1="60" y1="180" x2="760" y2="180" stroke="#2c3e50" stroke-width="1.5"/>
+
+    <!-- Y axis labels -->
+    <text x="50" y="35" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">180°</text>
+    <text x="50" y="80" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">135°</text>
+    <text x="50" y="130" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">90°</text>
+    <text x="50" y="180" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b5e4e">45°</text>
+
+    <!-- Grid lines -->
+    <line x1="60" y1="80" x2="760" y2="80" stroke="#d4c9b0" stroke-width="0.75" stroke-dasharray="3,3"/>
+    <line x1="60" y1="130" x2="760" y2="130" stroke="#d4c9b0" stroke-width="0.75" stroke-dasharray="3,3"/>
+
+    <!-- X axis phases -->
+    <text x="150" y="198" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6b5e4e">CHUẨN BỊ</text>
+    <text x="310" y="198" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#6b5e4e">TROPHY</text>
+    <text x="470" y="198" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#b5451b" font-weight="600">TIẾP XÚC</text>
+    <text x="630" y="198" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="#1a5c2a">FOLLOW</text>
+
+    <!-- Vertical phase line -->
+    <line x1="470" y1="28" x2="470" y2="180" stroke="#b5451b" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+    <!-- Elbow angle curve: 160° prep → 90° trophy → snap to 165° contact → 175° follow -->
+    <path d="M80,42 C130,42 190,42 230,125 C270,130 330,130 390,130 C410,130 430,75 470,50 C510,35 560,36 640,38 C690,38 730,37 760,36"
+          fill="none" stroke="#b5451b" stroke-width="2.5"/>
+
+    <!-- Shoulder rotation curve: ext rotation loading → rapid internal rotation through contact -->
+    <path d="M80,80 C130,80 190,72 230,60 C270,48 330,42 390,42 C420,42 440,60 470,90 C500,118 560,145 640,155 C690,160 730,162 760,163"
+          fill="none" stroke="#1a5c2a" stroke-width="2.5"/>
+
+    <!-- Wrist snap curve -->
+    <path d="M80,100 C130,102 190,108 230,140 C270,155 330,158 390,158 C420,158 445,145 470,80 C495,42 540,38 600,36 C650,35 710,35 760,34"
+          fill="none" stroke="#c8992a" stroke-width="2"/>
+
+    <!-- Legend -->
+    <line x1="80" y1="210" x2="110" y2="210" stroke="#b5451b" stroke-width="2.5"/>
+    <text x="115" y="213" font-family="Georgia,serif" font-size="10" fill="#b5451b">Khuỷu tay</text>
+    <line x1="220" y1="210" x2="250" y2="210" stroke="#1a5c2a" stroke-width="2.5"/>
+    <text x="255" y="213" font-family="Georgia,serif" font-size="10" fill="#1a5c2a">Xoay vai</text>
+    <line x1="360" y1="210" x2="390" y2="210" stroke="#c8992a" stroke-width="2"/>
+    <text x="395" y="213" font-family="Georgia,serif" font-size="10" fill="#c8992a">Cổ tay snap</text>
+  </svg>
+  <div class="illustration-caption">Hình 10.1 — Biểu đồ góc ba khớp trong giao bóng. Khuỷu tay và cổ tay giải phóng năng lượng nhanh nhất tại thời điểm tiếp xúc bóng</div>
+</div>
+
+<!-- ═══════ CHAPTER 11 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 11</div>
+  <h1 class="section">Quy trình Huấn luyện — Các bước Vận hành</h1>
+</div>
+
+<h2>11.1 Giai đoạn 1 — Nhận thức Khớp (Tuần 1–2)</h2>
+<p>Mục tiêu: Vận động viên có thể cảm nhận và kiểm soát trạng thái căng của từng khớp riêng biệt.</p>
+<ol class="steps">
+  <li><strong>Bài tập cô lập cổ tay:</strong> Giữ vợt, duỗi cổ tay ra phía sau 20°, co đồng thời cơ gập và duỗi cổ tay. Cảm nhận "căng cứng có kiểm soát." Giữ 5 giây × 10 lần. Mục tiêu: phân biệt giữa cổ tay căng-có-kiểm-soát và cổ tay khóa-cứng.</li>
+  <li><strong>Bài tập khuỷu tay:</strong> Cầm vợt, khuỷu tay ở 150°. Co đồng thời cơ hai đầu và ba đầu. Dùng tay còn lại ấn nhẹ vào cẳng tay — khuỷu tay không được di chuyển nhưng cũng không cứng tuyệt đối. Mục tiêu: độ cứng đàn hồi có kiểm soát.</li>
+  <li><strong>Bài tập vai:</strong> Cánh tay trước ngực, 90° flexion. Cơ delta trước và vòng bít co chủ động. Kiểm tra: người hỗ trợ ấn nhẹ vai xuống — vai giữ vị trí nhưng có biên dạng nhỏ. Đây là trạng thái mục tiêu.</li>
+  <li><strong>Tích hợp ba khớp:</strong> Kết hợp ba trạng thái trên đồng thời với cánh tay trước ngực, hướng về một điểm trên tường. Giữ 10 giây và quan sát sự ổn định của cột.</li>
+</ol>
+
+<h2>11.2 Giai đoạn 2 — Huấn luyện Cơ chế Đàn hồi (Tuần 3–4)</h2>
+<ol class="steps">
+  <li><strong>Bài tập "bắt bóng bằng vợt":</strong> Người hỗ trợ tung bóng chậm. Vận động viên dùng vợt "bắt" bóng — mục tiêu là để bóng ép nhẹ vào dây và dừng lại. Cảm nhận ba khớp hấp thụ lực bóng. Đây là pha loading của SSC trong thực tế.</li>
+  <li><strong>Bài tập "ép và hoàn trả":</strong> Tiếp tục từ bài tập bắt bóng — sau khi bóng dừng, đẩy ngược bóng ra bằng hoàn trả đàn hồi, không thêm swing. Nếu bóng bay ra với lực đáng kể, cơ chế hoàn trả đang hoạt động.</li>
+  <li><strong>Bài tập tường chậm:</strong> Đánh bóng vào tường ở khoảng cách 2m với tốc độ chậm. Tập trung hoàn toàn vào việc cảm nhận khoảnh khắc "hấp thụ + hoàn trả" tại mỗi lần tiếp xúc. Điểm tiếp xúc phải ở trước ngực trong suốt bài tập.</li>
+  <li><strong>Kiểm tra điểm tiếp xúc:</strong> Gắn băng dính màu lên ngực áo tại điểm giữa xương ức. Trong mọi lần tiếp xúc bóng, cổ tay phải nằm phía trước đường thẳng qua điểm băng dính này.</li>
+</ol>
+
+<h2>11.3 Giai đoạn 3 — Tích hợp Chuỗi Động học (Tuần 5–8)</h2>
+<ol class="steps">
+  <li><strong>Huấn luyện "chạm đất–tiếp xúc":</strong> Mỗi cú đánh bắt đầu bằng đẩy chân xuống đất. Tập trung vào cảm giác lực từ mặt đất truyền lên qua chuỗi đến cánh tay. Cánh tay là "đầu nhận" của chuỗi.</li>
+  <li><strong>Bài tập kháng lực vai:</strong> Người hỗ trợ cầm band kháng lực gắn vào vai. Vận động viên thực hiện forehand đầy đủ trong khi kháng lực kéo vai về sau. Bài tập này buộc chuỗi động học tham gia thay vì chỉ dùng cánh tay.</li>
+  <li><strong>Video slow-motion:</strong> Quay cú đánh ở 120fps hoặc cao hơn. Xác định chính xác pha duỗi hoàn toàn so với pha tiếp xúc. Nếu cánh tay đạt duỗi hoàn toàn tại tiếp xúc, cơ chế đàn hồi chưa vận hành.</li>
+  <li><strong>Bài tập nhịp điệu:</strong> Đánh loạt 20 bóng với nhịp đều. Mục tiêu: cảm giác "nảy" nhất quán tại mỗi tiếp xúc — cảm giác này là dấu hiệu hoàn trả đàn hồi đang hoạt động.</li>
+</ol>
+
+<h2>11.4 Cue Huấn luyện Ngôn ngữ — Danh sách Nhanh</h2>
+<div class="two-col">
+  <div>
+    <h4>Cue Hiệu quả (Dùng)</h4>
+    <ul>
+      <li>"Cánh tay như lò xo nạp sẵn"</li>
+      <li>"Hấp thụ bóng, sau đó bật trở lại"</li>
+      <li>"Bóng chạm vợt trước ngực"</li>
+      <li>"Cảm giác nảy — đừng đẩy"</li>
+      <li>"Khuỷu tay mềm mại, không khóa"</li>
+      <li>"Duỗi hoàn toàn sau bóng, không tại bóng"</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Cue Kém hiệu quả (Tránh)</h4>
+    <ul>
+      <li class="neg">"Duỗi thẳng cánh tay ra"</li>
+      <li class="neg">"Đẩy qua bóng"</li>
+      <li class="neg">"Khóa cứng cổ tay"</li>
+      <li class="neg">"Cánh tay thẳng tại tiếp xúc"</li>
+      <li class="neg">"Giữ chắc không rung"</li>
+      <li class="neg">"Khuỷu tay thẳng hơn"</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════ CHAPTER 12 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 12</div>
+  <h1 class="section">Lỗi Phổ biến và Phương án Khắc phục</h1>
+</div>
+
+<table class="compare-table">
+  <tr>
+    <th>Lỗi</th>
+    <th>Biểu hiện Quan sát</th>
+    <th>Nguyên nhân Cơ học</th>
+    <th>Cách Khắc phục</th>
+  </tr>
+  <tr>
+    <td><strong>Khóa khuỷu tay tại tiếp xúc</strong></td>
+    <td>Cánh tay hoàn toàn thẳng ngay lúc chạm bóng; âm thanh tiếp xúc khô, cứng</td>
+    <td>Mất cơ chế đệm khuỷu; lực truyền trực tiếp vào vai; mất hoàn trả đàn hồi</td>
+    <td>Bài tập "bắt bóng bằng vợt"; cue "khuỷu tay nhún nhẹ"; video so sánh</td>
+  </tr>
+  <tr>
+    <td><strong>Tiếp xúc phía sau hoặc ngang người</strong></td>
+    <td>Thân xoay quá sớm; bóng đi chậm bất thường dù swing nhanh</td>
+    <td>Trục véc-tơ lệch; năng lượng đàn hồi phân tán thành nhiễu xoay; chuỗi bị ngắt</td>
+    <td>Băng dính đánh dấu điểm tiếp xúc; bài tập tường; cue "bóng trước xương ức"</td>
+  </tr>
+  <tr>
+    <td><strong>Cổ tay snap sớm (trước tiếp xúc)</strong></td>
+    <td>Mất kiểm soát hướng bóng; bóng thường vào lưới hoặc ra ngoài</td>
+    <td>Cổ tay giải phóng năng lượng trước khi hệ thống ba khớp căn chỉnh; mất cơ chế cộng hưởng</td>
+    <td>Bài tập giữ cổ tay trung lập cho đến tiếp xúc; cue "cổ tay snap SAU khi bóng chạm dây"</td>
+  </tr>
+  <tr>
+    <td><strong>Cánh tay hoàn toàn thụ động</strong></td>
+    <td>Âm thanh bóng "lụp" thay vì "bốp"; tốc độ bóng thấp dù chuỗi động học tốt</td>
+    <td>Không có co cơ đối kháng — cơ chế đàn hồi không thể vận hành trong hệ thống mềm nhũn</td>
+    <td>Bài tập kháng lực cổ tay và khuỷu tay; cue "căng cứng có kiểm soát — không phải thư giãn"</td>
+  </tr>
+  <tr>
+    <td><strong>Bỏ qua chuỗi động học phía dưới</strong></td>
+    <td>Cơ chế cánh tay tốt nhưng tốc độ bóng không đáng kể; nhanh chóng mệt mỏi</td>
+    <td>Cánh tay đàn hồi không có lực đầu vào đủ mạnh từ chuỗi phía dưới — hệ thống đàn hồi không có gì để cộng hưởng</td>
+    <td>Tập trung huấn luyện tam duỗi phần dưới; bài tập "chạm đất–tiếp xúc"; sprint tennis</td>
+  </tr>
+</table>
+
+<!-- ═══════ CHAPTER 13 ═══════ -->
+<div class="chapter-header">
+  <div class="chapter-num">Chương 13</div>
+  <h1 class="section">Tóm tắt Nguyên lý Thống nhất</h1>
+</div>
+
+<!-- FINAL ILLUSTRATION -->
+<div class="illustration">
+  <svg width="780" height="260" viewBox="0 0 780 260">
+    <!-- Unified principle diagram -->
+    <text x="390" y="25" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="16" fill="#2c3e50" font-weight="700">Nguyên lý Thống nhất: Tam Duỗi Đàn hồi</text>
+
+    <!-- Lower body column -->
+    <g transform="translate(50,45)">
+      <rect x="0" y="0" width="270" height="195" rx="4" fill="rgba(44,62,80,0.04)" stroke="#2c3e50" stroke-width="1.5"/>
+      <text x="135" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#2c3e50" letter-spacing="1">CHI DƯỚI</text>
+      <!-- Three joint boxes -->
+      <rect x="15" y="33" width="240" height="40" rx="3" fill="#2c3e50" opacity="0.8"/>
+      <text x="135" y="49" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Hông</text>
+      <text x="135" y="65" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp gốc — tạo xung lực chính</text>
+      <rect x="15" y="83" width="240" height="40" rx="3" fill="#2c3e50" opacity="0.6"/>
+      <text x="135" y="99" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Đầu Gối</text>
+      <text x="135" y="115" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp giữa — bộ đệm đàn hồi chính</text>
+      <rect x="15" y="133" width="240" height="40" rx="3" fill="#2c3e50" opacity="0.4"/>
+      <text x="135" y="149" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Mắt Cá Chân</text>
+      <text x="135" y="165" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp đầu — giao diện với mặt đất</text>
+    </g>
+
+    <!-- Equals / same principle arrow -->
+    <text x="370" y="145" text-anchor="middle" font-size="30" fill="#b5451b">=</text>
+    <text x="370" y="165" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b5451b" font-style="italic">Cùng nguyên lý</text>
+
+    <!-- Upper body column -->
+    <g transform="translate(410,45)">
+      <rect x="0" y="0" width="270" height="195" rx="4" fill="rgba(181,69,27,0.04)" stroke="#b5451b" stroke-width="1.5"/>
+      <text x="135" y="22" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="10" fill="#b5451b" letter-spacing="1">CHI TRÊN (CÁNH TAY)</text>
+      <!-- Three joint boxes -->
+      <rect x="15" y="33" width="240" height="40" rx="3" fill="#b5451b" opacity="0.8"/>
+      <text x="135" y="49" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Vai</text>
+      <text x="135" y="65" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp gốc — nhận + xoay trong</text>
+      <rect x="15" y="83" width="240" height="40" rx="3" fill="#b5451b" opacity="0.6"/>
+      <text x="135" y="99" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Khuỷu Tay</text>
+      <text x="135" y="115" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp giữa — nút hấp thụ + hoàn trả</text>
+      <rect x="15" y="133" width="240" height="40" rx="3" fill="#b5451b" opacity="0.4"/>
+      <text x="135" y="149" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff">Cổ Tay</text>
+      <text x="135" y="165" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.7)">Khớp đầu — giao diện với bóng</text>
+    </g>
+
+    <!-- Shared principle box -->
+    <rect x="50" y="250" width="680" height="0" fill="none"/>
+  </svg>
+  <div class="illustration-caption">Hình 13.1 — Nguyên lý Thống nhất: Cùng một cơ chế tam duỗi đàn hồi vận hành trong cả hai chi. Chỉ giao diện lực thay đổi (mặt đất vs. bóng)</div>
+</div>
+
+<div class="principle-box">
+  <div class="label">Phát biểu Nguyên lý Thống nhất — Cuối cùng</div>
+  <p>Cơ thể tạo ra và truyền lực qua <strong>cùng một cơ chế</strong> trong mọi chuyển động bùng nổ: ba khớp — được nạp dưới căng cơ, căn chỉnh theo véc-tơ lực, giải phóng tuần tự từ gần đến xa qua chu kỳ kéo-rút đàn hồi. Ở phần dưới cơ thể, đây là mắt cá chân, đầu gối và hông biểu hiện lực vào mặt đất. Ở cánh tay đánh bóng, đây là cổ tay, khuỷu tay và vai biểu hiện lực vào bóng. <strong>Điểm cuối — duỗi hoàn toàn — không phải khoảnh khắc tạo lực; đó là dấu vết còn lại sau khi lực đã đi qua.</strong></p>
+</div>
+
+<h2>13.1 Bảy Điểm Ghi nhớ Cốt lõi</h2>
+<ol>
+  <li><strong>Tam duỗi là nguyên lý phổ quát</strong> — không phải kỹ thuật riêng cho tennis. Cơ thể dùng nó khắp nơi.</li>
+  <li><strong>Đàn hồi, không cứng nhắc</strong> — ba khớp ở tầm trung tối ưu với co cơ đối kháng chủ động, không khóa.</li>
+  <li><strong>Cột lò xo phải căn chỉnh</strong> — tất cả chỉ vận hành khi cánh tay ở trước ngực, hướng về bóng.</li>
+  <li><strong>Tiếp xúc là sự kiện đàn hồi</strong> — hấp thụ và hoàn trả, không phải va chạm đơn thuần.</li>
+  <li><strong>Duỗi hoàn toàn = follow-through</strong> — sau bóng, không phải tại bóng. Nhầm điều này làm mất cơ chế.</li>
+  <li><strong>Cánh tay là nút cuối</strong> — lực đến từ chuỗi động học phía dưới. Không có chuỗi, không có lực để cộng hưởng.</li>
+  <li><strong>SSC vận hành qua ba pha</strong> — nạp (eccentric) → ghép nối → giải phóng (concentric). Mất bất kỳ pha nào, cơ chế đứt chuỗi.</li>
+</ol>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <span>Cẩm nang Kỹ thuật Huấn luyện Tennis — Nguyên lý Tam Duỗi</span>
+  <span>Phiên bản 1.0 · Sinh cơ học Hiệu suất Cao</span>
+</div>
+
+</div><!-- end .page -->
+</body>
+</html>
