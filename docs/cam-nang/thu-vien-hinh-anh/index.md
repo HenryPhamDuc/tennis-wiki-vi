@@ -554,7 +554,7 @@ Click thumbnail để mở trang detail (với ảnh full + zoom crops).
 
 ## 🔗 Tài nguyên liên quan / Related Resources
 
-- 📚 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)** — 35+ tài liệu tennis song ngữ
+- 📚 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis/)** — 35+ tài liệu tennis song ngữ
 - 📘 **[Tennis Manual (Master Reference v2)](https://henryphamduc.github.io/tennis/)** — 22 deep dives + cơ sinh học
 - 🤖 **[Tennis Doctor — AI Chat](https://tennis-doctor.henry-phamduc.workers.dev/)** — Hỏi đáp tennis bằng AI
 - 🎯 **[Cẩm nang Tennis (Wiki hub)](https://henryphamduc.github.io/tennis/)**
