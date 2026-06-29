@@ -17,7 +17,19 @@
 - [Modern Tennis Volley Handbook 2026](modern_tennis_volley_handbook_2026.md)
 - [Nghệ Thuật Hiện Đại Tennis](the_art_of_modern_tennis.md)
 - [The Art of Modern Tennis — A Complete Reference Manual](the-art-of-modern-tennis-a-complete-reference-manual-for-elite-players-and-coach.md)
-- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](#tai-xuong-ebook-ay-u-epub)
+- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](#tennis-ebook-thu-vien-hoan-chinh)
+
+### 🎾 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu) {#tennis-ebook-thu-vien-hoan-chinh}
+
+![Bìa ebook Tennis — Thư Viện Hoàn Chỉnh 35+ tài liệu](dl/cover.png){ width="280" loading=lazy }
+
+**Cẩm nang tennis toàn diện nhất** — tuyển tập **35+ tài liệu dài** về mọi mặt của quần vợt hiện đại: từ **cẩm nang tổng hợp**, **cơ sinh học & vận động học** (kinetic chain, GRF, wave theory), **forehand/backhand/serve/volley chuyên sâu** (phân tích 6 tay vợt đỉnh cao), đến **triết lý huấn luyện & chiến thuật** (70% Rule, 3-shot patterns, game management).
+
+Dành cho HLV và người chơi từ **3.5 → 5.0+** — bản tiếng Việt song song EN-VI, định dạng EPUB mở (đọc trên Calibre, Apple Books, Google Play Books, Kindle). Bao gồm toàn bộ nội dung của 3 vault riêng biệt (Base / Advanced / Elite) gộp vào một file duy nhất.
+
+*The most comprehensive tennis ebook — **35+ in-depth documents** covering everything from fundamentals to elite play: integrated manuals, biomechanics, stroke analysis, coaching philosophy, and tactics. Bilingual EN-VI, single EPUB file.*
+
+---
 
 ### 📥 Tải xuống Ebook đầy đủ (EPUB)
 
