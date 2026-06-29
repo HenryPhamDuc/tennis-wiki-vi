@@ -13,6 +13,8 @@
 > 🔬 **[Tennis Future Lab](https://henryphamduc.github.io/tennis-future-lab/)** — Khung sinh học + AI phân tích video. Upload video tennis của bạn → AI phân tích so với Federer.
 >
 > 🤖 **[AI Video Analyzer (HF Space)](https://huggingface.co/spaces/HenryPhamDuc/tennis-analyzer)** — Dùng thử app Gradio: video có chú thích + cheat sheet PDF + điểm 0-100 so với Roger Federer.
+>
+> 📖 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)** — 35+ tài liệu tennis được tuyển chọn trong một thư viện tiếng Việt có thể tìm kiếm: 11 deep-dive theo từng cú đánh (forehand, backhand, serve, volley, return, lob, slice family, doubles, grip, mental game, conditioning), cộng thêm Tennis Biomechanics 5.0, Tennis Game Management, và cẩm nang HLV nghiệp dư. Song ngữ EN/VI khi nguồn hỗ trợ. Duyệt theo chủ đề, tìm theo từ khóa, nhảy thẳng vào cú đánh bạn muốn sửa.
 
 ## 🕸️ Knowledge Graph
 
