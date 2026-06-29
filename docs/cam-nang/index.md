@@ -8,9 +8,8 @@
 
 ## Mục lục
 
-- **📕 Sách & Cẩm nang đầy đủ** (3 bài + 📥 [tải EPUB](#tai-xuong-ebook-ay-u-epub))
+- **📕 Sách & Cẩm nang đầy đủ** (4 bài + 📥 [tải EPUB](#tai-xuong-ebook-ay-u-epub))
 - **📘 Advanced Manual (Chapter-by-chapter)** (8 bài)
-- **📄 Trích đoạn Chương cụ thể** (4 bài)
 
 ---
 
@@ -19,6 +18,7 @@
 - [Modern Tennis Volley Handbook 2026](modern_tennis_volley_handbook_2026.md)
 - [Nghệ Thuật Hiện Đại Tennis](the_art_of_modern_tennis.md)
 - [The Art of Modern Tennis — A Complete Reference Manual](the-art-of-modern-tennis-a-complete-reference-manual-for-elite-players-and-coach.md)
+- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](#tai-xuong-ebook-ay-u-epub)
 
 ### 📥 Tải xuống Ebook đầy đủ (EPUB)
 
@@ -41,13 +41,6 @@
 - [Stroke Mechanics — Forehand, Backhand, Serve, Volley](advanced-manual-ch02-stroke-mechanics.md)
 - [Tactical Patterns & Match Strategy](advanced-manual-ch05-tactical-patterns.md)
 - [The Kinetic Chain & Biomechanical Foundations](advanced-manual-ch01-the-kinetic-chain.md)
-
-## 📄 Trích đoạn Chương cụ thể
-
-- [CHƯƠNG 3](chương-3.md)
-- [CHƯƠNG 5](chương-5.md)
-- [EQUIPMENT VÀ TECHNOLOGY](chuong-38.md)
-- [RECOVERY VÀ LONGEVITY](chuong-37.md)
 
 ---
 
