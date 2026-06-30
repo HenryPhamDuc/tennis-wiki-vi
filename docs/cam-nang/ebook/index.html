@@ -765,7 +765,7 @@
             <span class="doc-icon">📕</span>tennis_manual_bilingual <span class="doc-size">96 KB</span>
           </a>
           <a class="nav-item" data-doc="../tfl/nguyen-ly-tam-duoi-tennis.html" onclick="loadDoc('../tfl/nguyen-ly-tam-duoi-tennis.html', this)">
-            <span class="doc-icon">📕</span>Nguyên Lý Tam Duỗi (Triple Extension Principle) <span class="doc-size">87 KB</span>
+            <span class="doc-icon">📕</span>Nguyên Lý Tâm Đới Tennis <span class="doc-size">87 KB</span>
           </a>
           <a class="nav-item" data-doc="../tfl/racket_face_angle_research.html" onclick="loadDoc('../tfl/racket_face_angle_research.html', this)">
             <span class="doc-icon">📕</span>Racket Face Angle Research <span class="doc-size">36 KB</span>
@@ -787,7 +787,7 @@
     </div>
     <div class="iframe-wrap" id="iframeWrap">
       <div class="welcome" id="welcomeScreen">
-        <h1>🎾 Chào Mừng Đến Với Thư Viện Tennis</h1>
+        <h1>🎾 Chào Mừng Đến Với Tennis Ebook</h1>
         <p class="subtitle" style="color: var(--text-muted); font-style: italic; font-size: 1.1em;">
           Thư viện tennis hoàn chỉnh — 11 thư viện chuyên sâu + 35+ tài liệu nguồn
         </p>
@@ -878,7 +878,7 @@
           <li><strong>Navigation dễ</strong> — Click bất kỳ mục nào trong sidebar để đọc, "← Quay lại" để về tài liệu trước, "↗ Tab mới" để mở tab mới</li>
           <li><strong>Search</strong> — Gõ vào ô tìm kiếm để lọc nhanh tài liệu</li>
           <li><strong>Cross-link</strong> — Mỗi tài liệu có link đến các thư viện khác</li>
-          <li><strong>Offline-ready</strong> — Ebook này + 35 file HTML đã được lưu trong My notes + TFL Manuals, đọc hoàn toàn offline</li>
+          <li><strong>Offline-ready</strong> — Ebook này + 35 file HTML đã được lưu trong thư viện ebook + tfl, đọc hoàn toàn offline</li>
         </ul>
 
         <h2>📖 Cách Đọc Hiệu Quả</h2>
@@ -889,7 +889,10 @@
           <li><strong>In cheat sheet</strong> — Mỗi guide có phần "Quick Reference" có thể in ra mang ra sân</li>
         </ol>
 
-        </div>
+        <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9em;">
+          <strong>Ngày tạo</strong>: June 28, 2026 · <strong>Vị trí</strong>: docs/cam-nang/ebook/index.html
+        </p>
+      </div>
     </div>
   </main>
 
@@ -947,7 +950,7 @@
     }
     // Check if docPath resolves locally; if not, route to unavailable.html with the name
         fetch(docPath, { method: 'HEAD' }).then(r => {
-          const target = r.ok ? docPath : 'unavailable.html?doc=' + encodeURIComponent(docPath);
+          const target = r.ok ? docPath : 'https://henryphamduc.github.io/tennis/';
           iframe.src = target;
           // Update breadcrumb
           const docName = docPath.split('/').pop().replace('.html', '').replace(/-/g, ' ');
@@ -955,7 +958,7 @@
             ? `📍 <strong>${docName}</strong>`
             : `📍 <strong>${docName}</strong> <em style="color:#c0392b">(không có sẵn)</em>`;
         }).catch(() => {
-          iframe.src = 'unavailable.html?doc=' + encodeURIComponent(docPath);
+          iframe.src = 'https://henryphamduc.github.io/tennis/';
         });
       }
 
