@@ -16,7 +16,7 @@
 >
 > 🎨 **[Thư Viện Hình Ảnh Tennis (38 sơ đồ infographic)](cam-nang/thu-vien-hinh-anh/index.md)** — Tổng hợp 38 sơ đồ sinh học & chiến thuật tennis (forehand, backhand, serve, footwork, slice, nền tảng, chiến thuật) — mỗi sơ đồ có Vietnamese + English title + mô tả chi tiết. Click để xem ảnh đầy đủ.
 >
-> 📖 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis/tennis-wiki/cam-nang/ebook/)** — 35+ tài liệu tennis được tuyển chọn trong một thư viện tiếng Việt có thể tìm kiếm: 11 deep-dive theo từng cú đánh (forehand, backhand, serve, volley, return, lob, slice family, doubles, grip, mental game, conditioning), cộng thêm Tennis Biomechanics 5.0, Tennis Game Management, và cẩm nang HLV nghiệp dư. Song ngữ EN/VI khi nguồn hỗ trợ. Duyệt theo chủ đề, tìm theo từ khóa, nhảy thẳng vào cú đánh bạn muốn sửa.
+> 📖 **[Tennis Ebook — Thư Viện Hoàn Chỉnh](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)** — 35+ tài liệu tennis được tuyển chọn trong một thư viện tiếng Việt có thể tìm kiếm: 11 deep-dive theo từng cú đánh (forehand, backhand, serve, volley, return, lob, slice family, doubles, grip, mental game, conditioning), cộng thêm Tennis Biomechanics 5.0, Tennis Game Management, và cẩm nang HLV nghiệp dư. Song ngữ EN/VI khi nguồn hỗ trợ. Duyệt theo chủ đề, tìm theo từ khóa, nhảy thẳng vào cú đánh bạn muốn sửa.
 
 ## 🕸️ Knowledge Graph
 
