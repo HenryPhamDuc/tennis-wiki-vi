@@ -68,7 +68,6 @@ Dành cho HLV và người chơi từ **3.5 → 5.0+** — bản tiếng Việt 
 - **[Tennis Mastery](tfl/tennis_mastery.html)** — Hệ thống huấn luyện chuyên sâu cho VĐV tennis cấp 5.0. *(157.4 KB)*
 - **[Tennis Mastery (20 Chapters)](tfl/Tennis_Mastery_20_Chapters.html)** — The complete system for doubles strategy & footwork (20 chapters). *(55.1 KB)*
 - **[Tennis Mastery — Complete](tfl/Tennis_Mastery_Complete.html)** — Từ cơ sinh học hiện đại đến triết lý Nội Gia — toàn tập tennis mastery. *(165.0 KB)*
-- **[Tennis Mastery — Hướng Dẫn Tiếng Việt](tfl/tennis_mastery_guide_tieng_viet.html)** — Cẩm nang tennis: nền tảng → kỹ thuật nâng cao → cú đánh đặc biệt → phá vỡ giới hạn. *(39.2 KB)*
 - **[The Art of Modern Tennis (Polished Edition)](tfl/The_Art_of_Modern_Tennis_Polished.html)** — Complete reference manual cho VĐV và HLV tennis đẳng cấp — bản polished. *(341.6 KB)*
 
 #### 🦴 Cơ sinh học & Vận động học
