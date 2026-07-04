@@ -27,11 +27,11 @@
 - [Modern Tennis Volley Handbook 2026](modern_tennis_volley_handbook_2026.md)
 - [Nghệ Thuật Hiện Đại Tennis](the_art_of_modern_tennis.md)
 - [The Art of Modern Tennis — A Complete Reference Manual](the-art-of-modern-tennis-a-complete-reference-manual-for-elite-players-and-coach.md)
-- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](https://henryphamduc.github.io/tennis/tennis-wiki/cam-nang/ebook/)
+- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)
 
 ### 🎾 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)
 
-👉 **[Đọc online ngay](https://henryphamduc.github.io/tennis/tennis-wiki/cam-nang/ebook/){ .md-button }** — Mở viewer ebook song ngữ EN-VI với sidebar nav + iframe cho từng tài liệu (35+ bài viết).
+👉 **[Đọc online ngay](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/){ .md-button }** — Mở viewer ebook song ngữ EN-VI với sidebar nav + iframe cho từng tài liệu (35+ bài viết).
 
 ![Bìa ebook Tennis — Thư Viện Hoàn Chỉnh 35+ tài liệu](dl/cover.png){ width="280" loading=lazy }
 
@@ -68,7 +68,7 @@ Dành cho HLV và người chơi từ **3.5 → 5.0+** — bản tiếng Việt 
 - **[Tennis Mastery](tfl/tennis_mastery.html)** — Hệ thống huấn luyện chuyên sâu cho VĐV tennis cấp 5.0. *(157.4 KB)*
 - **[Tennis Mastery (20 Chapters)](tfl/Tennis_Mastery_20_Chapters.html)** — The complete system for doubles strategy & footwork (20 chapters). *(55.1 KB)*
 - **[Tennis Mastery — Complete](tfl/Tennis_Mastery_Complete.html)** — Từ cơ sinh học hiện đại đến triết lý Nội Gia — toàn tập tennis mastery. *(165.0 KB)*
-- **[Tennis Mastery — Hướng Dẫn Tiếng Việt](tfl/tennis_mastery_guide_tieng_viet.html)** — Cẩm nang tennis: nền tảng → kỹ thuật nâng cao → cú đánh đặc biệt → phá vỡ giới hạn. *(39.2 KB)*
+- **[Tennis Mastery — Hướng Dẫn Tiếng Việt](tfl/tennis_mastery_guide_tieng_viet.html)** — Cẩm nang tennis: nền tảng → kỹ thuật nâng cao → cú đánh đặc biệt → phá vỡ giới hạn. *(43.7 KB)*
 - **[The Art of Modern Tennis (Polished Edition)](tfl/The_Art_of_Modern_Tennis_Polished.html)** — Complete reference manual cho VĐV và HLV tennis đẳng cấp — bản polished. *(341.6 KB)*
 
 #### 🦴 Cơ sinh học & Vận động học
