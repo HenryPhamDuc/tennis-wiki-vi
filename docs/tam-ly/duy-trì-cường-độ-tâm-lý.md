@@ -8,7 +8,7 @@ category_type: "tâm_lý_thể_thao"
 level: "trung_cấp"
 sub_category: "Tâm Lý & Tư Duy"
 tags: ["tâm_lý", "cường_độ", "tập_trung", "nhất_quán"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_keep_your_mental_intensity_consistently_high"
 related: ["Nhận Thức Tình Huống", "Thiết Lập Thói Quen", "Giảm Lỗi"]
 vault_path: "VN_Tennis_Vault\THần Kinh Học\Duy Trì Cường Độ Tâm Lý.md"

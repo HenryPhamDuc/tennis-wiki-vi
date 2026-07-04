@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_sức_mạnh"
 level: "nâng_cao"
 sub_category: "Kỹ Thuật Nâng Cao"
 tags: ["sức_mạnh", "cú_đánh", "chuỗi_động_học", "GRF"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_enhanced_shot_power"
 related: ["Kình GRF Taichi Luyện Tập", "Bài Tập Bóng Y Tế", "Phân Ly Chuyển Động"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Tăng Sức Mạnh Cú Đánh.md"

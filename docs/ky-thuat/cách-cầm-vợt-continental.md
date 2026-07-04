@@ -8,7 +8,7 @@ category_type: "kỹ_thuật"
 level: "cơ_bản"
 sub_category: "Kỹ Thuật Cơ Bản"
 tags: ["kỹ_thuật", "grip", "continental", "vạn_năng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_continental_grip"
 related: ["Gõ Bóng", "Cú Đánh Rút Gọn", "Chiến Thuật Giao Và Lên Lưới"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Cách Cầm Vợt Continental.md"

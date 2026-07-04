@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "tổng_quan"
 sub_category: "Tài Liệu Gốc"
 tags: ["cẩm_nang", "toàn_diện", "elite", "hướng_dẫn", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "15. The Complete Tennis Manual_ A Guide to Elite Performance"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Cẩm Nang Tennis Toàn Diện.md"
 ---

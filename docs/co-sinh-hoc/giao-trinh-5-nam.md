@@ -164,7 +164,7 @@ Cấu trúc này đã bao quát toàn bộ mọi khía cạnh từ tĩnh đến 
 
 
 
-**Phạm Đức Hải | Coaching & Mastery**
+**Phạm Đức Hải | Tennis Future Lab**
 
 Bộ khung này rất mạnh. Nó không chỉ là giáo án tennis mà thực chất là một hệ thống “re-engineering” thần kinh–cơ sinh học cho người chơi trưởng thành, đặc biệt nhóm 45–60+, nơi vấn đề lớn nhất không phải thiếu sức mạnh mà là:
 

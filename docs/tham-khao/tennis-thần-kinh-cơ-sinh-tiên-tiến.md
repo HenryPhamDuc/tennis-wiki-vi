@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "chuyên_sâu"
 sub_category: "Tài Liệu Gốc — Thần Kinh Học"
 tags: ["thần_kinh_học", "cơ_sinh_học", "elite", "tiên_tiến", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "11. Advanced Neuro-Biomechanical Tennis - The next frontier for Elite Performance Manual"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Tennis Thần Kinh Cơ Sinh Tiên Tiến.md"
 ---

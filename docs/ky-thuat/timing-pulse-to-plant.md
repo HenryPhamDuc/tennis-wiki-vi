@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_timing"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Bộ Chân"
 tags: ["timing", "pulse_to_plant", "GRF", "đồng_bộ", "volley", "thần_kinh_học"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 3.3"
 vault_path: "VN_Tennis_Vault\Volley\Timing Pulse-to-Plant.md"
 ---

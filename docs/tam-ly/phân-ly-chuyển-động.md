@@ -8,7 +8,7 @@ category_type: "cơ_sinh_học_thần_kinh"
 level: "nâng_cao"
 sub_category: "Cơ Sinh Học Nâng Cao"
 tags: ["phân_ly", "xoay_thân", "chuỗi_động_học", "nâng_cao"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_disassociate"
 related: ["Tăng Sức Mạnh Cú Đánh", "Kình GRF Taichi Luyện Tập", "Gập Bụng Chéo"]
 vault_path: "VN_Tennis_Vault\THần Kinh Học\Phân Ly Chuyển Động.md"

@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["chiến_thuật", "phòng_thủ", "đối_thủ", "biến_tấu"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_defeating_a_defensive_player"
 related: ["Bóng Thả Và Rally", "Pha Tấn Công", "Trò Chơi Chiều Sâu"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Đánh Bại Người Chơi Phòng Thủ.md"

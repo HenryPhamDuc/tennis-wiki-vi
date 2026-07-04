@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_nâng_cao"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Carving"
 tags: ["carving", "tiếp_xúc", "vectơ_lực", "dwell_time", "underspin", "volley"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving — Mục 1"
 vault_path: "VN_Tennis_Vault\Volley\Kỹ Thuật Carving — Cơ Chế Tiếp Xúc và Vectơ Lực.md"
 ---

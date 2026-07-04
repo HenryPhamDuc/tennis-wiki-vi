@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_di_chuyển"
 level: "trung_cấp"
 sub_category: "Volley & Lưới / Bộ Chân"
 tags: ["smash", "lob", "bước_lùi", "xoay_trục", "overhead", "pivot"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 3.4"
 vault_path: "VN_Tennis_Vault\Volley\Bước Lùi Và Xử Lý Bóng Cao — Smash & Lob.md"
 ---

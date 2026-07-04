@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_nâng_cao"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Forehand Volley"
 tags: ["điểm_tiếp_xúc", "contact_matrix", "forehand_volley", "hình_học", "Direct_Load", "L_shape"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 4.1"
 vault_path: "VN_Tennis_Vault\Volley\Điểm Tiếp Xúc Volley — Ma Trận Tọa Độ 3D.md"
 ---

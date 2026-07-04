@@ -198,5 +198,5 @@ Tennis ở tuổi trung niên là sự kết hợp giữa trí tuệ, sự bền
 **Chúc bạn có những giờ phút tuyệt vời trên sân tennis!**
 
 ---
-**Biên soạn bởi: Phạm Đức Hải (Henry Pham) - Tennis Future Lab**
+**Biên soạn bởi:** Phạm Đức Hải (Henry Pham) — Tennis Future Lab
 **Năm biên soạn: 2026**

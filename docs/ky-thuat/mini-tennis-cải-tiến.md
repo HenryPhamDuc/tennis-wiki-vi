@@ -8,7 +8,7 @@ category_type: "bài_tập"
 level: "cơ_bản"
 sub_category: "Bài Tập Khởi Động"
 tags: ["mini_tennis", "khởi_động", "cảm_giác_bóng", "kỹ_thuật"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_modified_mini-tennis"
 related: ["Chuẩn Bị Trước Trận", "Timing Đúng", "Gõ Bóng"]
 vault_path: "VN_Tennis_Vault\Bài tập\Mini Tennis Cải Tiến.md"

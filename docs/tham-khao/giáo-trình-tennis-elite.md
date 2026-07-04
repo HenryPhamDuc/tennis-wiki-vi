@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "tổng_quan"
 sub_category: "Tài Liệu Gốc"
 tags: ["giáo_trình", "elite", "kỹ_thuật", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "12. Elite Tennis Training Manual"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Giáo Trình Tennis Elite.md"
 ---

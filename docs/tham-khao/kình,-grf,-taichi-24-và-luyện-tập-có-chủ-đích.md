@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "nâng_cao"
 sub_category: "Tài Liệu Gốc — Triết Học & Khoa Học"
 tags: ["kình", "GRF", "taichi", "triết_học_đông_phương", "deliberate_practice", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "13. Tennis Training_ Kình, GRF, Taichi-24 Forms and Delibrate Practice"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Kình, GRF, Taichi-24 và Luyện Tập Có Chủ Đích.md"
 ---

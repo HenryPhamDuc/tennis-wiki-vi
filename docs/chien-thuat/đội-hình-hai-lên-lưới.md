@@ -8,7 +8,7 @@ category_type: "chiến_thuật_đánh_đôi"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Đánh Đôi"
 tags: ["đánh_đôi", "lên_lưới", "áp_lực", "đội_hình"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_advantages_of_the_two-up_formation"
 related: ["Serve Ngược Thuận Lợi", "Dự Đoán", "Chiến Thuật Giao Và Lên Lưới"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Đội Hình Hai Lên Lưới.md"

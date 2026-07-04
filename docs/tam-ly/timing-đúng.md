@@ -8,7 +8,7 @@ category_type: "thần_kinh_kỹ_thuật"
 level: "trung_cấp"
 sub_category: "Nhận Thức & Kỹ Thuật"
 tags: ["timing", "tiếp_xúc", "đồng_bộ", "thần_kinh"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_correct_timing"
 related: ["Dự Đoán", "Cú Đánh Rút Gọn", "Di Chuyển Chân"]
 vault_path: "VN_Tennis_Vault\THần Kinh Học\Timing Đúng.md"

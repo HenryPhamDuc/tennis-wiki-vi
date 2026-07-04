@@ -8,7 +8,7 @@ category_type: "bài_tập_sức_mạnh"
 level: "cơ_bản"
 sub_category: "Thể Lực & Sức Mạnh"
 tags: ["sức_mạnh", "core", "oblique", "xoay_người"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_oblique_crunches"
 related: ["Chống Đẩy", "Bài Tập Bóng Y Tế", "Kình GRF Taichi Luyện Tập"]
 vault_path: "VN_Tennis_Vault\Thể lực\Gập Bụng Chéo.md"

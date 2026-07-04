@@ -8,7 +8,7 @@ category_type: "kỹ_thuật"
 level: "trung_cấp"
 sub_category: "Kỹ Thuật Cơ Bản"
 tags: ["kỹ_thuật", "follow_through", "giao_bóng", "cân_bằng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "10_follow_through"
 related: ["Di Chuyển Chân", "Cú Đánh Rút Gọn", "Timing Đúng"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Động Tác Follow-Through.md"

@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["chiến_thuật", "vị_trí", "giao_bóng", "baseline"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_court_positioning_and_tactics"
 related: ["Pha Tấn Công", "Trò Chơi Chiều Sâu", "Chiến Thuật Giao Và Lên Lưới", "Dự Đoán"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Vị Trí Sân và Chiến Thuật.md"

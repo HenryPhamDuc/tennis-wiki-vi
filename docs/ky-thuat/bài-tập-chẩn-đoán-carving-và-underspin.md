@@ -8,7 +8,7 @@ category_type: "bài_tập"
 level: "trung_cấp"
 sub_category: "Volley & Lưới / Carving"
 tags: ["bài_tập", "chẩn_đoán", "carving", "underspin", "drill", "two_touch"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving — Mục 6"
 vault_path: "VN_Tennis_Vault\Volley\Bài Tập Chẩn Đoán Carving và Underspin.md"
 ---

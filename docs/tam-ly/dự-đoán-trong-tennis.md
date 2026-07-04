@@ -8,7 +8,7 @@ category_type: "thần_kinh_học"
 level: "nâng_cao"
 sub_category: "Nhận Thức & Thần Kinh"
 tags: ["thần_kinh", "dự_đoán", "đọc_bóng", "tốc_độ_xử_lý"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_anticipation"
 related: ["Nhận Thức Tình Huống", "Timing Đúng", "Di Chuyển Chân", "Tennis Thần Kinh Cơ Sinh Tiên Tiến"]
 vault_path: "VN_Tennis_Vault\THần Kinh Học\Dự Đoán Trong Tennis.md"

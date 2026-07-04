@@ -8,7 +8,7 @@ category_type: "tâm_lý_thể_thao"
 level: "trung_cấp"
 sub_category: "Chuẩn Bị & Tâm Lý"
 tags: ["thói_quen", "routine", "tâm_lý", "nhất_quán"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_establish_a_routine"
 related: ["Trước Trận Đấu", "Duy Trì Cường Độ Tâm Lý", "Giảm Lỗi"]
 vault_path: "VN_Tennis_Vault\Bài tập\Thiết Lập Thói Quen Thi Đấu.md"

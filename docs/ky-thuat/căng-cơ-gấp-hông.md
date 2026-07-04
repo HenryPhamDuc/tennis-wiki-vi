@@ -8,7 +8,7 @@ category_type: "bài_tập_thể_lực"
 level: "cơ_bản"
 sub_category: "Thể Lực & Phục Hồi"
 tags: ["căng_giãn", "phục_hồi", "hông", "linh_hoạt"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "10_hip_flexor_stretch"
 related: ["Căng Cobra", "Di Chuyển Chân", "Vị Trí Chân"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Căng Cơ Gấp Hông.md"

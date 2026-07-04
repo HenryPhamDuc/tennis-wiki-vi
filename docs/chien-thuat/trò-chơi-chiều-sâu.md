@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["chiến_thuật", "chiều_sâu", "baseline", "kiểm_soát"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_depth_game"
 related: ["Vị Trí Sân và Chiến Thuật", "Giảm Lỗi", "Vươn Lên Trong Rally"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Trò Chơi Chiều Sâu.md"

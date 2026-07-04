@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_chiến_thuật"
 level: "trung_cấp"
 sub_category: "Kỹ Thuật Cú Đánh"
 tags: ["overhead", "điểm_tiếp_xúc", "độ_cao", "kỹ_thuật"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_hitting_heights"
 related: ["Di Chuyển Chân", "Lob Phòng Thủ", "Động Tác Follow-Through"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Đánh Cao — Overhead Và Điểm Tiếp Xúc.md"

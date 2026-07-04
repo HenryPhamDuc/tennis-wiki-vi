@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_chiến_thuật"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Đánh Đôi"
 tags: ["đánh_đôi", "dingles", "kỹ_thuật_đặc_biệt"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_dingles"
 related: ["Đội Hình Hai Lên Lưới", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Dingles.md"

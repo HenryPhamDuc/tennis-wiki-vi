@@ -8,7 +8,7 @@ category_type: "dinh_dưỡng"
 level: "cơ_bản"
 sub_category: "Hồi Phục & Dinh Dưỡng"
 tags: ["dinh_dưỡng", "thi_đấu", "phục_hồi", "năng_lượng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_eating_schedule"
 related: ["Trước Trận Đấu", "Thiết Lập Thói Quen"]
 vault_path: "VN_Tennis_Vault\Thể lực\Lịch Ăn Uống Vận Động Viên Tennis.md"

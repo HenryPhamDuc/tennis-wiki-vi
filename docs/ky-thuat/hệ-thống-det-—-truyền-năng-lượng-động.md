@@ -8,7 +8,7 @@ category_type: "khoa_học_nền_tảng"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Khoa Học"
 tags: ["DET", "GRF", "năng_lượng", "lò_xo_sinh_học", "chuỗi_động_học", "thần_kinh_học"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 1.1"
 vault_path: "VN_Tennis_Vault\Volley\Hệ Thống DET — Truyền Năng Lượng Động.md"
 ---

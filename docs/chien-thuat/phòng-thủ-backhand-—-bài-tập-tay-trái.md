@@ -8,7 +8,7 @@ category_type: "drill_chiến_thuật"
 level: "trung_cấp"
 sub_category: "Kỹ Thuật Chiến Thuật"
 tags: ["backhand", "phòng_thủ", "drill", "down_the_line"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_backhand_hold"
 related: ["Vị Trí Sân và Chiến Thuật", "Pha Tấn Công"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Phòng Thủ Backhand — Bài Tập Tay Trái.md"

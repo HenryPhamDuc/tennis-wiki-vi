@@ -8,7 +8,7 @@ category_type: "kỹ_thuật_di_chuyển"
 level: "trung_cấp"
 sub_category: "Volley & Lưới / Bộ Chân"
 tags: ["crossover", "shuffle", "di_chuyển_lưới", "GSM", "bộ_chân", "khoảng_cách_ngang"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 3.2"
 vault_path: "VN_Tennis_Vault\Volley\Bước Crossover Và Shuffle Tại Lưới.md"
 ---

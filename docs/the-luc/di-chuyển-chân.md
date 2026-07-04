@@ -8,7 +8,7 @@ category_type: "kỹ_năng_nền_tảng"
 level: "nâng_cao"
 sub_category: "Di Chuyển & Thể Lực"
 tags: ["di_chuyển", "chân", "nền_tảng", "cân_bằng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_footwork"
 related: ["Vị Trí Chân", "Dự Đoán", "Bài Tập Hình Số 8", "Kình GRF Taichi Luyện Tập"]
 vault_path: "VN_Tennis_Vault\Thể lực\Di Chuyển Chân.md"

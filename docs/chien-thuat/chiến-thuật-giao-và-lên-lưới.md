@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["giao_bóng", "lên_lưới", "serve_and_volley", "thể_thức_tấn_công"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_serve-and-volley"
 related: ["Cách Cầm Vợt Continental", "Tiếp Cận Và Volley", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Chiến Thuật Giao Và Lên Lưới.md"

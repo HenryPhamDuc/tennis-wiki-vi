@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["drop_shot", "rally", "biến_tấu_tốc_độ", "chiến_thuật"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_rally_and_drop_shot"
 related: ["Trò Chơi Chiều Sâu", "Vươn Lên Trong Rally", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Bóng Thả Và Rally.md"

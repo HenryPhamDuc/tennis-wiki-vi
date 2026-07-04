@@ -8,7 +8,7 @@ category_type: "chiến_thuật_đánh_đôi"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Đánh Đôi"
 tags: ["đánh_đôi", "giao_bóng", "tay_thuận_ngược", "góc"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_advantages_of_the_reverse_serve"
 related: ["Đội Hình Hai Lên Lưới", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Lợi Thế Giao Bóng Ngược Tay.md"

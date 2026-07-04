@@ -8,7 +8,7 @@ category_type: "bài_tập_sức_mạnh"
 level: "trung_cấp"
 sub_category: "Thể Lực & Sức Mạnh"
 tags: ["sức_mạnh", "medicine_ball", "groundstroke", "chuỗi_động_học"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_groundstroke_medicine_ball_exercises"
 related: ["Chống Đẩy", "Gập Bụng Chéo", "Kình GRF Taichi Luyện Tập"]
 vault_path: "VN_Tennis_Vault\Thể lực\Bài Tập Bóng Y Tế Groundstroke.md"

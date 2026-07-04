@@ -8,7 +8,7 @@ category_type: "khoa_học_nền_tảng"
 level: "chuyên_sâu"
 sub_category: "Volley & Lưới / Carving"
 tags: ["underspin", "Magnus_effect", "vật_lý_học", "xoáy_ngược", "khí_động_học", "nảy_trượt"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving — Mục 2"
 vault_path: "VN_Tennis_Vault\Volley\Underspin và Hiệu Ứng Magnus — Vật Lý Học Xoáy Ngược.md"
 ---

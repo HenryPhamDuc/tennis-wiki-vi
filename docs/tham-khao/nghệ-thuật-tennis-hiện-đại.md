@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "tổng_quan"
 sub_category: "Tài Liệu Gốc"
 tags: ["tài_liệu_gốc", "tổng_hợp", "tennis_hiện_đại", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1. The_Art_of_Modern_Tennis"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Nghệ Thuật Tennis Hiện Đại.md"
 ---

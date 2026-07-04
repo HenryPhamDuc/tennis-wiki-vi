@@ -8,7 +8,7 @@ category_type: "drill_chiến_thuật"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["drill", "tiếp_cận", "volley", "lên_lưới"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_approach_and_volley"
 related: ["Chiến Thuật Giao Và Lên Lưới", "Vị Trí Sân và Chiến Thuật", "Di Chuyển Chân"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Tiếp Cận Và Volley.md"

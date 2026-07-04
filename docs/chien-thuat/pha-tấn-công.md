@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "trung_cấp"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["chiến_thuật", "tấn_công", "rally", "áp_lực"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_offensive_phase"
 related: ["Vị Trí Sân và Chiến Thuật", "Vươn Lên Trong Rally", "Tăng Sức Mạnh Cú Đánh"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Pha Tấn Công.md"

@@ -8,7 +8,7 @@ category_type: "hub_chuyên_đề"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Carving"
 tags: ["carving", "underspin", "volley", "Federer", "hiệu_ứng_Magnus", "hub"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving_và_Quản_Lý_Underspin"
 vault_path: "VN_Tennis_Vault\Volley\Carving & Underspin — Kỹ Thuật Volley Đẳng Cấp Thế Giới.md"
 ---

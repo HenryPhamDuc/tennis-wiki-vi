@@ -13,7 +13,7 @@ updated: 2026-06-20
 
 **Title**: Hệ Trục 52: Vận Hành Không Tải & Tái Tạo Năng Lượng  
 **English**: System 52: Load-Free Operation & Energy Regeneration  
-**Author**: Phạm Đức Hải  
+**Author**: Phạm Đức Hải | Tennis Future Lab  
 **Target Audience**: Men aged 52, active professionals, athletes, project managers  
 **Core Mission**: Transform age 52 from a decline point into a pivot point for sustainable vitality
 

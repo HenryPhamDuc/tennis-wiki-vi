@@ -8,7 +8,7 @@ category_type: "công_cụ_kỹ_thuật"
 level: "trung_cấp"
 sub_category: "Volley & Lưới / Carving"
 tags: ["góc_mặt_vợt", "độ_cao_bóng", "ma_trận", "điều_chỉnh", "carving", "volley"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving — Mục 3"
 vault_path: "VN_Tennis_Vault\Volley\Ma Trận Điều Chỉnh Góc Mặt Vợt Theo Độ Cao Bóng.md"
 ---

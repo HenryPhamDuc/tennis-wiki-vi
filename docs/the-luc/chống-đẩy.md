@@ -8,7 +8,7 @@ category_type: "bài_tập_sức_mạnh"
 level: "cơ_bản"
 sub_category: "Thể Lực & Sức Mạnh"
 tags: ["sức_mạnh", "thân_trên", "không_dụng_cụ", "vai"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_push-ups"
 related: ["Gập Bụng Chéo", "Bài Tập Bóng Y Tế"]
 vault_path: "VN_Tennis_Vault\Thể lực\Chống Đẩy.md"

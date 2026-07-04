@@ -8,7 +8,7 @@ category_type: "nguyên_tắc_kỹ_thuật"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Carving"
 tags: ["frozen_wrist", "L_shape", "nén_trước_xoáy_sau", "hammer_grip", "carving", "nguyên_tắc_vàng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Chuyên_Sâu_về_Kỹ_Thuật_Carving — Mục 4"
 vault_path: "VN_Tennis_Vault\Volley\Bốn Nguyên Tắc Vàng Chống Rò Rỉ Kỹ Thuật Carving.md"
 ---

@@ -8,7 +8,7 @@ category_type: "chiến_thuật_phòng_thủ"
 level: "trung_cấp"
 sub_category: "Kỹ Thuật Chiến Thuật"
 tags: ["lob", "phòng_thủ", "thoát_hiểm", "vị_trí_sân"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_defensive_lob"
 related: ["Vị Trí Sân và Chiến Thuật", "Phòng Thủ Tay Trái Backhand", "Đánh Cao"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Lob Phòng Thủ.md"

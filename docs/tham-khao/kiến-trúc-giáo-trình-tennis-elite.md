@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "tổng_quan"
 sub_category: "Tài Liệu Gốc — Kiến Trúc Giáo Trình"
 tags: ["giáo_trình", "elite", "kiến_trúc", "hệ_thống", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "10. Elite Tennis Training Manual Architecture"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Kiến Trúc Giáo Trình Tennis Elite.md"
 ---

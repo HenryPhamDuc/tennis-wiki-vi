@@ -8,7 +8,7 @@ category_type: "tài_liệu_gốc"
 level: "tổng_quan"
 sub_category: "Tài Liệu Gốc — Tâm Lý & Triết Học"
 tags: ["tâm_lý", "triết_học", "thể_thao", "tư_duy", "tennis_future_lab"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "14.  Tennis Training Manual based on the Concepts in Sports, Psychology, Philosophy"
 vault_path: "VN_Tennis_Vault\Tài liệu gốc\Giáo Trình Tennis — Tâm Lý, Triết Học, Khoa Học Thể Thao.md"
 ---

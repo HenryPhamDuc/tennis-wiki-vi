@@ -8,7 +8,7 @@ category_type: "hub_chuyên_đề"
 level: "nâng_cao"
 sub_category: "Volley & Lưới"
 tags: ["volley", "lưới", "hub", "DET", "GRF", "hệ_thống_2026"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_"
 vault_path: "VN_Tennis_Vault\Volley\Volley — Tổng Quan Hệ Thống 202.md"
 ---

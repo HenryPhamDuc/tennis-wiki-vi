@@ -8,7 +8,7 @@ category_type: "kỹ_thuật"
 level: "cơ_bản"
 sub_category: "Kỹ Thuật Cơ Bản"
 tags: ["kỹ_thuật", "swing", "tiếp_xúc", "học_viên_mới"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_abbreviated_swing"
 related: ["Cách Cầm Vợt Continental", "Timing Đúng", "Di Chuyển Chân"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Cú Đánh Rút Gọn.md"

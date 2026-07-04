@@ -8,7 +8,7 @@ category_type: "chiến_thuật"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Thi Đấu"
 tags: ["rally", "kiểm_soát_nhịp", "áp_lực", "chiến_thuật"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_rally_ascendency"
 related: ["Pha Tấn Công", "Trò Chơi Chiều Sâu", "Tăng Sức Mạnh Cú Đánh"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Vươn Lên Trong Rally.md"

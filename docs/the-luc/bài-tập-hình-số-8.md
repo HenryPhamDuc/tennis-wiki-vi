@@ -8,7 +8,7 @@ category_type: "bài_tập"
 level: "trung_cấp"
 sub_category: "Di Chuyển & Thể Lực"
 tags: ["drill", "di_chuyển", "linh_hoạt", "đa_hướng"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_figure_eight"
 related: ["Di Chuyển Chân", "Drill Alley Ngang"]
 vault_path: "VN_Tennis_Vault\Thể lực\Bài Tập Hình Số 8.md"

@@ -8,7 +8,7 @@ category_type: "cơ_sinh_học_nâng_cao"
 level: "chuyên_sâu"
 sub_category: "Volley & Lưới / Khoa Học"
 tags: ["proximal_to_distal", "chuỗi_động_học", "mô_men_động_lượng", "X_factor", "mushin", "vestibular"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 1.3"
 vault_path: "VN_Tennis_Vault\Volley\Chuỗi Động Học Proximal-to-Distal Trong Volley.md"
 ---

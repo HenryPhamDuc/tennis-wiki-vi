@@ -8,7 +8,7 @@ category_type: "kỹ_thuật"
 level: "cơ_bản"
 sub_category: "Kỹ Thuật Cơ Bản"
 tags: ["kỹ_thuật", "giao_bóng", "toss", "tiếp_xúc"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_ball_grip"
 related: ["Cách Cầm Vợt Continental", "Timing Đúng"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Cầm Bóng Khi Giao.md"

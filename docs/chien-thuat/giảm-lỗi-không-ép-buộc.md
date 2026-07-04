@@ -8,7 +8,7 @@ category_type: "chiến_thuật_tâm_lý"
 level: "cơ_bản"
 sub_category: "Chiến Thuật & Tâm Lý"
 tags: ["lỗi", "quản_lý_rủi_ro", "nhất_quán", "chiến_thuật"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_reducing_your_errors"
 related: ["Duy Trì Cường Độ Tâm Lý", "Timing Đúng", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Giảm Lỗi Không Ép Buộc.md"

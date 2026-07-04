@@ -8,7 +8,7 @@ category_type: "thần_kinh_tâm_lý"
 level: "nâng_cao"
 sub_category: "Nhận Thức & Chiến Thuật"
 tags: ["nhận_thức", "tình_huống", "quyết_định", "thần_kinh"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_perceive_the_situation_correctly"
 related: ["Dự Đoán", "Duy Trì Cường Độ Tâm Lý", "Vị Trí Sân và Chiến Thuật"]
 vault_path: "VN_Tennis_Vault\THần Kinh Học\Nhận Thức Tình Huống.md"

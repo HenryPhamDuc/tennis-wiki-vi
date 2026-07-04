@@ -8,7 +8,7 @@ category_type: "bài_tập"
 level: "cơ_bản"
 sub_category: "Kỹ Thuật Cơ Bản"
 tags: ["bài_tập", "continental_grip", "làm_quen_vợt", "khởi_động"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_ball_taps"
 related: ["Cách Cầm Vợt Continental", "Cú Đánh Rút Gọn"]
 vault_path: "VN_Tennis_Vault\Kỹ Thuật\Gõ Bóng.md"

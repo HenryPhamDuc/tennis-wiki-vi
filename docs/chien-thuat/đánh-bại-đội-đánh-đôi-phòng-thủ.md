@@ -8,7 +8,7 @@ category_type: "chiến_thuật_đánh_đôi"
 level: "nâng_cao"
 sub_category: "Chiến Thuật Đánh Đôi"
 tags: ["đánh_đôi", "phòng_thủ", "chiến_thuật", "đội_hình"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_defeating_a_defensive_team"
 related: ["Đánh Bại Người Phòng Thủ", "Đội Hình Hai Lên Lưới"]
 vault_path: "VN_Tennis_Vault\Chiến thuật\Đánh Bại Đội Đánh Đôi Phòng Thủ.md"

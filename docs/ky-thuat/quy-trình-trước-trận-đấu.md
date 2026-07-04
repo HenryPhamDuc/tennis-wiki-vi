@@ -8,7 +8,7 @@ category_type: "chuẩn_bị"
 level: "cơ_bản"
 sub_category: "Chuẩn Bị Thi Đấu"
 tags: ["chuẩn_bị", "trước_trận", "routine", "khởi_động"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "1_before_the_match"
 related: ["Thiết Lập Thói Quen", "Chuẩn Bị Trước Trận", "Duy Trì Cường Độ Tâm Lý"]
 vault_path: "VN_Tennis_Vault\Bài tập\Quy Trình Trước Trận Đấu.md"

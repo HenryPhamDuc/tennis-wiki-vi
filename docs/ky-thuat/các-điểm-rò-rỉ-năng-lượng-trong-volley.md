@@ -8,7 +8,7 @@ category_type: "chẩn_đoán_kỹ_thuật"
 level: "nâng_cao"
 sub_category: "Volley & Lưới / Khoa Học"
 tags: ["rò_rỉ_năng_lượng", "chẩn_đoán", "volley", "chuỗi_động_học", "core_leaks", "L_shape"]
-author: "Henry Pham (Phạm Đức Hải)"
+author: "Henry Pham (Phạm Đức Hải) — Tennis Future Lab"
 source: "Cẩm_nang_chuyên_sâu_về_Volley__Phiên_bản_nâng_cao_ — Chương 1.2"
 vault_path: "VN_Tennis_Vault\Volley\Các Điểm Rò Rỉ Năng Lượng Trong Volley.md"
 ---
