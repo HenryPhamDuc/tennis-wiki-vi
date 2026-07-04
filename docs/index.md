@@ -41,7 +41,7 @@ Khám phá wiki dưới dạng mạng tương tác — mỗi nút là một bài
 
     Forehand, backhand, serve, volley, footwork — từ cơ bản đến nâng cao
 
-    [:octicons-arrow-right-24: Xem tất cả](ky-thuat/13-misc/index.md)
+    [:octicons-arrow-right-24: Xem tất cả](ky-thuat/index.md)
 
 -   :material-bone:{ .lg .middle } **Cơ sinh học**
 
