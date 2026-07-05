@@ -1,186 +1,289 @@
-/* Tennis WIKI - Custom theme additions on top of Material */
+/* ============================================
+   Custom CSS for Tennis WIKI (Vietnamese)
+   Theme: MkDocs.org style (Bootstrap-based)
+   ============================================ */
 
+/* MkDocs.org color scheme */
 :root {
-    --md-primary-fg-color:        #2e7d32;
-    --md-primary-fg-color--light: #43a047;
-    --md-primary-fg-color--dark:  #1b5e20;
-    --md-accent-fg-color:         #d4e157;
+    --mkdocs-blue: #306998;
+    --mkdocs-dark-blue: #2c3e50;
+    --mkdocs-light-blue: #4a90d9;
+    --mkdocs-bg: #f8f9fa;
+    --mkdocs-text: #444;
+    --mkdocs-text-light: #777;
+    --mkdocs-border: #e0e0e0;
 }
 
-/* Brand */
-.md-header__button.md-logo {
-    color: var(--md-accent-fg-color);
+/* ============================================
+   Navigation Bar
+   ============================================ */
+.navbar {
+    background-color: var(--mkdocs-blue) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-/* Bigger hero on landing */
-.md-typeset .grid.cards > ul > li {
-    border-radius: 8px;
-    transition: transform 0.2s;
-}
-.md-typeset .grid.cards > ul > li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.2);
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
 }
 
-/* Code blocks with tennis theme */
-.md-typeset code {
-    background: #f1f8e9;
-    color: #2e7d32;
-}
-.md-typeset pre > code {
-    background: #1a472a;
-    color: #e8f5e9;
+.navbar .navbar-brand:hover {
+    color: #fff !important;
 }
 
-/* Custom admonition colors */
-.md-typeset .admonition.note,
-.md-typeset details.note {
-    border-color: #2e7d32;
-}
-.md-typeset .admonition.tip,
-.md-typeset details.tip {
-    border-color: #d4e157;
+.navbar .nav > li > a {
+    color: rgba(255,255,255,0.9) !important;
+    font-weight: 500;
 }
 
-/* Missing image placeholder */
-img.missing-image {
-    border: 2px dashed #ff9800;
-    padding: 4px;
-    background: #fff3e0;
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+    color: #fff !important;
+    background-color: transparent;
 }
 
-/* Broken link styling */
-.broken-link {
-    color: #c62828;
-    text-decoration: line-through;
+.navbar .nav > li.active > a {
+    color: #fff !important;
+    background-color: rgba(255,255,255,0.1);
 }
 
-/* Wiki navigation: highlight current page */
-.md-nav__link--active {
-    color: #2e7d32 !important;
+/* ============================================
+   Body & Typography
+   ============================================ */
+body {
+    background-color: var(--mkdocs-bg);
+    color: var(--mkdocs-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--mkdocs-text);
     font-weight: 600;
 }
 
-/* Gallery thumbnail grid — added 2026-06-29 */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 16px 0 32px 0;
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--mkdocs-blue);
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
 }
 
-.gallery-card {
-  display: block;
-  border: 1px solid rgba(10, 25, 41, 0.2);
-  border-radius: 8px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.02);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+h2 {
+    font-size: 2em;
+    margin-top: 1.5em;
+    border-bottom: 1px solid var(--mkdocs-border);
+    padding-bottom: 0.2em;
 }
 
-.gallery-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(10, 25, 41, 0.15);
-  border-color: rgba(20, 40, 90, 0.5);
+h3 {
+    font-size: 1.5em;
+    color: var(--mkdocs-blue);
 }
 
-.gallery-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-  margin-bottom: 10px;
+/* ============================================
+   Links
+   ============================================ */
+a {
+    color: var(--mkdocs-blue);
+    text-decoration: none;
 }
 
-.gallery-card strong {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 4px;
-  line-height: 1.3;
+a:hover {
+    color: var(--mkdocs-dark-blue);
+    text-decoration: underline;
 }
 
-.gallery-card em {
-  display: block;
-  font-size: 0.85rem;
-  opacity: 0.75;
-  line-height: 1.3;
-  font-style: italic;
+/* ============================================
+   Sidebar
+   ============================================ */
+.sidebar {
+    background-color: #fff;
+    border-right: 1px solid var(--mkdocs-border);
+    padding: 20px;
 }
 
-/* View-source link below each gallery card */
-.gallery-source {
-  display: block;
-  text-align: center;
-  font-size: 0.78rem;
-  color: #1a4480;
-  text-decoration: none;
-  padding: 6px 0 12px 0;
-  margin-top: -8px;
-  opacity: 0.85;
-  transition: opacity 0.15s;
+.sidebar .nav {
+    margin-bottom: 20px;
 }
 
-.gallery-source:hover {
-  opacity: 1;
-  text-decoration: underline;
+.sidebar .nav > li > a {
+    color: var(--mkdocs-text);
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: block;
 }
 
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
+.sidebar .nav > li > a:hover {
+    background-color: var(--mkdocs-bg);
+    color: var(--mkdocs-blue);
 }
 
-/* Gemini gallery 2-col card layout — added 2026-06-29 */
-.gemini-card {
-  display: grid;
-  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.5fr);
-  gap: 20px;
-  align-items: start;
-  padding: 16px;
-  margin: 16px 0 32px 0;
-  border: 1px solid rgba(10, 25, 41, 0.2);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  transition: box-shadow 0.15s, border-color 0.15s;
+.sidebar .nav > li.active > a {
+    background-color: var(--mkdocs-blue);
+    color: #fff;
 }
 
-.gemini-card:hover {
-  box-shadow: 0 4px 18px rgba(10, 25, 41, 0.12);
-  border-color: rgba(20, 40, 90, 0.4);
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.gemini-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-  margin: 0;
+.btn-primary {
+    background-color: var(--mkdocs-blue);
+    color: #fff;
+    border-color: var(--mkdocs-blue);
 }
 
-.gemini-card-text {
-  font-size: 0.95em;
-  line-height: 1.5;
+.btn-primary:hover {
+    background-color: var(--mkdocs-dark-blue);
+    border-color: var(--mkdocs-dark-blue);
+    color: #fff;
 }
 
-.gemini-card-text strong {
-  display: block;
-  font-size: 1.05em;
-  margin-bottom: 4px;
+/* ============================================
+   Code blocks
+   ============================================ */
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid var(--mkdocs-border);
+    border-radius: 4px;
+    padding: 16px;
+    overflow-x: auto;
 }
 
-.gemini-card-text em {
-  display: block;
-  font-size: 0.88em;
-  opacity: 0.75;
-  font-style: italic;
-  margin-bottom: 12px;
+code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
 }
 
-@media (max-width: 720px) {
-  .gemini-card {
-    grid-template-columns: 1fr;
-  }
+/* ============================================
+   Tables
+   ============================================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid var(--mkdocs-border);
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--mkdocs-bg);
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+blockquote {
+    border-left: 4px solid var(--mkdocs-blue);
+    padding-left: 20px;
+    margin-left: 0;
+    color: var(--mkdocs-text-light);
+    font-style: italic;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+    border-top: 1px solid var(--mkdocs-border);
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--mkdocs-text-light);
+}
+
+footer a {
+    color: var(--mkdocs-blue);
+}
+
+footer a:hover {
+    color: var(--mkdocs-dark-blue);
+}
+
+/* ============================================
+   Search
+   ============================================ */
+.search-form {
+    margin: 20px 0;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid var(--mkdocs-border);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ============================================
+   Graph component styles (for your knowledge graph)
+   ============================================ */
+#graph-container {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--mkdocs-border);
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.graph-controls {
+    margin-bottom: 10px;
+}
+
+.graph-controls button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    background-color: var(--mkdocs-bg);
+    border: 1px solid var(--mkdocs-border);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.graph-controls button:hover {
+    background-color: var(--mkdocs-blue);
+    color: #fff;
+}
+
+/* ============================================
+   Responsive adjustments
+   ============================================ */
+@media (max-width: 768px) {
+    .navbar .nav > li > a {
+        padding: 10px 15px;
+    }
+    
+    .sidebar {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.75em;
+    }
 }
