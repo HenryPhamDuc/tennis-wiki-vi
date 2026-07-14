@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Future Lab (TFL) — Tài liệu tham khảo cao cấp</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .intro {
+            padding: 50px 40px;
+            background: #f8f9fa;
+        }
+        .intro p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        .file-grid {
+            padding: 50px 40px;
+        }
+        .file-grid h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #1a1a2e;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        .card a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .card .lang {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .card .lang.vi { background: #dcfce7; color: #166534; }
+        .card .lang.en { background: #dbeafe; color: #1e40af; }
+        .card .topic {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.95em;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            .cards { grid-template-columns: 1fr; }
+            .intro, .file-grid { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Tennis Future Lab (TFL)</h1>
+            <p>Tài liệu tham khảo cao cấp dành cho vận động viên và huấn luyện viên</p>
+        </header>
+
+        <div class="intro">
+            <p><strong>Chào mừng bạn đến với Tennis Future Lab (TFL)</strong> — kho tài liệu kỹ thuật chuyên sâu dành cho vận động viên và huấn luyện viên muốn nâng tầm trò chơi của mình. Tại đây, bạn sẽ tìm thấy các cẩm nang chi tiết về kỹ thuật hiện đại, phân tích sinh cơ học, chiến thuật thi đấu, và hệ thống training được tổng hợp từ những nghiên cứu tiên tiến nhất trong làng quần vợt thế giới.</p>
+
+            <p>Các tài liệu trong TFL được trình bày dưới định dạng HTML tĩnh, tối ưu cho việc tra cứu nhanh và in ấn. Mỗi văn bản đều đã được định dạng lại với cấu trúc rõ ràng: tiêu đề phân cấp, thẻ card cho các khái niệm chính, bảng bước thực hiện được đánh số, và nghệ thuật ASCII minh họa các nguyên lý chuyển động. Nội dung bao gồm cả tiếng Việt và tiếng Anh, phản ánh tính chất quốc tế của môn thể thao này.</p>
+
+            <p>Để sử dụng hiệu quả, hãy bắt đầu với các cẩm nang nền tảng như <em>Modern Tennis Handbook</em>, <em>GOAT Tennis Giáo Trình</em>, hoặc <em>Cơ Sinh Học Tennis Hiện Đại</em>. Sau đó, khám phá các chuyên đề sâu hơn về giao bóng, volley, forehand, backhand, và tâm lý thi đấu. Tất cả tài liệu đều miễn phí và được chia sẻ với tinh thần cộng đồng — <strong>xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam</strong> 🎾.</p>
+        </div>
+
+        <div class="file-grid">
+            <h2>Danh sách tài liệu</h2>
+            <div class="cards">
+                <div class="card">
+                    <a href="Modern_Tennis_Handbook.html">Modern Tennis Handbook</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Hệ thống tennis hiện đại toàn diện</div>
+                </div>
+                <div class="card">
+                    <a href="GOAT_Tennis_Giao_Trinh_Tieng_Viet.html">GOAT Tennis Giáo Trình Tiếng Việt</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Phương pháp training đỉnh cao</div>
+                </div>
+                <div class="card">
+                    <a href="Co_Sinh_Hoc_Tennis_Hien_Dai.html">Cơ Sinh Học Tennis Hiện Đại</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Phân tích chuyển động & lực</div>
+                </div>
+                <div class="card">
+                    <a href="Complete_Volley_Manual.html">Complete Volley Manual</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Kỹ thuật volley toàn diện</div>
+                </div>
+                <div class="card">
+                    <a href="Nghe_Thuat_Giao_Bong_Tennis.html">Nghệ Thuật Giao Bóng Tennis</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Kỹ thuật và chiến thuật giao bóng</div>
+                </div>
+                <div class="card">
+                    <a href="One_Handed_Backhand_Mastery.html">One Handed Backhand Mastery</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Làm chủ backhand một tay</div>
+                </div>
+                <div class="card">
+                    <a href="Tennis_Mastery_20_Chapters.html">Tennis Mastery 20 Chapters</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">20 chương mastery tennis</div>
+                </div>
+                <div class="card">
+                    <a href="The_Art_of_Modern_Tennis_Polished.html">The Art of Modern Tennis Polished</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Nghệ thuật tennis hiện đại</div>
+                </div>
+                <div class="card">
+                    <a href="Song-Trong-Tennis-Manual.html">Sóng Trong Tennis Manual</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Sóng trong tennis & kinetic chain</div>
+                </div>
+                <div class="card">
+                    <a href="He_Thong_Tennis_Cap_Cao_20_Chuong.html">Hệ Thống Tennis Cấp Cao 20 Chương</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Hệ thống training nâng cao</div>
+                </div>
+                <div class="card">
+                    <a href="CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html">Cẩm Nang Tennis Hiện Đại (Full Formula 2026)</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Công thức tennis hiện đại đầy đủ</div>
+                </div>
+                <div class="card">
+                    <a href="CamNang_Volley_ToanDien_2026.html">Cẩm Nang Volley Toàn Diện 2026</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Kỹ thuật volley toàn diện</div>
+                </div>
+                <div class="card">
+                    <a href="Cam_Nang_Dao_Tao_Tennis_50_Plus.html">Cẩm Nang Đào Tạo Tennis 50+</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Training cho vận động viên 50+</div>
+                </div>
+                <div class="card">
+                    <a href="He_Song_Trong_Tennis.html">Hệ Sóng Trong Tennis</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Hệ thống sóng trong tennis</div>
+                </div>
+                <div class="card">
+                    <a href="KyThuat_TraiTay_MotTay_10Chuong.html">Kỹ Thuật Trái Tay Một Tay 10 Chương</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Chuyên đề backhand một tay</div>
+                </div>
+                <div class="card">
+                    <a href="Ky_Thuat_Chan_Tennis.html">Kỹ Thuật Chân Tennis</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Bộ pháp và di chuyển trong tennis</div>
+                </div>
+                <div class="card">
+                    <a href="Nghe_thuat_forehand_tennis.html">Nghệ Thuật Forehand Tennis</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Kỹ thuật forehand hiện đại</div>
+                </div>
+                <div class="card">
+                    <a href="Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html">Phân Tích Kỹ Thuật Giao Bóng WTA</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Phân tích giao bóng nữ chuyên nghiệp</div>
+                </div>
+                <div class="card">
+                    <a href="Quan_Vot_Dinh_Cao_Coach_5.0.html">Quần Vợt Đỉnh Cao Coach 5.0</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Hệ thống coaching 5.0</div>
+                </div>
+                <div class="card">
+                    <a href="The_Neurological_Edge_Professional_Manual.html">The Neurological Edge Professional Manual</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Lợi thế thần kinh trong tennis</div>
+                </div>
+                <div class="card">
+                    <a href="TinhKhiThan_Tennis_5.0.html">Tinh Khí Thần Tennis 5.0</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Tâm pháp tennis đỉnh cao</div>
+                </div>
+                <div class="card">
+                    <a href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html">Vi Nhân Thức Cơ Thể Tennis 20 Chương</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Nhận thức cơ thể trong tennis</div>
+                </div>
+                <div class="card">
+                    <a href="cu_trai_tay_mot_tay.html">Cú Trái Tay Một Tay</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Chuyên đề backhand một tay</div>
+                </div>
+                <div class="card">
+                    <a href="nguyen-ly-tam-duoi-tennis.html">Nguyên Lý Âm Dương Tennis</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Nguyên lý âm dương trong tennis</div>
+                </div>
+                <div class="card">
+                    <a href="racket_face_angle_research.html">Racket Face Angle Research</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Nghiên cứu góc mặt vợt</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_coaching_nguoi_nghiep_du.html">Tennis Coaching Cho Người Nghiệp Dư</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Hướng dẫn coaching nghiệp dư</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_game_management.html">Tennis Game Management</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Quản lý trận đấu và chiến thuật</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_handbook_vn.html">Tennis Handbook VN</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Cẩm nang tennis tiếng Việt</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_manual_bilingual.html">Tennis Manual Bilingual</a>
+                    <span class="lang en">English / Tiếng Việt</span>
+                    <div class="topic">Cẩm nang song ngữ Anh-Việt</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_mastery.html">Tennis Mastery</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Làm chủ tennis toàn diện</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_mastery_guide_tieng_viet.html">Tennis Mastery Guide (Tiếng Việt)</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Hướng dẫn làm chủ tennis</div>
+                </div>
+                <div class="card">
+                    <a href="tennis_serve_guide.html">Tennis Serve Guide</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Hướng dẫn giao bóng chi tiết</div>
+                </div>
+                <div class="card">
+                    <a href="Tennis_Biomechanics_5.0_Complete.html">Tennis Biomechanics 5.0 Complete</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Cơ sinh học tennis 5.0 đầy đủ</div>
+                </div>
+                <div class="card">
+                    <a href="Tennis_Ballet_20_Chuong.html">Tennis Ballet 20 Chương</a>
+                    <span class="lang vi">Tiếng Việt</span>
+                    <div class="topic">Nghệ thuật chuyển động như ballet</div>
+                </div>
+                <div class="card">
+                    <a href="Tennis_Mastery_Complete.html">Tennis Mastery Complete</a>
+                    <span class="lang en">English</span>
+                    <div class="topic">Hướng dẫn mastery hoàn chỉnh</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by <strong>Henry Phạm</strong></p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                <a href="../">← Quay lại Cẩm Nang</a> | 
+                <a href="../../">← Trang Chủ</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
