@@ -53,7 +53,7 @@ Tennis WIKI là một **wiki tĩnh (static wiki)** được xây dựng từ hơ
 | Tâm lý                          | 2                          |
 | Cẩm nang / Tham khảo / Hệ thống | tùy vault                  |
 
-## ## 📜 Giấy phép
+## 📜 Giấy phép
 
 Nội dung: [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0)
 
@@ -61,7 +61,7 @@ Khi sử dụng lại, vui lòng ghi công: *"Tennis WIKI by Henry Phạm"*
 
 ## 📞 Liên hệ
 
-- **GitHub**: [HenryPhamDuc](https://henryPhamDuc,github.io)
+- **GitHub**: [HenryPhamDuc](https://henryPhamDuc.github.io)
 - **Wiki**: Sau khi deploy: `https://henryPhamDuc.github.io/tennis-wiki-vi/`
 - **Blog**: [tennis-for-everyone.blogspot.com](https://tennis-for-everyone.blogspot.com/)
 - **Facebook**: [Tennis knowlegebase](https://www.facebook.com/share/1BmokPQjf2/)
@@ -70,5 +70,6 @@ Khi sử dụng lại, vui lòng ghi công: *"Tennis WIKI by Henry Phạm"*
 
 *Tennis WIKI — xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam* 🎾
 
+# 
 
-# Deploy test
+

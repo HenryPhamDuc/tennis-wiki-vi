@@ -1,260 +1,214 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Point Architecture | Kiến Trúc Điểm Tiếp Xúc</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --forest: #1B4D35;
-  --forest-light: #2D6B4A;
-  --forest-dark: #0F2E1F;
-  --gold: #C8973A;
-  --gold-light: #E8B85A;
-  --gold-dark: #9A7020;
-  --cream: #F5F0E8;
-  --cream-dark: #EAE4D8;
-  --ink: #1A1812;
-  --ink-light: #3D3830;
-  --muted: #7A7060;
-  --red: #8B2020;
-  --blue: #1A3D6B;
-  --purple: #3D1A6B;
-  --bg: #F7F3EB;
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   Tennis WIKI
+  </title>
+  <style>
+   :root {
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --brand: #14285a;
+  --accent: #fcd34d;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Crimson Pro',serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
-/* scrollbar */
-::-webkit-scrollbar{width:5px}
-::-webkit-scrollbar-track{background:var(--cream-dark)}
-::-webkit-scrollbar-thumb{background:var(--muted);border-radius:3px}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes drawLine{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
-@keyframes shimmer{0%,100%{opacity:1}50%{opacity:.55}}
-@keyframes rotateSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-@keyframes slideRight{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.anim-up{animation:fadeUp .55s cubic-bezier(.22,1,.36,1) both}
-.anim-in{animation:fadeIn .4s ease both}
-[data-delay="1"]{animation-delay:.1s}
-[data-delay="2"]{animation-delay:.2s}
-[data-delay="3"]{animation-delay:.3s}
-[data-delay="4"]{animation-delay:.4s}
-[data-delay="5"]{animation-delay:.5s}
-[data-delay="6"]{animation-delay:.6s}
-[data-delay="7"]{animation-delay:.7s}
-
-/* ── NAV ── */
-#site-nav{position:sticky;top:0;z-index:100;background:var(--forest-dark);border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:0;padding:0 20px;height:54px;overflow-x:auto;overflow-y:hidden}
-#site-nav::-webkit-scrollbar{height:0}
-.nav-logo{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold);white-space:nowrap;margin-right:18px;letter-spacing:-.01em;flex-shrink:0}
-.nav-links{display:flex;gap:2px;flex:1;overflow-x:auto}
-.nav-links::-webkit-scrollbar{height:0}
-.nav-btn{background:none;border:none;cursor:pointer;padding:5px 10px;font-family:'Crimson Pro',serif;font-size:13px;color:rgba(245,240,232,.65);border-radius:5px;transition:all .2s;white-space:nowrap;letter-spacing:.02em}
-.nav-btn:hover{color:var(--cream);background:rgba(255,255,255,.07)}
-.nav-btn.active{background:var(--gold);color:var(--forest-dark);font-weight:600}
-.lang-toggle{display:flex;gap:0;border:1px solid rgba(200,151,58,.4);border-radius:6px;overflow:hidden;flex-shrink:0;margin-left:10px}
-.lang-btn{background:none;border:none;cursor:pointer;padding:5px 12px;font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,240,232,.6);transition:all .2s;letter-spacing:.05em}
-.lang-btn.active{background:var(--gold);color:var(--forest-dark);font-weight:500}
-
-/* ── HERO ── */
-#hero{min-height:100vh;background:var(--forest-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;pointer-events:none}
-.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(200,151,58,.12)}
-.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:24px}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(32px,6vw,72px);font-weight:900;color:var(--cream);line-height:1.08;margin-bottom:8px;letter-spacing:-.02em}
-.hero-sub{font-family:'Playfair Display',serif;font-size:clamp(14px,2vw,20px);font-weight:400;font-style:italic;color:var(--gold-light);margin-bottom:28px}
-.hero-desc{font-size:clamp(15px,1.8vw,19px);color:rgba(245,240,232,.72);max-width:620px;line-height:1.75;margin-bottom:40px}
-.hero-axiom{display:inline-block;border:1px solid rgba(200,151,58,.35);border-radius:8px;padding:18px 28px;font-family:'Playfair Display',serif;font-size:clamp(14px,1.8vw,18px);font-weight:600;color:var(--gold);font-style:italic;max-width:580px;line-height:1.5}
-.hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--forest-dark);font-family:'Crimson Pro',serif;font-size:16px;font-weight:600;padding:12px 28px;border-radius:8px;border:none;cursor:pointer;margin-top:32px;text-decoration:none;transition:all .2s;letter-spacing:.03em}
-.hero-cta:hover{background:var(--gold-light);transform:translateY(-2px)}
-.hero-stats{display:flex;gap:40px;margin-top:48px;flex-wrap:wrap;justify-content:center}
-.hero-stat{text-align:center}
-.hero-stat-n{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1}
-.hero-stat-l{font-family:'Crimson Pro',serif;font-size:13px;color:rgba(245,240,232,.55);margin-top:4px;letter-spacing:.06em}
-
-/* ── MAIN LAYOUT ── */
-#main{display:flex;min-height:100vh}
-#sidebar{width:240px;flex-shrink:0;background:var(--forest-dark);border-right:1px solid rgba(200,151,58,.2);position:sticky;top:54px;height:calc(100vh - 54px);overflow-y:auto;padding:20px 0}
-#sidebar::-webkit-scrollbar{width:3px}
-.sb-section{padding:6px 16px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;color:rgba(200,151,58,.55);text-transform:uppercase;margin-top:14px}
-.sb-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;cursor:pointer;padding:8px 20px;text-align:left;transition:all .2s;border-left:2px solid transparent}
-.sb-btn:hover{background:rgba(255,255,255,.04);border-left-color:rgba(200,151,58,.4)}
-.sb-btn.active{background:rgba(200,151,58,.1);border-left-color:var(--gold)}
-.sb-num{width:22px;height:22px;border-radius:50%;background:var(--forest);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:11px;font-weight:700;color:var(--gold);flex-shrink:0}
-.sb-btn.active .sb-num{background:var(--gold);color:var(--forest-dark)}
-.sb-label{font-family:'Crimson Pro',serif;font-size:13px;color:rgba(245,240,232,.65);line-height:1.3}
-.sb-btn.active .sb-label{color:var(--cream)}
-#content{flex:1;min-width:0;padding:32px 36px 80px;max-width:820px}
-.section-page{display:none;animation:fadeUp .4s ease both}
-.section-page.visible{display:block}
-
-/* ── TYPOGRAPHY ── */
-.section-badge{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.badge-num{width:38px;height:38px;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;flex-shrink:0}
-.badge-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--forest);font-weight:500}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--ink);border-bottom:2px solid var(--gold);padding-bottom:8px;margin-bottom:16px;line-height:1.25}
-.subtitle{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--forest);margin:22px 0 7px}
-.body-text{font-size:17px;line-height:1.82;color:var(--ink-light);margin-bottom:14px}
-.body-text strong{color:var(--ink);font-weight:600}
-.body-text em{font-style:italic;color:var(--forest-light)}
-.fig-cap{font-family:'Crimson Pro',serif;font-size:12px;font-style:italic;color:var(--muted);text-align:center;margin-top:6px}
-
-/* ── CALLOUTS ── */
-.callout{border-left:4px solid var(--gold);background:#FDF6E8;border-radius:0 8px 8px 0;padding:13px 18px;margin:16px 0;font-size:16px;line-height:1.72;color:var(--gold-dark)}
-.callout.green{border-left-color:var(--forest);background:#EDF5EF;color:var(--forest-dark)}
-.callout.red{border-left-color:var(--red);background:#F5EAEA;color:var(--red)}
-.callout.blue{border-left-color:var(--blue);background:#EAF0F8;color:var(--blue)}
-.callout strong{font-weight:700}
-
-/* ── TABLES ── */
-.table-wrap{overflow-x:auto;margin:14px 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{background:var(--forest);color:var(--cream);padding:9px 13px;text-align:left;font-family:'Crimson Pro',serif;font-weight:600;font-size:13px}
-th:first-child{border-radius:8px 0 0 0}
-th:last-child{border-radius:0 8px 0 0}
-td{padding:8px 13px;border-bottom:1px solid var(--cream-dark);color:var(--ink-light);vertical-align:top;font-size:14px;line-height:1.55}
-tr:nth-child(even) td{background:var(--cream)}
-tr:last-child td{border-bottom:none}
-
-/* ── AXIOM CARD ── */
-.axiom-card{background:var(--forest-dark);border-radius:12px;padding:22px 26px;margin:18px 0;border-top:3px solid var(--gold)}
-.axiom-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--gold);margin-bottom:10px;text-transform:uppercase}
-.axiom-text{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--cream);line-height:1.55;font-style:italic}
-.axiom-sub{font-family:'Crimson Pro',serif;font-size:13px;color:rgba(245,240,232,.45);margin-top:8px;font-style:italic}
-
-/* ── DUAL CARD ── */
-.dual-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
-.param-card{background:var(--forest-dark);border-radius:10px;padding:18px 20px}
-.param-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--gold);margin-bottom:8px;text-transform:uppercase}
-.param-title{font-family:'Playfair Display',serif;font-size:16px;color:var(--cream);font-weight:700;margin-bottom:6px}
-.param-body{font-family:'Crimson Pro',serif;font-size:14px;color:rgba(245,240,232,.72);line-height:1.65}
-.param-body strong{color:var(--gold-light)}
-@media(max-width:600px){.dual-cards{grid-template-columns:1fr}}
-
-/* ── PRINCIPLE ITEMS ── */
-.principle-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
-.principle-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--cream);flex-shrink:0;margin-top:2px}
-.principle-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;margin-bottom:5px}
-.divider{height:1px;background:var(--cream-dark);margin:16px 0}
-
-/* ── STEP LIST ── */
-.steps-list{list-style:none;padding:0;margin:12px 0}
-.steps-list li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--cream-dark);font-size:16px;line-height:1.7;color:var(--ink-light)}
-.steps-list li:last-child{border-bottom:none}
-.step-n{width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px}
-
-/* ── BULLET LIST ── */
-.bullet-list{padding-left:20px;margin:10px 0}
-.bullet-list li{font-size:16px;line-height:1.8;color:var(--ink-light);margin-bottom:3px}
-
-/* ── STEP SEQUENCE (operational) ── */
-.op-steps{display:flex;flex-direction:column;gap:0;margin:16px 0}
-.op-step{display:flex;gap:14px;position:relative}
-.op-step::before{content:'';position:absolute;left:17px;top:42px;bottom:-12px;width:2px;background:rgba(200,151,58,.25)}
-.op-step:last-child::before{display:none}
-.op-dot{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--cream);flex-shrink:0;z-index:1}
-.op-body{flex:1;padding-bottom:24px}
-.op-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:3px}
-.op-desc{font-size:15px;color:var(--ink-light);line-height:1.65}
-
-/* ── FIG BOX ── */
-.fig-box{margin:16px 0;border:1px solid var(--cream-dark);border-radius:10px;overflow:hidden;background:var(--cream);padding:10px 6px 6px}
-
-/* ── FOOTER ── */
-#site-footer{background:var(--forest-dark);border-top:2px solid var(--gold);padding:32px 36px;text-align:center}
-.footer-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--gold);margin-bottom:6px}
-.footer-sub{font-family:'Crimson Pro',serif;font-size:13px;color:rgba(245,240,232,.45);font-style:italic}
-
-/* ── MOBILE ── */
-@media(max-width:768px){
-  #sidebar{display:none}
-  #content{padding:20px 18px 60px}
-  .hero-stats{gap:24px}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
 }
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav id="site-nav">
-  <div class="nav-logo">CPA Framework</div>
-  <div class="nav-links" id="nav-links"></div>
-  <div class="lang-toggle">
-    <button class="lang-btn active" id="lang-en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" id="lang-vi" onclick="setLang('vi')">VI</button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-ring" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
-    <div class="hero-ring" style="width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
-    <div class="hero-ring" style="width:1200px;height:1200px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
-    <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.04" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-      <defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M8 0L0 0 0 8" fill="none" stroke="#C8973A" stroke-width=".3"/></pattern></defs>
-      <rect width="100" height="100" fill="url(#grid)"/>
+h1, h2, h3, h4 { line-height: 1.3; margin: 1.5em 0 0.5em; }
+h1 { font-size: 2em; border-bottom: 2px solid var(--brand); padding-bottom: 8px; }
+h2 { font-size: 1.5em; }
+a { color: var(--brand); text-decoration: underline; }
+table { width: 100%; border-collapse: collapse; margin: 1.5em 0; }
+th, td { border: 1px solid var(--border); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { font-weight: 600; }
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 1.5em 0;
+}
+.card.cover { text-align: center; }
+.card ascii { display: block; overflow-x: auto; }
+pre.ascii {
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 0.85em;
+  line-height: 1.4;
+  white-space: pre;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 1em 0;
+}
+.step-num {
+  width: 56px;
+  text-align: center;
+  color: var(--brand);
+  border-right: 4px solid var(--accent);
+  font-weight: 700;
+  font-size: 1.4em;
+  vertical-align: middle;
+}
+.step-body { padding: 14px 18px; }
+table tr { display: table; width: 100%; }
+footer.cc-license {
+  color: var(--muted);
+  font-size: 0.88em;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  padding-top: 14px;
+}
+  </style>
+ </head>
+ <body>
+  <!-- NAV -->
+  <nav id="site-nav">
+   <div class="nav-logo">
+    CPA Framework
+   </div>
+   <div class="nav-links" id="nav-links">
+   </div>
+   <div class="lang-toggle">
+    <button class="lang-btn active" id="lang-en" onclick="setLang('en')">
+     EN
+    </button>
+    <button class="lang-btn" id="lang-vi" onclick="setLang('vi')">
+     VI
+    </button>
+   </div>
+  </nav>
+  <!-- HERO -->
+  <section id="hero">
+   <div aria-hidden="true" class="hero-bg">
+    <div class="hero-ring" style="width:600px;height:600px;top:50%;left:50%;transform:translate(-50%,-50%)">
+    </div>
+    <div class="hero-ring" style="width:900px;height:900px;top:50%;left:50%;transform:translate(-50%,-50%)">
+    </div>
+    <div class="hero-ring" style="width:1200px;height:1200px;top:50%;left:50%;transform:translate(-50%,-50%)">
+    </div>
+    <svg preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;opacity:.04" viewBox="0 0 100 100">
+     <defs>
+      <pattern height="8" id="grid" patternUnits="userSpaceOnUse" width="8">
+       <path d="M8 0L0 0 0 8" fill="none" stroke="#C8973A" stroke-width=".3">
+       </path>
+      </pattern>
+     </defs>
+     <rect fill="url(#grid)" height="100" width="100">
+     </rect>
     </svg>
+   </div>
+   <div class="hero-eyebrow anim-up" data-delay="1" id="hero-eyebrow">
+    Professional Tennis Training Manual
+   </div>
+   <div class="hero-title anim-up" data-delay="2" id="hero-title">
+    Contact Point
+    <br>
+    Architecture
+   </div>
+   <div class="hero-sub anim-up" data-delay="3" id="hero-sub">
+    The Complete Framework for Stroke Analysis
+   </div>
+   <div class="hero-desc anim-up" data-delay="4" id="hero-desc">
+    Every tennis stroke is a contact point engineering problem. Two parameters &mdash; grip angle and body configuration &mdash; determine whether that contact is clean. This manual shows exactly how.
+   </div>
+   <div class="hero-axiom anim-up" data-delay="5" id="hero-axiom">
+    "The grip selects the axis. The body organises behind it. Everything else is delivery."
+   </div>
+   <a class="hero-cta anim-up" data-delay="6" href="#main-content" id="hero-cta">
+    <span id="hero-cta-text">
+     Begin the Manual
+    </span>
+    <span>
+     &darr;
+    </span>
+   </a>
+   <div class="hero-stats anim-up" data-delay="7">
+    <div class="hero-stat">
+     <div class="hero-stat-n">
+      2
+     </div>
+     <div class="hero-stat-l" id="hs1">
+      Critical Parameters
+     </div>
+    </div>
+    <div class="hero-stat">
+     <div class="hero-stat-n">
+      5
+     </div>
+     <div class="hero-stat-l" id="hs2">
+      Analytical Lenses
+     </div>
+    </div>
+    <div class="hero-stat">
+     <div class="hero-stat-n">
+      6
+     </div>
+     <div class="hero-stat-l" id="hs3">
+      Universal Corollaries
+     </div>
+    </div>
+    <div class="hero-stat">
+     <div class="hero-stat-n">
+      9
+     </div>
+     <div class="hero-stat-l" id="hs4">
+      Complete Sections
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- MAIN -->
+  <div id="main-content">
+   <div id="main">
+    <!-- SIDEBAR -->
+    <aside aria-label="Manual Navigation" id="sidebar">
+     <div id="sidebar-nav">
+     </div>
+    </aside>
+    <!-- CONTENT -->
+    <main id="content">
+     <div class="section-page visible" id="section-s0">
+     </div>
+     <div class="section-page" id="section-s1">
+     </div>
+     <div class="section-page" id="section-s2">
+     </div>
+     <div class="section-page" id="section-s3">
+     </div>
+     <div class="section-page" id="section-s4">
+     </div>
+     <div class="section-page" id="section-s5">
+     </div>
+     <div class="section-page" id="section-s6">
+     </div>
+     <div class="section-page" id="section-s7">
+     </div>
+     <div class="section-page" id="section-s8">
+     </div>
+    </main>
+   </div>
   </div>
-
-  <div class="hero-eyebrow anim-up" data-delay="1" id="hero-eyebrow">Professional Tennis Training Manual</div>
-  <div class="hero-title anim-up" data-delay="2" id="hero-title">Contact Point<br>Architecture</div>
-  <div class="hero-sub anim-up" data-delay="3" id="hero-sub">The Complete Framework for Stroke Analysis</div>
-  <div class="hero-desc anim-up" data-delay="4" id="hero-desc">Every tennis stroke is a contact point engineering problem. Two parameters — grip angle and body configuration — determine whether that contact is clean. This manual shows exactly how.</div>
-  <div class="hero-axiom anim-up" data-delay="5" id="hero-axiom">"The grip selects the axis. The body organises behind it. Everything else is delivery."</div>
-  <a href="#main-content" class="hero-cta anim-up" data-delay="6" id="hero-cta">
-    <span id="hero-cta-text">Begin the Manual</span>
-    <span>↓</span>
-  </a>
-
-  <div class="hero-stats anim-up" data-delay="7">
-    <div class="hero-stat"><div class="hero-stat-n">2</div><div class="hero-stat-l" id="hs1">Critical Parameters</div></div>
-    <div class="hero-stat"><div class="hero-stat-n">5</div><div class="hero-stat-l" id="hs2">Analytical Lenses</div></div>
-    <div class="hero-stat"><div class="hero-stat-n">6</div><div class="hero-stat-l" id="hs3">Universal Corollaries</div></div>
-    <div class="hero-stat"><div class="hero-stat-n">9</div><div class="hero-stat-l" id="hs4">Complete Sections</div></div>
-  </div>
-</section>
-
-<!-- MAIN -->
-<div id="main-content">
-<div id="main">
-
-  <!-- SIDEBAR -->
-  <aside id="sidebar" aria-label="Manual Navigation">
-    <div id="sidebar-nav"></div>
-  </aside>
-
-  <!-- CONTENT -->
-  <main id="content">
-    <div id="section-s0" class="section-page visible"></div>
-    <div id="section-s1" class="section-page"></div>
-    <div id="section-s2" class="section-page"></div>
-    <div id="section-s3" class="section-page"></div>
-    <div id="section-s4" class="section-page"></div>
-    <div id="section-s5" class="section-page"></div>
-    <div id="section-s6" class="section-page"></div>
-    <div id="section-s7" class="section-page"></div>
-    <div id="section-s8" class="section-page"></div>
-  </main>
-
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer id="site-footer">
-  <div class="footer-title" id="footer-title">Contact Point Architecture Framework</div>
-  <div class="footer-sub" id="footer-sub">The Art of Modern Tennis · The Neurological Edge · Professional Coaching Manual v1.0</div>
-</footer>
-
-<script>
-// ─────────────────────────────────────────────
+  <!-- FOOTER -->
+  <footer id="site-footer">
+   <div class="footer-title" id="footer-title">
+    Contact Point Architecture Framework
+   </div>
+   <div class="footer-sub" id="footer-sub">
+    The Art of Modern Tennis &middot; The Neurological Edge &middot; Professional Coaching Manual v1.0
+   </div>
+  </footer>
+  <script>
+   // ─────────────────────────────────────────────
 // DATA
 // ─────────────────────────────────────────────
 const LANG = {
@@ -988,10 +942,19 @@ window.addEventListener('DOMContentLoaded', ()=>{
   sectionIds.forEach(id=>renderSection(id));
   renderNav();
 });
-</script>
-
-<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-  <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
-</body>
+  </script>
+  <footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+   <p style="margin: 4px 0;">
+    Created by
+    <strong>
+     Henry Pham, Tennis Future Lab
+    </strong>
+    under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">
+     Creative Commons BY-NC-SA 4.0
+    </a>
+    .
+   </p>
+  </footer>
+ </body>
 </html>
