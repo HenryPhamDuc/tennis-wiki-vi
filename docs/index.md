@@ -35,69 +35,69 @@ Khám phá wiki dưới dạng mạng tương tác — mỗi nút là một bài
 
 <div class="grid cards" markdown>
 
--   :material-tennis:{ .lg .middle } **Kỹ thuật**
+-   🎾 **Kỹ thuật**
 
     ---
 
     Forehand, backhand, serve, volley, footwork — từ cơ bản đến nâng cao
 
-    [:octicons-arrow-right-24: Xem tất cả](ky-thuat/index.md)
+    [→ Xem tất cả](ky-thuat/index.md)
 
--   :material-bone:{ .lg .middle } **Cơ sinh học**
+-   🦴 **Cơ sinh học**
 
     ---
 
     Kinetic chain, tensegrity, wave theory, proprioception
 
-    [:octicons-arrow-right-24: Khám phá](co-sinh-hoc/index.md)
+    [→ Khám phá](co-sinh-hoc/index.md)
 
--   :material-strategy:{ .lg .middle } **Chiến thuật**
+-   ♟️ **Chiến thuật**
 
     ---
 
     70% Rule, 3-shot patterns, serve & volley
 
-    [:octicons-arrow-right-24: Đọc thêm](chien-thuat/index.md)
+    [→ Đọc thêm](chien-thuat/index.md)
 
--   :material-meditation:{ .lg .middle } **Tâm lý**
+-   🧘 **Tâm lý**
 
     ---
 
     Pre-performance routine, breathing, pressure management
 
-    [:octicons-arrow-right-24: Tìm hiểu](tam-ly/index.md)
+    [→ Tìm hiểu](tam-ly/index.md)
 
--   :material-run-fast:{ .lg .middle } **Thể lực**
+-   🏃 **Thể lực**
 
     ---
 
     Proprioception programs, spiral chain, age-50+ safety
 
-    [:octicons-arrow-right-24: Bắt đầu](the-luc/index.md)
+    [→ Bắt đầu](the-luc/index.md)
 
--   :material-account-group:{ .lg .middle } **Tay vợt**
+-   👥 **Tay vợt**
 
     ---
 
     Federer, Nadal, Djokovic, Alcaraz, Sinner, Rublev, Shelton
 
-    [:octicons-arrow-right-24: Xem](tay-vot/index.md)
+    [→ Xem](tay-vot/index.md)
 
--   :material-book-open-page-variant:{ .lg .middle } **Cẩm nang**
+-   📖 **Cẩm nang**
 
     ---
 
     Cẩm nang 3.5, Giáo trình 5 năm, TFL 3.0 Framework
 
-    [:octicons-arrow-right-24: Đọc](cam-nang/index.md)
+    [→ Đọc](cam-nang/index.md)
 
--   :material-bookshelf:{ .lg .middle } **Tham khảo**
+-   📚 **Tham khảo**
 
     ---
 
     Wave theory, biomechanics, advanced methodology
 
-    [:octicons-arrow-right-24: Đọc](tham-khao/index.md)
+    [→ Đọc](tham-khao/index.md)
 
 </div>
 
