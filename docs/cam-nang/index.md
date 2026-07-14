@@ -27,11 +27,11 @@
 - [Modern Tennis Volley Handbook 2026](modern_tennis_volley_handbook_2026.md)
 - [Nghệ Thuật Hiện Đại Tennis](the_art_of_modern_tennis.md)
 - [The Art of Modern Tennis — A Complete Reference Manual](the-art-of-modern-tennis-a-complete-reference-manual-for-elite-players-and-coach.md)
-- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/)
+- [📚 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)](https://henryphamduc.github.io/tennis-wiki-vi/cam-nang/ebook/)
 
 ### 🎾 Tennis Ebook — Thư Viện Hoàn Chỉnh (35+ tài liệu)
 
-👉 **[Đọc online ngay](https://henryphamduc.github.io/tennis-wiki/cam-nang/ebook/){ .md-button }** — Mở viewer ebook song ngữ EN-VI với sidebar nav + iframe cho từng tài liệu (35+ bài viết).
+👉 **[Đọc online ngay](https://henryphamduc.github.io/tennis-wiki-vi/cam-nang/ebook/){ .md-button }** — Mở viewer ebook song ngữ EN-VI với sidebar nav + iframe cho từng tài liệu (35+ bài viết).
 
 ![Bìa ebook Tennis — Thư Viện Hoàn Chỉnh 35+ tài liệu](dl/cover.png){ width="280" loading=lazy }
 
