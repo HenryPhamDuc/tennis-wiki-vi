@@ -15,6 +15,9 @@ site_url: https://henryphamduc.github.io/tennis-wiki-vi/
 docs_dir: docs
 site_dir: site
 
+# Use file-based URLs (e.g., ky-thuat.html) instead of directory URLs (e.g., /ky-thuat/)
+use_directory_urls: false
+
 # Don't build archived/raw exports (kept for reference, not part of the wiki)
 exclude_docs: |
   he-thong/archive/
