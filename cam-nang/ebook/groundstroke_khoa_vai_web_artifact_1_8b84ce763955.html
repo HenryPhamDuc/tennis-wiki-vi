@@ -1,0 +1,461 @@
+<html lang="vi"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyên lý Khóa Vai Trái - FH &amp; BH 1 tay</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap');
+* { box-sizing: border-box; }
+body { margin:0; background:#fff; color:#111827; font-family:'Be+Vietnam+Pro', 'Be Vietnam Pro', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+.page { max-width:1100px; margin:0 auto; padding:22px 24px; }
+header h1 { text-align:center; font-size:32px; font-weight:800; margin:0; letter-spacing:-0.3px; }
+.subtitle { text-align:center; font-size:12px; color:#4b5563; margin:6px 0 10px; font-weight:600; }
+.principles { display:flex; flex-wrap:wrap; gap:6px 8px; justify-content:center; margin:10px 0 12px; }
+.principles span { background:#f9fafb; border:1px solid #e5e7eb; padding:4px 10px; border-radius:999px; font-size:11px; font-weight:600; color:#374151; }
+.legend { display:flex; justify-content:center; gap:20px; margin:8px 0 16px; font-size:11px; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:6px; font-weight:600; }
+.dot { width:13px; height:13px; border-radius:50%; border:2px solid white; box-shadow:0 0 0 1px #cbd5e1; }
+.dot.locked { background:#1e3a8a; }
+.dot.free { background:#9ca3af; }
+.dot.spine { background:#dc2626; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; border-top:3px solid #111; padding-top:14px; }
+.col h2 { margin:0 0 12px; text-align:center; background:#111; color:#fff; padding:9px; font-size:16px; letter-spacing:0.8px; font-weight:800; border-radius:6px; }
+.step { border:1.5px solid #e5e7eb; border-radius:12px; padding:10px 12px 12px; margin-bottom:14px; background:#fff; }
+.step-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }
+.step-title { font-weight:800; font-size:14px; text-transform:uppercase; letter-spacing:0.3px; }
+.step-num { font-size:11px; color:#fff; background:#374151; padding:3px 8px; border-radius:999px; font-weight:700; }
+.svg-wrap { background:#fcfcfc; border:1px solid #f0f0f0; border-radius:8px; padding:6px; }
+.svg-wrap svg { width:100%; height:auto; display:block; }
+.callouts { margin-top:7px; font-size:11.5px; line-height:1.5; color:#374151; }
+.callouts b { color:#1e3a8a; font-weight:700; }
+footer { text-align:center; margin-top:8px; padding-top:12px; border-top:2px dashed #d1d5db; font-weight:800; font-size:16px; letter-spacing:1px; }
+.note { text-align:center; font-size:10px; color:#6b7280; margin-top:4px; }
+@media (max-width:900px){ .grid{ grid-template-columns:1fr } header h1{ font-size:26px } }
+@media print{
+  @page { size:A4; margin:10mm; }
+  body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page { padding:0; }
+  .step { break-inside:avoid; page-break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <h1>Nguyên lý Khóa Vai Trái - FH &amp; BH 1 tay</h1>
+    <div class="subtitle">Tay thực (trái) - Tay hư (phải) • Chân thực - Chân hư • Một chân thẳng, một chân cong</div>
+    <div class="principles">
+      <span>Skiing Style / Keep the elbow up = clear the chest</span>
+      <span>CHEST &amp; ARMS DIAMOND</span>
+      <span>Waist loose, Use hips to change direction</span>
+      <span>Legs act as suspension</span>
+      <span>Free to rotate around the spine</span>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="dot locked"></div> KHÓA = Vai/Chân Trái (Thực)</div>
+      <div class="legend-item"><div class="dot free"></div> GIẢI PHÓNG = Vai/Chân Phải (Hư)</div>
+      <div class="legend-item"><div class="dot spine"></div> TRỤC = Cột sống</div>
+    </div>
+  </header>
+
+  <div class="grid">
+    <!-- FOREHAND -->
+    <div class="col">
+      <h2>FOREHAND</h2>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 1: Nạp lực</div>
+          <div class="step-num">COIL</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="72" cy="42" rx="9" ry="6" fill="#1e3a8a"></ellipse><text x="72" y="45" text-anchor="middle" font-size="7" fill="white" font-weight="700">Trái</text>
+            <ellipse cx="128" cy="148" rx="9" ry="6" fill="#9ca3af"></ellipse><text x="128" y="151" text-anchor="middle" font-size="7" fill="white">Phải</text>
+            <line x1="85" y1="85" x2="72" y2="48" stroke="#1e3a8a" stroke-width="5" stroke-linecap="round"></line>
+            <path d="M105 95 Q120 120 128 142" fill="none" stroke="#9ca3af" stroke-width="5" stroke-linecap="round"></path>
+            <line x1="82" y1="80" x2="108" y2="100" stroke="#111" stroke-width="6" stroke-linecap="round" opacity="0.85"></line>
+            <circle cx="95" cy="90" r="22" fill="none" stroke="#e5e7eb" stroke-dasharray="2 2"></circle>
+            <line x1="75" y1="65" x2="115" y2="115" stroke="#111" stroke-width="5" stroke-linecap="round"></line>
+            <circle cx="75" cy="65" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="75" y="68.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="115" cy="115" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="115" y="118.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="95" cy="90" r="4" fill="#dc2626"></circle>
+            <polygon points="75,65 55,78 70,95 95,90" fill="none" stroke="#1e3a8a" stroke-width="2"></polygon>
+            <text x="32" y="75" font-size="7.5" fill="#1e3a8a" font-weight="700">CHEST &amp; ARMS</text>
+            <text x="38" y="84" font-size="7.5" fill="#1e3a8a" font-weight="700">DIAMOND</text>
+            <line x1="115" y1="115" x2="145" y2="140" stroke="#9ca3af" stroke-width="3" stroke-linecap="round"></line>
+            <ellipse cx="152" cy="147" rx="12" ry="8" fill="none" stroke="#9ca3af" stroke-width="2.5" transform="rotate(30 152 147)"></ellipse>
+            <g transform="translate(60,48)"><rect x="0" y="6" width="14" height="10" rx="2" fill="#1e3a8a"></rect><path d="M3 6 V3 A4 4 0 0 1 11 3 V6" fill="none" stroke="#1e3a8a" stroke-width="2.5"></path></g>
+            <text x="100" y="163" text-anchor="middle" font-size="9" fill="#374151">Một chân thẳng (thực), một chân cong (hư)</text>
+          </svg>
+        </div>
+        <div class="callouts"><b>Khóa vai trái</b> hướng lưới, tạo trục. <b>Tay thực (trái)</b> dẫn khung, <b>tay hư (phải)</b> thả lỏng sau. Giữ khuỷu tay cao.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 2: Xoay hông</div>
+          <div class="step-num">HIP DRIVE</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#dc2626"></path></marker></defs>
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="75" cy="48" rx="9" ry="6" fill="#1e3a8a"></ellipse>
+            <ellipse cx="125" cy="142" rx="9" ry="6" fill="#9ca3af"></ellipse>
+            <line x1="85" y1="85" x2="75" y2="54" stroke="#1e3a8a" stroke-width="5"></line>
+            <path d="M105 95 Q118 115 125 136" fill="none" stroke="#9ca3af" stroke-width="5"></path>
+            <path d="M75 100 Q78 105 75 110 Q78 115 75 120" fill="none" stroke="#6b7280" stroke-width="1.5"></path><path d="M115 110 Q118 115 115 120 Q118 125 115 130" fill="none" stroke="#6b7280" stroke-width="1.5"></path>
+            <text x="58" y="115" font-size="7" fill="#6b7280">Legs as suspension</text>
+            <line x1="80" y1="82" x2="106" y2="96" stroke="#111" stroke-width="6" opacity="0.85" transform="rotate(-18 93 89)"></line>
+            <path d="M70 105 A25 25 0 0 1 116 85" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow)"></path>
+            <text x="58" y="92" font-size="8.5" fill="#dc2626" font-weight="700">Xoay hông</text>
+            <line x1="75" y1="68" x2="113" y2="112" stroke="#111" stroke-width="5"></line>
+            <circle cx="75" cy="68" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="75" y="71.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="113" cy="112" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="113" y="115.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="94" cy="90" r="4" fill="#dc2626"></circle>
+            <path d="M94 78 Q92 90 94 102" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="2 2"></path>
+            <text x="99" y="78" font-size="7.5" fill="#dc2626" font-weight="700">Waist loose</text>
+            <line x1="113" y1="112" x2="142" y2="135" stroke="#9ca3af" stroke-width="3"></line><ellipse cx="148" cy="141" rx="12" ry="8" fill="none" stroke="#9ca3af" stroke-width="2" transform="rotate(25 148 141)"></ellipse>
+            <text x="100" y="163" text-anchor="middle" font-size="9" fill="#374151" font-weight="600">Use hips to change direction</text>
+          </svg>
+        </div>
+        <div class="callouts"><b>Waist loose</b> - eo thả lỏng. Dùng hông kéo thân, không dùng tay. Vai trái vẫn khóa làm trục.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 3: Tiếp xúc</div>
+          <div class="step-num">RELEASE</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="arrow2" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#dc2626"></path></marker></defs>
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="80" cy="55" rx="9" ry="6" fill="#1e3a8a"></ellipse><ellipse cx="120" cy="135" rx="9" ry="6" fill="#9ca3af"></ellipse>
+            <line x1="88" y1="85" x2="80" y2="61" stroke="#1e3a8a" stroke-width="5"></line><line x1="102" y1="92" x2="120" y2="129" stroke="#9ca3af" stroke-width="5"></line>
+            <line x1="78" y1="88" x2="112" y2="88" stroke="#111" stroke-width="6" opacity="0.85"></line>
+            <line x1="68" y1="72" x2="122" y2="72" stroke="#111" stroke-width="5"></line>
+            <circle cx="68" cy="72" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="68" y="75.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="122" cy="72" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="122" y="75.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="95" cy="80" r="4" fill="#dc2626"></circle><path d="M95 60 L95 100" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 2"></path>
+            <line x1="68" y1="72" x2="50" y2="60" stroke="#1e3a8a" stroke-width="3"></line>
+            <line x1="122" y1="72" x2="100" y2="35" stroke="#9ca3af" stroke-width="4" stroke-linecap="round"></line><ellipse cx="98" cy="28" rx="13" ry="9" fill="none" stroke="#9ca3af" stroke-width="2.5" transform="rotate(-10 98 28)"></ellipse><circle cx="100" cy="35" r="3" fill="#111"></circle><text x="106" y="33" font-size="8" fill="#111" font-weight="700">Tiếp xúc</text>
+            <path d="M115 80 A20 20 0 1 1 75 80" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="2 2" marker-end="url(#arrow2)"></path>
+            <text x="118" y="63" font-size="7.5" fill="#dc2626" font-weight="700">Free to rotate</text>
+            <text x="100" y="163" text-anchor="middle" font-size="9.5" fill="#1e3a8a" font-weight="700">Khóa vai trái - Giải phóng vai phải</text>
+          </svg>
+        </div>
+        <div class="callouts"><b>Giải phóng vai phải</b> văng tự do quanh trục cột sống. Tay phải như dây, lực từ hông truyền ra.</div>
+      </div>
+    </div>
+
+    <!-- BACKHAND -->
+    <div class="col">
+      <h2>BACKHAND 1 TAY</h2>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 1: Nạp lực</div>
+          <div class="step-num">COIL</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="70" cy="145" rx="9" ry="6" fill="#1e3a8a"></ellipse><text x="70" y="148" text-anchor="middle" font-size="7" fill="white" font-weight="700">Trái</text>
+            <ellipse cx="125" cy="45" rx="9" ry="6" fill="#9ca3af"></ellipse><text x="125" y="48" text-anchor="middle" font-size="7" fill="white">Phải</text>
+            <line x1="88" y1="95" x2="70" y2="139" stroke="#1e3a8a" stroke-width="5"></line><path d="M102 85 Q115 65 125 51" fill="none" stroke="#9ca3af" stroke-width="5"></path>
+            <line x1="85" y1="100" x2="115" y2="72" stroke="#111" stroke-width="6" opacity="0.85"></line>
+            <line x1="80" y1="118" x2="120" y2="68" stroke="#111" stroke-width="5"></line>
+            <circle cx="80" cy="118" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="80" y="121.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="120" cy="68" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="120" y="71.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="100" cy="93" r="4" fill="#dc2626"></circle>
+            <line x1="80" y1="118" x2="58" y2="100" stroke="#1e3a8a" stroke-width="3"></line><text x="34" y="98" font-size="7.5" fill="#1e3a8a" font-weight="700">Tay thực</text>
+            <line x1="120" y1="68" x2="85" y2="52" stroke="#9ca3af" stroke-width="3"></line><line x1="85" y1="52" x2="55" y2="60" stroke="#9ca3af" stroke-width="4"></line><ellipse cx="48" cy="63" rx="13" ry="9" fill="none" stroke="#9ca3af" stroke-width="2.5" transform="rotate(-20 48 63)"></ellipse>
+            <g transform="translate(65,101)"><rect x="0" y="6" width="14" height="10" rx="2" fill="#1e3a8a"></rect><path d="M3 6 V3 A4 4 0 0 1 11 3 V6" fill="none" stroke="#1e3a8a" stroke-width="2.5"></path></g>
+            <text x="100" y="163" text-anchor="middle" font-size="8.5" fill="#374151" font-weight="600">Skiing Style / Keep elbow up = clear the chest</text>
+          </svg>
+        </div>
+        <div class="callouts"><b>Khóa vai trái</b> ở phía sau làm bản lề. Tay trái (thực) giữ thăng bằng, khuỷu cao kiểu trượt tuyết để ngực thoáng.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 2: Xoay hông</div>
+          <div class="step-num">HIP DRIVE</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="arrow3" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#dc2626"></path></marker></defs>
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="73" cy="140" rx="9" ry="6" fill="#1e3a8a"></ellipse><ellipse cx="122" cy="50" rx="9" ry="6" fill="#9ca3af"></ellipse>
+            <line x1="88" y1="95" x2="73" y2="134" stroke="#1e3a8a" stroke-width="5"></line><path d="M102 85 Q113 68 122 56" fill="none" stroke="#9ca3af" stroke-width="5"></path>
+            <line x1="85" y1="98" x2="113" y2="76" stroke="#111" stroke-width="6" opacity="0.85" transform="rotate(14 99 87)"></line>
+            <path d="M125 105 A25 25 0 0 0 75 85" fill="none" stroke="#dc2626" stroke-width="1.8" marker-end="url(#arrow3)"></path>
+            <text x="127" y="95" font-size="8.5" fill="#dc2626" font-weight="700">Xoay hông</text>
+            <line x1="82" y1="115" x2="118" y2="70" stroke="#111" stroke-width="5"></line>
+            <circle cx="82" cy="115" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="82" y="118.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="118" cy="70" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="118" y="73.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="100" cy="92" r="4" fill="#dc2626"></circle><path d="M100 80 Q98 92 100 104" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="2 2"></path>
+            <text x="104" y="80" font-size="7.5" fill="#dc2626" font-weight="700">Waist loose</text>
+            <line x1="82" y1="115" x2="60" y2="100" stroke="#1e3a8a" stroke-width="3"></line>
+            <line x1="118" y1="70" x2="88" y2="55" stroke="#9ca3af" stroke-width="3"></line><line x1="88" y1="55" x2="60" y2="65" stroke="#9ca3af" stroke-width="4"></line><ellipse cx="53" cy="68" rx="13" ry="9" fill="none" stroke="#9ca3af" stroke-width="2"></ellipse>
+            <text x="100" y="163" text-anchor="middle" font-size="9" fill="#374151" font-weight="600">Use hips to change direction</text>
+          </svg>
+        </div>
+        <div class="callouts"><b>Chân thực - chân hư</b> phối hợp, chân như giảm xóc. Hông dẫn hướng, vai trái vẫn khóa.</div>
+      </div>
+
+      <div class="step">
+        <div class="step-header">
+          <div class="step-title">Bước 3: Tiếp xúc</div>
+          <div class="step-num">RELEASE</div>
+        </div>
+        <div class="svg-wrap">
+          <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="arrow4" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#dc2626"></path></marker></defs>
+            <text x="100" y="12" text-anchor="middle" font-size="9" fill="#6b7280">LƯỚI ↑</text>
+            <line x1="20" y1="20" x2="180" y2="20" stroke="#e5e7eb" stroke-width="2"></line>
+            <ellipse cx="78" cy="132" rx="9" ry="6" fill="#1e3a8a"></ellipse><ellipse cx="118" cy="58" rx="9" ry="6" fill="#9ca3af"></ellipse>
+            <line x1="90" y1="92" x2="78" y2="126" stroke="#1e3a8a" stroke-width="5"></line><line x1="102" y1="84" x2="118" y2="64" stroke="#9ca3af" stroke-width="5"></line>
+            <line x1="82" y1="90" x2="114" y2="88" stroke="#111" stroke-width="6" opacity="0.85"></line>
+            <line x1="75" y1="105" x2="123" y2="73" stroke="#111" stroke-width="5"></line>
+            <circle cx="75" cy="105" r="9" fill="#1e3a8a" stroke="white" stroke-width="2"></circle><text x="75" y="108.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">L</text>
+            <circle cx="123" cy="73" r="9" fill="#9ca3af" stroke="white" stroke-width="2"></circle><text x="123" y="76.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">P</text>
+            <circle cx="99" cy="89" r="4" fill="#dc2626"></circle><path d="M99 69 L99 109" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 2"></path>
+            <line x1="75" y1="105" x2="55" y2="115" stroke="#1e3a8a" stroke-width="3"></line>
+            <line x1="123" y1="73" x2="105" y2="42" stroke="#9ca3af" stroke-width="4"></line><line x1="105" y1="42" x2="98" y2="30" stroke="#9ca3af" stroke-width="4"></line><ellipse cx="95" cy="23" rx="14" ry="9" fill="none" stroke="#9ca3af" stroke-width="2.5" transform="rotate(-15 95 23)"></ellipse><circle cx="98" cy="30" r="3" fill="#111"></circle><text x="80" y="28" font-size="8" fill="#111" font-weight="700">Tiếp xúc</text>
+            <path d="M120 90 A20 20 0 0 0 80 90" fill="none" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="2 2" marker-end="url(#arrow4)"></path>
+            <text x="100" y="163" text-anchor="middle" font-size="9.5" fill="#1e3a8a" font-weight="700">Khóa vai trái - Giải phóng vai phải</text>
+          </svg>
+        </div>
+        <div class="callouts">Vai trái khóa sau, <b>vai phải giải phóng</b> vung lên và qua bóng. Xoay quanh trục sống lưng, không kéo tay.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Trục = cột sống, Lực = hông, Tay = dây  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+<div class="note">In khổ A4 • Mang ra sân • Nhìn hình nhớ nguyên lý</div>
+</div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+</body></html>

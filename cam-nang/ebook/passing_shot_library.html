@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Passing Shot — Xuyên Qua Tay Đối Thủ Tại Lưới</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 { color: var(--accent-gold); font-size: 1.6em; margin-bottom: 10px; }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt { background: var(--accent-gold); color: var(--navy); }
+  .doc-card .badge.neutral { background: #34495e; }
+  .doc-card .intro-paragraph { margin-bottom: 12px; text-align: justify; }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Passing Shot</h1>
+  <p class="subtitle">Passing Shot Library — Xuyên Qua Tay Đối Thủ Tại Lưới</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Passing shot là cú đánh <strong>"quyền kiểm soát toàn trận"</strong> trong tennis — không chỉ là cú winner khi đối thủ ở lưới, mà là vũ khí tâm lý khiến đối thủ ngại approach. Đây là cú đánh <strong>bài test khó nhất cho groundstroke</strong> vì margin for error cực thấp — bóng phải đi chính xác qua chỗ đối thủ đang đứng, không được cao quá (để đối thủ volley) cũng không được rộng quá (ra ngoài baseline).</p>
+  <p>Đồng thời, passing shot ngày nay phải đối mặt với <strong>"quiet racket"</strong> của đối thủ — volley hiện đại không "tháo" như trước. Đó là lý do passing shot ngày càng khó — đòi hỏi topspin, đọc đối thủ sớm, và quyết định 100% trước khi swing.</p>
+  <p>Thư viện này tổng hợp <strong>6 tài liệu quan trọng nhất</strong> về Passing Shot trong Tennis Vault — từ chuyên sâu với 3 loại passing shot + 4 bước thực hiện, cho đến footwork chuyên biệt với 4 bước tại lưới, cho đến Modern tennis với "quiet racket" volley concept.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="passing_shot_guide.html" style="color: var(--accent-gold);">passing_shot_guide.html</a> (tổng hợp từ 5 nguồn), sau đó đọc <code>tennis_mastery_guide_tieng_viet.docx</code> "3 Loại Passing Shot" + 4 bước thực hiện. Đừng bỏ qua <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6 "Xử Lý Passing Shot và Lob" — footwork 4 bước tại lưới.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">passing_shot_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">tennis_mastery_guide_tieng_viet.docx — "Passing Shot — Qua Tay Đối Thủ"</a></li>
+    <li><a href="#doc3">Ky_Thuat_Chan_Tennis.docx — Ch.8.6 "Xử Lý Passing Shot và Lob"</a></li>
+    <li><a href="#doc4">The_Art_of_Modern_Tennis_Polished.docx — Modern Passing Shot vs Quiet Racket</a></li>
+    <li><a href="#doc5">Quan_Vot_Dinh_Cao_Coach_5.0.docx — "Forehand Passing Shot" bài test khó nhất</a></li>
+    <li><a href="#doc6">tennis_coaching_nguoi_nghiep_du.docx — Cẩm Nang Nghiệp Dư</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>passing_shot_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong>, được biên soạn từ 5 nguồn chuyên sâu: <code>tennis_mastery_guide_tieng_viet.docx</code> "Passing Shot — Qua Tay Đối Thủ" + 3 loại + 4 bước thực hiện, <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6 (Footwork 4 bước tại lưới), <code>The_Art_of_Modern_Tennis_Polished.docx</code> (Modern Passing Shot vs Quiet Racket), <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code> (Forehand Passing Shot là bài test khó nhất), và <code>Kỹ năng và Huấn luyện Tennis cùng các coach đẳng cấp ATP.md</code> (Counter 2 nhịp vs 1 nhịp).</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với các thư viện trước, tài liệu này nhấn mạnh <strong>quyết định sớm và cam kết 100%</strong> — insight cốt lõi từ <code>tennis_mastery_guide_tieng_viet.docx</code>: <em>"Thay đổi quyết định giữa chừng = lỗi. Do dự = hỏng"</em>. Có 9 phần, bao gồm triết lý "Quyền Kiểm Soát Toàn Trận", 3 loại passing shot (Cross-Court/DTL/Inside-Out), 4 bước thực hiện (Đọc → Cam Kết → Thấp → Góc/Tốc Độ), vị trí đối thủ quyết định loại passing shot, Counter 2 nhịp vs 1 nhịp, Footwork tại lưới. Có closing <strong>"XUYÊN VÀ TỈNH"</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn hiểu nhanh passing shot. Cũng là tài liệu tốt nhất để in ra mang ra sân (có thể in trang 8-9 làm cheat sheet với 5 bài tập 15 phút và 5 lỗi cần tránh).</p>
+  <p class="meta">📂 Vị trí: My notes / passing_shot_guide.html · 9 phần · 28 KB · Có closing "XUYÊN VÀ TỈNH"</p>
+  <a href="passing_shot_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">📘 TIẾNG VIỆT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_mastery_guide_tieng_viet.docx — "Passing Shot — Qua Tay Đối Thủ"</h2>
+  <p class="intro-paragraph">Cẩm nang tennis tiếng Việt (17 KB), cô đọng nhưng có hệ thống. Có <strong>chương riêng cho Passing Shot</strong> với 9 lần đề cập — phân tích passing shot từ góc độ chiến thuật + kỹ thuật. Có "3 Loại Passing Shot" và "Các Bước Thực Hiện" chi tiết.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>3 Loại Passing Shot</strong>: Cross-Court (an toàn nhất, góc rộng), Down-The-Line (tấn công, tốc độ thuần túy), Inside-Out Forehand (bất ngờ nhất). <strong>4 Bước Thực Hiện</strong>: (1) Đọc vị trí đối thủ sớm — họ đứng giữa không? Đang di chuyển sang một bên? Sát lưới? (2) Quyết định sớm và cam kết — thay đổi quyết định giữa chừng = lỗi. (3) Đánh THẤP qua lưới — không phải cao qua nó. (4) Tạo góc HOẶC dùng tốc độ thuần túy — không cố gắng làm cả hai cùng một lúc. Insight cốt lõi: <em>"Passing shot mạnh khiến đối thủ ngại tiến lên lưới — cho bạn quyền kiểm soát toàn bộ trận đấu"</em>. Đã có HTML.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>passing_shot_guide.html</code>. Tài liệu này cho góc nhìn tiếng Việt + cô đọng + 3 loại passing shot, guide cho góc nhìn tổng hợp + 5 bài tập. Cùng nhau tạo bức tranh toàn diện về passing shot.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_mastery_guide_tieng_viet.docx · 16,779 ký tự · Score: 9 (passing shot) · Đã có HTML</p>
+  <a href="../tfl/tennis_mastery_guide_tieng_viet.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/tennis_mastery_guide_tieng_viet.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge alt">🦶 FOOTWORK</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Ky_Thuật_Chân_Tennis.docx — Ch.8.6 "Xử Lý Passing Shot và Lob"</h2>
+  <p class="intro-paragraph">Sách chuyên về <strong>kỹ thuật chân tennis 10 chương</strong> của TFL. <strong>Chương 8.6</strong> tập trung vào 2 mối đe dọa chính tại lưới: <strong>passing shot (bóng đánh ngang người) và lob (bóng đánh qua đầu)</strong>. Footwork phản ứng cho từng loại được phân tích chi tiết.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Footwork 4 bước cho passing shot</strong>: split-step → đọc hướng → bước chéo một hoặc hai bước theo hướng bóng → volley. <strong>Quan trọng: không shuffle nhiều bước vì không có thời gian</strong>. <strong>Footwork 4 bước cho lob</strong>: split-step → nhận biết bóng đi cao → quay ngay lập tức → sprint ra sau → overhead. Tốc độ nhận biết là yếu tố quyết định — người phản ứng muộn 0,2 giây sẽ không kịp overhead. <strong>Đọc passing shot và lob từ chuyển động của đối thủ, không đợi thấy bóng</strong>. Đã có HTML từ Lob library.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy <code>The_Art_of_Modern_Tennis_Polished.docx</code> quá hiện đại, đọc tài liệu này để có góc nhìn footwork thực tế. Đặc biệt hữu ích cho VĐV 4.0+ muốn hiểu sâu về footwork tại lưới.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Ky_Thuat_Chan_Tennis.docx · 62,429 ký tự · 10 chương · Score: 5 (passing shot) · Đã có HTML</p>
+  <a href="../tfl/Ky_Thuat_Chan_Tennis.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Ky_Thuat_Chan_Tennis.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge">🎾 MODERN TENNIS</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>The_Art_of_Modern_Tennis_Polished.docx — Modern Passing Shot vs Quiet Racket</h2>
+  <p class="intro-paragraph">Sách tennis hiện đại (270 KB), là tài liệu chuyên sâu về cách tennis hiện đại thay đổi từ thập niên 1990s. Có 10 lần đề cập đến passing shot — phân tích từ góc độ modern game: <strong>"serve-and-volley pattern of the 1990s no longer exists at elite level"</strong>, <strong>"quiet racket is the most important volley concept"</strong>.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Insight hiện đại: <em>"Against a 120 km/h passing shot, there is no time for a full backswing — you must use the quiet racket, short lever principle, and firm grip pressure to absorb pace and redirect"</em>. <strong>Short lever principle</strong>: racket head should remain in or close to the path of the ball. <strong>Grip pressure</strong>: firmer than on groundstrokes but not tight. <strong>Situational awareness at net</strong> applied to confined spatial conditions. Có <strong>Sneak attack sequence</strong> — highest-surprise net entry in the game. Đã có HTML từ Forehand library.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>tennis_mastery_guide_tieng_viet.docx</code>. Tài liệu này cho góc nhìn modern tennis + quiet racket + 1990s vs today, sách kia cho góc nhìn cổ điển + 3 loại passing shot. Cùng nhau tạo bức tranh toàn diện về passing shot trong bối cảnh tennis hiện đại. Phù hợp cho VĐV 4.0+ muốn hiểu sự thay đổi của tennis qua các thập niên.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / The_Art_of_Modern_Tennis_Polished.docx · 270,643 ký tự · Score: 10 (passing shot) · Đã có HTML</p>
+  <a href="../tfl/The_Art_of_Modern_Tennis_Polished.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/The_Art_of_Modern_Tennis_Polished.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge alt">🏆 COACH 5.0</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Quan_Vợt_Dinh_Cao_Coach_5.0.docx — "Forehand Passing Shot" bài test khó nhất</h2>
+  <p class="intro-paragraph">Tài liệu quần vợt đỉnh cao Coach 5.0 (200 KB). Có <strong>6 lần đề cập đến passing shot</strong> — insight quan trọng: <em>"Forehand passing shot là bài test khó nhất cho forehand kỹ thuật. Với đối thủ đã ở lưới, margin for error gần như không có"</em>. Tài liệu cũng có <strong>Backhand slice approach shot</strong> — một trong những ứng dụng chiến thuật quan trọng nhất của backhand slice ở mức 5.0.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Tại sao net game quan trọng</strong>: khi bạn ở lưới, bạn kiểm soát trò chơi theo cách không thể làm từ baseline. Đối thủ buộc phải thực hiện passing shot (rủi ro cao) hoặc lob (mất thế tấn công). <strong>Approach shot fundamentals</strong>: khác với normal groundstroke, approach shot phải được đánh trong khi di chuyển về phía lưới. <strong>Down-the-line versus cross-court approach</strong>: down-the-line là 'classic' và thường tốt hơn vì: giảm angle cho passing shot. Đã có HTML từ Forehand library.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Tài liệu này cho góc nhìn Coach 5.0 (cấp chuyên nghiệp) + backhand slice approach + Down-the-line vs cross-court analysis. Phù hợp cho VĐV 4.0-5.0 muốn hiểu sâu về forehand kỹ thuật ở cấp cao.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Quan_Vot_Dinh_Cao_Coach_5.0.docx · 201,736 ký tự · Score: 6 (passing shot) · Đã có HTML</p>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge">🇻🇳 BẢN TIẾNG VIỆT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_coaching_nguoi_nghiep_du.docx — Cẩm Nang Tennis Cho Người Nghiệp Dư</h2>
+  <p class="intro-paragraph">Cẩm nang toàn diện 20 chương, <strong>hơn 400 trang</strong>, dành cho huấn luyện viên tennis nghiệp dư. Tài liệu này có nhiều drills thực tế, ngôn ngữ tiếng Việt dễ hiểu, và bao quát toàn bộ các khía cạnh từ kỹ thuật cơ bản đến chiến thuật nâng cao. Có đề cập đến passing shot và các cú đánh liên quan.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Tiếng Việt hoàn toàn, dễ đọc cho mọi đối tượng. Có nhiều drills cho người mới bắt đầu đến trung cấp, không yêu cầu thể lực cao. Phần "Passing Shot" nằm trong nhiều chương, đặc biệt là chương Chiến Thuật và Đánh Đôi. Cách giải thích grip, stance, swing path bằng ngôn ngữ đời thường, dễ hiểu. Có phần "Common Mistakes" cho từng cấp độ.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy <code>The_Art_of_Modern_Tennis_Polished.docx</code> quá modern, đọc tài liệu này để có góc nhìn thực tế hơn. Cũng phù hợp để chia sẻ cho người chơi Việt mới bắt đầu học passing shot.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_coaching_nguoi_nghiep_du.docx · 75,631 ký tự · 20 chương · Đã có HTML: <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html" style="color: var(--accent-gold);">tennis_coaching_nguoi_nghiep_du.html</a></p>
+  <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/tennis_coaching_nguoi_nghiep_du.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

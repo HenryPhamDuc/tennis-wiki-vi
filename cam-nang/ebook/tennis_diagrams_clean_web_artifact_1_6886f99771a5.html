@@ -1,0 +1,431 @@
+<html lang="en"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennis Instruction — Pham Duc Hai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+@page {
+  size: A4 portrait;
+  margin: 20mm;
+}
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .diagram-box { page-break-inside: avoid; }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: white;
+  color: #000;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  width: 170mm;
+  margin: 0 auto;
+}
+.diagram-box {
+  border: 1.2pt solid #cbd5e1;
+  border-radius: 8pt;
+  padding: 5mm 6mm 4mm;
+  margin-bottom: 7mm;
+  background: white;
+}
+.diagram-title {
+  font-size: 13pt;
+  font-weight: 600;
+  margin: 0 0 3mm 0;
+  letter-spacing: -0.01em;
+}
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+svg text {
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  fill: #000;
+}
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.line-thin {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.callout {
+  font-size: 9.5pt;
+  font-weight: 500;
+}
+.callout-bold { font-weight: 600; }
+.small-label { font-size: 8pt; font-weight: 500; }
+.footer {
+  text-align: center;
+  font-size: 8pt;
+  color: #6b7280;
+  margin-top: 2mm;
+  padding-bottom: 2mm;
+}
+</style>
+</head>
+<body>
+<div class="page">
+  
+  <!-- DIAGRAM 1 -->
+  <div class="diagram-box">
+    <h2 class="diagram-title">1. Maintain Arms Structure — Low Base</h2>
+    <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round"></path>
+        </marker>
+      </defs>
+      
+      <!-- Player -->
+      <circle cx="400" cy="72" r="13" class="line"></circle>
+      <line x1="368" y1="102" x2="432" y2="108" class="line"></line>
+      <path d="M400 85 L398 128" class="line"></path>
+      <path d="M398 128 C398 148 402 162 405 170" class="line"></path>
+      <line x1="388" y1="170" x2="420" y2="176" class="line"></line>
+      <!-- Legs bent low -->
+      <path d="M388 170 L374 212 L378 260" class="line"></path>
+      <path d="M420 176 L432 215 L428 260" class="line"></path>
+      <ellipse cx="378" cy="264" rx="13" ry="4.5" class="line"></ellipse>
+      <ellipse cx="428" cy="264" rx="13" ry="4.5" class="line"></ellipse>
+      <!-- Left arm (tucked) -->
+      <path d="M432 108 L428 142 L406 138" class="line"></path>
+      <!-- Right arm with racket -->
+      <path d="M368 102 L348 132 L362 148" class="line"></path>
+      <line x1="362" y1="148" x2="340" y2="170" class="line"></line>
+      <ellipse cx="324" cy="186" rx="17" ry="25" transform="rotate(-38 324 186)" class="line"></ellipse>
+      <path d="M322 170 L328 202" class="line-thin"></path>
+      
+      <!-- Rotation arrows -->
+      <path d="M455 120 A38 44 0 1 1 453 188" class="line-thin" marker-end="url(#arr1)"></path>
+      <text x="468" y="158" class="small-label">back</text>
+      <path d="M345 188 A38 44 0 1 1 347 120" class="line-thin" marker-end="url(#arr1)"></path>
+      <text x="312" y="158" class="small-label">forth</text>
+      
+      <!-- Lower body arrow -->
+      <line x1="402" y1="195" x2="402" y2="232" class="line-thin" marker-end="url(#arr1)"></line>
+      <text x="409" y="217" class="small-label">lower body</text>
+      
+      <!-- Callouts -->
+      <text x="38" y="98" class="callout callout-bold">Maintain the arms structure</text>
+      <text x="38" y="120" class="callout">by keeping the left arm close</text>
+      <text x="38" y="142" class="callout">&amp; move together with the right arm</text>
+      
+      <text x="512" y="88" class="callout callout-bold">1st thing to do is NOT to move to the ball</text>
+      <text x="468" y="268" class="callout">but lower the upper body to be in ready position (low base)</text>
+    </svg>
+  </div>
+
+  <!-- DIAGRAM 2 -->
+  <div class="diagram-box">
+    <h2 class="diagram-title">2. Controlled Falling — Sling Shot Serve</h2>
+    <svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round"></path>
+        </marker>
+      </defs>
+      
+      <!-- Title callouts -->
+      <text x="246" y="32" class="callout callout-bold">CONTROLLED FALLING OF THE BODY</text>
+      <text x="325" y="54" class="callout callout-bold">SLING SHOT = SERVE</text>
+      
+      <!-- STEP A - Trophy -->
+      <circle cx="140" cy="85" r="12" class="line"></circle>
+      <path d="M140 97 C142 115 145 130 148 145" class="line"></path>
+      <path d="M138 105 L132 45" class="line"></path>
+      <circle cx="132" cy="36" r="4.5" class="line-thin"></circle>
+      <path d="M142 108 L165 125 L158 155" class="line"></path>
+      <line x1="158" y1="155" x2="150" y2="184" class="line"></line>
+      <ellipse cx="144" cy="200" rx="14" ry="20" transform="rotate(18 144 200)" class="line"></ellipse>
+      <path d="M148 145 L165 175 L168 210" class="line"></path>
+      <path d="M148 145 L130 175 L128 210" class="line"></path>
+      <ellipse cx="128" cy="213" rx="11" ry="4" class="line"></ellipse>
+      <ellipse cx="168" cy="213" rx="11" ry="4" class="line"></ellipse>
+      <text x="135" y="242" class="small-label" text-anchor="middle">A</text>
+      
+      <!-- STEP B - Controlled Fall -->
+      <circle cx="375" cy="125" r="12" class="line"></circle>
+      <path d="M375 137 L395 175" class="line"></path>
+      <path d="M380 142 L395 170" class="line"></path>
+      <path d="M390 148 L405 180 L398 200" class="line"></path>
+      <line x1="398" y1="200" x2="385" y2="226" class="line"></line>
+      <ellipse cx="378" cy="240" rx="14" ry="20" transform="rotate(-28 378 240)" class="line"></ellipse>
+      <path d="M395 175 L380 205 L376 230" class="line"></path>
+      <path d="M395 175 L415 205 L420 232" class="line"></path>
+      <ellipse cx="376" cy="233" rx="11" ry="4" class="line"></ellipse>
+      <ellipse cx="420" cy="235" rx="11" ry="4" class="line"></ellipse>
+      <text x="395" y="262" class="small-label" text-anchor="middle">B</text>
+      
+      <!-- Large controlled fall arrow -->
+      <path d="M285 78 C325 88 358 108 408 168" class="line" stroke-width="2.6" marker-end="url(#arr2)" fill="none"></path>
+      <text x="308" y="98" class="small-label" transform="rotate(-12 308 98)">controlled fall</text>
+      
+      <!-- STEP C - Whip -->
+      <circle cx="635" cy="135" r="12" class="line"></circle>
+      <path d="M635 147 L635 185" class="line"></path>
+      <path d="M642 152 L645 65" class="line"></path>
+      <line x1="645" y1="65" x2="648" y2="40" class="line"></line>
+      <ellipse cx="650" cy="27" rx="13" ry="19" transform="rotate(8 650 27)" class="line"></ellipse>
+      <circle cx="652" cy="16" r="4" class="line-thin"></circle>
+      <path d="M643 70 Q646 75 643 80" class="line-thin"></path>
+      <path d="M628 155 L615 185" class="line"></path>
+      <line x1="620" y1="185" x2="650" y2="188" class="line"></line>
+      <path d="M620 185 L610 215 L608 245" class="line"></path>
+      <path d="M650 188 L660 215 L658 245" class="line"></path>
+      <ellipse cx="608" cy="248" rx="11" ry="4" class="line"></ellipse>
+      <ellipse cx="658" cy="248" rx="11" ry="4" class="line"></ellipse>
+      <text x="634" y="276" class="small-label" text-anchor="middle">C</text>
+      
+      <!-- Callouts -->
+      <text x="42" y="198" class="callout">LET GRAVITY WORKS</text>
+      <text x="514" y="118" class="callout">KEEP LOOSE ARM (A ROPE)</text>
+      <text x="514" y="140" class="callout">TO PULL THE RACKET (A STONE)</text>
+      <text x="182" y="318" class="callout callout-bold">DON'T TRY TO HIT THE BALL WITH THE ARM</text>
+      
+      <!-- Inset slingshot -->
+      <rect x="568" y="268" width="214" height="102" rx="10" ry="10" fill="none" stroke="#9ca3af" stroke-width="1.2"></rect>
+      <path d="M620 342 L640 312 L660 342 M640 312 L640 286" class="line" stroke-width="2"></path>
+      <path d="M620 342 Q640 330 640 326" class="line-thin" stroke-dasharray="3 2.5"></path>
+      <path d="M660 342 Q640 330 640 326" class="line-thin" stroke-dasharray="3 2.5"></path>
+      <circle cx="640" cy="326" r="6.5" class="line" stroke-width="2"></circle>
+      <path d="M645 322 A28 28 0 0 0 670 302" class="line-thin" marker-end="url(#arr2)" fill="none"></path>
+      <text x="572" y="288" class="small-label">ARM = ROPE (keep loose)</text>
+      <text x="664" y="362" class="small-label">RACKET = STONE</text>
+    </svg>
+  </div>
+
+  <div class="footer">Based on notes by Pham Duc Hai — 2026</div>
+</div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>

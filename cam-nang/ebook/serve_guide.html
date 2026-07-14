@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hướng Dẫn Cách Giao Bóng Tennis — Complete Guide</title>
+<style>
+:root {
+  --navy: #14285a;
+  --red: #b41e1e;
+  --gold: #facc15;
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --shadow: 0 2px 8px rgba(20,40,90,0.06);
+  --shadow-hover: 0 6px 20px rgba(20,40,90,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 32px 16px;
+}
+.container { max-width: 980px; margin: 0 auto; }
+
+header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%);
+  color: white;
+  padding: 40px 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+header h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+header .subtitle {
+  font-size: 1.05em;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+header .meta {
+  font-size: 0.88em;
+  opacity: 0.78;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.nav-bar {
+  background: var(--card);
+  padding: 14px 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border-left: 4px solid var(--red);
+  box-shadow: var(--shadow);
+  font-size: 0.92em;
+}
+.nav-bar a { color: var(--navy); font-weight: 600; text-decoration: none; }
+.nav-bar a:hover { text-decoration: underline; }
+
+.intro-card {
+  background: var(--card);
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+}
+.intro-card p {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.intro-card p:last-child { margin-bottom: 0; }
+.intro-card strong { color: var(--navy); }
+
+h2.section-title {
+  color: var(--navy);
+  font-size: 1.5em;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--red);
+}
+h3.subsection {
+  color: var(--navy);
+  font-size: 1.15em;
+  margin: 22px 0 10px;
+}
+
+.phase-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--navy);
+}
+.phase-card.phase-1 { border-left-color: #3b82f6; }
+.phase-card.phase-2 { border-left-color: #10b981; }
+.phase-card.phase-3 { border-left-color: #f59e0b; }
+.phase-card.phase-4 { border-left-color: #ef4444; }
+.phase-card h4 {
+  color: var(--navy);
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+.phase-card .phase-num {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.phase-card ul {
+  margin-left: 24px;
+  margin-top: 8px;
+}
+.phase-card li {
+  margin-bottom: 4px;
+}
+.phase-card .key-cue {
+  background: #fef9e7;
+  border-left: 3px solid var(--gold);
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+.callout {
+  background: #fff7ed;
+  border-left: 4px solid var(--red);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin: 18px 0;
+}
+.callout strong { color: var(--red); display: block; margin-bottom: 6px; }
+
+.drill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.drill-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+.drill-card .drill-num {
+  background: var(--red);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 8px;
+}
+.drill-card h5 {
+  color: var(--navy);
+  font-size: 1em;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.drill-card p {
+  font-size: 0.92em;
+  color: var(--muted);
+}
+
+footer {
+  background: var(--card);
+  padding: 20px 28px;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-top: 32px;
+  box-shadow: var(--shadow);
+}
+footer a { color: var(--navy); font-weight: 600; text-decoration: none; }
+
+@media (max-width: 600px) {
+  body { padding: 16px 10px; }
+  header { padding: 28px 20px; }
+  header h1 { font-size: 1.5em; }
+  .phase-card { padding: 16px; }
+}
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Hướng Dẫn Cách Giao Bóng Tennis</h1>
+  <p class="subtitle">Complete Tennis Serve Guide — Từ Cơ Bản Đến Nâng Cao / From Basic to Advanced</p>
+  <div class="meta">
+    <strong>📁 Nguồn gốc:</strong> Phân tích từ ghi chú tay của bạn (Kỹ thuật giao bóng.md + Serve technique.md)
+    &nbsp;|&nbsp; <strong>📅 Tháng 6/2026</strong>
+    &nbsp;|&nbsp; <strong>👤 Phong trào 50+</strong>
+  </div>
+</header>
+
+<div class="nav-bar">
+  📚 Xem thêm: <a href="serve_library.html">Serve Library Index</a> — tổng hợp 6 tài liệu về serve trong vault
+</div>
+
+<div class="intro-card">
+  <p><strong>Triết lý cốt lõi:</strong> Cú giao bóng KHÔNG phải là "quăng tay đập bóng". Đó là một
+  <strong>chuỗi chuyển động liên hoàn</strong> từ mặt đất đi lên — kinetic chain. Mỗi giai đoạn tích lũy
+  năng lượng từ giai đoạn trước, rồi bung ra vào đúng khoảnh khắc cần thiết.</p>
+  <p><strong>Core philosophy:</strong> A tennis serve is NOT arm-swinging. It is a <strong>kinetic chain</strong>
+  from ground up. Each phase loads energy from the previous one, then releases at the exact moment needed.</p>
+  <p>Hướng dẫn này tổng hợp từ <strong>2 bản phân tích ghi chú tay</strong> của bạn (Kỹ thuật giao bóng.md và
+  Serve technique.md) cùng với các reference code nghiên cứu (1a10, 6d32, db68, f0f7, 0378, 7993, dc63)
+  mà bạn đã cite. Mục tiêu: <em>giao bóng hiệu quả, giảm chấn thương vai/cho người chơi phong trào 50+</em>.</p>
+</div>
+
+<!-- ========== PHẦN 1: 4 GIAI ĐOẠN ========== -->
+<h2 class="section-title">PHẦN 1: 4 GIAI ĐOẠN CỐT LÕI / 4 CORE PHASES</h2>
+
+<!-- Phase 1 -->
+<div class="phase-card phase-1">
+  <h4><span class="phase-num">1</span>Preparation — Chuẩn bị (Tay trái giữ bóng trên cổ vợt)</h4>
+  <ul>
+    <li><strong>Vị trí tay:</strong> Tay trái giữ bóng ngay cổ vợt (racket throat). Tay phải cầm vợt grip continental.</li>
+    <li><strong>Mặt vợt:</strong> Mở vừa phải lên trời ("Racket Face almost Open up to sky") — giữ cổ tay thả lỏng.</li>
+    <li><strong>Vai:</strong> Chưa mở — giữ side-on, KHÔNG xoay vai sớm (lỗi phổ biến của người mới).</li>
+  </ul>
+  <div class="key-cue">💡 <strong>Key cue:</strong> Hai tay di chuyển cùng nhau như 1 khối. Nếu mở vai sớm, toàn bộ kinetic chain sẽ lệch — bạn sẽ đánh bằng tay thay vì cơ thể.</div>
+  <p style="margin-top:10px;font-size:0.92em;color:var(--muted);"><em>Reference: 1a10 — preparation phase trước khi vào trophy position.</em></p>
+</div>
+
+<!-- Phase 2 -->
+<div class="phase-card phase-2">
+  <h4><span class="phase-num">2</span>Trophy Position — Tư thế chiến thắng (Body fully coiled)</h4>
+  <ul>
+    <li><strong>Tung bóng:</strong> Tay trái tung bóng lên cao, hơi về phía trước phải (cho người thuận tay phải).</li>
+    <li><strong>Vai & hông:</strong> Vai và hông xoay ngang, lưng hơi cong. Trọng lượng dồn về chân sau.</li>
+    <li><strong>Vai nghiêng:</strong> Vai thuận (racket arm) nghiêng xuống, vai thuận (non-dominant) giơ cao theo tay tung.</li>
+    <li><strong>Khuỷu tay:</strong> Cao và tách biệt ("high and separated elbow") — điểm chuyển cực quan trọng.</li>
+  </ul>
+  <div class="key-cue">💡 <strong>Key cue:</strong> Đây là lúc <em>tích năng lượng</em>, KHÔNG đánh. Thở ra, thả lỏng vai. Cảm giác như "lò xo bị nén".</div>
+  <p style="margin-top:10px;font-size:0.92em;color:var(--muted);"><em>Reference: 6d32 — sự khác biệt tốc độ vợt đến từ góc xoay vai-hông ở giai đoạn coiling này.</em></p>
+</div>
+
+<!-- Phase 3 -->
+<div class="phase-card phase-3">
+  <h4><span class="phase-num">3</span>Racket Drop + Pronation — Thả rơi + xoay cẳng tay</h4>
+  <ul>
+    <li><strong>Thả rơi KHÔNG chặt:</strong> "Chop Down" trong ghi chú dễ gây hiểu nhầm. Thực tế <em>không chặt</em>, mà là <strong>thả lỏng vai</strong> để trọng lực kéo đầu vợt rơi thẳng xuống.</li>
+    <li><strong>Vị trí thấp nhất:</strong> Mũi vợt chĩa XUỐNG đất ("Racket Tip pointing down to the ground").</li>
+    <li><strong>Mặt vợt:</strong> Vuông góc với mặt đất ("Racket Face is perpendicular to the ground").</li>
+    <li><strong>Pronation:</strong> Cẳng tay xoay quanh trục của chính nó (internal rotation) — KHÔNG phải bẻ cổ tay chủ động.</li>
+  </ul>
+  <div class="key-cue">💡 <strong>Key cue:</strong> "Let the racket & arm pull the chest backward & downward naturally" — cảm giác "heavy weight pulling the arm". Khi lỏng, trọng lực tạo ra lag tự nhiên → snap tự xảy ra ở contact.</div>
+  <p style="margin-top:10px;font-size:0.92em;color:var(--muted);"><em>References: db68 (Racket Head Drop là bước 1 tạo lực) · f0f7 (pronation trong strike zone là chìa khóa) · 0378 (tossing arm + hitting arm thả lỏng) · 7993 (vai tích trữ năng lượng quay truyền sang cẳng tay).</em></p>
+</div>
+
+<!-- Phase 4 -->
+<div class="phase-card phase-4">
+  <h4><span class="phase-num">4</span>Contact + Follow-through — Chạm bóng + Kết thúc</h4>
+  <ul>
+    <li><strong>Extension tối đa:</strong> Tay đánh duỗi thẳng lên trên — chân, hông, vai, tay đều ở extension.</li>
+    <li><strong>Mặt vợt tại contact:</strong> VUÔNG GÓC đất cho flat serve, nghiêng cho slice/kick (xem PHẦN 2).</li>
+    <li><strong>Quỹ đạo:</strong> Thấp → Cao → Cắt (Low → High → Cross) cho Slice Serve.</li>
+    <li><strong>Follow-through:</strong> Vợt vung qua vai trái (cho người thuận tay phải), tay còn lại buông tự nhiên.</li>
+  </ul>
+  <div class="key-cue">💡 <strong>Key cue:</strong> Lực KHÔNG đến từ cổ tay — mà là hệ quả thụ động của kinetic chain. Đừng cố "snap", hãy để cơ thể bung.</div>
+  <p style="margin-top:10px;font-size:0.92em;color:var(--muted);"><em>Reference: 42f08aaa — kinetic chain hông → thân → vai → tay. Tay chỉ là hành khách.</em></p>
+</div>
+
+<!-- ========== PHẦN 2: 3 LOẠI SERVE ========== -->
+<h2 class="section-title">PHẦN 2: 3 LOẠI SERVE / 3 SERVE TYPES</h2>
+
+<p style="margin-bottom:18px;">Cùng một cấu trúc 4 giai đoạn — chỉ thay đổi <strong>góc mặt vợt</strong> +
+<strong>quỹ đạo tay</strong> tại điểm chạm = 3 loại bóng khác nhau. KHÔNG cần đổi grip.</p>
+
+<table style="width:100%;border-collapse:collapse;background:var(--card);box-shadow:var(--shadow);border-radius:8px;overflow:hidden;margin-bottom:20px;">
+<thead>
+<tr style="background:var(--navy);color:white;">
+<th style="padding:12px;text-align:left;">Loại / Type</th>
+<th style="padding:12px;text-align:left;">Mặt vợt / Face</th>
+<th style="padding:12px;text-align:left;">Quỹ đạo / Path</th>
+<th style="padding:12px;text-align:left;">Đặc tính / Trait</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f8fb;">
+<td style="padding:10px;"><strong>Flat Serve</strong></td>
+<td style="padding:10px;">Vuông góc đất (Perpendicular)</td>
+<td style="padding:10px;">Thẳng (no spin)</td>
+<td style="padding:10px;">Nhanh nhất, ít bounce — đập trực diện</td>
+</tr>
+<tr>
+<td style="padding:10px;"><strong>Slice Serve</strong></td>
+<td style="padding:10px;">Nghiêng nhẹ qua phải</td>
+<td style="padding:10px;">Low → High → Cross (Thấp-Cao-Cắt)</td>
+<td style="padding:10px;">Xoáy ngang, bóng cong ra ngoài — an toàn cho 50+</td>
+</tr>
+<tr style="background:#f7f8fb;">
+<td style="padding:10px;"><strong>Kick Serve</strong></td>
+<td style="padding:10px;">Nghiêng mạnh + pronate</td>
+<td style="padding:10px;">Low → High (low-to-high)</td>
+<td style="padding:10px;">Xoáy trên (topspin), bóng nảy cao</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ========== PHẦN 3: LƯU Ý PHONG TRÀO 50+ ========== -->
+<h2 class="section-title">PHẦN 3: LƯU Ý PHONG TRÀO 50+ / RECREATIONAL COACHING</h2>
+
+<div class="callout">
+<strong>⚠️ Quan trọng — Anti-injury cho người 50+:</strong>
+<ul style="margin-top:8px;margin-left:24px;">
+<li>❌ <strong>KHÔNG "chop" mạnh</strong> ở giai đoạn 3 — sẽ căng cơ delta, dễ đau vai. Nghĩ là "thả rơi" thay vì chặt.</li>
+<li>❌ <strong>KHÔNG cố xoay cổ tay sớm</strong> — pronation xảy ra tự nhiên sau khi đã thả lỏng ở drop.</li>
+<li>❌ <strong>KHÔNG mở vai sớm</strong> ở phase 1 — giữ side-on lâu hơn một chút.</li>
+<li>❌ <strong>KHÔNG gồng cơ cổ tay</strong> để tạo "snap" — lag + snap tự xảy ra nếu bạn thả lỏng.</li>
+<li>✅ <strong>Ưu tiên slice và kick nhẹ</strong> cho người chơi 50+ — giảm tải vai so với flat serve.</li>
+<li>✅ <strong>Phân bổ 60/30/10:</strong> 60% slice (an toàn) / 30% kick (tactic) / 10% flat (direct point).</li>
+</ul>
+</div>
+
+<!-- ========== PHẦN 4: DRILLS ========== -->
+<h2 class="section-title">PHẦN 4: 3 BƯỚC TỰ TẬP / 3-STEP DRILL PROGRESSION</h2>
+
+<div class="drill-grid">
+
+<div class="drill-card">
+  <h5><span class="drill-num">1</span>Shadow Swing (Tập không bóng)</h5>
+  <p>Đứng trước gương. Thực hiện 4 giai đoạn <strong>CHẬM</strong>, mỗi giai đoạn dừng 3 giây. Kiểm tra:
+  lưng phẳng #1, vai xoay ngang #2, mũi vợt xuống #3, tay thẳng #4.</p>
+  <p style="margin-top:6px;"><strong>Mục tiêu:</strong> 10 lần/ngày × 7 ngày. Cảm nhận vai thả lỏng.</p>
+</div>
+
+<div class="drill-card">
+  <h5><span class="drill-num">2</span>Ball Toss Isolation (Tập riêng tung bóng)</h5>
+  <p>Tung bóng lên 1m trước mặt, bắt lại. Lặp 20 lần. <strong>KHÔNG</strong> tập vợt ở bước này — chỉ tập
+  tay tung.</p>
+  <p style="margin-top:6px;"><strong>Mục tiêu:</strong> Bóng rơi đúng chỗ mỗi lần (sai số &lt; 10cm). Tung lệch = serve hỏng.</p>
+</div>
+
+<div class="drill-card">
+  <h5><span class="drill-num">3</span>Full Serve + Variation (Tập đầy đủ)</h5>
+  <p>Giao bóng thật vào sân, 10 quả mỗi loại (flat / slice / kick). <strong>Quan sát:</strong> Quay video từ phía
+  sau để kiểm tra mặt vợt vuông góc đất tại điểm chạm.</p>
+  <p style="margin-top:6px;"><strong>Mục tiêu:</strong> 7/10 quả vào sân cho mỗi loại.</p>
+</div>
+
+</div>
+
+<!-- ========== PHẦN 5: TÓM TẮT ========== -->
+<h2 class="section-title">PHẦN 5: TÓM TẮT QUA HÌNH MINH HỌA / VISUAL SUMMARY</h2>
+
+<table style="width:100%;border-collapse:collapse;background:var(--card);box-shadow:var(--shadow);border-radius:8px;overflow:hidden;margin-bottom:20px;">
+<thead>
+<tr style="background:var(--navy);color:white;">
+<th style="padding:10px;text-align:left;">Giai đoạn</th>
+<th style="padding:10px;text-align:left;">Vector chính</th>
+<th style="padding:10px;text-align:left;">Hình ảnh liên tưởng</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f7f8fb;">
+<td style="padding:8px;"><strong>#1 Preparation</strong></td>
+<td style="padding:8px;">Tay trái + cổ vợt = 1 khối</td>
+<td style="padding:8px;">Khởi động đồng bộ</td>
+</tr>
+<tr>
+<td style="padding:8px;"><strong>#2 Trophy</strong></td>
+<td style="padding:8px;">↓ Lưng hơi cong + vai xoay</td>
+<td style="padding:8px;">Lò xo bị nén</td>
+</tr>
+<tr style="background:#f7f8fb;">
+<td style="padding:8px;"><strong>#3 Drop</strong></td>
+<td style="padding:8px;">↓ Mũi vợt xuống đất + pronate</td>
+<td style="padding:8px;">Đáy cung trước khi bắn</td>
+</tr>
+<tr>
+<td style="padding:8px;"><strong>#4 Contact</strong></td>
+<td style="padding:8px;">↑ Extension tối đa + mặt vợt vuông góc</td>
+<td style="padding:8px;">Mũi tên bắn ra</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ========== ĐÓNG ========== -->
+<div style="background:var(--navy);color:white;padding:32px;border-radius:12px;text-align:center;margin-top:32px;box-shadow:var(--shadow);">
+  <h3 style="color:white;font-size:1.6em;margin-bottom:14px;">💡 Lời kết từ HLV / Coach's Closing</h3>
+  <p style="font-size:1.8em;font-weight:700;color:var(--gold);letter-spacing:0.05em;margin-bottom:12px;">XOẮN VÀ BUNG</p>
+  <p style="font-size:1.05em;font-style:italic;opacity:0.95;">Coil and Release.</p>
+  <p style="margin-top:18px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6;">
+    Tóm gọn cả cú serve trong 3 từ: <strong>XOẮN</strong> (nạp lực vào lò xo cơ thể),
+    rồi <strong>BUNG</strong> (thả tất cả theo chuỗi kinetic chain).
+    Đừng gắng đánh mạnh — hãy để cơ thể tự bung ra. Quên vai, quên cánh tay.
+    Chỉ cần xoắn đúng, bung đúng — bóng sẽ đi đúng.
+  </p>
+</div>
+
+<footer>
+  <p>📚 Xem thêm: <a href="serve_library.html">Serve Library Index</a> — 6 tài liệu chuyên sâu về serve trong vault</p>
+<p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

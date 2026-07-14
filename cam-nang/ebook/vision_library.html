@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Thị Giác, VOR & Thăng Bằng — Vision, VOR & Balance Library</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 {
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 {
+    color: var(--accent-gold);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt {
+    background: var(--accent-gold);
+    color: var(--navy);
+  }
+  .doc-card .badge.neutral {
+    background: #34495e;
+  }
+  .doc-card .intro-paragraph {
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  .related-links {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  .related-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  .related-links a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>👁️ Thư Viện Thị Giác, VOR & Thăng Bằng</h1>
+  <p class="subtitle">Vision, VOR & Balance Library — Từ Proprioception Đến Smooth Pursuit</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Tennis là môn thể thao <strong>nhịp nhanh</strong> — bóng bay 50-200 km/h, đối thủ thay đổi hướng liên tục, bạn chỉ có 600-800ms để phản ứng. Trong khoảng thời gian đó, <strong>hệ thống thị giác + tiền đình + proprioception</strong> phải phối hợp hoàn hảo để bạn đánh đúng bóng, đúng chỗ, đúng lực. Một tay vợt có forehand hoàn hảo nhưng mắt kém theo dõi bóng sẽ đánh vào lưới — không phải vì kỹ thuật sai, mà vì <strong>não không có đủ thông tin</strong>.</p>
+  <p>Thư viện này tổng hợp các tài liệu về <strong>thị giác thể thao (sports vision)</strong>, <strong>VOR — vestibulo-ocular reflex</strong> (phản xạ tiền đình-thị giác giữ ảnh ổn định khi xoay đầu), và <strong>thăng bằng/proprioception</strong> (cảm nhận vị trí cơ thể trong không gian). Đây là 3 hệ thống <strong>thường bị bỏ qua</strong> trong tennis truyền thống, nhưng là <strong>nền tảng</strong> cho mọi cú đánh chính xác.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="vision_guide.html" style="color: var(--accent-gold);">vision_guide.html</a> (framework thống nhất Vision → VOR → Balance), sau đó đào sâu vào <code>Vi_Nhan_Thuc_Co_The_Tennis</code> (proprioception chuyên sâu 20 chương) và <code>The_Art_of_Modern_Tennis</code> (sports vision). Cuối cùng, tích hợp qua <code>Ky_Thuat_Chan_Tennis</code> (footwork + eye coordination) và <code>Tennis_Biomechanics_5.0</code> (balance data).</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">vision_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html — Nhận Thức Cơ Thể & Proprioception</a></li>
+    <li><a href="#doc3">Quan_Vot_Dinh_Cao_Coach_5.0.html — Tracking, Anticipation & Visual Coaching</a></li>
+    <li><a href="#doc4">The_Art_of_Modern_Tennis_Polished.html — Sports Vision & Art of Reading</a></li>
+    <li><a href="#doc5">He_Thong_Tennis_Cap_Cao_20_Chuong.html — Hệ Thống Cao Cấp (Visual Training)</a></li>
+    <li><a href="#doc6">Ky_Thuat_Chan_Tennis.html — Footwork & Eye-Coordination</a></li>
+    <li><a href="#doc7">Tennis_Biomechanics_5.0_Complete.html — Biomechanics: Balance & Visual Reaction</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>vision_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong> cho thư viện Thị Giác, VOR & Thăng Bằng, biên soạn để kết nối 6 tài liệu dưới đây thành một framework duy nhất: <strong>Visual Input → VOR Stabilization → Proprioception → Motor Output</strong>. Cấu trúc 8 phần — từ "Mắt Là Gì" (cấu tạo, fovea vs peripheral vision) đến "VOR — Bù Trừ Khi Xoay Đầu" đến "Thăng Bằng & Phản Xạ" đến "5 Bài Tập 10 Phút".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với các tài liệu riêng lẻ (mỗi cái tập trung một khía cạnh), guide này cho bạn <strong>bản đồ tổng thể</strong> — biết khi nào dùng tài liệu nào, và làm thế nào để tích hợp chúng. Có 5 "quick wins" 5 phút có thể áp dụng ngay (visual scanning drills, Brock string, balance board, head-eye coordination, dynamic vision). Có ma trận "vấn đề → giải pháp" cho 12 tình huống thị giác phổ biến (mất bóng ở tốc độ cao, đánh lệch khi approaching, mất balance sau cú smash, v.v.).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn có định hướng trước khi đào sâu. Guide giúp bạn tránh "đọc lan man" — biết mình cần tài liệu nào cho vấn đề cụ thể. Phần 7 (Drills thực hành) đặc biệt hữu ích cho người 50+ muốn cải thiện thị lực thể thao và phản xạ thăng bằng.</p>
+  <p class="meta">📂 Vị trí: My notes / vision_guide.html · 8 phần · ~30 KB · Framework thống nhất</p>
+  <a href="vision_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">🦵 PROPRIOCEPTION CHUYÊN SÂU</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html — Nhận Thức Cơ Thể 20 Chương</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu chuyên sâu nhất</strong> về proprioception (cảm nhận vị trí cơ thể) trong Tennis Vault — 20 chương từ nền tảng sinh học thần kinh đến ứng dụng thực tế trên sân. Tác giả lập luận rằng <strong>proprioception</strong> (cảm nhận cơ thể) quan trọng không kém gì thị giác — vì nó cho bạn biết vị trí chân, hông, vai mà không cần nhìn, giải phóng mắt để tập trung vào bóng.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Chương 4-6 giải thích <strong>cơ chế thần kinh</strong> của proprioception — muscle spindles, Golgi tendon organs, joint receptors — và cách chúng gửi tín hiệu lên tủy sống và tiểu não để tạo "body schema" (sơ đồ cơ thể trong não). Chương 10-12 (Footwork) phân tích cách proprioception kết hợp với VOR để bạn di chuyển chính xác trong split-step và recovery. Có bảng "Proprioception Training Progress" cho 4 levels (Beginner → Elite). Đặc biệt có chương về <strong>proprioception ở người 50+</strong> — cách tuổi tác ảnh hưởng và 6 bài tập retrain cụ thể.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau guide. Đây là cuốn sách "dài hơi" — đọc 1-2 chương/tuần và thực hành bài tập. Nếu bạn nghiêm túc muốn hiểu cơ chế thần kinh đằng sau proprioception, đây là tài liệu duy nhất trong vault. Phần ứng dụng thực tế ở chương 14-18 đáng đọc trước nếu bạn không quan tâm lý thuyết.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html · 156 KB · 20 chương · Proprioception Bible</p>
+  <a href="../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge">🏆 COACH 5.0 — TRACKING & ANTICIPATION</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Quan_Vợt_Dinh_Cao_Coach_5.0.html — Tracking, Anticipation & Visual Coaching</h2>
+  <p class="intro-paragraph">Cẩm nang 20 chương dành cho huấn luyện viên cấp 5.0, với <strong>3-4 chương chuyên về thị giác thể thao</strong>: tracking (theo dõi bóng), anticipation (dự đoán), court vision (đọc vị trí đối thủ), và visual reaction time. Đây là tài liệu <strong>thực hành nhất</strong> về thị giác trong tennis — không lý thuyết neuroscience, mà là "làm thế nào để nhìn tốt hơn".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có hệ thống <strong>"Visual Tracking Protocol"</strong> 12 bài tập cụ thể — từ "soft focus vs hard focus", "peripheral awareness drills", "bounce tracking", đến "anticipation game" (đoán hướng bóng dựa trên body language). Phần về <strong>court vision</strong> giải thích tại sao Djokovic nhìn "xuyên thấu" đối thủ — anh ta không nhìn bóng mà nhìn <strong>vai + hông + đầu gối</strong> để dự đoán hướng đánh. Có bài tập "Blind Forehand" (đánh mắt nhắm) để buộc proprioception phải bù cho thiếu thị giác. Chương cuối về <strong>visual reaction time</strong> cho 50+: tại sao phản xạ chậm đi và cách train ngược lại.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc song song với <code>vision_guide.html</code>. Tài liệu này cung cấp <strong>drill thực tế</strong>, guide cung cấp <strong>framework lý thuyết</strong>. Cùng nhau tạo thành bộ đôi hoàn chỉnh. Phần "Visual Tracking Protocol" có thể in ra và tập 15 phút mỗi ngày — đây là bài tập có ROI cao nhất cho người chơi muốn cải thiện phản xạ.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Quan_Vot_Dinh_Cao_Coach_5.0.html · 259 KB · Visual tracking drills</p>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge alt">🎨 SPORTS VISION & ART</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>The_Art_of_Modern_Tennis_Polished.html — Sports Vision & Art of Reading</h2>
+  <p class="intro-paragraph">Tài liệu <strong>độc đáo nhất</strong> trong vault về sports vision, kết hợp khoa học thị giác với <strong>"nghệ thuật đọc trận đấu"</strong>. Tác giả lập luận rằng tennis không chỉ là <strong>"nhìn"</strong> mà là <strong>"đọc"</strong> — đọc cơ thể đối thủ, đọc bối cảnh sân, đọc "story" của rally. Cuốn sách dày 340 KB, có 6 phần chính + 12 chương phụ, đi sâu vào <strong>anticipation, depth perception, peripheral vision, eye-hand coordination</strong>.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Chương về <strong>"Art of Reading"</strong> phân tích cách Djokovic, Federer, Nadal "đọc" đối thủ khác nhau — Djokovic nhìn vai, Federer nhìn toàn thân, Nadal nhìn chân. Có <strong>depth perception drills</strong> (đánh vào chai nước ở 3 khoảng cách khác nhau) và <strong>peripheral vision training</strong> (đếm số ngón tay coach giơ ra ở rìa tầm nhìn). Phần về <strong>visual anticipation</strong> giải thích tại sao 200-300ms trước khi đối thủ đánh, tay vợt elite đã biết hướng bóng — dựa trên micro-cues trong <strong>vai + cổ tay + trọng lượng chân</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau <code>vision_guide</code> và <code>Quan_Vot_Dinh_Cao</code>. Tài liệu này dành cho người muốn <strong>"nghệ thuật hóa"</strong> thị giác của mình — không chỉ "nhìn" mà "đọc" trận đấu. Đặc biệt phù hợp cho người chơi 4.0+ muốn lên 4.5-5.0, vì ở level này kỹ thuật đã đủ, sự khác biệt đến từ <strong>tốc độ đọc trận đấu</strong>.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / The_Art_of_Modern_Tennis_Polished.html · 341 KB · Art of Reading</p>
+  <a href="../tfl/The_Art_of_Modern_Tennis_Polished.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge">🏅 HỆ THỐNG CAO CẤP</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>He_Thong_Tennis_Cap_Cao_20_Chuong.html — Hệ Thống Tennis Cao Cấp (Visual Training)</h2>
+  <p class="intro-paragraph">Cẩm nang 20 chương cho VĐV 4.0+ muốn lên 5.0, với <strong>4-5 chương về thị giác và VOR</strong>. Tài liệu này tập trung vào <strong>hệ thống</strong> thay vì kỹ thuật đơn lẻ — tích hợp thị giác + VOR + balance + footwork thành một "high-performance system".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có chương riêng về <strong>VOR (Vestibulo-Ocular Reflex)</strong> — phản xạ tiền đình-thị giác giúp ảnh giữ ổn định khi xoay đầu. Tại sao quan trọng? Khi bạn xoay đầu để theo bóng, VOR bù trừ bằng cách xoay mắt ngược chiều — giữ ảnh bóng rõ nét trên võng mạc. Nếu VOR yếu (do tuổi tác, chấn thương, hoặc chưa train), bạn sẽ "mất bóng" khi xoay đầu. Có <strong>4 VOR drills</strong> cụ thể: VOR suppression, gaze stabilization, vestibular-ocular coordination, dynamic visual acuity. Phần về <strong>balance + VOR</strong> giải thích tại sao hệ tiền đình và hệ thị giác phải hoạt động đồng bộ — nếu một bên chậm, bạn sẽ dizzy hoặc mất orientation.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc chương VOR (~chương 8) trước — đây là phần độc đáo nhất. Sau đó đọc chương về "Visual Training" (~chương 12-14) nếu bạn muốn hệ thống hóa. Tài liệu này <strong>bổ sung</strong> cho <code>Vi_Nhan_Thuc_Co_The_Tennis</code> — cuốn đó tập trung proprioception, cuốn này tập trung VOR + visual.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / He_Thong_Tennis_Cap_Cao_20_Chuong.html · 157 KB · VOR + Visual</p>
+  <a href="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge alt">🦶 FOOTWORK & EYE-COORDINATION</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Ky_Thuật_Chân_Tennis.html — Footwork & Eye-Coordination</h2>
+  <p class="intro-paragraph">Tài liệu chuyên về <strong>kỹ thuật chân (footwork)</strong> — và tại sao footwork lại liên quan đến thư viện này? Vì <strong>chân di chuyển ĐẦU, đầu mang MẮT, mắt theo BÓNG</strong> — cả 3 phải phối hợp. Tài liệu này phân tích cách split-step, recovery, và first-step dựa trên <strong>visual cues</strong> từ đối thủ.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có hệ thống <strong>"Eye-First Footwork"</strong> — nguyên tắc rằng mắt phải nhận tín hiệu TRƯỚC khi chân di chuyển. Ví dụ: khi đối thủ bắt đầu take-back, mắt bạn thấy (1) bóng đi đâu, (2) chân đối thủ ở đâu, (3) trọng lượng chuyển thế nào → não tính toán → chân bạn split-step → recovery. Phần về <strong>court coverage</strong> giải thích tại sao Djokovic, Nadal, Alcaraz di chuyển "đúng chỗ" — không phải vì chân nhanh hơn, mà vì mắt đọc trước 200-300ms. Có bài tập <strong>"Mirror Drill"</strong> (đối thủ di chuyển ngẫu nhiên, bạn phản ứng) và <strong>"Ball-Machine Visual Tracking"</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc chương 1-3 (Visual Setup) trước nếu bạn quan tâm eye-foot coordination. Đọc cả cuốn nếu bạn muốn cải thiện footwork tổng thể. Footwork và thị giác là <strong>cặp đôi không tách rời</strong> — chân nhanh mà mắt chậm = đánh sai bóng. Mắt nhanh mà chân chậm = đứng sai chỗ.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Ky_Thuat_Chan_Tennis.html · 84 KB · Footwork + Visual</p>
+  <a href="../tfl/Ky_Thuat_Chan_Tennis.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc7">
+  <span class="badge">📊 BIOMECHANICS BALANCE & VOR</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Biomechanics_5.0_Complete.html — Biomechanics: Balance & Visual Reaction</h2>
+  <p class="intro-paragraph">Tài liệu biomechanics chuyên sâu, với <strong>2-3 chương về balance, VOR, và visual reaction time</strong>. Đây là cuốn sách "khoa học cứng" — có số liệu, biểu đồ, và phân tích sinh học chuyên sâu về cách hệ thống thị giác + tiền đình + proprioception tạo ra <strong>postural control</strong> (kiểm soát tư thế) trong tennis.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có bảng số liệu về <strong>visual reaction time</strong> ở các cấp độ khác nhau: người mới bắt đầu ~350-400ms, trung cấp ~280-320ms, elite ~200-250ms. Giải thích tại sao tay vợt elite phản ứng nhanh hơn 100-150ms — không phải mắt nhanh hơn, mà vì họ <strong>anticipate</strong> (dự đoán) dựa trên visual cues trước khi bóng rời vợt đối thủ. Chương về <strong>balance</strong> phân tích <strong>center of pressure (COP)</strong> trong các tư thế tennis — split-step, ready position, recovery. Có bài tập "single-leg balance with visual perturbation" — đứng một chân + xem video chuyển động → đo COP oscillation. Đây là tài liệu <strong>phù hợp cho VĐV 5.0 và HLV chuyên nghiệp</strong>, người muốn hiểu cơ chế khoa học.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cuối cùng, sau khi đã có nền tảng từ guide và 4 tài liệu trên. Số liệu trong cuốn này giúp bạn hiểu <strong>tại sao</strong> VĐV elite phản ứng nhanh hơn — không phải phép thuật, mà là <strong>anticipation + VOR + proprioception</strong> được train hàng nghìn giờ. Nếu bạn không quan tâm đến số liệu, có thể bỏ qua.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Biomechanics_5.0_Complete.html · 147 KB · Ch.8-10: Balance + VOR</p>
+  <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

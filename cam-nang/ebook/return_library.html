@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Trả Giao Bóng — Return of Serve Library</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 {
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 {
+    color: var(--accent-gold);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt {
+    background: var(--accent-gold);
+    color: var(--navy);
+  }
+  .doc-card .badge.neutral {
+    background: #34495e;
+  }
+  .doc-card .intro-paragraph {
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  .related-links {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  .related-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  .related-links a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Trả Giao Bóng</h1>
+  <p class="subtitle">Return of Serve Library — Từ "Butt-Cap-Up" Đến 3 Kịch Bản Thực Chiến</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Return of serve là cú đánh <strong>đặc biệt nhất</strong> trong tennis — bạn không có thời gian setup, bóng tới với tốc độ có thể lên tới 200 km/h, và bạn phải trả lại bóng sâu vào sân để neutral hóa lợi thế serve. Đây là cú đánh <strong>thường xuyên quyết định thắng thua</strong> trong một set — nhưng lại là cú đánh <strong>ít được tập nhất</strong> trong lịch tập.</p>
+  <p>Thư viện này tổng hợp <strong>6 tài liệu quan trọng nhất</strong> về Return of Serve trong Tennis Vault — từ ghi chép tay cá nhân (hệ thống "Butt-Cap-Up + 3 Kịch Bản" + 4 bước Coil/Soft Hand/Hip Snap/Chọn), cho đến sách chuyên sâu về Modern tennis handbook, cho đến phân tích biomechanics và chiến thuật return trong các tài liệu 5.0.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="return_guide.html" style="color: var(--accent-gold);">return_guide.html</a> (tổng hợp từ ghi chép tay), sau đó đọc <code>Tennis_Mastery_20_Chapters.docx</code> Ch.11 (3 return types trong doubles). Các tài liệu khác dùng để đối chiếu với khoa học và chiến thuật.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">return_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">Tennis_Mastery_20_Chapters.docx — Ch.11 Return Strategy (Doubles)</a></li>
+    <li><a href="#doc3">Modern_Tennis_Handbook.docx — Sách Modern Tennis &amp; Footwork</a></li>
+    <li><a href="#doc4">Tennis_Ballet_20_Chuong.docx — Ch.2 Split Step Nền Tảng</a></li>
+    <li><a href="#doc5">tennis_coaching_nguoi_nghiep_du.docx — Cẩm Nang Nghiệp Dư</a></li>
+    <li><a href="#doc6">Tennis_Biomechanics_5.0_Complete.docx — Biomechanics &amp; Serve Phản Hồi</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>return_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong>, được biên soạn từ 2 file ghi chép tay <code>Note6.md</code> (4 trang Return of Serve với hệ thống "Butt-Cap-Up + 3 Kịch Bản" + 4 bước Coil/Soft Hand/Hip Snap/Chọn + cue "Shine the torch") và <code>Note2.md</code> (ghi chép footwork tổng quát có split-step chi tiết). Tài liệu có cấu trúc 8 phần rõ ràng, kết hợp nguyên lý modern tennis với hệ thống cụ thể cho người 50+.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với 5 tài liệu còn lại (từ TFL Manuals theo phong cách "sách giáo khoa"), tài liệu này có góc nhìn <strong>tiết kiệm thời gian cá nhân</strong> — bỏ qua 0,1 giây thả vợt, tiết kiệm từng nhịp chuyển động. 3 kịch bản (Slow Serve / Fast Serve / Slice Serve) được phân loại theo tốc độ và spin serve, không "một kiểu đánh cho mọi bóng". Cue "Shine the torch" giúp giữ cổ tay ổn định. Hip snap = động cơ chính, không phải cẳng tay vung. Có 5 bài tập 15 phút theo phương pháp Decision Tree.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn hiểu nhanh cách return serve hiện đại mà không cần đọc sách dày. Cũng là tài liệu tốt nhất để in ra mang ra sân (có thể in trang 7-8 làm cheat sheet với 5 bài tập 15 phút và 3 kịch bản).</p>
+  <p class="meta">📂 Vị trí: My notes / return_guide.html · 8 phần · 26 KB · Có closing "CHỜ SẴN VÀ FLOP"</p>
+  <a href="return_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">🎯 DOUBLES STRATEGY</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Mastery_20_Chapters.docx — Ch.11 "Return Strategy — Breaking the Serve Formation"</h2>
+  <p class="intro-paragraph">Cẩm nang 20 chương chuyên sâu về tennis hiện đại với hệ thống OS (Operating System) độc đáo. <strong>Chương 11</strong> tập trung hoàn toàn vào Return Strategy trong doubles — cách phá vỡ formation của serving team và neutralize net player. Có 3 loại return cụ thể cho doubles: Deep Reset, Angled, Passing.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Chương này <strong>không dạy kỹ thuật return</strong> (đã có ở các chương trước) — nó dạy <strong>mục tiêu chiến thuật</strong> của return: "Remove serve advantage + Disrupt net player positioning sync". Có hệ thống 3 loại return với use cases rõ ràng: Deep Reset (an toàn), Angled (kéo net player ra khỏi vị trí), Passing (down the line passing shot). Có phần "Reading the Net Player" — cách đọc vị trí net player trước khi quyết định return type. Chương 14 (Real-Time Decision Tree) bổ sung framework quyết định 1 giây cho mọi cú đánh.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau khi đã hiểu kỹ thuật return cơ bản từ <code>return_guide.html</code>. Đặc biệt hữu ích nếu bạn chơi doubles nhiều — chương này cho bạn "lý do tại sao" đằng sau mỗi quyết định return, không chỉ "làm thế nào". Cũng đáng đọc cả chương 1 (Idle Engine Principle) và chương 17 (Training Modules) để có hệ thống tập luyện hoàn chỉnh.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Mastery_20_Chapters.docx · 42,967 ký tự · Ch.11 + 19 chương khác · Score: 37 (return) ⭐</p>
+  <a href="../tfl/Tennis_Mastery_20_Chapters.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Tennis_Mastery_20_Chapters.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge alt">📘 MODERN TENNIS</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Modern_Tennis_Handbook.docx — Sách Modern Tennis &amp; 15 Footwork Patterns</h2>
+  <p class="intro-paragraph">Sách tennis hiện đại cô đọng nhất trong vault (chỉ 30 KB) nhưng có <strong>15 Contact Moves</strong> (footwork patterns) chuyên sâu — đặc biệt là các patterns cho return: Load and Lunge, The Step Down, Running Open Stance, Mogul Move. Mỗi move được mô tả ngắn gọn với hình ảnh và cue rõ ràng.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Sách tập trung vào <strong>thực hành thuần túy</strong> — không có lý thuyết dài dòng. Phần "Grip Pressure: The Most Overlooked Fundamental" giải thích grip pressure lý tưởng cho return (4-6/10, không siết chặt). Phần "Return of serve in the deuce court (safer diagonal), attacking short balls, and disrupting aggressive opponents who crowd the centre" cho thấy chiến thuật return theo court positioning. Có <strong>6 Essential Athletic Skills</strong> là nền tảng cho mọi footwork — áp dụng trực tiếp cho return.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>Tennis_Ballet_20_Chuong.docx</code> để có góc nhìn footwork toàn diện. Nếu bạn 50+ và muốn hiểu footwork hiện đại mà không đọc sách dày, đây là điểm khởi đầu tốt. Đặc biệt hữu ích cho người đã chơi lâu năm nhưng chưa cập nhật footwork theo phong cách hiện đại.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Modern_Tennis_Handbook.docx · 30,848 ký tự · Score: 24 (return)</p>
+  <a href="../tfl/Modern_Tennis_Handbook.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Modern_Tennis_Handbook.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge alt">💃 FOOTWORK</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Ballet_20_Chuong.docx — Ch.2 "Split Step — Nền Tảng Của Mọi Thứ"</h2>
+  <p class="intro-paragraph">Sách tennis 20 chương với triết lý <strong>"Tennis Ballet"</strong> — di chuyển chân đẹp như múa ballet. <strong>Chương 2</strong> dành riêng cho Split Step — kỹ thuật quan trọng nhất cho return. Giải phẫu chi tiết từng yếu tố: đầu gối, vị trí chân, timing, cách áp dụng trong các tình huống khác nhau.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Split Step không chỉ xảy ra ở giữa sân</strong> — bạn cần split step trong mọi tình huống: khi đối thủ chuẩn bị giao bóng, khi ở vị trí phòng thủ sâu, khi đang chuẩn bị volley. Có giải phẫu chi tiết: "Đầu gối: Mềm, hơi khuỵu. Đây là vị trí 'loaded' — như lò xo sẵn sàng bật." Có phần "Tại Sao Thời Điểm Là Tất Cả" — timing đúng vào lúc đối thủ chạm bóng, không sớm hơn. Bài tập "Xây Dựng Split Step" cụ thể cho return.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>Modern_Tennis_Handbook.docx</code>. Sách này cho bạn góc nhìn lý thưởng + thực hành, sách kia cho bạn 15 patterns cụ thể. Cùng nhau tạo nền tảng footwork vững chắc cho return. Đặc biệt hữu ích cho người 50+ có phản xạ chậm — split step đúng timing là cách bù hiệu quả nhất.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Ballet_20_Chuong.docx · 43,638 ký tự · 20 chương · Score: 33 (return)</p>
+  <a href="../tfl/Tennis_Ballet_20_Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Tennis_Ballet_20_Chuong.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge alt">🇻🇳 BẢN TIẾNG VIỆT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_coaching_nguoi_nghiep_du.docx — Cẩm Nang Tennis Cho Người Nghiệp Dư</h2>
+  <p class="intro-paragraph">Cẩm nang toàn diện 20 chương, <strong>hơn 400 trang</strong>, dành cho huấn luyện viên tennis nghiệp dư. Tài liệu này có nhiều drills thực tế, ngôn ngữ tiếng Việt dễ hiểu, và bao quát toàn bộ các khía cạnh từ kỹ thuật cơ bản đến chiến thuật nâng cao.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Tiếng Việt hoàn toàn, dễ đọc cho mọi đối tượng. Có nhiều drills cho người mới bắt đầu đến trung cấp, không yêu cầu thể lực cao. Có phần "Return Drills" trong nhiều chương, đặc biệt là chương Footwork (Ch.7) và Chiến Thuật Cơ Bản (Ch.8). Cách giải thích grip, stance, swing path bằng ngôn ngữ đời thường, dễ hiểu. Có phần "Common Mistakes" cho từng cấp độ.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy <code>Tennis_Mastery</code> quá lý thuyết, đọc tài liệu này để có góc nhìn thực tế hơn. Cũng phù hợp để chia sẻ cho người chơi Việt mới bắt đầu học return.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_coaching_nguoi_nghiep_du.docx · 75,631 ký tự · 20 chương · Đã có HTML: <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html" style="color: var(--accent-gold);">tennis_coaching_nguoi_nghiep_du.html</a></p>
+  <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/tennis_coaching_nguoi_nghiep_du.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge">📊 BIOMECHANICS 5.0</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Biomechanics_5.0_Complete.docx — Science &amp; Phản Hồi Serve</h2>
+  <p class="intro-paragraph">Tài liệu biomechanics chuyên sâu nhất trong vault, có 20 chương với số liệu chi tiết về angular velocity, moment of force, energy transfer. Tài liệu dành cho VĐV 5.0 (chuyên nghiệp), nhưng cũng rất hữu ích cho người nghiệp dư muốn hiểu sâu về cơ chế return — bao gồm cả phản hồi của cơ thể với serve tốc độ cao.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có <strong>phân tích chi tiết về timing return</strong> trong mối liên hệ với serve biomechanics. Chương 4 (Chuỗi Động Lực Học) và Chương 3 (X-Factor) cho thấy cách cơ thể hấp thụ lực từ serve và chuyển hóa thành return. Có bảng số liệu về góc khớp, lực tác động, và cách return optimal để neutral hóa serve. Phần "Floating Pelvis" và "Quiet Knees" từ chương serve áp dụng được cho return.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cuối cùng, sau khi đã có kinh nghiệm thực tế. Số liệu trong tài liệu này giúp bạn hiểu tại sao một số return hoạt động tốt hơn — không phải vì kỹ thuật tay, mà vì timing hấp thụ lực và chuyển hóa đúng cách. Nếu bạn không quan tâm đến số liệu, có thể bỏ qua.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Biomechanics_5.0_Complete.docx · 131,563 ký tự · 20 chương · Đã có HTML: <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html" style="color: var(--accent-gold);">Tennis_Biomechanics_5.0_Complete.html</a></p>
+  <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Tennis_Biomechanics_5.0_Complete.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

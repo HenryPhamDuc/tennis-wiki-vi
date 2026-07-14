@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Drop Shot — Quân Cờ Chiến Thuật Trên Sân Tennis</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 { color: var(--accent-gold); font-size: 1.6em; margin-bottom: 10px; }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt { background: var(--accent-gold); color: var(--navy); }
+  .doc-card .badge.neutral { background: #34495e; }
+  .doc-card .intro-paragraph { margin-bottom: 12px; text-align: justify; }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Drop Shot</h1>
+  <p class="subtitle">Drop Shot Library — Quân Cờ Chiến Thuật Trên Sân Tennis</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Drop shot là cú đánh <strong>"quân cờ chiến thuật"</strong> trên sân tennis — không chỉ là cú winner, mà là cú đánh kéo đối thủ ra khỏi vị trí thoải mái, mở sân cho passing shot, hoặc kết thúc điểm trực tiếp. Đây là cú đánh <strong>slice cực đoan</strong> — cùng motion với slice nhưng giảm tối đa tốc độ và spin để bóng chỉ vừa qua lưới.</p>
+  <p>Đồng thời, drop shot là cú đánh <strong>đòi hỏi touch (cảm giác tay) tinh tế nhất</strong> trong tennis — phải "bắt" đủ spin để bóng không bay xa, nhưng không quá nhiều để bóng không bị ra ngoài. Đó là lý do nhiều người chơi drop shot rất yếu dù có slice tốt.</p>
+  <p>Thư viện này tổng hợp <strong>6 tài liệu quan trọng nhất</strong> về Drop Shot trong Tennis Vault — từ wave physics với "Slice trên cực", cho đến GOAT tennis với "3 bóng giống + 1 drop shot", cho đến Modern tennis với "Slice Approach + Drop Shot Combination" của Federer.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="drop_shot_guide.html" style="color: var(--accent-gold);">drop_shot_guide.html</a> (tổng hợp từ 5 nguồn), sau đó đọc <code>He_Song_Trong_Tennis.docx</code> Section 9.5 "Drop Shot — Slice Trên Cực" (cơ chế slice cực đoan). Đừng bỏ qua <code>GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx</code> Bài 14 "Drop Shot Setup Pattern" — pattern 3-1 để xây dựng khả năng che giấu ý định.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">drop_shot_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">He_Song_Trong_Tennis.docx — Section 9.5 "Slice Trên Cực"</a></li>
+    <li><a href="#doc3">GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx — Bài 14 "Drop Shot Setup Pattern"</a></li>
+    <li><a href="#doc4">Tennis_Mastery_Complete.docx — Drop Shot Counter + Anti-patterns</a></li>
+    <li><a href="#doc5">tennis_handbook_vn.docx — Drop Shot (Song Ngữ Việt-Anh)</a></li>
+    <li><a href="#doc6">Modern_Tennis_Handbook.docx — Drop Shot Technique + Slice Approach</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>drop_shot_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong>, được biên soạn từ 5 nguồn chuyên sâu: <code>He_Song_Trong_Tennis.docx</code> Section 9.5 "Drop Shot — Slice Trên Cực" (cơ chế wave physics), <code>GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx</code> Bài 14 "Drop Shot Setup Pattern" (3-1 pattern + che giấu ý định), <code>Tennis_Mastery_Complete.docx</code> (Drop Shot Counter + anti-patterns), <code>tennis_handbook_vn.docx</code> (Drop Shot song ngữ), và <code>Modern_Tennis_Handbook.docx</code> (Drop Shot Technique + Slice Approach).</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với các thư viện trước, tài liệu này nhấn mạnh <strong>touch + chiến thuật</strong> — insight cốt lõi từ <code>He_Song_Trong_Tennis.docx</code>: <em>"Drop shot là slice ở mức độ cực đoan: thay vì tạo ra spin để kiểm soát quỹ đạo, mục tiêu là tạo ra spin và speed tối thiểu để bóng rơi ngay sau lưới"</em>. Có 9 phần, bao gồm triết lý "Chess Piece of Tennis", 4 loại drop shot (BH/FH/Drop Volley/Approach), Setup Pattern 3-1, 4 kỹ thuật che giấu ý định, Counter Drop Shot, và combo Drop-Lob. Có closing <strong>"CẮT VÀ ĐỢI"</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn hiểu nhanh drop shot. Cũng là tài liệu tốt nhất để in ra mang ra sân (có thể in trang 8-9 làm cheat sheet với 5 bài tập 15 phút và 5 lỗi cần tránh).</p>
+  <p class="meta">📂 Vị trí: My notes / drop_shot_guide.html · 9 phần · 26 KB · Có closing "CẮT VÀ ĐỢI"</p>
+  <a href="drop_shot_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">🌊 WAVE PHYSICS</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>He_Song_Trong_Tennis.docx — Section 9.5 "Drop Shot — Slice Trên Cực"</h2>
+  <p class="intro-paragraph">Sách tennis tích hợp <strong>vật lý sóng (wave physics)</strong> với kỹ thuật tennis hiện đại. Section 9.5 phân tích drop shot như một dạng <strong>slice ở mức độ cực đoan</strong> — cùng motion với slice nhưng giảm tối đa tốc độ và spin để bóng rơi ngay sau lưới.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Góc nhìn <strong>vật lý + cảm giác tay</strong>. Đây là kỹ thuật đòi hỏi cảm giác tay cực kỳ tinh tế — phải 'bắt' đủ spin để bóng không bay xa, nhưng không quá nhiều để bóng không bị ra ngoài. Drop shot hiệu quả khi đối thủ đứng sâu sau đường baseline — khoảng cách lớn khiến họ khó chạy đến kịp. <strong>Combo Drop-Lob</strong>: kết hợp với lob (sau khi đối thủ chạy lên phía trước), drop shot–lob là một trong những chiến thuật nguy hiểm nhất trong tennis. Có nhiều chương khác liên quan: 9.1-9.4 (slice, volley, smash) và 9.6-9.8 (counter, recovery).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx</code>. Tài liệu này cho góc nhìn vật lý + cảm giác tay, sách kia cho góc nhìn chiến thuật + pattern. Cùng nhau tạo bức tranh toàn diện về drop shot. Đặc biệt hữu ích cho người chơi 50+ cần hiểu cơ chế slice cực đoan.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / He_Song_Trong_Tennis.docx · 98,626 ký tự · Score: 6 (drop shot)</p>
+  <a href="../tfl/He_Song_Trong_Tennis.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/He_Song_Trong_Tennis.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge">📐 GOAT SETUP PATTERN</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>GOAT_Tennis_Giao_Trình_Tieng_Viet.docx — Bài 14 "Drop Shot Setup Pattern"</h2>
+  <p class="intro-paragraph">Giáo trình tennis tiếng Việt (GOAT = Greatest Of All Time style), 99 KB. <strong>Bài 14</strong> tập trung vào Drop Shot Setup Pattern — luyện đặt up drop shot sau khi tấn công, xây dựng khả năng che giấu ý định. Cách thực hiện: đánh 3 bóng bình thường vào backhand của đối thủ, bóng thứ tư là drop shot vào forehand.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Pattern 3-1 chi tiết</strong>: 3 bóng giống nhau + 1 drop shot bất ngờ. Chỉ tiêu: 10/15 set bóng thứ tư vào đúng vị trí. HLV nhận xét: bóng thứ 3 có cùng tốc độ và kiểu đánh như hai bóng trước để che giấu ý định không? Có Deliberate Practice framework — mỗi buổi tập phải có một mục tiêu kỹ năng cụ thể và có thể đo lường. Có nhiều bài tập khác (15 bài) bao quát toàn bộ tennis.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>He_Song_Trong_Tennis.docx</code>. Tài liệu này cho góc nhìn chiến thuật + pattern + deliberate practice, sách kia cho góc nhìn vật lý + cảm giác tay. Cùng nhau tạo bức tranh toàn diện. Đặc biệt hữu ích cho người chơi muốn xây dựng khả năng che giấu ý định một cách có hệ thống.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx · 98,775 ký tự · 15+ bài tập · Score: 6 (drop shot)</p>
+  <a href="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge alt">🧠 TACTICAL MASTERY</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Mastery_Complete.docx — Drop Shot Counter + Anti-patterns</h2>
+  <p class="intro-paragraph">Sách tennis toàn diện (Tennis Mastery Complete), 106 KB. Có nhiều <strong>pattern chiến thuật</strong> liên quan đến drop shot: Drop shot từ backhand (bất ngờ nhất), Drop shot counter (khi đối thủ drop shot, counter ngay), Heavy ball + slow ball combo, Drop shot + deep combo.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Anti-patterns hiệu quả</strong>: <em>"sau 5 cross-court forehand liên tiếp, đột ngột down-the-line; sau rally sâu, drop shot bất ngờ"</em>. Drop shot counter: <em>"khi đối thủ drop shot, counter drop shot ngay — họ đang chạy lên lưới"</em>. Nguyên tắc big points: <em>"ở big points, play high-percentage shots. Không phải lúc để thử drop shot bất ngờ hay serve ace"</em>. Có 8.5 "Punch Volley vs. Block Volley vs. Drop Volley" - phân biệt các loại volley.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy <code>He_Song_Trong_Tennis.docx</code> quá lý thuyết, đọc tài liệu này để có góc nhìn thực tế + chiến thuật cao cấp. Đặc biệt hữu ích cho VĐV 4.0+ muốn tích hợp drop shot vào hệ thống chiến thuật tổng thể.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Mastery_Complete.docx · 105,744 ký tự · Score: 8 (drop shot)</p>
+  <a href="../tfl/Tennis_Mastery_Complete.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Tennis_Mastery_Complete.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge alt">📘 SONG NGỮ VIỆT-ANH</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_handbook_vn.docx — Drop Shot (Song Ngữ Việt-Anh)</h2>
+  <p class="intro-paragraph">Cẩm nang tennis song ngữ Việt-Anh, dành cho người chơi phong trào muốn học kỹ thuật nâng cao. Có 11 lần đề cập đến drop shot và cú drop — phân tích drop shot từ góc độ chiến thuật + kỹ thuật. Tốt cho người muốn học tennis terminology tiếng Anh.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Song ngữ Việt-Anh</strong>. Có phần drop shot dedicated trong chương riêng về chiến thuật tấn công. Có các chương khác liên quan: Ch.6 (Volley), Ch.10 (Lob - đã có trong Lob Library). Tài liệu này cho góc nhìn tổng quan về drop shot, không quá chuyên sâu nhưng đủ để hiểu. Đã có HTML trong Lob Library.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>drop_shot_guide.html</code>. Tài liệu này cho góc nhìn song ngữ + tổng quan, guide cho góc nhìn chuyên sâu + 5 bài tập. Cùng nhau tạo bức tranh toàn diện về drop shot. Cũng đáng đọc các chương khác để có góc nhìn tổng thể về chiến thuật tennis.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_handbook_vn.docx · 20,005 ký tự · Score: 12 (drop shot) · Đã có HTML</p>
+  <a href="../tfl/tennis_handbook_vn.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/tennis_handbook_vn.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge">🎾 FEDERER STYLE</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Modern_Tennis_Handbook.docx — Drop Shot Technique + Slice Approach</h2>
+  <p class="intro-paragraph">Sách tennis hiện đại 30 KB. Có <strong>Drop Shot Technique</strong> dedicated + <strong>Slice Approach and Drop Shot Combination</strong> — pattern quan trọng: <em>"Hit a deep slice to your opponent's backhand (pulling them wide), then as they respond with a weak reply, step in and drop shot crosscourt to the open court. This combination is a staple of Federer's all-court game"</em>.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Federer's all-court game</strong> — kết hợp slice + approach + drop shot. Triết lý: <em>"The drop shot is the chess piece of tennis — a shot of deception, touch, and tactical intelligence"</em>. 4 vai trò: kéo đối thủ lên lưới, mở sân, kết thúc điểm, gây ức chế tâm lý. Có các cú liên quan: Topspin Lob, Swing Volley, Half-Volley, Drive Volley, Return of Serve. Đã có HTML từ Lob/Overhead library.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>drop_shot_guide.html</code>. Tài liệu này cho góc nhìn Federer style + Modern tennis, guide cho góc nhìn chuyên sâu + 5 bài tập. Cùng nhau tạo bức tranh toàn diện về drop shot hiện đại. Đặc biệt hữu ích cho người chơi muốn học all-court game của Federer.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Modern_Tennis_Handbook.docx · 30,848 ký tự · Score: 8 (drop shot) · Đã có HTML</p>
+  <a href="../tfl/Modern_Tennis_Handbook.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Modern_Tennis_Handbook.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

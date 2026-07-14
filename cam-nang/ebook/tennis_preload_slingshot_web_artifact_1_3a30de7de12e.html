@@ -1,0 +1,398 @@
+<html lang="vi"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GHI NHỚ FOREHAND &amp; BACKHAND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700;800;900&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  * { font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif; }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: white !important; }
+    .no-print { display: none !important; }
+    .print-card { box-shadow: none !important; border: 1px solid #e5e7eb !important; }
+  }
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.right-5{right:1.25rem}.top-5{top:1.25rem}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-\[52px\]{height:52px}.min-h-screen{min-height:100vh}.w-11{width:2.75rem}.w-14{width:3.5rem}.w-\[52px\]{width:52px}.w-full{width:100%}.max-w-\[980px\]{max-width:980px}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-\[20px\]{border-radius:20px}.rounded-\[24px\]{border-radius:24px}.rounded-\[28px\]{border-radius:28px}.rounded-full{border-radius:9999px}.rounded-r-xl{border-top-right-radius:0.75rem;border-bottom-right-radius:0.75rem}.border-\[3px\]{border-width:3px}.border-l-\[5px\]{border-left-width:5px}.border-\[\#1a365d\]{--tw-border-opacity:1;border-color:rgb(26 54 93 / var(--tw-border-opacity, 1))}.border-\[\#ea580c\]{--tw-border-opacity:1;border-color:rgb(234 88 12 / var(--tw-border-opacity, 1))}.border-\[\#fdba74\]{--tw-border-opacity:1;border-color:rgb(253 186 116 / var(--tw-border-opacity, 1))}.bg-\[\#f5f7fa\]{--tw-bg-opacity:1;background-color:rgb(245 247 250 / var(--tw-bg-opacity, 1))}.bg-\[\#1a365d\]{--tw-bg-opacity:1;background-color:rgb(26 54 93 / var(--tw-bg-opacity, 1))}.bg-\[\#ea580c\]{--tw-bg-opacity:1;background-color:rgb(234 88 12 / var(--tw-bg-opacity, 1))}.bg-\[\#eef2ff\]{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-\[\#ffedd5\]{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-\[\#fffaf5\]{--tw-bg-opacity:1;background-color:rgb(255 250 245 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.p-3{padding:0.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[12px\]{font-size:12px}.text-\[13px\]{font-size:13px}.text-\[15px\]{font-size:15px}.text-\[16px\]{font-size:16px}.text-\[19px\]{font-size:19px}.text-\[20px\]{font-size:20px}.text-\[22px\]{font-size:22px}.text-\[26px\]{font-size:26px}.text-\[32px\]{font-size:32px}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-light{font-weight:300}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.18em\]{letter-spacing:0.18em}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.text-\[\#1a365d\]{--tw-text-opacity:1;color:rgb(26 54 93 / var(--tw-text-opacity, 1))}.text-\[\#93c5fd\]{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-\[\#9a3412\]{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-\[\#ea580c\]{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-\[\#fed7aa\]{--tw-text-opacity:1;color:rgb(254 215 170 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:flex{display:flex}}@media (min-width: 768px){.md\:right-7{right:1.75rem}.md\:top-7{top:1.75rem}.md\:mb-10{margin-bottom:2.5rem}.md\:mt-10{margin-top:2.5rem}.md\:block{display:block}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:gap-8{gap:2rem}.md\:p-6{padding:1.5rem}.md\:p-10{padding:2.5rem}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:py-6{padding-top:1.5rem;padding-bottom:1.5rem}.md\:text-\[17px\]{font-size:17px}.md\:text-\[21px\]{font-size:21px}.md\:text-\[24px\]{font-size:24px}.md\:text-\[30px\]{font-size:30px}.md\:text-\[48px\]{font-size:48px}}@media print{.print\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}}</style></head>
+<body class="bg-[#f5f7fa] min-h-screen flex items-center justify-center p-3 md:p-6">
+  <div class="w-full max-w-[980px] bg-white rounded-[28px] shadow-xl print-card print:shadow-none relative p-6 md:p-10">
+    
+    <button onclick="window.print()" class="no-print absolute top-5 right-5 md:top-7 md:right-7 bg-gray-900 text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-black active:scale-95 transition">In thẻ</button>
+
+    <!-- Header -->
+    <div class="text-center mb-8 md:mb-10">
+      <h1 class="text-[32px] md:text-[48px] font-black tracking-tight text-gray-900 leading-none">
+        GHI NHỚ <span class="text-[#1a365d]">FOREHAND</span> <span class="text-gray-400 font-light">&amp;</span> <span class="text-[#ea580c]">BACKHAND</span>
+      </h1>
+      <p class="mt-3 text-gray-600 text-[15px] md:text-[17px] font-medium">Thẻ bỏ túi cho người chơi phong trào • Tập chậm, cảm nhận đàn hồi</p>
+    </div>
+
+    <!-- Two Columns -->
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      
+      <!-- LEFT: FOREHAND -->
+      <div class="border-[3px] border-[#1a365d] rounded-[24px] overflow-hidden bg-white">
+        <div class="bg-[#1a365d] px-6 py-4">
+          <div class="flex items-baseline justify-between">
+            <h2 class="text-white text-[26px] md:text-[30px] font-black tracking-wide">FOREHAND</h2>
+            <span class="text-[#93c5fd] text-sm font-bold tracking-[0.2em]">PRELOAD</span>
+          </div>
+        </div>
+        
+        <div class="p-5 md:p-6 space-y-6">
+          <!-- Step 1 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-[#1a365d] text-white flex items-center justify-center text-[22px] font-black">1</div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-start gap-3">
+                <svg viewBox="0 0 64 64" class="w-[52px] h-[52px] text-[#1a365d] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 32 H30"></path>
+                  <path d="M30 27 v10 c0 2 1.5 4 4 4 h6"></path>
+                  <rect x="40" y="26" width="18" height="12" rx="6"></rect>
+                  <ellipse cx="54" cy="16" rx="8" ry="3" transform="rotate(15 54 16)" stroke-dasharray="2 2" opacity="0.6"></ellipse>
+                  <path d="M22 20 A14 14 0 1 1 22 44" stroke-dasharray="4 3"></path>
+                  <path d="M19 23 l3-5 3 3" fill="none" stroke="none"></path><path d="M19 23 l3-5 3 3" fill="currentColor" stroke="none"></path>
+                </svg>
+                <p class="text-[19px] md:text-[21px] leading-snug font-semibold text-gray-900">Xoay vai + cẳng tay, lòng bàn tay úp xuống <span class="text-gray-500 font-medium">(pat the dog)</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-[#1a365d] text-white flex items-center justify-center text-[22px] font-black">2</div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-start gap-3">
+                <svg viewBox="0 0 64 64" class="w-[52px] h-[52px] text-[#1a365d] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round">
+                  <path d="M10 34 L32 24"></path>
+                  <path d="M32 24 v10 c0 3 2 5 5 5 h4"></path>
+                  <rect x="41" y="29" width="18" height="10" rx="5"></rect>
+                  <path d="M14 38 q10-2 18 8" stroke-dasharray="5 3"></path>
+                  <path d="M30 44 l2-4 3 2"></path>
+                </svg>
+                <p class="text-[19px] md:text-[21px] leading-snug font-semibold text-gray-900">Kéo dài tay ra sau, cảm giác dây thun căng</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-[#1a365d] text-white flex items-center justify-center text-[22px] font-black">3</div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-start gap-3">
+                <svg viewBox="0 0 64 64" class="w-[52px] h-[52px] text-[#1a365d] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 34 H30"></path>
+                  <path d="M30 34 c3-1 5-4 6-8"></path>
+                  <rect x="36" y="18" width="12" height="18" rx="6" transform="rotate(-25 42 27)"></rect>
+                  <path d="M30 34 v6 c2 2 5 1 7 -1" stroke-dasharray="3 3"></path>
+                  <path d="M24 28 l4 -4"></path>
+                </svg>
+                <p class="text-[19px] md:text-[21px] leading-snug font-semibold text-gray-900">Cổ tay ngửa nhẹ, vợt lag sau tay</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Note -->
+          <div class="bg-[#eef2ff] border-l-[5px] border-[#1a365d] rounded-r-xl px-4 py-3 mt-2">
+            <p class="text-[#1a365d] text-[16px] md:text-[17px] font-bold">Lực từ đàn hồi, không gồng vai</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: BACKHAND -->
+      <div class="border-[3px] border-[#fdba74] rounded-[24px] overflow-hidden bg-[#fffaf5]">
+        <div class="bg-[#ea580c] px-6 py-4">
+          <div class="flex items-baseline justify-between">
+            <h2 class="text-white text-[26px] md:text-[30px] font-black tracking-wide">BACKHAND</h2>
+            <span class="text-[#fed7aa] text-sm font-bold tracking-[0.2em]">SLINGSHOT</span>
+          </div>
+        </div>
+        
+        <div class="p-5 md:p-6 space-y-6">
+          <!-- Step 1 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-[#ea580c] text-white flex items-center justify-center text-[22px] font-black">1</div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-start gap-3">
+                <svg viewBox="0 0 64 64" class="w-[52px] h-[52px] text-[#ea580c] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round">
+                  <path d="M18 40 L38 28"></path>
+                  <rect x="38" y="18" width="12" height="18" rx="6" transform="rotate(-35 44 27)"></rect>
+                  <path d="M18 40 L12 46"></path>
+                  <circle cx="10" cy="48" r="2.5" fill="currentColor" stroke="none"></circle>
+                  <path d="M26 34 q6-8 14-6"></path>
+                </svg>
+                <p class="text-[19px] md:text-[21px] leading-snug font-semibold text-gray-900">Đầu vợt chỉ thẳng ra sau, vai xoay sớm</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-11 h-11 rounded-full bg-[#ea580c] text-white flex items-center justify-center text-[22px] font-black">2</div>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-start gap-3">
+                <svg viewBox="0 0 64 64" class="w-[52px] h-[52px] text-[#ea580c] flex-shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 32 H32"></path>
+                  <path d="M32 32 c4 4 6 3 8 0"></path>
+                  <rect x="40" y="22" width="14" height="12" rx="6" transform="rotate(-10 47 28)"></rect>
+                  <path d="M36 26 l2-6 4 3"></path>
+                  <path d="M28 38 q-4 5-8 2"></path>
+                </svg>
+                <p class="text-[19px] md:text-[21px] leading-snug font-semibold text-gray-900">Thả lỏng, bung cổ tay ngược lại</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spacer to align height -->
+          <div class="h-[52px] hidden md:block"></div>
+
+          <!-- Note -->
+          <div class="bg-[#ffedd5] border-l-[5px] border-[#ea580c] rounded-r-xl px-4 py-3 mt-2">
+            <p class="text-[#9a3412] text-[16px] md:text-[17px] font-bold">Kéo ít, bật nhanh – tránh tennis elbow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Drill -->
+    <div class="mt-8 md:mt-10 bg-gray-900 text-white rounded-[20px] px-6 py-5 md:px-8 md:py-6 flex items-center gap-5">
+      <div class="hidden sm:flex w-14 h-14 rounded-2xl bg-white/10 items-center justify-center text-3xl">⏱️</div>
+      <div class="flex-1">
+        <p class="text-[12px] tracking-[0.18em] font-bold text-gray-400 uppercase">Drill 5 phút</p>
+        <p class="text-[20px] md:text-[24px] font-extrabold leading-tight mt-1">20 lần forehand chậm (1-2-3) <span class="text-gray-500 mx-2">•</span> 15 lần backhand chạm tường</p>
+      </div>
+    </div>
+
+    <p class="text-center text-[13px] text-gray-400 mt-5">In khổ A6, bỏ túi vợt • Đọc trước khi vào sân</p>
+  </div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>

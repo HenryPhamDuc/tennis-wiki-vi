@@ -1,0 +1,487 @@
+<html lang="vi"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CÔNG THỨC FOREHAND - 3 BƯỚC PHÁT LỰC</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  .page { width: 210mm; min-height: 297mm; }
+  @media screen { body { background: #e5e7eb; } .page { margin: 24px auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); } }
+  @media print { .page { box-shadow: none !important; margin: 0 !important; } }
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-right-8{right:-2rem}.-top-8{top:-2rem}.z-10{z-index:10}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.-mt-0\.5{margin-top:-0.125rem}.mb-1{margin-bottom:0.25rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-2\.5{margin-top:0.625rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-\[6mm\]{margin-top:6mm}.mt-\[6px\]{margin-top:6px}.mt-\[8mm\]{margin-top:8mm}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-28{height:7rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-9{height:2.25rem}.h-\[1px\]{height:1px}.h-\[2px\]{height:2px}.h-\[52px\]{height:52px}.h-\[6px\]{height:6px}.h-\[8px\]{height:8px}.h-full{height:100%}.w-16{width:4rem}.w-28{width:7rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-9{width:2.25rem}.w-\[52px\]{width:52px}.w-\[6px\]{width:6px}.w-full{width:100%}.shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-\[6mm\]{gap:6mm}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-\[20px\]{border-radius:20px}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-r-xl{border-top-right-radius:0.75rem;border-bottom-right-radius:0.75rem}.border{border-width:1px}.border-l-\[3px\]{border-left-width:3px}.border-\[\#0055FF\]{--tw-border-opacity:1;border-color:rgb(0 85 255 / var(--tw-border-opacity, 1))}.border-\[\#0055FF\]\/30{border-color:rgb(0 85 255 / 0.3)}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.bg-\[\#0055FF\]{--tw-bg-opacity:1;background-color:rgb(0 85 255 / var(--tw-bg-opacity, 1))}.bg-\[\#0055FF\]\/10{background-color:rgb(0 85 255 / 0.1)}.bg-\[\#0055FF\]\/\[0\.06\]{background-color:rgb(0 85 255 / 0.06)}.bg-\[\#0a0f1c\]{--tw-bg-opacity:1;background-color:rgb(10 15 28 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/20{background-color:rgb(255 255 255 / 0.2)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-l{background-image:linear-gradient(to left, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-\[\#003EB3\]{--tw-gradient-from:#003EB3 var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 62 179 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-white{--tw-gradient-from:#fff var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-\[\#0055FF\]{--tw-gradient-to:rgb(0 85 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #0055FF var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-\[\#003EB3\]{--tw-gradient-to:#003EB3 var(--tw-gradient-to-position)}.to-\[\#0055FF\]\/40{--tw-gradient-to:rgb(0 85 255 / 0.4) var(--tw-gradient-to-position)}.to-slate-50\/80{--tw-gradient-to:rgb(248 250 252 / 0.8) var(--tw-gradient-to-position)}.p-4{padding:1rem}.p-\[5mm\]{padding:5mm}.p-\[6mm\]{padding:6mm}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-\[12mm\]{padding-left:12mm;padding-right:12mm}.px-\[14mm\]{padding-left:14mm;padding-right:14mm}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pb-\[10mm\]{padding-bottom:10mm}.pb-\[6mm\]{padding-bottom:6mm}.pt-\[10mm\]{padding-top:10mm}.text-center{text-align:center}.text-\[10\.5px\]{font-size:10.5px}.text-\[10px\]{font-size:10px}.text-\[11\.5px\]{font-size:11.5px}.text-\[11px\]{font-size:11px}.text-\[12\.5px\]{font-size:12.5px}.text-\[12px\]{font-size:12px}.text-\[14px\]{font-size:14px}.text-\[15px\]{font-size:15px}.text-\[20px\]{font-size:20px}.text-\[36px\]{font-size:36px}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.05\]{line-height:1.05}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.18em\]{letter-spacing:0.18em}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-widest{letter-spacing:0.1em}.text-\[\#0055FF\]{--tw-text-opacity:1;color:rgb(0 85 255 / var(--tw-text-opacity, 1))}.text-\[\#0055FF\]\/60{color:rgb(0 85 255 / 0.6)}.text-\[\#0a0f1c\]{--tw-text-opacity:1;color:rgb(10 15 28 / var(--tw-text-opacity, 1))}.text-amber-800\/80{color:rgb(146 64 14 / 0.8)}.text-amber-950{--tw-text-opacity:1;color:rgb(69 26 3 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-\[0\.04\]{opacity:0.04}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[\#0055FF\]\/20{--tw-shadow-color:rgb(0 85 255 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-amber-500\/20{--tw-shadow-color:rgb(245 158 11 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+<body>
+<div class="page bg-white relative overflow-hidden">
+  <!-- Top accent -->
+  <div class="h-[8px] w-full bg-gradient-to-r from-[#003EB3] via-[#0055FF] to-[#003EB3]"></div>
+  
+  <!-- Subtle court lines -->
+  <div class="absolute inset-0 pointer-events-none">
+    <svg class="absolute w-full h-full opacity-[0.04]" viewBox="0 0 210 297" preserveAspectRatio="none">
+      <rect x="15" y="65" width="180" height="220" fill="none" stroke="#003EB3" stroke-width="0.8"></rect>
+      <line x1="15" y1="175" x2="195" y2="175" stroke="#003EB3" stroke-width="0.5"></line>
+      <line x1="105" y1="65" x2="105" y2="285" stroke="#003EB3" stroke-width="0.3" stroke-dasharray="2 2"></line>
+      <line x1="35" y1="65" x2="35" y2="285" stroke="#003EB3" stroke-width="0.5"></line>
+      <line x1="175" y1="65" x2="175" y2="285" stroke="#003EB3" stroke-width="0.5"></line>
+    </svg>
+  </div>
+
+  <!-- Header -->
+  <header class="relative z-10 px-[14mm] pt-[10mm] pb-[6mm] text-center">
+    <div class="inline-flex items-center gap-2 mb-3">
+      <div class="w-7 h-7 rounded-full bg-[#0055FF] flex items-center justify-center">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M2 12c4 4 10 4 14-2M22 12c-4-4-10-4-14 2"></path></svg>
+      </div>
+      <span class="text-[11px] font-semibold tracking-[0.18em] text-[#0055FF] uppercase">Tennis System</span>
+    </div>
+    <h1 class="text-[36px] leading-[1.05] font-black tracking-tight text-[#0a0f1c]">CÔNG THỨC FOREHAND - 3 BƯỚC PHÁT LỰC</h1>
+    <p class="mt-2.5 text-[14px] text-slate-600 font-medium">Tennis Forehand Blueprint <span class="mx-2 text-slate-300">|</span> dựa trên ghi chép của <span class="text-slate-800 font-semibold">Pham Duc Hai</span></p>
+  </header>
+
+  <!-- 3 Cards -->
+  <main class="relative z-10 px-[12mm]">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-[6mm]">
+      
+      <!-- CARD 1: CHÂN -->
+      <div class="group bg-white border border-slate-200 rounded-[20px] p-[6mm] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-[#0055FF]/[0.06]"></div>
+        <div class="relative flex items-start gap-3.5">
+          <div class="w-[52px] h-[52px] rounded-2xl bg-[#0055FF] flex items-center justify-center shrink-0 shadow-lg shadow-[#0055FF]/20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">
+              <circle cx="12" cy="4.5" r="2" fill="white" stroke="none"></circle>
+              <path d="M12 6.5v5"></path>
+              <path d="M9 9l3 1.5 3-1.5"></path>
+              <path d="M12 11.5v4.5"></path>
+              <path d="M9.5 19.5l2.5-3.5 4 5.5"></path>
+              <path d="M8 21.5h2.5M15.5 20.5H18"></path>
+              <path d="M15 17.5l1-1.5" stroke-opacity="0.6"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-[10.5px] font-bold tracking-widest text-[#0055FF] mb-1">BƯỚC 1</div>
+            <h2 class="text-[20px] leading-tight font-extrabold text-[#0a0f1c]">CHÂN: So le - Nhấc gót</h2>
+            <p class="text-[12.5px] text-slate-500 font-medium -mt-0.5">Staggered Steps - Lift Heel</p>
+          </div>
+        </div>
+        
+        <ul class="mt-5 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Đứng = 2 chân chạm đất</p>
+              <p class="text-[11.5px] text-slate-500 italic">Standing = both feet down</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Di chuyển = chỉ 1 chân chạm</p>
+              <p class="text-[11.5px] text-slate-500 italic">Moving = only one foot contacts</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Luôn ở trên mũi chân, gót sau nhấc</p>
+              <p class="text-[11.5px] text-slate-500 italic">Stay on balls of feet, lift rear heel</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-5 bg-slate-50 border-l-[3px] border-[#0055FF] rounded-r-xl px-3.5 py-2.5">
+          <p class="text-[12.5px] font-medium text-slate-700 leading-snug">“Only keep 1 foot on the ground to move fast”</p>
+        </div>
+      </div>
+
+      <!-- CARD 2: THÂN -->
+      <div class="group bg-white border border-slate-200 rounded-[20px] p-[6mm] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-[#0055FF]/[0.06]"></div>
+        <div class="relative flex items-start gap-3.5">
+          <div class="w-[52px] h-[52px] rounded-2xl bg-[#0055FF] flex items-center justify-center shrink-0 shadow-lg shadow-[#0055FF]/20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" class="w-7 h-7">
+              <path d="M12 4v3M8 7h8"></path>
+              <circle cx="12" cy="12" r="5.5" stroke-opacity="0.3"></circle>
+              <path d="M12 6.5c3 0 5.5 2.5 5.5 5.5S15 17.5 12 17.5"></path>
+              <path d="M17.5 12c0-1-.3-2-.8-2.8"></path>
+              <path d="M18.5 9l-1.8 1.8M18.5 9l-2.5-.3"></path>
+              <path d="M12 17.5v3M9 20.5h6"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-[10.5px] font-bold tracking-widest text-[#0055FF] mb-1">BƯỚC 2</div>
+            <h2 class="text-[20px] leading-tight font-extrabold text-[#0a0f1c]">THÂN: Nghiêng - Xoắn</h2>
+            <p class="text-[12.5px] text-slate-500 font-medium -mt-0.5">Tilt &amp; Coil</p>
+          </div>
+        </div>
+        
+        <ul class="mt-5 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Có nghiêng mới có lực lệch</p>
+              <p class="text-[11.5px] text-slate-500 italic">Must tilt to create angular force</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Thực/Hư: dồn 70% vào chân sau (load), chuyển sang chân trước</p>
+              <p class="text-[11.5px] text-slate-500 italic">Load 70% on back foot, then transfer forward</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Thân trên xoắn như lò xo, không dùng tay</p>
+              <p class="text-[11.5px] text-slate-500 italic">Coil upper body like a spring, not the arm</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-5 bg-slate-50 border-l-[3px] border-[#0055FF] rounded-r-xl px-3.5 py-2.5">
+          <p class="text-[12.5px] font-medium text-slate-700 leading-snug">“Tâm để vào thân trên xoắn”</p>
+        </div>
+      </div>
+
+      <!-- CARD 3: TAY -->
+      <div class="group bg-white border border-slate-200 rounded-[20px] p-[6mm] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-[#0055FF]/[0.06]"></div>
+        <div class="relative flex items-start gap-3.5">
+          <div class="w-[52px] h-[52px] rounded-2xl bg-[#0055FF] flex items-center justify-center shrink-0 shadow-lg shadow-[#0055FF]/20">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" class="w-7 h-7">
+              <circle cx="7" cy="6" r="2" fill="white" stroke="none"></circle>
+              <path d="M7 8v4"></path>
+              <path d="M7 10.5h4.5"></path>
+              <path d="M11.5 10.5c2.5-2.5 6.5-2.8 9 .2"></path>
+              <path d="M20 10.2l1.5 1.3-2 .6"></path>
+              <path d="M5 16l1.5 4.5M9 16l-1.5 4.5"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="text-[10.5px] font-bold tracking-widest text-[#0055FF] mb-1">BƯỚC 3</div>
+            <h2 class="text-[20px] leading-tight font-extrabold text-[#0a0f1c]">TAY: Kéo lưng - Tay thẳng</h2>
+            <p class="text-[12.5px] text-slate-500 font-medium -mt-0.5">Pull Back - Straight Arm</p>
+          </div>
+        </div>
+        
+        <ul class="mt-5 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Kéo cơ phía sau lưng qua 2 vai</p>
+              <p class="text-[11.5px] text-slate-500 italic">Engage back muscles across shoulders</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Straight Arm = không co khuỷu, không ưỡn lưng</p>
+              <p class="text-[11.5px] text-slate-500 italic">No elbow bend, no back arch</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[6px] w-[6px] h-[6px] rounded-full bg-[#0055FF] shrink-0"></span>
+            <div>
+              <p class="text-[14px] font-semibold text-slate-900 leading-snug">Vung tròn quanh trục như golf putting</p>
+              <p class="text-[11.5px] text-slate-500 italic">Swing in a circle around axis like putting</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-5 bg-slate-50 border-l-[3px] border-[#0055FF] rounded-r-xl px-3.5 py-2.5">
+          <p class="text-[12.5px] font-medium text-slate-700 leading-snug">“No need to bend back - only swung around”</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Flow Diagram -->
+  <section class="relative z-10 px-[12mm] mt-[8mm]">
+    <div class="bg-gradient-to-b from-white to-slate-50/80 border border-slate-200 rounded-[20px] p-[5mm] shadow-sm">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <div class="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#0055FF]/40"></div>
+        <h3 class="text-[12px] font-extrabold uppercase tracking-[0.2em] text-[#0055FF]">Chuỗi chuyển động</h3>
+        <div class="h-[1px] w-16 bg-gradient-to-l from-transparent to-[#0055FF]/40"></div>
+      </div>
+      
+      <div class="flex flex-wrap items-center justify-center gap-2.5">
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-[#0055FF] text-white rounded-full text-[12.5px] font-semibold shadow-sm"><span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-[11px]">1</span>Nhấc gót</span>
+        </div>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" class="text-[#0055FF]/60"><path d="M0 6h16M12 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#0055FF]/30 text-slate-800 rounded-full text-[12.5px] font-semibold"><span class="w-5 h-5 rounded-full bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center text-[11px]">2</span>Load chân sau + nghiêng</span>
+        </div>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" class="text-[#0055FF]/60"><path d="M0 6h16M12 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#0055FF]/30 text-slate-800 rounded-full text-[12.5px] font-semibold"><span class="w-5 h-5 rounded-full bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center text-[11px]">3</span>Xoắn</span>
+        </div>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" class="text-[#0055FF]/60 hidden sm:block"><path d="M0 6h16M12 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#0055FF]/30 text-slate-800 rounded-full text-[12.5px] font-semibold"><span class="w-5 h-5 rounded-full bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center text-[11px]">4</span>Kéo lưng</span>
+        </div>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" class="text-[#0055FF]/60"><path d="M0 6h16M12 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-[#0055FF]/30 text-slate-800 rounded-full text-[12.5px] font-semibold"><span class="w-5 h-5 rounded-full bg-[#0055FF]/10 text-[#0055FF] flex items-center justify-center text-[11px]">5</span>Vung tay thẳng</span>
+        </div>
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" class="text-[#0055FF]/60"><path d="M0 6h16M12 1l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        
+        <div class="flex items-center">
+          <span class="flex items-center gap-1.5 px-3 py-1.5 bg-[#0a0f1c] text-white rounded-full text-[12.5px] font-semibold shadow-sm"><span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-[11px]">6</span>Chuyển trọng tâm</span>
+        </div>
+      </div>
+      
+      <p class="text-center text-[11px] text-slate-500 mt-3 italic">Lift heel → Load &amp; tilt → Coil → Pull back → Straight swing → Transfer</p>
+    </div>
+  </section>
+
+  <!-- Footer Note -->
+  <footer class="relative z-10 px-[12mm] mt-[6mm] pb-[10mm]">
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start gap-3.5">
+      <div class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center shrink-0 shadow-md shadow-amber-500/20">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"></path></svg>
+      </div>
+      <div>
+        <p class="text-[15px] leading-snug text-amber-950">
+          <span class="font-extrabold">Dành cho người chơi 50+ :</span> dùng thân, không dùng lưng - <span class="font-semibold">bảo vệ cột sống</span>
+        </p>
+        <p class="text-[12px] text-amber-800/80 mt-0.5">For players 50+: use your core, not your lower back – protect your spine</p>
+      </div>
+    </div>
+    
+    <div class="flex items-center justify-between mt-4 px-1">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-[2px] bg-[#0055FF]"></div>
+        <span class="text-[10px] uppercase tracking-widest font-semibold text-slate-400">Minimalist Athletic Design</span>
+      </div>
+      <span class="text-[10px] text-slate-400">In để tập luyện • Print for practice</span>
+    </div>
+    <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+</body></html>

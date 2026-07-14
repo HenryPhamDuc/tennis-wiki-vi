@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Chiến Thuật & Mẫu Chơi — Tactics & Playing Pattern Library</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 {
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 {
+    color: var(--accent-gold);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt {
+    background: var(--accent-gold);
+    color: var(--navy);
+  }
+  .doc-card .badge.neutral {
+    background: #34495e;
+  }
+  .doc-card .intro-paragraph {
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  .related-links {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  .related-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  .related-links a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>♟️ Thư Viện Chiến Thuật & Mẫu Chơi</h1>
+  <p class="subtitle">Tactics & Playing Pattern Library — Từ Baseline Đến Net, Từ Phòng Thủ Đến Tấn Công</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Tennis không chỉ là <strong>đánh bóng qua lưới</strong> — mà là <strong>xây dựng điểm, khai thác điểm yếu, và kiểm soát nhịp trận đấu</strong>. Hai tay vợt có forehand topspin giống nhau có thể cho ra hai kết quả hoàn toàn khác nhau — một người thắng, một người thua — vì <strong>chiến thuật khác nhau</strong>. Thư viện này tổng hợp các tài liệu về <strong>chiến thuật (tactics), mẫu chơi (playing patterns), phong cách (styles), và quản lý trận đấu (game management)</strong>.</p>
+  <p>Đây là thư viện <strong>chiến lược</strong> — không dạy kỹ thuật (đã có 11 thư viện cú đánh), không dạy thể lực (đã có tài liệu biomechanics), mà dạy <strong>"khi nào đánh cái gì, ở đâu, và như thế nào"</strong>. Mục tiêu: biến kỹ thuật thành <strong>chiến thắng có ý thức</strong>, không phải "đánh bóng và hy vọng".</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="tactics_guide.html" style="color: var(--accent-gold);">tactics_guide.html</a> (framework thống nhất: Point Construction → Patterns → Game Plan), sau đó đào sâu vào <code>Quan_Vot_Dinh_Cao_Coach_5.0</code> (chiến thuật Coach 5.0) và <code>The_Art_of_Modern_Tennis</code> (mẫu chơi hiện đại). Cuối cùng, áp dụng qua <code>tennis_game_management</code> và <code>tennis_mastery</code> cho các tình huống thực tế.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">tactics_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">Quan_Vot_Dinh_Cao_Coach_5.0.html — Chiến Thuật Coach 5.0</a></li>
+    <li><a href="#doc3">The_Art_of_Modern_Tennis_Polished.html — Mẫu Chơi Hiện Đại</a></li>
+    <li><a href="#doc4">tennis_game_management.html — Quản Lý Trận Đấu Thực Tế</a></li>
+    <li><a href="#doc5">He_Thong_Tennis_Cap_Cao_20_Chuong.html — Hệ Thống Cao Cấp (Patterns)</a></li>
+    <li><a href="#doc6">tennis_mastery.html — Mastery Through Patterns</a></li>
+    <li><a href="#doc7">GOAT_Tennis_Giao_Trinh_Tieng_Viet.html — Chiến Thuật (Bản Tiếng Việt)</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>tactics_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong> cho thư viện Chiến Thuật & Mẫu Chơi, biên soạn để kết nối 6 tài liệu dưới đây thành một framework duy nhất: <strong>Point Construction → Playing Patterns → Game Plan → Match Management</strong>. Cấu trúc 8 phần — từ "Tư Duy Chiến Thuật Là Gì" đến "4 Phong Cách Chính" (Aggressive Baseliner / Defensive Baseliner / Serve-and-Volleyer / All-Court) đến "Xây Dựng Điểm" (4 giai đoạn của một điểm) đến "Game Plan Trước Trận".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với các tài liệu riêng lẻ (mỗi cái tập trung một khía cạnh), guide này cho bạn <strong>bản đồ tổng thể</strong> — biết khi nào dùng tài liệu nào, và làm thế nào để tích hợp chúng. Có 5 "decision trees" cho các tình huống phổ biến: serve vào đâu khi đối thủ yếu backhand, return sâu hay ngắn khi đối thủ lên net, khi nào approach shot, khi nào lob, khi nào drop shot. Có bảng "Match-up Matrix" cho 6 phong cách đối thủ phổ biến (Big Server, Pusher, Counter-Puncher, All-Court, Aggressive Baseliner, Defensive Baseliner) — cho biết <strong>chiến thuật nào hiệu quả nhất</strong> để gặp từng loại.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn có định hướng trước khi đào sâu. Guide giúp bạn tránh "đọc lan man" — biết mình cần tài liệu nào cho tình huống cụ thể. Phần 7 (Decision Trees) đặc biệt hữu ích — in ra và mang theo trong túi vợt để tham khảo giữa các game.</p>
+  <p class="meta">📂 Vị trí: My notes / tactics_guide.html · 8 phần · ~30 KB · Framework thống nhất</p>
+  <a href="tactics_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">🏆 COACH 5.0 — CHIẾN THUẬT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Quan_Vợt_Dinh_Cao_Coach_5.0.html — Chiến Thuật Coach 5.0</h2>
+  <p class="intro-paragraph">Cẩm nang 20 chương dành cho huấn luyện viên cấp 5.0 NTRP, với <strong>5-6 chương chuyên về chiến thuật</strong>: point construction, pattern recognition, game plan, exploit weaknesses, và pressure tactics. Đây là tài liệu <strong>chiến thuật thực hành nhất</strong> trong vault — không lý thuyết trừu tượng, mà là "làm thế nào để thắng".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có hệ thống <strong>"4-Phase Point Construction"</strong> — mỗi điểm được chia thành 4 giai đoạn (Serve/Return, Build, Attack, Finish), mỗi giai đoạn có mục tiêu cụ thể. Ví dụ: giai đoạn Build mục tiêu là "di chuyển đối thủ ra khỏi vị trí thoải mái", giai đoạn Attack mục tiêu là "tạo cơ hội winner". Phần về <strong>"Pattern Recognition"</strong> dạy bạn đọc các pattern phổ biến: big serve + approach, slice + approach, cross-court rally + down-the-line winner, v.v. Có bảng "12 Weakness Exploitation Tactics" — khai thác 12 điểm yếu phổ biến (yếu backhand, chậm di chuyển, sợ volley, sợ lob, v.v.). Phần cuối về <strong>"Pressure Tactics"</strong> — cách tạo áp lực lên đối thủ ở key points (break point, set point).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc song song với <code>tactics_guide.html</code>. Tài liệu này cung cấp <strong>drill thực tế</strong> và <strong>case study</strong>, guide cung cấp <strong>framework lý thuyết</strong>. Cùng nhau tạo thành bộ đôi hoàn chỉnh. Phần "Pattern Recognition" rất đáng đọc cho HLV muốn thiết kế bài tập chiến thuật cho học viên.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Quan_Vot_Dinh_Co_Coach_5.0.html · 259 KB · Chiến thuật Coach 5.0</p>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge">🎨 MẪU CHƠI HIỆN ĐẠI</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>The_Art_of_Modern_Tennis_Polished.html — Mẫu Chơi Hiện Đại</h2>
+  <p class="intro-paragraph">Tài liệu <strong>độc đáo nhất</strong> về patterns trong Tennis Vault, phân tích <strong>15 mẫu chơi (playing patterns) hiện đại</strong> qua case study từ Djokovic, Nadal, Federer, Sinner, Alcaraz, Medvedev, Rublev. Mỗi pattern được giải thích với <strong>sơ đồ rally</strong>, <strong>các biến thể</strong>, và <strong>điều kiện để áp dụng thành công</strong>. Đây là cuốn sách "nghệ thuật" của tennis hiện đại — không chỉ "đánh thế nào" mà "đánh cái gì trong tình huống nào".</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có chương riêng về <strong>"Pattern Library"</strong> — 15 patterns phổ biến nhất: serve-volley, chip-charge, return-deep + approach, cross-court rally + DTL winner, serve + body + FH winner, drop shot + lob, v.v. Mỗi pattern có <strong>"trigger conditions"</strong> (khi nào dùng), <strong>"execution details"</strong> (cách đánh chính xác), và <strong>"follow-up plans"</strong> (kế hoạch sau pattern). Phần về <strong>"Style Match-ups"</strong> phân tích 6 cặp đối đầu kinh điển (Djokovic vs Nadal, Federer vs Nadal, Sinner vs Alcaraz) qua lăng kính patterns. Có chương về <strong>"Pattern Adaptation"</strong> — cách tay vợt hiện đại "steal" patterns từ nhau (Sinner học từ Djokovic, Alcaraz học từ Nadal).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau guide và <code>Quan_Vot_Dinh_Cao</code>. Tài liệu này dành cho người chơi 4.0+ muốn lên 4.5-5.0, và cho HLV muốn dạy chiến thuật. Đặc biệt phù hợp nếu bạn muốn hiểu <strong>"tại sao Djokovic thắng Nadal ở Australian Open 2019"</strong> — câu trả lời nằm ở patterns, không phải kỹ thuật.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / The_Art_of_Modern_Tennis_Polished.html · 341 KB · 15 Patterns + Style Match-ups</p>
+  <a href="../tfl/The_Art_of_Modern_Tennis_Polished.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge alt">🎯 QUẢN LÝ TRẬN ĐẤU</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_game_management.html — Quản Lý Trận Đấu Thực Tế</h2>
+  <p class="intro-paragraph">Tài liệu chuyên về <strong>quản lý trận đấu thực tế</strong> — không phải lý thuyết chiến thuật, mà là <strong>áp dụng chiến thuật trong từng game, từng set, từng match</strong>. Tập trung vào 12 tình huống phổ biến nhất (serving for the match, down break point, third set tiebreak, playing against a pusher, v.v.) và <strong>game plan cụ thể</strong> cho mỗi tình huống.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có <strong>"Game Plan Template"</strong> — form điền trước trận: (1) Đối thủ có phong cách gì? (2) Điểm yếu chính là gì? (3) Tôi sẽ tấn công vào đâu? (4) Khi nào tôi thay đổi chiến thuật? (5) Kế hoạch B là gì? Phần về <strong>"In-Match Adjustments"</strong> — cách đọc tình huống và thay đổi chiến thuật giữa trận (đối thủ bắt đầu đọc được serve, đối thủ mệt, đối thủ thay đổi tempo). Có <strong>"12 Decision Trees"</strong> cho 12 tình huống cụ thể — giống như trong Thư Viện Thần Kinh & Tâm Lý nhưng tập trung vào <strong>quyết định chiến thuật</strong> thay vì tâm lý. Phần cuối về <strong>"Match Statistics"</strong> — cách phân tích stats sau trận để cải thiện.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau guide. Đây là cuốn sách <strong>"playbook"</strong> — không đọc một lần rồi bỏ, mà giữ trong túi vợt và mở ra trước các trận quan trọng. Tốt nhất in ra 2-3 trang "Game Plan Template" và điền trước mỗi trận.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_game_management.html · 148 KB · 12 Decision Trees + Game Plan</p>
+  <a href="../tfl/tennis_game_management.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge">🏅 HỆ THỐNG CAO CẤP</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>He_Thong_Tennis_Cap_Cao_20_Chuong.html — Hệ Thống Cao Cấp (Patterns)</h2>
+  <p class="intro-paragraph">Cẩm nang 20 chương cho VĐV 4.0+ muốn lên 5.0, với <strong>5-6 chương về patterns và chiến thuật</strong>: rally construction, transition game (defensive → offensive), net play, court positioning, và match-up tactics. Đây là tài liệu tích hợp <strong>"toàn bộ hệ thống"</strong> — không chỉ patterns, mà cách patterns kết hợp với footwork, mental game, thể lực.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có chương riêng về <strong>"Transition Game"</strong> — cách chuyển từ phòng thủ sang tấn công (defensive → neutral → offensive → finishing). Đây là kỹ năng phân biệt tay vợt 4.5 với 5.0 — 4.5 biết cách phòng thủ tốt, 5.0 biết cách <strong>chuyển trạng thái</strong> chính xác. Phần về <strong>"Court Positioning"</strong> phân tích 4 vùng sân (defensive / neutral / offensive / net) và cách di chuyển giữa chúng. Có chương về <strong>"Net Play Tactics"</strong> — khi nào lên net, cách approach, volley patterns, transition volleys. Phần cuối về <strong>"Match-up Matrix"</strong> chi tiết cho 8 phong cách đối thủ.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc chương Transition Game (~chương 7-9) trước — đây là phần độc đáo nhất. Sau đó đọc chương Match-up Matrix (~chương 15-17) nếu bạn muốn hệ thống hóa. Tài liệu này <strong>bổ sung</strong> cho <code>The_Art_of_Modern_Tennis</code> — cuốn đó tập trung patterns, cuốn này tập trung transition + positioning.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / He_Thong_Tennis_Cap_Cao_20_Chuong.html · 157 KB · Transition + Positioning</p>
+  <a href="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge alt">🏆 MASTERY THROUGH PATTERNS</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_mastery.html — Mastery Through Patterns</h2>
+  <p class="intro-paragraph">Tài liệu về <strong>con đường từ 3.0 lên 5.0 qua lăng kính patterns</strong>. Tác giả lập luận rằng sự khác biệt giữa người chơi 4.0 và 5.0 không chỉ là kỹ thuật — mà là <strong>biết dùng pattern nào trong tình huống nào</strong>. Cuốn sách cung cấp roadmap patterns theo cấp độ — 3.0 chỉ cần 3-4 patterns cơ bản, 4.0 cần 8-10 patterns, 5.0 cần 15+ patterns và biết cách kết hợp.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có hệ thống <strong>"Pattern Levels"</strong> theo NTRP: Level 3.0 (3 patterns: serve-deep, return-deep, cross-court rally), Level 3.5 (5 patterns: thêm approach shot + volley), Level 4.0 (8 patterns: thêm drop shot + lob), Level 4.5 (12 patterns: thêm serve-volley + chip-charge), Level 5.0 (15+ patterns: kết hợp linh hoạt). Phần về <strong>"Pattern Combinations"</strong> dạy cách nối 2-3 patterns liên tiếp (serve-deep + approach + volley, return-deep + cross-court + DTL). Có chương về <strong>"Pressure Points"</strong> — cách sử dụng patterns ở key points (break point, set point, match point). Cuối cùng có <strong>"5-Month Pattern Training Plan"</strong> — lộ trình từ Level 3.0 lên 4.0 qua patterns.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau khi đã có kinh nghiệm thi đấu thực tế. Tài liệu này <strong>rất thực tế</strong> — mỗi pattern có drill cụ thể để tập. Phần "5-Month Training Plan" đặc biệt hữu ích nếu bạn muốn có lộ trình rõ ràng. Đây là cuốn sách "must-read" cho người nghiêm túc muốn cải thiện chiến thuật.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_mastery.html · 156 KB · 5-Month Pattern Training Plan</p>
+  <a href="../tfl/tennis_mastery.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<div class="doc-card" id="doc7">
+  <span class="badge">🇻🇳 BẢN TIẾNG VIỆT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>GOAT_Tennis_Giao_Trình_Tieng_Viet.html — Chiến Thuật (Bản Tiếng Việt)</h2>
+  <p class="intro-paragraph">Giáo trình tennis toàn diện bằng tiếng Việt, với <strong>3-4 chương chuyên về chiến thuật và patterns</strong>. Đây là tài liệu tiếng Việt duy nhất trong vault đề cập đầy đủ các chủ đề: <strong>kế hoạch trận đấu, khai thác điểm yếu, lưới và approach, góc đánh</strong>. Phù hợp cho người chơi Việt muốn học chiến thuật bằng tiếng mẹ đẻ.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Tiếng Việt hoàn toàn, dễ đọc, có ví dụ cụ thể từ các trận đấu quốc tế (Djokovic vs Nadal, Federer vs Sampras, Hoàng Nam vs Ly Hoàng Nam ở VTF). Phần về <strong>"kế hoạch trận đấu"</strong> hướng dẫn cách lập kế hoạch trước trận: phân tích đối thủ, xác định điểm yếu, lên chiến thuật serve + return, dự phòng kế hoạch B. Có bài tập <strong>"đánh giả lập"</strong> (imagine playing against different styles) để tập pattern recognition. Phần về <strong>"lưới"</strong> dạy cách lên net an toàn, volley patterns, transition volleys. Có bảng "12 phong cách đối thủ" tiếng Việt.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc song song với <code>tactics_guide.html</code>. Nếu bạn muốn tài liệu tiếng Việt thuần túy, đây là lựa chọn tốt nhất. Đặc biệt phù hợp cho HLV Việt Nam muốn dạy chiến thuật cho học viên bằng ngôn ngữ mẹ đẻ. Phần "12 phong cách đối thủ" có thể in ra và dán trên tường phòng tập.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / GOAT_Tennis_Giao_Trinh_Tieng_Viet.html · 190 KB · Chương chiến thuật</p>
+  <a href="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" class="doc-link">📖 Đọc Trên Web</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServeMaster | Biomechanical Tennis Grip Analysis</title>
+    <!-- Tailwind CSS for high-fidelity interactive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for comparative performance metrics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom styling for smooth transitions and interactive court aesthetics -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #faf8f5;
+        }
+
+        /* Subtle glowing accents matching clay court and turf aesthetics */
+        .glow-teal {
+            box-shadow: 0 0 15px rgba(13, 148, 136, 0.2);
+        }
+        .glow-clay {
+            box-shadow: 0 0 15px rgba(194, 65, 12, 0.2);
+        }
+        
+        /* Grid background representing tennis court patterns */
+        .court-grid {
+            background-image: radial-gradient(#e5e7eb 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        
+        /* Interactive slider styling */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #0d9488;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            transition: all 0.15s ease-in-out;
+        }
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            background: #0f766e;
+        }
+    </style>
+</head>
+<body class="court-grid text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900 pb-24">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-[#faf8f5]/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white font-extrabold shadow-md">
+                    🎾
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-tight text-slate-900 block leading-tight" data-i18n="navTitle">ServeMaster</span>
+                    <span class="text-[10px] text-teal-600 font-bold uppercase tracking-widest block" data-i18n="navSub">Biomechanics Lab</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-semibold text-slate-600">
+                <a href="#grip-analyzer" class="hover:text-teal-600 transition-colors" data-i18n="navBevel">Bevel Analyzer</a>
+                <a href="#kinetic-chain" class="hover:text-teal-600 transition-colors" data-i18n="navKinetic">Kinetic Chain</a>
+                <a href="#toss-simulator" class="hover:text-teal-600 transition-colors" data-i18n="navToss">Toss Simulator</a>
+                <a href="#drill-log" class="hover:text-teal-600 transition-colors" data-i18n="navDrills">Practice Drills</a>
+            </div>
+            <!-- Language Toggle and Document Label -->
+            <div class="flex items-center gap-3">
+                <button id="langToggle" onclick="toggleLanguage()" class="bg-teal-50 hover:bg-teal-100 border border-teal-200 text-teal-800 text-xs font-bold px-3 py-1.5 rounded-full transition-all flex items-center gap-1 shadow-sm">
+                    🌐 <span id="langLabel">Tiếng Việt</span>
+                </button>
+                <div class="hidden sm:block">
+                    <span class="text-xs bg-stone-200/60 text-slate-700 px-3 py-1.5 rounded-full font-medium border border-stone-300/40">
+                        <span data-i18n="docRefPrefix">Doc Ref: </span><strong class="font-semibold text-slate-900">Tennis serve grip analysis.docx</strong>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Layout -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-20">
+
+        <!-- Header Introduction -->
+        <header class="text-center max-w-3xl mx-auto space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold uppercase tracking-wider" data-i18n="introTag">
+                ⚡ Interactive Mechanical Workbook
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight" id="introTitle">
+                Anatomy of the Serve: <span class="text-teal-600">Continental Grip</span> vs. <span class="text-amber-700">Waiter's Tray</span>
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed" data-i18n="introDesc">
+                Direct biomechanical translation of your court notebooks. Use these real-time, vector-accurate anatomical models to master edge-on racket drop, eliminate lateral epicondyle (elbow) tendon fatigue, and maximize forearm pronation.
+            </p>
+        </header>
+
+        <!-- SECTION 1: INTERACTIVE GRIP & BEVEL ANALYZER -->
+        <section id="grip-analyzer" class="scroll-mt-20 bg-white rounded-3xl p-6 md:p-8 border border-stone-200 shadow-sm">
+            <div class="border-b border-stone-100 pb-6 mb-8">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                    <span class="text-teal-600">01.</span>
+                    <span data-i18n="sec1Title">Octagonal Handle & Bevel Analyzer</span>
+                </h2>
+                <p class="text-slate-500 mt-2 text-sm md:text-base" id="sec1Desc">
+                    Your notebook specifies: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Grip: Continental | Palm is open & must be in a lateral plane, not vertical"</code>. Toggle between correct and incorrect positions below to see how bevel orientation sets up correct wrist mobility.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Visualizer Viewport -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    <!-- Grip Selector Tabs -->
+                    <div class="flex gap-2 p-1.5 bg-stone-100 rounded-xl w-full max-w-md mb-6 border border-stone-200">
+                        <button id="tabContinental" onclick="setGripType('continental')" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm bg-white text-teal-700 border border-stone-200/50">
+                            Continental Grip <span class="text-xs text-teal-500 block font-normal">(Correct Edge)</span>
+                        </button>
+                        <button id="tabWaitersTray" onclick="setGripType('waiter')" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-800">
+                            Waiter's Tray <span class="text-xs text-amber-600 block font-normal">(Error Flat Face)</span>
+                        </button>
+                    </div>
+
+                    <!-- Dynamic SVG Grip Graphics Container -->
+                    <div class="w-full max-w-lg aspect-square bg-[#fbfbfa] rounded-2xl border border-stone-200 shadow-inner flex items-center justify-center p-4 relative">
+                        <!-- Legend overlay -->
+                        <div class="absolute top-4 left-4 flex flex-col gap-1 text-[11px] font-bold text-slate-500 bg-white/80 p-2.5 rounded-lg border border-stone-200/50">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span> <span data-i18n="legendKnuckle">Index Knuckle Position</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span> <span data-i18n="legendHeel">Heel Pad Position</span>
+                            </div>
+                        </div>
+
+                        <!-- Main Interactive SVG -->
+                        <svg id="bevelSvg" viewBox="0 0 400 400" class="w-full h-full max-w-[340px]">
+                            <!-- Grid Background -->
+                            <defs>
+                                <pattern id="svgGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f1f1ef" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="400" height="400" fill="url(#svgGrid)" rx="16"/>
+
+                            <!-- Octagon Handle (Rotated so Bevel 1 is flat top) -->
+                            <polygon id="handleOctagon" points="
+                                161,107 239,107 293,161 293,239
+                                239,293 161,293 107,239 107,161" 
+                                fill="#ffffff" stroke="#94a3b8" stroke-width="4" class="transition-all duration-500" />
+
+                            <!-- Bevel Lines & Labels -->
+                            <!-- Bevel 1 (Top) -->
+                            <line x1="161" y1="107" x2="239" y2="107" stroke="#cbd5e1" stroke-width="2" />
+                            <text id="svgBevelText1" x="200" y="94" font-size="12" font-weight="800" fill="#475569" text-anchor="middle">BEVEL 1</text>
+                            
+                            <!-- Bevel 2 -->
+                            <line x1="239" y1="107" x2="293" y2="161" stroke="#cbd5e1" stroke-width="2" />
+                            <text id="svgBevelText2" x="278" y="124" font-size="12" font-weight="800" fill="#475569" text-anchor="middle" transform="rotate(45, 278, 124)">BEVEL 2</text>
+
+                            <!-- Bevel 3 -->
+                            <line x1="293" y1="161" x2="293" y2="239" stroke="#cbd5e1" stroke-width="2" />
+                            <text id="svgBevelText3" x="314" y="204" font-size="12" font-weight="800" fill="#475569" text-anchor="middle" transform="rotate(90, 314, 204)">BEVEL 3</text>
+
+                            <!-- Bevel 4 -->
+                            <line x1="293" y1="239" x2="239" y2="293" stroke="#cbd5e1" stroke-width="2" />
+                            <text id="svgBevelText4" x="282" y="280" font-size="12" font-weight="800" fill="#475569" text-anchor="middle" transform="rotate(135, 282, 280)">BEVEL 4</text>
+
+                            <!-- Bevel 5 -->
+                            <line x1="239" y1="293" x2="161" y2="293" stroke="#cbd5e1" stroke-width="2" />
+                            <text id="svgBevelText5" x="200" y="312" font-size="12" font-weight="800" fill="#475569" text-anchor="middle">BEVEL 5</text>
+
+                            <!-- Bevel 6, 7, 8 (Left Side) -->
+                            <line x1="161" y1="293" x2="107" y2="239" stroke="#e2e8f0" stroke-width="1.5" />
+                            <line x1="107" y1="239" x2="107" y2="161" stroke="#e2e8f0" stroke-width="1.5" />
+                            <line x1="107" y1="161" x2="161" y2="107" stroke="#e2e8f0" stroke-width="1.5" />
+
+                            <!-- Dynamic Racquet Face Alignment Line -->
+                            <g id="racquetPlaneGroup" class="transition-all duration-500 ease-out">
+                                <line id="racquetPlaneLine" x1="200" y1="50" x2="200" y2="350" stroke="#0d9488" stroke-dasharray="6,4" stroke-width="2" />
+                                <text id="racquetPlaneText" x="200" y="45" font-size="10" font-weight="800" fill="#0d9488" text-anchor="middle">RACQUET EDGE PLANE</text>
+                            </g>
+
+                            <!-- Hand Grip Pointers -->
+                            <g id="gripHighlights">
+                                <circle id="knuckleMarker" cx="266" cy="134" r="10" fill="#0d9488" stroke="#ffffff" stroke-width="2" class="transition-all duration-500 glow-teal" />
+                                <text id="knuckleText" x="266" y="118" font-size="10" font-weight="800" fill="#0d9488" text-anchor="middle">INDEX KNUCKLE</text>
+
+                                <circle id="heelMarker" cx="220" cy="115" r="10" fill="#f97316" stroke="#ffffff" stroke-width="2" class="transition-all duration-500" />
+                                <text id="heelText" x="180" y="132" font-size="10" font-weight="800" fill="#f97316" text-anchor="middle">HEEL PAD</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Explanation Panel -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-100 border border-stone-200 text-xs font-semibold text-slate-700" data-i18n="diagTag">
+                            🚨 Anatomical Diagnostics
+                        </div>
+                        
+                        <div id="gripTitle" class="text-2xl font-bold text-teal-800 transition-colors duration-300">
+                            Continental Setup (Bevel 2)
+                        </div>
+
+                        <div class="p-4 bg-teal-50 border-l-4 border-teal-500 rounded-r-xl space-y-2" id="gripHighlightCard">
+                            <h4 id="gripHighlightTitle" class="font-bold text-teal-900 text-sm">PROPER MECHANICAL ALIGNMENT</h4>
+                            <p id="gripHighlightDesc" class="text-teal-800 text-xs leading-relaxed">
+                                Placing your index knuckle and heel pad on Bevel 2 matches your notebook drawing: "Racquet is above the palm". This aligns the palm to the lateral plane. When you drop the racket behind your head, the wrist has unrestricted freedom to pronate outwards at contact, protecting the joint.
+                            </p>
+                        </div>
+
+                        <div class="space-y-3 text-sm text-slate-600">
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold" id="bullet1Check">✓</span>
+                                <span id="bullet1Text"><strong>Lateral Wrist Plane:</strong> Keeps forearm extensor tendons at rest.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold" id="bullet2Check">✓</span>
+                                <span id="bullet2Text"><strong>Extended Position:</strong> Hand drives upward directly on edge.</span>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <span class="text-teal-600 font-bold" id="bullet3Check">✓</span>
+                                <span id="bullet3Text"><strong>Kinetic Delivery:</strong> Shoulder rotation creates effortless force.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informational Quote Card -->
+                    <div class="mt-8 pt-6 border-t border-stone-100 text-xs text-slate-500" id="noteQuote">
+                        *Note from <strong>"Tennis serve grip analysis.docx"</strong>: "The muscle & tendon in the elbow is not pulled hard compared to convention (i.e. elbow is extended instead of flexed)".
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SHOULDER-ELBOW KINETIC CHAIN & JOINT STRAIN VISUALIZER -->
+        <section id="kinetic-chain" class="scroll-mt-20 bg-white rounded-3xl p-6 md:p-8 border border-stone-200 shadow-sm">
+            <div class="border-b border-stone-100 pb-6 mb-8">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                    <span class="text-teal-600">02.</span>
+                    <span data-i18n="sec2Title">Shoulder-Elbow Kinetic Chain Visualizer</span>
+                </h2>
+                <p class="text-slate-500 mt-2 text-sm md:text-base" data-i18n="sec2Desc">
+                    This interactive simulator diagrams how your hand's position influences joint flex, arm extension, and muscle strain. Press the serve phase markers below to analyze the loading, dropping, and extension profiles of both grip techniques.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Kinetic SVG Viewport -->
+                <div class="lg:col-span-6 flex flex-col items-center">
+                    <!-- Phase Selectors -->
+                    <div class="flex gap-2 mb-6 w-full max-w-sm justify-center bg-stone-100 p-1 rounded-lg border border-stone-200">
+                        <button onclick="setPhase('trophy')" id="btnPhaseTrophy" class="flex-1 py-1.5 rounded-md text-xs font-bold transition-all bg-white text-slate-800 shadow-sm">
+                            1. Trophy
+                        </button>
+                        <button onclick="setPhase('drop')" id="btnPhaseDrop" class="flex-1 py-1.5 rounded-md text-xs font-bold transition-all text-slate-500 hover:text-slate-700">
+                            2. Drop
+                        </button>
+                        <button onclick="setPhase('contact')" id="btnPhaseContact" class="flex-1 py-1.5 rounded-md text-xs font-bold transition-all text-slate-500 hover:text-slate-700">
+                            3. Contact (Finish)
+                        </button>
+                    </div>
+
+                    <div class="w-full aspect-square max-w-[340px] bg-stone-50 rounded-2xl border border-stone-200 shadow-inner p-4 relative">
+                        <svg id="kineticSvg" viewBox="0 0 300 300" class="w-full h-full">
+                            <!-- Background Grid -->
+                            <rect width="300" height="300" fill="url(#svgGrid)" rx="16"/>
+
+                            <!-- Ground Line -->
+                            <line x1="20" y1="280" x2="280" y2="280" stroke="#cbd5e1" stroke-width="2" />
+                            
+                            <!-- Stick Man Body Base -->
+                            <line x1="100" y1="220" x2="110" y2="150" stroke="#94a3b8" stroke-width="4" /> <!-- Spine -->
+                            <line x1="110" y1="150" x2="135" y2="145" stroke="#94a3b8" stroke-width="4" /> <!-- Shoulders -->
+                            
+                            <!-- Head -->
+                            <circle cx="105" cy="120" r="16" fill="#f1f5f9" stroke="#94a3b8" stroke-width="3" />
+                            
+                            <!-- Kinetic Chain Arm Path Lines -->
+                            <path id="kineticArm" d="M 135,145 L 110,100 L 120,60" fill="none" stroke="#64748b" stroke-width="6" class="transition-all duration-500 ease-out" />
+                            <path id="kineticRacket" d="M 120,60 L 130,20" fill="none" stroke="#0d9488" stroke-width="4" class="transition-all duration-500 ease-out" />
+                            
+                            <!-- Racquet String Indicator -->
+                            <ellipse id="racketFaceOval" cx="130" cy="20" rx="12" ry="18" fill="rgba(13, 148, 136, 0.1)" stroke="#0d9488" stroke-width="2" class="transition-all duration-500 ease-out" />
+
+                            <!-- Strain Glow Area -->
+                            <circle id="elbowStrainGlow" cx="110" cy="100" r="12" fill="rgba(239, 68, 68, 0)" class="transition-all duration-500 animate-pulse" />
+                            
+                            <!-- Joints Markers -->
+                            <circle cx="135" cy="145" r="5" fill="#475569" />
+                            <circle id="elbowJoint" cx="110" cy="100" r="5" fill="#475569" class="transition-all duration-500" />
+                            <circle id="wristJoint" cx="120" cy="60" r="4" fill="#475569" class="transition-all duration-500" />
+
+                            <!-- Dynamic Annotation Text -->
+                            <text id="annotWristLabel" x="140" y="65" font-size="9" font-weight="700" fill="#475569" class="transition-all duration-500">Wrist (Extended)</text>
+                            <text id="annotElbowLabel" x="65" y="105" font-size="9" font-weight="700" fill="#475569" class="transition-all duration-500">Elbow</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Comparative Metrics Chart -->
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4" data-i18n="radarTitle">Biomechanical Joint Load Profile</h3>
+                    <p class="text-sm text-slate-500 mb-6" data-i18n="radarDesc">
+                        An empirical look at peak tendon load vs. joint extension. A true Continental grip utilizes full extension to absorb shock into the large shoulder and back muscle groups, keeping joint torque at healthy levels.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="biomechanicsChart" style="height:300px; width:100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: INTERACTIVE BALL TOSS SIMULATOR -->
+        <section id="toss-simulator" class="scroll-mt-20 bg-white rounded-3xl p-6 md:p-8 border border-stone-200 shadow-sm">
+            <div class="border-b border-stone-100 pb-6 mb-8">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                    <span class="text-teal-600">03.</span>
+                    <span data-i18n="sec3Title">Toss Placement & Contact Alignment</span>
+                </h2>
+                <p class="text-slate-500 mt-2 text-sm md:text-base" id="sec3Desc">
+                    Your court notes ask: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"What happens if I try this grip but my toss is too far in front?"</code>. Use the slider below to shift your ball toss alignment and see how it immediately forces the forearm to tuck or extend.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Interactive Slider Control & Court Visualization -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    <!-- Dynamic Toss Interactive Court Area -->
+                    <div class="w-full h-48 bg-[#115e59] rounded-2xl relative overflow-hidden border-2 border-[#134e4a] flex flex-col items-center justify-between p-4 shadow-inner">
+                        <!-- Court Lines -->
+                        <div class="absolute inset-x-0 top-0 h-1/2 border-b-2 border-dashed border-white/30 pointer-events-none"></div>
+                        <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-white/40 pointer-events-none"></div>
+                        
+                        <!-- Player Center Baseline -->
+                        <div class="absolute bottom-0 inset-x-0 h-2 bg-[#0f766e] flex justify-center items-center">
+                            <span class="w-4 h-1 bg-white"></span>
+                        </div>
+
+                        <!-- Dynamic Ball Element -->
+                        <div id="simBall" class="absolute w-6 h-6 rounded-full bg-[#ccff00] border-2 border-yellow-300 shadow-md flex items-center justify-center text-[10px] font-bold text-slate-950 transition-all duration-300 ease-out" style="left: 50%; top: 30%;">
+                            🎾
+                        </div>
+
+                        <!-- Dynamic Player Model -->
+                        <div id="simPlayer" class="absolute w-8 h-8 rounded-full bg-slate-900 border-2 border-white flex items-center justify-center text-[10px] font-bold text-white transition-all duration-300 ease-out" style="left: 50%; bottom: 15px;">
+                            👤
+                        </div>
+
+                        <!-- Path Connector Line -->
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none">
+                            <line id="simLine" x1="50%" y1="85%" x2="50%" y2="30%" stroke="#ccff00" stroke-width="1.5" stroke-dasharray="4,4" class="transition-all duration-300 ease-out" />
+                        </svg>
+
+                        <!-- Label Overlay -->
+                        <div class="absolute top-2 left-3 bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] text-white font-mono tracking-widest uppercase" data-i18n="courtMapLabel">
+                            Visual Court Map (Bird's Eye)
+                        </div>
+                    </div>
+
+                    <!-- Toss Position Slider -->
+                    <div class="w-full mt-6 space-y-3">
+                        <div class="flex justify-between text-xs font-bold text-slate-600 px-1">
+                            <span data-i18n="tossBack">Too Far Back</span>
+                            <span class="text-teal-600 font-extrabold uppercase" id="tossStateLabel">Perfect (Slightly Front-Right)</span>
+                            <span data-i18n="tossForward">Too Far Forward</span>
+                        </div>
+                        <input type="range" id="tossSlider" min="0" max="100" value="50" oninput="updateTossSimulator(this.value)" class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-500/50">
+                    </div>
+                </div>
+
+                <!-- Real-time Consequence Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-[#faf9f6] border border-stone-200 rounded-2xl p-6 space-y-4">
+                        <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-[10px] font-extrabold text-amber-800 uppercase tracking-wide" data-i18n="impactTag">
+                            Impact Check
+                        </div>
+                        <h4 id="tossImpactTitle" class="text-xl font-bold text-slate-900">Optimal Contact Profile</h4>
+                        <p id="tossImpactBody" class="text-sm text-slate-600 leading-relaxed">
+                            A neutral toss position, about 1 foot in front of your head and slightly right, lets you contact the ball with fully extended forearm pronation. This perfectly aligns with your Continental grip, transferring load directly from shoulder rotational torque into the racquet frame.
+                        </p>
+
+                        <div class="pt-4 border-t border-stone-200/60 flex items-center gap-3">
+                            <span id="tossWarningIcon" class="w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center text-sm font-bold">✓</span>
+                            <span id="tossWarningText" class="text-xs text-slate-500 font-semibold">Tendon pulling risk: Extremely Low (Zero strain)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PRACTICE DRILLS & CHECKLISTS -->
+        <section id="drill-log" class="scroll-mt-20 bg-white rounded-3xl p-6 md:p-8 border border-stone-200 shadow-sm">
+            <div class="border-b border-stone-100 pb-6 mb-8">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+                    <span class="text-teal-600">04.</span>
+                    <span data-i18n="sec4Title">Practice Drills & Compliance Tracker</span>
+                </h2>
+                <p class="text-slate-500 mt-2 text-sm md:text-base" data-i18n="sec4Desc">
+                    Convert your court notebook goals into a tracking habit. Perform these daily shadows and log your progress directly below to cement correct tendon movement.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Drill Cards -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h3 class="text-lg font-bold text-slate-800" data-i18n="drillHeader">10-Minute Wall Training Protocol</h3>
+                    
+                    <!-- Rep Counter Interactive Module -->
+                    <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center justify-between">
+                        <div>
+                            <h4 class="font-extrabold text-slate-800 text-sm uppercase tracking-wide" data-i18n="counterTitle">Quick Repetition Counter</h4>
+                            <p class="text-xs text-slate-500 mt-1" data-i18n="counterSub">Easily count your shadow serve reps at home.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button onclick="changeReps(-1)" class="w-10 h-10 rounded-full bg-white border border-stone-200 text-slate-800 font-bold hover:bg-stone-100 transition-colors flex items-center justify-center text-lg">-</button>
+                            <span id="repCounterDisplay" class="text-3xl font-black text-teal-600 w-12 text-center">0</span>
+                            <button onclick="changeReps(1)" class="w-10 h-10 rounded-full bg-teal-600 text-white font-bold hover:bg-teal-700 transition-colors flex items-center justify-center text-lg">+</button>
+                            <button onclick="resetReps()" class="text-xs font-semibold text-slate-400 hover:text-slate-600 underline" data-i18n="reset">Reset</button>
+                        </div>
+                    </div>
+
+                    <!-- Checklist Steps -->
+                    <div class="space-y-4">
+                        <label class="flex items-start gap-4 p-4 rounded-xl border border-stone-200 hover:bg-stone-50/50 transition-colors cursor-pointer">
+                            <input type="checkbox" onchange="toggleCheck(this)" class="mt-1 w-4.5 h-4.5 rounded border-stone-300 text-teal-600 focus:ring-teal-500">
+                            <div>
+                                <span class="font-bold text-sm text-slate-800 block" data-i18n="step1Title">Step 1: Palm-Plane Hold (10 x 5s)</span>
+                                <span class="text-xs text-slate-500 block mt-0.5" data-i18n="step1Desc">Hold trophy pose with racquet head above palm. Strings should face the side fence. Check for zero elbow stress.</span>
+                            </div>
+                        </label>
+
+                        <label class="flex items-start gap-4 p-4 rounded-xl border border-stone-200 hover:bg-stone-50/50 transition-colors cursor-pointer">
+                            <input type="checkbox" onchange="toggleCheck(this)" class="mt-1 w-4.5 h-4.5 rounded border-stone-300 text-teal-600 focus:ring-teal-500">
+                            <div>
+                                <span class="font-bold text-sm text-slate-800 block" data-i18n="step2Title">Step 2: Slow Drop-to-Tap (15 Reps)</span>
+                                <span class="text-xs text-slate-500 block mt-0.5" data-i18n="step2Desc">Relax shoulder to let racquet drop behind. Lightly tap a fence or wall using the edge of your racquet frame.</span>
+                            </div>
+                        </label>
+
+                        <label class="flex items-start gap-4 p-4 rounded-xl border border-stone-200 hover:bg-stone-50/50 transition-colors cursor-pointer">
+                            <input type="checkbox" onchange="toggleCheck(this)" class="mt-1 w-4.5 h-4.5 rounded border-stone-300 text-teal-600 focus:ring-teal-500">
+                            <div>
+                                <span class="font-bold text-sm text-slate-800 block" data-i18n="step3Title">Step 3: Pronated Shadow Serve (3 Sets of 10)</span>
+                                <span class="text-xs text-slate-500 block mt-0.5" data-i18n="step3Desc">Execute full shadow serves emphasizing the "edge - above - turn" sequence. Freeze at complete arm extension.</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Notebook Context -->
+                <div class="lg:col-span-5 bg-stone-50 border border-stone-200 rounded-2xl p-6 flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-teal-50 border border-teal-200 text-[10px] font-bold text-teal-800 uppercase tracking-wide" data-i18n="summaryTag">
+                            Biomechanics Summary
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900" data-i18n="summaryTitle">Your Hand's Kinetic Path</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed" id="summaryBody1">
+                            Following the notes in <strong class="text-slate-800">"Tennis serve grip analysis.docx"</strong>, switching from a flat, vertical palm (eastern / waiter's tray) to a lateral plane palm (continental) lets the forearm rotate smoothly in a higher arc.
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed" data-i18n="summaryBody2">
+                            This eliminates local wrist flexing strain, shifts acceleration into shoulder external-to-internal rotation, and protects you against lateral epicondylitis (tennis elbow).
+                        </p>
+                    </div>
+
+                    <div class="pt-6 border-t border-stone-200 mt-6 text-center">
+                        <span class="text-xs text-teal-700 font-bold bg-teal-100/60 px-3.5 py-2 rounded-lg inline-block" id="cueTag">
+                            💡 Cue: "Edge — Above — Turn"
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Script Module for Interactive Systems -->
+    <script>
+        // Dictionary mapping for quick translation
+        const translations = {
+            en: {
+                navTitle: "ServeMaster",
+                navSub: "Biomechanics Lab",
+                navBevel: "Bevel Analyzer",
+                navKinetic: "Kinetic Chain",
+                navToss: "Toss Simulator",
+                navDrills: "Practice Drills",
+                docRefPrefix: "Doc Ref: ",
+                introTag: "⚡ Interactive Mechanical Workbook",
+                introTitle: 'Anatomy of the Serve: <span class="text-teal-600">Continental Grip</span> vs. <span class="text-amber-700">Waiter\'s Tray</span>',
+                introDesc: "Direct biomechanical translation of your court notebooks. Use these real-time, vector-accurate anatomical models to master edge-on racket drop, eliminate lateral epicondyle (elbow) tendon fatigue, and maximize forearm pronation.",
+                sec1Title: "Octagonal Handle & Bevel Analyzer",
+                sec1Desc: 'Your notebook specifies: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Grip: Continental | Palm is open & must be in a lateral plane, not vertical"</code>. Toggle between correct and incorrect positions below to see how bevel orientation sets up correct wrist mobility.',
+                tabContinental: 'Continental Grip <span class="text-xs text-teal-500 block font-normal">(Correct Edge)</span>',
+                tabWaitersTray: 'Waiter\'s Tray <span class="text-xs text-amber-600 block font-normal">(Error Flat Face)</span>',
+                legendKnuckle: "Index Knuckle Position",
+                legendHeel: "Heel Pad Position",
+                diagTag: "🚨 Anatomical Diagnostics",
+                noteQuote: '*Note from <strong>"Tennis serve grip analysis.docx"</strong>: "The muscle & tendon in the elbow is not pulled hard compared to convention (i.e. elbow is extended instead of flexed)".',
+                
+                // SVG dynamic text
+                svgBevel1: "BEVEL 1",
+                svgBevel2: "BEVEL 2",
+                svgBevel3: "BEVEL 3",
+                svgBevel4: "BEVEL 4",
+                svgBevel5: "BEVEL 5",
+                svgRacquetPlane: "RACQUET EDGE PLANE",
+                svgKnuckleText: "INDEX KNUCKLE",
+                svgHeelText: "HEEL PAD",
+
+                // Section 2
+                sec2Title: "Shoulder-Elbow Kinetic Chain Visualizer",
+                sec2Desc: "This interactive simulator diagrams how your hand's position influences joint flex, arm extension, and muscle strain. Press the serve phase markers below to analyze the loading, dropping, and extension profiles of both grip techniques.",
+                phase1: "1. Trophy",
+                phase2: "2. Drop",
+                phase3: "3. Contact (Finish)",
+                radarTitle: "Biomechanical Joint Load Profile",
+                radarDesc: "An empirical look at peak tendon load vs. joint extension. A true Continental grip utilizes full extension to absorb shock into the large shoulder and back muscle groups, keeping joint torque at healthy levels.",
+                
+                // Radar labels
+                lblForearmRot: "Forearm Rotation (ROM)",
+                lblElbowExt: "Elbow Extension Angle",
+                lblShoulderKin: "Shoulder Kinetic Delivery",
+                lblElbowStrain: "Elbow Strain / Tendon Pull",
+                lblWristSlap: "Wrist Slapping / Friction",
+                lblGripContinental: "Continental Grip",
+                lblGripWaitersTray: "Waiter's Tray Error",
+
+                // Section 3
+                sec3Title: "Toss Placement & Contact Alignment",
+                sec3Desc: 'Your court notes ask: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"What happens if I try this grip but my toss is too far in front?"</code>. Use the slider below to shift your ball toss alignment and see how it immediately forces the forearm to tuck or extend.',
+                courtMapLabel: "Visual Court Map (Bird's Eye)",
+                tossBack: "Too Far Back",
+                tossForward: "Too Far Forward",
+                tossStatePerfect: "Perfect (Slightly Front-Right)",
+                tossStateBack: "Too Far Back",
+                tossStateForward: "Too Far Forward",
+                impactTag: "Impact Check",
+
+                // Section 4
+                sec4Title: "Practice Drills & Compliance Tracker",
+                sec4Desc: "Convert your court notebook goals into a tracking habit. Perform these daily shadows and log your progress directly below to cement correct tendon movement.",
+                drillHeader: "10-Minute Wall Training Protocol",
+                counterTitle: "Quick Repetition Counter",
+                counterSub: "Easily count your shadow serve reps at home.",
+                reset: "Reset",
+                step1Title: "Step 1: Palm-Plane Hold (10 x 5s)",
+                step1Desc: "Hold trophy pose with racquet head above palm. Strings should face the side fence. Check for zero elbow stress.",
+                step2Title: "Step 2: Slow Drop-to-Tap (15 Reps)",
+                step2Desc: "Relax shoulder to let racquet drop behind. Lightly tap a fence or wall using the edge of your racquet frame.",
+                step3Title: "Step 3: Pronated Shadow Serve (3 Sets of 10)",
+                step3Desc: "Execute full shadow serves emphasizing the " + '"edge - above - turn"' + " sequence. Freeze at complete arm extension.",
+                summaryTag: "Biomechanics Summary",
+                summaryTitle: "Your Hand's Kinetic Path",
+                summaryBody1: 'Following the notes in <strong class="text-slate-800">"Tennis serve grip analysis.docx"</strong>, switching from a flat, vertical palm (eastern / waiter\'s tray) to a lateral plane palm (continental) lets the forearm rotate smoothly in a higher arc.',
+                summaryBody2: "This eliminates local wrist flexing strain, shifts acceleration into shoulder external-to-internal rotation, and protects you against lateral epicondylitis (tennis elbow).",
+                cueTag: '💡 Cue: "Edge — Above — Turn"',
+
+                // Diagnostics panel copy changes
+                contGripName: "Continental Setup (Bevel 2)",
+                contGripTag: "PROPER MECHANICAL ALIGNMENT",
+                contGripDesc: 'Placing your index knuckle and heel pad on Bevel 2 matches your notebook drawing: "Racquet is above the palm". This aligns the palm to the lateral plane. When you drop the racket behind your head, the wrist has unrestricted freedom to pronate outwards at contact, protecting the joint.',
+                contBullet1: "<strong>Lateral Wrist Plane:</strong> Keeps forearm extensor tendons at rest.",
+                contBullet2: "<strong>Extended Position:</strong> Hand drives upward directly on edge.",
+                contBullet3: "<strong>Kinetic Delivery:</strong> Shoulder rotation creates effortless force.",
+
+                waitGripName: "Waiter's Tray Error (Bevel 3-4)",
+                waitGripTag: "CRITICAL MECHANICAL LIMITATION",
+                waitGripDesc: "Placing the hand flat underneath the handle forces strings to face the sky early. Forearm rotation is instantly locked, leaving the wrist unable to pronate cleanly. Force must be manually delivered with a forced wrist flip, directly pulling on the outer elbow.",
+                waitBullet1: "<strong>Blocked Forearm:</strong> Pronation is locked out entirely.",
+                waitBullet2: "<strong>Tucked Elbow:</strong> Forces server to push the racquet with bent joints.",
+                waitBullet3: "<strong>High Tendon Pull:</strong> Severe microtrauma to lateral elbow tendons.",
+
+                // Kinetic chain dynamics
+                knWristLabelCont: "Wrist (Aligned)",
+                knWristLabelWait: "Wrist (Forced Flex)",
+                knElbowLabelCont: "Elbow (Relaxed)",
+                knElbowLabelWait: "Elbow (Cramped)",
+                knWristDropCont: "Wrist Drop (Edge)",
+                knWristDropWait: "Wrist (Blocked)",
+                knElbowDropCont: "Elbow (Extended)",
+                knElbowDropWait: "Elbow Joint Locked",
+                knContactCont: "Pronation Contact",
+                knContactWait: "Wrist Slap (High Strain)",
+                knContactElbowCont: "Elbow Extended",
+                knContactElbowWait: "Elbow (Flexed Stress)",
+
+                // Toss Simulator dynamic messages
+                tossPerfectTitle: "Optimal Contact Profile",
+                tossPerfectBody: "A neutral toss position, about 1 foot in front of your head and slightly right, lets you contact the ball with fully extended forearm pronation. This perfectly aligns with your Continental grip, transferring load directly from shoulder rotational torque into the racquet frame.",
+                tossPerfectWarning: "Tendon pulling risk: Extremely Low (Zero strain)",
+                
+                tossBackTitle: "Tuck and Arch Compensation",
+                tossBackBody: "Tossing the ball behind your head forces your spine to hyper-extend and collapses the elbow path. With a Continental grip, this locks wrist mechanics and transfers shock directly to your spine and lower back joints.",
+                tossBackWarning: "Tendon pulling risk: Moderate (Back & Shoulder Strain)",
+
+                tossForwardTitle: "The Waiter's Tray Trap",
+                tossForwardBody: "If the toss is too far in front, your arm cannot fully extend on-edge at impact. To make contact, you are forced to rotate the racket face flat (Waiter's Tray posture) and shove the racket upward with a flexed elbow. This instantly overloads outer tendons.",
+                tossForwardWarning: "Tendon pulling risk: Critical (High Tennis Elbow Risk)"
+            },
+            vi: {
+                navTitle: "ServeMaster",
+                navSub: "Phòng Cơ Sinh Học",
+                navBevel: "Phân Tích Cạnh Vợt",
+                navKinetic: "Chuỗi Động Học",
+                navToss: "Mô Phỏng Tung Bóng",
+                navDrills: "Bài Tập Thực Hành",
+                docRefPrefix: "Tài liệu gốc: ",
+                introTag: "⚡ Sổ Tay Cơ Học Tương Tác",
+                introTitle: 'Giải Phẫu Cú Giao Bóng: <span class="text-teal-600">Kiểu Continental</span> vs. <span class="text-amber-700">Kiểu Bê Khay</span>',
+                introDesc: "Chuyển thể trực tiếp từ các ghi chép trên sân tập của bạn. Sử dụng các mô hình giải phẫu chính xác theo thời gian thực này để làm chủ động tác hạ vợt bằng cạnh, loại bỏ mỏi gân cơ lồi cầu ngoài (khuỷu tay) và tối đa hóa chuyển động xoay cẳng tay.",
+                sec1Title: "Phân Tích Cán Bát Giác & Cạnh Vợt",
+                sec1Desc: 'Sổ tay của bạn ghi rõ: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Cầm vợt: Continental | Lòng bàn tay mở & phải nằm trên mặt phẳng nghiêng, không phải mặt phẳng đứng"</code>. Chuyển đổi giữa các vị trí đúng/sai bên dưới để xem định hướng cạnh vợt mở ra sự linh hoạt cho cổ tay như thế nào.',
+                tabContinental: 'Kiểu Continental <span class="text-xs text-teal-500 block font-normal">(Cạnh Vợt Đúng)</span>',
+                tabWaitersTray: 'Kiểu Bê Khay <span class="text-xs text-amber-600 block font-normal">(Lỗi Mặt Phẳng)</span>',
+                legendKnuckle: "Vị Trí Khớp Ngón Trỏ",
+                legendHeel: "Vị Trí Đệm Lòng Bàn Tay",
+                diagTag: "🚨 Chẩn Đoán Cơ Sinh Học",
+                noteQuote: '*Lưu ý từ <strong>"Tennis serve grip analysis.docx"</strong>: "Cơ & gân ở khuỷu tay không bị kéo mạnh so với cách thông thường (tức là khuỷu tay được duỗi thẳng thay vì gập lại)".',
+                
+                // SVG dynamic text
+                svgBevel1: "CẠNH 1",
+                svgBevel2: "CẠNH 2",
+                svgBevel3: "CẠNH 3",
+                svgBevel4: "CẠNH 4",
+                svgBevel5: "CẠNH 5",
+                svgRacquetPlane: "MẶT PHẲNG CẠNH VỢT",
+                svgKnuckleText: "KHỚP NGÓN TRỎ",
+                svgHeelText: "ĐỆM TAY",
+
+                // Section 2
+                sec2Title: "Mô Phỏng Chuỗi Động Học Vai-Khuỷu Tay",
+                sec2Desc: "Trình mô phỏng tương tác này trực quan hóa cách vị trí tay ảnh hưởng đến độ gập khớp, độ duỗi cánh tay và mức độ căng cơ. Nhấn vào các mốc giai đoạn giao bóng bên dưới để phân tích độ chịu tải, hạ vợt và duỗi thẳng cánh tay.",
+                phase1: "1. Tư Thế Cúp",
+                phase2: "2. Hạ Vợt",
+                phase3: "3. Tiếp Bóng (Kết)",
+                radarTitle: "Chỉ Số Tải Trọng Khớp Cơ Sinh Học",
+                radarDesc: "Đánh giá thực nghiệm về tải trọng gân cực đại so với độ duỗi khớp. Kiểu cầm Continental tận dụng độ duỗi tối đa để hấp thụ chấn động vào các nhóm cơ vai và lưng lớn, giữ mô-men xoắn ở mức an toàn.",
+                
+                // Radar labels
+                lblForearmRot: "Xoay Cẳng Tay (ROM)",
+                lblElbowExt: "Góc Duỗi Khuỷu Tay",
+                lblShoulderKin: "Lực Truyền Từ Vai",
+                lblElbowStrain: "Căng Thẳng Khuỷu Tay",
+                lblWristSlap: "Vẩy Cổ Tay / Ma Sát",
+                lblGripContinental: "Kiểu Continental",
+                lblGripWaitersTray: "Lỗi Bê Khay",
+
+                // Section 3
+                sec3Title: "Vị Trí Tung Bóng & Điểm Tiếp Xúc",
+                sec3Desc: 'Sổ tay của bạn hỏi: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Điều gì xảy ra nếu tôi thử kiểu cầm này nhưng tung bóng quá xa về phía trước?"</code>. Sử dụng thanh trượt bên dưới để thay đổi vị trí tung bóng và xem tác động co/duỗi cẳng tay tức thì.',
+                courtMapLabel: "Bản Đồ Sân (Góc Nhìn Trên Cao)",
+                tossBack: "Quá Sâu Phía Sau",
+                tossForward: "Quá Xa Phía Trước",
+                tossStatePerfect: "Hoàn Hảo (Hơi Lệch Phải-Trước)",
+                tossStateBack: "Quá Sâu Phía Sau",
+                tossStateForward: "Quá Xa Phía Trước",
+                impactTag: "Đánh Giá Tiếp Xúc",
+
+                // Section 4
+                sec4Title: "Bài Tập Thực Hành & Theo Dõi Tiến Độ",
+                sec4Desc: "Biến các mục tiêu trong sổ tay sân tập thành một thói quen theo dõi. Thực hiện các bài tập không bóng hàng ngày và lưu tiến độ bên dưới để củng cố chuyển động gân cơ chính xác.",
+                drillHeader: "Giao Thức Tập Luyện 10 Phút Với Tường",
+                counterTitle: "Bộ Đếm Số Lần Tập Nhanh",
+                counterSub: "Dễ dàng đếm số lần vung vợt không bóng tại nhà.",
+                reset: "Đặt Lại",
+                step1Title: "Bước 1: Giữ Mặt Phẳng Tay (10 lần x 5 giây)",
+                step1Desc: "Giữ tư thế cúp với đầu vợt nằm phía trên lòng bàn tay. Mặt lưới hướng về hàng rào bên. Kiểm tra xem khuỷu tay có bị căng không.",
+                step2Title: "Bước 2: Hạ Vợt và Chạm Nhẹ (15 lần)",
+                step2Desc: "Thả lỏng vai để vợt rơi tự nhiên phía sau lưng. Chạm nhẹ cạnh vợt vào tường ở tầm cao tiếp xúc bóng.",
+                step3Title: "Bước 3: Vung Vợt Không Bóng Xoay Pronation (3 tổ x 10)",
+                step3Desc: "Thực hiện toàn bộ động tác vung vợt không bóng nhấn mạnh chuỗi 'Cạnh - Trên - Xoay'. Đứng im tại vị trí duỗi thẳng hoàn toàn.",
+                summaryTag: "Tóm Tắt Cơ Sinh Học",
+                summaryTitle: "Đường Truyền Động Học Của Tay",
+                summaryBody1: 'Theo các ghi chép trong tài liệu <strong class="text-slate-800">"Tennis serve grip analysis.docx"</strong>, việc chuyển từ lòng bàn tay nằm ngang (kiểu eastern / bê khay) sang lòng bàn tay nghiêng bên (continental) cho phép cẳng tay xoay trơn tru trong một vòng cung cao hơn.',
+                summaryBody2: "Điều này loại bỏ áp lực gập cổ tay cục bộ, chuyển lực gia tốc vào chuyển động xoay khớp vai trong-ngoài, giúp bạn tránh khỏi viêm lồi cầu ngoài (chấn thương tennis elbow).",
+                cueTag: '💡 Nhắc nhở: "Cạnh — Trên — Xoay"',
+
+                // Diagnostics panel copy changes
+                contGripName: "Thiết Lập Continental (Cạnh 2)",
+                contGripTag: "CƠ HỌC ĐĂNG ĐỐI & CHUẨN XÁC",
+                contGripDesc: 'Đặt khớp ngón trỏ và đệm tay vào Cạnh 2 hoàn toàn trùng khớp với hình vẽ trong sổ tay: "Vợt nằm phía trên lòng bàn tay". Cách này đưa lòng bàn tay vào mặt phẳng nghiêng. Khi hạ vợt phía sau đầu, cổ tay có biên độ xoay tự do ra ngoài lúc tiếp xúc bóng, bảo vệ khớp.',
+                contBullet1: "<strong>Mặt phẳng cổ tay bên:</strong> Giữ cho các gân duỗi cẳng tay được thư giãn.",
+                contBullet2: "<strong>Tư thế duỗi dài:</strong> Tay dẫn hướng thẳng lên trên bằng cạnh vợt.",
+                contBullet3: "<strong>Lực truyền động học:</strong> Chuyển động xoay vai tạo ra lực mạnh mẽ mà không tốn sức.",
+
+                waitGripName: "Lỗi Bê Khay (Cạnh 3-4)",
+                waitGripTag: "HẠN CHẾ CƠ HỌC NGHIÊM TRỌNG",
+                waitGripDesc: "Đặt lòng bàn tay phẳng dưới cán vợt buộc mặt lưới hướng lên trời quá sớm. Chuyển động xoay cẳng tay lập tức bị khóa, khiến cổ tay không thể xoay úp sạch sẽ. Lực vung bóng lúc này phải được phát ra bằng một cú gập cổ tay gượng ép, kéo trực tiếp vào khuỷu tay ngoài.",
+                waitBullet1: "<strong>Khóa Cẳng Tay:</strong> Chuyển động xoay úp bị chặn đứng hoàn toàn.",
+                waitBullet2: "<strong>Khuỷu Tay Co Rút:</strong> Buộc người chơi phải đẩy vợt bằng các khớp bị gập gượng ép.",
+                waitBullet3: "<strong>Lực Kéo Gân Cao:</strong> Gây vi chấn thương nghiêm trọng cho gân cơ khuỷu tay ngoài.",
+
+                // Kinetic chain dynamics
+                knWristLabelCont: "Cổ tay (Thẳng hàng)",
+                knWristLabelWait: "Cổ tay (Gập cưỡng ép)",
+                knElbowLabelCont: "Khuỷu tay (Thư giãn)",
+                knElbowLabelWait: "Khuỷu tay (Bị bó gập)",
+                knWristDropCont: "Hạ cổ tay (Cạnh vợt)",
+                knWristDropWait: "Cổ tay (Bị khóa chặn)",
+                knElbowDropCont: "Khuỷu tay (Duỗi dài)",
+                knElbowDropWait: "Khớp khuỷu tay bị khóa",
+                knContactCont: "Tiếp xúc xoay pronation",
+                knContactWait: "Vẩy cổ tay (Cực căng)",
+                knContactElbowCont: "Khuỷu tay duỗi dài",
+                knContactElbowWait: "Khuỷu tay (Chịu lực gập)",
+
+                // Toss Simulator dynamic messages
+                tossPerfectTitle: "Biên Độ Tiếp Xúc Tối Ưu",
+                tossPerfectBody: "Vị trí tung bóng trung tính, khoảng 30cm về phía trước đầu và hơi lệch sang phải, cho phép bạn tiếp xúc bóng khi cẳng tay xoay úp thẳng hoàn toàn. Điều này đồng bộ tuyệt vời với kiểu cầm Continental, chuyển trực tiếp lực mô-men xoắn xoay từ vai vào khung vợt.",
+                tossPerfectWarning: "Nguy cơ kéo gân khuỷu tay: Cực kỳ thấp (Không áp lực)",
+                
+                tossBackTitle: "Bù Trừ Co Người Và Rướn Lưng",
+                tossBackBody: "Tung bóng quá sâu ra sau đầu buộc cột sống của bạn phải ưỡn quá mức và làm hẹp quỹ đạo khuỷu tay. Với kiểu cầm Continental, điều này khóa chặt cơ chế cổ tay và truyền chấn động trực tiếp vào các đốt sống và khớp lưng dưới.",
+                tossBackWarning: "Nguy cơ kéo gân khuỷu tay: Trung bình (Căng lưng & vai)",
+
+                tossForwardTitle: "Cạm Bẫy Kiểu Bê Khay",
+                tossForwardBody: "Nếu bóng tung quá xa phía trước, cánh tay của bạn không thể duỗi thẳng bằng cạnh vợt khi tiếp xúc. Để chạm được bóng, bạn buộc phải xoay mặt vợt nằm phẳng hướng lên (tư thế Bê Khay) và đẩy vợt lên bằng khuỷu tay gập. Việc này lập tức làm quá tải các gân ngoài.",
+                tossForwardWarning: "Nguy cơ kéo gân khuỷu tay: Nguy hiểm (Nguy cơ chấn thương khuỷu tay rất cao)"
+            }
+        };
+
+        // Initialize Global State
+        let currentLang = 'en';
+        let currentGrip = 'continental';
+        let currentPhase = 'trophy';
+        let reps = 0;
+        let comparisonChart;
+
+        // Function to toggle language
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'vi' : 'en';
+            
+            // Update Toggle Button Visuals
+            const langLabel = document.getElementById('langLabel');
+            langLabel.textContent = currentLang === 'en' ? 'Tiếng Việt' : 'English';
+            
+            // Apply translations to all DOM elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            // Specific updates for rich dynamic text configurations
+            document.getElementById('introTitle').innerHTML = currentLang === 'en' ? 
+                'Anatomy of the Serve: <span class="text-teal-600">Continental Grip</span> vs. <span class="text-amber-700">Waiter\'s Tray</span>' :
+                'Giải Phẫu Cú Giao Bóng: <span class="text-teal-600">Kiểu Continental</span> vs. <span class="text-amber-700">Kiểu Bê Khay</span>';
+                
+            document.getElementById('sec1Desc').innerHTML = currentLang === 'en' ? 
+                'Your notebook specifies: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Grip: Continental | Palm is open & must be in a lateral plane, not vertical"</code>. Toggle between correct and incorrect positions below to see how bevel orientation sets up correct wrist mobility.' :
+                'Sổ tay của bạn ghi rõ: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Cầm vợt: Continental | Lòng bàn tay mở & phải nằm trên mặt phẳng nghiêng, không phải mặt phẳng đứng"</code>. Chuyển đổi giữa các vị trí đúng/sai bên dưới để xem định hướng cạnh vợt mở ra sự linh hoạt cho cổ tay như thế nào.';
+
+            document.getElementById('sec3Desc').innerHTML = currentLang === 'en' ? 
+                'Your court notes ask: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"What happens if I try this grip but my toss is too far in front?"</code>. Use the slider below to shift your ball toss alignment and see how it immediately forces the forearm to tuck or extend.' :
+                'Sổ tay của bạn hỏi: <code class="bg-stone-100 px-1.5 py-0.5 rounded text-teal-700 font-mono">"Điều gì xảy ra nếu tôi thử kiểu cầm này nhưng tung bóng quá xa về phía trước?"</code>. Sử dụng thanh trượt bên dưới để thay đổi vị trí tung bóng và xem tác động co/duỗi cẳng tay tức thì.';
+
+            document.getElementById('noteQuote').innerHTML = currentLang === 'en' ? 
+                '*Note from <strong>"Tennis serve grip analysis.docx"</strong>: "The muscle & tendon in the elbow is not pulled hard compared to convention (i.e. elbow is extended instead of flexed)".' :
+                '*Lưu ý từ <strong>"Tennis serve grip analysis.docx"</strong>: "Cơ & gân ở khuỷu tay không bị kéo mạnh so với cách thông thường (tức là khuỷu tay được duỗi thẳng thay vì gập lại)".';
+
+            document.getElementById('summaryBody1').innerHTML = currentLang === 'en' ? 
+                'Following the notes in <strong class="text-slate-800">"Tennis serve grip analysis.docx"</strong>, switching from a flat, vertical palm (eastern / waiter\'s tray) to a lateral plane palm (continental) lets the forearm rotate smoothly in a higher arc.' :
+                'Theo các ghi chép trong tài liệu <strong class="text-slate-800">"Tennis serve grip analysis.docx"</strong>, việc chuyển từ lòng bàn tay nằm ngang (kiểu eastern / bê khay) sang lòng bàn tay nghiêng bên (continental) cho phép cẳng tay xoay trơn tru trong một vòng cung cao hơn.';
+
+            document.getElementById('cueTag').textContent = translations[currentLang].cueTag;
+
+            // Translate static SVG strings directly
+            document.getElementById('svgBevelText1').textContent = translations[currentLang].svgBevel1;
+            document.getElementById('svgBevelText2').textContent = translations[currentLang].svgBevel2;
+            document.getElementById('svgBevelText3').textContent = translations[currentLang].svgBevel3;
+            document.getElementById('svgBevelText4').textContent = translations[currentLang].svgBevel4;
+            document.getElementById('svgBevelText5').textContent = translations[currentLang].svgBevel5;
+            document.getElementById('racquetPlaneText').textContent = translations[currentLang].svgRacquetPlane;
+            document.getElementById('knuckleText').textContent = translations[currentLang].svgKnuckleText;
+            document.getElementById('heelText').textContent = translations[currentLang].svgHeelText;
+
+            // Trigger updates for stateful interactive modules
+            setGripType(currentGrip);
+            setPhase(currentPhase);
+            updateTossSimulator(document.getElementById('tossSlider').value);
+            updateChartLanguage();
+        }
+
+        // Helper to update the dynamic radar chart labels
+        function updateChartLanguage() {
+            if (!comparisonChart) return;
+            
+            const currentLabels = [
+                translations[currentLang].lblForearmRot,
+                translations[currentLang].lblElbowExt,
+                translations[currentLang].lblShoulderKin,
+                translations[currentLang].lblElbowStrain,
+                translations[currentLang].lblWristSlap
+            ];
+
+            comparisonChart.data.labels = currentLabels;
+            comparisonChart.data.datasets[0].label = translations[currentLang].lblGripContinental;
+            comparisonChart.data.datasets[1].label = translations[currentLang].lblGripWaitersTray;
+            comparisonChart.update();
+        }
+
+        // Bevel & Grip State Selector Logic
+        function setGripType(type) {
+            currentGrip = type;
+            const tabCont = document.getElementById('tabContinental');
+            const tabWait = document.getElementById('tabWaitersTray');
+            const knuckle = document.getElementById('knuckleMarker');
+            const heel = document.getElementById('heelMarker');
+            const knuckleText = document.getElementById('knuckleText');
+            const heelText = document.getElementById('heelText');
+            const rPlane = document.getElementById('racquetPlaneGroup');
+            
+            const gTitle = document.getElementById('gripTitle');
+            const gHighlightCard = document.getElementById('gripHighlightCard');
+            const gHighlightTitle = document.getElementById('gripHighlightTitle');
+            const gHighlightDesc = document.getElementById('gripHighlightDesc');
+            
+            const b1 = document.getElementById('bullet1Check');
+            const b2 = document.getElementById('bullet2Check');
+            const b3 = document.getElementById('bullet3Check');
+            const t1 = document.getElementById('bullet1Text');
+            const t2 = document.getElementById('bullet2Text');
+            const t3 = document.getElementById('bullet3Text');
+
+            // Apply tabs and textual data on selection based on language dictionary
+            if (type === 'continental') {
+                tabCont.className = "flex-1 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm bg-white text-teal-700 border border-stone-200/50";
+                tabWait.className = "flex-1 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-800";
+                
+                tabCont.innerHTML = translations[currentLang].tabContinental;
+                tabWait.innerHTML = translations[currentLang].tabWaitersTray;
+
+                // Move Markers to continental positions
+                knuckle.setAttribute('cx', '266');
+                knuckle.setAttribute('cy', '134');
+                knuckleText.setAttribute('x', '266');
+                knuckleText.setAttribute('y', '118');
+
+                heel.setAttribute('cx', '220');
+                heel.setAttribute('cy', '115');
+                heelText.setAttribute('x', '180');
+                heelText.setAttribute('y', '132');
+
+                rPlane.setAttribute('transform', 'rotate(0, 200, 200)');
+
+                // Set localizable values for continental
+                gTitle.textContent = translations[currentLang].contGripName;
+                gTitle.className = "text-2xl font-bold text-teal-800 transition-colors duration-300";
+                gHighlightCard.className = "p-4 bg-teal-50 border-l-4 border-teal-500 rounded-r-xl space-y-2";
+                gHighlightTitle.className = "font-bold text-teal-900 text-sm";
+                gHighlightTitle.textContent = translations[currentLang].contGripTag;
+                gHighlightDesc.textContent = translations[currentLang].contGripDesc;
+                
+                b1.className = "text-teal-600 font-bold"; b1.textContent = "✓";
+                b2.className = "text-teal-600 font-bold"; b2.textContent = "✓";
+                b3.className = "text-teal-600 font-bold"; b3.textContent = "✓";
+                t1.innerHTML = translations[currentLang].contBullet1;
+                t2.innerHTML = translations[currentLang].contBullet2;
+                t3.innerHTML = translations[currentLang].contBullet3;
+            } else {
+                tabWait.className = "flex-1 py-2.5 rounded-lg text-sm font-bold transition-all shadow-sm bg-white text-amber-700 border border-stone-200/50";
+                tabCont.className = "flex-1 py-2.5 rounded-lg text-sm font-bold transition-all text-slate-600 hover:text-slate-800";
+                
+                tabCont.innerHTML = translations[currentLang].tabContinental;
+                tabWait.innerHTML = translations[currentLang].tabWaitersTray;
+
+                // Move markers to bad / Waiter's Tray positions (Eastern grip)
+                knuckle.setAttribute('cx', '293');
+                knuckle.setAttribute('cy', '200');
+                knuckleText.setAttribute('x', '293');
+                knuckleText.setAttribute('y', '182');
+
+                heel.setAttribute('cx', '266');
+                heel.setAttribute('cy', '266');
+                heelText.setAttribute('x', '240');
+                heelText.setAttribute('y', '250');
+
+                rPlane.setAttribute('transform', 'rotate(75, 200, 200)');
+
+                // Set localizable values for waiter error
+                gTitle.textContent = translations[currentLang].waitGripName;
+                gTitle.className = "text-2xl font-bold text-amber-800 transition-colors duration-300";
+                gHighlightCard.className = "p-4 bg-amber-50 border-l-4 border-amber-600 rounded-r-xl space-y-2";
+                gHighlightTitle.className = "font-bold text-amber-900 text-sm";
+                gHighlightTitle.textContent = translations[currentLang].waitGripTag;
+                gHighlightDesc.textContent = translations[currentLang].waitGripDesc;
+
+                b1.className = "text-amber-600 font-bold"; b1.textContent = "✗";
+                b2.className = "text-amber-600 font-bold"; b2.textContent = "✗";
+                b3.className = "text-amber-600 font-bold"; b3.textContent = "✗";
+                t1.innerHTML = translations[currentLang].waitBullet1;
+                t2.innerHTML = translations[currentLang].waitBullet2;
+                t3.innerHTML = translations[currentLang].waitBullet3;
+            }
+            updateKineticChart();
+            drawKineticChain();
+        }
+
+        // Kinetic Chain Phase State Controller
+        function setPhase(phase) {
+            currentPhase = phase;
+            
+            const btnTrophy = document.getElementById('btnPhaseTrophy');
+            const btnDrop = document.getElementById('btnPhaseDrop');
+            const btnContact = document.getElementById('btnPhaseContact');
+            
+            btnTrophy.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all text-slate-500 hover:text-slate-700";
+            btnDrop.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all text-slate-500 hover:text-slate-700";
+            btnContact.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all text-slate-500 hover:text-slate-700";
+            
+            // Localize button labels
+            btnTrophy.textContent = translations[currentLang].phase1;
+            btnDrop.textContent = translations[currentLang].phase2;
+            btnContact.textContent = translations[currentLang].phase3;
+
+            if(phase === 'trophy') {
+                btnTrophy.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all bg-white text-slate-800 shadow-sm";
+            } else if(phase === 'drop') {
+                btnDrop.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all bg-white text-slate-800 shadow-sm";
+            } else {
+                btnContact.className = "flex-1 py-1.5 rounded-md text-xs font-bold transition-all bg-white text-slate-800 shadow-sm";
+            }
+            
+            drawKineticChain();
+        }
+
+        // DRAW SVG STICK FIGURE MECHANICS
+        function drawKineticChain() {
+            const arm = document.getElementById('kineticArm');
+            const racket = document.getElementById('kineticRacket');
+            const face = document.getElementById('racketFaceOval');
+            const elbow = document.getElementById('elbowJoint');
+            const wrist = document.getElementById('wristJoint');
+            const strainGlow = document.getElementById('elbowStrainGlow');
+            const annotWrist = document.getElementById('annotWristLabel');
+            const annotElbow = document.getElementById('annotElbowLabel');
+
+            if (currentPhase === 'trophy') {
+                if (currentGrip === 'continental') {
+                    arm.setAttribute('d', 'M 135,145 L 180,110 L 210,80');
+                    racket.setAttribute('d', 'M 210,80 L 240,40');
+                    face.setAttribute('cx', '240'); face.setAttribute('cy', '40');
+                    face.setAttribute('rx', '8'); face.setAttribute('ry', '18');
+                    face.setAttribute('transform', 'rotate(15, 240, 40)');
+                    elbow.setAttribute('cx', '180'); elbow.setAttribute('cy', '110');
+                    wrist.setAttribute('cx', '210'); wrist.setAttribute('cy', '80');
+                    strainGlow.setAttribute('fill', 'rgba(13, 148, 136, 0.05)');
+                    annotWrist.textContent = translations[currentLang].knWristLabelCont; 
+                    annotWrist.setAttribute('x', '225'); annotWrist.setAttribute('y', '85');
+                    annotElbow.textContent = translations[currentLang].knElbowLabelCont; 
+                    annotElbow.setAttribute('x', '135'); annotElbow.setAttribute('y', '125');
+                } else {
+                    arm.setAttribute('d', 'M 135,145 L 160,150 L 190,130');
+                    racket.setAttribute('d', 'M 190,130 L 230,130');
+                    face.setAttribute('cx', '230'); face.setAttribute('cy', '130');
+                    face.setAttribute('rx', '18'); face.setAttribute('ry', '8');
+                    face.setAttribute('transform', 'rotate(0, 230, 130)');
+                    elbow.setAttribute('cx', '160'); elbow.setAttribute('cy', '150');
+                    wrist.setAttribute('cx', '190'); wrist.setAttribute('cy', '130');
+                    strainGlow.setAttribute('fill', 'rgba(239, 68, 68, 0.4)');
+                    strainGlow.setAttribute('cx', '160'); strainGlow.setAttribute('cy', '150');
+                    annotWrist.textContent = translations[currentLang].knWristLabelWait; 
+                    annotWrist.setAttribute('x', '205'); annotWrist.setAttribute('y', '145');
+                    annotElbow.textContent = translations[currentLang].knElbowLabelWait; 
+                    annotElbow.setAttribute('x', '115'); annotElbow.setAttribute('y', '170');
+                }
+            } else if (currentPhase === 'drop') {
+                if (currentGrip === 'continental') {
+                    arm.setAttribute('d', 'M 135,145 L 150,180 L 140,195');
+                    racket.setAttribute('d', 'M 140,195 L 110,230');
+                    face.setAttribute('cx', '110'); face.setAttribute('cy', '230');
+                    face.setAttribute('rx', '8'); face.setAttribute('ry', '18');
+                    face.setAttribute('transform', 'rotate(-30, 110, 230)');
+                    elbow.setAttribute('cx', '150'); elbow.setAttribute('cy', '180');
+                    wrist.setAttribute('cx', '140'); wrist.setAttribute('cy', '195');
+                    strainGlow.setAttribute('fill', 'rgba(13, 148, 136, 0.05)');
+                    annotWrist.textContent = translations[currentLang].knWristDropCont; 
+                    annotWrist.setAttribute('x', '155'); annotWrist.setAttribute('y', '210');
+                    annotElbow.textContent = translations[currentLang].knElbowDropCont; 
+                    annotElbow.setAttribute('x', '165'); annotElbow.setAttribute('y', '175');
+                } else {
+                    arm.setAttribute('d', 'M 135,145 L 145,155 L 160,160');
+                    racket.setAttribute('d', 'M 160,160 L 190,165');
+                    face.setAttribute('cx', '190'); face.setAttribute('cy', '165');
+                    face.setAttribute('rx', '18'); face.setAttribute('ry', '8');
+                    face.setAttribute('transform', 'rotate(10, 190, 165)');
+                    elbow.setAttribute('cx', '145'); elbow.setAttribute('cy', '155');
+                    wrist.setAttribute('cx', '160'); wrist.setAttribute('cy', '160');
+                    strainGlow.setAttribute('fill', 'rgba(239, 68, 68, 0.5)');
+                    strainGlow.setAttribute('cx', '145'); strainGlow.setAttribute('cy', '155');
+                    annotWrist.textContent = translations[currentLang].knWristDropWait; 
+                    annotWrist.setAttribute('x', '170'); annotWrist.setAttribute('y', '180');
+                    annotElbow.textContent = translations[currentLang].knElbowDropWait; 
+                    annotElbow.setAttribute('x', '80'); annotElbow.setAttribute('y', '155');
+                }
+            } else {
+                if (currentGrip === 'continental') {
+                    arm.setAttribute('d', 'M 135,145 L 150,90 L 170,40');
+                    racket.setAttribute('d', 'M 170,40 L 190,5');
+                    face.setAttribute('cx', '190'); face.setAttribute('cy', '5');
+                    face.setAttribute('rx', '10'); face.setAttribute('ry', '20');
+                    face.setAttribute('transform', 'rotate(10, 190, 5)');
+                    elbow.setAttribute('cx', '150'); elbow.setAttribute('cy', '90');
+                    wrist.setAttribute('cx', '170'); wrist.setAttribute('cy', '40');
+                    strainGlow.setAttribute('fill', 'rgba(13, 148, 136, 0.05)');
+                    annotWrist.textContent = translations[currentLang].knContactCont; 
+                    annotWrist.setAttribute('x', '185'); annotWrist.setAttribute('y', '45');
+                    annotElbow.textContent = translations[currentLang].knContactElbowCont; 
+                    annotElbow.setAttribute('x', '75'); annotElbow.setAttribute('y', '95');
+                } else {
+                    arm.setAttribute('d', 'M 135,145 L 165,110 L 175,90');
+                    racket.setAttribute('d', 'M 175,90 L 210,75');
+                    face.setAttribute('cx', '210'); face.setAttribute('cy', '75');
+                    face.setAttribute('rx', '20'); face.setAttribute('ry', '10');
+                    face.setAttribute('transform', 'rotate(-15, 210, 75)');
+                    elbow.setAttribute('cx', '165'); elbow.setAttribute('cy', '110');
+                    wrist.setAttribute('cx', '175'); wrist.setAttribute('cy', '90');
+                    strainGlow.setAttribute('fill', 'rgba(239, 68, 68, 0.6)');
+                    strainGlow.setAttribute('cx', '165'); strainGlow.setAttribute('cy', '110');
+                    annotWrist.textContent = translations[currentLang].knContactWait; 
+                    annotWrist.setAttribute('x', '185'); annotWrist.setAttribute('y', '95');
+                    annotElbow.textContent = translations[currentLang].knContactElbowWait; 
+                    annotElbow.setAttribute('x', '65'); annotElbow.setAttribute('y', '120');
+                }
+            }
+        }
+
+        // Initialize Biomechanics Comparison Radar Chart
+        const radarCanvas = document.getElementById('biomechanicsChart');
+
+        function initChart() {
+            comparisonChart = new Chart(radarCanvas, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        translations[currentLang].lblForearmRot, 
+                        translations[currentLang].lblElbowExt, 
+                        translations[currentLang].lblShoulderKin, 
+                        translations[currentLang].lblElbowStrain, 
+                        translations[currentLang].lblWristSlap
+                    ],
+                    datasets: [{
+                        label: translations[currentLang].lblGripContinental,
+                        data: [9.5, 9, 9, 1.5, 1],
+                        backgroundColor: 'rgba(13, 148, 136, 0.15)',
+                        borderColor: 'rgba(13, 148, 136, 1)',
+                        pointBackgroundColor: 'rgba(13, 148, 136, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(13, 148, 136, 1)',
+                        borderWidth: 2.5
+                    }, {
+                        label: translations[currentLang].lblGripWaitersTray,
+                        data: [3, 2, 4, 9.5, 9],
+                        backgroundColor: 'rgba(194, 65, 12, 0.15)',
+                        borderColor: 'rgba(194, 65, 12, 1)',
+                        pointBackgroundColor: 'rgba(194, 65, 12, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(194, 65, 12, 1)',
+                        borderWidth: 2.5,
+                        borderDash: [4, 4]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 0, 0, 0.06)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.06)' },
+                            pointLabels: {
+                                font: { family: 'Plus Jakarta Sans', size: 10, weight: '700' },
+                                color: '#334155'
+                            },
+                            ticks: {
+                                display: false,
+                                min: 0,
+                                max: 10
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: { family: 'Plus Jakarta Sans', size: 11, weight: '600' },
+                                usePointStyle: true,
+                                padding: 15
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateKineticChart() {
+            if (!comparisonChart) return;
+            if (currentGrip === 'continental') {
+                comparisonChart.data.datasets[0].borderWidth = 3;
+                comparisonChart.data.datasets[1].borderWidth = 1.5;
+            } else {
+                comparisonChart.data.datasets[0].borderWidth = 1.5;
+                comparisonChart.data.datasets[1].borderWidth = 3;
+            }
+            comparisonChart.update();
+        }
+
+        // Ball Toss Simulator interactive logic
+        function updateTossSimulator(val) {
+            const ball = document.getElementById('simBall');
+            const line = document.getElementById('simLine');
+            const stateLabel = document.getElementById('tossStateLabel');
+            const impactTitle = document.getElementById('tossImpactTitle');
+            const impactBody = document.getElementById('tossImpactBody');
+            const warningIcon = document.getElementById('tossWarningIcon');
+            const warningText = document.getElementById('tossWarningText');
+
+            const horizontalOffset = (val - 50); // -50 to +50
+            const ballLeft = 50 + (horizontalOffset * 0.4); 
+            ball.style.left = `${ballLeft}%`;
+            line.setAttribute('x2', `${ballLeft}%`);
+
+            if (val < 40) {
+                stateLabel.textContent = translations[currentLang].tossStateBack;
+                stateLabel.className = "text-amber-600 font-extrabold uppercase";
+                impactTitle.textContent = translations[currentLang].tossBackTitle;
+                impactBody.textContent = translations[currentLang].tossBackBody;
+                warningIcon.className = "w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-sm font-bold";
+                warningIcon.textContent = "⚠";
+                warningText.textContent = translations[currentLang].tossBackWarning;
+            } else if (val > 65) {
+                stateLabel.textContent = translations[currentLang].tossStateForward;
+                stateLabel.className = "text-red-600 font-extrabold uppercase";
+                impactTitle.textContent = translations[currentLang].tossForwardTitle;
+                impactBody.textContent = translations[currentLang].tossForwardBody;
+                warningIcon.className = "w-8 h-8 rounded-full bg-red-100 text-red-800 flex items-center justify-center text-sm font-bold";
+                warningIcon.textContent = "✕";
+                warningText.textContent = translations[currentLang].tossForwardWarning;
+            } else {
+                stateLabel.textContent = translations[currentLang].tossStatePerfect;
+                stateLabel.className = "text-teal-600 font-extrabold uppercase";
+                impactTitle.textContent = translations[currentLang].tossPerfectTitle;
+                impactBody.textContent = translations[currentLang].tossPerfectBody;
+                warningIcon.className = "w-8 h-8 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center text-sm font-bold";
+                warningIcon.textContent = "✓";
+                warningText.textContent = translations[currentLang].tossPerfectWarning;
+            }
+        }
+
+        // Practice Log Counter Mechanisms
+        function changeReps(val) {
+            reps = Math.max(0, reps + val);
+            document.getElementById('repCounterDisplay').textContent = reps;
+        }
+
+        function resetReps() {
+            reps = 0;
+            document.getElementById('repCounterDisplay').textContent = reps;
+        }
+
+        function toggleCheck(checkbox) {
+            const wrapper = checkbox.parentElement;
+            if (checkbox.checked) {
+                wrapper.classList.add('bg-teal-50', 'border-teal-500');
+            } else {
+                wrapper.classList.remove('bg-teal-50', 'border-teal-500');
+            }
+        }
+
+        // Initial setup on load
+        window.onload = function() {
+            // Default setup values
+            currentGrip = 'continental';
+            currentPhase = 'trophy';
+            currentLang = 'en';
+            
+            initChart();
+            setGripType('continental');
+            setPhase('trophy');
+            updateTossSimulator(50);
+        };
+    </script>
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>

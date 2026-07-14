@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Passing Shot — Xuyên Qua Tay Đối Thủ Tại Lưới</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section h2 {
+    color: var(--accent-gold);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-red);
+  }
+  section h3 {
+    color: var(--accent-red);
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+  }
+  p { margin-bottom: 15px; text-align: justify; }
+  ul, ol { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--accent-gold); }
+  em { color: var(--text-muted); font-style: italic; }
+  .callout {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  .callout-gold {
+    background: rgba(243, 156, 18, 0.12);
+    border-left: 4px solid var(--accent-gold);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  th { background: var(--accent-red); color: white; padding: 12px; text-align: left; }
+  td { background: var(--navy-light); padding: 12px; border-bottom: 1px solid var(--border); }
+  .research-code {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--accent-gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--accent-gold);
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  footer .closing {
+    font-size: 1.4em;
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin: 15px 0 10px;
+    letter-spacing: 2px;
+  }
+  .nav-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .nav-link:hover { background: #a93226; }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    section h2 { font-size: 1.4em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Cẩm Nang Passing Shot</h1>
+  <p class="subtitle">Passing Shot Guide — Xuyên Qua Tay Đối Thủ Tại Lưới</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    Tổng hợp từ 5 nguồn chuyên sâu (TFL Manuals + ghi chép tay)
+  </p>
+</header>
+
+<div class="toc">
+  <h2>📑 Mục Lục</h2>
+  <ol>
+    <li><a href="#philosophy">Triết Lý "Quyền Kiểm Soát Toàn Trận"</a></li>
+    <li><a href="#types">3 Loại Passing Shot: Cross-Court / DTL / Inside-Out</a></li>
+    <li><a href="#four-steps">4 Bước Thực Hiện (Đọc → Cam Kết → Thấp → Góc/Tốc Độ)</a></li>
+    <li><a href="#opponent-position">Đối Thủ Ở Đâu Quyết Định Loại Passing Shot</a></li>
+    <li><a href="#counter">Counter Passing Shot: 2 Nhịp vs 1 Nhịp</a></li>
+    <li><a href="#footwork">Footwork Tại Lưới: Split-Step + Bước Chéo</a></li>
+    <li><a href="#mistakes">5 Lỗi Phổ Biến &amp; Cách Khắc Phục</a></li>
+    <li><a href="#drills">5 Bài Tập 15 Phút Cho Người 50+</a></li>
+    <li><a href="#closing">Lời Kết</a></li>
+  </ol>
+</div>
+
+<section id="philosophy">
+<h2>1. Triết Lý "Quyền Kiểm Soát Toàn Trận"</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> "Passing Shot — Qua Tay Đối Thủ": <em>"Passing shot bay qua tầm với của đối thủ khi họ đang ở lưới. Passing shot mạnh khiến đối thủ ngại tiến lên lưới — cho bạn quyền kiểm soát toàn bộ trận đấu"</em>. Đây là insight cốt lõi: <strong>passing shot không chỉ là cú winner khi đối thủ ở lưới</strong> — nó là vũ khí tâm lý khiến đối thủ <strong>ngại lên lưới</strong>, từ đó bạn kiểm soát thế trận.</p>
+
+<p>Từ <code>The_Art_of_Modern_Tennis_Polished.docx</code>: <em>"The quiet racket is the most important volley concept in the modern game. Against a 120 km/h passing shot, there is no time for a full backswing — you must use the quiet racket, short lever principle, and firm grip pressure to absorb pace and redirect"</em>. Insight hiện đại: <strong>passing shot ngày nay phải đối mặt với "quiet racket" của đối thủ</strong> — vợt yên, short lever, chỉ chặn bóng. Đó là lý do passing shot ngày càng khó — volley hiện đại không "tháo" như trước.</p>
+
+<div class="callout">
+<strong>⚡ 4 vai trò chiến thuật của Passing Shot (research code <span class="research-code">f4e2</span>):</strong>
+<ol>
+<li><strong>Kết thúc điểm khi đối thủ ở lưới</strong> — winner trực tiếp nếu chọn đúng góc/tốc độ.</li>
+<li><strong>Răn đe đối thủ lên lưới</strong> — passing shot mạnh khiến đối thủ ngại approach, bạn kiểm soát baseline.</li>
+<li><strong>Counter-attack</strong> — từ thế bị ép (đối thủ ở lưới) → bạn tung passing shot → đối thủ mất lợi thế.</li>
+<li><strong>Kết hợp với Lob</strong> — passing shot ngang + lob qua đầu = "điệu nhảy" khiến đối thủ ở lưới không biết đường nào.</li>
+</ol>
+</div>
+
+<p>Từ <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code>: <em>"Forehand passing shot là bài test khó nhất cho forehand kỹ thuật. Với đối thủ đã ở lưới, margin for error gần như không có"</em>. Đây là insight quan trọng: <strong>passing shot là bài test khó nhất cho groundstroke</strong> vì margin for error cực thấp — bóng phải đi chính xác qua chỗ đối thủ đang đứng, không được cao quá (để đối thủ volley) cũng không được rộng quá (ra ngoài baseline).</p>
+</section>
+
+<section id="types">
+<h2>2. 3 Loại Passing Shot: Cross-Court / DTL / Inside-Out</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> "3 Loại Passing Shot", có 3 biến thể chính, mỗi loại có cách setup và áp dụng khác nhau:</p>
+
+<table>
+<thead>
+<tr>
+<th>Loại Passing Shot</th>
+<th>Hướng</th>
+<th>Đặc điểm</th>
+<th>Khi nào dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cross-Court Passing</strong></td>
+<td>Chéo sân</td>
+<td>Góc rộng, nhiều khoảng cách để cover</td>
+<td>Đối thủ đứng gần lưới giữa sân, đối diện bạn</td>
+</tr>
+<tr>
+<td><strong>Down-The-Line (DTL)</strong></td>
+<td>Thẳng theo đường biên</td>
+<td>Tốc độ cao, ít góc, đòi hỏi chính xác</td>
+<td>Đối thủ đứng lệch sang một bên, sẵn sàng cover cross-court</td>
+</tr>
+<tr>
+<td><strong>Inside-Out Forehand Passing</strong></td>
+<td>Chạy vòng qua backhand đánh forehand chéo</td>
+<td>Bất ngờ nhất, kết hợp footwork phức tạp</td>
+<td>Đối thủ tấn công backhand của bạn, cover cross-court sẵn</td>
+</tr>
+</tbody>
+</table>
+
+<h3>2.1. Cross-Court Passing — Phổ Biến Nhất</h3>
+
+<p>Cross-court passing là lựa chọn <strong>an toàn nhất và phổ biến nhất</strong> vì khoảng cách lưới dài hơn (đường chéo), cho bạn <strong>margin for error lớn hơn</strong>. Khi đối thủ đứng gần lưới giữa sân, cross-court passing ngang qua chân họ là lựa chọn tự nhiên nhất.</p>
+
+<h3>2.2. Down-The-Line Passing — Tấn Công</h3>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> Bước 4: <em>"Hoặc mở góc (cross court rộng) hoặc dùng tốc độ thuần túy (flat down-the-line). Không cố gắng làm cả hai cùng một lúc"</em>. DTL passing là cú <strong>tấn công</strong> — dùng tốc độ thuần túy để đánh bại đối thủ đang đứng lệch. Rủi ro cao nhưng phần thưởng lớn nếu trúng.</p>
+
+<h3>2.3. Inside-Out Forehand Passing — Bất Ngờ Nhất</h3>
+
+<p>Kết hợp <strong>footwork phức tạp</strong> (chạy vòng qua backhand để đánh forehand) với <strong>góc chéo rộng</strong>. Đây là lựa chọn bất ngờ nhất vì đối thủ thường cover cross-court (chờ forehand của bạn đánh thẳng sang cross-court), không ngờ bạn <strong>chạy vòng để đánh inside-out</strong>.</p>
+
+<div class="callout-gold">
+<strong>💡 Quy tắc chọn loại Passing Shot (research code <span class="research-code">b9d4</span>):</strong> <strong>Đối thủ giữa sân + lưới → Cross-Court (góc rộng)</strong>. <strong>Đối thủ lệch trái + cover cross → DTL</strong>. <strong>Đối thủ tấn công backhand bạn → Inside-Out</strong>. Khi không chắc, mặc định <strong>Cross-Court vì an toàn nhất</strong>.
+</div>
+</section>
+
+<section id="four-steps">
+<h2>3. 4 Bước Thực Hiện (Đọc → Cam Kết → Thấp → Góc/Tốc Độ)</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> "Các Bước Thực Hiện":</p>
+
+<h3>Bước 1 — Đọc Vị Trí Đối Thủ Sớm</h3>
+
+<p><em>"Ngay khi thấy đối thủ tiến lên lưới: Họ đứng giữa không? Đang di chuyển sang một bên? Sát lưới? Mỗi câu trả lời gợi ý một loại passing shot khác nhau"</em>. Đọc vị trí đối thủ <strong>trước khi bạn swing</strong> — đây là yếu tố quyết định loại passing shot nào khả thi.</p>
+
+<h3>Bước 2 — Quyết Định Sớm và Cam Kết</h3>
+
+<p><em>"Quyết định hướng trước khi swing và cam kết hoàn toàn. Thay đổi quyết định giữa chừng = lỗi. Do dự = hỏng"</em>. Đây là nguyên tắc quan trọng nhất: <strong>quyết định 100% hướng trước khi swing</strong>. Nếu bạn phân vân giữa cross-court và DTL giữa chừng swing, bóng sẽ đi vào giữa sân và đối thủ volley dễ dàng.</p>
+
+<h3>Bước 3 — Đánh Thấp Qua Lưới</h3>
+
+<p><em>"Passing shot phải đi THẤP qua lưới — không phải cao qua nó. Bóng cao cho đối thủ volley dễ dàng. Nhắm vào top lưới hoặc ngay trên đó"</em>. Insight cốt lõi: <strong>passing shot THẤP mới hiệu quả</strong>. Bóng cao qua lưới = quà tặng cho đối thủ volley. Topspin nhẹ là chìa khóa để bóng thấp nhưng vẫn qua lưới an toàn.</p>
+
+<h3>Bước 4 — Tạo Góc Hoặc Dùng Tốc Độ</h3>
+
+<p><em>"Hoặc mở góc (cross court rộng) hoặc dùng tốc độ thuần túy (flat down-the-line). Không cố gắng làm cả hai cùng một lúc"</em>. Đây là nguyên tắc <strong>"Either/Or, not Both"</strong>: hoặc bạn dùng góc rộng (cross-court) HOẶC dùng tốc độ (DTL flat). Nếu cố vừa góc vừa tốc độ, bóng sẽ đi giữa sân và đối thủ volley dễ.</p>
+
+<div class="callout">
+<strong>⚡ Tại sao 4 bước quan trọng (research code <span class="research-code">a3e7</span>):</strong> Mỗi bước tốn <strong>~0,2 giây</strong>. Tổng cộng bạn có <strong>~0,8 giây</strong> từ lúc đọc đối thủ đến lúc tiếp xúc bóng. Đó là lý do phải <strong>quyết định sớm (Bước 2)</strong> — không có thời gian suy nghĩ giữa chừng. Đây là <strong>"OODA Loop"</strong> trong tennis: Observe (đọc) → Orient (định hướng) → Decide (quyết định) → Act (hành động).
+</div>
+</section>
+
+<section id="opponent-position">
+<h2>4. Đối Thủ Ở Đâu Quyết Định Loại Passing Shot</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> "Ngay khi thấy đối thủ tiến lên lưới":</p>
+
+<table>
+<thead>
+<tr>
+<th>Vị trí đối thủ</th>
+<th>Loại passing shot</th>
+<th>Lý do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Giữa sân, sát lưới</strong></td>
+<td>Cross-Court (góc rộng)</td>
+<td>Khoảng cách lưới xa nhất, margin for error lớn nhất</td>
+</tr>
+<tr>
+<td><strong>Lệch sang trái (cover cross-court)</strong></td>
+<td>DTL (tốc độ thuần túy)</td>
+<td>DTL bên trái ít góc nhưng tốc độ sẽ qua chân đối thủ</td>
+</tr>
+<tr>
+<td><strong>Lệch sang phải (cover DTL)</strong></td>
+<td>Cross-Court (góc rộng)</td>
+<td>Sân bên trái đối thủ trống, cross-court dễ trúng</td>
+</tr>
+<tr>
+<td><strong>Đang chạy lên lưới (chưa ổn định)</strong></td>
+<td>Bất kỳ (họ không kịp phản ứng)</td>
+<td>Đối thủ chưa setup, đây là cơ hội tốt nhất</td>
+</tr>
+<tr>
+<td><strong>Sát lưới + dâng cao</strong></td>
+<td>Lob hoặc passing thấp cẩn thận</td>
+<td>Đối thủ ở gần lưới, volley dễ dàng — passing phải rất thấp</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout-gold">
+<strong>💡 Đọc passing shot từ chuyển động đối thủ (research code <span class="research-code">c6f1</span>):</strong> Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6: <em>"Đọc passing shot và lob từ chuyển động của đối thủ, không đợi thấy bóng"</em>. Khi đối thủ approach lưới, bạn có thể <strong>đoán hướng bóng</strong> từ cách họ xoay vai và đặt vợt: vai xoay sang cross → bóng sẽ cross-court; vai xoay thẳng → bóng sẽ DTL. Đọc sớm giúp bạn <strong>quyết định passing shot trước khi swing</strong>.
+</div>
+</section>
+
+<section id="counter">
+<h2>5. Counter Passing Shot: 2 Nhịp vs 1 Nhịp</h2>
+
+<p>Từ <code>Kỹ năng và Huấn luyện Tennis cùng các coach đẳng cấp ATP.md</code> (ghi chép tay): <em>"Khi bị tấn công bởi người tràn lưới, đừng cố gắng tung ra một cú passing shot dứt điểm ngay ở nhịp chạm bóng đầu tiên vì rủi ro tự đánh hỏng là rất cao"</em>. Đây là insight cốt lõi về <strong>Counter Passing Shot</strong>: <strong>đừng cố winner ở nhịp đầu tiên</strong>.</p>
+
+<h3>5.1. Chiến Thuật 2 Nhịp (Safe Counter)</h3>
+
+<ol>
+<li><strong>Nhịp 1 (first ball)</strong> — đánh chìm nhắm thẳng vào <strong>dây giày (shoelaces)</strong> của đối thủ, buộc họ phải vất vả đào bóng lên thực hiện cú low volley. <em>"Quả bóng thứ nhất (first ball) bắt buộc phải được đánh chìm nhắm thẳng vào dây giày (shoelaces) của đối thủ, buộc họ phải vất vả đào bóng lên thực hiện cú low volley"</em>.</li>
+<li><strong>Nhịp 2</strong> — volley trả về của đối thủ sẽ lỏng và yếu, tạo ra cơ hội hoàn hảo để bạn tung cú passing shot ăn điểm hoặc lob qua đầu họ.</li>
+</ol>
+
+<h3>5.2. Chiến Thuật 1 Nhịp (Aggressive Counter)</h3>
+
+<p>Khi bạn có passing shot rất mạnh HOẶC đối thủ volley yếu, bạn có thể <strong>winner ở nhịp đầu tiên</strong>. Đây là chiến thuật <strong>aggressive</strong> — rủi ro cao nhưng phần thưởng lớn. Khuyến nghị: chỉ dùng khi bạn <strong>tự tin vào forehand passing shot</strong> hoặc đối thủ volley < 4.0 level.</p>
+
+<div class="callout">
+<strong>⚡ Tại sao 2 Nhịp Safe hơn (research code <span class="research-code">d8a9</span>):</strong> <em>"Quả volley trả về thường sẽ lỏng và yếu, tạo ra cơ hội hoàn hảo"</em>. Khi bạn ép đối thủ low volley, họ thường <strong>không có thời gian setup topspin</strong>, volley sẽ là <strong>"block volley"</strong> yếu. Đây là cơ hội winner cho bạn ở nhịp 2. <strong>Safe = winner ở nhịp 2</strong>; <strong>Aggressive = winner ở nhịp 1</strong>.
+</div>
+</section>
+
+<section id="footwork">
+<h2>6. Footwork Tại Lưới: Split-Step + Bước Chéo</h2>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6 "Xử Lý Passing Shot và Lob": <em>"Tại net, hai mối đe dọa chính là passing shot (bóng đánh ngang người) và lob (bóng đánh qua đầu). Footwork phản ứng cho từng loại: Với passing shot: split-step → đọc hướng → bước chéo một hoặc hai bước theo hướng bóng → volley. Quan trọng: không shuffle nhiều bước vì không có thời gian"</em>.</p>
+
+<h3>6.1. Quy Trình 4 Bước Footwork Tại Lưới</h3>
+
+<ol>
+<li><strong>Split-Step</strong> — đặt nền tảng phản ứng (từ Return library).</li>
+<li><strong>Đọc hướng bóng sớm</strong> — từ cách đối thủ swing + xoay vai.</li>
+<li><strong>Bước chéo 1-2 bước</strong> theo hướng bóng — KHÔNG shuffle nhiều bước.</li>
+<li><strong>Volley</strong> — chặn bóng bằng vợt yên (quiet racket).</li>
+</ol>
+
+<h3>6.2. Tại Sao Không Shuffle Nhiều Bước</h3>
+
+<p>Khi bạn ở lưới và đối thủ đánh passing shot, <strong>thời gian phản ứng cực ngắn</strong> (~0,3-0,5 giây). Nếu bạn shuffle nhiều bước, bạn sẽ không kịp đến vị trí volley. Đó là lý do phải dùng <strong>cross-over step (bước chéo)</strong> 1-2 bước thay vì shuffle.</p>
+
+<div class="callout-gold">
+<strong>💡 Mối liên hệ với Lob Library (research code <span class="research-code">e2c5</span>):</strong> Từ <code>Ky_Thuat_Chan_Tennis.docx</code>: <em>"Với lob: split-step → nhận biết bóng đi cao → quay ngay lập tức → sprint ra sau → overhead hoặc lùi về baseline. Tốc độ nhận biết là yếu tố quyết định — người phản ứng muộn 0,2 giây sẽ không kịp overhead"</em>. Đây là footwork phản ứng cho lob (đã học trong Lob Library). Tại lưới, bạn phải <strong>phân biệt passing shot vs lob</strong> trong 0,2 giây — đây là kỹ năng phản xạ cao cấp.
+</div>
+</section>
+
+<section id="mistakes">
+<h2>7. 5 Lỗi Phổ Biến &amp; Cách Khắc Phục</h2>
+
+<h3>Lỗi 1 — Bay Quá Cao Qua Lưới</h3>
+<p><strong>Biểu hiện:</strong> passing shot bay vọt cao, đối thủ volley dễ dàng. <strong>Nguyên nhân:</strong> dùng quá nhiều lực, không có topspin. <strong>Cách sửa:</strong> thêm topspin bằng cách brushing up the back of the ball; nhắm top lưới thay vì giữa lưới.</p>
+
+<h3>Lỗi 2 — Do Dự Giữa Chừng Swing</h3>
+<p><strong>Biểu hiện:</strong> bạn swing chưa xong đã đổi ý hướng. <strong>Nguyên nhân:</strong> đọc đối thủ chậm, không cam kết. <strong>Cách sửa:</strong> đọc vị trí đối thủ TRƯỚC khi bạn approach, cam kết 100% hướng trước khi swing.</p>
+
+<h3>Lỗi 3 — Cố Winner Ở Nhịp Đầu Khi Không Đủ Mạnh</h3>
+<p><strong>Biểu hiện:</strong> bạn cố đánh passing shot winner ở nhịp đầu nhưng bóng vào lưới hoặc ra ngoài. <strong>Nguyên nhân:</strong> áp lực tâm lý, chưa có forehand passing shot đủ mạnh. <strong>Cách sửa:</strong> dùng chiến thuật 2 nhịp (low volley vào chân đối thủ → winner ở nhịp 2).</p>
+
+<h3>Lỗi 4 — Đánh Vào Giữa Sân (Không Góc, Không Tốc Độ)</h3>
+<p><strong>Biểu hiện:</strong> passing shot đi vào giữa sân, đối thủ volley dễ. <strong>Nguyên nhân:</strong> cố vừa góc vừa tốc độ (theo Bước 4 — sai). <strong>Cách sửa:</strong> chọn MỘT: hoặc góc rộng (cross-court) HOẶC tốc độ (DTL flat). Đừng làm cả hai.</p>
+
+<h3>Lỗi 5 — Không Đọc Đối Thủ Approach</h3>
+<p><strong>Biểu hiện:</strong> đối thủ approach lưới mà bạn vẫn đánh cross-court như bình thường. <strong>Nguyên nhân:</strong> không thay đổi chiến thuật khi đối thủ ở lưới. <strong>Cách sửa:</strong> passing shot là lựa chọn MẶC ĐỊNH khi đối thủ ở lưới, không phải cú đánh thường.</p>
+
+<div class="callout-gold">
+<strong>💡 Bài tập sửa Lỗi 1 &amp; 4 (research code <span class="research-code">5f8a</span>):</strong> Đặt 2 quả bóng tennis trên sân: một ở góc cross-court baseline, một ở DTL baseline. Tập passing shot từ giữa sân, mục tiêu bóng rơi gần 1 trong 2 quả. Mỗi lần chọn MỘT hướng (không xen kẽ). Tập 30 lần/ngày trong 2 tuần.
+</div>
+</section>
+
+<section id="drills">
+<h2>8. 5 Bài Tập 15 Phút Cho Người 50+</h2>
+
+<h3>Bài 1 — Aiming Drill (3 phút)</h3>
+<p>Đặt 2 quả bóng tennis ở 2 góc baseline (cross-court và DTL). Tập passing shot từ giữa sân để bóng rơi gần 1 trong 2 quả. Mỗi lần chọn MỘT hướng. Mục tiêu: 8/10 lần đúng vị trí. Lặp lại 30 lần/ngày.</p>
+
+<h3>Bài 2 — Đọc Đối Thủ (3 phút)</h3>
+<p>Partner approach lưới từ nhiều vị trí khác nhau (giữa sân, lệch trái, lệch phải). Bạn tập đọc hướng và quyết định loại passing shot TRƯỚC khi partner swing. Mục tiêu: đọc đúng 8/10 lần.</p>
+
+<h3>Bài 3 — Counter 2 Nhịp (3 phút)</h3>
+<p>Partner approach lưới và volley. Bạn đánh low volley vào chân partner (nhịp 1). Partner volley yếu trở lại. Bạn đánh passing shot winner (nhịp 2). Lặp lại 15 lần mỗi bên. Mục tiêu: 8/10 lần winner ở nhịp 2.</p>
+
+<h3>Bài 4 — Topspin Passing Shot (3 phút)</h3>
+<p>Tập topspin passing shot từ baseline vào DTL. Mục tiêu: bóng đi THẤP qua lưới nhưng vẫn rơi sâu trong sân đối thủ. Lặp lại 30 lần. Mục tiêu: bóng thấp và có topspin đủ để qua lưới an toàn.</p>
+
+<h3>Bài 5 — Decision Tree Random (3 phút)</h5>
+<p>Partner approach từ vị trí random, gọi "trái" hoặc "phải" trước khi swing. Bạn phải chọn loại passing shot (cross/DTL/inside-out) và thực hiện trong 1 giây. Mục tiêu: đúng quyết định 8/10 lần. Đây là RTDT training.</p>
+
+<div class="callout-gold">
+<strong>⏱ Lịch tập gợi ý (research code <span class="research-code">7a3b</span>):</strong> 5 bài × 15 phút/ngày × 30 ngày = passing shot thành thạo. Sau 30 ngày, bạn sẽ tự động chọn đúng loại passing shot trong 0,2 giây và thực hiện chính xác. Đây là decision-tree training: biến passing shot thành phản xạ.
+</div>
+</section>
+
+<section id="closing">
+<h2>9. Lời Kết</h2>
+
+<p>Passing shot không chỉ là cú winner khi đối thủ ở lưới. Nó là <strong>vũ khí tâm lý</strong> khiến đối thủ ngại approach, từ đó bạn kiểm soát toàn trận đấu. Triết lý của bạn — <strong>"3 loại (Cross/DTL/Inside-Out) + 4 bước (Đọc → Cam Kết → Thấp → Góc/Tốc Độ) + Counter 2 nhịp (low volley → winner)"</strong> — không phải mẹo, mà là cách tối ưu hóa phản xạ và chiến thuật tennis.</p>
+
+<p>Kết hợp với hệ thống <strong>3 loại passing shot</strong>, <strong>4 bước thực hiện</strong>, <strong>5 vị trí đối thủ quyết định loại passing</strong>, và <strong>5 bài tập 15 phút/ngày</strong>, bạn có một bộ công cụ hoàn chỉnh để <strong>kết thúc điểm từ baseline khi đối thủ ở lưới</strong>. Hãy nhớ: <strong>đánh THẤP qua lưới</strong>; <strong>quyết định sớm và cam kết 100%</strong>; <strong>đừng cố winner ở nhịp đầu nếu forehand chưa đủ mạnh</strong>.</p>
+
+<p>Ngoài ra, đừng quên rằng passing shot là <strong>một nửa của combo chiến thuật</strong> "Passing + Lob". Sau khi đối thủ approach và bạn đánh passing shot, họ sẽ <strong>ngại approach hơn</strong> — tạo cơ hội cho bạn approach và buộc họ phải đánh lob. Đây là <strong>"điệu nhảy tennis"</strong> ngược lại với Drop-Lob combo. Tập cả passing shot và lob sẽ giúp bạn trở thành người chơi <strong>biết cả công và thủ</strong> trong tennis.</p>
+
+<p class="closing">XUYÊN VÀ TỈNH</p>
+
+<p style="text-align: center; margin-top: 20px;">
+  <a href="passing_shot_library.html" class="nav-link">← Quay Lại Thư Viện Passing Shot</a>
+</p>
+</section>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

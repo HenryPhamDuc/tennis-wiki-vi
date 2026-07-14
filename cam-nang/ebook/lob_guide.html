@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Lob — Từ Phòng Thủ Đến Tấn Công Qua Đầu Đối Thủ</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section h2 {
+    color: var(--accent-gold);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-red);
+  }
+  section h3 {
+    color: var(--accent-red);
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+  }
+  p { margin-bottom: 15px; text-align: justify; }
+  ul, ol { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--accent-gold); }
+  em { color: var(--text-muted); font-style: italic; }
+  .callout {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  .callout-gold {
+    background: rgba(243, 156, 18, 0.12);
+    border-left: 4px solid var(--accent-gold);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  th { background: var(--accent-red); color: white; padding: 12px; text-align: left; }
+  td { background: var(--navy-light); padding: 12px; border-bottom: 1px solid var(--border); }
+  .research-code {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--accent-gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--accent-gold);
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  footer .closing {
+    font-size: 1.4em;
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin: 15px 0 10px;
+    letter-spacing: 2px;
+  }
+  .nav-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .nav-link:hover { background: #a93226; }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    section h2 { font-size: 1.4em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Cẩm Nang Lob</h1>
+  <p class="subtitle">Lob Guide — Từ Phòng Thủ Đến Tấn Công Qua Đầu Đối Thủ</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    Tổng hợp từ tennis_handbook_vn Ch.10, Song-Trong-Tennis 6.2 &amp; tennis_mastery_guide_tieng_viet
+  </p>
+</header>
+
+<div class="toc">
+  <h2>📑 Mục Lục</h2>
+  <ol>
+    <li><a href="#philosophy">Triết Lý "Người Cân Bằng Vĩ Đại Tại Lưới"</a></li>
+    <li><a href="#two-types">2 Loại Lob: Phòng Thủ vs Tấn Công</a></li>
+    <li><a href="#four-steps">4 Bước Vận Hành Lob Phòng Thủ (Giấu Ý Định)</a></li>
+    <li><a href="#aiming">Nhắm Vào Đâu: Backhand, Sâu, Không Tất</a></li>
+    <li><a href="#spin">Topspin Lob vs Slice Lob vs Moonball</a></li>
+    <li><a href="#anti-lob">Phòng Thủ Trước Lob Của Đối Thủ (Overhead Footwork)</a></li>
+    <li><a href="#mistakes">5 Lỗi Phổ Biến Khi Lob</a></li>
+    <li><a href="#drills">5 Bài Tập 15 Phút Cho Người 50+</a></li>
+    <li><a href="#closing">Lời Kết</a></li>
+  </ol>
+</div>
+
+<section id="philosophy">
+<h2>1. Triết Lý "Người Cân Bằng Vĩ Đại Tại Lưới"</h2>
+
+<p>Từ <code>tennis_handbook_vn.docx</code> Chương 10 "CÚ LOB": <em>"Lob là người cân bằng vĩ đại tại lưới. Nó vô hiệu hóa người chạy lên lưới, biến đổi vị trí phòng thủ thành trung lập, và trên đất nện có thể là vũ khí tấn công. Topspin lob là một trong những cú đánh khó phòng thủ nhất trong toàn bộ môn tennis"</em>.</p>
+
+<p>Đây là insight cốt lõi về lob: <strong>lob không chỉ là cú "đánh cho qua"</strong> — nó là vũ khí chiến thuật quan trọng nhất để <strong>đảo ngược thế cờ</strong> khi đối thủ đang áp đảo ở lưới. Khi bạn bị dồn vào thế phòng thủ, lob chuyển bạn từ <em>"bị ép"</em> sang <em>"buộc đối thủ phải lùi về baseline"</em>.</p>
+
+<div class="callout">
+<strong>⚡ 3 vai trò chiến thuật của Lob (research code <span class="research-code">c5d8</span>):</strong>
+<ol>
+<li><strong>Vô hiệu hóa người chạy lên lưới</strong> — khi đối thủ ở lưới, lob buộc họ phải chạy ngược ra sau, mất lợi thế tấn công.</li>
+<li><strong>Biến đổi vị trí phòng thủ thành trung lập</strong> — từ thế bị ép → thế ngang bằng hoặc có lợi thế.</li>
+<li><strong>Vũ khí tấn công</strong> — đặc biệt trên sân đất nện, topspin lob có thể là cú đánh tấn công khó phòng thủ nhất trong tennis.</li>
+</ol>
+</div>
+
+<p>Trong <code>tennis_mastery_guide_tieng_viet.docx</code>, bạn có ghi chú tương tự: <em>"Lob dua bong cao qua dau doi thu khi ho dang tai luoi. Mot qua lob dat dung cho co the hoan toan dao nguoc the cuc"</em>. Triết lý "đảo ngược thế cục" là cốt lõi của lob — nó <strong>không phải cú đánh cuối cùng</strong>, mà là cú đánh <strong>mở ra cơ hội</strong> cho bạn tiếp tục rally ở thế tốt hơn.</p>
+</section>
+
+<section id="two-types">
+<h2>2. 2 Loại Lob: Phòng Thủ vs Tấn Công</h2>
+
+<p>Từ <code>tennis_handbook_vn.docx</code> Chương 10 và <code>tennis_mastery_guide_tieng_viet.docx</code>, lob được chia thành 2 loại chính với mục đích khác hẳn nhau:</p>
+
+<table>
+<thead>
+<tr>
+<th>Loại Lob</th>
+<th>Mục đích</th>
+<th>Độ cao</th>
+<th>Spin</th>
+<th>Khi nào dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lob Phòng Thủ</strong></td>
+<td>Buộc đối thủ lùi về baseline, cứu bóng khi bị ép</td>
+<td>Rất cao (3-4m đỉnh)</td>
+<td>Slice (backspin) hoặc không spin</td>
+<td>Đối thủ đứng sát lưới, bạn đang ở thế bị ép</td>
+</tr>
+<tr>
+<td><strong>Lob Tấn Công</strong></td>
+<td>Kết thúc điểm hoặc tạo cơ hội kết thúc điểm</td>
+<td>Trung bình (2-3m đỉnh)</td>
+<td>Topspin nặng (cú đánh khó phòng thủ nhất)</td>
+<td>Đối thủ đứng trong sân nhưng không sát lưới, bạn muốn winner</td>
+</tr>
+</tbody>
+</table>
+
+<h3>2.1. Lob Phòng Thủ — Khi Bạn Bị Ép</h3>
+
+<p>Mục đích duy nhất: <strong>đưa bóng qua đầu đối thủ và rơi sâu gần baseline</strong>. Không cần đẹp, không cần winner — chỉ cần mua thời gian để bạn phục hồi vị trí.</p>
+
+<p>Đặc điểm kỹ thuật:</p>
+<ul>
+<li><strong>Mặt vợt mở 45°+</strong> khi tiếp xúc bóng (từ <code>Song-Trong-Tennis-Manual.docx</code> 6.2)</li>
+<li><strong>Đẩy vợt lên cao</strong> theo hướng bóng muốn bay</li>
+<li><strong>Bóng rơi gần baseline đối thủ</strong> — lob ngắn = mời đối thủ smash dễ dàng</li>
+<li><strong>Độ cao lý tưởng: 3-4m</strong> so với mặt đất tại điểm cao nhất</li>
+</ul>
+
+<h3>2.2. Lob Tấn Công — Khi Bạn Muốn Thắng Điểm</h3>
+
+<p>Mục đích: <strong>topspin lob có độ nặng khiến đối thủ khó smash</strong>. Đây là cú đánh được đánh giá là "khó phòng thủ nhất trong tennis" bởi <code>tennis_handbook_vn.docx</code>.</p>
+
+<p>Đặc điểm kỹ thuật:</p>
+<ul>
+<li><strong>Topspin nặng</strong> — bóng bay thấp hơn lob phòng thủ nhưng rơi nhanh hơn sau baseline</li>
+<li><strong>Tốc độ cao</strong> — lob tấn công cần tốc độ để đối thủ không có thời gian chuẩn bị</li>
+<li><strong>Đường bay thấp hơn nhưng rơi sâu hơn</strong> — kết hợp topspin khiến bóng "rơi thẳng" xuống baseline</li>
+<li><strong>Dùng khi đối thủ đứng giữa sân</strong> — không sát lưới nhưng đã rời baseline</li>
+</ul>
+
+<div class="callout-gold">
+<strong>💡 Khi nào dùng Lob Tấn Công vs Phòng Thủ (research code <span class="research-code">e3f7</span>):</strong> Theo <code>Song-Trong-Tennis-Manual.docx</code>: <em>"Đối thủ gần lưới + có thời gian → Lob. Đối thủ gần lưới + đang chạy → Passing Shot. Đối thủ giữa sân → Lob tấn công (topspin). Đối thủ sâu baseline → Không lob"</em>. Quy tắc đơn giản: <strong>đối thủ càng gần lưới → lob càng cao càng tốt</strong>; <strong>đối thủ giữa sân → topspin lob thấp</strong>.
+</div>
+</section>
+
+<section id="four-steps">
+<h2>3. 4 Bước Vận Hành Lob Phòng Thủ (Giấu Ý Định)</h2>
+
+<p>Từ <code>Song-Trong-Tennis-Manual.docx</code> Section 6.2 "Lob — Sóng Theo Phương Đứng", có <strong>4 bước vận hành lob phòng thủ</strong> — yếu tố quan trọng nhất là <strong>giấu ý định lob cho đến thời điểm cuối cùng</strong>:</p>
+
+<h3>Bước 1 — Giả Vờ Đánh Bình Thường</h3>
+<p>Setup giống hệt cú groundstroke bình thường. Vợt kéo về sau, vai xoay, hông xoay — đối thủ không thể đoán bạn sẽ lob. <em>"Đây là yếu tố tâm lý quan trọng nhất"</em> — nếu đối thủ đoán được, họ sẽ chạy về baseline sẵn.</p>
+
+<h3>Bước 2 — Mở Mặt Vợt Dần Khi Vợt Tiếp Cận Bóng</h3>
+<p>Mặt vợt mở dần từ neutral (0°) → mở 30° cho lob thấp qua đầu, mở 45°+ cho lob phòng thủ sâu. Đây là bước <strong>phân biệt lob với groundstroke</strong> — chỉ cần thay đổi góc mặt vợt lúc cuối.</p>
+
+<h3>Bước 3 — Đẩy Vợt Lên Cao Theo Hướng Bóng Muốn Bay</h3>
+<p>Low-to-high swing path — đẩy từ thấp lên cao, không phải đánh xuyên qua bóng. Bóng sẽ bay lên cao theo quỹ đạo parabol và rơi xuống baseline đối thủ.</p>
+
+<h3>Bước 4 — Đảm Bảo Bóng Rơi Gần Baseline Của Đối Thủ</h3>
+<p><strong>Lob ngắn = mời đối thủ smash dễ dàng</strong>. Đảm bảo bóng rơi gần hoặc sau baseline. Độ cao lý tưởng: <strong>3-4m so với mặt đất tại điểm cao nhất</strong> (đủ để qua đầu đối thủ nhưng không quá cao để mất kiểm soát).</p>
+
+<div class="callout">
+<strong>⚠️ Insight quan trọng nhất: "Giấu ý định" (research code <span class="research-code">a9b4</span>):</strong> Theo <code>Song-Trong-Tennis-Manual.docx</code>, <em>"Đây là yếu tố tâm lý quan trọng nhất"</em>. Nếu bạn setup lob quá sớm (mở mặt vợt sớm, đứng tư thế lob), đối thủ sẽ nhận ra ngay và chạy về baseline. Đó là lý do bạn <strong>phải giả vờ đánh bình thường cho đến 0,1 giây cuối cùng</strong> — giống nguyên lý "che giấu ý định" trong return ở thư viện trước.
+</div>
+</section>
+
+<section id="aiming">
+<h2>4. Nhắm Vào Đâu: Backhand, Sâu, Không Tất</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> phần "Nhắm Vào Đâu Khi Lob?", có 3 nguyên tắc đơn giản nhưng cực kỳ quan trọng:</p>
+
+<h3>4.1. Nhắm Qua Bên Backhand Đối Thủ</h3>
+<p><strong>Kho đánh overhead smash hơn</strong>. Đa số người chơi có forehand mạnh hơn backhand — backhand overhead smash thường yếu và thiếu chính xác. Nếu đối thủ buộc phải smash bằng backhand, tỷ lệ lỗi tăng cao.</p>
+
+<h3>4.2. Rơi Sau Trong Sân — Gần Hoặc Qua Baseline</h3>
+<p><strong>Lob ngắn = mời đối thủ smash dễ dàng</strong>. Lob càng rơi sâu càng tốt — tốt nhất là rơi sát baseline hoặc vượt baseline (gần out). Mục đích: buộc đối thủ phải chạy xa hơn, smash ở vị trí bất lợi, hoặc phải chơi bóng cao thay vì smash.</p>
+
+<h3>4.3. Không Nhắm Tất — Sự Nhất Quán Quan Trọng Hơn Sự Khéo Léo</h3>
+<p><strong>Đừng cố nhắm vào góc xa nhất</strong>. Trong thế bị ép, ưu tiên đưa bóng qua đầu đối thủ và rơi sâu — không cần đẹp. Một lob "an toàn" 80% thành công tốt hơn lob "đẹp" 50% thành công.</p>
+
+<div class="callout-gold">
+<strong>🎯 Quy tắc 3 KHÔNG khi lob (research code <span class="research-code">f7c2</span>):</strong>
+<ol>
+<li><strong>KHÔNG lob ngắn</strong> — luôn lob sâu gần baseline.</li>
+<li><strong>KHÔNG lob vào forehand đối thủ</strong> — ưu tiên backhand đối thủ.</li>
+<li><strong>KHÔNG lob khi đối thủ đứng sâu baseline</strong> — chỉ lob khi đối thủ trong sân hoặc sát lưới.</li>
+</ol>
+</div>
+</section>
+
+<section id="spin">
+<h2>5. Topspin Lob vs Slice Lob vs Moonball</h2>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> phần "Topspin Lob vs. Lob Phòng Thủ" và <code>tennis_handbook_vn.docx</code>, có 3 biến thể lob chính:</p>
+
+<table>
+<thead>
+<tr>
+<th>Biến thể</th>
+<th>Spin</th>
+<th>Độ cao</th>
+<th>Quỹ đạo</th>
+<th>Khi nào dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Topspin Lob</strong></td>
+<td>Topspin nặng (low-to-high)</td>
+<td>Trung bình (2-3m)</td>
+<td>Thấp hơn lob phòng thủ, rơi nhanh sau baseline</td>
+<td>Đối thủ giữa sân, muốn tấn công</td>
+</tr>
+<tr>
+<td><strong>Slice Lob</strong></td>
+<td>Backspin (slice)</td>
+<td>Cao (3-4m)</td>
+<td>Cao và xa, rơi gần baseline</td>
+<td>Đối thủ sát lưới, cần mua thời gian</td>
+</tr>
+<tr>
+<td><strong>Moonball</strong></td>
+<td>Không spin (hoặc rất nhẹ)</td>
+<td>Rất cao (4-5m+)</td>
+<td>Rất cao, rơi chậm, đối thủ có thời gian chuẩn bị</td>
+<td>Cực kỳ bị ép, cần reset điểm hoàn toàn</td>
+</tr>
+</tbody>
+</table>
+
+<h3>5.1. Topspin Lob — Vũ Khí Tấn Công Khó Phòng Thủ Nhất</h3>
+
+<p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code> phần "Slice Lob": <em>"Lob danh voi backspin — trong nhu cu danh binh thuong nhưng bong len cao. Kho doc hon topspin lob"</em>. Slice lob thường dễ đoán hơn vì đường bay cao và chậm. <strong>Topspin lob</strong> thì ngược lại — bóng đi nhanh hơn, thấp hơn slice lob, nhưng topspin nặng khiến bóng <strong>rơi đột ngột</strong> sau baseline, đối thủ không kịp smash.</p>
+
+<p>Cách thực hiện topspin lob:</p>
+<ul>
+<li><strong>Low-to-high swing path</strong> rõ rệt hơn slice lob</li>
+<li><strong>Brushing up the back of the ball</strong> (vuốt lên phía sau bóng) tạo topspin</li>
+<li><strong>Tốc độ vợt cao</strong> ở điểm tiếp xúc</li>
+<li><strong>Mục tiêu: rơi sâu sau baseline</strong> với topspin nặng</li>
+</ul>
+
+<h3>5.2. Moonball — Lựa Chọn Cuối Cùng</h3>
+
+<p>Moonball là lob <strong>rất cao, rất chậm, hầu như không spin</strong>. Thường dùng khi bạn cực kỳ bị ép và cần reset điểm hoàn toàn. Đối thủ có nhiều thời gian chuẩn bị smash, nhưng bạn có thời gian để phục hồi vị trí. Đây là lựa chọn cuối cùng khi không còn lựa chọn nào tốt hơn.</p>
+</section>
+
+<section id="anti-lob">
+<h2>6. Phòng Thủ Trước Lob Của Đối Thủ (Overhead Footwork)</h2>
+
+<p>Lob không chỉ là cú bạn đánh — bạn cũng cần <strong>biết cách phòng thủ trước lob của đối thủ</strong>. Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Chương 8.6 "Xử Lý Passing Shot và Lob":</p>
+
+<div class="callout">
+<strong>⚡ Quy trình 4 bước xử lý lob (research code <span class="research-code">b8e3</span>):</strong>
+<ol>
+<li><strong>Split step</strong> → đọc hướng bóng</li>
+<li><strong>Nhận biết bóng đi cao</strong> → quay ngay lập tức</li>
+<li><strong>Sprint ra sau</strong> → overhead footwork (xem chi tiết bên dưới)</li>
+<li><strong>Overhead smash</strong> hoặc lùi đánh bóng cao</li>
+</ol>
+</div>
+
+<h3>6.1. Overhead Footwork Pattern</h3>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Chương 8.5:</p>
+
+<ul>
+<li><strong>Nhận biết bóng lob sớm</strong> → quay hông và bắt đầu chạy ra sau</li>
+<li><strong>Cú smash từ lùi (tiếp đất)</strong> — bạn di chuyển ra sau, tiếp đất trước khi đánh. Thường dùng khi lob không quá cao.</li>
+<li><strong>Cú smash trong không khí (airborne smash)</strong> — bạn nhảy lên để đánh. Thường khi lob quá cao để đánh từ mặt đất.</li>
+<li><strong>Shuffle cuối</strong> để điều chỉnh spacing trước khi đánh</li>
+</ul>
+
+<div class="callout-gold">
+<strong>⏱ Lỗi phổ biến khi xử lý lob (research code <span class="research-code">d6a1</span>):</strong> <em>"Đứng chết và chỉ đưa vợt ra — không có step-in, bóng ngắn và yếu, đối thủ có thể lob hoặc passing"</em>. Cách sửa: <strong>luôn tiến vào bóng bằng bước chân, không đứng chờ</strong>. Đây cũng là nguyên lý tương tự như khi xử lý volley — <strong>chân phải chủ động, không để bóng đến mình</strong>.
+</div>
+
+<h3>6.2. Tập Từ Rally</h3>
+
+<p>Trong rally, khi đối thủ đánh lob, thực hành overhead footwork thật sự. Đừng đứng tại chỗ đánh overhead khi tập — điều này tạo thói quen xấu. Thay vào đó, mỗi lần đối thủ lob, hãy <strong>thực sự chạy ra sau và smash ở vị trí khác nhau</strong> (tiếp đất, trong không khí, hoặc lùi đánh bóng cao).</p>
+</section>
+
+<section id="mistakes">
+<h2>7. 5 Lỗi Phổ Biến Khi Lob</h2>
+
+<p>Tổng hợp từ <code>tennis_handbook_vn.docx</code>, <code>Song-Trong-Tennis-Manual.docx</code>, và <code>tennis_mastery_guide_tieng_viet.docx</code>, đây là 5 lỗi phổ biến nhất khi thực hiện lob:</p>
+
+<h3>Lỗi 1 — Lob Ngắn (Không Rơi Gần Baseline)</h3>
+<p><strong>Biểu hiện:</strong> bóng lob rơi giữa sân hoặc gần service line. <strong>Hậu quả:</strong> đối thủ dễ dàng smash winner. <strong>Cách sửa:</strong> mở mặt vợt 45°+ và đẩy vợt lên cao hơn. Mục tiêu: bóng rơi gần hoặc sau baseline.</p>
+
+<h3>Lỗi 2 — Lộ Ý Định Lob Quá Sớm</h3>
+<p><strong>Biểu hiện:</strong> bạn mở mặt vợt sớm, đứng tư thế lob, hoặc nhìn lên trước khi đánh. <strong>Hậu quả:</strong> đối thủ đoán được và chạy về baseline sẵn, smash dễ dàng. <strong>Cách sửa:</strong> giả vờ đánh groundstroke cho đến 0,1 giây cuối cùng mới mở mặt vợt.</p>
+
+<h3>Lỗi 3 — Lob Vào Forehand Đối Thủ</h3>
+<p><strong>Biểu hiện:</strong> bóng lob rơi về phía forehand đối thủ. <strong>Hậu quả:</strong> đối thủ smash bằng forehand — cú mạnh nhất của họ. <strong>Cách sửa:</strong> nhắm lob sang backhand đối thủ, nơi smash thường yếu hơn.</p>
+
+<h3>Lỗi 4 — Lob Khi Đối Thủ Đứng Sâu Baseline</h3>
+<p><strong>Biểu hiện:</strong> bạn lob khi đối thủ đang ở sau baseline. <strong>Hậu quả:</strong> bóng lob rơi ngay trước mặt đối thủ, họ dễ dàng đánh winning groundstroke. <strong>Cách sửa:</strong> chỉ lob khi đối thủ trong sân hoặc sát lưới.</p>
+
+<h3>Lỗi 5 — Topspin Lob Không Đủ Topspin</h3>
+<p><strong>Biểu hiện:</strong> bạn đánh "lob tấn công" nhưng bóng bay như lob phòng thủ thường. <strong>Hậu quả:</strong> đối thủ có thời gian smash. <strong>Cách sửa:</strong> brushing up the back of the ball rõ rệt hơn, low-to-high swing path mạnh hơn. Bóng phải <strong>rơi nhanh</strong> sau baseline nhờ topspin.</p>
+
+<div class="callout">
+<strong>💡 Bài tập sửa Lỗi 1 &amp; 3 (research code <span class="research-code">9f5e</span>):</strong> Đặt 2 quả bóng tennis ở 2 góc xa baseline (một bên backhand đối thủ, một bên forehand đối thủ). Tập lob để bóng rơi đúng vào 1 trong 2 quả bóng đó. Mục tiêu: 8/10 lần rơi đúng vị trí. Lặp lại 30 lần mỗi ngày.
+</div>
+</section>
+
+<section id="drills">
+<h2>8. 5 Bài Tập 15 Phút Cho Người 50+</h2>
+
+<p>Tổng hợp từ các .docx nguồn + <code>tennis_mastery_guide_tieng_viet.docx</code>. Tập hàng ngày trong 2-4 tuần sẽ thấy sự khác biệt rõ rệt.</p>
+
+<h3>Bài 1 — Lob Qua Tường/Hàng Rào (3 phút)</h3>
+<p>Đứng trong sân, đánh lob qua hàng rào hoặc qua tường cao. Mục tiêu: đánh 30 quả liên tiếp qua rào mà không chạm rào. Bài tập này giúp cảm giác độ cao cần thiết và low-to-high swing path.</p>
+
+<h3>Bài 2 — Slice Lob Phòng Thủ (3 phút)</h3>
+<p>Nhờ partner đứng sát lưới đánh bóng vào bạn (giả lập thế bị ép). Bạn lob slice phòng thủ. Mục tiêu: 8/10 bóng rơi sau baseline đối phương, không bị partner smash.</p>
+
+<h3>Bài 3 — Topspin Lob Tấn Công (3 phút)</h3>
+<p>Partner đứng giữa sân đánh bóng vào bạn (giả lập đối thủ giữa sân). Bạn topspin lob. Mục tiêu: 8/10 bóng rơi sát baseline và đối thủ khó smash.</p>
+
+<h3>Bài 4 — Aiming Drill (3 phút)</h3>
+<p>Đặt 2 quả bóng ở 2 góc baseline (backhand và forehand đối thủ). Tập lob để rơi đúng 1 trong 2 vị trí. Mục tiêu: 8/10 lần đúng vị trí. Luyện cảm giác aim.</p>
+
+<h3>Bài 5 — Overhead Footwork (3 phút)</h3>
+<p>Partner đánh lob qua đầu bạn (có thể dùng lob nhẹ). Bạn split step, nhận biết sớm, sprint ra sau, smash overhead (tiếp đất hoặc airborne). Mục tiêu: hoàn thành đúng quy trình 4 bước (split → quay → sprint → smash) trong 2 giây.</p>
+
+<div class="callout-gold">
+<strong>⏱ Lịch tập gợi ý (research code <span class="research-code">4a9c</span>):</strong> 5 bài × 15 phút/ngày × 30 ngày = thành thạo cả lob và phòng thủ lob. Sau 30 ngày, bạn sẽ tự động chọn đúng loại lob (phòng thủ/tấn công) trong 0,2 giây và biết cách xử lý khi đối thủ lob qua đầu. Đây là proprioception training: biến lob thành phản xạ.
+</div>
+</section>
+
+<section id="closing">
+<h2>9. Lời Kết</h2>
+
+<p>Lob không phải là cú "đánh cho qua". Nó là <strong>vũ khí chiến thuật quan trọng</strong> để <strong>đảo ngược thế cục</strong> khi đối thủ áp đảo ở lưới — và cũng là vũ khí tấn công khó phòng thủ nhất khi đối thủ giữa sân. Triết lý của bạn — <strong>"Lob là người cân bằng vĩ đại tại lưới"</strong> + <strong>"4 bước vận hành (giấu ý định → mở mặt vợt → đẩy cao → rơi sâu)"</strong> — không phải mẹo, mà là cách tối ưu hóa đảo ngược thế trận trong tennis.</p>
+
+<p>Kết hợp với hệ thống <strong>2 loại (Phòng Thủ vs Tấn Công)</strong>, <strong>3 biến thể (Topspin/Slice/Moonball)</strong>, và <strong>5 bài tập 15 phút/ngày</strong>, bạn có một bộ công cụ hoàn chỉnh để <strong>tự vệ trước đối thủ ở lưới</strong> và <strong>tấn công khi cơ hội đến</strong>. Hãy nhớ: <strong>đối thủ càng gần lưới → lob càng cao càng tốt</strong>; <strong>đối thủ giữa sân → topspin lob thấp</strong>. Đừng tập nhắm tất — tập lob sâu, lob vào backhand, và giấu ý định.</p>
+
+<p>Ngoài ra, đừng quên rằng bạn cũng cần <strong>biết cách xử lý khi đối thủ lob qua đầu bạn</strong>. Quy trình 4 bước (Split → Quay → Sprint → Smash) phải tự động — đó là phần "phòng thủ trước lob" của bạn. Tập cả hai phía sẽ giúp bạn trở thành người chơi <strong>biết cả công và thủ</strong> trong tennis.</p>
+
+<p class="closing">QUA ĐẦU VÀ NGƯỢC THẾ</p>
+
+<p style="text-align: center; margin-top: 20px;">
+  <a href="lob_library.html" class="nav-link">← Quay Lại Thư Viện Lob</a>
+</p>
+</section>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

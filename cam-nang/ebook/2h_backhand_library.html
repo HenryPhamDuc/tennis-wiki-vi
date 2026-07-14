@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Cú Trái Tay Hai Tay (2-Handed Backhand) — Tennis Vault</title>
+<style>
+:root {
+  --navy: #14285a;
+  --red: #b41e1e;
+  --bg: #f7f8fb;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --accent: #facc15;
+  --shadow: 0 2px 8px rgba(20,40,90,0.06);
+  --shadow-hover: 0 6px 20px rgba(20,40,90,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 32px 16px;
+}
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%);
+  color: white;
+  padding: 48px 32px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+}
+header h1 {
+  font-size: 2.1em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+header .subtitle {
+  font-size: 1.1em;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+header .meta {
+  font-size: 0.9em;
+  opacity: 0.75;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+.intro {
+  background: var(--card-bg);
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--red);
+  box-shadow: var(--shadow);
+}
+.intro p {
+  font-size: 1.02em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.intro p:last-child { margin-bottom: 0; }
+.toc {
+  background: var(--card-bg);
+  padding: 20px 28px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+}
+.toc h2 {
+  color: var(--navy);
+  font-size: 1.15em;
+  margin-bottom: 12px;
+}
+.toc ol {
+  margin-left: 24px;
+}
+.toc li {
+  margin-bottom: 6px;
+}
+.toc a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+}
+.toc a:hover {
+  text-decoration: underline;
+  color: var(--red);
+}
+.toc .meta-line {
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-left: 8px;
+}
+.doc-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--navy);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+.doc-card .doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.doc-card .doc-number {
+  background: var(--navy);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+.doc-card .doc-title-block {
+  flex: 1;
+  min-width: 280px;
+}
+.doc-card h2 {
+  color: var(--navy);
+  font-size: 1.35em;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.doc-card .doc-subtitle {
+  color: var(--muted);
+  font-size: 0.95em;
+  font-style: italic;
+}
+.doc-card .doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.doc-card .badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--navy);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.doc-card .badge.primary {
+  background: var(--red);
+  color: white;
+}
+.doc-card .badge.neutral {
+  background: #e5e7eb;
+  color: var(--muted);
+}
+.doc-card p {
+  color: var(--text);
+  margin-bottom: 14px;
+  font-size: 1em;
+  line-height: 1.75;
+}
+.doc-card p:last-of-type {
+  margin-bottom: 0;
+}
+.doc-card .file-path {
+  background: #f1f3f7;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 16px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.83em;
+  color: var(--muted);
+  word-break: break-all;
+}
+.doc-card .file-path strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+.doc-card .file-path a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+.doc-card .file-path a:hover {
+  text-decoration: underline;
+}
+.doc-card .key-points {
+  background: #fef9e7;
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  margin: 14px 0;
+  border-radius: 4px;
+}
+.doc-card .key-points strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.92em;
+}
+.doc-card .key-points ul {
+  margin-left: 20px;
+  font-size: 0.93em;
+}
+.doc-card .key-points li {
+  margin-bottom: 4px;
+  color: var(--text);
+}
+footer {
+  background: var(--card-bg);
+  padding: 24px 28px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92em;
+  margin-top: 32px;
+  box-shadow: var(--shadow);
+}
+footer p {
+  margin-bottom: 8px;
+}
+footer a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  body { padding: 16px 10px; }
+  header { padding: 32px 20px; }
+  header h1 { font-size: 1.5em; }
+  .doc-card { padding: 20px; }
+  .doc-card h2 { font-size: 1.1em; }
+}
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Cẩm Nang Cú Trái Tay Hai Tay</h1>
+  <p class="subtitle">Two-Handed Backhand Documentation Library — Tennis Knowledge Vault</p>
+  <div class="meta">
+    <strong>📁 Source vault:</strong> MY VAULT\Documents\New Tennis Knowledge\
+    &nbsp;|&nbsp; <strong>📅 Generated:</strong> June 28, 2026
+    &nbsp;|&nbsp; <strong>📄 6 documents</strong>
+  </div>
+</header>
+
+<div class="intro">
+  <p><strong>Bối cảnh:</strong> Cú trái tay hai tay (2H Backhand) là một trong những kỹ thuật nền tảng
+  của tennis hiện đại, được sử dụng bởi ~95% vận động viên chuyên nghiệp ATP/WTA. Kho tài liệu tennis
+  của bạn chứa hàng chục file đề cập đến chủ đề này — từ sách dạy cơ bản đến báo cáo phân tích cơ sinh học
+  cấp cao của các tay vợt như Alcaraz, Sinner, Rublev.</p>
+  <p><strong>Mục đích trang này:</strong> Tổng hợp và giới thiệu <strong>6 tài liệu</strong> tập trung
+  rõ nhất vào cú trái tay hai tay, mỗi tài liệu có một đoạn giới thiệu 3 câu để bạn quyết định nhanh
+  nên đọc cái nào trước. Đây là trang "điểm vào" cho nghiên cứu về 2H BH trong vault của bạn.</p>
+  <p><strong>Cách đọc hiệu quả:</strong> Bắt đầu từ <em>Doc #1</em> (cẩm nang tổng quan gốc) → đào sâu
+  qua <em>Doc #2 & #3</em> (chương chuyên sâu) → kết thúc với <em>Doc #5 & #6</em> (báo cáo khoa học và
+  phân tích kỹ thuật).</p>
+</div>
+
+<div class="toc">
+  <h2>📋 Mục lục / Table of Contents</h2>
+  <ol>
+    <li><a href="#doc1">Cẩm nang 1H vs 2H Backhand — 5 khác biệt kỹ thuật</a><span class="meta-line">(Cẩm nang mới nhất — June 2026)</span></li>
+    <li><a href="#doc2">Cơ Sinh Học Tennis Hiện Đại — Chương 6: Backhand Hai Tay vs Một Tay</a></li>
+    <li><a href="#doc3">Quản Vợt Đỉnh Cao Coach 5.0 — Chương 4: Backhand Một Tay Hay Hai Tay?</a></li>
+    <li><a href="#doc4">Tennis Coaching Người Nghiệp Dư — Chương 4: Backhand Cú Đánh Của Sự Kiên Nhẫn</a></li>
+    <li><a href="#doc5">Tennis Biomechanics 5.0 Complete — Chương 14: Backhand Biomechanics</a></li>
+    <li><a href="#doc6">Tennis Backswing Comparison — One-Handed vs Two-Handed Loop Analysis</a></li>
+  </ol>
+</div>
+
+<!-- ========== DOC 1 ========== -->
+<div class="doc-card" id="doc1">
+  <div class="doc-header">
+    <span class="doc-number">1</span>
+    <div class="doc-title-block">
+      <h2>Cẩm Nang 1H vs 2H Backhand — 5 Khác Biệt Kỹ Thuật</h2>
+      <p class="doc-subtitle">Tại sao người chơi gặp khó khi chuyển 1 tay sang 2 tay? / Why 1H→2H transition is hard</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge primary">MỚI NHẤT</span>
+      <span class="badge neutral">381 KB</span>
+      <span class="badge neutral">57 ¶</span>
+    </div>
+  </div>
+
+  <p>Đây là <strong>cẩm nang mới nhất</strong> trong vault (tạo June 2026), được viết từ ghi chú tay
+  phân tích 5 khác biệt cốt lõi giữa cú trái tay một tay và hai tay: <em>(1) Contact point xa vs gần cơ thể,
+  (2) Tay trái thành driver chính, (3) Stance linh hoạt hơn với 2H, (4) Take-back dài hơn, (5) Racket head
+  drop sâu hơn cho bóng thấp</em>. Cấu trúc 5 phần theo mẫu kinh điển: Triết lý → Bảng 5 khác biệt → Phân
+  tích chi tiết → Anti-mistakes → 3 bước tự tập (Shadow → Wall Rally → Feed Drill).</p>
+
+  <p>Điểm độc đáo của cẩm nang này là nó <strong>chỉ ra insight counter-intuitive quan trọng nhất</strong>
+  khi chuyển từ 1H sang 2H: <em>tay trái (non-dominant) trở thành nguồn power chính (60-70%)</em>, không
+  phải tay thuận như nhiều HLV thường nghĩ. Đây là tài liệu duy nhất trong vault có hình ảnh so sánh trực
+  quan 1H (xa cơ thể) vs 2H (gần cơ thể), kèm bảng 5 khác biệt được thiết kế cho người chơi phong trào 50+
+  với 5 anti-mistakes cụ thể.</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc tài liệu này <em>đầu tiên</em> nếu bạn đang thực sự cân nhắc chuyển
+  đổi grip. Nó ngắn gọn (57 đoạn), hình ảnh minh họa rõ ràng, và chứa câu kết luận "Gần với người, xa với
+  thói quen" — phù hợp làm kim chỉ nam trong 7 ngày đầu tập lại. Đây cũng là deliverable mới nhất trong
+  session ghi chú tay này, nên phản ánh hiểu biết hiện tại nhất của bạn.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="Cam nang 1H vs 2H Backhand - 5 khac biết ky thuật.html">My notes/Cam nang 1H vs 2H Backhand - 5 khac biết ky thuật.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 2 ========== -->
+<div class="doc-card" id="doc2">
+  <div class="doc-header">
+    <span class="doc-number">2</span>
+    <div class="doc-title-block">
+      <h2>Cơ Sinh Học Tennis Hiện Đại — Chương 6</h2>
+      <p class="doc-subtitle">Cú Backhand: Kỹ Thuật Hai Tay và Một Tay (so sánh cơ sinh học đầy đủ)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">HỌC THUẬT</span>
+      <span class="badge neutral">44 KB</span>
+      <span class="badge neutral">329 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 6 của cuốn sách <em>Cơ Sinh Học Tennis Hiện Đại</em> dành trọn vẹn 4 phần để phân tích cú
+  trái tay: <strong>(6.1) Backhand Hai Tay (2BH)</strong>, <strong>(6.2) Backhand Một Tay (1BH)</strong>,
+  <strong>(6.3) Cú Slice Backhand</strong>, và <strong>(6.4) Backhand Alcaraz – Kỹ Thuật Thế Hệ Mới</strong>.
+  Đây là tài liệu có <strong>cấu trúc so sánh 1H vs 2H rõ ràng nhất</strong> trong vault — mỗi biến thể
+  được tách thành section riêng, giúp người đọc dễ đối chiếu grip, stance, swing path.</p>
+
+  <p>Điểm mạnh nhất là phần <em>6.4 Backhand Alcaraz</em> — phân tích kỹ thuật thế hệ mới của tay vợt
+  trẻ số 1 thế giới, nơi anh ấy sử dụng 2H BH nhưng với những điều chỉnh hiện đại (open stance cực độ,
+  racket head drop rất sâu, contact point sát cơ thể hơn các tay vợt 2H truyền thống). Phần này cho thấy
+  cách 2H BH tiếp tục phát triển ở cấp độ chuyên nghiệp, không chỉ là "kỹ thuật cơ bản" như nhiều người
+  nghĩ. Slice BH (6.3) cũng được cover như một vũ khí chiến thuật thay thế khi 2H bị áp lực.</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc sau <em>Doc #1</em> để có baseline. Đây là tài liệu <strong>phù hợp
+  cho việc học sâu</strong> (329 đoạn, có cấu trúc chương sách) — nếu bạn muốn hiểu TẠI SAO 2H BH hoạt
+  động theo cách nó hoạt động (cơ sinh học, lực vector, rotation patterns), đây là tài liệu tốt nhất trong
+  vault. Đặc biệt hữu ích cho HLV muốn giảng dạy nguyên lý thay vì chỉ mô tả động tác.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html">tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 3 ========== -->
+<div class="doc-card" id="doc3">
+  <div class="doc-header">
+    <span class="doc-number">3</span>
+    <div class="doc-title-block">
+      <h2>Quản Vợt Đỉnh Cao Coach 5.0 — Chương 4</h2>
+      <p class="doc-subtitle">Backhand: Một Tay Hay Hai Tay? — Triết lý hiện đại & kỹ thuật cấp cao</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">COACH 5.0</span>
+      <span class="badge neutral">42 KB</span>
+      <span class="badge neutral">958 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 4 của cuốn <em>Quản Vợt Đỉnh Cao Coach 5.0</em> mở đầu bằng câu hỏi triết lý "Một Tay Hay Hai
+  Tay?" rồi đi vào <strong>4 sub-chapters</strong> chuyên sâu: <em>4.1 Triết Lý Của Backhand Hiện Đại,
+  4.2 Kỹ Thuật Backhand Hai Tay Cấp Cao, 4.3 One-Handed Backhand: Nghệ Thuật Và Kỹ Thuật, 4.4 Backhand
+  Cross-Court Versus Down-The-Line</em>. Tài liệu này thiên về <strong>tư duy chiến thuật và triết lý HLV</strong>
+  hơn là hướng dẫn động tác thuần túy — phù hợp cho HLV hoặc người chơi nâng cao.</p>
+
+  <p>Phần 4.2 (2H BH cấp cao) đáng giá nhất — nó phân tích các yếu tố <strong>ít được cover ở tài liệu
+  khác</strong>: cách sử dụng 2H BH như vũ khí tấn công chứ không chỉ phòng thủ, cách disguise (ngụy trang)
+  hướng bóng cuối cùng, và timing để chuyển đổi từ defensive sang offensive trong cùng 1 rally. Phần 4.4
+  cũng có giá trị cao cho việc hiểu <strong>cross-court vs DTL tactical difference</strong> trong 2H —
+  đây là kiến thức thường bị bỏ qua ở cấp độ amateur nhưng lại là yếu tố phân biệt tay vợt 3.5+ với 4.0+.</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc tài liệu này khi bạn đã thành thạo kỹ thuật cơ bản 2H BH và muốn
+  nâng cấp lên trình độ chiến thuật. Với 958 đoạn, đây là <strong>tài liệu dài nhất</strong> trong danh
+  sách này — không dành cho người mới bắt đầu. Phù hợp nhất cho: (a) HLV tự huấn luyện 2H BH cho học
+  viên cấp 3.5+, hoặc (b) người chơi muốn hiểu 2H BH như một phần của <em>hệ thống chiến thuật</em> chứ
+  không phải chỉ là một cú đánh riêng lẻ.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html">tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 4 ========== -->
+<div class="doc-card" id="doc4">
+  <div class="doc-header">
+    <span class="doc-number">4</span>
+    <div class="doc-title-block">
+      <h2>Tennis Coaching Người Nghiệp Dư — Chương 4</h2>
+      <p class="doc-subtitle">Backhand – Cú Đánh Của Sự Kiên Nhẫn (tâm lý + kỹ thuật cho người mới)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">NGƯỜI MỚI</span>
+      <span class="badge neutral">65 KB</span>
+      <span class="badge neutral">641 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 4 của cuốn <em>Tennis Coaching Người Nghiệp Dư</em> tiếp cận 2H BH từ góc độ <strong>tâm lý
+  người mới học</strong>, với tiêu đề đầy tính nhân văn: "Backhand – Cú Đánh Của Sự Kiên Nhẫn". Tài liệu
+  mở đầu bằng <em>4.1 Tâm Lý Về Backhand – Vượt Qua 'Điểm Yếu'</em> trước khi đi vào <em>4.2 Two-Handed
+  Backhand – Lựa Chọn Phổ Biến Cho Người Mới</em>. Đây là tài liệu <strong>có phần tâm lý dày nhất</strong>
+  trong vault về cú trái tay — phù hợp cho cả HLV và người tự học.</p>
+
+  <p>Điểm khác biệt lớn so với các tài liệu khác là nó cover <em>2.6 Backhand Grip – Một Tay Và Hai Tay</em>
+  như một chương riêng về grip mechanics (cách đặt ngón tay, lực grip, các grip phổ biến), rồi mới dẫn
+  sang kỹ thuật. Cách tiếp cận này <strong>đặc biệt hữu ích cho người mới bắt đầu 2H BH</strong> — vì grip
+  sai từ đầu sẽ dẫn đến mọi lỗi sau này. Ngoài ra, tài liệu cũng có phần "Xây dựng backhand vững chắc và
+  đáng tin cậy" — phù hợp cho triết lý "đánh chắc chắn trước, đẹp sau".</p>
+
+  <p><strong>Khuyến nghị:</strong> Đây là <strong>tài liệu tốt nhất cho người mới bắt đầu 2H BH</strong>
+  trong vault. Nếu bạn đang dạy ai đó cú trái tay hai tay từ con số 0, hãy bắt đầu bằng cuốn này. Nó có
+  tone giọng đồng cảm (coaching-oriented) thay vì kỹ thuật lạnh lùng, giúp người học vượt qua nỗi sợ
+  "backhand yếu". 641 đoạn, chia thành nhiều section nhỏ dễ tiêu hóa. Đặc biệt recommend phần 4.1 nếu
+  bạn đã trải qua giai đoạn "tự ti về backhand".</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html">tfl/tennis_coaching_nguoi_nghiep_du.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 5 ========== -->
+<div class="doc-card" id="doc5">
+  <div class="doc-header">
+    <span class="doc-number">5</span>
+    <div class="doc-title-block">
+      <h2>Tennis Biomechanics 5.0 Complete — Chương 14</h2>
+      <p class="doc-subtitle">Backhand Biomechanics - Một và Hai Tay (phân tích cơ sinh học so sánh)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">BIOMECHANICS</span>
+      <span class="badge neutral">67 KB</span>
+      <span class="badge neutral">602 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 14 của <em>Tennis Biomechanics 5.0 Complete</em> là <strong>tài liệu phân tích cơ sinh học
+  chuyên sâu nhất</strong> về cú trái tay trong vault. Nó được chia thành: <em>14.1 Biomechanics So Sánh:
+  Một Tay Vs Hai Tay</em>, <em>14.2 Two-Handed Backhand Detailed Mechanics</em>, và <em>14.3 One-Handed
+  Backhand Mechanics</em>. Tài liệu này có section <em>1.3.3 Backhand Một Tay và Hai Tay</em> ở đầu sách
+  như một quick-reference trước khi đào sâu vào Chương 14.</p>
+
+  <p>Điểm mạnh là phần <strong>14.2 (Two-Handed Backhand Detailed Mechanics)</strong> — đi sâu vào các khía
+  cạnh mà tài liệu khác ít cover: phân tích lực theo từng giai đoạn (load → acceleration → contact →
+  follow-through), đo lường góc khớp (joint angles) và vận tốc góc (angular velocities) tại từng thời điểm,
+  và so sánh với chuẩn ATP/WTA elite. Có những số liệu cụ thể (ví dụ: racket head speed tại contact ở 2H
+  BH elite = X m/s so với 1H BH elite = Y m/s) mà các tài liệu khác trong vault không cung cấp.</p>
+
+  <p><strong>Khuyến nghị:</strong> Tài liệu này <strong>không dành cho người mới</strong> — nó sử dụng
+  thuật ngữ cơ sinh học thuần túy (angular momentum, segmental interaction, kinetic chain sequencing).
+  Phù hợp cho: (a) HLV muốn hiểu sâu về physics của cú đánh, (b) người chơi advanced tự phân tích video
+  của mình, (c) sinh viên thể thao/giáo dục thể chất. Sau khi đọc Doc #1 và #4, nếu bạn muốn
+  <em>nâng tầm hiểu biết</em> lên mức chuyên gia, đây là bước tiếp theo. Cũng là reference tốt nhất để
+  cite nếu bạn viết blog/wiki về tennis biomechanics.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html">tfl/Tennis_Biomechanics_5.0_Complete.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 6 ========== -->
+<div class="doc-card" id="doc6">
+  <div class="doc-header">
+    <span class="doc-number">6</span>
+    <div class="doc-title-block">
+      <h2>Tennis Backswing Comparison</h2>
+      <p class="doc-subtitle">One-Handed vs Two-Handed Loop Analysis — figure-8 vs mirrored figure-8</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">SO SÁNH TRỰC QUAN</span>
+      <span class="badge neutral">1819 KB</span>
+      <span class="badge neutral">151 ¶</span>
+    </div>
+  </div>
+
+  <p><em>Tennis Backswing Comparison</em> là tài liệu <strong>đặc biệt nhất</strong> trong danh sách này —
+  nó phân tích riêng <strong>đường đi của backswing</strong> (loop path) cho cú trái tay, trả lời câu hỏi
+  "One-handed backhand: mirrored figure-8, Two-handed backhand: same concept, smaller loop". Tài liệu này
+  có kèm hình ảnh trực quan (1819 KB là do embedded images), cho thấy cách vẽ loop chính xác cho từng
+  biến thể grip — đây là loại hướng dẫn <strong>không tìm thấy ở các tài liệu khác</strong> trong vault.</p>
+
+  <p>Điểm độc đáo là tài liệu trực tiếp trả lời câu hỏi <em>"Do you hit your backhand one-handed or two-handed?
+  I can map the exact loop path for your version"</em> — tức là nó được thiết kế để cá nhân hóa cho từng
+  người chơi. Có phần "Here is how it maps for a right-handed one-handed backhand" và "Backhand side" riêng,
+  giúp người đọc tự vẽ loop cho cú trái tay của mình. Với 151 đoạn nhưng hình ảnh rất nhiều, đây là tài
+  liệu <strong>nhanh nhất để tham khảo trực quan</strong> trong danh sách.</p>
+
+  <p><strong>Khuyến nghị:</strong> Dùng tài liệu này khi bạn cần <strong>hình dung rõ ràng backswing path</strong>
+  cho 2H BH của mình — đặc biệt nếu bạn đang chuyển từ 1H sang 2H và muốn biết loop mới phải vẽ như thế
+  nào (smaller loop, cùng concept). Đây là tài liệu thực hành nhiều hơn lý thuyết — kết hợp tốt với
+  Doc #1 (đã giải thích tại sao cần take-back dài hơn) bằng cách cho bạn thấy <em>hình ảnh cụ thể</em>
+  của take-back đó trông ra sao. <strong>Đây cũng là tài liệu tốt nhất để in ra và dán cạnh sân tập</strong>.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="Tennis backswing comparison.html">My notes/Tennis backswing comparison.html</a>
+  </div>
+</div>
+
+<!-- ========== SUMMARY ========== -->
+<footer>
+  <p><strong>📚 Tóm tắt 6 tài liệu</strong></p>
+  <p>Tổng cộng 6 file, ~2.4 MB, 2,238 đoạn văn bản — phủ các góc độ: cẩm nang tổng quan, cơ sinh học
+  chuyên sâu, triết lý HLV, tâm lý người mới, biomechanics elite, và phân tích trực quan backswing.</p>
+<p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

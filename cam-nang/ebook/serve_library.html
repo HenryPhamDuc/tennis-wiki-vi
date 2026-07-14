@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Giao Bóng Tennis — Serve Documentation Library</title>
+<style>
+:root {
+  --navy: #14285a;
+  --red: #b41e1e;
+  --bg: #f7f8fb;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --accent: #facc15;
+  --shadow: 0 2px 8px rgba(20,40,90,0.06);
+  --shadow-hover: 0 6px 20px rgba(20,40,90,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 32px 16px;
+}
+.container { max-width: 1080px; margin: 0 auto; }
+
+header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%);
+  color: white;
+  padding: 48px 32px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+}
+header h1 { font-size: 2.1em; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
+header .subtitle { font-size: 1.1em; opacity: 0.9; margin-bottom: 16px; }
+header .meta {
+  font-size: 0.9em;
+  opacity: 0.75;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.intro {
+  background: var(--card-bg);
+  padding: 24px 28px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--red);
+  box-shadow: var(--shadow);
+}
+.intro p { font-size: 1.02em; color: var(--muted); margin-bottom: 10px; }
+.intro p:last-child { margin-bottom: 0; }
+
+.toc {
+  background: var(--card-bg);
+  padding: 20px 28px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow);
+}
+.toc h2 { color: var(--navy); font-size: 1.15em; margin-bottom: 12px; }
+.toc ol { margin-left: 24px; }
+.toc li { margin-bottom: 6px; }
+.toc a { color: var(--navy); text-decoration: none; font-weight: 500; }
+.toc a:hover { text-decoration: underline; color: var(--red); }
+.toc .meta-line { font-size: 0.85em; color: var(--muted); margin-left: 8px; }
+
+.doc-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--navy);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.doc-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.doc-card .doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.doc-card .doc-number {
+  background: var(--navy);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+.doc-card .doc-title-block { flex: 1; min-width: 280px; }
+.doc-card h2 { color: var(--navy); font-size: 1.35em; margin-bottom: 4px; font-weight: 700; }
+.doc-card .doc-subtitle { color: var(--muted); font-size: 0.95em; font-style: italic; }
+.doc-card .doc-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.doc-card .badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--navy);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.doc-card .badge.primary { background: var(--red); color: white; }
+.doc-card .badge.neutral { background: #e5e7eb; color: var(--muted); }
+.doc-card p { color: var(--text); margin-bottom: 14px; font-size: 1em; line-height: 1.75; }
+.doc-card p:last-of-type { margin-bottom: 0; }
+.doc-card .file-path {
+  background: #f1f3f7;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 16px;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.83em;
+  color: var(--muted);
+  word-break: break-all;
+}
+.doc-card .file-path strong {
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+.doc-card .file-path a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 600;
+}
+.doc-card .file-path a:hover { text-decoration: underline; }
+
+footer {
+  background: var(--card-bg);
+  padding: 24px 28px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92em;
+  margin-top: 32px;
+  box-shadow: var(--shadow);
+}
+footer a { color: var(--navy); text-decoration: none; font-weight: 600; }
+
+@media (max-width: 600px) {
+  body { padding: 16px 10px; }
+  header { padding: 32px 20px; }
+  header h1 { font-size: 1.5em; }
+  .doc-card { padding: 20px; }
+  .doc-card h2 { font-size: 1.1em; }
+}
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Giao Bóng Tennis</h1>
+  <p class="subtitle">Serve Documentation Library — Tennis Knowledge Vault</p>
+  <div class="meta">
+    <strong>📁 Source vault:</strong> MY VAULT\Documents\New Tennis Knowledge\
+    &nbsp;|&nbsp; <strong>📅 Generated:</strong> June 28, 2026
+    &nbsp;|&nbsp; <strong>📄 6 documents</strong>
+  </div>
+</header>
+
+<div class="intro">
+  <p><strong>Bối cảnh:</strong> Cú giao bóng (serve) là cú đánh <strong>duy nhất</strong> trong tennis mà
+  người chơi hoàn toàn kiểm soát — không bị đối thủ ảnh hưởng. Đây là "vũ khí số một" quyết định thắng/thua
+  ở mọi trình độ, từ nghiệp dư đến ATP/WTA. Kho tài liệu tennis của bạn chứa <strong>hàng chục tài liệu</strong>
+  về serve — từ sách dạy cơ bản, sách nâng cao, đến các báo cáo phân tích cơ sinh học chuyên sâu của tay vợt
+  elite.</p>
+  <p><strong>Mục đích trang này:</strong> Tổng hợp và giới thiệu <strong>6 tài liệu</strong> tập trung rõ nhất
+  vào cú giao bóng, mỗi tài liệu có một đoạn giới thiệu 3 câu để bạn quyết định nhanh nên đọc cái nào trước.
+  Đây là trang "điểm vào" cho nghiên cứu về serve trong vault của bạn.</p>
+  <p><strong>Cách đọc hiệu quả:</strong> Bắt đầu từ <em>Doc #1</em> (hướng dẫn tổng quan do tôi tổng hợp từ ghi
+  chú tay của bạn) → đào sâu qua <em>Doc #2 & #3</em> (2 cuốn sách chuyên serve) → kết thúc với <em>Doc #5 & #6</em>
+  (báo cáo cơ sinh học chuyên sâu và triết lý HLV cho người nghiệp dư).</p>
+</div>
+
+<div class="toc">
+  <h2>📋 Mục lục / Table of Contents</h2>
+  <ol>
+    <li><a href="#doc1">Hướng Dẫn Cách Giao Bóng Tennis — Complete Guide</a><span class="meta-line">(Tổng hợp mới nhất — June 2026)</span></li>
+    <li><a href="#doc2">Nghệ Thuật Giao Bóng Tennis — Toàn tập từ cơ bản đến nâng cao</a></li>
+    <li><a href="#doc3">Phân Tích Kỹ Thuật Giao Bóng WTA — Cơ sinh học & phân tích chuyên sâu</a></li>
+    <li><a href="#doc4">Quản Lý Game Trong Tennis — Chương 4: Hệ Thống Serve</a></li>
+    <li><a href="#doc5">Tennis Coaching Người Nghiệp Dư — Chương 5: Giao Bóng – Bắt Đầu Mọi Điểm</a></li>
+    <li><a href="#doc6">Tennis Biomechanics 5.0 Complete — Chương 12: Biomechanics Của Serve</a></li>
+  </ol>
+</div>
+
+<!-- ========== DOC 1 ========== -->
+<div class="doc-card" id="doc1">
+  <div class="doc-header">
+    <span class="doc-number">1</span>
+    <div class="doc-title-block">
+      <h2>Hướng Dẫn Cách Giao Bóng Tennis</h2>
+      <p class="doc-subtitle">Complete Guide — Tổng hợp từ ghi chú tay của bạn (June 2026)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge primary">MỚI NHẤT</span>
+      <span class="badge neutral">HTML</span>
+    </div>
+  </div>
+
+  <p>Đây là <strong>hướng dẫn mới nhất</strong> trong vault (tạo June 2026), được tổng hợp từ hai bản phân tích
+  ghi chú tay của bạn (<em>Kỹ thuật giao bóng.md</em> và <em>Serve technique.md</em>). Cấu trúc 5 phần theo
+  mẫu kinh điển: <strong>Triết lý Kinetic Chain</strong> → 4 giai đoạn cốt lõi (Preparation / Trophy /
+  Drop+ Pronation / Contact) → 3 loại serve (Flat / Slice / Kick) → Lưu ý phong trào 50+ → 3 bước tự tập.
+  Tài liệu này <strong>preserve tất cả research code</strong> bạn đã cite (1a10, 6d32, db68, f0f7, 0378, 7993,
+  dc63, 42f08aaa) — là dấu vết bằng chứng từ tài liệu nguồn.</p>
+
+  <p>Điểm độc đáo của hướng dẫn này là nó <strong>refine ghi chú tay thành manual 5 phần có cấu trúc</strong>,
+  đặc biệt làm rõ insight <em>"chop" ≠ "chặt"</em> từ ghi chú gốc: trong Phase 3 (Racket Drop), "chop down"
+  không có nghĩa là chặt mạnh xuống, mà là <strong>thả lỏng vai để trọng lực kéo vợt rơi</strong>. Insight này
+  rất quan trọng cho người chơi 50+ vì <em>nếu cố chặt sẽ căng cơ delta và đau vai</em>. Phần 3 cũng có phân
+  bổ 60/30/10 (Slice / Kick / Flat) tối ưu cho phong trào lớn tuổi — chiến thuật thường bị bỏ qua ở tài liệu
+  khác trong vault.</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc tài liệu này <em>đầu tiên</em>. Nó là <strong>cầu nối</strong> giữa
+  2 file .md gốc và các tài liệu sách chuyên serve (Doc #2-6). Nếu bạn chỉ có 15 phút để học serve, hãy đọc
+  Phần 1 (4 giai đoạn) + Phần 3 (lưu ý 50+) trong file này. Câu kết luận <strong>"XOẮN VÀ BUNG"</strong> —
+  Coil and Release — là kim chỉ nam trong mọi buổi tập.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="serve_guide.html">My notes/serve_guide.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 2 ========== -->
+<div class="doc-card" id="doc2">
+  <div class="doc-header">
+    <span class="doc-number">2</span>
+    <div class="doc-title-block">
+      <h2>Nghệ Thuật Giao Bóng Tennis — Toàn tập</h2>
+      <p class="doc-subtitle">Làm chủ cú giao bóng từ cơ bản đến nâng cao (entire book on serve)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">SÁCH CHUYÊN SERVE</span>
+      <span class="badge neutral">38 KB</span>
+      <span class="badge neutral">1065 ¶</span>
+    </div>
+  </div>
+
+  <p><em>Nghệ Thuật Giao Bóng Tennis</em> là <strong>cuốn sách duy nhất trong vault dành trọn 100%</strong> cho
+  cú giao bóng — không có chương forehand/backhand/volley nào khác. Với 1065 đoạn và 38 KB, đây là <strong>tài
+  liệu dài nhất và tập trung nhất</strong> trong thư viện này. Cuốn sách đi từ grip continental cơ bản → toss
+  mechanics → trophy position → racket drop → pronation → contact → variations (flat/slice/kick) → tactical
+  placement (T / wide / body) → second serve patterns.</p>
+
+  <p>Điểm mạnh đặc biệt của cuốn này là phần <em>"Vị Trí Đầu Trong Giao Bóng"</em> — một chủ đề hiếm khi được
+  cover sâu trong các tài liệu serve khác. Vị trí đầu (head position) ảnh hưởng trực tiếp đến balance và
+  visual tracking của bóng trong khi serve; sai vị trí đầu sẽ dẫn đến mất cân bằng và giảm lực. Cuốn sách
+  cũng có những drills chi tiết cho từng giai đoạn — không chỉ mô tả kỹ thuật mà còn hướng dẫn cách tập
+  riêng từng phần (ví dụ: chỉ tập toss 20 lần/ngày trước khi tập full serve).</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc sau <em>Doc #1</em> nếu bạn muốn <strong>đào sâu toàn diện</strong> về
+  serve. Đây là tài liệu phù hợp cho người muốn xây dựng serve từ zero — không cần reference nào khác trong
+  vault vì cuốn này đã cover hết. Nếu bạn là HLV, các drills trong cuốn này có thể dùng trực tiếp để dạy học
+  viên. Phù hợp cho cả phong trào và thi đấu.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Nghe_Thuat_Giao_Bong_Tennis.html">tfl/Nghe_Thuat_Giao_Bong_Tennis.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 3 ========== -->
+<div class="doc-card" id="doc3">
+  <div class="doc-header">
+    <span class="doc-number">3</span>
+    <div class="doc-title-block">
+      <h2>Phân Tích Kỹ Thuật Giao Bóng WTA</h2>
+      <p class="doc-subtitle">Cơ sinh học & phân tích chuyên sâu — biomechanics of WTA serve</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">CƠ SINH HỌC</span>
+      <span class="badge neutral">35 KB</span>
+      <span class="badge neutral">252 ¶</span>
+    </div>
+  </div>
+
+  <p><em>Phân Tích Kỹ Thuật Giao Bóng WTA</em> là tài liệu <strong>ngắn nhưng rất đậm đặc</strong> trong vault
+  (252 đoạn, 35 KB), tập trung hoàn toàn vào <strong>cơ sinh học</strong> của cú serve ở cấp độ WTA. Cuốn này
+  phân tích <em>tầm quan trọng của cú serve trong tennis hiện đại</em> (Chương 1), sau đó đi vào <em>nền tảng
+  cơ sinh học</em> (Chương 2) với các khái niệm như kinetic chain, ground reaction force, angular momentum.
+  Khác với Doc #2 (cuốn sách self-contained), cuốn này đi <strong>sâu hơn vào phân tích</strong> thay vì
+  hướng dẫn từng bước.</p>
+
+  <p>Điểm độc đáo của cuốn này là nó <strong>tách bạch giữa "nghệ thuật" và "khoa học"</strong> trong serve.
+  Nhiều cuốn sách serve chỉ dừng ở mô tả ("xoay vai như thế này"), nhưng cuốn này giải thích <em>tại sao</em>
+  phải xoay vai theo cách đó — tham chiếu đến các nghiên cứu về joint torques, muscle activation patterns, và
+  segmental velocities. Phù hợp cho người muốn hiểu <em>vì sao</em> một số pattern tạo ra lực hơn các pattern
+  khác. Cuốn cũng có các số liệu cụ thể về WTA (racket head speed, contact height, shoulder rotation degrees).</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc song song với <em>Doc #2</em> — Doc #2 dạy <em>làm thế nào</em>, Doc #3
+  giải thích <em>tại sao</em>. Đặc biệt hữu ích nếu bạn đang cố gắng <strong>sửa lỗi serve lâu dài</strong> và
+  cần hiểu cơ chế sinh học đằng sau. Nếu bạn chỉ là người chơi phong trào 50+ muốn serve an toàn, Doc #1 đã đủ —
+  Doc #3 này dành cho HLV hoặc người chơi advanced muốn đào sâu.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html">tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 4 ========== -->
+<div class="doc-card" id="doc4">
+  <div class="doc-header">
+    <span class="doc-number">4</span>
+    <div class="doc-title-block">
+      <h2>Quản Lý Game Trong Tennis — Chương 4</h2>
+      <p class="doc-subtitle">Hệ Thống Serve — Nền tảng của mọi chiến lược (tactical chapter)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">CHIẾN THUẬT</span>
+      <span class="badge neutral">86 KB</span>
+      <span class="badge neutral">1150 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 4 của <em>Quản Lý Game Trong Tennis</em> đặt serve trong <strong>bối cảnh chiến thuật rộng hơn</strong>
+  — không chỉ là kỹ thuật mà là công cụ chiến lược quyết định thắng/thua. Cuốn sách có hệ thống <em>"DMSS"</em>
+  (Direction / Margin / Speed / Spin) cho serve, cùng với các <em>serve patterns</em> theo tỉ số (30-30, deuce,
+  ad-out, etc.). Với 1150 đoạn, đây là một trong những cuốn dài nhất trong vault, nhưng chương serve là một
+  phần nhỏ (~100-150 đoạn).</p>
+
+  <p>Điểm mạnh của Chương 4 là phần <strong>"Phân Tích Serve — Vũ Khí Số Một"</strong> (2.4 trong chapter)
+  — nó trả lời câu hỏi <em>"Tôi nên serve loại nào trong tình huống nào?"</em> Flat serve cho first serve
+  vào deuce court? Slice wide hay slice body vào ad court? Second serve an toàn nên là kick hay slice? Cuốn
+  sách cũng có <em>serve and volley patterns</em> — chiến thuật cũ nhưng vẫn hiệu quả ở một số cấp độ (đặc biệt
+  doubles). Đây là <strong>tài liệu duy nhất trong library</strong> tập trung vào tactical decision-making
+  của serve thay vì pure technique.</p>
+
+  <p><strong>Khuyến nghị:</strong> Đọc sau khi đã nắm vững kỹ thuật (Doc #1-3). Phù hợp cho người chơi <strong>đã
+  serve tốt về mặt technique nhưng chưa biết cách sử dụng</strong> trong trận đấu. Đặc biệt recommend cho
+  người chơi tournament/recreational 4.0+ muốn nâng cấp tư duy chiến thuật. Nếu bạn là người mới, skip cuốn
+  này — quá sớm để lo về chiến thuật khi kỹ thuật còn chưa vững.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/tennis_game_management.html">tfl/tennis_game_management.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 5 ========== -->
+<div class="doc-card" id="doc5">
+  <div class="doc-header">
+    <span class="doc-number">5</span>
+    <div class="doc-title-block">
+      <h2>Tennis Coaching Người Nghiệp Dư — Chương 5</h2>
+      <p class="doc-subtitle">Giao Bóng – Bắt Đầu Mọi Điểm (cho người chơi phong trào)</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">NGƯỜI MỚI</span>
+      <span class="badge neutral">66 KB</span>
+      <span class="badge neutral">641 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 5 của <em>Tennis Coaching Người Nghiệp Dư</em> có tiêu đề đầy tính nhân văn: <strong>"Giao Bóng –
+  Bắt Đầu Mọi Điểm"</strong>. Đây là chương serve dành riêng cho người nghiệp dư (recreational), với tone giọng
+  coaching đồng cảm thay vì kỹ thuật lạnh lùng. Phù hợp cho người chơi 40+ bắt đầu học serve, hoặc người chơi
+  lâu năm nhưng serve vẫn yếu và cần rebuild từ đầu. Vị trí của nó trong vault tương tự Chương 4 về backhand
+  (cẩm nang cho người mới).</p>
+
+  <p>Điểm mạnh là phần <em>"Kỹ thuật serve từ cơ bản đến hiệu quả cho người nghiệp dư"</em> — tài liệu này
+  <strong>không giả định bạn đã biết serve</strong>. Nó đi từ grip continental cho người chưa cầm vợt bao giờ,
+  đến cách tung bóng sao cho người trái tay không bị đau vai, đến cách nhảy đúng cách (hay không nhảy) cho
+  người lớn tuổi. Các drills trong chương này cũng <strong>scale theo tuổi và thể lực</strong> — ví dụ: người 60+
+  không cần nhảy, chỉ cần bước chân và xoay hông.</p>
+
+  <p><strong>Khuyến nghị:</strong> Tài liệu tốt nhất cho <strong>người mới bắt đầu serve hoặc người 50+ muốn
+  rebuild</strong>. Nếu bạn đang dạy serve cho ai đó lớn tuổi hoặc mới chơi, đây là tài liệu đầu tiên nên
+  dùng. Nó không cover nhiều về biomechanics chuyên sâu (đó là Doc #3, #6) mà tập trung vào <em>"làm sao để
+  serve được và không đau vai"</em> — đúng nhu cầu thực tế của phong trào.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/tennis_coaching_nguoi_nghiep_du.html">tfl/tennis_coaching_nguoi_nghiep_du.html</a>
+  </div>
+</div>
+
+<!-- ========== DOC 6 ========== -->
+<div class="doc-card" id="doc6">
+  <div class="doc-header">
+    <span class="doc-number">6</span>
+    <div class="doc-title-block">
+      <h2>Tennis Biomechanics 5.0 Complete — Chương 12</h2>
+      <p class="doc-subtitle">Biomechanics Của Serve - Phân tích chuyên sâu và tối ưu hóa</p>
+    </div>
+    <div class="doc-meta">
+      <span class="badge">BIOMECHANICS ELITE</span>
+      <span class="badge neutral">68 KB</span>
+      <span class="badge neutral">602 ¶</span>
+    </div>
+  </div>
+
+  <p>Chương 12 của <em>Tennis Biomechanics 5.0 Complete</em> là <strong>phân tích cơ sinh học chuyên sâu nhất</strong>
+  về serve trong toàn bộ vault. Nó chia serve thành <em>từng giai đoạn</em> với số liệu cụ thể (racket head speed,
+  joint angles, muscle activation), kèm phần <em>"Nhóm Cơ Chính Tạo Ra Lực Trong Serve"</em> (mục 4.2). Đây
+  là tài liệu cùng dòng với Doc #3 nhưng <strong>đi sâu hơn về mặt physics</strong> và ít mang tính chỉ dẫn
+  thực hành hơn.</p>
+
+  <p>Điểm độc đáo là phần <em>"1.3.1 Cú Serve - Phân Tích Từng Giai Đoạn"</em> — đi vào chi tiết từng
+  millisecond của chuỗi kinetic chain, kèm <strong>biểu đồ lực</strong> và <strong>mô hình vector</strong>.
+  Phù hợp cho người muốn tự phân tích video serve của mình — bạn có thể so sánh biomechanics data trong cuốn
+  với video của bạn để tìm ra điểm lệch. Tài liệu này cũng là reference chuẩn để <strong>cite trong các bài
+  blog/wiki về tennis biomechanics</strong>.</p>
+
+  <p><strong>Khuyến nghị:</strong> Dành cho <strong>người chơi advanced, HLV chuyên nghiệp, hoặc sinh viên
+  thể thao/giáo dục thể chất</strong>. Nếu bạn là người chơi phong trào 50+ chỉ muốn serve an toàn và hiệu
+  quả, Doc #1 và Doc #5 đã đủ — Doc #6 này là "advanced reading" cho những ai muốn hiểu serve ở cấp độ vật lý.
+  Kết hợp tốt với Doc #3 để có bức tranh đầy đủ: Doc #3 = phân tích WTA, Doc #6 = physics nền tảng.</p>
+
+  <div class="file-path">
+    <strong>📂 Đường dẫn file / File path:</strong>
+    <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html">tfl/Tennis_Biomechanics_5.0_Complete.html</a>
+  </div>
+</div>
+
+<!-- ========== SUMMARY ========== -->
+<footer>
+  <p><strong>📚 Tóm tắt 6 tài liệu</strong></p>
+  <p>1 HTML mới tổng hợp + 5 file từ TFL Manuals — phủ các góc độ: tổng hợp từ ghi chú tay, sách self-contained,
+  cơ sinh học WTA, chiến thuật, người mới, và biomechanics elite.</p>
+<p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

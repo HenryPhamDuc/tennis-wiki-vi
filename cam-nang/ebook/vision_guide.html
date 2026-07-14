@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Thị Giác, VOR & Thăng Bằng — Vision, VOR & Balance Guide</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 {
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-gold); }
+  section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section h2 {
+    color: var(--accent-gold);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-red);
+  }
+  section h3 {
+    color: var(--accent-red);
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+  }
+  p { margin-bottom: 15px; text-align: justify; }
+  ul, ol { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--accent-gold); }
+  em { color: var(--text-muted); font-style: italic; }
+  .callout {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  .callout-gold {
+    background: rgba(243, 156, 18, 0.12);
+    border-left: 4px solid var(--accent-gold);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(10, 25, 41, 0.5);
+  }
+  th {
+    background: var(--accent-red);
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:hover { background: rgba(243, 156, 18, 0.05); }
+  .nav-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.2s;
+  }
+  .nav-link:hover { background: #a93226; }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    section h2 { font-size: 1.4em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>👁️ Cẩm Nang Thị Giác, VOR & Thăng Bằng</h1>
+  <p class="subtitle">Vision, VOR & Balance Mastery Guide — Từ Mắt Đến Sân</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    Tổng hợp từ nghiên cứu thần kinh học &amp; thực hành huấn luyện
+  </p>
+</header>
+
+<div class="toc">
+  <h2>📑 Mục Lục</h2>
+  <ol>
+    <li><a href="#framework">Framework Thống Nhất: Visual → VOR → Proprioception</a></li>
+    <li><a href="#vision">Mắt &amp; Thị Giác — Fovea, Peripheral, Depth</a></li>
+    <li><a href="#vor">VOR — Phản Xạ Giữ Ảnh Ổn Định Khi Xoay Đầu</a></li>
+    <li><a href="#anticipation">Anticipation — Nghệ Thuật Đọc Trước 200-300ms</a></li>
+    <li><a href="#balance">Thăng Bằng &amp; Postural Control</a></li>
+    <li><a href="#50plus">Vision Ở Người 50+ — Tái Huấn Luyện Hệ Thống</a></li>
+    <li><a href="#drills">5 Bài Tập 10 Phút Cho Sân Tennis</a></li>
+    <li><a href="#closing">Lời Kết — Mắt Nhanh, Chân Đúng Chỗ</a></li>
+  </ol>
+</div>
+
+<section id="framework">
+<h2>1. Framework Thống Nhất: Visual → VOR → Proprioception</h2>
+
+<p>Trước khi đào sâu, bạn cần <strong>bản đồ tổng thể</strong> vì sao 3 hệ thống (thị giác, tiền đình, proprioception) lại tồn tại cùng nhau thay vì đứng riêng lẻ. Framework dưới đây là chìa khóa để bạn không bị "ngợp" khi đọc 6 tài liệu trong thư viện.</p>
+
+<p><strong>Ba hệ thống hoạt động đồng bộ trong mỗi cú đánh:</strong></p>
+
+<ol>
+  <li><strong>Visual Input (Mắt)</strong> — Fovea (vùng trung tâm) nhìn chi tiết bóng; peripheral (vùng rìa) theo dõi đối thủ + sân. Não hợp nhất 2 vùng thành "bản đồ" toàn cảnh trong ~150-200ms. <em>Tài liệu liên quan: The_Art_of_Modern_Tennis, Quan_Vot_Dinh_Cao</em></li>
+  <li><strong>VOR Stabilization (Tiền đình-Thị giác)</strong> — Khi xoay đầu để theo bóng, VOR xoay mắt ngược chiều tự động để giữ ảnh bóng rõ trên võng mạc. Nếu VOR yếu → "mất bóng" khi xoay đầu. <em>Tài liệu liên quan: He_Thong_Tennis_Cap_Cao, Tennis_Biomechanics_5.0</em></li>
+  <li><strong>Proprioception (Cảm nhận cơ thể)</strong> — Biết vị trí chân, hông, vai mà không cần nhìn → giải phóng mắt để tập trung vào bóng. Đây là hệ thống "im lặng" nhưng cực kỳ quan trọng. <em>Tài liệu liên quan: Vi_Nhan_Thuc_Co_The_Tennis, Ky_Thuat_Chan_Tennis</em></li>
+</ol>
+
+<div class="callout">
+<strong>⚡ Nguyên lý cốt lõi:</strong> Tennis không phải là "nhìn bóng + đánh". Nó là <strong>3 hệ thống phối hợp trong 600-800ms</strong>. Khi một hệ thống suy yếu (ví dụ: VOR yếu ở người 50+), hai hệ thống còn lại phải bù → mệt mỏi → mất tập trung → đánh sai. Đây là lý do tại sao nhiều người chơi lớn tuổi "biết kỹ thuật" nhưng "không thể thực hiện" — không phải vì kỹ thuật sai, mà vì <strong>3 hệ thống không đồng bộ</strong>.
+</div>
+
+<p><strong>Vì sao 6 tài liệu thay vì 1?</strong> Mỗi tài liệu đào sâu một khía cạnh. <code>vision_library.html</code> cho bạn "what's available" — guide này (bạn đang đọc) cho bạn "how they connect". Khi bạn gặp vấn đề cụ thể (mất bóng ở tốc độ cao, đánh lệch khi approaching, mất balance sau smash), quay lại Mục Lục để biết đọc phần nào trong tài liệu nào.</p>
+</section>
+
+<section id="vision">
+<h2>2. Mắt &amp; Thị Giác — Fovea, Peripheral, Depth</h2>
+
+<p>Tennis là môn thể thao <strong>thị giác nặng</strong> — bạn phải theo dõi bóng (chi tiết), đối thủ (ngữ cảnh), và ranh giới sân (định vị) cùng một lúc. Mắt người có <strong>2 vùng chức năng khác nhau</strong> — hiểu rõ chúng là bước đầu để train hiệu quả.</p>
+
+<h3>2 Vùng Thị Giác Quan Trọng</h3>
+
+<p><strong>Fovea (Vùng Trung Tâm) — 1-2 độ góc nhìn:</strong></p>
+<ul>
+  <li>Chỉ chiếm ~1% diện tích võng mạc nhưng chiếm ~50% vỏ thị giác (visual cortex).</li>
+  <li>Nhìn <strong>chi tiết cao</strong> — bạn dùng fovea để đọc spin của bóng, đánh giá tốc độ, xác định điểm tiếp xúc.</li>
+  <li>Vấn đề: fovea <strong>rất hẹp</strong> — bạn chỉ "thấy rõ" một vùng nhỏ. Bóng ở rìa tầm nhìn chỉ là "blur".</li>
+</ul>
+
+<p><strong>Peripheral Vision (Vùng Ngoại Vi) — 180 độ góc nhìn:</strong></p>
+<ul>
+  <li>Chiếm ~99% diện tích võng mạc nhưng chỉ ~50% vỏ thị giác.</li>
+  <li>Nhìn <strong>chuyển động</strong> tốt, <strong>chi tiết</strong> kém. Bạn dùng peripheral để phát hiện đối thủ di chuyển, biết vị trí của mình trên sân, cảm nhận "nguy hiểm" ở rìa.</li>
+  <li>Đây là lý do tại sao Djokovic <strong>không nhìn bóng 100% thời gian</strong> — anh ta dùng peripheral để theo dõi đối thủ, chỉ dùng fovea vào ~200ms trước khi đánh.</li>
+</ul>
+
+<div class="callout-gold">
+<strong>👁️ Insight quan trọng:</strong> Tầm nhìn trung tâm (central vision) quyết định <strong>đánh đúng</strong>, nhưng tầm nhìn ngoại vi (peripheral) quyết định <strong>đánh đúng chỗ</strong>. Tập cả hai. Đừng chỉ tập "nhìn bóng" — hãy tập "biết bạn đang ở đâu trên sân + bóng ở đâu + đối thủ ở đâu" đồng thời.
+</div>
+
+<p><strong>Depth Perception (Nhận Thức Chiều Sâu):</strong></p>
+
+<p>Đánh giá bóng ở khoảng cách nào là một trong những kỹ năng khó nhất. Não dùng <strong>5 cues</strong> để đo depth:</p>
+
+<ol>
+  <li><strong>Retinal disparity</strong> — mỗi mắt nhìn bóng từ góc hơi khác nhau, não hợp nhất thành depth 3D.</li>
+  <li><strong>Motion parallax</strong> — khi bạn di chuyển, vật gần "trôi" nhanh hơn vật xa. Não dùng tốc độ tương đối này để đo depth.</li>
+  <li><strong>Size familiarity</strong> — bóng tennis có size cố định (~6.7cm), bạn "biết" kích thước → kích thước trên võng mạc nhỏ = xa, lớn = gần.</li>
+  <li><strong>Linear perspective</strong> — đường baseline hội tụ về phía xa, giúp não đo khoảng cách.</li>
+  <li><strong>Accommodation</strong> — cơ thể mi mắt co giãn để focus, tín hiệu gửi về não về khoảng cách.</li>
+</ol>
+
+<p><strong>Ở người 50+:</strong> Accommodation giảm (lão hóa mắt), retinal disparity có thể bị ảnh hưởng nếu có vấn đề về thị lực, motion parallax chậm hơn do giảm tốc độ xử lý. Đây là lý do tại sao người lớn tuổi thường <strong>đánh lệch khi bóng ở xa</strong> — không phải vì kỹ thuật sai, mà vì depth perception kém hơn. Có thể train cải thiện qua các bài tập cụ thể (xem Phần 7).</p>
+</section>
+
+<section id="vor">
+<h2>3. VOR — Phản Xạ Giữ Ảnh Ổn Định Khi Xoay Đầu</h2>
+
+<p><strong>VOR (Vestibulo-Ocular Reflex)</strong> là một trong những phản xạ nhanh nhất của cơ thể — chỉ mất <strong>~15-20ms</strong> (nhanh hơn cả phản xạ giật tay khi chạm nóng!). Nó cho phép bạn <strong>nhìn rõ trong khi đầu đang chuyển động</strong>.</p>
+
+<h3>Cơ Chế Hoạt Động</h3>
+
+<p>Khi bạn xoay đầu sang phải với tốc độ ω (rad/s), hệ tiền đình (otolith organs + semicircular canals trong tai trong) phát hiện chuyển động → gửi tín hiệu đến nhân tiền đình ở thân não → kích hoạt cơ mắt xoay <strong>ngược chiều</strong> với cùng tốc độ ω. Kết quả: ảnh trên võng mạc <strong>không chuyển động</strong> — bạn thấy rõ.</p>
+
+<p>Công thức đơn giản: <em>Eye rotation = - Head rotation</em> (với tốc độ bằng nhau, ngược chiều).</p>
+
+<div class="callout">
+<strong>🔄 Tại sao quan trọng trong tennis:</strong> Khi bạn xoay đầu để theo bóng sang ngang baseline, VOR giữ ảnh bóng rõ trên võng mạc. Nếu VOR yếu (do tuổi, chấn thương, hoặc chưa train), bạn sẽ <strong>"mất bóng"</strong> khi xoay đầu — bóng trở thành blur, bạn phải chờ đầu dừng mới nhìn lại được, mất 200-300ms quý báu.
+</div>
+
+<h3>3 Loại VOR</h3>
+
+<table>
+<tr><th>Loại</th><th>Tần số</th><th>Ứng dụng tennis</th></tr>
+<tr><td>VOR ngang (horizontal)</td><td>0.5-5 Hz</td><td>Xoay đầu trái-phải khi theo bóng ngang</td></tr>
+<tr><td>VOR dọc (vertical)</td><td>0.5-5 Hz</td><td>Ít dùng — bạn hiếm khi xoay đầu lên-xuống nhanh trong tennis</td></tr>
+<tr><td>VOR xoay (torsional)</td><td>0.5-5 Hz</td><td>Nghiêng đầu khi bóng cao/thấp, smash overhead</td></tr>
+</table>
+
+<h3>Ở Người 50+ — VOR Suy Giảm</h3>
+
+<p>Nghiên cứu cho thấy VOR giảm <strong>10-15% mỗi decade</strong> sau tuổi 40. Lý do: otoconia (tinh thể canxi trong tai trong) bị thoái hóa, số lượng tế bào lông (hair cells) trong semicircular canals giảm, và tốc độ dẫn truyền thần kinh chậm hơn. Kết quả: <strong>"mất bóng" thường xuyên hơn ở người lớn tuổi</strong> — đặc biệt khi bóng đi nhanh sang ngang.</p>
+
+<p><strong>Tin tốt:</strong> VOR có thể <strong>train được</strong>. Các nghiên cứu cho thấy 6-8 tuần tập VOR cụ thể cải thiện 20-30% ở người 50-65 tuổi. Bài tập cụ thể ở Phần 7.</p>
+</section>
+
+<section id="anticipation">
+<h2>4. Anticipation — Nghệ Thuật Đọc Trước 200-300ms</h2>
+
+<p>Đây là kỹ năng <strong>phân biệt tay vợt elite với nghiệp dư</strong> rõ ràng nhất. Khi bạn xem Djokovic, Nadal, Federer, Sinner, Alcaraz — họ dường như <strong>"biết trước"</strong> bóng đi đâu. Họ không phản ứng nhanh hơn — họ <strong>dự đoán</strong> sớm hơn 200-300ms.</p>
+
+<h3>3 Visual Cues Quan Trọng Nhất</h3>
+
+<p>Nghiên cứu từ Đại học Ghent (Bỉ) cho thấy tay vợt elite đọc 3 cues chính:</p>
+
+<ol>
+  <li><strong>Trọng lượng chân (weight transfer)</strong> — 60% thông tin dự đoán đến từ cách đối thủ <strong>chuyển trọng lượng</strong> giữa hai chân trước khi đánh. Chân phải đặt nhiều trọng lượng → forehand cross-court. Chân trái → down-the-line.</li>
+  <li><strong>Vai (shoulder rotation)</strong> — 30% thông tin đến từ <strong>vai xoay</strong> trước khi vung vợt. Vai mở = cross-court. Vai đóng = down-the-line. Djokovic cực giỏi đọc cue này.</li>
+  <li><strong>Đầu gối (knee bend)</strong> — 10% thông tin từ <strong>độ thấp của đầu gối</strong>. Đầu gối thấp = bóng chậm, an toàn. Đầu gối cao = bóng nhanh, nguy hiểm.</li>
+</ol>
+
+<div class="callout-gold">
+<strong>🧠 Insight quan trọng:</strong> Tay vợt elite <strong>không nhìn bóng 100% thời gian</strong>. Họ dành ~30% thời gian nhìn <strong>cơ thể đối thủ</strong> (chân, vai, hông) để dự đoán hướng. Phần còn lại (~70%) dùng để theo dõi bóng + vị trí của mình. Người mới thường <strong>nhìn bóng 100%</strong> → không đọc được cues → phản ứng muộn 200-300ms.
+</div>
+
+<p><strong>Anticipation Có Thể Train:</strong> Có một số bài tập cụ thể để cải thiện anticipation:</p>
+
+<ul>
+  <li><strong>Mirror Drill:</strong> Đối thủ (hoặc coach) di chuyển ngẫu nhiên, bạn phản ứng. Ban đầu chậm, dần dần nhanh hơn. Tập 10 phút/ngày trong 4 tuần cải thiện anticipation 20-30%.</li>
+  <li><strong>Video Analysis:</strong> Xem lại các trận đấu elite ở 0.25x speed, đọc cues của Djokovic, Nadal, Federer. Tập "đoán" hướng bóng TRƯỚC khi xem kết quả. 5 video/tuần trong 8 tuần cải thiện đáng kể.</li>
+  <li><strong>Ball Machine với Visual Cue:</strong> Ball machine không cho cue, nhưng bạn có thể tập <strong>"đoán"</strong> hướng dựa trên hướng máy (mặc dù máy không thay đổi). Tập trung vào việc quyết định SỚM, không phải phản ứng nhanh.</li>
+</ul>
+</section>
+
+<section id="balance">
+<h2>5. Thăng Bằng &amp; Postural Control</h2>
+
+<p>Thăng bằng trong tennis không chỉ là <strong>"không bị ngã"</strong> — mà là <strong>kiểm soát tư thế chính xác trong 100-200ms</strong> để có thể tạo lực và chuyển hướng. Hệ thống kiểm soát tư thế gồm 3 thành phần, tương tự 3 hệ thống trong framework:</p>
+
+<h3>3 Thành Phần Kiểm Soát Tư Thế</h3>
+
+<ol>
+  <li><strong>Vestibular (tiền đình):</strong> Phát hiện gia tốc đầu (tai trong). Đây là "GPS" cho phương hướng.</li>
+  <li><strong>Visual (thị giác):</strong> Cung cấp thông tin về vị trí so với mặt đất, đối thủ, baseline. Đây là "bản đồ" không gian.</li>
+  <li><strong>Somatosensory (cảm giác cơ thể):</strong> Áp lực lên bàn chân, góc khớp, tension cơ. Đây là "cảm biến" trực tiếp.</li>
+</ol>
+
+<p><strong>Trong tennis, 3 thành phần hoạt động theo 3 giai đoạn:</strong></p>
+
+<ul>
+  <li><strong>Giai đoạn 1 (0-100ms):</strong> Somatosensory chiếm ưu thế — cơ thể phản ứng dựa trên áp lực bàn chân (split-step, ready position).</li>
+  <li><strong>Giai đoạn 2 (100-300ms):</strong> Visual chiếm ưu thế — mắt xác nhận vị trí đối thủ + bóng, não điều chỉnh.</li>
+  <li><strong>Giai đoạn 3 (300ms+):</strong> Vestibular chiếm ưu thế — tai trong xác nhận gia tốc đầu, hoàn tất điều chỉnh tư thế.</li>
+</ul>
+
+<div class="callout">
+<strong>⚠️ Vấn đề ở người 50+:</strong> Somatosensory giảm do mất proprioception (xem Thư Viện Thần Kinh & Tâm Lý). Vestibular giảm do thoái hóa otoconia. Visual có thể bị ảnh hưởng bởi lão hóa mắt. Kết quả: <strong>3 thành phần đều yếu hơn</strong> → thăng bằng kém → dễ ngã sau cú smash, dễ mất thăng bằng khi xoay người đánh. Tin tốt: <strong>có thể train cả 3</strong>.
+</div>
+
+<p><strong>Center of Pressure (COP) Trong Tennis:</strong> Nghiên cứu biomechanics cho thấy COP trong tư thế ready position dao động ~5-10mm (khi đứng yên), tăng lên ~20-30mm (khi split-step), và ~40-60mm (khi đang đánh). Tay vợt elite có COP ổn định hơn — dao động ít hơn ~30% so với người mới. Đây là <strong>signature của thăng bằng tốt</strong> — cơ thể kiểm soát chính xác vị trí trọng lực, không "lắc lư" thừa.</p>
+</section>
+
+<section id="50plus">
+<h2>6. Vision Ở Người 50+ — Tái Huấn Luyện Hệ Thống</h2>
+
+<p>Tuổi 50+ là thời điểm <strong>3 hệ thống bắt đầu suy giảm rõ rệt</strong>:</p>
+
+<table>
+<tr><th>Hệ thống</th><th>Suy giảm điển hình</th><th>Tác động tennis</th></tr>
+<tr><td>Visual</td><td>Giảm accommodation (lão hóa mắt), giảm contrast sensitivity, tăng thời gian thích nghi bóng tối</td><td>Khó đọc spin, khó theo bóng ở tốc độ cao, mất thị lực khi vào bóng râm</td></tr>
+<tr><td>Vestibular</td><td>Giảm 10-15%/decade sau 40, thoái hóa otoconia, giảm hair cells</td><td>Mất bóng khi xoay đầu, chậm phản ứng thăng bằng, dễ dizzy khi xoay nhanh</td></tr>
+<tr><td>Proprioception</td><td>Giảm mật độ thụ thể khớp, giảm tốc độ dẫn truyền thần kinh</td><td>Đứng sai chỗ, mất thăng bằng khi tiếp đất, giảm "body awareness"</td></tr>
+</table>
+
+<p><strong>Tin tốt: Tất cả 3 hệ thống đều có thể train ngược lại.</strong> Các nghiên cứu cho thấy:</p>
+
+<ul>
+  <li><strong>Vision training 6-8 tuần</strong> cải thiện contrast sensitivity 15-25% ở người 50-65 tuổi.</li>
+  <li><strong>VOR training 6-8 tuần</strong> cải thiện VOR gain 20-30% ở người 50-65 tuổi.</li>
+  <li><strong>Proprioception training 6-8 tuần</strong> cải thiện balance 15-20% ở người 50-65 tuổi (xem Thư Viện Thần Kinh & Tâm Lý).</li>
+</ul>
+
+<div class="callout-gold">
+<strong>👴 4 Bài Tập Tái Huấn Luyện Cho Người 50+</strong>
+<ol>
+  <li><strong>Brock String (10 phút/ngày):</strong> Sợi dây với 3 hạt màu, mắt nhìn hạt gần-trung-xa xen kẽ → train accommodation + convergence.</li>
+  <li><strong>Gaze Stabilization (10 phút/ngày):</strong> Nhìn chữ "X" trên tường, xoay đầu trái-phải ~1Hz trong 1 phút, nghỉ 30s, lặp 3 lần.</li>
+  <li><strong>Single-Leg Balance + Visual Perturbation (10 phút/ngày):</strong> Đứng 1 chân, xem video chuyển động → giữ thăng bằng. Tăng dần độ khó (mắt nhắm, đứng trên đệm).</li>
+  <li><strong>Ball Toss Tracking (10 phút/ngày):</strong> Tung bóng tennis lên cao 3-5m, theo dõi bằng mắt (không đầu) khi bóng rơi. Train smooth pursuit.</li>
+</ol>
+</div>
+
+<p>4 bài tập này, thực hiện đều đặn 6-8 tuần, có thể <strong>đảo ngược 50-70% sự suy giảm</strong> liên quan đến tuổi tác. Không phải là "chữa khỏi" — nhưng là "làm chậm và cải thiện đáng kể".</p>
+</section>
+
+<section id="drills">
+<h2>7. 5 Bài Tập 10 Phút Cho Sân Tennis</h2>
+
+<p>Đây là <strong>5 bài tập cụ thể</strong> bạn có thể làm trên sân tennis, mỗi bài 2 phút, tổng cộng 10 phút. Kết hợp với 4 bài tập tại nhà ở Phần 6, bạn sẽ có một <strong>chương trình training 30 phút/ngày</strong> cho toàn bộ hệ thống Thị Giác + VOR + Thăng Bằng.</p>
+
+<h3>Bài 1: Ball Toss Visual Tracking (2 phút)</h3>
+<p>Tung bóng tennis lên cao 3-4m, <strong>chỉ mắt theo dõi bóng (đầu vẫn đứng yên)</strong> khi bóng rơi xuống. Bắt lại bóng. Lặp 10-15 lần. Mục tiêu: train smooth pursuit (theo dõi mượt) và accommodation (focus xa-gần).</p>
+
+<h3>Bài 2: Peripheral Vision Wall (2 phút)</h3>
+<p>Đứng ở baseline, nhìn thẳng về phía lưới. Coach (hoặc đối thủ) giơ ngón tay ở 3 vị trí: trung tâm (nhìn thấy rõ), rìa trái (chỉ thấy chuyển động), rìa phải (chỉ thấy chuyển động). Bạn phải <strong>nói đúng vị trí</strong> ngón tay mà không xoay đầu. Lặp 10 lần mỗi vị trí. Mục tiêu: mở rộng "vùng ý thức" ngoại vi.</p>
+
+<h3>Bài 3: Split-Step + VOR (2 phút)</h3>
+<p>Đứng ở ready position, coach tung bóng nhẹ sang ngang baseline. Bạn split-step + xoay đầu theo bóng + đánh forehand. <strong>Focus: VOR giữ ảnh bóng rõ khi xoay đầu</strong>. Nếu bạn "mất bóng" khi xoay đầu → VOR yếu, cần train thêm. Lặp 10-15 quả. Mục tiêu: VOR + anticipation + footwork.</p>
+
+<h3>Bài 4: Ball Machine với Anticipation (2 phút)</h3>
+<p>Ball machine bắn bóng sang trái-phải xen kẽ (không báo trước). Bạn <strong>đoán hướng TRƯỚC khi bóng rời máy</strong> dựa trên "cues" của máy (mặc dù máy không có cues thật, tập này giúp bạn tập quyết định sớm). Lặp 20-30 quả. Mục tiêu: anticipation + decision speed.</p>
+
+<h3>Bài 5: Balance Recovery (2 phút)</h3>
+<p>Sau mỗi cú đánh (forehand, backhand, smash), bạn <strong>phải trở về ready position trong 1 giây</strong>. Coach đo thời gian. Elite: ~0.8s. Trung cấp: ~1.2s. Mới: ~1.5-2s. Tập 10 lần mỗi cú. Mục tiêu: balance recovery + footwork speed.</p>
+
+<div class="callout">
+<strong>⏰ Lịch tập đề xuất (30 phút/ngày):</strong>
+<ul>
+  <li>Sáng 10 phút (Brock String + Gaze Stabilization) — tại nhà, trước khi ra khỏi giường.</li>
+  <li>Trưa 10 phút (Single-Leg Balance + Ball Toss) — tại nhà hoặc sân.</li>
+  <li>Chiều 10 phút (5 bài tập trên sân) — trước khi đánh bóng thật (warm-up).</li>
+</ul>
+Sau 30 ngày, bạn sẽ thấy sự khác biệt rõ rệt: mắt theo bóng nhanh hơn, xoay đầu không "mất bóng", balance ổn định hơn, anticipation chính xác hơn.
+</div>
+</section>
+
+<section id="closing">
+<h2>8. Lời Kết — Mắt Nhanh, Chân Đúng Chỗ</h2>
+
+<p>Tennis không phải là "kỹ thuật + thể lực". Nó là <strong>thị giác + VOR + thăng bằng + kỹ thuật + thể lực + tâm lý</strong> — tất cả phối hợp. Thư viện này tập trung vào <strong>3 trong 6 thành phần</strong> thường bị bỏ qua: thị giác, VOR, thăng bằng.</p>
+
+<p><strong>Điểm mấu chốt:</strong> Một tay vợt có kỹ thuật hoàn hảo nhưng thị giác yếu sẽ đánh sai bóng. Một tay vợt có thị giác tốt nhưng balance kém sẽ đánh không chính xác. Một tay vợt có VOR yếu sẽ "mất bóng" khi xoay đầu. <strong>Mắt nhanh + chân đúng chỗ + tâm lý vững = chiến thắng</strong>.</p>
+
+<p><strong>Hành động cụ thể tiếp theo:</strong></p>
+<ol>
+  <li>Đọc lại Phần 4 (Anticipation) trước trận đấu tiếp theo — tập trung vào 3 visual cues: trọng lượng chân, vai, đầu gối.</li>
+  <li>Bắt đầu 4 bài tập tại nhà ở Phần 6 (Brock String, Gaze Stabilization, Single-Leg Balance, Ball Toss).</li>
+  <li>Bắt đầu 5 bài tập trên sân ở Phần 7 — làm trước khi đánh bóng thật.</li>
+  <li>Đọc sâu <code>Vi_Nhan_Thuc_Co_The_Tennis</code> (1-2 chương/tuần) nếu bạn muốn hiểu cặn kẽ về proprioception.</li>
+  <li>Đọc <code>The_Art_of_Modern_Tennis</code> (1 phần/tuần) nếu bạn muốn học "nghệ thuật đọc trận đấu".</li>
+  <li>Đọc <code>He_Thong_Tennis_Cap_Cao</code> (chương VOR) nếu bạn muốn cải thiện phản xạ tiền đình-thị giác.</li>
+</ol>
+
+<div class="callout-gold">
+<strong>👁️ Triết lý cuối cùng:</strong> <em>Mắt là cánh cửa đầu tiên của mọi cú đánh. Trước khi tay cầm vợt, mắt đã quyết định 70% kết quả. Trước khi chân di chuyển, mắt đã đọc cues. Trước khi não phân tích, mắt đã chụp ảnh. Đầu tư vào thị giác + VOR + thăng bằng là đầu tư vào <strong>nền tảng</strong> — và nền tảng vững thì mọi cú đánh đều tốt hơn.</em>
+</div>
+
+<p>Chúc bạn tận hưởng hành trình khám phá <strong>thị giác, VOR và thăng bằng trong tennis</strong>. Đây không phải điểm đến — mà là một con đường dài, mỗi ngày một bài tập, mỗi trận đấu một bài học mới.</p>
+
+<p style="text-align: center; margin-top: 30px; padding: 20px; background: linear-gradient(135deg, rgba(192, 57, 43, 0.2) 0%, rgba(243, 156, 18, 0.2) 100%); border-radius: 8px; font-style: italic; color: var(--accent-gold);">
+<strong>"Mắt nhanh, VOR vững, chân đúng chỗ — Đó là nền tảng của mọi cú đánh đỉnh cao."</strong>
+</p>
+</section>
+
+<footer style="text-align: center; padding: 30px; margin-top: 40px; border-top: 2px solid var(--accent-gold); color: var(--text-muted); font-size: 0.9em;">
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+  <p style="margin-top: 16px;">
+    <a href="vision_library.html" class="nav-link">← Quay Lại Library Index</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

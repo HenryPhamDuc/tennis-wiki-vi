@@ -1,0 +1,578 @@
+<html lang="vi"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHECKLIST FOREHAND – ĐỪNG GIẾT BÓNG</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap');
+:root{
+  --bg:#E6F0FA;
+  --card:#ffffff;
+  --text:#0a192f;
+  --muted:#475569;
+  --blue:#2563eb;
+  --blue-soft:#dbeafe;
+  --red:#dc2626;
+  --border:#cbd5e1;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Be Vietnam Pro', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  font-size:clamp(17px, 2.3vw, 19px);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{
+  max-width:800px;
+  margin:0 auto;
+  padding:20px 14px 40px;
+}
+.header{
+  text-align:center;
+  margin:8px 0 18px;
+}
+.badge{
+  display:inline-block;
+  background:var(--blue-soft);
+  color:#1e40af;
+  font-weight:600;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:999px;
+  letter-spacing:.3px;
+  margin-bottom:10px;
+}
+h1{
+  margin:0;
+  font-weight:800;
+  font-size:clamp(28px, 6vw, 40px);
+  letter-spacing:-.5px;
+  line-height:1.1;
+}
+h1 span{
+  color:var(--blue);
+  display:block;
+  font-size:clamp(22px,5vw,30px);
+  margin-top:4px;
+}
+.toolbar{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin:14px 0 4px;
+}
+.btn{
+  appearance:none;
+  border:1px solid var(--border);
+  background:#fff;
+  color:var(--text);
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+  transition:.15s;
+}
+.btn:hover{background:#f8fafc}
+.btn:active{transform:scale(.98)}
+.card{
+  background:var(--card);
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(2,37,82,.08), 0 2px 8px rgba(2,37,82,.05);
+  padding:22px 18px 10px;
+  border:1px solid #e2e8f0;
+}
+.section{
+  padding:14px 6px;
+  border-top:1px dashed #e2e8f0;
+}
+.section:first-child{border-top:0; padding-top:4px}
+.sec-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 10px;
+  font-size:clamp(19px,4.5vw,22px);
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.num{
+  width:32px;
+  height:32px;
+  border-radius:9px;
+  background:var(--blue);
+  color:white;
+  display:grid;
+  place-items:center;
+  font-size:17px;
+  font-weight:700;
+  flex-shrink:0;
+  box-shadow:0 4px 10px rgba(37,99,235,.25);
+}
+.sec-sub{
+  color:var(--muted);
+  font-weight:600;
+  margin-left:42px;
+  margin-top:-6px;
+  margin-bottom:8px;
+  font-size:15px;
+}
+.checks{display:flex; flex-direction:column; gap:4px}
+.check{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:10px 8px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:background .15s;
+  user-select:none;
+}
+.check:hover{background:#f5faff}
+.check input{
+  appearance:none;
+  -webkit-appearance:none;
+  width:26px;
+  height:26px;
+  min-width:26px;
+  border:2.5px solid #0f172a;
+  border-radius:6px;
+  background:#fff;
+  position:relative;
+  cursor:pointer;
+  margin-top:2px;
+  transition:.15s;
+}
+.check input:checked{
+  background:var(--blue);
+  border-color:var(--blue);
+}
+.check input:checked::after{
+  content:'';
+  position:absolute;
+  left:7px;
+  top:2px;
+  width:6px;
+  height:13px;
+  border:solid white;
+  border-width:0 3px 3px 0;
+  transform:rotate(45deg);
+}
+.check span{
+  padding-top:1px;
+}
+.check strong{font-weight:700}
+em.key{
+  font-style:normal;
+  background:#fef3c7;
+  padding:1px 6px;
+  border-radius:6px;
+  font-weight:600;
+}
+.warn-list{
+  margin:6px 0 0 42px;
+  padding:0;
+  list-style:none;
+}
+.warn-list li{
+  position:relative;
+  padding:8px 0 8px 28px;
+  border-bottom:1px solid #f1f5f9;
+}
+.warn-list li:last-child{border-bottom:0}
+.warn-list li::before{
+  content:'';
+  position:absolute;
+  left:0; top:14px;
+  width:14px; height:14px;
+  border-radius:4px;
+  background:#fee2e2;
+  border:2px solid var(--red);
+}
+.footer{
+  margin-top:18px;
+  padding:16px 14px;
+  background:#f0f7ff;
+  border:1px solid #dbeafe;
+  border-radius:16px;
+  text-align:center;
+}
+.quote{
+  font-style:italic;
+  color:#1e3a8a;
+  font-weight:500;
+  margin:6px 0;
+  font-size:clamp(15px,3.5vw,17px);
+}
+.note{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:12px;
+}
+/* Print */
+@page{size:A4; margin:12mm}
+@media print{
+  body{background:white}
+  .wrap{padding:0}
+  .card{box-shadow:none; border:0; padding:0}
+  .toolbar, .note{display:none !important}
+  .header{margin-bottom:10px}
+  .footer{background:white; border:1px solid #e2e8f0; page-break-inside:avoid}
+  .check:hover{background:transparent}
+  .check input{border-width:2px; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .section{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="header">
+    <div class="badge">Dành cho người chơi 52 tuổi • Forehand bền vững</div>
+    <h1>CHECKLIST FOREHAND <span>ĐỪNG GIẾT BÓNG</span></h1>
+    <div class="toolbar">
+      <button class="btn" onclick="window.print()">🖨️ In trang</button>
+      <button class="btn" id="reset">↺ Bỏ chọn</button>
+    </div>
+  </header>
+
+  <main class="card">
+    <!-- 1 -->
+    <section class="section">
+      <h2 class="sec-title"><span class="num">1</span> TRƯỚC KHI BÓNG TỚI – Giữ Khung</h2>
+      <div class="sec-sub">Giữ Khung</div>
+      <div class="checks">
+        <label class="check">
+          <input type="checkbox" id="c1">
+          <span>Vợt trước ngực, 2 tay tạo hình <strong>KIM CƯƠNG</strong> <em class="key">Make A Diamond</em></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c2">
+          <span>Cảm nhận toàn thân kết nối: chân – lưng – vai – tay <em class="key">whole body united</em></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c3">
+          <span>Thả lỏng cổ tay, <strong>không kéo vợt ra sau lưng</strong></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="section">
+      <h2 class="sec-title"><span class="num">2</span> KHI LOAD – Lấy Lực Từ Đất</h2>
+      <div class="sec-sub">Lấy Lực Từ Đất</div>
+      <div class="checks">
+        <label class="check">
+          <input type="checkbox" id="c4">
+          <span>Ép bàn chân ngoài xuống <em class="key">GRF</em></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c5">
+          <span><strong>Xoay hông trước</strong>, core căng <em class="key">SSC – Stretch Shorten</em></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c6">
+          <span>Để đầu vợt tự rơi xuống dưới bóng <em class="key">let racket head drop</em>, không dùng vai kéo</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="section">
+      <h2 class="sec-title"><span class="num">3</span> LÚC CHẠM – Cho Bóng Cắn</h2>
+      <div class="sec-sub">Cho Bóng Cắn</div>
+      <div class="checks">
+        <label class="check">
+          <input type="checkbox" id="c7">
+          <span>Điểm chạm <strong>TRƯỚC NGỰC</strong>, không bên hông</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c8">
+          <span>Chạm nửa <strong>DƯỚI</strong> mặt vợt, mặt vợt hơi mở</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c9">
+          <span>Cảm giác <strong>"BITE"</strong> – bóng lún vào dây 1 nhịp, <em class="key">FEEL NOT PUSH</em></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c10">
+          <span>Kéo lên tạo xoáy, không đập xuyên <em class="key">Spin = Control</em></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section class="section">
+      <h2 class="sec-title"><span class="num">4</span> Ý ĐỊNH – Cứu Bóng Sống</h2>
+      <div class="sec-sub">Cứu Bóng Sống</div>
+      <div class="checks">
+        <label class="check">
+          <input type="checkbox" id="c11">
+          <span><strong>Không giết:</strong> không đóng mặt vợt</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c12">
+          <span>Chỉ <strong>REDIRECT</strong> – đưa bóng vào sân thêm 1 lần nữa</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="c13">
+          <span>Không cần thêm pace, <strong>dùng tốc độ bóng đối phương</strong></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section class="section">
+      <h2 class="sec-title"><span class="num">5</span> 3 DẤU HIỆU ĐANG "GIẾT"</h2>
+      <ul class="warn-list">
+        <li><strong>Vai mỏi trước chân</strong> → đang dùng tay</li>
+        <li><strong>Tiếng "bộp" ngắn</strong> → mất bite</li>
+        <li><strong>Bóng đi thẳng, không vòng</strong> → thiếu spin</li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      <p class="quote">"The whole body is united as a single unit – each part fully connected to the next"</p>
+      <p class="quote">"Try to sustain or rescue the ball from dying unnaturally"</p>
+    </div>
+  </main>
+
+  <p class="note">Mẹo: chạm vào ô vuông để đánh dấu trên điện thoại. Checklist sẽ tự lưu.</p>
+</div>
+
+<script>
+(function(){
+  const boxes = document.querySelectorAll('input[type="checkbox"]');
+  boxes.forEach(box=>{
+    const key = 'fh_'+box.id;
+    try{ if(localStorage.getItem(key)==='1') box.checked=true; }catch(e){}
+    box.addEventListener('change',()=>{ try{ localStorage.setItem(key, box.checked?'1':'0'); }catch(e){} });
+  });
+  document.getElementById('reset').addEventListener('click',()=>{
+    boxes.forEach(b=>{ b.checked=false; try{ localStorage.removeItem('fh_'+b.id);}catch(e){} });
+  });
+})();
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Serve Biomechanics: Grip & Injury Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        :root {
+            --palette-primary: #0D9488; /* Vibrant Teal */
+            --palette-secondary: #0F172A; /* Deep Navy */
+            --palette-accent: #F59E0B; /* Amber */
+            --palette-bg: #F8FAFC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--palette-bg);
+            color: var(--palette-secondary);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        .gradient-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+        }
+
+        .bevel-active {
+            background-color: var(--palette-primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        canvas {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+<!-- 
+PLAN & NARRATIVE SUMMARY:
+1. Introduction: Hook the reader with the core problem (Tennis Elbow) and the mechanical solution (Continental Grip).
+2. The Grip Bevels: A spatial interactive diagram using Canvas to show where the index knuckle sits.
+3. Kinetic Power Output: A stacked bar chart showing how different joints contribute to total head speed.
+4. Strain Analysis: A Radar chart comparing "Continental" vs "Waiter's Tray" across 5 biomechanical metrics.
+5. The Toss Zone: A coordinate map (Plotly) showing the "Danger Zone" vs "Power Zone" for ball placement.
+6. Conclusion/Drills: A structured HTML/CSS list for recovery protocols.
+-->
+
+<!-- 
+VISUALIZATION JUSTIFICATION:
+- Bevel Analysis -> Goal: Organize/Inform -> Custom Canvas Implementation -> Shows exact hand placement without SVG.
+- Velocity Components -> Goal: Comparison -> Stacked Bar (Chart.js) -> Breaks down $3000^\circ/s$ shoulder vs $1500^\circ/s$ forearm.
+- Mechanical Load -> Goal: Relationship -> Radar Chart (Chart.js) -> Compares strain, rotation, and extension profiles.
+- Toss Accuracy -> Goal: Geospatial/Distribution -> Plotly Scatter (Canvas Mode) -> Visualizes ball placement vs injury risk.
+- NO SVG / NO MERMAID JS confirmed.
+-->
+
+<!-- CHOSEN PALETTE: "Brilliant Blues & Vibrant Teals" (High Contrast Sport Theme) -->
+
+<div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <header class="mb-12 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 mb-4">
+            SERVE <span class="text-teal-600">MECHANICS</span> LAB
+        </h1>
+        <p class="text-xl text-slate-600 max-w-2xl">
+            A biomechanical breakdown of the Continental Grip, Kinetic Chain efficiency, and the physics of preventing lateral epicondylitis.
+        </p>
+    </header>
+
+    <!-- Section 1: The Bevel Anatomy -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="gradient-card p-8 rounded-3xl shadow-xl border border-slate-100">
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                <span class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm">1</span>
+                Handle Bevel Alignment
+            </h2>
+            <p class="text-slate-600 mb-6">
+                Your notes emphasize the <strong>Lateral Plane</strong>. For a true Continental grip, the index knuckle must rest on Bevel 2. This sets the palm on a 45° angle, allowing the elbow to extend fully without locking the radioulnar joint.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6" id="bevel-controls">
+                <button onclick="drawBevel(2)" class="px-4 py-2 border-2 border-teal-600 rounded-lg font-bold text-teal-600 hover:bg-teal-50 transition-all bevel-active" id="btn-2">Bevel 2 (Standard)</button>
+                <button onclick="drawBevel(3)" class="px-4 py-2 border-2 border-slate-300 rounded-lg font-bold text-slate-500 hover:border-teal-300 transition-all" id="btn-3">Bevel 3 (Eastern)</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-inner flex justify-center">
+                <canvas id="bevelCanvas" width="300" height="300"></canvas>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+            <div class="bg-teal-600 text-white p-8 rounded-3xl shadow-2xl mb-6">
+                <h3 class="text-3xl font-black mb-2">3000°/s</h3>
+                <p class="opacity-90 font-medium">Internal Shoulder Rotation Velocity</p>
+                <div class="mt-4 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div class="h-full bg-amber-400 w-full animate-pulse"></div>
+                </div>
+            </div>
+            <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-2xl">
+                <h3 class="text-3xl font-black mb-2">1500°/s</h3>
+                <p class="opacity-90 font-medium">Forearm Pronation Speed</p>
+                <div class="mt-4 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div class="h-full bg-teal-400 w-3/4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Kinetic Chain Breakdown -->
+    <section class="mb-16">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-slate-100">
+            <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                <span class="w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center text-sm">2</span>
+                The Kinetic Chain Stack
+            </h2>
+            <p class="text-slate-600 mb-8 max-w-3xl">
+                The total velocity of the racquet head ($v_{head}$) is a sum of angular velocities across the chain. When using the <strong>Continental Grip</strong>, the "Pronation" phase adds a significant multiplier that is physically impossible in the "Waiter's Tray" position.
+            </p>
+            <div class="chart-container md:max-w-4xl h-[400px]">
+                <canvas id="velocityChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Danger Zone (Strain) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="gradient-card p-8 rounded-3xl shadow-xl border border-slate-100 order-2 md:order-1">
+            <h2 class="text-2xl font-bold mb-4">Strain Profile Comparison</h2>
+            <p class="text-slate-600 mb-6 text-sm">
+                In the "Waiter's Tray" error, the elbow is flexed ($< 130^\circ$) at impact, causing <strong>eccentric loading</strong> on the Extensor Carpi Radialis Brevis (ECRB).
+            </p>
+            <div class="chart-container">
+                <canvas id="strainChart"></canvas>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center order-1 md:order-2">
+            <h2 class="text-4xl font-black text-slate-900 mb-6 tracking-tight">The "Bê Khay" Trap</h2>
+            <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center shrink-0 font-bold">!</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Locked Radioulnar Joint</h4>
+                        <p class="text-sm text-slate-500">Supination locks the bone structure, preventing natural shock absorption.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center shrink-0 font-bold">✗</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Tendon Micro-tears</h4>
+                        <p class="text-sm text-slate-500">Forced wrist flexion pulls the lateral epicondyle at 3x normal load.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center shrink-0 font-bold">✓</div>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Continental Solution</h4>
+                        <p class="text-sm text-slate-500">Full extension ($180^\circ$) shifts force to the Latissimus Dorsi (Large muscle groups).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Toss Zone Matrix -->
+    <section class="mb-16">
+        <div class="bg-slate-900 p-8 md:p-12 rounded-3xl shadow-2xl text-white">
+            <h2 class="text-2xl font-bold mb-4">Toss Zone & Contact Physics</h2>
+            <p class="text-slate-400 mb-8 max-w-2xl">
+                A toss that is too far forward ($> 50\text{ cm}$) forces the brain to compensate by opening the palm vertically, reverting to the error position.
+            </p>
+            <div id="tossPlot" class="w-full h-[400px] rounded-xl overflow-hidden"></div>
+        </div>
+    </section>
+
+    <!-- Section 5: Roadmap to Recovery -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-black mb-8 text-center">Corrective Drill Protocol</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border-t-4 border-teal-500 shadow-lg">
+                <h3 class="font-bold text-lg mb-2 text-teal-700">1. Tyler Twist</h3>
+                <p class="text-sm text-slate-600">Eccentric resistance training for the ECRB using a rolled towel or bar. 3 sets of 15 reps daily.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border-t-4 border-amber-500 shadow-lg">
+                <h3 class="font-bold text-lg mb-2 text-amber-700">2. Edge-On Taps</h3>
+                <p class="text-sm text-slate-600">Slow racquet drops. Tap the fence with the racquet edge ONLY to cement the lateral plane feel.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border-t-4 border-blue-500 shadow-lg">
+                <h3 class="font-bold text-lg mb-2 text-blue-700">3. Shadow Pronation</h3>
+                <p class="text-sm text-slate-600">Shadow serves focusing on the "Edge-Above-Turn" sequence. Freeze at full $180^\circ$ extension.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-12 border-t border-slate-200">
+        <p class="text-slate-400 text-sm italic">Analysis based on "Tennis serve grip analysis.docx" - Biomechanical optimization for injury prevention.</p>
+      <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+
+<script>
+    // --- HELPER: Label Wrapping (Mandatory Logic) ---
+    function wrapLabels(label) {
+        if (label.length <= 16) return label;
+        const words = label.split(' ');
+        const lines = [];
+        let currentLine = '';
+        words.forEach(word => {
+            if ((currentLine + word).length > 16) {
+                lines.push(currentLine.trim());
+                currentLine = word + ' ';
+            } else {
+                currentLine += word + ' ';
+            }
+        });
+        lines.push(currentLine.trim());
+        return lines;
+    }
+
+    // --- CHART 1: Velocity Breakdown (Stacked Bar) ---
+    const velocityCtx = document.getElementById('velocityChart').getContext('2d');
+    new Chart(velocityCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Continental Grip', 'Waiter\'s Tray Error'],
+            datasets: [
+                {
+                    label: wrapLabels('Shoulder Internal Rotation'),
+                    data: [3000, 2200],
+                    backgroundColor: '#0D9488'
+                },
+                {
+                    label: wrapLabels('Forearm Pronation Speed'),
+                    data: [1500, 200],
+                    backgroundColor: '#0F172A'
+                },
+                {
+                    label: wrapLabels('Wrist Flexion Contribution'),
+                    data: [300, 1200],
+                    backgroundColor: '#F59E0B'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            scales: {
+                x: { stacked: true, title: { display: true, text: 'Angular Velocity (Degrees/Sec)' } },
+                y: { stacked: true }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // --- CHART 2: Strain Profile (Radar) ---
+    const strainCtx = document.getElementById('strainChart').getContext('2d');
+    new Chart(strainCtx, {
+        type: 'radar',
+        data: {
+            labels: [
+                wrapLabels('Tendon Load (ECRB)'),
+                wrapLabels('Elbow Extension'),
+                wrapLabels('Kinetic Efficiency'),
+                wrapLabels('Shoulder Safety'),
+                wrapLabels('Pronation Potential')
+            ],
+            datasets: [
+                {
+                    label: 'Continental',
+                    data: [2, 10, 9, 9, 10],
+                    borderColor: '#0D9488',
+                    backgroundColor: 'rgba(13, 148, 136, 0.2)'
+                },
+                {
+                    label: 'Waiter\'s Tray',
+                    data: [9, 4, 3, 4, 2],
+                    borderColor: '#F59E0B',
+                    backgroundColor: 'rgba(245, 158, 11, 0.2)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // --- PLOTLY: Toss Matrix (Canvas Render) ---
+    const tossData = [
+        {
+            x: [0, 15, -10, 50, 60, 10, -5],
+            y: [20, 25, 15, 60, 70, -10, -20],
+            mode: 'markers+text',
+            type: 'scatter',
+            name: 'Sample Tosses',
+            text: ['Ideal', 'Safe', 'Safe', 'CRITICAL', 'CRITICAL', 'Lower Back Risk', 'Shoulder Risk'],
+            textposition: 'top center',
+            marker: { 
+                size: 12, 
+                color: ['#0D9488', '#0D9488', '#0D9488', '#F43F5E', '#F43F5E', '#F59E0B', '#F59E0B']
+            }
+        }
+    ];
+
+    const tossLayout = {
+        title: 'Ball Toss Contact Zone (cm from baseline)',
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)',
+        font: { color: '#ffffff' },
+        xaxis: { title: 'Lateral Offset (Right/Left)', gridcolor: '#334155' },
+        yaxis: { title: 'Forward Distance', gridcolor: '#334155' },
+        shapes: [
+            { type: 'circle', x0: -15, y0: 10, x1: 20, y1: 35, line: { color: '#0D9488', dash: 'dash' }, name: 'Power Zone' }
+        ]
+    };
+
+    Plotly.newPlot('tossPlot', tossData, tossLayout, { responsive: true, displayModeBar: false });
+
+    // --- CUSTOM CANVAS: Handle Bevels ---
+    function drawBevel(activeBevel) {
+        const canvas = document.getElementById('bevelCanvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        const centerX = 150;
+        const centerY = 150;
+        const radius = 100;
+        const sides = 8;
+        
+        // Draw Octagon
+        ctx.beginPath();
+        for (let i = 0; i < sides; i++) {
+            const angle = (i * 2 * Math.PI) / sides - Math.PI / 8;
+            const x = centerX + radius * Math.cos(angle);
+            const y = centerY + radius * Math.sin(angle);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.strokeStyle = '#cbd5e1';
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // Label Bevels and Highlight Active
+        for (let i = 0; i < sides; i++) {
+            const angle = (i * 2 * Math.PI) / sides + Math.PI / 8;
+            const bevelNum = i + 1;
+            
+            // Highlight the active edge
+            if (bevelNum === activeBevel) {
+                ctx.beginPath();
+                const a1 = (i * 2 * Math.PI) / sides - Math.PI / 8;
+                const a2 = ((i + 1) * 2 * Math.PI) / sides - Math.PI / 8;
+                ctx.moveTo(centerX + radius * Math.cos(a1), centerY + radius * Math.sin(a1));
+                ctx.lineTo(centerX + radius * Math.cos(a2), centerY + radius * Math.sin(a2));
+                ctx.strokeStyle = '#0D9488';
+                ctx.lineWidth = 8;
+                ctx.stroke();
+            }
+
+            const textAngle = (i * 2 * Math.PI) / sides;
+            const tx = centerX + (radius + 25) * Math.cos(textAngle);
+            const ty = centerY + (radius + 25) * Math.sin(textAngle);
+            
+            ctx.fillStyle = bevelNum === activeBevel ? '#0D9488' : '#94a3b8';
+            ctx.font = bevelNum === activeBevel ? 'bold 16px Inter' : '14px Inter';
+            ctx.textAlign = 'center';
+            ctx.fillText(bevelNum, tx, ty);
+        }
+
+        // Update Buttons
+        document.getElementById('btn-2').className = activeBevel === 2 ? 
+            'px-4 py-2 border-2 border-teal-600 rounded-lg font-bold text-white bg-teal-600 shadow-lg transition-all scale-105' : 
+            'px-4 py-2 border-2 border-slate-300 rounded-lg font-bold text-slate-500 hover:border-teal-300 transition-all';
+        document.getElementById('btn-3').className = activeBevel === 3 ? 
+            'px-4 py-2 border-2 border-teal-600 rounded-lg font-bold text-white bg-teal-600 shadow-lg transition-all scale-105' : 
+            'px-4 py-2 border-2 border-slate-300 rounded-lg font-bold text-slate-500 hover:border-teal-300 transition-all';
+    }
+
+    // Initialize
+    drawBevel(2);
+
+</script>
+
+<!-- NO MERMAID JS OR SVG USED IN THIS OUTPUT -->
+</body>
+</html>

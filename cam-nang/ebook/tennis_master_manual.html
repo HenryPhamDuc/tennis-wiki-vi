@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Tennis Toàn Tập — Complete Tennis Manual (11 Shots)</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --accent-green: #27ae60;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 14px;
+    margin-bottom: 30px;
+    border: 3px solid var(--accent-gold);
+    box-shadow: 0 0 40px rgba(243, 156, 18, 0.3);
+    position: relative;
+  }
+  .hero::before {
+    content: "🎾";
+    font-size: 4em;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: 2.6em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+  }
+  .hero .subtitle {
+    font-size: 1.2em;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .hero .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .hero .meta-card {
+    background: rgba(0,0,0,0.3);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-gold);
+  }
+  .hero .meta-card strong {
+    color: var(--accent-gold);
+    font-size: 1.4em;
+    display: block;
+  }
+  .hero .meta-card span {
+    color: var(--text-muted);
+    font-size: 0.85em;
+  }
+
+  /* TOC */
+  .toc-master {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-red);
+  }
+  .toc-master h2 {
+    color: var(--accent-red);
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--accent-red);
+    padding-bottom: 10px;
+  }
+  .toc-master ol { list-style: none; counter-reset: toc; padding-left: 0; }
+  .toc-master > ol > li {
+    counter-increment: toc;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc-master > ol > li::before {
+    content: counter(toc, decimal-leading-zero) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 12px;
+    font-family: 'Courier New', monospace;
+  }
+  .toc-master > ol > li > a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .toc-master > ol > li > a:hover { color: var(--accent-gold); }
+  .toc-master .ch-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-style: italic;
+    display: block;
+    margin-top: 4px;
+    margin-left: 30px;
+  }
+
+  /* Part divider */
+  .part {
+    text-align: center;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, var(--accent-red) 0%, #8e2820 100%);
+    border-radius: 12px;
+    margin: 40px 0 25px;
+    border: 2px solid var(--accent-gold);
+  }
+  .part h2 {
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  }
+  .part .part-sub {
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* Chapter sections */
+  section.chapter {
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section.chapter h2 {
+    color: var(--accent-gold);
+    font-size: 1.9em;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-red);
+  }
+  section.chapter .ch-num {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  section.chapter .ch-tagline {
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 5px 0 25px;
+    font-size: 1.05em;
+  }
+  section.chapter h3 {
+    color: var(--accent-red);
+    font-size: 1.35em;
+    margin: 25px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent-gold);
+  }
+  section.chapter h4 {
+    color: var(--accent-gold);
+    font-size: 1.1em;
+    margin: 18px 0 8px;
+  }
+  section.chapter p { margin-bottom: 14px; text-align: justify; }
+  section.chapter ul, section.chapter ol { margin: 10px 0 16px 25px; }
+  section.chapter li { margin-bottom: 8px; }
+  section.chapter strong { color: var(--accent-gold); }
+  section.chapter em { color: var(--text-muted); font-style: italic; }
+
+  /* Callouts */
+  .callout {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 6px;
+  }
+  .callout-gold {
+    background: rgba(243, 156, 18, 0.12);
+    border-left: 4px solid var(--accent-gold);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 6px;
+  }
+  .callout-green {
+    background: rgba(39, 174, 96, 0.12);
+    border-left: 4px solid var(--accent-green);
+    padding: 14px 18px;
+    margin: 18px 0;
+    border-radius: 6px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.95em;
+  }
+  th { background: var(--accent-red); color: white; padding: 10px; text-align: left; }
+  td { background: var(--navy-light); padding: 10px; border-bottom: 1px solid var(--border); }
+  tr:hover td { background: #1d3a5e; }
+
+  /* Research codes */
+  .research-code {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--accent-gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--accent-gold);
+  }
+
+  /* Quick Reference Cards */
+  .qr-card {
+    background: var(--navy-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 18px 0;
+    border: 1px solid var(--accent-gold);
+  }
+  .qr-card h4 {
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  .qr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 10px 0;
+  }
+  .qr-grid .qr-item {
+    background: var(--navy);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .qr-grid .qr-item .label {
+    color: var(--accent-gold);
+    font-size: 0.85em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .qr-grid .qr-item .value {
+    color: var(--text-light);
+    font-size: 0.9em;
+  }
+
+  /* Chapter closing */
+  .ch-closing {
+    text-align: center;
+    margin: 25px 0 5px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(243,156,18,0.15) 0%, rgba(192,57,43,0.1) 100%);
+    border-radius: 8px;
+    border: 1px dashed var(--accent-gold);
+  }
+  .ch-closing .closing-text {
+    font-size: 1.5em;
+    color: var(--accent-gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: 'Courier New', monospace;
+  }
+  .ch-closing .closing-meaning {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 6px;
+  }
+
+  /* Link to full guide */
+  .full-guide-link {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--navy);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: background 0.2s;
+  }
+  .full-guide-link:hover { background: #d88c0f; }
+
+  /* Master footer */
+  footer.master-footer {
+    text-align: center;
+    padding: 50px 30px;
+    margin-top: 50px;
+    border-top: 3px solid var(--accent-gold);
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+  }
+  footer.master-footer .closing-master {
+    font-size: 2em;
+    color: var(--accent-gold);
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  footer.master-footer .signature {
+    color: var(--text-muted);
+    font-size: 1.1em;
+    font-style: italic;
+    margin-bottom: 25px;
+  }
+  footer.master-footer .stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+  }
+  footer.master-footer .stats div {
+    color: var(--accent-gold);
+    font-weight: bold;
+  }
+  footer.master-footer .stats div small {
+    display: block;
+    color: var(--text-muted);
+    font-weight: normal;
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.7em; }
+    section.chapter h2 { font-size: 1.4em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <h1>CẨM NANG TENNIS TOÀN TẬP</h1>
+  <p class="subtitle">Complete Tennis Manual — 11 Cú Đánh Trên Sân Tennis</p>
+  <div class="meta-grid">
+    <div class="meta-card"><strong>11</strong><span>Cú đánh</span></div>
+    <div class="meta-card"><strong>~270 KB</strong><span>Tổng dung lượng</span></div>
+    <div class="meta-card"><strong>87+</strong><span>Research codes</span></div>
+    <div class="meta-card"><strong>55+</strong><span>Bài tập thực hành</span></div>
+    <div class="meta-card"><strong>50+</strong><span>Lỗi cần tránh</span></div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section style="background: var(--card-bg); padding: 35px; border-radius: 12px; margin-bottom: 30px; border-left: 5px solid var(--accent-gold);">
+  <h2 style="color: var(--accent-gold); margin-bottom: 20px; font-size: 1.7em;">📖 Giới Thiệu Tổng Quan</h2>
+
+  <p>Tennis là môn thể thao gồm <strong>nhiều cú đánh riêng biệt</strong>, mỗi cú có mục đích chiến thuật, kỹ thuật, và footwork riêng. Để chơi tennis tốt, người chơi cần nắm vững <strong>các cú đánh cơ bản</strong> (groundstrokes, serve, volley) và <strong>các cú đánh chiến thuật</strong> (lob, drop shot, overhead, passing shot, approach shot). Cuốn cẩm nang này tổng hợp <strong>11 cú đánh quan trọng nhất</strong> trong tennis hiện đại, được tổng hợp từ 11 thư viện chuyên sâu đã được xây dựng.</p>
+
+  <p>Mỗi chương trình bày <strong>triết lý cốt lõi</strong>, <strong>kỹ thuật chi tiết</strong>, <strong>cách áp dụng chiến thuật</strong>, <strong>lỗi phổ biến &amp; cách khắc phục</strong>, và <strong>5 bài tập thực hành 15 phút</strong> dành cho người 50+. Cuối mỗi chương có <strong>"closing phrase"</strong> tóm tắt bản chất của cú đánh.</p>
+
+  <div class="callout">
+    <strong>🎾 11 cú đánh được chia thành 3 nhóm chiến thuật:</strong>
+    <ol>
+      <li><strong>Nhóm Tấn Công Từ Baseline</strong>: Forehand, 2H Backhand, 1H Backhand, Return of Serve (4 cú)</li>
+      <li><strong>Nhóm Tại Lưới &amp; Trên Cao</strong>: Volley, Overhead Smash, Lob, Drop Shot, Approach Shot, Passing Shot (6 cú)</li>
+      <li><strong>Nhóm Khởi Đầu Điểm</strong>: Serve (1 cú — mở đầu mọi rally)</li>
+    </ol>
+  </div>
+
+  <div class="callout-gold">
+    <strong>💡 Cách đọc hiệu quả nhất:</strong>
+    <ul>
+      <li><strong>Đọc tuần tự theo nhóm</strong>: Bắt đầu với Forehand → Backhand → Serve → Volley → các cú chiến thuật.</li>
+      <li><strong>Đọc theo tình huống</strong>: Khi cần cú nào → vào chương đó (mỗi chương độc lập).</li>
+      <li><strong>In cheat sheet</strong>: Mỗi chương có bảng "Quick Reference" — in ra mang ra sân.</li>
+      <li><strong>Tham chiếu ngược</strong>: Mỗi cú có liên kết đến các cú liên quan (Lob ↔ Overhead ↔ Passing Shot).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MASTER TOC -->
+<div class="toc-master">
+  <h2>📑 Mục Lục Tổng — 11 Chương</h2>
+  <ol>
+    <li>
+      <a href="#part1">PHẦN I — CÚ ĐÁNH TẤN CÔNG TỪ BASELINE (CHƯƠNG 1-4)</a>
+    </li>
+    <li>
+      <a href="#ch-forehand">Chương 1 — Forehand (Cú Thuận Tay)</a>
+      <span class="ch-subtitle">Triết lý: "Kim Cương trước ngực" — cú đánh tấn công mạnh nhất từ baseline</span>
+    </li>
+    <li>
+      <a href="#ch-2h-bh">Chương 2 — 2H Backhand (Trái Tay Hai Tay)</a>
+      <span class="ch-subtitle">Triết lý: "Cú đánh ổn định" — phù hợp cho đa số người chơi, ít chấn thương</span>
+    </li>
+    <li>
+      <a href="#ch-1h-bh">Chương 3 — 1H Backhand (Trái Tay Một Tay)</a>
+      <span class="ch-subtitle">Triết lý: "Khóa và thả" — phong cách Federer/Wawrinka, đẹp nhưng khó</span>
+    </li>
+    <li>
+      <a href="#ch-return">Chương 4 — Return of Serve (Trả Giao Bóng)</a>
+      <span class="ch-subtitle">Triết lý: "Butt-Cap-Up, đầu vợt DOWN" — cú đánh quan trọng thứ 2 sau serve</span>
+    </li>
+    <li>
+      <a href="#part2">PHẦN II — CÚ ĐÁNH TẠI LƯỚI &amp; TRÊN CAO (CHƯƠNG 5-10)</a>
+    </li>
+    <li>
+      <a href="#ch-volley">Chương 5 — Volley (Cú Chặn Bóng Tại Lưới)</a>
+      <span class="ch-subtitle">Triết lý: "Tay cao hơn ngực" — phản xạ nhanh nhất trong tennis</span>
+    </li>
+    <li>
+      <a href="#ch-overhead">Chương 6 — Overhead Smash (Đập Bóng Trên Cao)</a>
+      <span class="ch-subtitle">Triết lý: "The Exclamation Point" — cú mạnh nhất tennis, cousin của serve</span>
+    </li>
+    <li>
+      <a href="#ch-lob">Chương 7 — Lob (Trái Bóng Vòng Qua Đầu)</a>
+      <span class="ch-subtitle">Triết lý: "Người cân bằng vĩ đại tại lưới" — đảo ngược thế cục</span>
+    </li>
+    <li>
+      <a href="#ch-drop">Chương 8 — Drop Shot (Cú Cắt Nhỏ Sát Lưới)</a>
+      <span class="ch-subtitle">Triết lý: "Chess piece of tennis" — quân cờ chiến thuật, kéo đối thủ ra vị trí</span>
+    </li>
+    <li>
+      <a href="#ch-approach">Chương 9 — Approach Shot (Cú Đánh Tiến Lưới)</a>
+      <span class="ch-subtitle">Triết lý: "Cầu nối từ baseline lên lưới" — chuyển trạng thái chiến thuật</span>
+    </li>
+    <li>
+      <a href="#ch-passing">Chương 10 — Passing Shot (Đánh Xuyên Qua Tay Đối Thủ)</a>
+      <span class="ch-subtitle">Triết lý: "Quyền kiểm soát toàn trận" — kết thúc điểm từ baseline khi đối thủ ở lưới</span>
+    </li>
+    <li>
+      <a href="#part3">PHẦN III — KHỞI ĐẦU ĐIỂM (CHƯƠNG 11)</a>
+    </li>
+    <li>
+      <a href="#ch-serve">Chương 11 — Serve (Giao Bóng)</a>
+      <span class="ch-subtitle">Triết lý: "Hòn đá đầu tiên" — cú đánh duy nhất bạn hoàn toàn kiểm soát</span>
+    </li>
+  </ol>
+</div>
+
+<!-- =========================================================== -->
+<!-- PART I -->
+<div class="part" id="part1">
+  <h2>PHẦN I — CÚ ĐÁNH TẤN CÔNG TỪ BASELINE</h2>
+  <p class="part-sub">4 cú đánh nền tảng: Forehand · 2H Backhand · 1H Backhand · Return</p>
+</div>
+
+<!-- CHAPTER 1: FOREHAND -->
+<section class="chapter" id="ch-forehand">
+  <h2><span class="ch-num">CHƯƠNG 01</span> Forehand — Cú Thuận Tay</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Kim Cương trước ngực · Bóng cắn · Redirect not kill · Sống trước thắng"</strong></p>
+
+  <h3>1.1. Tại Sao Forehand Là Cú Quan Trọng Nhất</h3>
+  <p>Forehand là cú đánh <strong>tấn công mạnh nhất</strong> của đa số người chơi — khoảng 60-70% số cú trong rally là forehand. Từ ghi chép tay <code>Forehand tech.md</code>: <em>"Hình dung bạn có một viên kim cương trước ngực — nếu kim cương rơi, bạn sẽ tự nhiên đưa tay ra đỡ. Đó chính là cảm giác khi đánh forehand đúng: đầu vợt vung lên cao, tiếp xúc ở điểm ngang ngực, mặt vợt hướng xuống đất"</em>.</p>
+
+  <h3>1.2. 5 Giai Đoạn Của Forehand Hoàn Hảo</h3>
+  <p>Từ <code>Forehand technique.md</code> và <code>Forehand tech.md</code>, cú forehand hoàn hảo gồm 5 giai đoạn:</p>
+  <ol>
+    <li><strong>Setup (Chuẩn bị)</strong> — racket ready, split step.</li>
+    <li><strong>Backswing</strong> — đưa vợt ra sau, vai xoay, hông xoay.</li>
+    <li><strong>Forward swing + Contact</strong> — bước chân trái, racket tiếp xúc trước ngực, brushing up.</li>
+    <li><strong>Follow-through</strong> — racket vung qua vai trái, weight transfer lên chân trước.</li>
+    <li><strong>Recovery</strong> — trở về vị trí trung tâm, split step.</li>
+  </ol>
+
+  <h3>1.3. Pronation Muộn — Yếu Tố Quan Trọng Nhất</h3>
+  <p>Từ <code>Forehand technique.md</code>: <em>"Alcaraz và Sinner đều có pronation muộn (late pronation). Họ giữ cán vợt yên đến phút cuối, sau đó xoay pronation cực mạnh. Đây là yếu tố tạo ra topspin và pace hiện đại"</em>. <strong>Pronation muộn</strong> = cán vợt xoay pronation 0,05-0,1 giây trước khi tiếp xúc bóng.</p>
+
+  <div class="callout">
+    <strong>⚡ 5 yếu tố kỹ thuật then chốt cho forehand hiện đại:</strong>
+    <ol>
+      <li><strong>Kim Cương trước ngực</strong> — tiếp xúc ở vị trí cao trước cơ thể</li>
+      <li><strong>Đất trước tay</strong> — sử dụng chân làm nền tảng (GRF)</li>
+      <li><strong>Pronation muộn</strong> — xoay cán vợt ở 0,05 giây cuối</li>
+      <li><strong>Đầu vợt cao hơn khuỷu</strong> — racket head above wrist tạo leverage</li>
+      <li><strong>Low-to-high swing path</strong> — brushing up the back of the ball</li>
+    </ol>
+  </div>
+
+  <h3>1.4. 7 Lỗi Phổ Biến Ở Người 50+ &amp; Cách Sửa</h3>
+  <table>
+    <thead><tr><th>Lỗi</th><th>Biểu hiện</th><th>Cách sửa</th></tr></thead>
+    <tbody>
+      <tr><td>Swing ngang thay vì low-to-high</td><td>Bóng bay thấp, không có topspin</td><td>Đặt mục tiêu "đánh bóng rơi sau baseline" thay vì "đánh bóng qua lưới"</td></tr>
+      <tr><td>Tiếp xúc quá gần người</td><td>Mất power, dễ bị push</td><td>Tưởng tượng có kim cương trước ngực — bước tới nắm lấy</td></tr>
+      <tr><td>Không pronation</td><td>Bóng bay flat, dễ lỗi</td><td>Tập đánh slow-motion, tập trung vào xoay cán vợt muộn</td></tr>
+      <tr><td>Grip quá chặt</td><td>Cánh tay mỏi, mất touch</td><td>Cầm vợt như cầm bút — không siết chặt</td></tr>
+      <tr><td>Đứng quá xa baseline</td><td>Không kịp chạy tới bóng short</td><td>Bắt đầu ở service line, dần dần lùi về baseline</td></tr>
+      <tr><td>Follow-through ngắn</td><td>Mất power và topspin</td><td>Tập với tường — vung vợt đến khi chạm vai trái</td></tr>
+      <tr><td>Không recovery</td><td>Bị đối thủ winner ở cú kế tiếp</td><td>Luôn kết thúc cú đánh bằng split step</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1.5. 5 Bài Tập Thực Hành Cho Người 50+</h3>
+  <ol>
+    <li><strong>Slow-motion Pronation</strong> (3 phút) — tập swing pronation muộn slow-motion 30 lần.</li>
+    <li><strong>Cross-Court Rally 50</strong> (5 phút) — rally cross-court liên tục 50 cú.</li>
+    <li><strong>Forehand Inside-Out</strong> (3 phút) — từ backhand, chạy vòng đánh forehand chéo 20 lần.</li>
+    <li><strong>Heavy Topspin Drill</strong> (2 phút) — mục tiêu: bóng rơi sau baseline 8/10 lần.</li>
+    <li><strong>Decision Tree</strong> (2 phút) — partner chọn cross/DTL ngẫu nhiên, bạn thực hiện trong 1 giây.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">KIM CƯƠNG VÀ CẮN</div>
+    <div class="closing-meaning">Kim cương trước ngực (tiếp xúc cao) + Bóng cắn (topspin) = Forehand hiện đại</div>
+  </div>
+
+  <a href="forehand_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="forehand_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 2: 2H BACKHAND -->
+<section class="chapter" id="ch-2h-bh">
+  <h2><span class="ch-num">CHƯƠNG 02</span> 2H Backhand — Trái Tay Hai Tay</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Cú đánh ổn định" — phù hợp cho đa số người chơi, ít chấn thương, nhiều control</strong></p>
+
+  <h3>2.1. Tại Sao 2H Backhand Là Lựa Chọn Phổ Biến Nhất</h3>
+  <p>2H Backhand là cú đánh được <strong>90% người chơi nghiệp dư</strong> và <strong>70% VĐV chuyên nghiệp</strong> sử dụng. Từ ghi chép tay: <em>"Hai tay trên vợt = hai nguồn lực. Một tay yếu + một tay mạnh = tổng lực lớn hơn một tay mạnh"</em>. 2H Backhand cho <strong>power + control tốt hơn</strong> 1H, đặc biệt với bóng cao và bóng xa baseline.</p>
+
+  <h3>2.2. Cấu Trúc 2H Backhand</h3>
+  <p>Từ ghi chép tay <code>Trái tay hai tay trong tennis.md</code>:</p>
+  <ul>
+    <li><strong>Grip</strong>: tay phải (thuận) Eastern Forehand, tay trái Continental.</li>
+    <li><strong>Stance</strong>: closed stance hoặc semi-open stance.</li>
+    <li><strong>Backswing</strong>: vai xoay + hông xoay + cả hai tay đưa vợt ra sau.</li>
+    <li><strong>Contact</strong>: trước người, ngang hông, cao ngang ngực.</li>
+    <li><strong>Follow-through</strong>: vợt vung qua vai phải, cả hai tay vẫn trên vợt.</li>
+  </ul>
+
+  <h3>2.3. Khác Biệt Giữa Topspin vs Slice 2H Backhand</h3>
+  <table>
+    <thead><tr><th>Loại</th><th>Spin</th><th>Khi nào dùng</th><th>Đặc điểm</th></tr></thead>
+    <tbody>
+      <tr><td><strong>2H Backhand Topspin</strong></td><td>Topspin (low-to-high)</td><td>Cú đánh mặc định, rally, tấn công</td><td>Bóng bay cao qua lưới, rơi sâu trong sân</td></tr>
+      <tr><td><strong>2H Backhand Slice</strong></td><td>Backspin (high-to-low)</td><td>Phòng thủ, bóng thấp, thay đổi pace</td><td>Bóng thấp, ít bounce, đối thủ khó topspin</td></tr>
+    </tbody>
+  </table>
+
+  <h3>2.4. 7 Lỗi Phổ Biến &amp; Cách Khắc Phục</h3>
+  <p>Tổng hợp từ <code>Trái tay hai tay trong tennis.md</code> và ghi chép tay khác:</p>
+  <ol>
+    <li><strong>Lỗi grip</strong> — cả hai tay dùng Eastern → sửa: tay thuận Eastern, tay phụ Continental.</li>
+    <li><strong>Tiếp xúc quá gần</strong> — bóng đi vào lưới → sửa: bước chân trái, tiếp xúc trước ngực.</li>
+    <li><strong>Swing ngang thay vì low-to-high</strong> → sửa: tưởng tượng đánh bóng rơi sau baseline.</li>
+    <li><strong>Mất balance sau cú đánh</strong> → sửa: weight transfer đúng, follow-through qua vai.</li>
+    <li><strong>Recovery chậm</strong> → sửa: split step ngay sau follow-through.</li>
+    <li><strong>Không có topspin</strong> → sửa: brushing up rõ rệt.</li>
+    <li><strong>Slice không low-to-high</strong> → sửa: high-to-low cho slice, ngược với topspin.</li>
+  </ol>
+
+  <h3>2.5. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Two-Hand Grip Practice</strong> (3 phút) — tập grip đúng 30 lần slow-motion.</li>
+    <li><strong>Cross-Court Rally</strong> (5 phút) — rally 2H backhand cross-court liên tục 50 cú.</li>
+    <li><strong>Topspin vs Slice Alternation</strong> (3 phút) — đánh xen kẽ 3 topspin + 1 slice.</li>
+    <li><strong>Down-The-Line Drive</strong> (2 phút) — đánh 2H BH dọc biên 20 lần.</li>
+    <li><strong>Recovery Drill</strong> (2 phút) — rally + sprint về trung tâm + split step.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">XOẮN VÀ BUNG</div>
+    <div class="closing-meaning">Xoắn hông lúc backswing + Bung lực lúc contact = 2H Backhand mạnh mẽ</div>
+  </div>
+
+  <a href="2h_backhand_library.html" class="full-guide-link">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 3: 1H BACKHAND -->
+<section class="chapter" id="ch-1h-bh">
+  <h2><span class="ch-num">CHƯƠNG 03</span> 1H Backhand — Trái Tay Một Tay</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Khóa và thả" — phong cách Federer/Wawrinka, thanh lịch nhưng đòi hỏi kỹ thuật cao</strong></p>
+
+  <h3>3.1. 1H Backhand Trong Bối Cảnh Hiện Đại</h3>
+  <p>1H Backhand từng là cú đánh chính của hầu hết VĐV trước 1990, nhưng dần bị thay thế bởi 2H. Tuy nhiên, các VĐV như <strong>Federer, Wawrinka, Dimitrov, Thiem</strong> vẫn sử dụng 1H vì phong cách thanh lịch + slice hiệu quả. Từ ghi chép tay <code>Swing technique.md</code>: <em>"1H backhand có ưu điểm về range (reach xa hơn) và slice (đa dạng)"</em>.</p>
+
+  <h3>3.2. Nguyên Lý "Khóa Vai — Thả Vai"</h3>
+  <p>Từ ghi chép tay <code>Swing technique.md</code>:</p>
+  <ul>
+    <li><strong>Khóa vai trái</strong> = neo (anchor) — vai trái giữ vai phải xoay.</li>
+    <li><strong>Thả vai phải</strong> = roi (whip) — vai phải bung mạnh tạo power.</li>
+    <li><strong>Khuỷu tay cao</strong> ở backswing (giống volley).</li>
+    <li><strong>Contact trước người</strong> ở vị trí cao ngang ngực.</li>
+    <li><strong>Follow-through dài</strong> qua vai trái.</li>
+  </ul>
+
+  <h3>3.3. Topspin vs Slice 1H Backhand</h3>
+  <p>Từ <code>Swing technique.md</code>:</p>
+  <table>
+    <thead><tr><th>Loại</th><th>Khi nào dùng</th><th>Đặc điểm</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1H Topspin Backhand</strong></td><td>Bóng cao, baseline rally</td><td>Power lớn nhưng cần timing chính xác</td></tr>
+      <tr><td><strong>1H Slice Backhand</strong></td><td>Bóng thấp, phòng thủ, đa dạng</td><td>Bóng thấp, slice, backspin — tự nhiên với 1 tay</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>⚡ Khuyến nghị cho người 50+ (research code <span class="research-code">0378</span>):</strong>
+    <ul>
+      <li><strong>60% Slice / 30% Topspin / 10% Flat</strong> — phân bổ phù hợp người lớn tuổi.</li>
+      <li>Slice tự nhiên hơn, ít strain cho cổ tay + khuỷu tay.</li>
+      <li>Topspin chỉ dùng khi bóng cao và bạn đã có timing ổn định.</li>
+      <li>Bắt đầu với phong cách Federer (slice nhiều), sau 3-6 tháng thêm topspin.</li>
+    </ul>
+  </div>
+
+  <h3>3.4. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Shoulder Lock Drill</strong> (3 phút) — tập khóa vai trái 30 lần slow-motion.</li>
+    <li><strong>Slice Rally</strong> (5 phút) — rally slice 1H BH liên tục 50 cú.</li>
+    <li><strong>Topspin Slow</strong> (3 phút) — topspin slow-motion 20 lần.</li>
+    <li><strong>Slice Approach</strong> (2 phút) — slice + approach lưới 15 lần.</li>
+    <li><strong>Decision Tree</strong> (2 phút) — partner chọn topspin/slice ngẫu nhiên.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">KHÓA VÀ THẢ</div>
+    <div class="closing-meaning">Khóa vai trái (neo) + Thả vai phải (roi) = 1H Backhand thanh lịch</div>
+  </div>
+
+  <a href="backhand_1h_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="backhand_1h_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 4: RETURN OF SERVE -->
+<section class="chapter" id="ch-return">
+  <h2><span class="ch-num">CHƯƠNG 04</span> Return of Serve — Trả Giao Bóng</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Butt-Cap-Up, đầu vợt DOWN, khuỷu tay cao" — cú đánh quan trọng thứ 2 sau serve</strong></p>
+
+  <h3>4.1. Tại Sao Return Quan Trọng</h3>
+  <p>Từ <code>Note6.md</code>: <em>"Return of serve là cú đánh quan trọng thứ hai trong tennis, sau serve. Bạn có ~0,4 giây để phản ứng"</em>. Trong 0,4 giây, bạn phải: split step, đọc hướng serve, chạy tới vị trí, setup, và đánh.</p>
+
+  <h3>4.2. Ready Position: "Butt-Cap-Up, Đầu Vợt DOWN"</h3>
+  <p>Từ ghi chép tay <code>Note6.md</code>:</p>
+  <ul>
+    <li><strong>Butt-Cap-Up</strong> — cán vợt hướng lên trời, tiết kiệm 0,1 giây cho return nhanh.</li>
+    <li><strong>Đầu vợt DOWN</strong> — đầu vợt hướng xuống đất, sẵn sàng topspin hoặc slice.</li>
+    <li><strong>Khuỷu tay cao</strong> — khuỷu tay cao trước ngực (tư thế volley).</li>
+    <li><strong>Trọng lượng trên 2 chân</strong> — không đứng trên gót, chuẩn bị bùng nổ.</li>
+  </ul>
+
+  <h3>4.3. 3 Kịch Bản Return</h3>
+  <p>Từ <code>Note6.md</code>, có 3 kịch bản chính:</p>
+  <ol>
+    <li><strong>Slow Serve (≤120 km/h)</strong> — topspin return sâu vào chân đối thủ.</li>
+    <li><strong>Fast Serve (>180 km/h)</strong> — block return nhẹ, nhắm vào chân đối thủ.</li>
+    <li><strong>Slice Serve</strong> — bóng thấp + side spin → volley V cắt ngang.</li>
+  </ol>
+
+  <h3>4.4. 4 Bước Cơ Chế Return</h3>
+  <ol>
+    <li><strong>Coil</strong> (xoắn người) — xoay hông, vai để tạo torque.</li>
+    <li><strong>Soft Hand</strong> (cổ tay lỏng) — không grip quá chặt để có feel.</li>
+    <li><strong>Hip Snap</strong> (bùng hông) — dùng hông làm trục.</li>
+    <li><strong>Chọn</strong> (slice hoặc topspin) — từ cùng setup, chọn cú ở 0,05 giây cuối.</li>
+  </ol>
+
+  <div class="callout-gold">
+    <strong>💡 "Che giấu ý định" — Insight quan trọng nhất (research code <span class="research-code">e7b3</span>):</strong> Từ cùng một setup coil, chọn slice hoặc topspin ở 0,05 giây cuối — đối thủ không đọc được. Đây là cách Djokovic return hay dù không phải nhanh nhất.
+  </div>
+
+  <h3>4.5. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>3 Kịch Bản Shadow</strong> (3 phút) — tập 3 kịch bản slow/fast/slice.</li>
+    <li><strong>Feed Chậm</strong> (3 phút) — partner ném bóng chậm, return topspin.</li>
+    <li><strong>Feed Nhanh</strong> (3 phút) — partner serve chậm, return block.</li>
+    <li><strong>Slice Feed</strong> (3 phút) — partner ném slice, return V-shape volley.</li>
+    <li><strong>Decision Tree Random</strong> (3 phút) — partner serve ngẫu nhiên, quyết định trong 0,3 giây.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">CHỜ SẴN VÀ FLOP</div>
+    <div class="closing-meaning">Butt-Cap-Up + Coil/Soft Hand/Hip Snap/Chọn = Return đa năng</div>
+  </div>
+
+  <a href="return_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="return_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- =========================================================== -->
+<!-- PART II -->
+<div class="part" id="part2">
+  <h2>PHẦN II — CÚ ĐÁNH TẠI LƯỚI &amp; TRÊN CAO</h2>
+  <p class="part-sub">6 cú đánh quyết định: Volley · Overhead · Lob · Drop · Approach · Passing</p>
+</div>
+
+<!-- CHAPTER 5: VOLLEY -->
+<section class="chapter" id="ch-volley">
+  <h2><span class="ch-num">CHƯƠNG 05</span> Volley — Cú Chặn Bóng Tại Lưới</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Tay cao hơn ngực" — phản xạ nhanh nhất trong tennis (0,2-0,4 giây)</strong></p>
+
+  <h3>5.1. Tại Sao Volley Đặc Biệt</h3>
+  <p>Từ <code>Tại sao khi volley phải nâng tay cao hơn ngực.md</code>: <em>"Volley — đánh bóng trước khi nảy — cho người chơi ít thời gian nhất trong tất cả các cú đánh tennis. Bóng từ opponent có thể đến trong 0,2-0,4 giây"</em>. Volley đòi hỏi <strong>proprioception</strong> cao nhất — phản xạ không cần nhìn vợt.</p>
+
+  <h3>5.2. Continental Grip — Grip Bắt Buộc</h3>
+  <p>Từ <code>Tại sao khi volley phải nâng tay cao hơn ngực.md</code>: <em>"Continental grip cho phép bạn đánh volley mà không cần thay đổi grip — forehand volley, backhand volley, overhead, slice đều dùng cùng grip"</em>. Đây là grip <strong>duy nhất</strong> dùng được cho mọi cú tại lưới.</p>
+
+  <h3>5.3. L-Shape Ở Cổ Tay</h3>
+  <p>Từ ghi chép tay: <em>"L-shape = góc 90° giữa cẳng tay và bàn tay. Khi đánh volley, giữ cổ tay cứng ở góc 90°. Đây là cốt lõi của volley — không có L-shape = mất control"</em>.</p>
+
+  <h3>5.4. Punch Action (Không Vung)</h3>
+  <ul>
+    <li><strong>Không backswing đầy đủ</strong> — chỉ cần nhích vợt ngắn.</li>
+    <li><strong>Contact point trước người</strong> — không bao giờ đánh volley cạnh người.</li>
+    <li><strong>Follow-through ngắn</strong> — không vung qua vai.</li>
+    <li><strong>Dùng đối thủ's pace</strong> — volley không cần tự tạo lực, dùng lực từ đối thủ.</li>
+  </ul>
+
+  <h3>5.5. V-Step Footwork</h3>
+  <p>Từ ghi chép tay, V-Step là <strong>3 bước vàng</strong> cho volley:</p>
+  <ol>
+    <li><strong>Split Step</strong> (đặt nền tảng phản ứng).</li>
+    <li><strong>Unit Turn</strong> (xoay vai + hông theo hướng volley).</li>
+    <li><strong>Power Step</strong> (bước chân trước về phía bóng — dồn trọng lượng vào chân trước).</li>
+  </ol>
+
+  <h3>5.6. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Split Step + Power Step</strong> (3 phút) — 30 lần split step + power step.</li>
+    <li><strong>Feed Volley</strong> (5 phút) — partner ném bóng, bạn volley 50 cú.</li>
+    <li><strong>Cross + DTL Volley</strong> (3 phút) — volley xen kẽ cross/DTL 30 cú.</li>
+    <li><strong>Drop Volley</strong> (2 phút) — đặt nhẹ bóng qua lưới 20 cú.</li>
+    <li><strong>Decision Tree Random</strong> (2 phút) — partner chọn cross/DTL/drop ngẫu nhiên.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">ĐẤM VÀ CHUYỂN HƯỚNG</div>
+    <div class="closing-meaning">Punch action (đấm) + L-shape + V-Step = Volley phản xạ nhanh</div>
+  </div>
+
+  <a href="volley_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="volley_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 6: OVERHEAD -->
+<section class="chapter" id="ch-overhead">
+  <h2><span class="ch-num">CHƯƠNG 06</span> Overhead Smash — Đập Bóng Trên Cao</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"The Exclamation Point" — cú mạnh nhất tennis, cousin của serve, đòi hỏi proprioception cao</strong></p>
+
+  <h3>6.1. Tại Sao Overhead Là "The Exclamation Point"</h3>
+  <p>Từ <code>The_Neurological_Edge_Professional_Manual.docx</code>: <em>"The overhead smash is the technical cousin of the serve, used specifically to punish defensive lobs"</em>. Overhead smash là <strong>dấu chấm than (!)</strong> trên sân tennis — cú đánh kết thúc điểm nhanh nhất và quyết đoán nhất.</p>
+
+  <h3>6.2. 3 Yếu Tố Kỹ Thuật: Cousin Của Serve</h3>
+  <ol>
+    <li><strong>The Throwing Action</strong> — proximal-to-distal motion (từ vai → khuỷu → cổ tay). Backswing ngắn hơn serve (vì bóng đang di chuyển).</li>
+    <li><strong>Pointing Arm (Tay Chỉ)</strong> — tay không thuận chỉ thẳng lên bóng. Hai mục đích: track bóng + giữ vai sideways.</li>
+    <li><strong>Explosive Leg Drive</strong> — Scissor Kick khi bóng quá cao. Sampras là bậc thầy scissor kick.</li>
+  </ol>
+
+  <h3>6.3. Overhead Footwork: Sprint Ra Sau</h3>
+  <p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.7.5: <em>"Overhead là cú đánh đòi hỏi di chuyển ra sau (backward movement) — pattern ngược với phần lớn di chuyển trong tennis"</em>. Đây là cú <strong>duy nhất</strong> trong tennis đòi hỏi bạn chạy về phía sau nhiều.</p>
+
+  <h3>6.4. 2 Kiểu Smash: Từ Lùi vs Từ Không Khí</h3>
+  <table>
+    <thead><tr><th>Kiểu Smash</th><th>Footwork</th><th>Khi nào dùng</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Smash Từ Lùi (Tiếp Đất)</strong></td><td>Di chuyển ra sau, tiếp đất trước khi đánh</td><td>Lob không quá cao — an toàn cho 50+</td></tr>
+      <tr><td><strong>Smash Trong Không Khí (Airborne)</strong></td><td>Nhảy lên để đánh (scissor kick)</td><td>Lob quá cao — kỹ thuật cao cấp, không khuyến khích 50+</td></tr>
+    </tbody>
+  </table>
+
+  <h3>6.5. Proprioception — Yếu Tố Quan Trọng Nhất</h3>
+  <p>Từ <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> 6.4: <em>"Elite players xử lý overhead tốt không phải vì họ mạnh hơn hay nhìn bóng tốt hơn — mà vì họ đã tập đủ để proprioception có thể maintain body awareness ngay cả trong tư thế bất lợi này"</em>. Insight cốt lõi: <strong>overhead không phải về lực — mà về proprioception</strong>.</p>
+
+  <h3>6.6. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Overhead Position Training</strong> (3 phút) — nhìn lên 45°, giữ 30 giây mắt mở + 30 giây mắt nhắm.</li>
+    <li><strong>Sprint Ra Sau</strong> (3 phút) — partner hô "overhead", sprint 3-4 bước, dừng ở tư thế sẵn sàng.</li>
+    <li><strong>Bóng Tung Tay</strong> (3 phút) — partner tung bóng cao, smash overhead.</li>
+    <li><strong>Self-Check Sau Overhead</strong> (3 phút) — trong rally, đánh giá balance + contact point.</li>
+    <li><strong>Decision Tree Smash vs Groundstroke</strong> (3 phút) — lob thấp → smash, lob cao → để nảy.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">CHỈ VÀ ĐẬP</div>
+    <div class="closing-meaning">Pointing Arm (chỉ) + Scissor Kick (đập) = Overhead Smash mạnh nhất</div>
+  </div>
+
+  <a href="overhead_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="overhead_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 7: LOB -->
+<section class="chapter" id="ch-lob">
+  <h2><span class="ch-num">CHƯƠNG 07</span> Lob — Trái Bóng Vòng Qua Đầu</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Người cân bằng vĩ đại tại lưới" — đảo ngược thế cục từ thế bị ép</strong></p>
+
+  <h3>7.1. Tại Sao Lob Là Vũ Khí Chiến Thuật Quan Trọng</h3>
+  <p>Từ <code>tennis_handbook_vn.docx</code> Ch.10: <em>"Lob là người cân bằng vĩ đại tại lưới. Nó vô hiệu hóa người chạy lên lưới, biến đổi vị trí phòng thủ thành trung lập, và trên đất nện có thể là vũ khí tấn công"</em>.</p>
+
+  <h3>7.2. 2 Loại Lob: Phòng Thủ vs Tấn Công</h3>
+  <table>
+    <thead><tr><th>Loại</th><th>Mục đích</th><th>Độ cao</th><th>Spin</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Lob Phòng Thủ</strong></td><td>Buộc đối thủ lùi baseline, cứu bóng</td><td>Rất cao (3-4m)</td><td>Slice (backspin)</td></tr>
+      <tr><td><strong>Lob Tấn Công</strong></td><td>Kết thúc điểm hoặc tạo cơ hội</td><td>Trung bình (2-3m)</td><td>Topspin nặng</td></tr>
+    </tbody>
+  </table>
+
+  <h3>7.3. 4 Bước Vận Hành Lob Phòng Thủ</h3>
+  <p>Từ <code>Song-Trong-Tennis-Manual.docx</code> Section 6.2:</p>
+  <ol>
+    <li><strong>Giả vờ đánh bình thường</strong> — setup giống groundstroke.</li>
+    <li><strong>Mở mặt vợt dần</strong> (30-45°) khi vợt tiếp cận bóng.</li>
+    <li><strong>Đẩy vợt lên cao</strong> theo hướng bóng muốn bay.</li>
+    <li><strong>Đảm bảo bóng rơi gần baseline</strong> của đối thủ.</li>
+  </ol>
+
+  <h3>7.4. 3 Nguyên Tắc Nhắm Lob</h3>
+  <ul>
+    <li><strong>Nhắm qua backhand đối thủ</strong> — smash backhand yếu hơn forehand.</li>
+    <li><strong>Rơi sâu gần baseline</strong> — lob ngắn = mời smash.</li>
+    <li><strong>Không nhắm tất</strong> — sự nhất quán quan trọng hơn sự khéo léo.</li>
+  </ul>
+
+  <h3>7.5. Overhead Footwork Khi Đối Thủ Lob</h3>
+  <p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6: <em>"Với lob: split-step → nhận biết bóng đi cao → quay ngay lập tức → sprint ra sau → overhead hoặc lùi về baseline. Tốc độ nhận biết là yếu tố quyết định — người phản ứng muộn 0,2 giây sẽ không kịp overhead"</em>.</p>
+
+  <h3>7.6. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Lob Qua Rào</strong> (3 phút) — đánh 30 lob qua hàng rào.</li>
+    <li><strong>Slice Lob Phòng Thủ</strong> (3 phút) — partner sát lưới, bạn lob slice.</li>
+    <li><strong>Topspin Lob Tấn Công</strong> (3 phút) — partner giữa sân, bạn topspin lob.</li>
+    <li><strong>Aiming Drill</strong> (3 phút) — đặt 2 quả bóng ở 2 góc baseline, lob vào 1 trong 2.</li>
+    <li><strong>Overhead Footwork</strong> (3 phút) — partner lob qua đầu, split → quay → sprint → smash.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">QUA ĐẦU VÀ NGƯỢC THẾ</div>
+    <div class="closing-meaning">Lob qua đầu đối thủ + Đảo ngược thế cục = Vũ khí phòng thủ chiến thuật</div>
+  </div>
+
+  <a href="lob_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="lob_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 8: DROP SHOT -->
+<section class="chapter" id="ch-drop">
+  <h2><span class="ch-num">CHƯƠNG 08</span> Drop Shot — Cú Cắt Nhỏ Sát Lưới</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Chess Piece of Tennis" — quân cờ chiến thuật, kéo đối thủ ra vị trí</strong></p>
+
+  <h3>8.1. Tại Sao Drop Shot Là Quân Cờ Chiến Thuật</h3>
+  <p>Từ <code>Modern_Tennis_Handbook.docx</code>: <em>"The drop shot is the chess piece of tennis — a shot of deception, touch, and tactical intelligence. Used correctly, it drags the opponent to the net, opens up the court, wins points outright, and psychologically frustrates baseline grinders who hate running forward"</em>.</p>
+
+  <h3>8.2. Drop Shot Là Slice Cực Đoan</h3>
+  <p>Từ <code>He_Song_Trong_Tennis.docx</code> Section 9.5: <em>"Drop shot là slice ở mức độ cực đoan: thay vì tạo ra spin để kiểm soát quỹ đạo, mục tiêu là tạo ra spin và speed tối thiểu để bóng rơi ngay sau lưới"</em>. Cùng motion với slice nhưng <strong>giảm tốc độ tối đa</strong>.</p>
+
+  <h3>8.3. 4 Loại Drop Shot</h3>
+  <table>
+    <thead><tr><th>Loại</th><th>Tay</th><th>Khi nào dùng</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Forehand Drop</strong></td><td>FH</td><td>Bóng short, đối thủ sâu baseline</td></tr>
+      <tr><td><strong>Backhand Drop</strong></td><td>BH (slice)</td><td>Đối thủ đẩy sâu về BH — bất ngờ nhất</td></tr>
+      <tr><td><strong>Drop Volley</strong></td><td>Cả hai</td><td>Tại lưới, bóng volley nhẹ</td></tr>
+      <tr><td><strong>Approach Drop</strong></td><td>FH hoặc BH</td><td>Kết hợp lên lưới sau drop</td></tr>
+    </tbody>
+  </table>
+
+  <h3>8.4. Setup Pattern 3-1: 3 Bóng Giống + 1 Drop Bất Ngờ</h3>
+  <p>Từ <code>GOAT_Tennis_Giao_Trinh_Tieng_Viet.docx</code> Bài 14: <em>"Đánh 3 bóng bình thường vào backhand đối thủ, bóng thứ tư là drop shot vào forehand. Lặp lại 15 set. Chỉ tiêu: 10/15 set bóng thứ tư vào đúng vị trí"</em>.</p>
+
+  <h3>8.5. 4 Kỹ Thuật Che Giấu Ý Định</h3>
+  <ul>
+    <li><strong>Swing path giống topspin</strong> — chỉ thay grip ở 0,05 giây cuối.</li>
+    <li><strong>Tốc độ vợt giống topspin</strong> — đừng swing chậm.</li>
+    <li><strong>Stance giống groundstroke</strong> — không đứng gần lưới.</li>
+    <li><strong>Hướng nhìn giống groundstroke</strong> — đừng nhìn vị trí drop trước.</li>
+  </ul>
+
+  <h3>8.6. Combo Drop-Lob: Chiến Thuật Nguy Hiểm Nhất</h3>
+  <p>Từ <code>He_Song_Trong_Tennis.docx</code>: <em>"Kết hợp với lob (sau khi đối thủ chạy lên phía trước), drop shot–lob là một trong những chiến thuật nguy hiểm nhất trong tennis"</em>. Drop → đối thủ chạy lên → lob qua đầu → đối thủ chạy ngược → drop lần nữa. "Điệu nhảy tennis" khiến đối thủ kiệt sức.</p>
+
+  <h3>8.7. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Aiming Drill</strong> (3 phút) — đặt 1 quả bóng cách lưới 1m, drop shot vào đó.</li>
+    <li><strong>Setup Pattern 3-1</strong> (3 phút) — partner sâu baseline, đánh 3 topspin + 1 drop.</li>
+    <li><strong>Che Giấu Ý Định</strong> (3 phút) — partner đứng sau lưới đánh giá.</li>
+    <li><strong>Drop Volley</strong> (3 phút) — partner volley nhẹ, bạn drop volley.</li>
+    <li><strong>Counter Drop Shot</strong> (3 phút) — partner drop bạn, bạn đỡ và counter drop.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">CẮT VÀ ĐỢI</div>
+    <div class="closing-meaning">Slice cực đoan (cắt) + 3 bóng giống + 1 drop bất ngờ (đợi) = Drop Shot</div>
+  </div>
+
+  <a href="drop_shot_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="drop_shot_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 9: APPROACH SHOT -->
+<section class="chapter" id="ch-approach">
+  <h2><span class="ch-num">CHƯƠNG 09</span> Approach Shot — Cú Đánh Tiến Lưới</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Cầu nối từ baseline lên lưới" — chuyển trạng thái chiến thuật</strong></p>
+
+  <h3>9.1. Tại Sao Approach Shot Là Cầu Nối</h3>
+  <p>Từ <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code>: <em>"Khi bạn ở lưới, bạn kiểm soát trò chơi theo cách không thể làm từ baseline. Đối thủ buộc phải thực hiện passing shot (rủi ro cao) hoặc lob (mất thế tấn công)"</em>. Approach shot là cú chuyển bạn từ <em>"đang ở baseline"</em> sang <em>"đang kiểm soát ở lưới"</em>.</p>
+
+  <h3>9.2. 4 Fundamentals Khác Biệt Với Groundstroke</h3>
+  <ol>
+    <li><strong>Swing ngắn hơn</strong> — để maintain balance (đang di chuyển).</li>
+    <li><strong>Direction priority</strong> — DTL thường tốt hơn cross.</li>
+    <li><strong>Depth cao hơn</strong> — deep + low topspin.</li>
+    <li><strong>Move immediately</strong> — không dừng lại sau hit.</li>
+  </ol>
+
+  <h3>9.3. Quy Tắc "80% DTL Vào Backhand"</h3>
+  <p>Từ <code>Kỹ năng và Huấn luyện Tennis cùng các coach đẳng cấp ATP.md</code>: <em>"Quy tắc Approach Shot: 80% các cú đánh tiếp cận lưới nên hướng về phía trái tay của đối thủ"</em>. Backhand thường yếu hơn forehand.</p>
+
+  <h3>9.4. Positioning: 3-4 Mét Từ Lưới</h3>
+  <p>Từ <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code>: <em>"Sau khi hit approach shot, mục tiêu là đặt chân ở khoảng 3-4 mét từ lưới trước khi đối thủ return. Nhiều vận động viên make mistake là dừng lại quá xa từ lưới (5-6 mét)"</em>. Từ 5-6 mét, bạn không reach được cross-court volley.</p>
+
+  <h3>9.5. Decision Making: Green/Yellow/Red Ball</h3>
+  <p>Từ <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code>: Hỏi 3 câu trước khi approach:</p>
+  <ol>
+    <li><strong>Bóng có đủ thấp và slow?</strong> — short + slow → approach.</li>
+    <li><strong>Vị trí tôi có tốt?</strong> — giữa sân hoặc angle tốt → approach.</li>
+    <li><strong>Đối thủ có displaced?</strong> — đối thủ xa baseline → approach.</li>
+  </ol>
+
+  <h3>9.6. Serve-and-Volley: Approach Sau Serve</h3>
+  <p>Từ <code>He_Thong_Tennis_Cap_Cao_20_Chuong.docx</code>: <em>"Body serve + approach shot: Body serve limit return angle, cú return thường ngắn hoặc về center, tiến lưới ngay"</em>. Sau serve, đợi 0,5 giây đọc return rồi mới tiến lưới.</p>
+
+  <h3>9.7. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Green/Yellow/Red Ball</strong> (3 phút) — partner feed 3 mức độ, bạn gọi màu trước khi hit.</li>
+    <li><strong>Approach + Volley Pattern</strong> (3 phút) — approach DTL + volley vào sân trống.</li>
+    <li><strong>Đếm Bước Positioning</strong> (3 phút) — sau approach dừng ở 3-4 mét, đếm bước.</li>
+    <li><strong>Decision Tree Random</strong> (3 phút) — partner feed random, bạn quyết định trong 0,5 giây.</li>
+    <li><strong>Body Serve + Approach</strong> (3 phút) — serve body + đợi 0,5 giây + tiến lưới + volley.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">BƯỚC VÀ LÊN</div>
+    <div class="closing-meaning">Bước chân lên lưới sau approach + Move immediately = Approach Shot</div>
+  </div>
+
+  <a href="approach_shot_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="approach_shot_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- CHAPTER 10: PASSING SHOT -->
+<section class="chapter" id="ch-passing">
+  <h2><span class="ch-num">CHƯƠNG 10</span> Passing Shot — Đánh Xuyên Qua Tay Đối Thủ</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Quyền kiểm soát toàn trận" — kết thúc điểm từ baseline khi đối thủ ở lưới</strong></p>
+
+  <h3>10.1. Tại Sao Passing Shot Quan Trọng</h3>
+  <p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code>: <em>"Passing shot mạnh khiến đối thủ ngại tiến lên lưới — cho bạn quyền kiểm soát toàn bộ trận đấu"</em>. Đây là <strong>vũ khí tâm lý</strong> khiến đối thủ ngại approach, từ đó bạn kiểm soát baseline.</p>
+
+  <h3>10.2. 3 Loại Passing Shot</h3>
+  <table>
+    <thead><tr><th>Loại</th><th>Hướng</th><th>Khi nào dùng</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Cross-Court</strong></td><td>Chéo sân</td><td>Đối thủ giữa sân, sát lưới (an toàn nhất)</td></tr>
+      <tr><td><strong>Down-The-Line</strong></td><td>Thẳng biên</td><td>Đối thủ lệch trái (cover cross)</td></tr>
+      <tr><td><strong>Inside-Out</strong></td><td>Chạy vòng qua BH đánh FH chéo</td><td>Bất ngờ nhất</td></tr>
+    </tbody>
+  </table>
+
+  <h3>10.3. 4 Bước Thực Hiện</h3>
+  <p>Từ <code>tennis_mastery_guide_tieng_viet.docx</code>:</p>
+  <ol>
+    <li><strong>Đọc vị trí đối thủ sớm</strong> — họ đứng giữa? lệch? sát lưới?</li>
+    <li><strong>Quyết định sớm và cam kết</strong> — thay đổi giữa chừng = lỗi.</li>
+    <li><strong>Đánh THẤP qua lưới</strong> — top lưới, không cao.</li>
+    <li><strong>Tạo góc HOẶC tốc độ</strong> — không cố cả hai.</li>
+  </ol>
+
+  <h3>10.4. Counter 2 Nhịp vs 1 Nhịp</h3>
+  <p>Từ <code>Kỹ năng và Huấn luyện Tennis cùng các coach đẳng cấp ATP.md</code>:</p>
+  <ul>
+    <li><strong>1 Nhịp (Aggressive)</strong> — winner ngay ở cú đầu. Rủi ro cao, dùng khi forehand passing shot rất mạnh.</li>
+    <li><strong>2 Nhịp (Safe)</strong> — nhịp 1: low volley vào chân đối thủ (shoelaces). Nhịp 2: đối thủ volley yếu → winner. <em>"ở big points, play high-percentage shots. Không phải lúc để thử drop shot bất ngờ hay serve ace"</em>.</li>
+  </ul>
+
+  <h3>10.5. Footwork Tại Lưới: Split-Step + Cross-Over</h3>
+  <p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Ch.8.6: <em>"Với passing shot: split-step → đọc hướng → bước chéo một hoặc hai bước theo hướng bóng → volley. Quan trọng: không shuffle nhiều bước vì không có thời gian"</em>.</p>
+
+  <h3>10.6. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Aiming Drill</strong> (3 phút) — đặt 2 quả bóng ở 2 góc baseline, passing vào 1 trong 2.</li>
+    <li><strong>Đọc Đối Thủ</strong> (3 phút) — partner approach từ nhiều vị trí, bạn đọc hướng.</li>
+    <li><strong>Counter 2 Nhịp</strong> (3 phút) — partner approach, bạn đánh low volley + winner ở nhịp 2.</li>
+    <li><strong>Topspin Passing</strong> (3 phút) — topspin passing shot từ baseline DTL.</li>
+    <li><strong>Decision Tree Random</strong> (3 phút) — partner chọn cross/DTL/inside-out ngẫu nhiên.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">XUYÊN VÀ TỈNH</div>
+    <div class="closing-meaning">Xuyên qua tay đối thủ (xuyên) + Đánh thấp quyết đoán (tỉnh) = Passing Shot</div>
+  </div>
+
+  <a href="passing_shot_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="passing_shot_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- =========================================================== -->
+<!-- PART III -->
+<div class="part" id="part3">
+  <h2>PHẦN III — KHỞI ĐẦU ĐIỂM</h2>
+  <p class="part-sub">1 cú đánh duy nhất: Serve — mở đầu mọi rally, hoàn toàn kiểm soát</p>
+</div>
+
+<!-- CHAPTER 11: SERVE -->
+<section class="chapter" id="ch-serve">
+  <h2><span class="ch-num">CHƯƠNG 11</span> Serve — Giao Bóng</h2>
+  <p class="ch-tagline">Triết lý cốt lõi: <strong>"Hòn đá đầu tiên" — cú đánh duy nhất bạn hoàn toàn kiểm soát</strong></p>
+
+  <h3>11.1. Tại Sao Serve Là Cú Quan Trọng Nhất</h3>
+  <p>Serve là cú đánh <strong>duy nhất</strong> trong tennis bạn hoàn toàn kiểm soát — tốc độ, hướng, spin, vị trí. Tất cả các cú khác đều phản ứng với đối thủ. Từ <code>Kỹ thuật giao bóng.md</code>: <em>"Serve là hòn đá đầu tiên — bạn quyết định cách rally bắt đầu"</em>.</p>
+
+  <h3>11.2. 4 Pha Serve</h3>
+  <ol>
+    <li><strong>Stance &amp; Toss</strong> — chân trước-trước, tung bóng cao và ổn định.</li>
+    <li><strong>Backswing (Trophy Position)</strong> — vợt ra sau, khuỷu tay cao.</li>
+    <li><strong>Forward Swing + Contact</strong> — tiếp xúc ở điểm cao nhất, brushing up.</li>
+    <li><strong>Follow-through + Pronation</strong> — vợt vung qua người, pronation muộn.</li>
+  </ol>
+
+  <h3>11.3. 3 Loại Serve</h3>
+  <table>
+    <thead><tr><th>Loại</th><th>Spin</th><th>Tốc độ</th><th>Mục đích</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Flat Serve</strong></td><td>Không spin (hoặc rất ít)</td><td>Rất nhanh</td><td>Ace winner</td></tr>
+      <tr><td><strong>Slice Serve</strong></td><td>Side spin (trái hoặc phải)</td><td>Trung bình</td><td>Kéo đối thủ ra ngoài baseline</td></tr>
+      <tr><td><strong>Kick Serve (Topspin Serve)</strong></td><td>Topspin nặng</td><td>Trung bình</td><td>Bóng bounce cao, đối thủ volley khó</td></tr>
+    </tbody>
+  </table>
+
+  <h3>11.4. Pronation — Bí Mật Của Serve Hiện Đại</h3>
+  <p>Từ <code>Kỹ thuật giao bóng.md</code>: <em>"Pronation là xoay cẳng tay và cổ tay từ trong ra ngoài khi tiếp xúc bóng. Đây là yếu tố tạo ra slice, kick, và pace hiện đại"</em>. Pronation muộn ở 0,05-0,1 giây trước tiếp xúc.</p>
+
+  <h3>11.5. Phân Bố Serve Theo Tình Huống</h3>
+  <ul>
+    <li><strong>Deuce court</strong> (bên phải): 60% wide serve, 30% body, 10% T.</li>
+    <li><strong>Ad court</strong> (bên trái): 50% body, 30% wide, 20% T.</li>
+    <li><strong>Second serve</strong>: 70% kick, 30% slice (an toàn hơn).</li>
+  </ul>
+
+  <h3>11.6. Serve Không Ném Bóng Lên Cao = Không Có Lực</h3>
+  <p>Từ ghi chép tay: <em>"Ném bóng quá thấp → contact thấp → mất power. Toss cao + ổn định = serve mạnh"</em>. Toss lý tưởng: cao hơn đầu vợt ~30cm, hơi lệch về phía trước và phía trong (cho flat/slice) hoặc phía sau (cho kick).</p>
+
+  <h3>11.7. 5 Bài Tập Cho Người 50+</h3>
+  <ol>
+    <li><strong>Toss Consistency</strong> (3 phút) — tập toss 30 lần, mục tiêu cùng vị trí 8/10.</li>
+    <li><strong>Pronation Slow-Mo</strong> (3 phút) — tập pronation slow-motion 20 lần.</li>
+    <li><strong>Flat Serve Practice</strong> (3 phút) — tập flat serve 20 lần.</li>
+    <li><strong>Kick Serve Practice</strong> (3 phút) — tập kick serve 20 lần.</li>
+    <li><strong>Decision Tree</strong> (3 phút) — đánh flat/slice/kick theo tình huống.</li>
+  </ol>
+
+  <div class="ch-closing">
+    <div class="closing-text">NÉM VÀ XOẮN</div>
+    <div class="closing-meaning">Toss cao (ném) + Pronation muộn (xoắn) = Serve mạnh và chính xác</div>
+  </div>
+
+  <a href="serve_guide.html" class="full-guide-link">📖 Đọc Full Guide →</a>
+  <a href="serve_library.html" class="full-guide-link" style="background: var(--accent-red); color: white;">📚 6 Tài Liệu Tham Khảo</a>
+</section>
+
+<!-- =========================================================== -->
+<!-- QUICK REFERENCE -->
+<section style="background: var(--card-bg); padding: 35px; border-radius: 12px; margin-bottom: 30px; border: 2px solid var(--accent-gold);">
+  <h2 style="color: var(--accent-gold); margin-bottom: 20px; font-size: 1.8em;">📋 Quick Reference — 11 Cú Đánh (Cheat Sheet)</h2>
+  <p style="margin-bottom: 20px;"><em>Bảng tóm tắt in ra mang ra sân làm tham khảo nhanh.</em></p>
+
+  <table>
+    <thead>
+      <tr><th>Cú đánh</th><th>Triết lý cốt lõi</th><th>Grip</th><th>Footwork then chốt</th><th>Closing</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Forehand</strong></td>
+        <td>Kim cương trước ngực</td>
+        <td>Eastern / Semi-Western</td>
+        <td>Open / Semi-Open</td>
+        <td>KIM CƯƠNG VÀ CẮN</td>
+      </tr>
+      <tr>
+        <td><strong>2H Backhand</strong></td>
+        <td>Hai tay = hai nguồn lực</td>
+        <td>Eastern + Continental</td>
+        <td>Closed / Semi-Open</td>
+        <td>XOẮN VÀ BUNG</td>
+      </tr>
+      <tr>
+        <td><strong>1H Backhand</strong></td>
+        <td>Khóa vai trái, thả vai phải</td>
+        <td>Eastern (topspin) / Continental (slice)</td>
+        <td>Open</td>
+        <td>KHÓA VÀ THẢ</td>
+      </tr>
+      <tr>
+        <td><strong>Return</strong></td>
+        <td>Butt-Cap-Up, đầu vợt DOWN</td>
+        <td>Eastern / Semi-Western</td>
+        <td>Open / Split step</td>
+        <td>CHỜ SẴN VÀ FLOP</td>
+      </tr>
+      <tr>
+        <td><strong>Volley</strong></td>
+        <td>Tay cao hơn ngực</td>
+        <td>Continental (bắt buộc)</td>
+        <td>V-Step (Split → Unit Turn → Power)</td>
+        <td>ĐẤM VÀ CHUYỂN HƯỚNG</td>
+      </tr>
+      <tr>
+        <td><strong>Overhead</strong></td>
+        <td>Cousin của serve</td>
+        <td>Continental</td>
+        <td>Sprint ra sau + Scissor Kick</td>
+        <td>CHỈ VÀ ĐẬP</td>
+      </tr>
+      <tr>
+        <td><strong>Lob</strong></td>
+        <td>Slice trên cực (giấu ý định)</td>
+        <td>Continental (slice) / Eastern (topspin)</td>
+        <td>Groundstroke bình thường</td>
+        <td>QUA ĐẦU VÀ NGƯỢC THẾ</td>
+      </tr>
+      <tr>
+        <td><strong>Drop Shot</strong></td>
+        <td>Slice cực đoan + 3-1 pattern</td>
+        <td>Continental (bắt buộc)</td>
+        <td>Groundstroke + approach ngay</td>
+        <td>CẮT VÀ ĐỢI</td>
+      </tr>
+      <tr>
+        <td><strong>Approach Shot</strong></td>
+        <td>Cầu nối baseline → lưới</td>
+        <td>Eastern / Semi-Western</td>
+        <td>Move immediately + 3-4m</td>
+        <td>BƯỚC VÀ LÊN</td>
+      </tr>
+      <tr>
+        <td><strong>Passing Shot</strong></td>
+        <td>Quyền kiểm soát toàn trận</td>
+        <td>Eastern / Semi-Western</td>
+        <td>Counter 2 nhịp (low volley → winner)</td>
+        <td>XUYÊN VÀ TỈNH</td>
+      </tr>
+      <tr>
+        <td><strong>Serve</strong></td>
+        <td>Hòn đá đầu tiên</td>
+        <td>Continental (bắt buộc)</td>
+        <td>Pinpoint / Platform</td>
+        <td>NÉM VÀ XOẮN</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-green" style="margin-top: 25px;">
+    <strong>🌟 Tổng Kết Triết Lý 11 Cú Đánh:</strong>
+    <ul>
+      <li><strong>Forehand</strong>: Power từ chân + Pronation muộn</li>
+      <li><strong>2H Backhand</strong>: Stability từ hai tay</li>
+      <li><strong>1H Backhand</strong>: Elegance từ vai</li>
+      <li><strong>Return</strong>: Anticipation + Che giấu ý định</li>
+      <li><strong>Volley</strong>: Reflex + Continental grip</li>
+      <li><strong>Overhead</strong>: Power + Proprioception</li>
+      <li><strong>Lob</strong>: Tactical + Slice trên cực</li>
+      <li><strong>Drop Shot</strong>: Touch + 3-1 pattern</li>
+      <li><strong>Approach</strong>: Transition + Move immediately</li>
+      <li><strong>Passing</strong>: Counter + 2 nhịp</li>
+      <li><strong>Serve</strong>: Control + Pronation</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========================================================== -->
+<!-- MASTER FOOTER -->
+<footer class="master-footer">
+  <div class="closing-master">CHƠI VÀ HIỂU</div>
+  <div class="signature">Cẩm Nang Tennis Toàn Tập — Tổng Hợp 11 Cú Đánh Từ Tennis Vault</div>
+  <div class="stats">
+    <div>11<small>Cú đánh</small></div>
+    <div>11<small>Thư viện</small></div>
+    <div>50+<small>Tài liệu nguồn</small></div>
+    <div>87+<small>Research codes</small></div>
+    <div>55+<small>Bài tập 15 phút</small></div>
+  </div>
+  <p style="color: var(--text-muted); margin-top: 25px; font-size: 0.9em;">
+    <strong>Ngày tạo</strong>: June 28, 2026 · <strong>Vị trí</strong>: My notes / tennis_master_manual.html
+  </p>
+  <p style="color: var(--text-muted); font-size: 0.85em; margin-top: 15px;">
+    Tài liệu này tổng hợp từ 11 thư viện đã được xây dựng trong Tennis Vault.<br>
+    Mỗi chương có thể đọc độc lập, nhưng đọc tuần tự sẽ cho bức tranh toàn diện nhất.
+  </p>
+  <p style="margin-top: 25px;">
+    <a href="forehand_library.html" style="color: var(--accent-gold); margin: 0 8px;">Forehand</a> ·
+    <a href="2h_backhand_library.html" style="color: var(--accent-gold); margin: 0 8px;">2H BH</a> ·
+    <a href="backhand_1h_library.html" style="color: var(--accent-gold); margin: 0 8px;">1H BH</a> ·
+    <a href="return_library.html" style="color: var(--accent-gold); margin: 0 8px;">Return</a> ·
+    <a href="volley_library.html" style="color: var(--accent-gold); margin: 0 8px;">Volley</a> ·
+    <a href="overhead_library.html" style="color: var(--accent-gold); margin: 0 8px;">Overhead</a> ·
+    <a href="lob_library.html" style="color: var(--accent-gold); margin: 0 8px;">Lob</a> ·
+    <a href="drop_shot_library.html" style="color: var(--accent-gold); margin: 0 8px;">Drop</a> ·
+    <a href="approach_shot_library.html" style="color: var(--accent-gold); margin: 0 8px;">Approach</a> ·
+    <a href="passing_shot_library.html" style="color: var(--accent-gold); margin: 0 8px;">Passing</a> ·
+    <a href="serve_library.html" style="color: var(--accent-gold); margin: 0 8px;">Serve</a>
+  </p>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

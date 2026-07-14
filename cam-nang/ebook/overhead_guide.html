@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cẩm Nang Overhead Smash — Dấu Chấm Than Trên Sân Tennis</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1000px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  section {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+  }
+  section h2 {
+    color: var(--accent-gold);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-red);
+  }
+  section h3 {
+    color: var(--accent-red);
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+  }
+  p { margin-bottom: 15px; text-align: justify; }
+  ul, ol { margin-left: 25px; margin-bottom: 15px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--accent-gold); }
+  em { color: var(--text-muted); font-style: italic; }
+  .callout {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  .callout-gold {
+    background: rgba(243, 156, 18, 0.12);
+    border-left: 4px solid var(--accent-gold);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  th { background: var(--accent-red); color: white; padding: 12px; text-align: left; }
+  td { background: var(--navy-light); padding: 12px; border-bottom: 1px solid var(--border); }
+  .research-code {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--accent-gold);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--accent-gold);
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  footer .closing {
+    font-size: 1.4em;
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin: 15px 0 10px;
+    letter-spacing: 2px;
+  }
+  .nav-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .nav-link:hover { background: #a93226; }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    section h2 { font-size: 1.4em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Cẩm Nang Overhead Smash</h1>
+  <p class="subtitle">Overhead Smash Guide — Dấu Chấm Than Trên Sân Tennis</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    Tổng hợp từ 5 nguồn chuyên sâu (TFL Manuals + ghi chép tay)
+  </p>
+</header>
+
+<div class="toc">
+  <h2>📑 Mục Lục</h2>
+  <ol>
+    <li><a href="#philosophy">Triết Lý "The Exclamation Point" — Cú Kết Thúc Điểm</a></li>
+    <li><a href="#cousin-serve">3 Yếu Tố Kỹ Thuật: Cousin Của Serve</a></li>
+    <li><a href="#footwork">Overhead Footwork: Sprint Ra Sau + Scissor Kick</a></li>
+    <li><a href="#types">2 Kiểu Smash: Từ Lùi vs Từ Không Khí</a></li>
+    <li><a href="#aiming">Nhắm Vào Đâu: Open Court vs Chân Đối Thủ</a></li>
+    <li><a href="#mistakes">5 Lỗi Phổ Biến &amp; Cách Khắc Phục</a></li>
+    <li><a href="#proprioception">Proprioception Training Cho Overhead</a></li>
+    <li><a href="#drills">5 Bài Tập 15 Phút Cho Người 50+</a></li>
+    <li><a href="#closing">Lời Kết</a></li>
+  </ol>
+</div>
+
+<section id="philosophy">
+<h2>1. Triết Lý "The Exclamation Point" — Cú Kết Thúc Điểm</h2>
+
+<p>Từ <code>The_Neurological_Edge_Professional_Manual.docx</code> Chương 6.4 "The Overhead Smash: The Exclamation Point": <em>"The overhead smash is the technical cousin of the serve, used specifically to punish defensive lobs"</em>. Overhead smash không chỉ là cú đập bóng — nó là <strong>dấu chấm than (!)</strong> trên sân tennis, cú đánh kết thúc điểm nhanh nhất và quyết đoán nhất.</p>
+
+<p>Từ <code>Tại sao khi volley phải nâng tay cao hơn ngực.md</code> phần "Kỹ thuật Smash (Cú đập bóng)": <em>"Nếu bóng còn trong tầm với, hãy thực hiện cú dứt điểm mạnh mẽ nhất trong tennis"</em>. Overhead smash là cú <strong>mạnh nhất</strong> trong tất cả các cú đánh tennis — kết hợp lực từ chân, hông, vai, và cổ tay trong một chuyển động thẳng đứng từ trên xuống.</p>
+
+<div class="callout">
+<strong>⚡ 4 đặc điểm của Overhead Smash (research code <span class="research-code">d7f4</span>):</strong>
+<ol>
+<li><strong>Cousin của serve</strong> — mechanics gần như giống serve, nhưng backswing ngắn hơn vì bóng đang di chuyển.</li>
+<li><strong>Cú mạnh nhất tennis</strong> — kết hợp trọng lực + lực tay + lực chân trong chuyển động thẳng đứng.</li>
+<li><strong>Cú kết thúc điểm</strong> — khi có cơ hội smash, điểm <strong>nên</strong> kết thúc ngay tại đó.</li>
+<li><strong>Đòi hỏi proprioception cao</strong> — bạn đang di chuyển về phía sau, mất horizon reference, áp lực lớn (theo <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> 6.4).</li>
+</ol>
+</div>
+
+<p>Trong <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> 6.4 "Overhead Smash — Proprioception Trong Bất Lợi", bạn đã có insight cốt lõi: <em>"Elite players xử lý overhead tốt không phải vì họ mạnh hơn hay nhìn bóng tốt hơn — mà vì họ đã tập đủ để proprioception có thể maintain body awareness ngay cả trong tư thế bất lợi này"</em>. Đây là insight quan trọng nhất: <strong>overhead không phải về lực — mà về proprioception (cảm nhận cơ thể trong không gian)</strong>.</p>
+</section>
+
+<section id="cousin-serve">
+<h2>2. 3 Yếu Tố Kỹ Thuật: Cousin Của Serve</h2>
+
+<p>Từ <code>The_Neurological_Edge_Professional_Manual.docx</code> 6.4, overhead smash mechanics <strong>gần như giống serve</strong> nhưng có 3 điểm khác biệt quan trọng:</p>
+
+<h3>2.1. The Throwing Action (Động Tác Ném)</h3>
+
+<p>Mechanics gần như identical với serve: <strong>proximal-to-distal throwing motion</strong> (chuyển động từ gần đến xa — từ vai → khuỷu → cổ tay). Tuy nhiên, <strong>backswing ngắn hơn</strong> serve vì bóng overhead đang di chuyển (bóng serve bạn tự tung). Đây là điểm khác biệt kỹ thuật quan trọng nhất.</p>
+
+<h3>2.2. Preparation — "Pointing Arm" (Tay Chỉ)</h3>
+
+<p><strong>Tay không thuận (tay trái với người thuận tay phải) chỉ thẳng lên quả bóng đang bay</strong>. Mục đích kép:</p>
+
+<ul>
+<li><strong>Track bóng</strong> — tay chỉ giúp theo dõi đường bay của bóng.</li>
+<li><strong>Giữ vai sideways</strong> — đảm bảo shoulders remain turned sideways, duy trì Unit Turn cho đến thời điểm cuối cùng (theo <code>Tại sao khi volley...</code>: <em>"Dùng tay không thuận (tay trái) chỉ thẳng lên quả bóng đang bay. Việc này giúp bạn ước lượng khoảng cách và giữ thăng bằng cho vai"</em>).</li>
+</ul>
+
+<h3>2.3. Explosive Leg Drive — Scissor Kick</h3>
+
+<p>Để đảm bảo bóng được đánh ở <strong>điểm cao nhất có thể</strong>, cần <strong>"scissor kick"</strong> hoặc explosive jump. Điều này cho phép bạn di chuyển ra sau hiệu quả và drive forward vào bóng (từ <code>Ky_Thuat_Chan_Tennis.docx</code> 7.6). Sampras nổi tiếng với scissor kick overhead — đây là một trong những overhead đẹp nhất lịch sử tennis.</p>
+
+<table>
+<thead>
+<tr>
+<th>Yếu tố</th>
+<th>Serve</th>
+<th>Overhead Smash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backswing</strong></td>
+<td>Dài (racket goes down to trophy position)</td>
+<td>Ngắn hơn (compact because moving target)</td>
+</tr>
+<tr>
+<td><strong>Ball toss</strong></td>
+<td>Bạn tự tung</td>
+<td>Đối thủ lob cho bạn (không kiểm soát)</td>
+</tr>
+<tr>
+<td><strong>Contact point</strong></td>
+<td>Trên cao (extension)</td>
+<td>Cao nhất có thể (jump nếu cần)</td>
+</tr>
+<tr>
+<td><strong>Footwork</strong></td>
+<td>Pinpoint hoặc platform stance</td>
+<td>Backward movement + scissor kick</td>
+</tr>
+</tbody>
+</table>
+
+<div class="callout-gold">
+<strong>💡 Tư thế "Cây cung" (research code <span class="research-code">b2e8</span>):</strong> Từ <code>Tại sao khi volley...</code>: <em>"Đưa vợt ra sau đầu, khuỷu tay cao. Khi bóng rơi vào tầm đánh, hãy bật nhảy và đánh bóng ở điểm cao nhất có thể"</em>. Tư thế này giống cây cung đang kéo — lưu trữ năng lượng đàn hồi, chờ release khi bóng đến đúng vị trí.
+</div>
+</section>
+
+<section id="footwork">
+<h2>3. Overhead Footwork: Sprint Ra Sau + Scissor Kick</h2>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> Chương 7.5 "Overhead — Di Chuyển Ra Sau": <em>"Overhead là cú đánh đòi hỏi di chuyển ra sau (backward movement) — pattern ngược với phần lớn di chuyển trong tennis (vốn là forward/lateral)"</em>. Đây là điểm độc đáo: overhead là cú duy nhất trong tennis đòi hỏi bạn chạy về phía sau nhiều.</p>
+
+<h3>3.1. Pattern Di Chuyển Ra Sau Cho Overhead</h3>
+
+<ol>
+<li><strong>Nhận biết bóng lob sớm</strong> — ngay khi thấy đối thủ lob, quay hông và bắt đầu chạy ra sau.</li>
+<li><strong>Chạy vòng cung</strong> — theo <code>Tại sao khi volley...</code>: <em>"Đừng chạy thẳng theo bóng, hãy chạy vòng ra phía sau quả bóng"</em>. Chạy vòng giúp bạn giữ bóng trong tầm mắt và đến đúng vị trí.</li>
+<li><strong>Shuffle cuối</strong> — điều chỉnh spacing trước khi đánh.</li>
+<li><strong>Setup ở tư thế "Cây cung"</strong> — racket ready, pointing arm lên.</li>
+<li><strong>Jump (scissor kick) nếu cần</strong> — đánh ở điểm cao nhất có thể.</li>
+</ol>
+
+<h3>3.2. Scissor Kick — Kỹ Thuật Nâng Cao</h3>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> 7.6: <em>"Scissor kick là kỹ thuật nâng cao khi đánh overhead: trong khi vợt chạm bóng, hai chân 'kéo' ngược cùng chiều với swing — một chân về trước, một chân về sau, tạo chuyển động cắt kéo"</em>.</p>
+
+<p>Cách thực hiện:</p>
+
+<ul>
+<li><strong>Khi nhảy lên để smash</strong>, chân trước (thuận) và chân sau (không thuận) "cắt kéo" trong không khí</li>
+<li><strong>Mục đích</strong> — duy trì balance trong không trung, cho phép smash mạnh và chính xác</li>
+<li><strong>Yêu cầu</strong> — core mạnh, kinh nghiệm di chuyển, và đã tập nhiều</li>
+</ul>
+
+<div class="callout">
+<strong>⚠️ Tại sao Overhead Footwork Khó Nhất Tennis (research code <span class="research-code">c9a3</span>):</strong> Từ <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> 6.4: <em>"Overhead smash là tình huống proprioceptive khó khăn nhất trong tennis vì: bạn đang di chuyển về phía sau (losing ground), đang nhìn lên cao (mất horizon reference cho vestibular), và đang trong áp lực lớn (elevated cortisol ảnh hưởng đến proprioceptive precision)"</em>. Đó là lý do overhead đòi hỏi <strong>thời gian tập luyện</strong> và <strong>proprioception training</strong> đặc biệt.
+</div>
+
+<h3>3.3. Bài Tập Overhead Footwork</h3>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> 7.7:</p>
+
+<ul>
+<li><strong>Không bóng</strong> — đứng ở giữa sân, huấn luyện viên hô "overhead". Sprint ra sau 3-4 bước, dừng lại ở tư thế sẵn sàng overhead.</li>
+<li><strong>Bóng tung tay</strong> — huấn luyện viên tung bóng cao qua bạn. Bạn phải di chuyển ra sau và đánh overhead. Bắt đầu từ trong sân, dần dần xa hơn.</li>
+<li><strong>Tập từ rally</strong> — trong rally, khi đối thủ đánh lob, thực hành overhead footwork thật sự.</li>
+</ul>
+</section>
+
+<section id="types">
+<h2>4. 2 Kiểu Smash: Từ Lùi vs Từ Không Khí</h2>
+
+<p>Từ <code>Ky_Thuat_Chan_Tennis.docx</code> 7.8 "Smash từ Lùi và Smash từ Không Khí", có 2 kỹ thuật overhead cơ bản với footwork khác nhau:</p>
+
+<table>
+<thead>
+<tr>
+<th>Kiểu Smash</th>
+<th>Footwork</th>
+<th>Khi nào dùng</th>
+<th>Độ khó</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Smash Từ Lùi (Tiếp Đất)</strong></td>
+<td>Di chuyển ra sau, tiếp đất trước khi đánh</td>
+<td>Lob không quá cao, bạn có thời gian chạy</td>
+<td>Dễ hơn</td>
+</tr>
+<tr>
+<td><strong>Smash Trong Không Khí (Airborne)</strong></td>
+<td>Nhảy lên để đánh (scissor kick)</td>
+<td>Lob quá cao để đánh từ mặt đất, cần smash winner</td>
+<td>Khó hơn</td>
+</tr>
+</tbody>
+</table>
+
+<h3>4.1. Smash Từ Lùi (Tiếp Đất) — Phổ Biến Nhất</h3>
+
+<p>Đây là kiểu overhead phổ biến nhất trong tennis nghiệp dư. Bạn di chuyển ra sau, tiếp đất bằng chân trước, setup ở tư thế "Cây cung", và smash khi bóng rơi vào tầm đánh. <strong>Đây là kiểu bạn nên tập trước</strong> trước khi thử airborne smash.</p>
+
+<h3>4.2. Smash Trong Không Khí (Airborne) — Kỹ Thuật Cao Cấp</h3>
+
+<p>Khi lob quá cao để đánh từ mặt đất, bạn phải <strong>nhảy lên</strong> để smash. Kỹ thuật này đòi hỏi scissor kick + timing chính xác + core mạnh. Sampras là bậc thầy của airborne smash với scissor kick đẹp mắt. Đối với người 50+, đây là kỹ thuật <strong>không khuyến khích</strong> vì rủi ro chấn thương cao.</p>
+
+<div class="callout-gold">
+<strong>💡 Khuyến nghị cho người 50+ (research code <span class="research-code">e5b6</span>):</strong> <strong>Tập trung vào Smash Từ Lùi</strong> — đây là kiểu an toàn và hiệu quả nhất. Smash Trong Không Khí có thể tập nhưng <strong>không nên ưu tiên</strong> vì rủi ro chấn thương vai + đầu gối. Khi lob quá cao, <strong>để bóng nảy lên rồi đánh groundstroke</strong> (theo <code>Tại sao khi volley...</code>: <em>"Bounce it (Để bóng nảy): Nếu bóng lốp quá cao, hãy nhắc đồng đội để bóng nảy lên rồi mới đánh cho an toàn"</em>) thay vì nhảy.
+</div>
+</section>
+
+<section id="aiming">
+<h2>5. Nhắm Vào Đâu: Open Court vs Chân Đối Thủ</h2>
+
+<p>Từ <code>The_Neurological_Edge_Professional_Manual.docx</code> 6.4 "Tactical Execution": <em>"The smash is a 'high-percentage' finishing shot. While it's tempting to aim for the lines, the most effective strategy is to hit the ball toward the open court or directly at the opponent's feet to minimize their reaction time"</em>.</p>
+
+<p>Đây là insight quan trọng: <strong>đừng cố nhắm đường biên</strong>. Mục đích của smash là kết thúc điểm, không phải thể hiện kỹ thuật.</p>
+
+<h3>5.1. 3 Chiến Thuật Nhắm Overhead</h3>
+
+<ol>
+<li><strong>Open Court (Sân Trống)</strong> — nếu đối thủ di chuyển khỏi một bên sân, smash vào bên đó.</li>
+<li><strong>Chân Đối Thủ</strong> — smash trực tiếp vào chân đối thủ để <strong>giảm reaction time</strong> tối đa. Bóng nảy thấp → khó đỡ.</li>
+<li><strong>Deep Smash</strong> — smash sâu gần baseline, không smash nhẹ vào giữa sân (dễ bị đối thủ đỡ lại).</li>
+</ol>
+
+<div class="callout">
+<strong>⚠️ Tránh "Wait and See" trap (research code <span class="research-code">a8c1</span>):</strong> Từ <code>The_Neurological_Edge_Professional_Manual.docx</code>: <em>"Many players wait for the ball to bounce; however, taking the smash out of the air maintains your offensive pressure and prevents the opponent from recovering their position"</em>. <strong>Đừng đợi bóng nảy rồi mới đánh</strong> — đánh smash trong không trung ngay khi bóng đến tầm để duy trì áp lực tấn công. Đợi bóng nảy = đối thủ có thêm thời gian phục hồi vị trí.
+</div>
+</section>
+
+<section id="mistakes">
+<h2>6. 5 Lỗi Phổ Biến &amp; Cách Khắc Phục</h2>
+
+<p>Tổng hợp từ <code>The_Neurological_Edge_Professional_Manual.docx</code>, <code>Ky_Thuat_Chan_Tennis.docx</code>, <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code>, và <code>Tại sao khi volley...</code>, đây là 5 lỗi phổ biến nhất của overhead smash:</p>
+
+<h3>Lỗi 1 — Đợi Bóng Nảy Mới Đánh</h3>
+<p><strong>Biểu hiện:</strong> bạn đứng dưới lưới, đợi bóng rơi xuống rồi mới đánh. <strong>Hậu quả:</strong> đối thủ có thời gian phục hồi vị trí, mất lợi thế tấn công. <strong>Cách sửa:</strong> đánh smash trong không trung ngay khi bóng đến tầm.</p>
+
+<h3>Lỗi 2 — Nhắm Đường Biên (Quá Khéo Léo)</h3>
+<p><strong>Biểu hiện:</strong> cố smash vào góc xa của sân. <strong>Hậu quả:</strong> dễ lỗi, smash không hiệu quả. <strong>Cách sửa:</strong> nhắm vào open court hoặc chân đối thủ — mục tiêu là winner, không phải thể hiện kỹ thuật.</p>
+
+<h3>Lỗi 3 — Setup Không Đúng Tư Thế "Cây Cung"</h3>
+<p><strong>Biểu hiện:</strong> vợt không cao, khuỷu tay không đúng vị trí, không có Unit Turn đầy đủ. <strong>Hậu quả:</strong> smash yếu, mất kiểm soát. <strong>Cách sửa:</strong> luôn setup "Cây cung" trước khi smash: vợt ra sau đầu, khuỷu tay cao, pointing arm chỉ bóng, shoulders turned sideways.</p>
+
+<h3>Lỗi 4 — Chạy Thẳng Theo Bóng (Không Chạy Vòng)</h3>
+<p><strong>Biểu hiện:</strong> bạn chạy thẳng về phía sau theo hướng bóng. <strong>Hậu quả:</strong> đến sai vị trí, mất balance, smash không chính xác. <strong>Cách sửa:</strong> chạy vòng cung ra phía sau bóng — đến vị trí trước khi bóng rơi.</p>
+
+<h3>Lỗi 5 — Đứng Quá Gần Lưới Khi Smash</h3>
+<p><strong>Biểu hiện:</strong> bạn ở gần lưới khi smash, không có không gian để chạy ra sau. <strong>Hậu quả:</strong> bị lốp qua đầu dễ dàng. <strong>Cách sửa:</strong> theo <code>Tại sao khi volley...</code>: <em>"Counter: Overheads từ trong sân, đừng tiến lưới quá gần"</em>. Đứng trong sân (1-2m sau service line) để có không gian chạy ra sau.</p>
+
+<div class="callout-gold">
+<strong>💡 Bài tập sửa Lỗi 3 (research code <span class="research-code">f3d7</span>):</strong> Đứng trước gương, giả lập overhead smash không có bóng. Đưa vợt ra sau đầu, khuỷu tay cao, pointing arm chỉ lên trần. Giữ 5 giây, kiểm tra góc khuỷu tay và độ cao của vợt. Lặp lại 10 lần mỗi ngày trong 2 tuần để cơ thể "nhớ" tư thế đúng.
+</div>
+</section>
+
+<section id="proprioception">
+<h2>7. Proprioception Training Cho Overhead</h2>
+
+<p>Từ <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> 6.4, overhead smash đòi hỏi <strong>proprioception (cảm nhận cơ thể trong không gian) đặc biệt cao</strong>. Bài tập chuyên biệt:</p>
+
+<h3>7.1. Overhead Position Training</h3>
+
+<p>Đứng dưới vị trí đánh overhead tưởng tượng, nhìn lên 45°, duy trì tư thế này 30 giây. Sau đó <strong>nhắm mắt</strong> và duy trì thêm 30 giây. Cảm nhận: vestibular system bị "confused", proprioception phải bù đắp.</p>
+
+<p>Thực hiện <strong>với và không có vợt</strong>. Mục tiêu: cảm thấy "comfortable" trong tư thế này dù không nhìn thẳng. Tập 5 phút mỗi ngày trong 2 tuần.</p>
+
+<h3>7.2. Self-Check Sau Overhead</h3>
+
+<p>Mỗi lần có overhead trong rally, sau khi đánh, tự hỏi:</p>
+
+<ul>
+<li><strong>Balance</strong> — bạn có balance ổn định sau contact không?</li>
+<li><strong>Contact point</strong> — contact point có nhất quán với bóng ở đúng vị trí mong muốn không?</li>
+</ul>
+
+<p>Nếu overhead của bạn "không ổn định" — likely là proprioception trong backward movement và overhead position cần phát triển thêm.</p>
+
+<div class="callout">
+<strong>⚡ Tại sao Proprioception quan trọng hơn Lực (research code <span class="research-code">b9e1</span>):</strong> Từ <code>Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code>: <em>"Elite players xử lý overhead tốt không phải vì họ mạnh hơn hay nhìn bóng tốt hơn — mà vì họ đã tập đủ để proprioception có thể maintain body awareness ngay cả trong tư thế bất lợi này"</em>. Đó là insight cốt lõi: <strong>để thành thạo overhead, tập proprioception — không phải tập lực</strong>.
+</div>
+</section>
+
+<section id="drills">
+<h2>8. 5 Bài Tập 15 Phút Cho Người 50+</h2>
+
+<h3>Bài 1 — Overhead Position Training (3 phút)</h3>
+<p>Đứng dưới vị trí overhead tưởng tượng, nhìn lên 45°, giữ 30 giây với mắt mở + 30 giây với mắt nhắm. Lặp lại 5 lần. Mục tiêu: proprioception trong tư thế overhead.</p>
+
+<h3>Bài 2 — Sprint Ra Sau (3 phút)</h3>
+<p>Partner hô "overhead" từ giữa sân. Bạn sprint ra sau 3-4 bước, dừng ở tư thế "Cây cung". Không bóng — chỉ tập footwork. Lặp lại 20 lần mỗi bên.</p>
+
+<h3>Bài 3 — Bóng Tung Tay (3 phút)</h3>
+<p>Partner tung bóng cao qua đầu bạn. Bạn chạy ra sau, smash overhead. Bắt đầu từ trong sân, dần dần xa hơn. Mục tiêu: kết hợp footwork + smash timing.</p>
+
+<h3>Bài 4 — Self-Check Sau Overhead (3 phút)</h3>
+<p>Trong rally thực tế, mỗi lần có overhead, sau khi đánh tự đánh giá: balance có ổn định không? contact point có đúng không? Ghi chú vào sổ tay để theo dõi tiến bộ.</p>
+
+<h3>Bài 5 — Decision Tree Smash vs Groundstroke (3 phút)</h3>
+<p>Partner đánh lob với độ cao khác nhau: thấp (≤3m) → smash overhead, cao (>3m) → để bóng nảy rồi đánh groundstroke. Mục tiêu: quyết định đúng trong 0,5 giây. Đây là bài tập RTDT giúp tự động hóa quyết định.</p>
+
+<div class="callout-gold">
+<strong>⏱ Lịch tập gợi ý (research code <span class="research-code">5c4e</span>):</strong> 5 bài × 15 phút/ngày × 30 ngày = proprioception overhead ổn định. Sau 30 ngày, bạn sẽ tự động smash ở điểm cao nhất + đúng vị trí + cân bằng ổn định sau contact. Đây là proprioception training: biến overhead thành phản xạ.
+</div>
+</section>
+
+<section id="closing">
+<h2>9. Lời Kết</h2>
+
+<p>Overhead smash không chỉ là cú đập bóng. Nó là <strong>dấu chấm than (!) trên sân tennis</strong> — cú kết thúc điểm nhanh nhất và quyết đoán nhất, được mệnh danh là "technical cousin of the serve". Triết lý của bạn — <strong>"Cousin của serve + Scissor Kick + Open Court + Proprioception"</strong> — không phải mẹo, mà là cách tối ưu hóa cú smash trong điều kiện khó khăn nhất trong tennis (di chuyển ra sau + mất horizon reference + áp lực lớn).</p>
+
+<p>Kết hợp với hệ thống <strong>3 yếu tố kỹ thuật (Throwing Action + Pointing Arm + Leg Drive)</strong>, <strong>2 kiểu smash (Từ Lùi vs Từ Không Khí)</strong>, và <strong>5 bài tập 15 phút/ngày (đặc biệt là Proprioception Training)</strong>, bạn có một bộ công cụ hoàn chỉnh để <strong>kết thúc điểm từ overhead</strong>. Hãy nhớ: <strong>overhead không phải về lực — mà về proprioception</strong>. Đừng đợi bóng nảy, đừng nhắm đường biên, đừng cố nhảy khi bạn 50+.</p>
+
+<p>Ngoài ra, đừng quên rằng overhead smash là <strong>một nửa của câu chuyện</strong>. Nửa còn lại là xử lý khi đối thủ lob qua đầu bạn — đó là <strong>overhead footwork</strong> mà bạn đã có trong Thư Viện Lob. Hai thư viện này bổ sung cho nhau: <strong>Lob Library dạy cách LOB</strong>, <strong>Overhead Library dạy cách SMASH và PHÒNG THỦ trước lob</strong>. Tập cả hai sẽ giúp bạn trở thành người chơi <strong>biết cả công và thủ</strong> trong tennis.</p>
+
+<p class="closing">CHỈ VÀ ĐẬP</p>
+
+<p style="text-align: center; margin-top: 20px;">
+  <a href="overhead_library.html" class="nav-link">← Quay Lại Thư Viện Overhead</a>
+</p>
+</section>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

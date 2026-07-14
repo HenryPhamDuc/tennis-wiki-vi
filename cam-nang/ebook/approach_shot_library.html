@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Approach Shot — Cầu Nối Từ Baseline Lên Lưới</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 { color: var(--accent-red); margin-bottom: 15px; font-size: 1.4em; }
+  .toc ol { list-style: none; counter-reset: item; }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a { color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 { color: var(--accent-gold); font-size: 1.6em; margin-bottom: 10px; }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt { background: var(--accent-gold); color: var(--navy); }
+  .doc-card .badge.neutral { background: #34495e; }
+  .doc-card .intro-paragraph { margin-bottom: 12px; text-align: justify; }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Approach Shot</h1>
+  <p class="subtitle">Approach Shot Library — Cầu Nối Từ Baseline Lên Lưới</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Approach shot là <strong>"cầu nối"</strong> giữa baseline (phòng thủ) và lưới (tấn công) — cú đánh chuyển trạng thái chiến thuật từ <em>"đang chơi ở baseline"</em> sang <em>"đang kiểm soát ở lưới"</em>. Đây là cú đánh <strong>khác biệt hoàn toàn</strong> so với groundstroke bình thường: swing ngắn hơn, direction priority cao hơn, depth tối đa, và move tiếp tục lên net ngay lập tức.</p>
+  <p>Đồng thời, approach shot đòi hỏi <strong>decision making tinh tế</strong> — không phải mọi short ball đều nên approach. Quy tắc "Green/Yellow/Red Ball" từ Coach 5.0 giúp bạn quyết định approach hay không trong 0,5 giây.</p>
+  <p>Thư viện này tổng hợp <strong>6 tài liệu quan trọng nhất</strong> về Approach Shot trong Tennis Vault — từ Coach 5.0 với approach fundamentals, cho đến rally patterns với "Net Approach", cho đến 50+ approach với serve-and-volley.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="approach_shot_guide.html" style="color: var(--accent-gold);">approach_shot_guide.html</a> (tổng hợp từ 6 nguồn), sau đó đọc <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code> "Approach shot fundamentals". Đừng bỏ qua <code>He_Thong_Tennis_Cap_Cao_20_Chuong.docx</code> "Pattern 3: Net Approach" — rally control pattern quan trọng.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">approach_shot_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">Quan_Vot_Dinh_Cao_Coach_5.0.docx — Approach Shot Fundamentals</a></li>
+    <li><a href="#doc3">He_Thong_Tennis_Cap_Cao_20_Chuong.docx — "Pattern 3: Net Approach"</a></li>
+    <li><a href="#doc4">tennis_mastery.docx — Top Dedicated (12 approach + 9 tiến lưới + 9 net game)</a></li>
+    <li><a href="#doc5">TinhKhiThan_Tennis_5.0.docx — Approach + Serve-and-Volley + Timing</a></li>
+    <li><a href="#doc6">Cam_Nang_Dao_Tao_Tennis_50_Plus.docx — Approach Shot Cho Người 50+</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>approach_shot_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong>, được biên soạn từ 6 nguồn chuyên sâu: <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code> "Approach shot fundamentals + Decision making + DTL vs Cross" (Coach 5.0), <code>He_Thong_Tennis_Cap_Cao_20_Chuong.docx</code> "Pattern 3: Net Approach" (rally control), <code>tennis_mastery.docx</code> (top dedicated approach shot), <code>TinhKhiThan_Tennis_5.0.docx</code> (Approach + Serve-and-Volley + Timing), <code>Cam_Nang_Dao_Tao_Tennis_50_Plus.docx</code> (Approach cho 50+), và <code>Kỹ năng và Huấn luyện Tennis cùng các coach đẳng cấp ATP.md</code> (ATP coach insights + 80% rule).</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với các thư viện trước, tài liệu này nhấn mạnh <strong>4 fundamentals khác biệt với groundstroke</strong>: Swing ngắn (balance) + Direction priority (DTL) + Depth (deep low) + Move immediately. Có 9 phần, bao gồm triết lý "Cầu Nối", 4 fundamentals, DTL vs Cross-Court (80/20), Timing & Positioning (3-4 mét từ lưới), Decision Making (Green/Yellow/Red Ball), Serve & Volley, 5 lỗi phổ biến. Có closing <strong>"BƯỚC VÀ LÊN"</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn hiểu nhanh approach shot. Cũng là tài liệu tốt nhất để in ra mang ra sân (có thể in trang 8-9 làm cheat sheet với 5 bài tập 15 phút và 5 lỗi cần tránh).</p>
+  <p class="meta">📂 Vị trí: My notes / approach_shot_guide.html · 9 phần · 27 KB · Có closing "BƯỚC VÀ LÊN"</p>
+  <a href="approach_shot_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">🏆 COACH 5.0</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Quan_Vợt_Dinh_Cao_Coach_5.0.docx — Approach Shot Fundamentals</h2>
+  <p class="intro-paragraph">Tài liệu quần vợt đỉnh cao Coach 5.0 (200 KB). Có <strong>18 lần đề cập đến approach shot</strong> + 13 net game + 1 fundamentals dedicated section. Đây là tài liệu có section riêng về approach shot fundamentals chi tiết nhất trong vault. Đã có HTML từ Forehand library.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>4 Fundamentals khác biệt với groundstroke</strong>: swing ngắn hơn để maintain balance, direction priority (thường down-the-line), depth cao hơn (deep và low), và move tiếp tục lên net ngay lập tức. <strong>DTL vs Cross-Court</strong>: DTL là 'classic' và thường tốt hơn vì giảm angle cho passing shot, đặt bạn gần center. <strong>Positioning</strong>: mục tiêu 3-4 mét từ lưới (không phải 5-6 mét). <strong>Decision Making</strong>: Green/Yellow/Red Ball drill. Đặc biệt có insight: <em>"không phải mọi short ball đều nên approach"</em>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>He_Thong_Tennis_Cap_Cao_20_Chuong.docx</code>. Tài liệu này cho góc nhìn Coach 5.0 + fundamentals chi tiết, sách kia cho góc nhìn rally patterns. Cùng nhau tạo bức tranh toàn diện. Phù hợp cho VĐV 4.0+ muốn hiểu sâu về approach shot ở cấp chuyên nghiệp.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Quan_Vot_Dinh_Cao_Coach_5.0.docx · 201,736 ký tự · Score: 33 (approach+net game) · Đã có HTML</p>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge alt">🎯 RALLY CONTROL</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>He_Thong_Tennis_Cap_Cao_20_Chuong.docx — "Pattern 3: Net Approach"</h2>
+  <p class="intro-paragraph">Tài liệu hệ thống tennis cấp cao 20 chương (119 KB). Có <strong>8 lần đề cập approach shot + 4 net approach + Pattern 3: Net Approach dedicated</strong>. Đã có HTML từ Overhead library.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Pattern 3: Net Approach</strong>: Chuỗi: Rally sâu → nhận bóng ngắn → approach shot sâu down-the-line → tiến lưới và volley. Mục tiêu: Kết thúc điểm ở lưới sau khi approach. <strong>Rally Control</strong>: <em>"không chỉ là áp đặt pattern của mình — mà còn là nhận diện và phá vỡ pattern của đối thủ. Sau 3-4 điểm, bạn nên có đủ thông tin để điều chỉnh"</em>. <strong>Body serve + approach shot</strong>: body serve limit return angle, cú return thường ngắn hoặc về center, tiến lưới ngay. Có các tình huống chiến thuật: <em>"Cả hai luôn tiến lưới. Counter: Lob nhiều hơn, trả bóng vào feet, delay return"</em>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code>. Tài liệu này cho góc nhìn rally control + patterns + counter-tactics, sách kia cho góc nhìn fundamentals + decision making. Cùng nhau tạo bức tranh toàn diện về approach shot. Đặc biệt hữu ích cho người chơi muốn hiểu approach shot trong bối cảnh rally control tổng thể.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / He_Thong_Tennis_Cap_Cao_20_Chuong.docx · 118,576 ký tự · Score: 25 (approach+tiến lưới+net) · Đã có HTML</p>
+  <a href="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge">📘 TOP DEDICATED</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>tennis_mastery.docx — Top Dedicated (12 approach + 9 tiến lưới + 9 net game)</h2>
+  <p class="intro-paragraph">Sách tennis 110 KB có <strong>12 approach shot + 9 tiến lưới + 2 lên lưới + 9 net game + 5 net approach + 1 serve and volley</strong> = tổng cộng <strong>38 references</strong> — cao nhất trong tất cả các .docx trong vault. Đây là tài liệu có nhiều nội dung về approach shot nhất.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Tài liệu chuyên sâu nhất về approach shot</strong> trong vault. Có nhiều section khác nhau về approach shot, net game, tiến lưới, serve-and-volley. Có chương riêng về net approach và chiến thuật tấn công tại lưới. Phù hợp cho VĐV muốn hiểu sâu về approach shot từ góc độ tổng thể (chứ không chỉ fundamentals).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Tài liệu này cho góc nhìn bao quát về approach shot + net game + serve-and-volley. Phù hợp cho người chơi muốn hiểu approach shot trong bối cảnh chiến thuật tổng thể. Đây là tài liệu <strong>tốt nhất để tham khảo nhiều lần</strong>.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / tennis_mastery.docx · 110,088 ký tự · Score: 38 ⭐ (top dedicated) · NEW conversion</p>
+  <a href="../tfl/tennis_mastery.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/tennis_mastery.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge alt">🧘 TINH KHÍ THẦN</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>TinhKhiThan_Tennis_5.0.docx — Approach + Serve-and-Volley + Timing</h2>
+  <p class="intro-paragraph">Sách tennis tích hợp <strong>tinh thần + khí + thần</strong> (TinhKhiThan = Body-Mind-Spirit) với kỹ thuật tennis ở cấp 5.0 (69 KB). Có <strong>3 approach shot + 1 approach timing + 8 net game + 2 net approach + 3 serve and volley</strong> = 17 references.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Approach timing</strong> — đây là từ khóa hiếm thấy trong các tài liệu khác. Tài liệu này phân tích <strong>thời điểm approach</strong> (timing) một cách chi tiết: khi nào nên approach, bao lâu sau khi đối thủ đánh bóng ngắn. <strong>Serve-and-volley</strong>: 3 lần đề cập chi tiết về cách serve + approach + volley kết hợp. <strong>Tinh thần</strong>: góc nhìn tinh thần khi approach — cần sự tự tin, cam kết 100%, không do dự.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy các tài liệu Coach 5.0 quá kỹ thuật, đọc tài liệu này để có góc nhìn tinh thần + thực tế hơn. Đặc biệt hữu ích cho người 50+ muốn hiểu approach shot không chỉ ở mặt kỹ thuật mà còn ở mặt tâm lý.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / TinhKhiThan_Tennis_5.0.docx · 68,754 ký tự · Score: 17 (approach+net+timing) · NEW conversion</p>
+  <a href="../tfl/TinhKhiThan_Tennis_5.0.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/TinhKhiThan_Tennis_5.0.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge">👴 NGƯỜI 50+</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Cam_Nang_Dao_Tao_Tennis_50_Plus.docx — Approach Shot Cho Người 50+</h2>
+  <p class="intro-paragraph">Cẩm nang tennis dành riêng cho người chơi <strong>trên 50 tuổi</strong> (78 KB). Có <strong>3 approach shot + 9 lên lưới + 1 net game + 1 serve and volley</strong> = 14 references. Đây là tài liệu DUY NHẤT trong vault được thiết kế đặc biệt cho người chơi lớn tuổi.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> <strong>Micro-Chunking method</strong> cho approach shot — phương pháp chia nhỏ cú approach thành nhiều bước nhỏ, dễ tập cho người 50+. Có chi tiết về <strong>approach shot cho người có thể lực giảm</strong> — điều chỉnh speed, distance, và recovery. Có <strong>serve-and-volley modified</strong> cho 50+ — không phải serve-and-volley 100%, mà là serve + 1-2 bước approach thay vì full approach. Có nhiều drills cho người lớn tuổi với <strong>khối lượng thấp, cường độ vừa phải</strong>.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cùng với các tài liệu chuyên sâu khác. Nếu bạn thấy <code>Quan_Vot_Dinh_Cao_Coach_5.0.docx</code> quá kỹ thuật, đọc tài liệu này để có góc nhìn phù hợp với tuổi 50+. Đặc biệt hữu ích cho người chơi lớn tuổi muốn approach shot mà không bị chấn thương hay quá tải. Đây là tài liệu <strong>khuyến khích</strong> cho mọi VĐV 50+ trong vault tennis.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Cam_Nang_Dao_Tao_Tennis_50_Plus.docx · 77,746 ký tự · Score: 14 (approach+lên lưới+50+) · NEW conversion</p>
+  <a href="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Effortless Strike System – Tennis Cheat Sheet</title>
+<style>
+:root {
+  --text: #0a0a0a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #f6f7f8;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  background: white;
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 52px 60px 40px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+  border-radius: 16px;
+}
+
+header {
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  line-height: 1.1;
+  color: #000;
+}
+
+h1 .sequence {
+  display: block;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--muted);
+  margin-top: 6px;
+  letter-spacing: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 56px;
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.section {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.section h2 {
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin: 0;
+  color: #111;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 7px;
+  font-size: 14.5px;
+  color: #1f2937;
+}
+
+li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+li strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.sublist {
+  margin: 7px 0 8px 0;
+  padding-left: 18px;
+}
+
+.sublist li {
+  font-size: 13.8px;
+  color: #374151;
+  margin-bottom: 5px;
+  padding-left: 16px;
+}
+
+.sublist li::before {
+  content: "•";
+  color: #bcbcbc;
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 14px;
+  color: #4b5563;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 800px) {
+  .page {
+    margin: 0;
+    border-radius: 0;
+    padding: 36px 24px 32px;
+    box-shadow: none;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .column {
+    gap: 24px;
+  }
+  h1 { font-size: 26px; }
+  h1 .sequence { font-size: 15px; }
+  li { font-size: 15px; }
+}
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+  html, body { background: white !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  header { margin-bottom: 16px; }
+  .eyebrow { font-size: 8.5pt; margin-bottom: 4px; }
+  h1 { font-size: 18pt; }
+  h1 .sequence { font-size: 11pt; margin-top: 3px; }
+  .grid { gap: 14px 24px; }
+  .column { gap: 14px; }
+  .section { padding-top: 9px; }
+  .section-header { margin-bottom: 6px; gap: 8px; }
+  .num { width: 20px; height: 20px; font-size: 9pt; background: #000 !important; color: #fff !important; }
+  .section h2 { font-size: 9.5pt; }
+  li { font-size: 9.8pt; line-height: 1.32; margin-bottom: 3px; padding-left: 14px; }
+  .sublist { margin: 3px 0 4px 0; }
+  .sublist li { font-size: 9.2pt; margin-bottom: 2px; }
+  footer { margin-top: 14px; padding-top: 8px; font-size: 9.5pt; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">One-Page Cheat Sheet</div>
+    <h1>
+      Effortless Strike System
+      <span class="sequence">Ready → Load → Tension → 45° → BIC → Finish</span>
+    </h1>
+  </header>
+
+  <main class="grid">
+    <div class="column">
+      <section class="section">
+        <div class="section-header">
+          <div class="num">1</div>
+          <h2>Ready Position</h2>
+        </div>
+        <ul>
+          <li>Spine straight, head level high</li>
+          <li>Chest and shoulders slightly forward, hips and butt back</li>
+          <li>Knees softly bent, weight balanced</li>
+          <li>"Compress against the back" feel</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="num">2</div>
+          <h2>Load & Align</h2>
+        </div>
+        <ul>
+          <li>Align body with oncoming ball; run around backhand if needed</li>
+          <li>Turn from facing left to facing right (for right-hander forehand)</li>
+          <li>Left arm + both shoulders create the FRAME/PLANE</li>
+          <li>Right hand must stay on same plane as left arm</li>
+          <li>Pull chest and shoulders back to load</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="num">3</div>
+          <h2>Tension & Grip Integration</h2>
+        </div>
+        <ul>
+          <li>ALWAYS have tension between adjacent joints: hip–shoulder–elbow–wrist–racquet</li>
+          <li>Press racquet head DOWN lightly = pre-load (tensegrity, not stiff)</li>
+          <li>Long axis of racquet in line with forearm, straight arm lever</li>
+          <li>Grip forces:
+            <ul class="sublist">
+              <li><strong>Continental</strong> (slice/volley): thumb presses down on top, 3 fingers support below, pull into body CoG</li>
+              <li><strong>Semi-Western</strong> (topspin): index knuckle on bevel, index side drives; thumb + 3 fingers counter on opposite bevel to equalize</li>
+            </ul>
+          </li>
+          <li>No mid-swing adjustments – face will close automatically</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="column">
+      <section class="section">
+        <div class="section-header">
+          <div class="num">4</div>
+          <h2>Swing Path – 45° Plane</h2>
+        </div>
+        <ul>
+          <li>Only rotate torso + extend arm, do not "hit"</li>
+          <li>Racquet travels LOW to HIGH on 45-degree plane</li>
+          <li>Whip, do not push or swing with arm</li>
+          <li>Twist around long axis for natural face closure</li>
+          <li>Forehand: left and right arms move together same direction</li>
+          <li>Backhand: arms move opposite to create stretch</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="num">5</div>
+          <h2>Contact – BIC</h2>
+        </div>
+        <ul>
+          <li>Aim at BIC = Bottom Inside Corner of ball</li>
+          <li>Move forward and to left side of ball to align arm and racquet</li>
+          <li>Low ball = more open face, brush up</li>
+          <li>High ball = more closed face, brush down</li>
+          <li>Drive = square face; Spin = angled face</li>
+          <li>Contact happens naturally if structure is set</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="num">6</div>
+          <h2>Finish & Options</h2>
+        </div>
+        <ul>
+          <li>Stay low through follow-through for control (Option 1)</li>
+          <li>Or pivot back foot around and stand up after contact (Option 2)</li>
+          <li>Left arm stays high as anchor then clears left</li>
+          <li>Body rotates around spine, guide ball to target, no extra hit</li>
+          <li>Brain free for tactics: TARGET – FOCUS – COMMIT – EXECUTE</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Hit without hitting. Rotation creates power. Tension creates control.
+    <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>

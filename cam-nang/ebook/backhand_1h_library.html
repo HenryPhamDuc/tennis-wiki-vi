@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thư Viện Cú Trái Tay Một Tay — 1H Backhand Library</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --card-bg: #142847;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 30px rgba(243, 156, 18, 0.2);
+  }
+  h1 {
+    font-size: 2.4em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: 1.15em;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .intro {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .intro p { margin-bottom: 12px; text-align: justify; }
+  .intro strong { color: var(--accent-gold); }
+  .toc {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--accent-red);
+  }
+  .toc h2 {
+    color: var(--accent-red);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+  .toc ol {
+    list-style: none;
+    counter-reset: item;
+  }
+  .toc li {
+    counter-increment: item;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .toc li::before {
+    content: counter(item) ". ";
+    color: var(--accent-gold);
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .toc a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .toc a:hover { color: var(--accent-gold); }
+  .doc-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border);
+    scroll-margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .doc-card h2 {
+    color: var(--accent-gold);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+  }
+  .doc-card .badge {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .doc-card .badge.alt {
+    background: var(--accent-gold);
+    color: var(--navy);
+  }
+  .doc-card .badge.neutral {
+    background: #34495e;
+  }
+  .doc-card .intro-paragraph {
+    margin-bottom: 12px;
+    text-align: justify;
+  }
+  .doc-card .meta {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border);
+  }
+  .doc-link {
+    display: inline-block;
+    background: var(--accent-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+  .doc-link:hover { background: #a93226; }
+  .related-links {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  .related-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  .related-links a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    border-top: 2px solid var(--accent-gold);
+    color: var(--text-muted);
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6em; }
+    .doc-card h2 { font-size: 1.3em; }
+    body { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div style="background: linear-gradient(90deg, #c0392b 0%, #f39c12 100%); padding: 8px 16px; font-family: 'Segoe UI', sans-serif; font-size: 0.9em; text-align: center; border-bottom: 2px solid #0a1929;"><a href="tennis_master_manual.html" style="color: white; text-decoration: none; font-weight: bold; letter-spacing: 1px;">📖 CẨM NANG TENNIS TOÀN TẬP — 11 Cú Đánh (Master Manual) ↑↑</a></div>
+<div class="container">
+
+<header>
+  <h1>🎾 Thư Viện Cú Trái Tay Một Tay</h1>
+  <p class="subtitle">1H Backhand Library — Từ Triết Lý Đến Khoa Học Biomechanics</p>
+  <p style="margin-top: 15px; color: var(--accent-gold);">
+    6 tài liệu được tuyển chọn từ Tennis Vault
+  </p>
+</header>
+
+<div class="intro">
+  <p>Cú trái tay một tay (1H Backhand) là cú đánh <strong>đẹp nhất nhưng cũng khó nhất</strong> trong tennis. Nó không có "phao cứu sinh" như cú hai tay — toàn bộ lực phải đi qua một cánh tay, một trục xoay, và một khoảnh khắc 4 mili-giây quyết định tất cả.</p>
+  <p>Thư viện này tổng hợp <strong>6 tài liệu quan trọng nhất</strong> về 1H BH trong Tennis Vault — từ ghi chép tay cá nhân (chuyển nguyên lý Thái Cực "khóa vai trái — thả vai phải" sang tennis), cho đến sách chuyên sâu 10 chương dành cho Level 3.5+, cho đến phân tích biomechanics của các tay vợt vĩ đại Federer, Wawrinka, Dimitrov.</p>
+  <p><strong>Cách đọc đề xuất:</strong> Bắt đầu với <a href="backhand_1h_guide.html" style="color: var(--accent-gold);">backhand_1h_guide.html</a> (tổng hợp từ ghi chép tay), sau đó đọc <code>cu_trai_tay_mot_tay.docx</code> hoặc <code>One_Handed_Backhand_Mastery.docx</code> (toàn diện nhất). Các chương riêng lẻ trong <code>Co_Sinh_Hoc</code> và <code>Tennis_Biomechanics_5.0</code> dùng để đối chiếu kỹ thuật với khoa học.</p>
+</div>
+
+<div class="toc">
+  <h2>📑 Mục Lục — 6 Tài Liệu</h2>
+  <ol>
+    <li><a href="#doc1">backhand_1h_guide.html — Cẩm Nang Tổng Hợp (My notes)</a></li>
+    <li><a href="#doc2">One_Handed_Backhand_Mastery.docx — Sách Chuyên Sâu EN (10 chương)</a></li>
+    <li><a href="#doc3">cu_trai_tay_mot_tay.docx — Phiên Bản Tiếng Việt</a></li>
+    <li><a href="#doc4">KyThuat_TraiTay_MotTay_10Chuong.docx — Giáo Trình 10 Chương</a></li>
+    <li><a href="#doc5">Co_Sinh_Hoc_Tennis_Hien_Dai.docx — Ch.6 So Sánh 1H vs 2H</a></li>
+    <li><a href="#doc6">Tennis_Biomechanics_5.0_Complete.docx — Ch.14 Backhand Biomechanics</a></li>
+  </ol>
+</div>
+
+<div class="doc-card" id="doc1">
+  <span class="badge">⭐ KHUYÊN ĐỌC ĐẦU TIÊN</span>
+  <span class="badge neutral">My notes / HTML mới</span>
+  <h2>backhand_1h_guide.html — Cẩm Nang Tổng Hợp</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu tổng hợp mới nhất</strong>, được biên soạn từ ghi chép tay <code>Swing technique.md</code> (chuyển nguyên lý võ thuật Thái Cực sang tennis) kết hợp với các research code từ thư mục Manus Papers. Tài liệu có cấu trúc 7 phần rõ ràng, dễ theo dõi cho cả người mới bắt đầu lẫn người chơi lâu năm muốn hiểu sâu nguyên lý.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với 4 tài liệu còn lại (vốn chủ yếu từ TFL Manuals theo phong cách "sách giáo khoa"), tài liệu này có góc nhìn <strong>triết lý vận động</strong> — "khóa vai trái = neo, vai phải = roi". Đây là cách diễn đạt dễ hiểu nhất cho nguyên lý "đòn bẩy dài + trục xoay" mà Wawrinka và Federer thực hiện. Có 5 bài tập cụ thể (30 giây mỗi ngày) cho người 50+ muốn bắt đầu cú 1H BH mà không quá tải vai.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc đầu tiên nếu bạn muốn hiểu nhanh tại sao cú 1H BH thất bại ở Level 3.5 và cách sửa. Cũng là tài liệu tốt nhất để in ra mang ra sân (có thể in trang 2-3 làm cheat sheet).</p>
+  <p class="meta">📂 Vị trí: My notes / backhand_1h_guide.html · 7 phần · 21 KB · Có closing "KHÓA VÀ THẢ"</p>
+  <a href="backhand_1h_guide.html" class="doc-link">📖 Đọc Ngay →</a>
+</div>
+
+<div class="doc-card" id="doc2">
+  <span class="badge alt">📚 SÁCH CHUYÊN SÂU EN</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>One_Handed_Backhand_Mastery.docx — Level 3.5+ (10 Chương, 200+ Trang)</h2>
+  <p class="intro-paragraph">Đây là <strong>tài liệu chuyên sâu nhất</strong> về cú 1H BH trong Tennis Vault, viết bằng tiếng Anh cho người chơi Level 3.5 trở lên. Cấu trúc 10 chương bao phủ toàn bộ: nền tảng kỹ thuật, grip, unit turn, kinetic chain, contact zone, topspin/flat/slice, footwork, chiến thuật, lỗi phổ biến, và chương trình tập luyện 52 tuần. Phân tích kỹ thuật của Federer, Wawrinka, và Dimitrov.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Chương 10 có <strong>chương trình 52 tuần chi tiết</strong> từ Level 3.5 lên 4.5 — đây là lộ trình duy nhất trong vault có timeline cụ thể. Chương 9 (lỗi phổ biến) rất hay với hệ thống "diagnosis → root cause → sửa lỗi". Chương 8 (chiến thuật) cho thấy 1H BH không chỉ là kỹ thuật mà là vũ khí pattern (ví dụ: BH slice xuống chân T đối thủ để mở sân cho FH).</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc sau khi đã hiểu cơ bản từ <code>backhand_1h_guide.html</code>. Nếu bạn nghiêm túc muốn cải thiện cú 1H BH từ 3.5 lên 4.5, đây là cuốn sách duy nhất cần đọc trong vault. Đọc theo thứ tự chương, không nhảy cóc.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / One_Handed_Backhand_Mastery.docx · 10 chương · 76,848 ký tự · Score: 93 ⭐</p>
+  <a href="../tfl/One_Handed_Backhand_Mastery.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/One_Handed_Backhand_Mastery.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc3">
+  <span class="badge alt">🇻🇳 BẢN TIẾNG VIỆT</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>cu_Trái_tay_mot_tay.docx — Phiên Bản Tiếng Việt (2026 Edition)</h2>
+  <p class="intro-paragraph">Bản tiếng Việt hoàn chỉnh của <code>One_Handed_Backhand_Mastery</code>, cùng tác giả, cùng cấu trúc nhưng được dịch và bổ sung các thuật ngữ Thái Cực quyền. Tiêu đề "Cú Trái Tay Một Tay — Từ Cơ Bản Đến Đỉnh Cao" cho thấy đây là phiên bản hướng đến người Việt, với các ví dụ và ngôn ngữ gần gũi hơn.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Phần "Triết lý Chiếc Roi vs Cây Gậy" (Ch.1.1) được diễn đạt bằng ngôn ngữ Thực-Hư (Thái Cực), rất phù hợp với ghi chép tay <code>Swing technique.md</code> của bạn. Phần "C-to-I Transition" (Ch.1.3) cũng dùng ngôn ngữ "Âm Dương chuyển cực" — dễ hiểu hơn cho người quen triết lý Đông phương.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc song song với bản EN. Nếu bạn thấy bản EN khó hiểu phần nào, đọc bản VI sẽ rõ hơn nhờ cách diễn đạt quen thuộc. Cũng phù hợp để chia sẻ cho người chơi Việt khác.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / cu_trai_tay_mot_tay.docx · 60,797 ký tự · Score: 92 ⭐</p>
+  <a href="../tfl/cu_trai_tay_mot_tay.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/cu_trai_tay_mot_tay.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc4">
+  <span class="badge alt">🎓 GIÁO TRÌNH</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>KyThuat_TraiTay_MotTay_10Chuong.docx — Giáo Trình Sinh Cơ Học 10 Chương</h2>
+  <p class="intro-paragraph">Giáo trình song ngữ (VI-EN) về kỹ thuật trái tay một tay, tập trung vào <strong>sinh cơ học</strong>. Có 10 chương được tổ chức theo trình tự xây dựng từ nền tảng (triết lý, grip) đến nâng cao (chiến thuật, chương trình tập). Mỗi chương đều có phần phân tích 3 trường phái (Dimitrov, Wawrinka, Federer).</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với <code>cu_trai_tay_mot_tay.docx</code>, giáo trình này đi sâu hơn vào <strong>cơ chế vật lý</strong>: Ch.2 về grip có hệ thống Bevel System (cạnh vợt) rất chi tiết, Ch.3 về Unit Turn có "Quy tắc đếm 1" (chuẩn bị sớm), Ch.5 về Contact Zone có phân tích 4 mili-giây quyết định. Phần "Tay trái là Người gác cổng" (Ch.3.3) rất hay — phân tích vai trò điều phối của tay không thuận.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Phù hợp cho người đã có kinh nghiệm và muốn hiểu sâu về cơ chế. Đọc song song với <code>One_Handed_Backhand_Mastery.docx</code> để có góc nhìn toàn diện — một bên EN chuyên sâu, một bên VI có hệ thống hóa.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / KyThuat_TraiTay_MotTay_10Chuong.docx · 51,944 ký tự · 10 chương · Score: 47</p>
+  <a href="../tfl/KyThuat_TraiTay_MotTay_10Chuong.html" class="doc-link">📖 Đọc Trên Web</a>
+  <a href="../tfl/KyThuat_TraiTay_MotTay_10Chuong.docx" class="doc-link" style="background: #34495e;">📥 Tải .docx</a>
+</div>
+
+<div class="doc-card" id="doc5">
+  <span class="badge">🔬 KHOA HỌC</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Co_Sinh_Học_Tennis_Hien_Dai.docx — Ch.6 So Sánh 1H vs 2H Backhand</h2>
+  <p class="intro-paragraph">Tài liệu cơ sinh học tennis hiện đại, Chương 6 tập trung vào <strong>so sánh kỹ thuật backhand hai tay và một tay</strong> từ góc độ vật lý. Đây là tài liệu có nhiều hình minh họa biomechanics và bảng số liệu so sánh lực, góc, tốc độ vợt giữa 2 kiểu cầm vợt.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Khác với 4 tài liệu trên (tập trung vào cách đánh), tài liệu này tập trung vào <strong>tại sao 1H BH khó hơn 2H BH</strong> về mặt vật lý: moment of inertia (quán tính) của cánh tay đơn, khả năng kiểm soát contact point, và rủi ro chấn thương vai. Có phân tích tại sao trẻ em và người lớn tuổi nên bắt đầu với 2H BH.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc Ch.6 khi bạn đã đánh được 1H BH cơ bản và muốn hiểu sâu tại sao một số cú đánh thất bại về mặt vật lý. Cũng đọc để quyết định xem có nên chuyển từ 2H sang 1H (đặc biệt với người 50+ có vấn đề vai).</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Co_Sinh_Hoc_Tennis_Hien_Dai.docx · Ch.6 · Đã có HTML: <a href="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html" style="color: var(--accent-gold);">Co_Sinh_Hoc_Tennis_Hien_Dai.html</a></p>
+  <a href="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.docx" class="doc-link">📥 Tải .docx</a>
+  <div class="related-links">
+    <a href="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html">→ Đã có bản HTML (xem trên web)</a>
+  </div>
+</div>
+
+<div class="doc-card" id="doc6">
+  <span class="badge">📊 BIOMECHANICS 5.0</span>
+  <span class="badge neutral">TFL Manuals</span>
+  <h2>Tennis_Biomechanics_5.0_Complete.docx — Ch.14 Backhand Biomechanics (Một &amp; Hai Tay)</h2>
+  <p class="intro-paragraph">Tài liệu biomechanics chuyên sâu nhất trong vault, Chương 14 phân tích <strong>backhand một tay và hai tay</strong> với số liệu chi tiết về angular velocity, moment of force, energy transfer. Tài liệu dành cho VĐV 5.0 (chuyên nghiệp), nhưng cũng rất hữu ích cho người nghiệp dư muốn hiểu sâu.</p>
+  <p class="intro-paragraph"><strong>Điểm độc đáo:</strong> Có <strong>bảng số liệu so sánh</strong> giữa các tay vợt elite: góc shoulder rotation khi chạm bóng, % đóng góp của từng khớp vào tổng tốc độ vợt, và thời gian từ take-back đến contact (trung bình 0.6s cho 1H BH). Ch.13 (forehand) và Ch.15 (footwork) cũng rất đáng đọc để hiểu bức tranh toàn cảnh.</p>
+  <p class="intro-paragraph"><strong>Khuyến nghị:</strong> Đọc cuối cùng, sau khi đã có kinh nghiệm thực tế. Số liệu trong tài liệu này giúp bạn hiểu tại sao cú 1H BH của Wawrinka có thể đạt 180 km/h — không phải vì lực tay, mà vì angular velocity của vai và hông. Nếu bạn không quan tâm đến số liệu, có thể bỏ qua.</p>
+  <p class="meta">📂 Vị trí: TFL Manuals / Tennis_Biomechanics_5.0_Complete.docx · Ch.14 · Đã có HTML: <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html" style="color: var(--accent-gold);">Tennis_Biomechanics_5.0_Complete.html</a></p>
+  <a href="../tfl/Tennis_Biomechanics_5.0_Complete.docx" class="doc-link">📥 Tải .docx</a>
+  <div class="related-links">
+    <a href="../tfl/Tennis_Biomechanics_5.0_Complete.html">→ Đã có bản HTML (xem trên web)</a>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+    Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

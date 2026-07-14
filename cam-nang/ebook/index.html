@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennis Ebook — Thư Viện Tennis Hoàn Chỉnh (35+ Tài Liệu)</title>
+<style>
+  :root {
+    --navy: #0a1929;
+    --navy-light: #142847;
+    --accent-red: #c0392b;
+    --accent-gold: #f39c12;
+    --accent-green: #27ae60;
+    --accent-blue: #2980b9;
+    --text-light: #e8e8e8;
+    --text-muted: #a0a8b8;
+    --border: #2c3e60;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--navy);
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ===== TOP BANNER ===== */
+  .top-banner {
+    background: linear-gradient(90deg, #c0392b 0%, #f39c12 50%, #c0392b 100%);
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    border-bottom: 2px solid #0a1929;
+    font-weight: bold;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+  }
+  .top-banner a { color: white; text-decoration: none; }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+    padding: 18px 30px;
+    border-bottom: 2px solid var(--accent-gold);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  header .title-block {
+    flex: 1;
+    min-width: 220px;
+  }
+  header h1 {
+    color: var(--accent-gold);
+    font-size: 1.5em;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+  header .subtitle {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  header .header-stats {
+    display: flex;
+    gap: 14px;
+    font-size: 0.85em;
+  }
+  header .header-stats .stat {
+    background: rgba(0,0,0,0.3);
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--accent-gold);
+    text-align: center;
+  }
+  header .header-stats .stat strong {
+    color: var(--accent-gold);
+    font-size: 1.4em;
+    display: block;
+    line-height: 1;
+  }
+  header .header-stats .stat span {
+    color: var(--text-muted);
+    font-size: 0.85em;
+  }
+
+  /* ===== MAIN LAYOUT ===== */
+  .layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    width: 320px;
+    background: var(--navy-light);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    flex-shrink: 0;
+  }
+  .sidebar-header {
+    background: var(--accent-red);
+    padding: 12px 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-gold);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .sidebar-search {
+    padding: 10px 12px;
+    background: var(--navy);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 42px;
+    z-index: 10;
+  }
+  .sidebar-search input {
+    width: 100%;
+    padding: 8px 10px;
+    background: var(--navy-light);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: inherit;
+  }
+  .sidebar-search input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+  }
+
+  /* ===== SIDEBAR ITEMS ===== */
+  .nav-section {
+    margin-bottom: 8px;
+  }
+  .nav-section-title {
+    background: var(--accent-blue);
+    color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+    font-size: 0.85em;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 3px solid var(--accent-gold);
+  }
+  .nav-section-title:hover {
+    background: #1f5e85;
+  }
+  .nav-section-title .toggle {
+    color: var(--accent-gold);
+    font-size: 0.8em;
+  }
+  .nav-section.collapsed .nav-items {
+    display: none;
+  }
+  .nav-section.collapsed .toggle::before {
+    content: "▶";
+  }
+  .nav-section:not(.collapsed) .toggle::before {
+    content: "▼";
+  }
+  .nav-items {
+    background: var(--navy);
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px 8px 24px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.85em;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: background 0.15s, border-color 0.15s;
+    line-height: 1.4;
+  }
+  .nav-item:hover {
+    background: var(--navy-light);
+    border-left-color: var(--accent-gold);
+  }
+  .nav-item.active {
+    background: var(--accent-red);
+    border-left-color: var(--accent-gold);
+    font-weight: bold;
+  }
+  .nav-item .doc-icon {
+    margin-right: 8px;
+    font-size: 0.9em;
+  }
+  .nav-item .doc-size {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.75em;
+    flex-shrink: 0;
+    padding-left: 8px;
+  }
+  .nav-item.intro-item {
+    background: rgba(243, 156, 18, 0.08);
+    border-left: 3px solid var(--accent-gold);
+    font-weight: 500;
+  }
+  .nav-item.intro-item.active {
+    background: var(--accent-gold);
+    color: var(--navy);
+    font-weight: bold;
+  }
+
+  /* ===== CONTENT AREA ===== */
+  .content {
+    flex: 1;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .toolbar {
+    background: var(--navy-light);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: var(--text-light);
+    font-size: 0.9em;
+  }
+  .toolbar .breadcrumb {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text-muted);
+  }
+  .toolbar .breadcrumb strong {
+    color: var(--accent-gold);
+  }
+  .toolbar .actions {
+    display: flex;
+    gap: 6px;
+  }
+  .toolbar button, .toolbar a {
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-decoration: none;
+    font-family: inherit;
+    transition: background 0.2s;
+  }
+  .toolbar button:hover, .toolbar a:hover {
+    background: #a93226;
+  }
+  .toolbar button.secondary {
+    background: var(--accent-blue);
+  }
+  .toolbar button.secondary:hover {
+    background: #1f5e85;
+  }
+
+  .iframe-wrap {
+    flex: 1;
+    overflow: hidden;
+    background: white;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+  }
+
+  /* ===== WELCOME SCREEN ===== */
+  .welcome {
+    padding: 40px 50px;
+    background: var(--navy);
+    color: var(--text-light);
+    overflow-y: auto;
+    height: 100%;
+  }
+  .welcome h1 {
+    color: var(--accent-gold);
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .welcome h2 {
+    color: var(--accent-red);
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .welcome p, .welcome li {
+    margin-bottom: 8px;
+    text-align: justify;
+  }
+  .welcome ul, .welcome ol { padding-left: 22px; margin-bottom: 14px; }
+  .welcome .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .welcome .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 6px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .welcome .card:hover {
+    transform: translateY(-2px);
+    border-left-color: var(--accent-gold);
+  }
+  .welcome .card .lib-num {
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .welcome .card .lib-name {
+    color: var(--text-light);
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .welcome .card .lib-count {
+    color: var(--text-muted);
+    font-size: 0.85em;
+  }
+  .welcome .quickstart {
+    background: rgba(192, 57, 43, 0.15);
+    border-left: 4px solid var(--accent-red);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 20px 0;
+  }
+  .welcome .quickstart strong { color: var(--accent-gold); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 800px) {
+    .sidebar { width: 240px; }
+    header h1 { font-size: 1.2em; }
+    .header-stats { gap: 8px; }
+    .welcome { padding: 20px; }
+  }
+  @media (max-width: 600px) {
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; max-height: 40vh; }
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--navy); }
+  ::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #1f3a5e; }
+</style>
+</head>
+<body>
+
+<div class="top-banner">
+  <a href="tennis_master_manual.html">📖 MASTER MANUAL — Cẩm Nang Tennis Toàn Tập (11 Cú Đánh) ↑↑</a>
+</div>
+
+<header>
+  <div class="title-block">
+    <h1>🎾 Tennis Ebook — Thư Viện Hoàn Chỉnh</h1>
+    <div class="subtitle">35+ tài liệu tennis trong 1 ebook — Click bất kỳ mục nào trong sidebar để đọc</div>
+  </div>
+  <div class="header-stats">
+    <div class="stat"><strong>11</strong><span>Cú đánh</span></div>
+    <div class="stat"><strong>11</strong><span>Libraries</span></div>
+    <div class="stat"><strong>35+</strong><span>Tài liệu</span></div>
+    <div class="stat"><strong>4 MB</strong><span>Dung lượng</span></div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">📚 Mục Lục Thư Viện</div>
+    <div class="sidebar-search">
+      <input type="text" id="searchInput" placeholder="🔍 Tìm tài liệu..." oninput="filterNav()">
+    </div>
+
+    <nav id="sidebarNav">
+
+      <!-- INTRO -->
+      <div class="nav-section" data-section="intro">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>📖 Giới thiệu</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item intro-item active" data-doc="welcome" onclick="loadDoc('welcome', this)">
+            <span class="doc-icon">🏠</span>Welcome / Bắt đầu
+          </a>
+          <a class="nav-item intro-item" data-doc="tennis_master_manual.html" onclick="loadDoc('tennis_master_manual.html', this)">
+            <span class="doc-icon">⭐</span>Master Manual — 11 Cú Đánh
+          </a>
+        </div>
+      </div>
+
+      <!-- SERVE LIBRARY -->
+      <div class="nav-section" data-section="serve">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 SERVE Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="serve_library.html" onclick="loadDoc('serve_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~23 KB</span>
+          </a>
+          <a class="nav-item" data-doc="serve_guide.html" onclick="loadDoc('serve_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Hướng Dẫn Giao Bóng <span class="doc-size">17 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_serve_guide.html" onclick="loadDoc('../tfl/tennis_serve_guide.html', this)">
+            <span class="doc-icon">📕</span>tennis_serve_guide <span class="doc-size">30 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Nghe_Thuat_Giao_Bong_Tennis.html" onclick="loadDoc('../tfl/Nghe_Thuat_Giao_Bong_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Nghệ Thuật Giao Bóng <span class="doc-size">80 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html" onclick="loadDoc('../tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html', this)">
+            <span class="doc-icon">📕</span>Phân Tích Kỹ Thuật Giao Bóng WTA <span class="doc-size">60 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_game_management.html" onclick="loadDoc('../tfl/tennis_game_management.html', this)">
+            <span class="doc-icon">📕</span>Tennis Game Management <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2H BACKHAND LIBRARY -->
+      <div class="nav-section collapsed" data-section="2h_backhand">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 2H Backhand Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="2h_backhand_library.html" onclick="loadDoc('2h_backhand_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~24 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html" onclick="loadDoc('../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Tennis Hiện Đại <span class="doc-size">243 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">260 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html" onclick="loadDoc('../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html', this)">
+            <span class="doc-icon">📕</span>Cơ Sinh Học Tennis <span class="doc-size">87 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 1H BACKHAND LIBRARY -->
+      <div class="nav-section collapsed" data-section="1h_backhand">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 1H Backhand Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="backhand_1h_library.html" onclick="loadDoc('backhand_1h_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~17 KB</span>
+          </a>
+          <a class="nav-item" data-doc="backhand_1h_guide.html" onclick="loadDoc('backhand_1h_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang 1H BH <span class="doc-size">21 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/One_Handed_Backhand_Mastery.html" onclick="loadDoc('../tfl/One_Handed_Backhand_Mastery.html', this)">
+            <span class="doc-icon">📕</span>One Handed Backhand Mastery <span class="doc-size">132 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/cu_trai_tay_mot_tay.html" onclick="loadDoc('../tfl/cu_trai_tay_mot_tay.html', this)">
+            <span class="doc-icon">📕</span>Cú Trái Tay Một Tay <span class="doc-size">95 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/KyThuat_TraiTay_MotTay_10Chuong.html" onclick="loadDoc('../tfl/KyThuat_TraiTay_MotTay_10Chuong.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Trái Tay Một Tay <span class="doc-size">74 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html" onclick="loadDoc('../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html', this)">
+            <span class="doc-icon">📕</span>Cơ Sinh Học Tennis <span class="doc-size">87 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- FOREHAND LIBRARY -->
+      <div class="nav-section collapsed" data-section="forehand">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Forehand Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="forehand_library.html" onclick="loadDoc('forehand_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="forehand_guide.html" onclick="loadDoc('forehand_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Forehand <span class="doc-size">28 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Nghe_thuat_forehand_tennis.html" onclick="loadDoc('../tfl/Nghe_thuat_forehand_tennis.html', this)">
+            <span class="doc-icon">📕</span>Nghệ Thuật Forehand Tennis <span class="doc-size">71 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">260 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html" onclick="loadDoc('../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Đào Tạo Tennis 50+ <span class="doc-size">112 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RETURN LIBRARY -->
+      <div class="nav-section collapsed" data-section="return">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Return Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="return_library.html" onclick="loadDoc('return_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="return_guide.html" onclick="loadDoc('return_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Return <span class="doc-size">26 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Mastery_20_Chapters.html" onclick="loadDoc('../tfl/Tennis_Mastery_20_Chapters.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery 20 Chapters <span class="doc-size">55 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Modern_Tennis_Handbook.html" onclick="loadDoc('../tfl/Modern_Tennis_Handbook.html', this)">
+            <span class="doc-icon">📕</span>Modern Tennis Handbook <span class="doc-size">100 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Ballet_20_Chuong.html" onclick="loadDoc('../tfl/Tennis_Ballet_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Tennis Ballet 20 Chương <span class="doc-size">63 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- VOLLEY LIBRARY -->
+      <div class="nav-section collapsed" data-section="volley">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Volley Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="volley_library.html" onclick="loadDoc('volley_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="volley_guide.html" onclick="loadDoc('volley_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Volley <span class="doc-size">28 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/CamNang_Volley_ToanDien_2026.html" onclick="loadDoc('../tfl/CamNang_Volley_ToanDien_2026.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Volley Toan Dien <span class="doc-size">44 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Complete_Volley_Manual.html" onclick="loadDoc('../tfl/Complete_Volley_Manual.html', this)">
+            <span class="doc-icon">📕</span>Complete Volley Manual <span class="doc-size">59 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">260 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 <span class="doc-size">148 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- OVERHEAD LIBRARY -->
+      <div class="nav-section collapsed" data-section="overhead">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Overhead Smash Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="overhead_library.html" onclick="loadDoc('overhead_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~20 KB</span>
+          </a>
+          <a class="nav-item" data-doc="overhead_guide.html" onclick="loadDoc('overhead_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Overhead <span class="doc-size">28 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Ky_Thuat_Chan_Tennis.html" onclick="loadDoc('../tfl/Ky_Thuat_Chan_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Chân Tennis (Footwork) <span class="doc-size">85 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" onclick="loadDoc('../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Vị Nhân Thức Cơ Thể Tennis <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Neurological_Edge_Professional_Manual.html" onclick="loadDoc('../tfl/The_Neurological_Edge_Professional_Manual.html', this)">
+            <span class="doc-icon">📕</span>The Neurological Edge Pro <span class="doc-size">263 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" onclick="loadDoc('../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Hệ Thống Tennis Cao Cấp <span class="doc-size">158 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- LOB LIBRARY -->
+      <div class="nav-section collapsed" data-section="lob">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Lob Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="lob_library.html" onclick="loadDoc('lob_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~18 KB</span>
+          </a>
+          <a class="nav-item" data-doc="lob_guide.html" onclick="loadDoc('lob_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Lob <span class="doc-size">27 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_handbook_vn.html" onclick="loadDoc('../tfl/tennis_handbook_vn.html', this)">
+            <span class="doc-icon">📕</span>tennis_handbook_vn <span class="doc-size">65 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Song-Trong-Tennis-Manual.html" onclick="loadDoc('../tfl/Song-Trong-Tennis-Manual.html', this)">
+            <span class="doc-icon">📕</span>Song Trong Tennis Manual <span class="doc-size">79 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery_guide_tieng_viet.html" onclick="loadDoc('../tfl/tennis_mastery_guide_tieng_viet.html', this)">
+              <span class="doc-icon">📕</span>Tennis Mastery Guide (VN) <span class="doc-size">44 KB</span>
+            </a>
+          <a class="nav-item" data-doc="../tfl/Ky_Thuat_Chan_Tennis.html" onclick="loadDoc('../tfl/Ky_Thuat_Chan_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Chân Tennis <span class="doc-size">85 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- DROP SHOT LIBRARY -->
+      <div class="nav-section collapsed" data-section="drop_shot">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Drop Shot Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="drop_shot_library.html" onclick="loadDoc('drop_shot_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="drop_shot_guide.html" onclick="loadDoc('drop_shot_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Drop Shot <span class="doc-size">26 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Song_Trong_Tennis.html" onclick="loadDoc('../tfl/He_Song_Trong_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Hệ Song Trong Tennis <span class="doc-size">134 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" onclick="loadDoc('../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html', this)">
+            <span class="doc-icon">📕</span>GOAT Tennis Giáo Trình VN <span class="doc-size">191 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Mastery_Complete.html" onclick="loadDoc('../tfl/Tennis_Mastery_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery Complete <span class="doc-size">165 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_handbook_vn.html" onclick="loadDoc('../tfl/tennis_handbook_vn.html', this)">
+            <span class="doc-icon">📕</span>tennis_handbook_vn <span class="doc-size">65 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Modern_Tennis_Handbook.html" onclick="loadDoc('../tfl/Modern_Tennis_Handbook.html', this)">
+            <span class="doc-icon">📕</span>Modern Tennis Handbook <span class="doc-size">100 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- APPROACH SHOT LIBRARY -->
+      <div class="nav-section collapsed" data-section="approach">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Approach Shot Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="approach_shot_library.html" onclick="loadDoc('approach_shot_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="approach_shot_guide.html" onclick="loadDoc('approach_shot_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Approach <span class="doc-size">27 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">260 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" onclick="loadDoc('../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Hệ Thống Tennis Cao Cấp <span class="doc-size">158 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery.html" onclick="loadDoc('../tfl/tennis_mastery.html', this)">
+            <span class="doc-icon">📕</span>tennis_mastery <span class="doc-size">157 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/TinhKhiThan_Tennis_5.0.html" onclick="loadDoc('../tfl/TinhKhiThan_Tennis_5.0.html', this)">
+            <span class="doc-icon">📕</span>Tinh Khí Thần Tennis 5.0 <span class="doc-size">114 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html" onclick="loadDoc('../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Đào Tạo Tennis 50+ <span class="doc-size">112 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PASSING SHOT LIBRARY -->
+      <div class="nav-section collapsed" data-section="passing">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎾 Passing Shot Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="passing_shot_library.html" onclick="loadDoc('passing_shot_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~20 KB</span>
+          </a>
+          <a class="nav-item" data-doc="passing_shot_guide.html" onclick="loadDoc('passing_shot_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Passing Shot <span class="doc-size">28 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery_guide_tieng_viet.html" onclick="loadDoc('../tfl/tennis_mastery_guide_tieng_viet.html', this)">
+              <span class="doc-icon">📕</span>Tennis Mastery Guide (VN) <span class="doc-size">44 KB</span>
+            </a>
+          <a class="nav-item" data-doc="../tfl/Ky_Thuat_Chan_Tennis.html" onclick="loadDoc('../tfl/Ky_Thuat_Chan_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Chân Tennis <span class="doc-size">85 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Art_of_Modern_Tennis_Polished.html" onclick="loadDoc('../tfl/The_Art_of_Modern_Tennis_Polished.html', this)">
+            <span class="doc-icon">📕</span>Art of Modern Tennis <span class="doc-size">342 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">260 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) <span class="doc-size">131 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- TACTICS & PLAYING PATTERN LIBRARY -->
+      <div class="nav-section collapsed" data-section="tactics">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>♟️ Tactics & Playing Pattern Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="tactics_library.html" onclick="loadDoc('tactics_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~23 KB</span>
+          </a>
+          <a class="nav-item" data-doc="tactics_guide.html" onclick="loadDoc('tactics_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Chiến Thuật & Mẫu Chơi <span class="doc-size">~32 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 (Chiến Thuật) <span class="doc-size">259 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Art_of_Modern_Tennis_Polished.html" onclick="loadDoc('../tfl/The_Art_of_Modern_Tennis_Polished.html', this)">
+            <span class="doc-icon">📕</span>Art of Modern Tennis (15 Patterns) <span class="doc-size">341 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_game_management.html" onclick="loadDoc('../tfl/tennis_game_management.html', this)">
+            <span class="doc-icon">📕</span>Tennis Game Management (12 Decisions) <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" onclick="loadDoc('../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Hệ Thống Tennis Cao Cấp (Transition) <span class="doc-size">157 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery.html" onclick="loadDoc('../tfl/tennis_mastery.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery (5-Month Pattern Plan) <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" onclick="loadDoc('../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html', this)">
+            <span class="doc-icon">📕</span>GOAT Tennis Giáo Trình (VN — Chiến Thuật) <span class="doc-size">190 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- STRATEGY & LONG-TERM DEVELOPMENT LIBRARY -->
+      <div class="nav-section collapsed" data-section="strategy">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🎯 Strategy &amp; Long-term Development Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="strategy_library.html" onclick="loadDoc('strategy_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~24 KB</span>
+          </a>
+          <a class="nav-item" data-doc="strategy_guide.html" onclick="loadDoc('strategy_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Chiến Lược &amp; Phát Triển Dài Hạn <span class="doc-size">~39 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery.html" onclick="loadDoc('../tfl/tennis_mastery.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery (5-Month Pattern Plan) <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Mastery_Complete.html" onclick="loadDoc('../tfl/Tennis_Mastery_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery Complete (20 Chương / 4 Giai Đoạn) <span class="doc-size">164 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html" onclick="loadDoc('../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Tennis Hiện Đại 2026 (Full Formula) <span class="doc-size">242 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html" onclick="loadDoc('../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Đào Tạo Tennis 50+ <span class="doc-size">110 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching (Nghiệp Dư) — Multi-month Plans <span class="doc-size">129 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" onclick="loadDoc('../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Vi Nhận Thức Cơ Thể <span class="doc-size">155 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- NEUROLOGY & MENTAL GAME LIBRARY -->
+      <div class="nav-section collapsed" data-section="neurology">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>🧠 Neurology & Mental Game Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="neurology_library.html" onclick="loadDoc('neurology_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~19 KB</span>
+          </a>
+          <a class="nav-item" data-doc="neurology_guide.html" onclick="loadDoc('neurology_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Thần Kinh & Tâm Lý <span class="doc-size">~27 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/TinhKhiThan_Tennis_5.0.html" onclick="loadDoc('../tfl/TinhKhiThan_Tennis_5.0.html', this)">
+            <span class="doc-icon">📕</span>TinhKhiThan Tennis 5.0 (Tinh-Khí-Thần) <span class="doc-size">113 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Neurological_Edge_Professional_Manual.html" onclick="loadDoc('../tfl/The_Neurological_Edge_Professional_Manual.html', this)">
+            <span class="doc-icon">📕</span>The Neurological Edge (Pro Manual) <span class="doc-size">262 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" onclick="loadDoc('../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html', this)">
+            <span class="doc-icon">📕</span>GOAT Tennis Giáo Trình (VN) <span class="doc-size">190 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_game_management.html" onclick="loadDoc('../tfl/tennis_game_management.html', this)">
+            <span class="doc-icon">📕</span>Tennis Game Management <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery.html" onclick="loadDoc('../tfl/tennis_mastery.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery (Mental & Pressure) <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Song_Trong_Tennis.html" onclick="loadDoc('../tfl/He_Song_Trong_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Hệ Song Trong Tennis (Kinetic Chain) <span class="doc-size">134 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- VISION, VOR & BALANCE LIBRARY -->
+      <div class="nav-section collapsed" data-section="vision">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>👁️ Vision, VOR & Balance Library</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="vision_library.html" onclick="loadDoc('vision_library.html', this)">
+            <span class="doc-icon">📖</span>Library Index <span class="doc-size">~22 KB</span>
+          </a>
+          <a class="nav-item" data-doc="vision_guide.html" onclick="loadDoc('vision_guide.html', this)">
+            <span class="doc-icon">📖</span>Guide — Cẩm Nang Thị Giác, VOR & Thăng Bằng <span class="doc-size">~28 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" onclick="loadDoc('../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Vì Nhận Thức Cơ Thể (Proprioception) <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 (Visual Tracking) <span class="doc-size">259 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Art_of_Modern_Tennis_Polished.html" onclick="loadDoc('../tfl/The_Art_of_Modern_Tennis_Polished.html', this)">
+            <span class="doc-icon">📕</span>Art of Modern Tennis (Sports Vision) <span class="doc-size">341 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" onclick="loadDoc('../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Hệ Thống Tennis Cao Cấp (VOR + Visual) <span class="doc-size">157 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Ky_Thuat_Chan_Tennis.html" onclick="loadDoc('../tfl/Ky_Thuat_Chan_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Chân (Footwork + Eye-Coord) <span class="doc-size">84 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 (Balance + VOR) <span class="doc-size">147 KB</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- APPENDIX: EXTRA DOCS NOT IN LIBRARIES -->
+      <div class="nav-section collapsed" data-section="appendix">
+        <div class="nav-section-title" onclick="toggleSection(this)">
+          <span>📚 Phụ Lục — Tài Liệu Bổ Sung</span><span class="toggle"></span>
+        </div>
+        <div class="nav-items">
+          <a class="nav-item" data-doc="../tfl/tennis_manual_bilingual.html" onclick="loadDoc('../tfl/tennis_manual_bilingual.html', this)">
+            <span class="doc-icon">📕</span>tennis_manual_bilingual <span class="doc-size">96 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/nguyen-ly-tam-duoi-tennis.html" onclick="loadDoc('../tfl/nguyen-ly-tam-duoi-tennis.html', this)">
+            <span class="doc-icon">📕</span>Nguyên Lý Tam Duỗi <span class="doc-size">87 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/racket_face_angle_research.html" onclick="loadDoc('../tfl/racket_face_angle_research.html', this)">
+            <span class="doc-icon">📕</span>Racket Face Angle Research <span class="doc-size">36 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html" onclick="loadDoc('../tfl/CAM_NANG_TENNIS_HIEN_DAI_FULL_FORMULA_2026.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Tennis Hiện Đại FULL Formula 2026 <span class="doc-size">243 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/CamNang_Volley_ToanDien_2026.html" onclick="loadDoc('../tfl/CamNang_Volley_ToanDien_2026.html', this)">
+            <span class="doc-icon">📕</span>CamNang Volley ToanDien 2026 <span class="doc-size">43 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html" onclick="loadDoc('../tfl/Cam_Nang_Dao_Tao_Tennis_50_Plus.html', this)">
+            <span class="doc-icon">📕</span>Cẩm Nang Đào Tạo Tennis 50 Plus <span class="doc-size">110 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html" onclick="loadDoc('../tfl/Co_Sinh_Hoc_Tennis_Hien_Dai.html', this)">
+            <span class="doc-icon">📕</span>Cơ Sinh Học Tennis Hiện Đại <span class="doc-size">85 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Complete_Volley_Manual.html" onclick="loadDoc('../tfl/Complete_Volley_Manual.html', this)">
+            <span class="doc-icon">📕</span>Complete Volley Manual <span class="doc-size">58 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" onclick="loadDoc('../tfl/GOAT_Tennis_Giao_Trinh_Tieng_Viet.html', this)">
+            <span class="doc-icon">📕</span>GOAT Tennis Giáo Trình Tieng Viet <span class="doc-size">190 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Song_Trong_Tennis.html" onclick="loadDoc('../tfl/He_Song_Trong_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Hệ Song Trong Tennis <span class="doc-size">134 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html" onclick="loadDoc('../tfl/He_Thong_Tennis_Cap_Cao_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Hệ Thống Tennis Cao Cấp 20 Chương <span class="doc-size">157 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/KyThuat_TraiTay_MotTay_10Chuong.html" onclick="loadDoc('../tfl/KyThuat_TraiTay_MotTay_10Chuong.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Trái Tay Một Tay 10 Chương <span class="doc-size">73 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Ky_Thuat_Chan_Tennis.html" onclick="loadDoc('../tfl/Ky_Thuat_Chan_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Kỹ Thuật Chân Tennis <span class="doc-size">84 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Modern_Tennis_Handbook.html" onclick="loadDoc('../tfl/Modern_Tennis_Handbook.html', this)">
+            <span class="doc-icon">📕</span>Modern Tennis Handbook <span class="doc-size">100 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Nghe_Thuat_Giao_Bong_Tennis.html" onclick="loadDoc('../tfl/Nghe_Thuat_Giao_Bong_Tennis.html', this)">
+            <span class="doc-icon">📕</span>Nghệ Thuật Giao Bóng Tennis <span class="doc-size">80 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Nghe_thuat_forehand_tennis.html" onclick="loadDoc('../tfl/Nghe_thuat_forehand_tennis.html', this)">
+            <span class="doc-icon">📕</span>Nghệ Thuật forehand tennis <span class="doc-size">71 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/One_Handed_Backhand_Mastery.html" onclick="loadDoc('../tfl/One_Handed_Backhand_Mastery.html', this)">
+            <span class="doc-icon">📕</span>One Handed Backhand Mastery <span class="doc-size">132 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html" onclick="loadDoc('../tfl/Phan_Tich_Ky_Thuat_Giao_Bong_WTA.html', this)">
+            <span class="doc-icon">📕</span>Phân Tích Kỹ Thuật Giao Bóng WTA <span class="doc-size">60 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html" onclick="loadDoc('../tfl/Quan_Vot_Dinh_Cao_Coach_5.0.html', this)">
+            <span class="doc-icon">📕</span>Quần Vợt Đỉnh Cao Coach 5.0 <span class="doc-size">259 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Song-Trong-Tennis-Manual.html" onclick="loadDoc('../tfl/Song-Trong-Tennis-Manual.html', this)">
+            <span class="doc-icon">📕</span>Song Trong Tennis Manual <span class="doc-size">78 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Ballet_20_Chuong.html" onclick="loadDoc('../tfl/Tennis_Ballet_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Tennis Ballet 20 Chương <span class="doc-size">63 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Biomechanics_5.0_Complete.html" onclick="loadDoc('../tfl/Tennis_Biomechanics_5.0_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Biomechanics 5.0 Complete <span class="doc-size">147 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Mastery_20_Chapters.html" onclick="loadDoc('../tfl/Tennis_Mastery_20_Chapters.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery 20 Chapters <span class="doc-size">55 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Tennis_Mastery_Complete.html" onclick="loadDoc('../tfl/Tennis_Mastery_Complete.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery Complete <span class="doc-size">164 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Art_of_Modern_Tennis_Polished.html" onclick="loadDoc('../tfl/The_Art_of_Modern_Tennis_Polished.html', this)">
+            <span class="doc-icon">📕</span>The Art of Modern Tennis Polished <span class="doc-size">341 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/The_Neurological_Edge_Professional_Manual.html" onclick="loadDoc('../tfl/The_Neurological_Edge_Professional_Manual.html', this)">
+            <span class="doc-icon">📕</span>The Neurological Edge Professional Manual <span class="doc-size">262 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/TinhKhiThan_Tennis_5.0.html" onclick="loadDoc('../tfl/TinhKhiThan_Tennis_5.0.html', this)">
+            <span class="doc-icon">📕</span>TinhKhiThan Tennis 5.0 <span class="doc-size">113 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" onclick="loadDoc('../tfl/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html', this)">
+            <span class="doc-icon">📕</span>Vị Nhân Thức Cơ Thể Tennis 20 Chương <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/cu_trai_tay_mot_tay.html" onclick="loadDoc('../tfl/cu_trai_tay_mot_tay.html', this)">
+            <span class="doc-icon">📕</span>Cú Trái Tay Một Tay <span class="doc-size">95 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_coaching_nguoi_nghiep_du.html" onclick="loadDoc('../tfl/tennis_coaching_nguoi_nghiep_du.html', this)">
+            <span class="doc-icon">📕</span>Tennis Coaching Người Nghiệp Dư <span class="doc-size">129 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_game_management.html" onclick="loadDoc('../tfl/tennis_game_management.html', this)">
+            <span class="doc-icon">📕</span>Tennis Game Management <span class="doc-size">148 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_handbook_vn.html" onclick="loadDoc('../tfl/tennis_handbook_vn.html', this)">
+            <span class="doc-icon">📕</span>Tennis Handbook Vn <span class="doc-size">64 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery.html" onclick="loadDoc('../tfl/tennis_mastery.html', this)">
+            <span class="doc-icon">📕</span>Tennis Mastery <span class="doc-size">156 KB</span>
+          </a>
+          <a class="nav-item" data-doc="../tfl/tennis_mastery_guide_tieng_viet.html" onclick="loadDoc('../tfl/tennis_mastery_guide_tieng_viet.html', this)">
+              <span class="doc-icon">📕</span>Tennis Mastery Guide Tieng Viet <span class="doc-size">44 KB</span>
+            </a>
+          <a class="nav-item" data-doc="../tfl/tennis_serve_guide.html" onclick="loadDoc('../tfl/tennis_serve_guide.html', this)">
+            <span class="doc-icon">📕</span>Tennis Serve Guide <span class="doc-size">31 KB</span>
+          </a>
+        </div>
+      </div>
+
+    </nav>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="content">
+    <div class="toolbar">
+      <div class="breadcrumb" id="breadcrumb">📍 <strong>Welcome</strong> — Bắt đầu</div>
+      <div class="actions">
+        <button onclick="openInNewTab()" class="secondary" title="Mở trong tab mới">↗ Tab mới</button>
+        <button onclick="goBack()" title="Quay lại tài liệu trước">← Quay lại</button>
+      </div>
+    </div>
+    <div class="iframe-wrap" id="iframeWrap">
+      <div class="welcome" id="welcomeScreen">
+        <h1>🎾 Chào Mừng Đến Với Tennis Ebook</h1>
+        <p class="subtitle" style="color: var(--text-muted); font-style: italic; font-size: 1.1em;">
+          Thư viện tennis hoàn chỉnh — 11 thư viện chuyên sâu + 35+ tài liệu nguồn
+        </p>
+
+        <div class="quickstart">
+          <strong>🚀 Bắt đầu nhanh (3 cách):</strong>
+          <ol style="margin-top: 8px;">
+            <li><strong>Đọc Master Manual</strong> — Tổng hợp 11 cú đánh trong 1 file (khuyên đọc đầu tiên) — click "⭐ Master Manual" trong sidebar</li>
+            <li><strong>Đọc 1 cú đánh</strong> — Click vào bất kỳ thư viện nào (Forehand, Serve, Volley...) trong sidebar</li>
+            <li><strong>Đọc tài liệu gốc</strong> — Mỗi thư viện có 6 tài liệu tham khảo đã được convert sang HTML</li>
+          </ol>
+        </div>
+
+        <h2>📚 11 Thư Viện Cú Đánh — Click để mở</h2>
+        <div class="grid">
+
+          <div class="card" onclick="document.querySelector('[data-section=serve] .nav-section-title').click(); document.querySelector('[data-doc=serve_library.html]').click();">
+            <span class="lib-num">01</span>
+            <span class="lib-name">🎾 SERVE</span>
+            <span class="lib-count">7 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=2h_backhand] .nav-section-title').click(); document.querySelector('[data-doc=2h_backhand_library.html]').click();">
+            <span class="lib-num">02</span>
+            <span class="lib-name">🎾 2H Backhand</span>
+            <span class="lib-count">5 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=1h_backhand] .nav-section-title').click(); document.querySelector('[data-doc=backhand_1h_library.html]').click();">
+            <span class="lib-num">03</span>
+            <span class="lib-name">🎾 1H Backhand</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=forehand] .nav-section-title').click(); document.querySelector('[data-doc=forehand_library.html]').click();">
+            <span class="lib-num">04</span>
+            <span class="lib-name">🎾 Forehand</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=return] .nav-section-title').click(); document.querySelector('[data-doc=return_library.html]').click();">
+            <span class="lib-num">05</span>
+            <span class="lib-name">🎾 Return</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=volley] .nav-section-title').click(); document.querySelector('[data-doc=volley_library.html]').click();">
+            <span class="lib-num">06</span>
+            <span class="lib-name">🎾 Volley</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=overhead] .nav-section-title').click(); document.querySelector('[data-doc=overhead_library.html]').click();">
+            <span class="lib-num">07</span>
+            <span class="lib-name">🎾 Overhead Smash</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=lob] .nav-section-title').click(); document.querySelector('[data-doc=lob_library.html]').click();">
+            <span class="lib-num">08</span>
+            <span class="lib-name">🎾 Lob</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=drop_shot] .nav-section-title').click(); document.querySelector('[data-doc=drop_shot_library.html]').click();">
+            <span class="lib-num">09</span>
+            <span class="lib-name">🎾 Drop Shot</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=approach] .nav-section-title').click(); document.querySelector('[data-doc=approach_shot_library.html]').click();">
+            <span class="lib-num">10</span>
+            <span class="lib-name">🎾 Approach Shot</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+          <div class="card" onclick="document.querySelector('[data-section=passing] .nav-section-title').click(); document.querySelector('[data-doc=passing_shot_library.html]').click();">
+            <span class="lib-num">11</span>
+            <span class="lib-name">🎾 Passing Shot</span>
+            <span class="lib-count">6 tài liệu</span>
+          </div>
+
+        </div>
+
+        <h2>🎯 Đặc Điểm Ebook</h2>
+        <ul>
+          <li><strong>35+ tài liệu</strong> tennis được tổ chức thành 11 thư viện theo từng cú đánh</li>
+          <li><strong>Navigation dễ</strong> — Click bất kỳ mục nào trong sidebar để đọc, "← Quay lại" để về tài liệu trước, "↗ Tab mới" để mở tab mới</li>
+          <li><strong>Search</strong> — Gõ vào ô tìm kiếm để lọc nhanh tài liệu</li>
+          <li><strong>Cross-link</strong> — Mỗi tài liệu có link đến các thư viện khác</li>
+          <li><strong>Offline-ready</strong> — Ebook này + 35 file HTML đã được lưu trong My notes + TFL Manuals, đọc hoàn toàn offline</li>
+        </ul>
+
+        <h2>📖 Cách Đọc Hiệu Quả</h2>
+        <ol>
+          <li><strong>Đọc Master Manual trước</strong> — Để có bức tranh tổng thể về 11 cú đánh</li>
+          <li><strong>Đọc 1 Guide riêng</strong> — Khi muốn tìm hiểu chi tiết về 1 cú đánh</li>
+          <li><strong>Đọc 6 tài liệu tham khảo</strong> — Mỗi library có 6 tài liệu chuyên sâu từ các nguồn khác nhau</li>
+          <li><strong>In cheat sheet</strong> — Mỗi guide có phần "Quick Reference" có thể in ra mang ra sân</li>
+        </ol>
+
+        <p style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.9em;">
+          <strong>Ngày tạo</strong>: June 28, 2026 · <strong>Vị trí</strong>: My notes / ebook / index.html
+        </p>
+      </div>
+    </div>
+  </main>
+
+</div>
+
+<script>
+  // State
+  let history = [];
+  let currentDoc = null;
+
+  function toggleSection(el) {
+    const section = el.parentElement;
+    section.classList.toggle('collapsed');
+  }
+
+  function loadDoc(docPath, navItem) {
+    // Mark nav item active
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    if (navItem) {
+      navItem.classList.add('active');
+    }
+
+    // Expand parent section if collapsed
+    if (navItem) {
+      const section = navItem.closest('.nav-section');
+      if (section && section.classList.contains('collapsed')) {
+        section.classList.remove('collapsed');
+      }
+    }
+
+    // Hide welcome, show iframe
+    const welcome = document.getElementById('welcomeScreen');
+    const wrap = document.getElementById('iframeWrap');
+
+    if (docPath === 'welcome') {
+      welcome.style.display = 'block';
+      wrap.innerHTML = '';
+      wrap.appendChild(welcome);
+      document.getElementById('breadcrumb').innerHTML = '📍 <strong>Welcome</strong> — Bắt đầu';
+      currentDoc = null;
+      return;
+    }
+
+    welcome.style.display = 'none';
+
+    // Load doc into iframe
+    if (currentDoc) history.push(currentDoc);
+    currentDoc = docPath;
+
+    let iframe = document.getElementById('contentIframe');
+    if (!iframe) {
+      iframe = document.createElement('iframe');
+      iframe.id = 'contentIframe';
+      wrap.appendChild(iframe);
+    }
+    iframe.src = docPath;
+
+    // Update breadcrumb
+    const docName = docPath.split('/').pop().replace('.html', '').replace(/-/g, ' ');
+    document.getElementById('breadcrumb').innerHTML = `📍 <strong>${docName}</strong>`;
+  }
+
+  function goBack() {
+    if (history.length === 0) {
+      loadDoc('welcome', document.querySelector('[data-doc=welcome]'));
+      return;
+    }
+    const prevDoc = history.pop();
+    const navItem = document.querySelector(`[data-doc="${prevDoc}"]`);
+    loadDoc(prevDoc, navItem);
+  }
+
+  function openInNewTab() {
+    if (!currentDoc) {
+      window.open('tennis_master_manual.html', '_blank');
+      return;
+    }
+    window.open(currentDoc, '_blank');
+  }
+
+  function filterNav() {
+    const q = document.getElementById('searchInput').value.toLowerCase().trim();
+    if (!q) {
+      document.querySelectorAll('.nav-item').forEach(n => n.style.display = '');
+      document.querySelectorAll('.nav-section').forEach(s => s.style.display = '');
+      return;
+    }
+    document.querySelectorAll('.nav-section').forEach(section => {
+      let hasMatch = false;
+      section.querySelectorAll('.nav-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(q)) {
+          item.style.display = '';
+          hasMatch = true;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      section.style.display = hasMatch ? '' : 'none';
+      // Auto-expand sections with matches
+      if (hasMatch) section.classList.remove('collapsed');
+    });
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      const q = document.getElementById('searchInput');
+      if (document.activeElement === q) {
+        q.value = '';
+        filterNav();
+        q.blur();
+      }
+    }
+    if (e.altKey && e.key === 'ArrowLeft') {
+      goBack();
+    }
+  });
+</script>
+
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>

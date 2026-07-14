@@ -1,0 +1,478 @@
+<html lang="vi"><head>
+<!-- Playables SDK -->
+<script>// Playables SDK v1.0.0
+// Game lifecycle bridge: rAF-based game-ready detection + event communication
+(function() {
+  'use strict';
+
+  // Idempotency: skip if already initialized (e.g., server-side injection
+  // followed by client-side inject-javascript via the Bloks webview component).
+  if (window.playablesSDK) return;
+
+  var HANDLER_NAME = 'playablesGameEventHandler';
+  var ANDROID_BRIDGE_NAME = '_MetaPlayablesBridge';
+  var RAF_FRAME_THRESHOLD = 3;
+
+  var gameReadySent = false;
+  var firstInteractionSent = false;
+  var errorSent = false;
+  var frameCount = 0;
+  var originalRAF = window.requestAnimationFrame;
+
+  // --- Transport Layer ---
+
+  function hasIOSBridge() {
+    return !!(window.webkit &&
+              window.webkit.messageHandlers &&
+              window.webkit.messageHandlers[HANDLER_NAME]);
+  }
+
+  function hasAndroidBridge() {
+    return !!(window[ANDROID_BRIDGE_NAME] &&
+              typeof window[ANDROID_BRIDGE_NAME].postEvent === 'function');
+  }
+
+  function isInIframe() {
+    return !!(window.parent && window.parent !== window);
+  }
+
+  function sendEvent(eventName, payload) {
+    var message = {
+      type: eventName,
+      payload: payload || {},
+      timestamp: Date.now()
+    };
+
+    if (hasIOSBridge()) {
+      try {
+        window.webkit.messageHandlers[HANDLER_NAME].postMessage(message);
+      } catch (e) { /* ignore */ }
+      return;
+    }
+
+    if (hasAndroidBridge()) {
+    try {
+      var p = payload || {};
+      p.__secureToken = window.__fbAndroidBridgeAuthToken || '';
+      p.timestamp = message.timestamp;
+      window[ANDROID_BRIDGE_NAME].postEvent(
+        eventName,
+        JSON.stringify(p)
+      );
+    } catch (e) { /* ignore */ }
+    return;
+  }
+
+    if (isInIframe()) {
+      try {
+        window.parent.postMessage(message, '*');
+      } catch (e) { /* ignore */ }
+      return;
+    }
+  }
+
+  // --- rAF Game-Ready Detection ---
+
+  function onFrame() {
+    if (gameReadySent) return;
+
+    frameCount++;
+    if (frameCount >= RAF_FRAME_THRESHOLD) {
+      gameReadySent = true;
+      sendEvent('game_ready', {
+        frame_count: frameCount,
+        detected_at: Date.now()
+      });
+      return;
+    }
+
+    originalRAF.call(window, onFrame);
+  }
+
+  if (originalRAF) {
+    window.requestAnimationFrame = function(callback) {
+      if (!gameReadySent) {
+        return originalRAF.call(window, function(timestamp) {
+          frameCount++;
+          if (frameCount >= RAF_FRAME_THRESHOLD && !gameReadySent) {
+            gameReadySent = true;
+            sendEvent('game_ready', {
+              frame_count: frameCount,
+              detected_at: Date.now()
+            });
+          }
+          callback(timestamp);
+        });
+      }
+      return originalRAF.call(window, callback);
+    };
+  }
+
+  // --- First User Interaction Detection ---
+
+  function setupFirstInteractionDetection() {
+    var events = ['touchstart', 'mousedown', 'keydown'];
+
+    function onFirstInteraction() {
+      if (firstInteractionSent) return;
+      firstInteractionSent = true;
+      sendEvent('user_interaction_start', null);
+
+      for (var i = 0; i < events.length; i++) {
+        document.removeEventListener(events[i], onFirstInteraction, true);
+      }
+    }
+
+    for (var i = 0; i < events.length; i++) {
+      document.addEventListener(events[i], onFirstInteraction, true);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFirstInteractionDetection);
+  } else {
+    setupFirstInteractionDetection();
+  }
+
+  // --- Auto Error Capture ---
+
+  window.addEventListener('error', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    sendEvent('error', {
+      message: event.message || 'Unknown error',
+      source: event.filename || '',
+      lineno: event.lineno || 0,
+      colno: event.colno || 0,
+      auto_captured: true
+    });
+  });
+
+  window.addEventListener('unhandledrejection', function(event) {
+    if (errorSent) return;
+    errorSent = true;
+    var reason = event.reason;
+    sendEvent('error', {
+      message: (reason instanceof Error) ? reason.message : String(reason),
+      type: 'unhandled_promise_rejection',
+      auto_captured: true
+    });
+  });
+
+  // --- Public API ---
+
+  window.playablesSDK = {
+    complete: function(score) {
+      sendEvent('game_ended', {
+        score: score,
+        completed: true
+      });
+    },
+
+    error: function(message) {
+      if (errorSent) return;
+      errorSent = true;
+      sendEvent('error', {
+        message: message || 'Unknown error',
+        auto_captured: false
+      });
+    },
+
+    sendEvent: function(eventName, payload) {
+      if (!eventName || typeof eventName !== 'string') return;
+      sendEvent(eventName, payload);
+    }
+  };
+
+  // Kick off rAF detection in case no game code calls rAF immediately
+  if (originalRAF) {
+    originalRAF.call(window, onFrame);
+  }
+})();</script>
+<!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
+(function() {
+  if (window.__playableTouchPatchInstalled) return;
+  window.__playableTouchPatchInstalled = true;
+  var origAdd = EventTarget.prototype.addEventListener;
+  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
+  EventTarget.prototype.addEventListener = function(type, listener, options) {
+    if (blockedTypes[type]) {
+      if (options === undefined || options === null) {
+        options = { passive: true };
+      } else if (typeof options === 'boolean') {
+        options = { capture: options, passive: true };
+      } else {
+        options = Object.assign({}, options, { passive: true });
+      }
+    }
+    return origAdd.call(this, type, listener, options);
+  };
+})();
+</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RETURN OF SERVE – Butt Cap Up</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #f2f2f2; color: #000; font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+.sheet {
+  background: white;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  padding: 14mm 13mm;
+  box-shadow: 0 8px 40px rgba(0,0,0,.12);
+  display: flex;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5mm;
+  margin-bottom: 7mm;
+}
+h1 {
+  font-size: 26pt;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+.subtitle {
+  font-size: 11pt;
+  margin-top: 2.5mm;
+  font-weight: 500;
+  opacity: .85;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+}
+.card {
+  border: 1.3px solid #000;
+  padding: 5mm 5.5mm 4.5mm;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  font-size: 12.5pt;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  padding-bottom: 2mm;
+  margin-bottom: 3.5mm;
+  border-bottom: 1px solid #000;
+}
+.card ul { list-style: none; }
+.card li {
+  font-size: 11.2pt;
+  line-height: 1.6;
+  margin-bottom: 2.2mm;
+  padding-left: 4.5mm;
+  position: relative;
+}
+.card li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+}
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+.diagrams {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5mm;
+  margin-top: 7mm;
+  padding-top: 6mm;
+  border-top: 1.5px solid #000;
+}
+.figure {
+  border: 1px solid #000;
+  padding: 3.5mm 2.5mm 2.5mm;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.figure svg {
+  width: 100%;
+  height: auto;
+  max-height: 34mm;
+}
+.figure figcaption {
+  font-size: 9pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  margin-top: 2.5mm;
+  padding-top: 2mm;
+  border-top: 1px solid #000;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 6mm;
+}
+.footer-box {
+  border: 2px solid #000;
+  text-align: center;
+  padding: 4.5mm;
+  font-size: 14pt;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+.footer-box span {
+  font-weight: 500;
+  margin-right: 3mm;
+}
+
+.no-print { position: fixed; top: 16px; right: 16px; z-index: 50; }
+.no-print button {
+  background: #000; color: #fff; border: none;
+  padding: 10px 18px; font-size: 14px; font-weight: 600;
+  border-radius: 8px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  transition: transform .15s ease;
+}
+.no-print button:hover { transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .sheet { width: 100%; margin: 0; min-height: auto; padding: 22px 18px; box-shadow: none; }
+  h1 { font-size: 22px; }
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .diagrams { grid-template-columns: 1fr; gap: 14px; }
+  .card li { font-size: 15px; }
+  .no-print { position: static; text-align: center; margin: 12px 0; }
+}
+
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { background: white; }
+  .sheet { width: 210mm; height: 297mm; margin: 0; box-shadow: none; padding: 12mm; }
+  .no-print { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<div class="no-print">
+  <button onclick="window.print()">In A4</button>
+</div>
+
+<div class="sheet">
+  <header>
+    <h1>RETURN OF SERVE – Hệ thống Butt Cap Up</h1>
+    <div class="subtitle">Tổng hợp từ ghi chép của Phạm Đức Hải</div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>1. TƯ THẾ CHỜ (từ trang 1-2)</h2>
+      <ul>
+        <li>Keep racket head <strong>DOWN</strong>, butt cap <strong>UP</strong></li>
+        <li><strong>High Elbow</strong> up to the right</li>
+        <li><strong>Athletic Ready Position</strong></li>
+        <li>Mục tiêu: bỏ bước "drop", tiết kiệm <strong>0.1s</strong></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>2. NẠP LỰC (từ trang 4)</h2>
+      <ul>
+        <li><strong>Coil:</strong> xoay torso + right arm</li>
+        <li>Left hand holds throat <strong>LIGHTLY</strong></li>
+        <li>Swing up by racquet weight – quickly &amp; gentle</li>
+        <li>Keys = <strong>Soft Hand</strong></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. PHÁT LỰC (từ trang 2)</h2>
+      <ul>
+        <li><strong>Hip snap</strong> → Flop racquet face</li>
+        <li><strong>"Shine the torch at the ball"</strong> (butt cap hướng vào bóng)</li>
+        <li>Same principle as Serve &amp; Groundstroke</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4. 3 KỊCH BẢN (từ trang 3)</h2>
+      <ul>
+        <li><strong>Slow Serve:</strong> đánh như GTS bình thường, split step &amp; move up, crush</li>
+        <li><strong>Fast Serve (flat):</strong> giữ sẵn đầu vợt down, bước tới tạo đà</li>
+        <li><strong>Slice Serve:</strong> Volley Style, V-letter, trả slice</li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="diagrams">
+    <figure class="figure">
+      <svg viewBox="0 0 100 110" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="30" cy="18" r="6"></circle>
+        <path d="M30 24 L27 52"></path>
+        <path d="M27 52 L20 72 L18 88"></path>
+        <path d="M27 52 L33 70 L37 88"></path>
+        <path d="M28 34 L42 28 L48 42"></path>
+        <path d="M28 36 L20 48"></path>
+        <path d="M48 42 L44 62"></path>
+        <ellipse cx="42" cy="72" rx="5" ry="11" transform="rotate(-12 42 72)"></ellipse>
+        <circle cx="48" cy="42" r="1.8" fill="#000" stroke="none"></circle>
+        <line x1="12" y1="89" x2="52" y2="89" stroke-width="1.2"></line>
+      </svg>
+      <figcaption>(a) Butt-Cap-Up Position</figcaption>
+    </figure>
+
+    <figure class="figure">
+      <svg viewBox="0 0 100 110" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="50" cy="18" r="6"></circle>
+        <path d="M50 24 L50 56"></path>
+        <path d="M50 56 L40 78 L38 90"></path>
+        <path d="M50 56 L60 78 L62 90"></path>
+        <path d="M38 38 L62 40"></path>
+        <path d="M62 40 L74 48 L70 66"></path>
+        <path d="M38 38 L26 50 L32 58"></path>
+        <path d="M70 66 L66 86"></path>
+        <ellipse cx="64" cy="95" rx="5" ry="9"></ellipse>
+        <path d="M42 48 C 34 44, 30 52, 38 58" fill="none" stroke-dasharray="2 2" stroke-width="1.2"></path>
+        <path d="M36 56 L40 59 L37 61" fill="#000" stroke="none"></path>
+        <line x1="28" y1="91" x2="72" y2="91" stroke-width="1.2"></line>
+      </svg>
+      <figcaption>(b) Coil &amp; Soft Hand</figcaption>
+    </figure>
+
+    <figure class="figure">
+      <svg viewBox="0 0 100 110" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="30" cy="20" r="6"></circle>
+        <path d="M30 26 L29 54"></path>
+        <path d="M29 54 L22 74 L20 90"></path>
+        <path d="M29 54 L38 72 L44 90"></path>
+        <path d="M28 36 L50 38 L64 44"></path>
+        <path d="M64 44 L80 36"></path>
+        <ellipse cx="86" cy="31" rx="5" ry="10" transform="rotate(28 86 31)"></ellipse>
+        <circle cx="64" cy="44" r="1.8" fill="#000" stroke="none"></circle>
+        <line x1="64" y1="44" x2="88" y2="24" stroke-dasharray="2.5 2.5" stroke-width="1"></line>
+        <circle cx="91" cy="22" r="3.5" fill="none"></circle>
+        <path d="M26 48 C 38 46, 44 50, 44 58" fill="none" stroke-width="1.2"></path>
+        <path d="M22 60 L35 57" stroke-width="1.2"></path>
+        <path d="M32 54 L36 57 L32 60" fill="#000" stroke="none"></path>
+        <line x1="14" y1="91" x2="52" y2="91" stroke-width="1.2"></line>
+      </svg>
+      <figcaption>(c) Hip Snap – Flop</figcaption>
+    </figure>
+  </section>
+
+  <div class="footer">
+    <div class="footer-box"><span>CONTACT =</span> well in front of body</div>
+  </div>
+</div>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+
+<p style="margin-top: 20px; padding: 12px; border-top: 1px solid var(--border, #e5e7eb); font-size: 0.85em; color: var(--text-muted, #4b5563); text-align: center;">
+  Created by <strong>Henry Pham</strong>, <strong>Tennis Future Lab</strong> under
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" target="_blank" style="color: var(--accent-gold, #b41e1e); text-decoration: none;">Creative Commons BY-NC-SA 4.0</a>
+</p>
+
+</body>
+</html>
