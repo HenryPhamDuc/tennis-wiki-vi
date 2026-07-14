@@ -114,9 +114,9 @@ Nội dung bao gồm:
 - **Tích hợp triết lý Đông Á**: Thái Cực Quyền, Dantian, Mingmen, Chan Si Gong (Silk Reeling)
 
 ## Phiên bản ngôn ngữ
-- 🇻🇳 **Tiếng Việt** (bạn đang đọc) — https://henryPhamDuc.github.io/tennis-wiki/
+- 🇻🇳 **Tiếng Việt** (bạn đang đọc) — https://henryPhamDuc.github.io/tennis-wiki-vi/
 - 🇬🇧 **English** — https://henryPhamDuc.github.io/tennis-wiki-en/
-- 📘 **Tennis Manual (Master Reference v2)** — https://henryPhamDuc.github.io/tennis/ (Complete bilingual EN-VI coaching manual)
+- 📘 **Tennis Manual** — https://henryPhamDuc.github.io/tennis-wiki-vi/cam-nang/ebook/ (Complete tennis coaching manual)
 
 ## Giấy phép
 
