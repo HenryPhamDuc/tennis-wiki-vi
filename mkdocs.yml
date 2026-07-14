@@ -9,9 +9,7 @@ site_description: Bách khoa toàn thư mở về quần vợt hiện đại —
 site_author: Henry Phạm
 
 # The URL where the site will be hosted
-# After you create the repo, change this to your real GitHub Pages URL:
-#   https://henryPhamDuc.github.io/tennis-wiki/
-site_url: https://henryPhamDuc.github.io/tennis-wiki/
+site_url: https://henryphamduc.github.io/tennis-wiki-vi/
 
 # Use the directory 'docs/' as source (matches our converter output)
 docs_dir: docs
